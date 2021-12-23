@@ -4,7 +4,11 @@ from PySide6 import QtCore, QtWidgets, QtGui
 
 from .gui.main_ui import Ui_main
 from .config import config
-from .build.classes import Data
+
+from .build.Police import Police
+from .build.Dim import Dim
+from .build.Pal import Pal
+from .build.Widget import Widget
 
 
 class main(Ui_main, QtWidgets.QWidget):
@@ -15,9 +19,15 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setupUi(self)
         self.INIT()
 
-        print(Data("police").GET("h4"))
-        print(Data("dim").GET_CLS("h_menu_top"))
+        police = Police().titre()
+        wg_bd = Widget().bd()
+        dim = Dim().h_mt()
+        pal = Pal().p_c_mt()
 
+        print(police)
+        print(wg_bd)
+        print(dim)
+        print(pal)
 
     ### INITIALISATION
     def IN_BASE(self):
@@ -30,7 +40,7 @@ class main(Ui_main, QtWidgets.QWidget):
         pass
     def IN_WG(self):
         ## Frame menu_top
-        self.fr_menu_top.setFixedHeight(25)
+        # self.fr_menu_top.setFixedHeight(Data("dim").GET_CLS("h_menu_top"))
 
         ## Icone de l'app
         # dim = dct_pal.get("dim").get("c_menu_top")
