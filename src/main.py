@@ -3,12 +3,9 @@ import sys
 from PySide6 import QtCore, QtWidgets, QtGui
 
 from .gui.main_ui import Ui_main
+from .build import *
 from .config import config
 
-from .build.Police import Police
-from .build.Dim import Dim
-from .build.Pal import Pal
-from .build.Widget import Widget
 
 
 class main(Ui_main, QtWidgets.QWidget):
