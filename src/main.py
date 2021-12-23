@@ -16,6 +16,7 @@ class main(Ui_main, QtWidgets.QWidget):
         self.INIT()
 
         print(Data("police").GET("h4"))
+        print(Data("dim").GET_CLS("h_menu_top"))
 
 
     ### INITIALISATION
