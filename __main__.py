@@ -20,4 +20,5 @@ if __name__ == "__main__":
         functions.GEN_SVG()
 
 
+
     from src.main import app
