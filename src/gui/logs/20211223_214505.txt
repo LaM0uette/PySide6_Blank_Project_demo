@@ -1,0 +1,8 @@
+[23/12/2021 - 21:45:05,74] Conversion des fichiers ui : 
+ 
+ 
+[23/12/2021 - 21:45:05,75] Conversion du fichier main.ui en cours... 
+[23/12/2021 - 21:45:05,75] Conversion du fichier main.ui terminé avec succés ! 
+ 
+ 
+[23/12/2021 - 21:45:05,87] Conversion des fichiers ui terminés avec succés ! 

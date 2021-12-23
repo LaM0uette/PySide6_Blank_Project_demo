@@ -16,9 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
-    QLabel, QSizePolicy, QSpacerItem, QWidget)
-
-from src.classe_wg import PB_ZOOM
+    QLabel, QPushButton, QSizePolicy, QSpacerItem,
+    QWidget)
 
 class Ui_main(object):
     def setupUi(self, main):
@@ -65,22 +64,22 @@ class Ui_main(object):
 
         self.hlay_menu_top.addItem(self.horizontalSpacer_1)
 
-        self.pb_mt_option = PB_ZOOM(self.fr_menu_top)
+        self.pb_mt_option = QPushButton(self.fr_menu_top)
         self.pb_mt_option.setObjectName(u"pb_mt_option")
 
         self.hlay_menu_top.addWidget(self.pb_mt_option)
 
-        self.pb_mt_reduire = PB_ZOOM(self.fr_menu_top)
+        self.pb_mt_reduire = QPushButton(self.fr_menu_top)
         self.pb_mt_reduire.setObjectName(u"pb_mt_reduire")
 
         self.hlay_menu_top.addWidget(self.pb_mt_reduire)
 
-        self.pb_mt_agrandir = PB_ZOOM(self.fr_menu_top)
+        self.pb_mt_agrandir = QPushButton(self.fr_menu_top)
         self.pb_mt_agrandir.setObjectName(u"pb_mt_agrandir")
 
         self.hlay_menu_top.addWidget(self.pb_mt_agrandir)
 
-        self.pb_mt_quitter = PB_ZOOM(self.fr_menu_top)
+        self.pb_mt_quitter = QPushButton(self.fr_menu_top)
         self.pb_mt_quitter.setObjectName(u"pb_mt_quitter")
 
         self.hlay_menu_top.addWidget(self.pb_mt_quitter)

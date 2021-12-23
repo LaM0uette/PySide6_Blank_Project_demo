@@ -92,16 +92,16 @@
        </spacer>
       </item>
       <item>
-       <widget class="PB_ZOOM" name="pb_mt_option"/>
+       <widget class="QPushButton" name="pb_mt_option"/>
       </item>
       <item>
-       <widget class="PB_ZOOM" name="pb_mt_reduire"/>
+       <widget class="QPushButton" name="pb_mt_reduire"/>
       </item>
       <item>
-       <widget class="PB_ZOOM" name="pb_mt_agrandir"/>
+       <widget class="QPushButton" name="pb_mt_agrandir"/>
       </item>
       <item>
-       <widget class="PB_ZOOM" name="pb_mt_quitter"/>
+       <widget class="QPushButton" name="pb_mt_quitter"/>
       </item>
      </layout>
     </widget>
@@ -121,13 +121,6 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>PB_ZOOM</class>
-   <extends>QPushButton</extends>
-   <header>src.classe_wg</header>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections/>
 </ui>
