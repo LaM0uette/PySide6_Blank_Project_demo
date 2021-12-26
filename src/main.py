@@ -16,16 +16,6 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setupUi(self)
         self.INIT()
 
-        police = Police().titre()
-        wg_bd = Widget().bd()
-        dim = Dim().h_mt()
-        pal = Pal().p_c_mt()
-
-        print(police)
-        print(wg_bd)
-        print(dim)
-        print(pal)
-
     ### INITIALISATION
     def IN_BASE(self):
         ## Fenetre

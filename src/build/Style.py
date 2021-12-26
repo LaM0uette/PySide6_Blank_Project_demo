@@ -1,6 +1,6 @@
 from .data.Data import Data
 
-class Widget(Data):
+class Style(Data):
     def __init__(self, grp="wg"):
         super().__init__(grp)
 

@@ -1,6 +1,6 @@
 from .Dim import Dim
 
-class Pal(Dim):
+class P_dim(Dim):
     def __init__(self):
         super().__init__()
 
