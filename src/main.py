@@ -17,7 +17,7 @@ class main(Ui_main, QtWidgets.QWidget):
         self.INIT()
 
         print(P_rgb().th1())
-        print(P_rgb().p_vert())
+        print(P_rgb().vert_th1())
 
     ### INITIALISATION
     def IN_BASE(self):
