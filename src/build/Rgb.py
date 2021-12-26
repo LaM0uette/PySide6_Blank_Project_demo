@@ -1,6 +1,6 @@
 from .data.Data import Data
 
-class rgb(Data):
+class Rgb(Data):
     def __init__(self):
         super().__init__()
 
