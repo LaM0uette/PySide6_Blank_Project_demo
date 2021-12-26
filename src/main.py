@@ -16,8 +16,6 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setupUi(self)
         self.INIT()
 
-        print(P_img().calendrier())
-
     ### INITIALISATION
     def IN_BASE(self):
         ## Fenetre
