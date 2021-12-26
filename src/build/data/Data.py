@@ -15,5 +15,5 @@ class Data:
         js = self.OPEN_JSON(fichier_json=f"{vrb.DO_DATA}{self.grp}")
         return js.get(val)
     def TH(self, val):
-        dt = self.OPEN_JSON(fichier_json=f"{vrb.DO_THEME}{config.theme}.json")
+        dt = self.OPEN_JSON(fichier_json=f"{vrb.DO_THEME}{config.theme}")
         return tuple(dt[val])
