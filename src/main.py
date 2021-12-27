@@ -17,6 +17,7 @@ class main(Ui_main, QtWidgets.QWidget):
         self.INIT()
 
 
+
     ### INITIALISATION
     def CUR(self, val):
         cur = lambda val: P_cursor().RTN_CUR(val)
