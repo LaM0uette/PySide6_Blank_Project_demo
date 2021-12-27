@@ -16,6 +16,9 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setupUi(self)
         self.INIT()
 
+        print(P_cursor().main())
+        print(P_cursor().RTN_CUR("main"))
+
 
     ### INITIALISATION
     def IN_BASE(self):
