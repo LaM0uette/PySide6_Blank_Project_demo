@@ -16,6 +16,7 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setupUi(self)
         self.INIT()
 
+
     ### INITIALISATION
     def IN_BASE(self):
         ## Fenetre
