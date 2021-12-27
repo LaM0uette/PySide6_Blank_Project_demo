@@ -1,4 +1,4 @@
-from .Rgb import Rgb
+from src.build.data.Rgb import Rgb
 
 class P_rgb(Rgb):
     def __init__(self):
