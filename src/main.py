@@ -34,12 +34,12 @@ class main(Ui_main, QtWidgets.QWidget):
         pass
     def IN_WG(self):
         ## Frame menu_top
-        # self.fr_menu_top.setFixedHeight(Data("dim").GET_CLS("h_menu_top"))
+        self.fr_menu_top.setFixedHeight(P_dim().h_mt())
 
         ## Icone de l'app
-        # dim = dct_pal.get("dim").get("c_menu_top")
+        dim = P_dim().p_c_mt()
         # functions.DIM(wg=self.lb_mt_ico, w=dim.get("w"), h=dim.get("h"))
-        # self.lb_mt_ico.setPixmap(QtGui.QPixmap(PXM))
+        self.lb_mt_ico.setPixmap(QtGui.QPixmap(PXM))
         self.lb_mt_ico.setScaledContents(True)
         self.lb_mt_nom.setText(config.nom)
 
@@ -103,10 +103,14 @@ class main(Ui_main, QtWidgets.QWidget):
         app.quit()
 
 
+PXM = P_img().main() + "th1" + ".svg"
 app = QtWidgets.QApplication(sys.argv)
+splash = QtWidgets.QSplashScreen(QtGui.QPixmap(PXM).scaledToHeight(500), QtCore.Qt.WindowStaysOnTopHint)
+splash.show()
 app.processEvents()
 
 fen = main()
+splash.finish(fen)
 fen.show()
 
 sys.exit(app.exec())
