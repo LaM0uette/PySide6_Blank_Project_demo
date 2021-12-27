@@ -14,14 +14,13 @@ class main(Ui_main, QtWidgets.QWidget):
 
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setupUi(self)
-
-        cur = lambda val: P_cursor().RTN_CUR(val)
-        self.cur = lambda val: QtGui.QCursor(QtGui.QPixmap(cur(val)[0]), cur(val)[1], cur(val)[2])
-
         self.INIT()
 
 
     ### INITIALISATION
+    def CUR(self, val):
+        cur = lambda val: P_cursor().RTN_CUR(val)
+        return QtGui.QCursor(QtGui.QPixmap(cur(val)[0]), cur(val)[1], cur(val)[2])
     def IN_BASE(self):
         ## Fenetre
         self.setWindowTitle(config.nom)
@@ -29,7 +28,7 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setFixedHeight(config.height)
         self.setWindowOpacity(config.opacity)
 
-        self.setCursor(self.cur)
+        self.setCursor(self.CUR("souris"))
         self.setStyleSheet(f"background-color: rgb{P_rgb().th1()};")
     def IN_CLASSE(self):
         pass
