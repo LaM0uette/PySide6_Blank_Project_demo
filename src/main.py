@@ -16,9 +16,9 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setupUi(self)
         self.INIT()
 
-        print(P_cursor().main())
-        print(P_cursor().RTN_CUR("main"))
-
+        cur = lambda val: P_cursor().RTN_CUR(val)
+        print(cur("souris"))
+        self.cur = QtGui.QCursor(QtGui.QPixmap(cur("souris")[0]), cur("souris")[1], cur("souris")[2])
 
     ### INITIALISATION
     def IN_BASE(self):
@@ -27,6 +27,9 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setFixedWidth(config.widht)
         self.setFixedHeight(config.height)
         self.setWindowOpacity(config.opacity)
+
+        # self.setCursor(self.cur)
+        self.setStyleSheet(f"background-color: rgb{P_rgb().th1()};")
     def IN_CLASSE(self):
         pass
     def IN_WG(self):
