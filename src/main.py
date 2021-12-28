@@ -18,7 +18,6 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
     ### INITIALISATION
-
     def IN_BASE(self):
         ## Fenetre
         self.setWindowTitle(config.nom)
