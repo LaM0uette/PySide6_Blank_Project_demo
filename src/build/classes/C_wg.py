@@ -21,9 +21,11 @@ class C_wg:
         # Images
         self.img = attrs.get("img")
         self.img_check = attrs.get("img_check")
-        self.th = attrs.get("th")
-        self.th_hover = attrs.get("th_hover")
-        self.th_check = attrs.get("th_check")
+            #th
+        val = lambda v, v_bis: attrs.get(v) if attrs.get(v) is not None else v_bis
+        self.th = val("th", "")
+        self.th_hover = val("th_hover", "bn1")
+        self.th_check = val("th_check", "bn2")
 
         self.font = attrs.get("font")
         self.rd = attrs.get("rd")
