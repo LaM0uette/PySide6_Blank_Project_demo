@@ -10,13 +10,15 @@ class C_wg:
 
         # Couleurs
         self.colors = attrs.get("colors")
-        if self.colors is None:
-            self.c1, self.c2, self.c3, self.bn = None, None, None, None
-        else:
-            val = lambda v: self.colors.get(v) if self.colors.get(v) is not None else None
-            self.c1, self.c2, self.c3, self.bn = val("c1"), val("c2"), val("c3"), val("bn")
+        val = lambda v: self.colors.get(v) if self.colors.get(v) is not None else None
+        if self.colors is None: self.c1, self.c2, self.c3, self.bn = None, None, None, None
+        else: self.c1, self.c2, self.c3, self.bn = val("c1"), val("c2"), val("c3"), val("bn")
 
+        # Dimension
         self.dim = attrs.get("dim")
+        if self.dim is None: self.dim = {"w": None, "h": None}
+
+
         self.img = attrs.get("img")
         self.img_check = attrs.get("img_check")
         self.th = attrs.get("th")
