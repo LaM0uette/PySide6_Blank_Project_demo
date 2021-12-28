@@ -1,7 +1,7 @@
 from ..config import vrb
 from ..config import config
 
-class P_cursor:
+class P_cur:
     def __init__(self):
 
         self.dct = {

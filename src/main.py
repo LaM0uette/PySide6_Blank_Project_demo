@@ -18,9 +18,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
     ### INITIALISATION
-    def CUR(self, val):
-        cur = lambda val: P_cursor().RTN_CUR(val)
-        return QtGui.QCursor(QtGui.QPixmap(cur(val)[0]), cur(val)[1], cur(val)[2])
+
     def IN_BASE(self):
         ## Fenetre
         self.setWindowTitle(config.nom)

@@ -1,6 +1,6 @@
 from .data.Data import Data
 
-class Police(Data):
+class P_police(Data):
     def __init__(self, grp="police"):
         super().__init__(grp)
 
