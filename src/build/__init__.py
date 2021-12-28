@@ -4,5 +4,5 @@ from .P_cur import P_cur
 from .P_dim import P_dim
 from .P_img import P_img
 from .P_rgb import P_rgb
-from src.build.classes.C_pb import C_pb
 from .functions import Fct
+from src.build.classes.C_pb import C_pb

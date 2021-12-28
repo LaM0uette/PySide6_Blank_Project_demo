@@ -17,6 +17,8 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setupUi(self)
         self.INIT()
 
+        self.activateWindow()
+
 
     ### INITIALISATION
     def IN_BASE(self):
