@@ -29,7 +29,7 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setCursor(Fct(cur="souris").CUR())
         self.setStyleSheet(f"background-color: rgb{P_rgb().th1()};")
     def IN_CLASSE(self):
-        C_pb(self).menu_top()
+        C_pb(self)
     def IN_WG(self):
         # Frame menu_top
         self.fr_menu_top.setFixedHeight(P_dim().h_mt())
