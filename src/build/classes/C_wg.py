@@ -18,7 +18,6 @@ class C_wg:
         self.dim = attrs.get("dim")
         if self.dim is None: self.dim = {"w": None, "h": None}
 
-
         self.img = attrs.get("img")
         self.img_check = attrs.get("img_check")
         self.th = attrs.get("th")
