@@ -9,5 +9,16 @@ class Fct:
         self.kwargs = kwargs
 
     def CUR(self):
-        cur = P_cur().RTN_CUR(self.kwargs.get("cur"))
-        return QtGui.QCursor(QtGui.QPixmap(cur[0]), cur[1], cur[2])
+        cur = self.kwargs.get("cur")
+        if cur is None: cur = "souris"
+
+        cursor = P_cur().RTN_CUR(cur)
+        return QtGui.QCursor(QtGui.QPixmap(cursor[0]), cursor[1], cursor[2])
+    def DIM(self):
+        wg = self.kwargs.get("wg")
+        if wg is None: return
+
+        w, h = self.kwargs.get("w"), self.kwargs.get("h")
+
+        wg.setFixedWidth(w) if w is not None else False
+        wg.setFixedHeight(h) if h is not None else False

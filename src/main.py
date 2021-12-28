@@ -30,21 +30,21 @@ class main(Ui_main, QtWidgets.QWidget):
     def IN_CLASSE(self):
         pass
     def IN_WG(self):
-        ## Frame menu_top
+        # Frame menu_top
         self.fr_menu_top.setFixedHeight(P_dim().h_mt())
 
-        ## Icone de l'app
+        # Icone de l'app
         dim = P_dim().p_c_mt()
-        # functions.DIM(wg=self.lb_mt_ico, w=dim.get("w"), h=dim.get("h"))
+        Fct(wg=self.lb_mt_ico, w=dim.get("w"), h=dim.get("h")).DIM()
         self.lb_mt_ico.setPixmap(QtGui.QPixmap(PXM))
         self.lb_mt_ico.setScaledContents(True)
         self.lb_mt_nom.setText(config.nom)
 
-        ## Version de l'app
+        # Version de l'app
         self.lb_mt_version.setText(str(config.version))
 
-        ## Widget blanc pour centrer le nom de l'app
-        # functions.DIM(wg=self.wg_mt_blank, w=dim.get("w") * 3, h=dim.get("h"))
+        # Widget blanc pour centrer le nom de l'app
+        Fct(wg=self.wg_mt_blank, w=dim.get("w") * 3, h=dim.get("h")).DIM()
     def IN_WG_BASE(self):
         pass
     def IN_CONNECTIONS(self):
