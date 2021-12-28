@@ -9,6 +9,7 @@ from .config import *
 
 
 class main(Ui_main, QtWidgets.QWidget):
+    dragPos: QtCore.QPoint
     def __init__(self):
         super(main, self).__init__()
 
@@ -95,6 +96,42 @@ class main(Ui_main, QtWidgets.QWidget):
     def EVT_QUITTER(self):
         app.quit()
         quit()
+    def mousePressEvent(self, event):
+        cur = QtGui.QCursor()
+        verifHeight = cur.pos().y() - self.pos().y()
+        if event.buttons() == QtCore.Qt.LeftButton and verifHeight < P_dim().h_mt() and fen.windowState() != QtCore.Qt.WindowMaximized:
+            self.dragPos = event.globalPosition().toPoint()
+            event.accept()
+    def mouseMoveEvent(self, event):
+        cur = QtGui.QCursor()
+        height_verif = cur.pos().y() - self.pos().y()
+
+        if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h_mt() and fen.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
+            self.setCursor(Fct(cur="agrandir").CUR())
+        else:
+            self.setCursor(Fct(cur="souris").CUR())
+
+        try:
+            if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h_mt() and fen.windowState() != QtCore.Qt.WindowMaximized:
+                self.move(self.pos() + event.globalPosition().toPoint() - self.dragPos)
+                self.dragPos = event.globalPosition().toPoint()
+                event.accept()
+
+            if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h_mt() and fen.windowState() == QtCore.Qt.WindowMaximized:
+                fen.setWindowState(QtCore.Qt.WindowNoState)
+                self.move(self.pos() + event.globalPosition().toPoint() - self.dragPos)
+                self.dragPos = event.globalPosition().toPoint()
+                event.accept()
+
+        except AttributeError:
+            pass
+    def mouseReleaseEvent(self, event):
+        cur = QtGui.QCursor()
+        height_verif = cur.pos().y() - self.pos().y()
+        if height_verif < P_dim().h_mt() and fen.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
+            self.setCursor(Fct(cur="souris").CUR())
+            self.EVT_AGRANDIR_GDT()
+            event.accept()
     def closeEvent(self, event: QtGui.QCloseEvent) -> None:
         event.accept()
         app.quit()
