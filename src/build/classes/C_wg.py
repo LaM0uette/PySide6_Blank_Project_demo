@@ -18,11 +18,13 @@ class C_wg:
         self.dim = attrs.get("dim")
         if self.dim is None: self.dim = {"w": None, "h": None}
 
+        # Images
         self.img = attrs.get("img")
         self.img_check = attrs.get("img_check")
         self.th = attrs.get("th")
         self.th_hover = attrs.get("th_hover")
         self.th_check = attrs.get("th_check")
+
         self.font = attrs.get("font")
         self.rd = attrs.get("rd")
         self.bd = attrs.get("bd")
