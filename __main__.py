@@ -3,16 +3,19 @@ import time
 
 import psutil
 
-from src.config import config
+from src.build import *
+from src.config import *
 
 
 if __name__ == "__main__":
     for proc in psutil.process_iter():
-        pi = proc.as_dict(attrs=['pid', 'name'])
-        if pi["name"] == config.nom + ".exe":
+        pi = proc.as_dict(attrs=["pid", "name"])
+        if pi["name"] == f"{config.nom}.exe":
             quit()
 
-    os.startfile(os.path.abspath("src/scripts/convert_ui.bat"))
-    time.sleep(0.4)
+    if config.auto_reload:
+        os.startfile(os.path.abspath(f"{vrb.DO_SCRIPT}convert_ui.bat"))
+        Fct().GEN_SVG()
+        time.sleep(0.4)
 
     from src.main import app
