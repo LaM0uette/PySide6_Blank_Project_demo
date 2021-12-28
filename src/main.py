@@ -26,7 +26,7 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setFixedHeight(config.height)
         self.setWindowOpacity(config.opacity)
 
-        self.setCursor(self.CUR("souris"))
+        self.setCursor(Fct(cur="souris").CUR())
         self.setStyleSheet(f"background-color: rgb{P_rgb().th1()};")
     def IN_CLASSE(self):
         pass
