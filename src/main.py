@@ -4,7 +4,7 @@ from PySide6 import QtCore, QtWidgets, QtGui
 
 from .gui.main_ui import Ui_main
 from .build import *
-from .config import config
+from .config import *
 
 
 

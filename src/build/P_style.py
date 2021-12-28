@@ -1,6 +1,6 @@
 from .data.Data import Data
 
-class Style(Data):
+class P_style(Data):
     def __init__(self, grp="wg"):
         super().__init__(grp)
 

@@ -1,5 +1,5 @@
 from .Police import Police
-from .Style import Style
+from .P_style import P_style
 from .P_cursor import P_cursor
 from .P_dim import P_dim
 from .P_img import P_img
