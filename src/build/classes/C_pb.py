@@ -20,4 +20,10 @@ class C_pb(C_wg):
                  dim = P_dim().p_r_mt(),
                  x_ico = P_style().x_ico(),
                  X_ICO = P_style().X_ICO(),
+                 img = P_img().option(),
+                 img_check = P_img().option(),
+                 th = "bn1",
+                 th_hover = "th3",
+                 th_check = "bn2",
+                 font = P_font().p()
         )

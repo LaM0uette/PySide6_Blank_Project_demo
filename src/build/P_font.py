@@ -1,6 +1,6 @@
 from .data.Data import Data
 
-class P_police(Data):
+class P_font(Data):
     def __init__(self, grp="police"):
         super().__init__(grp)
 

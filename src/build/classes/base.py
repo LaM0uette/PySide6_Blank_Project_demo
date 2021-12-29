@@ -20,7 +20,7 @@ TH_CHECK = "bn2"
 
 
 ### FONT
-FONT = P_police().p()
+FONT = P_font().p()
 
 
 ### RADIUS
