@@ -34,14 +34,6 @@ class C_wg:
         if self.dim is None:
             self.dim = base.DIM
 
-        self.x_ico = attrs.get("x_ico")
-        if self.x_ico is None:
-            self.x_ico = base.x_ico
-
-        self.X_ICO = attrs.get("X_ICO")
-        if self.X_ICO is None:
-            self.X_ICO = base.X_ICO
-
 
         ### IMAGES
         self.img = attrs.get("img")
@@ -51,6 +43,14 @@ class C_wg:
         self.th = val("th", base.TH)
         self.th_hover = val("th_hover", base.TH_HOVER)
         self.th_check = val("th_check", base.TH_CHECK)
+
+        self.x_ico = attrs.get("x_ico")
+        if self.x_ico is None:
+            self.x_ico = base.x_ico
+
+        self.X_ICO = attrs.get("X_ICO")
+        if self.X_ICO is None:
+            self.X_ICO = base.X_ICO
 
 
         ### FONT
