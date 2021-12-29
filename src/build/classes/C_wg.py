@@ -41,8 +41,12 @@ class C_wg:
         if self.rd_mat is None: self.rd_mat = base.RD_MAT
         self.r1, self.r2, self.r3, self.r4 = val(self.rd_mat[:1]), val(self.rd_mat[1:2]), val(self.rd_mat[2:3]), val(self.rd_mat[3:4])
 
-
+        # Bordures
         self.bd = attrs.get("bd")
+
+        if self.bd is None: self.bd = base.BD
+
+
         self.cur = attrs.get("cur")
         self.align = attrs.get("align")
         self.edit = attrs.get("edit")

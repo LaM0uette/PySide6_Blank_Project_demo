@@ -20,3 +20,10 @@ FONT = P_police().p()
 RD = {"mat": "0000", "px": None}
 RD_MAT = "0000"
 PX = None
+
+# Bordures
+BD = {"mat": "1111", "px": None, "th": None}
+
+
+
+

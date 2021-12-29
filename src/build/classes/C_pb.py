@@ -17,5 +17,5 @@ class C_pb(C_wg):
             ).STL_PB()
     def menu_top(self, lst):
         self.STL(lst,
-                 colors=P_rgb().p_th3()
+                 colors=P_rgb().p_th3(),
         )
