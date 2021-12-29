@@ -12,6 +12,10 @@ class C_wg:
 
 
         ### COULEURS
+        self.colors_type = attrs.get("colors_type")
+        if self.colors_type is None:
+            self.colors_type = base.COLORS_TYPE
+
         self.colors = attrs.get("colors")
 
         val = lambda v: self.colors.get(v) if self.colors.get(v) is not None else base.COLORS
@@ -23,14 +27,20 @@ class C_wg:
 
         ### DIMENSIONS
         self.dim = attrs.get("dim")
-
         if self.dim is None:
             self.dim = base.DIM
+
+        self.x_ico = attrs.get("x_ico")
+        if self.x_ico is None:
+            self.x_ico = base.x_ico
+
+        self.X_ICO = attrs.get("X_ICO")
+        if self.X_ICO is None:
+            self.X_ICO = base.X_ICO
 
 
         ### IMAGES
         self.img = attrs.get("img")
-
         self.img_check = attrs.get("img_check")
 
         val = lambda v, v_th: attrs.get(v) if attrs.get(v) is not None else v_th
@@ -41,14 +51,12 @@ class C_wg:
 
         ### FONT
         self.font = attrs.get("font")
-
         if self.font is None:
             self.font = base.FONT
 
 
         ### RADIUS
         self.rd = attrs.get("rd")
-
         if self.rd is None:
             self.rd = base.RD
 
@@ -62,7 +70,6 @@ class C_wg:
 
         ### BORDURES
         self.bd = attrs.get("bd")
-
         if self.bd is None:
             self.bd = base.BD
 
@@ -79,15 +86,11 @@ class C_wg:
             self.bd_th = base.BD_TH
 
         val = lambda v: self.bd_th + (255,) if int(v) == 1 else base.BD_RGBA
-        self.o1 = val(self.bd_mat[:1])
-        self.o2 = val(self.bd_mat[1:2])
-        self.o3 = val(self.bd_mat[2:3])
-        self.o4 = val(self.bd_mat[3:4])
+        self.o1, self.o2, self.o3, self.o4 = val(self.bd_mat[:1]), val(self.bd_mat[1:2]), val(self.bd_mat[2:3]), val(self.bd_mat[3:4])
 
 
         ### CURSOR
         self.cur = attrs.get("cur")
-
         if self.cur is None:
             self.cur = base.CUR
 
@@ -115,4 +118,7 @@ class C_wg:
 
 
     def STL_PB(self):
-        self.wg.setStyleSheet(f"background-color: rgb{self.c1}")
+        if self.colors_type == "th":
+            self.wg.setStyleSheet(f"background-color: rgb{self.c1}")
+        elif self.colors_type == "tr":
+            self.wg.setStyleSheet(f"background-color: rgb{self.c3}")

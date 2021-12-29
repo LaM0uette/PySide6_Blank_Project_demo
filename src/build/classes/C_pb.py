@@ -8,14 +8,16 @@ class C_pb(C_wg):
 
         self.kwargs = kwargs
 
-
     def STL(self, lst, **kwargs):
         for wg in lst:
-            C_wg(
-                wg=wg,
-                attrs=kwargs
-            ).STL_PB()
-    def menu_top(self, lst):
-        self.STL(lst,
-                 colors=P_rgb().p_th3()
+            C_wg(wg=wg, attrs=kwargs).STL_PB()
+
+
+    def menu_top(self, *args):
+        self.STL(list(args),
+                 colors_type = "tr",
+                 colors = P_rgb().p_th1(),
+                 dim = P_dim().p_r_mt(),
+                 x_ico = P_style().x_ico(),
+                 X_ICO = P_style().X_ICO(),
         )
