@@ -36,6 +36,6 @@ class C_pb(C_wg):
                  dim = P_dim().p_r_mt(),
                  img = P_img().option(),
                  th = "th3",
-                 th_hover = "th3",
+                 th_hover = "bn1",
                  cur = "souris",
         )
