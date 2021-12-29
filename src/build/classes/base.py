@@ -1,29 +1,46 @@
 from ...build import *
 
 
-# Couleurs
+### COULEURS
 COLORS = None
 C1, C2, C3, C4 = None, None, None, None
 
-# Dimension
+
+### DIMENSIONS
 DIM = {"w": None, "h": None}
 
-# Images
+
+### IMAGES
 TH = ""
 TH_HOVER = "bn1"
 TH_CHECK = "bn2"
 
-# Font
+
+### FONT
 FONT = P_police().p()
 
-# Radius
-RD = {"mat": "0000", "px": None}
+
+### RADIUS
 RD_MAT = "0000"
-PX = None
-
-# Bordures
-BD = {"mat": "1111", "px": None, "th": None}
+RD_PX = None
+RD = {"mat": RD_MAT, "px": RD_PX}
 
 
+### BORDURES
+BD_MAT = "0000"
+BD_PX = P_style().bd()
+BD_TH = P_rgb().bn1()
+BD = {"mat": BD_MAT, "px": BD_PX, "th": BD_TH}
+BD_RGBA = (0, 0, 0, 0)
 
 
+### CURSOR
+CUR = P_cur().souris()
+
+
+### PARAMETRES
+ALIGN = P_align().c_c()
+EDIT = False
+SCROLL = P_scroll().n_n()
+HEADER = {"h": True, "v": True}
+PB_SB = P_pb_sb().no()
