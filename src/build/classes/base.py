@@ -9,8 +9,6 @@ C1, C2, C3, C4 = None, None, None, None
 
 ### DIMENSIONS
 DIM = {"w": None, "h": None}
-x_ico = P_style().x_ico()
-X_ICO = P_style().X_ICO()
 
 
 ### IMAGES

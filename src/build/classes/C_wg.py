@@ -33,6 +33,9 @@ class C_wg:
         self.dim = attrs.get("dim")
         if self.dim is None:
             self.dim = base.DIM
+            self.dim_ico = 0
+        else:
+            self.dim_ico = self.dim.get("h") * P_style().x_ico()
 
 
         ### IMAGES
@@ -43,14 +46,6 @@ class C_wg:
         self.th = val("th", base.TH)
         self.th_hover = val("th_hover", base.TH_HOVER)
         self.th_check = val("th_check", base.TH_CHECK)
-
-        self.x_ico = attrs.get("x_ico")
-        if self.x_ico is None:
-            self.x_ico = base.x_ico
-
-        self.X_ICO = attrs.get("X_ICO")
-        if self.X_ICO is None:
-            self.X_ICO = base.X_ICO
 
 
         ### FONT
@@ -127,7 +122,7 @@ class C_wg:
 
         # Image
         if val is None:
-            try: Fct(wg=self.wg, img=self.img + self.th, dim=self.x_ico).ICON()
+            try: Fct(wg=self.wg, img=self.img + self.th, dim=self.dim_ico).ICON()
             except: pass
 
         # Police
@@ -146,6 +141,7 @@ class C_wg:
             except: pass
             try: self.wg.calendarWidget().setCursor(Fct(cur="souris_main"))
             except: pass
+
         if val is None and self.colors_type == "tr":
             try: self.wg.lineEdit().setCursor(Fct(cur="souris_main"))
             except: pass
@@ -253,30 +249,6 @@ class C_wg:
                 "QPushButton:flat {"
                 "border: none;"
                 "}",
-            "rd":
-                "QPushButton {"
-                f"background-color: rgb{self.c1};"
-                f"color: rgb{self.c3};"
-                f"border-top-left-radius: {self.r1}px;"
-                f"border-top-right-radius: {self.r2}px;"
-                f"border-bottom-right-radius: {self.r4}px;"
-                f"border-bottom-left-radius: {self.r3}px;"
-                "}"
-
-                "QPushButton:hover {"
-                f"background-color: rgb{self.c1};"
-                f"color: rgb{self.bn};"
-                "}"
-
-                "QPushButton:checked {"
-                f"background-color: rgb{self.c3};"
-                f"color: rgb{self.c1};"
-                "}"
-
-                "QPushButton:checked:hover {"
-                f"background-color: rgb{self.c3};"
-                f"color: rgb{self.bn};"
-                "}",
             "uni":
                 "QPushButton {"
                 f"background-color: rgb{self.c1};"
@@ -287,7 +259,14 @@ class C_wg:
                 "border: none;"
                 "}",
         }
-        self.wg.setStyleSheet(stl.get(self.colors_type))
+        stl_rd = "QPushButton {" \
+                f"border-top-left-radius: {self.r1}px;" \
+                f"border-top-right-radius: {self.r2}px;" \
+                f"border-bottom-right-radius: {self.r4}px;" \
+                f"border-bottom-left-radius: {self.r3}px;" \
+                "}" \
+
+        self.wg.setStyleSheet(stl.get(self.colors_type) + stl_rd)
         self.STL_ALL()
 
         self.wg.setFlat(True)

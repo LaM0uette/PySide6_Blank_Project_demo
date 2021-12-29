@@ -31,18 +31,12 @@ class C_pb(C_wg):
 
     def menu_top(self, *args):
         self.STL(list(args),
-                 colors_type = "tr",
-                 colors = P_rgb().p_th1(),
+                 colors_type = "th",
+                 colors = P_rgb().p_th2(),
                  dim = P_dim().p_r_mt(),
                  img = P_img().option(),
-                 img_check = P_img().option(),
-                 th = "bn1",
+                 th = "th3",
                  th_hover = "th3",
-                 th_check = "bn2",
-                 x_ico=P_style().x_ico(),
-                 X_ICO=P_style().X_ICO(),
-                 font = P_font().p(),
-                 rd = P_rd().rd1_5(),
                  bd = P_bd().bd1_bd_bn1(),
                  cur = "souris",
         )

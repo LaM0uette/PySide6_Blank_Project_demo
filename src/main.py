@@ -17,7 +17,7 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setupUi(self)
         self.INIT()
 
-        self.activateWindow()
+        self.show()
 
 
     ### INITIALISATION
@@ -153,6 +153,5 @@ app.processEvents()
 
 fen = main()
 splash.finish(fen)
-fen.show()
 
 sys.exit(app.exec())
