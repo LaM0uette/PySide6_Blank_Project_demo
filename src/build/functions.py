@@ -3,7 +3,7 @@ import os
 import pathlib
 import shutil
 
-from PySide6 import QtGui
+from PySide6 import QtCore, QtGui
 
 from . import *
 from ..config import *
@@ -28,6 +28,17 @@ class Fct:
 
         wg.setFixedWidth(w) if w is not None else False
         wg.setFixedHeight(h) if h is not None else False
+    def FONT(self):
+        font = self.kwargs.get("font")
+        if font is None: font = "Berlin Sans FB Demi"
+
+        font_size = self.kwargs.get("font_size")
+        if font_size is None: return
+
+        ft = QtGui.QFont()
+        ft.setFamily(font)
+        ft.setPointSize(font_size)
+        return ft
     def GEN_SVG(self):
         hx1, hx2, hx3, hx4, hxbn1, hxbn2 = P_rgb().hx_th1(), P_rgb().hx_th2(), P_rgb().hx_th3(), P_rgb().hx_th4(), P_rgb().hx_bn1(), P_rgb().hx_bn2()
         ls_couleurs = [
@@ -70,3 +81,11 @@ class Fct:
                             svgMod.close()
                 elif "thc" in svg:
                     shutil.copyfile(svg, f"{lien_tm}/{pathlib.Path(svg).stem[:-4]}.svg")
+    def ICON(self):
+        wg, img, dim = self.kwargs.get("wg"), self.kwargs.get("img"), self.kwargs.get("dim")
+        if wg is None or img is None or dim is None: return
+
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(img + ".svg"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        wg.setIcon(icon)
+        wg.setIconSize(QtCore.QSize(dim, dim))

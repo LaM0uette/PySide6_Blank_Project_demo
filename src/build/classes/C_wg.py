@@ -1,4 +1,8 @@
+from PySide6 import QtCore
+
 from . import base
+from ...build import *
+
 
 class C_wg:
     def __init__(self, **kwargs):
@@ -116,9 +120,176 @@ class C_wg:
         if self.pb_sb is None:
             self.pb_sb = base.PB_SB
 
+    def STL_ALL(self, val=None):
+        # Dimensions
+        try: Fct(wg=self.wg, w=self.dim.get("w"), h=self.dim.get("h")).DIM()
+        except: pass
+
+        # Image
+        if val is None:
+            try: Fct(wg=self.wg, img=self.img + self.th, dim=self.x_ico).ICON()
+            except: pass
+
+        # Police
+        try: self.wg.setFont(Fct(font_size=self.font)).FONT()
+        except: pass
+
+        # Curseur
+        if val is None:
+            try: self.wg.setCursor(Fct(cur=self.cur).CUR())
+            except: pass
+            try: self.wg.view().setCursor(Fct(cur="souris_main").CUR())
+            except: pass
+            try: self.wg.viewport().setCursor(Fct(cur=self.cur).CUR())
+            except: pass
+            try: self.wg.lineEdit().setCursor(Fct(cur="IBeam"))
+            except: pass
+            try: self.wg.calendarWidget().setCursor(Fct(cur="souris_main"))
+            except: pass
+        if val is None and self.colors_type == "tr":
+            try: self.wg.lineEdit().setCursor(Fct(cur="souris_main"))
+            except: pass
+
+        # Paramètres
+        try: self.wg.setAlignment(self.align)
+        except: pass
+        try: self.wg.setEditable(self.edit)
+        except: pass
+        try: self.wg.setHorizontalScrollBarPolicy(self.scroll.get("h"))
+        except: pass
+        try: self.wg.setVerticalScrollBarPolicy(self.scroll.get("v"))
+        except: pass
+        try: self.wg.horizontalHeader().setVisible(self.header.get("h"))
+        except: pass
+        try: self.wg.verticalHeader().setVisible(self.header.get("v"))
+        except: pass
+        try: self.wg.setButtonSymbols(self.pb_sb)
+        except: pass
 
     def STL_PB(self):
-        if self.colors_type == "th":
-            self.wg.setStyleSheet(f"background-color: rgb{self.c1}")
-        elif self.colors_type == "tr":
-            self.wg.setStyleSheet(f"background-color: rgb{self.c3}")
+        stl = {
+            "txt":
+                "QPushButton {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                f"border: {P_style().bd()}px solid rgb{self.c3};"
+                "}"
+
+                "QPushButton:hover {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                f"border: {P_style().bd()}px solid rgb{self.c3};"
+                "}"
+
+                "QPushButton:pressed {"
+                f"color: rgb{self.bn};"
+                "}",
+            "txt_inv":
+                "QPushButton {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                f"border: {P_style().bd()}px solid rgb{self.c3};"
+                "}"
+
+                "QPushButton:hover {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                f"border: {P_style().bd()}px solid rgb{self.c3};"
+                "}"
+
+                "QPushButton:pressed {"
+                f"color: rgb{self.bn};"
+                "}",
+            "th":
+                "QPushButton {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                "}"
+
+                "QPushButton:hover {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.bn};"
+                "}"
+
+                "QPushButton:checked {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                "}"
+
+                "QPushButton:checked:hover {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.bn};"
+                "}"
+
+                "QPushButton:flat {"
+                "border: none;"
+                "}",
+            "tr":
+                "QPushButton {"
+                f"color: rgb{self.c3};"
+                "}"
+
+                "QPushButton:hover {"
+                f"color: rgb{self.bn};"
+                "}"
+
+                "QPushButton:checked:hover {"
+                f"color: rgb{self.bn};"
+                "}"
+
+                "QPushButton:flat {"
+                "border: none;"
+                "}",
+            "zoom":
+                "QPushButton {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                "}"
+
+                "QPushButton:checked {"
+                f"background-color: rgb{self.c3};"
+                "}"
+
+                "QPushButton:flat {"
+                "border: none;"
+                "}",
+            "rd":
+                "QPushButton {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                f"border-top-left-radius: {self.r1}px;"
+                f"border-top-right-radius: {self.r2}px;"
+                f"border-bottom-right-radius: {self.r4}px;"
+                f"border-bottom-left-radius: {self.r3}px;"
+                "}"
+
+                "QPushButton:hover {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.bn};"
+                "}"
+
+                "QPushButton:checked {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                "}"
+
+                "QPushButton:checked:hover {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.bn};"
+                "}",
+            "uni":
+                "QPushButton {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c1};"
+                "}"
+
+                "QPushButton:flat {"
+                "border: none;"
+                "}",
+        }
+        self.wg.setStyleSheet(stl.get(self.colors_type))
+        self.STL_ALL()
+
+        self.wg.setFlat(True)
+        self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.wg.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)

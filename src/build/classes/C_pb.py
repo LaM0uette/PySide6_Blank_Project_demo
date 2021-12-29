@@ -44,5 +44,5 @@ class C_pb(C_wg):
                  font = P_font().p(),
                  rd = P_rd().rd1_5(),
                  bd = P_bd().bd1_bd_bn1(),
-                 cur = P_cur().souris_main(),
+                 cur = "souris",
         )
