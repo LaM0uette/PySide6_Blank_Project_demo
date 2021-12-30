@@ -1,4 +1,4 @@
-from PySide6 import QtCore
+from PySide6 import QtCore, QtWidgets, QtGui
 
 from . import base
 from ...build import *
@@ -286,3 +286,24 @@ class C_wg:
         self.wg.setFlat(True)
         self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
         self.wg.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
+
+
+    def addButtonHoverAnimation(self, button: QtWidgets.QPushButton, currentPos: QtCore.QPoint):
+        enterShift = QtCore.QPropertyAnimation(button, b'pos', button)
+        exitShift = QtCore.QPropertyAnimation(button, b'pos', button)
+        def enterEvent(e):
+            pos = button.pos()
+            enterShift.setStartValue(pos)
+            enterShift.setEndValue(QtCore.QPoint(pos.x() + 3, pos.y() + 3))
+            enterShift.setDuration(100)
+            enterShift.start()
+            Effects.dropShadow(button, 1, 2)
+        def leaveEvent(e):
+            pos = button.pos()
+            exitShift.setStartValue(pos)
+            exitShift.setEndValue(QtCore.QPoint(pos.x() - 3, pos.y() - 3))
+            exitShift.setDuration(100)
+            exitShift.start()
+            Effects.dropShadow(button)
+        button.enterEvent = enterEvent
+        button.leaveEvent = leaveEvent
