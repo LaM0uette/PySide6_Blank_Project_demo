@@ -115,6 +115,30 @@ class C_wg:
         if self.pb_sb is None:
             self.pb_sb = base.PB_SB
 
+
+        ### VAR
+        bd = "QPushButton {" \
+             f"border-width: {self.bd_px}px;" \
+             "border-style: solid;" \
+             f"border-color: rgba{self.o1} rgba{self.o2} rgba{self.o3} rgba{self.o4};" \
+             "}"
+        flat = "QPushButton:flat {" \
+               "border: none;" \
+               "}"
+        rd = "QPushButton {" \
+             f"border-top-left-radius: {self.r1}px;" \
+             f"border-top-right-radius: {self.r2}px;" \
+             f"border-bottom-right-radius: {self.r4}px;" \
+             f"border-bottom-left-radius: {self.r3}px;" \
+             "}"
+
+        if self.bd.get("mat") == "0000":
+            self.inc = rd
+            self.inc_flat = rd + flat
+        else:
+            self.inc = rd + bd
+            self.inc_flat = self.inc
+
     def STL_ALL(self, val=None):
         # Dimensions
         try: Fct(wg=self.wg, w=self.dim.get("w"), h=self.dim.get("h")).DIM()
@@ -163,28 +187,6 @@ class C_wg:
         except: pass
 
     def STL_PB(self):
-        rd = "QPushButton {" \
-                 f"border-top-left-radius: {self.r1}px;" \
-                 f"border-top-right-radius: {self.r2}px;" \
-                 f"border-bottom-right-radius: {self.r4}px;" \
-                 f"border-bottom-left-radius: {self.r3}px;" \
-                 "}"
-        bd = "QPushButton {" \
-                 f"border-width: {self.bd_px}px;" \
-                 "border-style: solid;" \
-                 f"border-color: rgba{self.o1} rgba{self.o2} rgba{self.o3} rgba{self.o4};" \
-                 "}"
-        flat = "QPushButton:flat {" \
-                "border: none;" \
-                "}"
-
-        if self.bd.get("mat") == "0000":
-            inc = rd
-            inc_flat = rd + flat
-        else:
-            inc = rd + bd
-            inc_flat = inc
-
         stl = {
             "txt":
                 "QPushButton {"
@@ -192,18 +194,18 @@ class C_wg:
                 f"color: rgb{self.c3};"
                 f"border: {P_style().bd()}px solid rgb{self.c3};"
                 "}"
-
+                
                 "QPushButton:hover {"
                 f"background-color: rgb{self.c3};"
                 f"color: rgb{self.c1};"
                 f"border: {P_style().bd()}px solid rgb{self.c3};"
                 "}"
-
+                
                 "QPushButton:pressed {"
                 f"color: rgb{self.bn};"
                 "}"
                 
-                f"{inc}",
+                f"{self.inc}",
             "txt_inv":
                 "QPushButton {"
                 f"background-color: rgb{self.c3};"
@@ -221,7 +223,7 @@ class C_wg:
                 f"color: rgb{self.bn};"
                 "}"
                 
-                f"{inc}",
+                f"{self.inc}",
             "th":
                 "QPushButton {"
                 f"background-color: rgb{self.c1};"
@@ -243,7 +245,7 @@ class C_wg:
                 f"color: rgb{self.bn};"
                 "}"
                 
-                f"{inc_flat}",
+                f"{self.inc_flat}",
             "tr":
                 "QPushButton {"
                 f"color: rgb{self.c3};"
@@ -257,7 +259,7 @@ class C_wg:
                 f"color: rgb{self.bn};"
                 "}"
                 
-                f"{inc_flat}",
+                f"{self.inc_flat}",
             "zoom":
                 "QPushButton {"
                 f"background-color: rgb{self.c1};"
@@ -268,14 +270,14 @@ class C_wg:
                 f"background-color: rgb{self.c3};"
                 "}"
                 
-                f"{inc_flat}",
+                f"{self.inc_flat}",
             "uni":
                 "QPushButton {"
                 f"background-color: rgb{self.c1};"
                 f"color: rgb{self.c1};"
                 "}"
                 
-                f"{inc_flat}",
+                f"{self.inc_flat}",
         }
 
         self.wg.setStyleSheet(stl.get(self.colors_type))
