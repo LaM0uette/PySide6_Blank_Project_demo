@@ -97,12 +97,6 @@ class C_wg:
         self.o1, self.o2, self.o3, self.o4 = val(self.bd_mat[:1]), val(self.bd_mat[1:2]), val(self.bd_mat[2:3]), val(self.bd_mat[3:4])
 
 
-        ### CURSOR
-        self.cur = attrs.get("cur")
-        if self.cur is None:
-            self.cur = base.CUR
-
-
         ### PARAMETRES
         self.align = attrs.get("align")
         if self.align is None:
@@ -123,6 +117,12 @@ class C_wg:
         self.pb_sb = attrs.get("pb_sb")
         if self.pb_sb is None:
             self.pb_sb = base.PB_SB
+
+
+        ### CURSOR
+        self.cur = attrs.get("cur")
+        if self.cur is None:
+            self.cur = base.CUR
 
 
         ### VAR
@@ -205,22 +205,6 @@ class C_wg:
         try: self.wg.setFont(Fct(font_size=self.font).FONT())
         except: pass
 
-        # Curseur
-        if not val in ("fr", "lb", "pg", "sca"):
-            try: self.wg.setCursor(Fct(cur=self.cur).CUR())
-            except: pass
-            try: self.wg.view().setCursor(Fct(cur="souris_main").CUR())
-            except: pass
-            try: self.wg.viewport().setCursor(Fct(cur=self.cur).CUR())
-            except: pass
-            try: self.wg.lineEdit().setCursor(Fct(cur="IBeam").CUR())
-            except: pass
-            try: self.wg.calendarWidget().setCursor(Fct(cur="souris_main").CUR())
-            except: pass
-        if val in "sb" and self.colors_type == "tr":
-            try: self.wg.lineEdit().setCursor(Fct(cur="souris_main").CUR())
-            except: pass
-
         # Paramètres
         try: self.wg.setAlignment(self.align)
         except: pass
@@ -236,6 +220,22 @@ class C_wg:
         except: pass
         try: self.wg.setButtonSymbols(self.pb_sb)
         except: pass
+
+        # Curseur
+        if not val in ("fr", "lb", "pg", "sca"):
+            try: self.wg.setCursor(Fct(cur=self.cur).CUR())
+            except: pass
+            try: self.wg.view().setCursor(Fct(cur="souris_main").CUR())
+            except: pass
+            try: self.wg.viewport().setCursor(Fct(cur=self.cur).CUR())
+            except: pass
+            try: self.wg.lineEdit().setCursor(Fct(cur="IBeam").CUR())
+            except: pass
+            try: self.wg.calendarWidget().setCursor(Fct(cur="souris_main").CUR())
+            except: pass
+        if val in "sb" and self.colors_type == "tr":
+            try: self.wg.lineEdit().setCursor(Fct(cur="souris_main").CUR())
+            except: pass
 
     def STL_CB(self):
         stl = {
@@ -281,7 +281,6 @@ class C_wg:
         self.wg.setStyleSheet(stl.get(self.colors_type))
 
         self.STL_ALL()
-        self.wg.lineEdit().setCursor(Fct(cur="IBeam").CUR())
     def STL_LB(self):
         stl = {
             "th":
