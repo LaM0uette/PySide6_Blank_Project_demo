@@ -194,13 +194,13 @@ class C_wg:
             self.inc += scroll
             self.inc_flat += scroll
 
-    def STL_ALL(self, val=""):
+    def STL_ALL(self, val=""):  # sourcery skip: extract-method
         # Dimensions
         try: Fct(wg=self.wg, w=self.dim.get("w"), h=self.dim.get("h")).DIM()
         except: pass
 
         # Image
-        if val not in ("ckb", "rb"):
+        if val not in ("fr", "ckb", "rb"):
             try: Fct(wg=self.wg, img=self.img + self.th, dim=self.dim_ico).ICON()
             except: pass
 
@@ -208,27 +208,29 @@ class C_wg:
             # except: pass
 
         # Font
-        try: self.wg.setFont(Fct(font_size=self.font).FONT())
-        except: pass
+        if val not in ("fr", ):
+            try: self.wg.setFont(Fct(font_size=self.font).FONT())
+            except: pass
 
         # Paramètres
-        try: self.wg.setAlignment(self.align)
-        except: pass
-        try: self.wg.setEditable(self.edit)
-        except: pass
-        try: self.wg.setHorizontalScrollBarPolicy(self.scroll.get("h"))
-        except: pass
-        try: self.wg.setVerticalScrollBarPolicy(self.scroll.get("v"))
-        except: pass
-        try: self.wg.horizontalHeader().setVisible(self.header.get("h"))
-        except: pass
-        try: self.wg.verticalHeader().setVisible(self.header.get("v"))
-        except: pass
-        try: self.wg.setButtonSymbols(self.pb_sb)
-        except: pass
+        if val not in ("fr",):
+            try: self.wg.setAlignment(self.align)
+            except: pass
+            try: self.wg.setEditable(self.edit)
+            except: pass
+            try: self.wg.setHorizontalScrollBarPolicy(self.scroll.get("h"))
+            except: pass
+            try: self.wg.setVerticalScrollBarPolicy(self.scroll.get("v"))
+            except: pass
+            try: self.wg.horizontalHeader().setVisible(self.header.get("h"))
+            except: pass
+            try: self.wg.verticalHeader().setVisible(self.header.get("v"))
+            except: pass
+            try: self.wg.setButtonSymbols(self.pb_sb)
+            except: pass
 
         # Curseur
-        if val in "sb" and self.colors_type == "tr":
+        if val in ("sb", ) and self.colors_type == "tr":
             try: self.wg.lineEdit().setCursor(Fct(cur="souris_main").CUR())
             except: pass
 
@@ -526,7 +528,7 @@ class C_wg:
         self.wg.setDate(QdateDuJour)
         self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
     def STL_FR(self):
-        self.STL_ALL()
+        self.STL_ALL("fr")
 
         stl = {
             "th":
