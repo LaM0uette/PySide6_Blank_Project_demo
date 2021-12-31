@@ -10,13 +10,14 @@ class C_de(C_wg):
 
     def STL(self, lst, **kwargs):
         """
-        colors_type = "tr",
-        colors = P_rgb().p_th1(),
-        dim = P_dim().p_r_mt(),
-        font = P_font().p(),
-        align = P_align().c_c(),
-        rd = P_rd().rd1_5(),
-        bd = P_bd().bd1_bd_bn1(),
+        colors_type="tr",
+        colors=P_rgb().p_th1(),
+        dim=P_dim().p_r_mt(),
+        font=P_font().p(),
+        align=P_align().c_c(),
+        rd=P_rd().rd1_5(),
+        bd=P_bd().bd1_bd_bn1(),
+        cur="main",
         """
         for wg in lst: C_wg(wg=wg, attrs=kwargs).STL_DE()
 
@@ -25,4 +26,5 @@ class C_de(C_wg):
         self.STL(list(args),
                  colors = P_rgb().p_th1(),
                  dim = P_dim().p_aw_demo(),
-                 font=P_font().p(),)
+                 font=P_font().p(),
+                 cur="main")
