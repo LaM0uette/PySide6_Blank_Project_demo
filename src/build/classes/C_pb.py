@@ -10,21 +10,22 @@ class C_pb(C_wg):
 
     def STL(self, lst, **kwargs):
         """
-        type = "ico",
-        colors_type = "tr",
-        colors = P_rgb().p_th1(),
-        dim = P_dim().p_r_mt(),
-        x_ico = P_style().x_ico(),
-        X_ICO = P_style().X_ICO(),
-        img = P_img().option(),
-        img_check = P_img().option(),
-        th = "bn1",
-        th_hover = "th3",
-        th_check = "bn2",
-        font = P_font().p(),
-        rd = P_rd().rd1_5(),
-        bd = P_bd().bd1_bd_bn1(),
-        cur = P_cur().souris_main(),
+        type=str %,
+        colors_type=str %,
+        colors=P_rgb().%,
+        dim=P_dim().%,
+        x_ico=P_style().%,
+        X_ICO=P_style().%,
+        img=P_img().%,
+        img_check=P_img().%,
+        th=str %,
+        th_hover=str %,
+        th_check=str %,
+        font=P_font().%,
+        rd=P_rd().%,
+        bd=P_bd().%,
+        edit=Bool %,
+        cur=str %,
         """
         for wg in lst:
             C_wg(wg=wg, attrs=kwargs).STL_PB()

@@ -10,16 +10,16 @@ class C_lb(C_wg):
 
     def STL(self, lst, **kwargs):
         """
-        colors_type = "tr",
-        colors = P_rgb().p_th1(),
-        dim = P_dim().p_r_mt(),
-        x_ico = P_style().x_ico(),
-        img = P_img().option(),
-        th = "bn1",
-        font = P_font().p(),
-        align = P_align().c_c(),
-        rd = P_rd().rd1_5(),
-        bd = P_bd().bd1_bd_bn1(),
+        colors_type=str %,
+        colors=P_rgb().%,
+        dim=P_dim().%,
+        x_ico=P_style().%,
+        img=P_img().%,
+        th=str %,
+        font=P_font().%,
+        align=P_align().%,
+        rd=P_rd().%,
+        bd=P_bd().%,
         """
         for wg in lst:
             C_wg(wg=wg, attrs=kwargs).STL_LB()

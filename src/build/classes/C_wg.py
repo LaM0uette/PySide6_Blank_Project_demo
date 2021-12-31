@@ -7,7 +7,27 @@ from ...config import vrb
 
 
 class C_wg:
-    def __init__(self, **kwargs):
+    def __init__(self, **kwargs):  # sourcery no-metrics
+        """
+        type=str %,
+        colors_type=str %,
+        colors=P_rgb().%,
+        dim=P_dim().%,
+        x_ico=P_style().%,
+        X_ICO=P_style().%,
+        img=P_img().%,
+        img_check=P_img().%,
+        th=str %,
+        th_hover=str %,
+        th_check=str %,
+        font=P_font().%,
+        align=P_align().%,
+        rd=P_rd().%,
+        bd=P_bd().%,
+        edit=Bool %,
+        scroll=P_scroll().%,
+        cur=str %,
+        """
 
         self.kwargs = kwargs
 
