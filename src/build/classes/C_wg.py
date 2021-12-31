@@ -128,52 +128,56 @@ class C_wg:
 
         ### VAR
         wg_type = ""
-        if isinstance(self.wg, QtWidgets.QComboBox): wg_type = "QComboBox"
+        if isinstance(self.wg, QtWidgets.QScrollArea): wg_type = "QScrollArea"
+
+        elif isinstance(self.wg, QtWidgets.QComboBox): wg_type = "QComboBox"
         elif isinstance(self.wg, QtWidgets.QDateEdit): wg_type = "QDateEdit"
         elif isinstance(self.wg, QtWidgets.QLabel): wg_type = "QLabel"
         elif isinstance(self.wg, QtWidgets.QPushButton): wg_type = "QPushButton"
-        elif isinstance(self.wg, QtWidgets.QScrollArea): wg_type = "QScrollArea"
 
-        bd = f"[class~='{wg_type}']" \
+        elif isinstance(self.wg, QtWidgets.QFrame): wg_type = "QFrame"
+
+        # [class ~='{wg_type}']
+        bd = f".{wg_type}" \
              "{" \
              f"border-width: {self.bd_px}px;" \
              "border-style: solid;" \
              f"border-color: rgba{self.o1} rgba{self.o2} rgba{self.o3} rgba{self.o4};" \
              "}"
-        rd = f"[class~='{wg_type}']" \
+        rd = f".{wg_type}" \
              "{" \
              f"border-top-left-radius: {self.r1}px;" \
              f"border-top-right-radius: {self.r2}px;" \
              f"border-bottom-right-radius: {self.r4}px;" \
              f"border-bottom-left-radius: {self.r3}px;" \
              "}"
-        flat = f"[class~='{wg_type}']:flat" \
+        flat = f".{wg_type}:flat" \
                "{" \
                "border: none;" \
                "}"
-        scroll = f"[class~='{wg_type}'] QScrollBar " \
+        scroll = f".{wg_type} QScrollBar " \
                  "{" \
                  f"background-color: rgb{self.c1};" \
                  "width: 20px;" \
                  "height: 20px;" \
                  "}" \
-                 f"[class~='{wg_type}'] ::handle:vertical" \
+                 f".{wg_type} ::handle:vertical" \
                  "{" \
                  "min-height: 100px;" \
                  "}" \
-                 f"[class~='{wg_type}'] ::handle:vertical" \
+                 f".{wg_type} ::handle:vertical" \
                  "{" \
                  "min-height: 100px;" \
                  "}" \
-                 f"[class~='{wg_type}'] ::handle:horizontal" \
+                 f".{wg_type} ::handle:horizontal" \
                  "{" \
                  "min-width: 100px;" \
                  "}" \
-                 f"[class~='{wg_type}']  QScrollBar::handle" \
+                 f".{wg_type}  QScrollBar::handle" \
                  "{" \
                  f"background-color: rgb{self.c3};" \
                  "}" \
-                 f"[class~='{wg_type}']  QScrollBar::add-page, [class~='{wg_type}']  QScrollBar::sub-page" \
+                 f".{wg_type}  QScrollBar::add-page, .{wg_type}  QScrollBar::sub-page" \
                  "{" \
                  f"background-color: rgb{self.c1};" \
                  f"border: rgb{self.c1};" \
@@ -514,13 +518,26 @@ class C_wg:
         
                 f"{self.inc}"
         }
-        self.wg.setStyleSheet(stl.get(self.colors_type)) if self.c1 is not None else False
+        self.wg.setStyleSheet(stl.get(self.colors_type))
 
         dateDuJour = vrb.DATE_NOW_FORMAT.split("_")
         QdateDuJour = QtCore.QDate(int(dateDuJour[2]), int(dateDuJour[1]), int(dateDuJour[0]))
         self.wg.setDateTime(QtCore.QDateTime(QdateDuJour, QtCore.QTime(0, 0, 0)))
         self.wg.setDate(QdateDuJour)
         self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
+    def STL_FR(self):
+        self.STL_ALL()
+
+        stl = {
+            "th":
+                ".QFrame {"
+                f"background-color: rgb{self.c1};"
+                "}"
+
+                f"{self.inc}",
+        }
+        self.wg.setStyleSheet(stl.get(self.colors_type))
+        self.wg.setFrameShape(QtWidgets.QFrame.NoFrame)
     def STL_LB(self):
         self.STL_ALL()
 

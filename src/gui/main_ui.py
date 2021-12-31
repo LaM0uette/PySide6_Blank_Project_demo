@@ -37,14 +37,18 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, 0, 822, 3138))
+        self.vlay_wg.setGeometry(QRect(0, 0, 822, 3422))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(50, 50, 50, 50)
-        self.vlay_cb = QVBoxLayout()
+        self.fr_cb = QFrame(self.vlay_wg)
+        self.fr_cb.setObjectName(u"fr_cb")
+        self.vlay_cb = QVBoxLayout(self.fr_cb)
+        self.vlay_cb.setSpacing(10)
         self.vlay_cb.setObjectName(u"vlay_cb")
-        self.lb_cb_demo = QLabel(self.vlay_wg)
+        self.vlay_cb.setContentsMargins(10, 10, 10, 10)
+        self.lb_cb_demo = QLabel(self.fr_cb)
         self.lb_cb_demo.setObjectName(u"lb_cb_demo")
 
         self.vlay_cb.addWidget(self.lb_cb_demo)
@@ -53,7 +57,7 @@ class Ui_main(object):
 
         self.vlay_cb.addItem(self.verticalSpacer_2)
 
-        self.cb_demo_th = QComboBox(self.vlay_wg)
+        self.cb_demo_th = QComboBox(self.fr_cb)
         self.cb_demo_th.addItem("")
         self.cb_demo_th.addItem("")
         self.cb_demo_th.addItem("")
@@ -74,7 +78,7 @@ class Ui_main(object):
 
         self.vlay_cb.addWidget(self.cb_demo_th)
 
-        self.cb_demo_tr = QComboBox(self.vlay_wg)
+        self.cb_demo_tr = QComboBox(self.fr_cb)
         self.cb_demo_tr.addItem("")
         self.cb_demo_tr.addItem("")
         self.cb_demo_tr.addItem("")
@@ -96,11 +100,15 @@ class Ui_main(object):
         self.vlay_cb.addWidget(self.cb_demo_tr)
 
 
-        self.verticalLayout.addLayout(self.vlay_cb)
+        self.verticalLayout.addWidget(self.fr_cb)
 
-        self.vlay_de = QVBoxLayout()
+        self.fr_de = QFrame(self.vlay_wg)
+        self.fr_de.setObjectName(u"fr_de")
+        self.vlay_de = QVBoxLayout(self.fr_de)
+        self.vlay_de.setSpacing(10)
         self.vlay_de.setObjectName(u"vlay_de")
-        self.lb_de_demo = QLabel(self.vlay_wg)
+        self.vlay_de.setContentsMargins(10, 10, 10, 10)
+        self.lb_de_demo = QLabel(self.fr_de)
         self.lb_de_demo.setObjectName(u"lb_de_demo")
 
         self.vlay_de.addWidget(self.lb_de_demo)
@@ -109,22 +117,26 @@ class Ui_main(object):
 
         self.vlay_de.addItem(self.verticalSpacer_12)
 
-        self.de_demo_th = QDateEdit(self.vlay_wg)
+        self.de_demo_th = QDateEdit(self.fr_de)
         self.de_demo_th.setObjectName(u"de_demo_th")
 
         self.vlay_de.addWidget(self.de_demo_th)
 
-        self.de_demo_tr = QDateEdit(self.vlay_wg)
+        self.de_demo_tr = QDateEdit(self.fr_de)
         self.de_demo_tr.setObjectName(u"de_demo_tr")
 
         self.vlay_de.addWidget(self.de_demo_tr)
 
 
-        self.verticalLayout.addLayout(self.vlay_de)
+        self.verticalLayout.addWidget(self.fr_de)
 
-        self.vlay_lw = QVBoxLayout()
+        self.fr_lw = QFrame(self.vlay_wg)
+        self.fr_lw.setObjectName(u"fr_lw")
+        self.vlay_lw = QVBoxLayout(self.fr_lw)
+        self.vlay_lw.setSpacing(0)
         self.vlay_lw.setObjectName(u"vlay_lw")
-        self.lb_lw_demo = QLabel(self.vlay_wg)
+        self.vlay_lw.setContentsMargins(10, 10, 10, 10)
+        self.lb_lw_demo = QLabel(self.fr_lw)
         self.lb_lw_demo.setObjectName(u"lb_lw_demo")
 
         self.vlay_lw.addWidget(self.lb_lw_demo)
@@ -133,19 +145,21 @@ class Ui_main(object):
 
         self.vlay_lw.addItem(self.verticalSpacer_13)
 
-        self.lw_demo = QListView(self.vlay_wg)
+        self.lw_demo = QListView(self.fr_lw)
         self.lw_demo.setObjectName(u"lw_demo")
 
         self.vlay_lw.addWidget(self.lw_demo)
 
 
-        self.verticalLayout.addLayout(self.vlay_lw)
+        self.verticalLayout.addWidget(self.fr_lw)
 
-        self.vlay_pb = QVBoxLayout()
+        self.fr_pb = QFrame(self.vlay_wg)
+        self.fr_pb.setObjectName(u"fr_pb")
+        self.vlay_pb = QVBoxLayout(self.fr_pb)
         self.vlay_pb.setSpacing(0)
         self.vlay_pb.setObjectName(u"vlay_pb")
-        self.vlay_pb.setContentsMargins(0, -1, 0, -1)
-        self.lb_pb_demo = QLabel(self.vlay_wg)
+        self.vlay_pb.setContentsMargins(10, 10, 10, 10)
+        self.lb_pb_demo = QLabel(self.fr_pb)
         self.lb_pb_demo.setObjectName(u"lb_pb_demo")
 
         self.vlay_pb.addWidget(self.lb_pb_demo)
@@ -154,7 +168,7 @@ class Ui_main(object):
 
         self.vlay_pb.addItem(self.verticalSpacer_14)
 
-        self.pb_demo_txt = QPushButton(self.vlay_wg)
+        self.pb_demo_txt = QPushButton(self.fr_pb)
         self.pb_demo_txt.setObjectName(u"pb_demo_txt")
 
         self.vlay_pb.addWidget(self.pb_demo_txt)
@@ -163,7 +177,7 @@ class Ui_main(object):
 
         self.vlay_pb.addItem(self.verticalSpacer_3)
 
-        self.pb_demo_txt_inv = QPushButton(self.vlay_wg)
+        self.pb_demo_txt_inv = QPushButton(self.fr_pb)
         self.pb_demo_txt_inv.setObjectName(u"pb_demo_txt_inv")
 
         self.vlay_pb.addWidget(self.pb_demo_txt_inv)
@@ -172,7 +186,7 @@ class Ui_main(object):
 
         self.vlay_pb.addItem(self.verticalSpacer_4)
 
-        self.pb_demo_th = QPushButton(self.vlay_wg)
+        self.pb_demo_th = QPushButton(self.fr_pb)
         self.pb_demo_th.setObjectName(u"pb_demo_th")
 
         self.vlay_pb.addWidget(self.pb_demo_th)
@@ -181,7 +195,7 @@ class Ui_main(object):
 
         self.vlay_pb.addItem(self.verticalSpacer_5)
 
-        self.pb_demo_tr = QPushButton(self.vlay_wg)
+        self.pb_demo_tr = QPushButton(self.fr_pb)
         self.pb_demo_tr.setObjectName(u"pb_demo_tr")
 
         self.vlay_pb.addWidget(self.pb_demo_tr)
@@ -190,7 +204,7 @@ class Ui_main(object):
 
         self.vlay_pb.addItem(self.verticalSpacer_6)
 
-        self.pb_demo_ck = QPushButton(self.vlay_wg)
+        self.pb_demo_ck = QPushButton(self.fr_pb)
         self.pb_demo_ck.setObjectName(u"pb_demo_ck")
         self.pb_demo_ck.setCheckable(True)
 
@@ -200,7 +214,7 @@ class Ui_main(object):
 
         self.vlay_pb.addItem(self.verticalSpacer_7)
 
-        self.pb_demo_ck_ico = QPushButton(self.vlay_wg)
+        self.pb_demo_ck_ico = QPushButton(self.fr_pb)
         self.pb_demo_ck_ico.setObjectName(u"pb_demo_ck_ico")
         self.pb_demo_ck_ico.setCheckable(True)
 
@@ -210,7 +224,7 @@ class Ui_main(object):
 
         self.vlay_pb.addItem(self.verticalSpacer_8)
 
-        self.pb_demo_ico_ck = QPushButton(self.vlay_wg)
+        self.pb_demo_ico_ck = QPushButton(self.fr_pb)
         self.pb_demo_ico_ck.setObjectName(u"pb_demo_ico_ck")
         self.pb_demo_ico_ck.setCheckable(True)
 
@@ -220,7 +234,7 @@ class Ui_main(object):
 
         self.vlay_pb.addItem(self.verticalSpacer_9)
 
-        self.pb_demo_zoom = QPushButton(self.vlay_wg)
+        self.pb_demo_zoom = QPushButton(self.fr_pb)
         self.pb_demo_zoom.setObjectName(u"pb_demo_zoom")
         self.pb_demo_zoom.setCheckable(True)
 
@@ -230,7 +244,7 @@ class Ui_main(object):
 
         self.vlay_pb.addItem(self.verticalSpacer_10)
 
-        self.pb_demo_rd = QPushButton(self.vlay_wg)
+        self.pb_demo_rd = QPushButton(self.fr_pb)
         self.pb_demo_rd.setObjectName(u"pb_demo_rd")
 
         self.vlay_pb.addWidget(self.pb_demo_rd)
@@ -239,17 +253,21 @@ class Ui_main(object):
 
         self.vlay_pb.addItem(self.verticalSpacer_11)
 
-        self.pb_demo_bd = QPushButton(self.vlay_wg)
+        self.pb_demo_bd = QPushButton(self.fr_pb)
         self.pb_demo_bd.setObjectName(u"pb_demo_bd")
 
         self.vlay_pb.addWidget(self.pb_demo_bd)
 
 
-        self.verticalLayout.addLayout(self.vlay_pb)
+        self.verticalLayout.addWidget(self.fr_pb)
 
-        self.vlay_ck = QVBoxLayout()
+        self.fr_ck = QFrame(self.vlay_wg)
+        self.fr_ck.setObjectName(u"fr_ck")
+        self.vlay_ck = QVBoxLayout(self.fr_ck)
+        self.vlay_ck.setSpacing(10)
         self.vlay_ck.setObjectName(u"vlay_ck")
-        self.lb_ck_demo = QLabel(self.vlay_wg)
+        self.vlay_ck.setContentsMargins(10, 10, 10, 10)
+        self.lb_ck_demo = QLabel(self.fr_ck)
         self.lb_ck_demo.setObjectName(u"lb_ck_demo")
 
         self.vlay_ck.addWidget(self.lb_ck_demo)
@@ -258,27 +276,31 @@ class Ui_main(object):
 
         self.vlay_ck.addItem(self.verticalSpacer_15)
 
-        self.ck_demo_1 = QCheckBox(self.vlay_wg)
+        self.ck_demo_1 = QCheckBox(self.fr_ck)
         self.ck_demo_1.setObjectName(u"ck_demo_1")
 
         self.vlay_ck.addWidget(self.ck_demo_1)
 
-        self.ck_demo_2 = QCheckBox(self.vlay_wg)
+        self.ck_demo_2 = QCheckBox(self.fr_ck)
         self.ck_demo_2.setObjectName(u"ck_demo_2")
 
         self.vlay_ck.addWidget(self.ck_demo_2)
 
-        self.ck_demo_3 = QCheckBox(self.vlay_wg)
+        self.ck_demo_3 = QCheckBox(self.fr_ck)
         self.ck_demo_3.setObjectName(u"ck_demo_3")
 
         self.vlay_ck.addWidget(self.ck_demo_3)
 
 
-        self.verticalLayout.addLayout(self.vlay_ck)
+        self.verticalLayout.addWidget(self.fr_ck)
 
-        self.vlay_rb = QVBoxLayout()
+        self.fr_rb = QFrame(self.vlay_wg)
+        self.fr_rb.setObjectName(u"fr_rb")
+        self.vlay_rb = QVBoxLayout(self.fr_rb)
+        self.vlay_rb.setSpacing(10)
         self.vlay_rb.setObjectName(u"vlay_rb")
-        self.lb_rb_demo = QLabel(self.vlay_wg)
+        self.vlay_rb.setContentsMargins(10, 10, 10, 10)
+        self.lb_rb_demo = QLabel(self.fr_rb)
         self.lb_rb_demo.setObjectName(u"lb_rb_demo")
 
         self.vlay_rb.addWidget(self.lb_rb_demo)
@@ -287,27 +309,31 @@ class Ui_main(object):
 
         self.vlay_rb.addItem(self.verticalSpacer_16)
 
-        self.rb_demo_1 = QRadioButton(self.vlay_wg)
+        self.rb_demo_1 = QRadioButton(self.fr_rb)
         self.rb_demo_1.setObjectName(u"rb_demo_1")
 
         self.vlay_rb.addWidget(self.rb_demo_1)
 
-        self.rb_demo_2 = QRadioButton(self.vlay_wg)
+        self.rb_demo_2 = QRadioButton(self.fr_rb)
         self.rb_demo_2.setObjectName(u"rb_demo_2")
 
         self.vlay_rb.addWidget(self.rb_demo_2)
 
-        self.rb_demo_3 = QRadioButton(self.vlay_wg)
+        self.rb_demo_3 = QRadioButton(self.fr_rb)
         self.rb_demo_3.setObjectName(u"rb_demo_3")
 
         self.vlay_rb.addWidget(self.rb_demo_3)
 
 
-        self.verticalLayout.addLayout(self.vlay_rb)
+        self.verticalLayout.addWidget(self.fr_rb)
 
-        self.vlay_pg = QVBoxLayout()
+        self.fr_pg = QFrame(self.vlay_wg)
+        self.fr_pg.setObjectName(u"fr_pg")
+        self.vlay_pg = QVBoxLayout(self.fr_pg)
+        self.vlay_pg.setSpacing(0)
         self.vlay_pg.setObjectName(u"vlay_pg")
-        self.lb_pg_demo = QLabel(self.vlay_wg)
+        self.vlay_pg.setContentsMargins(10, 10, 10, 10)
+        self.lb_pg_demo = QLabel(self.fr_pg)
         self.lb_pg_demo.setObjectName(u"lb_pg_demo")
 
         self.vlay_pg.addWidget(self.lb_pg_demo)
@@ -316,18 +342,22 @@ class Ui_main(object):
 
         self.vlay_pg.addItem(self.verticalSpacer_17)
 
-        self.pg_demo = QProgressBar(self.vlay_wg)
+        self.pg_demo = QProgressBar(self.fr_pg)
         self.pg_demo.setObjectName(u"pg_demo")
         self.pg_demo.setValue(24)
 
         self.vlay_pg.addWidget(self.pg_demo)
 
 
-        self.verticalLayout.addLayout(self.vlay_pg)
+        self.verticalLayout.addWidget(self.fr_pg)
 
-        self.vlay_sb = QVBoxLayout()
+        self.fr_sb = QFrame(self.vlay_wg)
+        self.fr_sb.setObjectName(u"fr_sb")
+        self.vlay_sb = QVBoxLayout(self.fr_sb)
+        self.vlay_sb.setSpacing(10)
         self.vlay_sb.setObjectName(u"vlay_sb")
-        self.lb_sb_demo = QLabel(self.vlay_wg)
+        self.vlay_sb.setContentsMargins(10, 10, 10, 10)
+        self.lb_sb_demo = QLabel(self.fr_sb)
         self.lb_sb_demo.setObjectName(u"lb_sb_demo")
 
         self.vlay_sb.addWidget(self.lb_sb_demo)
@@ -336,22 +366,26 @@ class Ui_main(object):
 
         self.vlay_sb.addItem(self.verticalSpacer_18)
 
-        self.sb_demo = QSpinBox(self.vlay_wg)
+        self.sb_demo = QSpinBox(self.fr_sb)
         self.sb_demo.setObjectName(u"sb_demo")
 
         self.vlay_sb.addWidget(self.sb_demo)
 
-        self.dsb_demo = QDoubleSpinBox(self.vlay_wg)
+        self.dsb_demo = QDoubleSpinBox(self.fr_sb)
         self.dsb_demo.setObjectName(u"dsb_demo")
 
         self.vlay_sb.addWidget(self.dsb_demo)
 
 
-        self.verticalLayout.addLayout(self.vlay_sb)
+        self.verticalLayout.addWidget(self.fr_sb)
 
-        self.vlay_tw = QVBoxLayout()
+        self.fr_tw = QFrame(self.vlay_wg)
+        self.fr_tw.setObjectName(u"fr_tw")
+        self.vlay_tw = QVBoxLayout(self.fr_tw)
+        self.vlay_tw.setSpacing(0)
         self.vlay_tw.setObjectName(u"vlay_tw")
-        self.lb_tw_demo = QLabel(self.vlay_wg)
+        self.vlay_tw.setContentsMargins(10, 10, 10, 10)
+        self.lb_tw_demo = QLabel(self.fr_tw)
         self.lb_tw_demo.setObjectName(u"lb_tw_demo")
 
         self.vlay_tw.addWidget(self.lb_tw_demo)
@@ -360,7 +394,7 @@ class Ui_main(object):
 
         self.vlay_tw.addItem(self.verticalSpacer_19)
 
-        self.tw_demo = QTableWidget(self.vlay_wg)
+        self.tw_demo = QTableWidget(self.fr_tw)
         if (self.tw_demo.columnCount() < 12):
             self.tw_demo.setColumnCount(12)
         __qtablewidgetitem = QTableWidgetItem()
@@ -518,11 +552,15 @@ class Ui_main(object):
         self.vlay_tw.addWidget(self.tw_demo)
 
 
-        self.verticalLayout.addLayout(self.vlay_tw)
+        self.verticalLayout.addWidget(self.fr_tw)
 
-        self.vlay_le = QVBoxLayout()
+        self.fr_le = QFrame(self.vlay_wg)
+        self.fr_le.setObjectName(u"fr_le")
+        self.vlay_le = QVBoxLayout(self.fr_le)
+        self.vlay_le.setSpacing(10)
         self.vlay_le.setObjectName(u"vlay_le")
-        self.lb_le_demo = QLabel(self.vlay_wg)
+        self.vlay_le.setContentsMargins(10, 10, 10, 10)
+        self.lb_le_demo = QLabel(self.fr_le)
         self.lb_le_demo.setObjectName(u"lb_le_demo")
 
         self.vlay_le.addWidget(self.lb_le_demo)
@@ -531,22 +569,26 @@ class Ui_main(object):
 
         self.vlay_le.addItem(self.verticalSpacer_20)
 
-        self.le_demo_th = QLineEdit(self.vlay_wg)
+        self.le_demo_th = QLineEdit(self.fr_le)
         self.le_demo_th.setObjectName(u"le_demo_th")
 
         self.vlay_le.addWidget(self.le_demo_th)
 
-        self.le_demo_tr = QLineEdit(self.vlay_wg)
+        self.le_demo_tr = QLineEdit(self.fr_le)
         self.le_demo_tr.setObjectName(u"le_demo_tr")
 
         self.vlay_le.addWidget(self.le_demo_tr)
 
 
-        self.verticalLayout.addLayout(self.vlay_le)
+        self.verticalLayout.addWidget(self.fr_le)
 
-        self.vlay_te = QVBoxLayout()
+        self.fr_te = QFrame(self.vlay_wg)
+        self.fr_te.setObjectName(u"fr_te")
+        self.vlay_te = QVBoxLayout(self.fr_te)
+        self.vlay_te.setSpacing(10)
         self.vlay_te.setObjectName(u"vlay_te")
-        self.lb_te_demo = QLabel(self.vlay_wg)
+        self.vlay_te.setContentsMargins(10, 10, 10, 10)
+        self.lb_te_demo = QLabel(self.fr_te)
         self.lb_te_demo.setObjectName(u"lb_te_demo")
 
         self.vlay_te.addWidget(self.lb_te_demo)
@@ -555,22 +597,26 @@ class Ui_main(object):
 
         self.vlay_te.addItem(self.verticalSpacer_21)
 
-        self.te_demo_th = QTextEdit(self.vlay_wg)
+        self.te_demo_th = QTextEdit(self.fr_te)
         self.te_demo_th.setObjectName(u"te_demo_th")
 
         self.vlay_te.addWidget(self.te_demo_th)
 
-        self.te_demo_tr = QTextEdit(self.vlay_wg)
+        self.te_demo_tr = QTextEdit(self.fr_te)
         self.te_demo_tr.setObjectName(u"te_demo_tr")
 
         self.vlay_te.addWidget(self.te_demo_tr)
 
 
-        self.verticalLayout.addLayout(self.vlay_te)
+        self.verticalLayout.addWidget(self.fr_te)
 
-        self.vlay_pte = QVBoxLayout()
+        self.fr_pte = QFrame(self.vlay_wg)
+        self.fr_pte.setObjectName(u"fr_pte")
+        self.vlay_pte = QVBoxLayout(self.fr_pte)
+        self.vlay_pte.setSpacing(10)
         self.vlay_pte.setObjectName(u"vlay_pte")
-        self.lb_pte_demo = QLabel(self.vlay_wg)
+        self.vlay_pte.setContentsMargins(10, 10, 10, 10)
+        self.lb_pte_demo = QLabel(self.fr_pte)
         self.lb_pte_demo.setObjectName(u"lb_pte_demo")
 
         self.vlay_pte.addWidget(self.lb_pte_demo)
@@ -579,18 +625,18 @@ class Ui_main(object):
 
         self.vlay_pte.addItem(self.verticalSpacer_22)
 
-        self.pte_demo_th = QPlainTextEdit(self.vlay_wg)
+        self.pte_demo_th = QPlainTextEdit(self.fr_pte)
         self.pte_demo_th.setObjectName(u"pte_demo_th")
 
         self.vlay_pte.addWidget(self.pte_demo_th)
 
-        self.pte_demo_tr = QPlainTextEdit(self.vlay_wg)
+        self.pte_demo_tr = QPlainTextEdit(self.fr_pte)
         self.pte_demo_tr.setObjectName(u"pte_demo_tr")
 
         self.vlay_pte.addWidget(self.pte_demo_tr)
 
 
-        self.verticalLayout.addLayout(self.vlay_pte)
+        self.verticalLayout.addWidget(self.fr_pte)
 
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 

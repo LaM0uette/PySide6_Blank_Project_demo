@@ -6,6 +6,7 @@ class In_classe:
 
         self.CB(ui=ui)
         self.DE(ui=ui)
+        self.FR(ui=ui)
         self.LB(ui=ui)
         self.PB(ui=ui)
         self.SCA(ui=ui)
@@ -18,6 +19,14 @@ class In_classe:
         # Demo
         C_de().demo_th(ui.de_demo_th)
         C_de().demo_tr(ui.de_demo_tr)
+    def FR(self, ui):
+        # Menu_top
+        C_fr().menu_top(ui.fr_menu_top)
+
+        # Demo
+        C_fr().demo(ui.fr_cb, ui.fr_de, ui.fr_lw, ui.fr_pb, ui.fr_ck,
+                    ui.fr_rb, ui.fr_pg, ui.fr_sb, ui.fr_tw, ui.fr_le,
+                    ui.fr_te, ui.fr_pte)
     def LB(self, ui):
         # Titre app
         C_lb().h3_titre(ui.lb_mt_nom)

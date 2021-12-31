@@ -37,7 +37,7 @@
         <x>0</x>
         <y>0</y>
         <width>822</width>
-        <height>3138</height>
+        <height>3422</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -57,1181 +57,1376 @@
         <number>50</number>
        </property>
        <item>
-        <layout class="QVBoxLayout" name="vlay_cb">
-         <item>
-          <widget class="QLabel" name="lb_cb_demo">
-           <property name="text">
-            <string>QComboBox :</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_2">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QComboBox" name="cb_demo_th">
-           <item>
+        <widget class="QFrame" name="fr_cb">
+         <layout class="QVBoxLayout" name="vlay_cb">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="lb_cb_demo">
             <property name="text">
-             <string>cb_demo_th</string>
+             <string>QComboBox :</string>
             </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_th</string>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
             </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_th</string>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
             </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_th</string>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
             </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_th</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_th</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_th</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_th</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_th</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_th</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_th</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_th</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_th</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_th</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_th</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_th</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-         <item>
-          <widget class="QComboBox" name="cb_demo_tr">
-           <item>
-            <property name="text">
-             <string>cb_demo_tr</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_tr</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_tr</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_tr</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_tr</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_tr</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_tr</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_tr</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_tr</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_tr</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_tr</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_tr</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_tr</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_tr</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_tr</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>cb_demo_tr</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-        </layout>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cb_demo_th">
+            <item>
+             <property name="text">
+              <string>cb_demo_th</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_th</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_th</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_th</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_th</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_th</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_th</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_th</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_th</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_th</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_th</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_th</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_th</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_th</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_th</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_th</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="cb_demo_tr">
+            <item>
+             <property name="text">
+              <string>cb_demo_tr</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_tr</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_tr</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_tr</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_tr</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_tr</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_tr</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_tr</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_tr</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_tr</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_tr</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_tr</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_tr</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_tr</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_tr</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>cb_demo_tr</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="vlay_de">
-         <item>
-          <widget class="QLabel" name="lb_de_demo">
-           <property name="text">
-            <string>QDateEdit :</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_12">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QDateEdit" name="de_demo_th"/>
-         </item>
-         <item>
-          <widget class="QDateEdit" name="de_demo_tr"/>
-         </item>
-        </layout>
+        <widget class="QFrame" name="fr_de">
+         <layout class="QVBoxLayout" name="vlay_de">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="lb_de_demo">
+            <property name="text">
+             <string>QDateEdit :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_12">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QDateEdit" name="de_demo_th"/>
+          </item>
+          <item>
+           <widget class="QDateEdit" name="de_demo_tr"/>
+          </item>
+         </layout>
+        </widget>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="vlay_lw">
-         <item>
-          <widget class="QLabel" name="lb_lw_demo">
-           <property name="text">
-            <string>QListWidget :</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_13">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QListView" name="lw_demo"/>
-         </item>
-        </layout>
+        <widget class="QFrame" name="fr_lw">
+         <layout class="QVBoxLayout" name="vlay_lw">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="lb_lw_demo">
+            <property name="text">
+             <string>QListWidget :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_13">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QListView" name="lw_demo"/>
+          </item>
+         </layout>
+        </widget>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="vlay_pb">
-         <property name="spacing">
-          <number>0</number>
-         </property>
-         <property name="leftMargin">
-          <number>0</number>
-         </property>
-         <property name="rightMargin">
-          <number>0</number>
-         </property>
-         <item>
-          <widget class="QLabel" name="lb_pb_demo">
-           <property name="text">
-            <string>QPushButton :</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_14">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pb_demo_txt">
-           <property name="text">
-            <string>PushButton text</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_3">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>5</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pb_demo_txt_inv">
-           <property name="text">
-            <string>PushButton text inversé</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_4">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>5</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pb_demo_th">
-           <property name="text">
-            <string>PushButton th</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_5">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>5</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pb_demo_tr">
-           <property name="text">
-            <string>PushButton transparent</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_6">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>5</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pb_demo_ck">
-           <property name="text">
-            <string>PushButton checkable</string>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_7">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>5</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pb_demo_ck_ico">
-           <property name="text">
-            <string>PushButton checkable avec icone</string>
-           </property>
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_8">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>5</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pb_demo_ico_ck">
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_9">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>5</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pb_demo_zoom">
-           <property name="checkable">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_10">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>5</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pb_demo_rd">
-           <property name="text">
-            <string>PushButton rd</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_11">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>5</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPushButton" name="pb_demo_bd">
-           <property name="text">
-            <string>PushButton bd</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
+        <widget class="QFrame" name="fr_pb">
+         <layout class="QVBoxLayout" name="vlay_pb">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="lb_pb_demo">
+            <property name="text">
+             <string>QPushButton :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_14">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pb_demo_txt">
+            <property name="text">
+             <string>PushButton text</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>5</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pb_demo_txt_inv">
+            <property name="text">
+             <string>PushButton text inversé</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>5</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pb_demo_th">
+            <property name="text">
+             <string>PushButton th</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>5</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pb_demo_tr">
+            <property name="text">
+             <string>PushButton transparent</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>5</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pb_demo_ck">
+            <property name="text">
+             <string>PushButton checkable</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_7">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>5</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pb_demo_ck_ico">
+            <property name="text">
+             <string>PushButton checkable avec icone</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>5</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pb_demo_ico_ck">
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_9">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>5</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pb_demo_zoom">
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_10">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>5</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pb_demo_rd">
+            <property name="text">
+             <string>PushButton rd</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_11">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>5</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pb_demo_bd">
+            <property name="text">
+             <string>PushButton bd</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="vlay_ck">
-         <item>
-          <widget class="QLabel" name="lb_ck_demo">
-           <property name="text">
-            <string>QCheckBox :</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_15">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="ck_demo_1">
-           <property name="text">
-            <string>CheckBox</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="ck_demo_2">
-           <property name="text">
-            <string>CheckBox</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QCheckBox" name="ck_demo_3">
-           <property name="text">
-            <string>CheckBox</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
+        <widget class="QFrame" name="fr_ck">
+         <layout class="QVBoxLayout" name="vlay_ck">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="lb_ck_demo">
+            <property name="text">
+             <string>QCheckBox :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_15">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="ck_demo_1">
+            <property name="text">
+             <string>CheckBox</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="ck_demo_2">
+            <property name="text">
+             <string>CheckBox</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="ck_demo_3">
+            <property name="text">
+             <string>CheckBox</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="vlay_rb">
-         <item>
-          <widget class="QLabel" name="lb_rb_demo">
-           <property name="text">
-            <string>QRadioButton :</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_16">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="rb_demo_1">
-           <property name="text">
-            <string>RadioButton</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="rb_demo_2">
-           <property name="text">
-            <string>RadioButton</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QRadioButton" name="rb_demo_3">
-           <property name="text">
-            <string>RadioButton</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
+        <widget class="QFrame" name="fr_rb">
+         <layout class="QVBoxLayout" name="vlay_rb">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="lb_rb_demo">
+            <property name="text">
+             <string>QRadioButton :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_16">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="rb_demo_1">
+            <property name="text">
+             <string>RadioButton</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="rb_demo_2">
+            <property name="text">
+             <string>RadioButton</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="rb_demo_3">
+            <property name="text">
+             <string>RadioButton</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="vlay_pg">
-         <item>
-          <widget class="QLabel" name="lb_pg_demo">
-           <property name="text">
-            <string>QProgressBar :</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_17">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QProgressBar" name="pg_demo">
-           <property name="value">
-            <number>24</number>
-           </property>
-          </widget>
-         </item>
-        </layout>
+        <widget class="QFrame" name="fr_pg">
+         <layout class="QVBoxLayout" name="vlay_pg">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="lb_pg_demo">
+            <property name="text">
+             <string>QProgressBar :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_17">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QProgressBar" name="pg_demo">
+            <property name="value">
+             <number>24</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="vlay_sb">
-         <item>
-          <widget class="QLabel" name="lb_sb_demo">
-           <property name="text">
-            <string>QSpinBox / QDoubleSpinBox :</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_18">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QSpinBox" name="sb_demo"/>
-         </item>
-         <item>
-          <widget class="QDoubleSpinBox" name="dsb_demo"/>
-         </item>
-        </layout>
+        <widget class="QFrame" name="fr_sb">
+         <layout class="QVBoxLayout" name="vlay_sb">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="lb_sb_demo">
+            <property name="text">
+             <string>QSpinBox / QDoubleSpinBox :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_18">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="sb_demo"/>
+          </item>
+          <item>
+           <widget class="QDoubleSpinBox" name="dsb_demo"/>
+          </item>
+         </layout>
+        </widget>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="vlay_tw">
-         <item>
-          <widget class="QLabel" name="lb_tw_demo">
-           <property name="text">
-            <string>QTableWidget :</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_19">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QTableWidget" name="tw_demo">
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <row>
-            <property name="text">
-             <string>New Row</string>
-            </property>
-           </row>
-           <column>
-            <property name="text">
-             <string>New Column</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>New Column</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>New Column</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>New Column</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>New Column</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>New Column</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>New Column</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>New Column</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>New Column</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>New Column</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>New Column</string>
-            </property>
-           </column>
-           <column>
-            <property name="text">
-             <string>New Column</string>
-            </property>
-           </column>
-           <item row="0" column="0">
-            <property name="text">
-             <string>fdsfsdf</string>
-            </property>
-           </item>
-           <item row="0" column="1">
-            <property name="text">
-             <string>sdfsdfsdfsd</string>
-            </property>
-           </item>
-           <item row="0" column="2">
-            <property name="text">
-             <string>fdsfdsf</string>
-            </property>
-           </item>
-           <item row="1" column="0">
-            <property name="text">
-             <string>vcbfgnbg</string>
-            </property>
-           </item>
-           <item row="1" column="1">
-            <property name="text">
-             <string>gfhfhgf</string>
-            </property>
-           </item>
-           <item row="1" column="2">
-            <property name="text">
-             <string>dsf</string>
-            </property>
-           </item>
-           <item row="1" column="3">
-            <property name="text">
-             <string>fvbccvbvc</string>
-            </property>
-           </item>
-           <item row="2" column="0">
-            <property name="text">
-             <string>vcbfgnbg</string>
-            </property>
-           </item>
-           <item row="2" column="1">
-            <property name="text">
-             <string>vcbfgnbg</string>
-            </property>
-           </item>
-           <item row="2" column="2">
-            <property name="text">
-             <string>hfghgfh</string>
-            </property>
-           </item>
-           <item row="2" column="3">
-            <property name="text">
-             <string>bcvbcvb</string>
-            </property>
-           </item>
-           <item row="2" column="5">
-            <property name="text">
-             <string>fvbccvbvc</string>
-            </property>
-           </item>
-           <item row="2" column="6">
-            <property name="text">
-             <string>fvbccvbvc</string>
-            </property>
-           </item>
-           <item row="3" column="0">
-            <property name="text">
-             <string>nhnbv</string>
-            </property>
-           </item>
-           <item row="3" column="1">
-            <property name="text">
-             <string>bcvbcvb</string>
-            </property>
-           </item>
-           <item row="3" column="2">
-            <property name="text">
-             <string>dsf</string>
-            </property>
-           </item>
-           <item row="3" column="3">
-            <property name="text">
-             <string>bcvbcvb</string>
-            </property>
-           </item>
-           <item row="3" column="6">
-            <property name="text">
-             <string>fvbccvbvc</string>
-            </property>
-           </item>
-           <item row="4" column="0">
-            <property name="text">
-             <string>bcvbcvb</string>
-            </property>
-           </item>
-           <item row="4" column="1">
-            <property name="text">
-             <string>bcvbcvb</string>
-            </property>
-           </item>
-           <item row="4" column="2">
-            <property name="text">
-             <string>bcvbcvb</string>
-            </property>
-           </item>
-           <item row="4" column="5">
-            <property name="text">
-             <string>fvbccvbvc</string>
-            </property>
-           </item>
-           <item row="4" column="6">
-            <property name="text">
-             <string>fvbccvbvc</string>
-            </property>
-           </item>
-           <item row="7" column="6">
-            <property name="text">
-             <string>bcvbcvb</string>
-            </property>
-           </item>
-           <item row="8" column="3">
-            <property name="text">
-             <string>bcvbcvb</string>
-            </property>
-           </item>
-           <item row="8" column="5">
-            <property name="text">
-             <string>bcvbcvb</string>
-            </property>
-           </item>
-           <item row="8" column="6">
-            <property name="text">
-             <string>bcvbcvb</string>
-            </property>
-           </item>
-           <item row="9" column="2">
-            <property name="text">
-             <string>bcvbcvb</string>
-            </property>
-           </item>
-           <item row="9" column="5">
-            <property name="text">
-             <string>bcvbcvb</string>
-            </property>
-           </item>
-           <item row="9" column="6">
-            <property name="text">
-             <string>bcvbcvb</string>
-            </property>
-           </item>
-           <item row="10" column="1">
-            <property name="text">
-             <string>bcvbcvb</string>
-            </property>
-           </item>
-           <item row="10" column="2">
-            <property name="text">
-             <string>bcvbcvb</string>
-            </property>
-           </item>
-           <item row="10" column="3">
-            <property name="text">
-             <string>bcvbcvb</string>
-            </property>
-           </item>
-           <item row="11" column="0">
-            <property name="text">
-             <string>fvbccvbvc</string>
-            </property>
-           </item>
-           <item row="12" column="0">
-            <property name="text">
-             <string>fvbccvbvc</string>
-            </property>
-           </item>
-           <item row="13" column="0">
-            <property name="text">
-             <string>fvbccvbvc</string>
-            </property>
-           </item>
-           <item row="13" column="1">
-            <property name="text">
-             <string>fvbccvbvc</string>
-            </property>
-           </item>
-           <item row="14" column="0">
-            <property name="text">
-             <string>fvbccvbvc</string>
-            </property>
-           </item>
-           <item row="14" column="2">
-            <property name="text">
-             <string>fvbccvbvc</string>
-            </property>
-           </item>
-          </widget>
-         </item>
-        </layout>
+        <widget class="QFrame" name="fr_tw">
+         <layout class="QVBoxLayout" name="vlay_tw">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="lb_tw_demo">
+            <property name="text">
+             <string>QTableWidget :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_19">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="tw_demo">
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <row>
+             <property name="text">
+              <string>New Row</string>
+             </property>
+            </row>
+            <column>
+             <property name="text">
+              <string>New Column</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>New Column</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>New Column</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>New Column</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>New Column</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>New Column</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>New Column</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>New Column</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>New Column</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>New Column</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>New Column</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>New Column</string>
+             </property>
+            </column>
+            <item row="0" column="0">
+             <property name="text">
+              <string>fdsfsdf</string>
+             </property>
+            </item>
+            <item row="0" column="1">
+             <property name="text">
+              <string>sdfsdfsdfsd</string>
+             </property>
+            </item>
+            <item row="0" column="2">
+             <property name="text">
+              <string>fdsfdsf</string>
+             </property>
+            </item>
+            <item row="1" column="0">
+             <property name="text">
+              <string>vcbfgnbg</string>
+             </property>
+            </item>
+            <item row="1" column="1">
+             <property name="text">
+              <string>gfhfhgf</string>
+             </property>
+            </item>
+            <item row="1" column="2">
+             <property name="text">
+              <string>dsf</string>
+             </property>
+            </item>
+            <item row="1" column="3">
+             <property name="text">
+              <string>fvbccvbvc</string>
+             </property>
+            </item>
+            <item row="2" column="0">
+             <property name="text">
+              <string>vcbfgnbg</string>
+             </property>
+            </item>
+            <item row="2" column="1">
+             <property name="text">
+              <string>vcbfgnbg</string>
+             </property>
+            </item>
+            <item row="2" column="2">
+             <property name="text">
+              <string>hfghgfh</string>
+             </property>
+            </item>
+            <item row="2" column="3">
+             <property name="text">
+              <string>bcvbcvb</string>
+             </property>
+            </item>
+            <item row="2" column="5">
+             <property name="text">
+              <string>fvbccvbvc</string>
+             </property>
+            </item>
+            <item row="2" column="6">
+             <property name="text">
+              <string>fvbccvbvc</string>
+             </property>
+            </item>
+            <item row="3" column="0">
+             <property name="text">
+              <string>nhnbv</string>
+             </property>
+            </item>
+            <item row="3" column="1">
+             <property name="text">
+              <string>bcvbcvb</string>
+             </property>
+            </item>
+            <item row="3" column="2">
+             <property name="text">
+              <string>dsf</string>
+             </property>
+            </item>
+            <item row="3" column="3">
+             <property name="text">
+              <string>bcvbcvb</string>
+             </property>
+            </item>
+            <item row="3" column="6">
+             <property name="text">
+              <string>fvbccvbvc</string>
+             </property>
+            </item>
+            <item row="4" column="0">
+             <property name="text">
+              <string>bcvbcvb</string>
+             </property>
+            </item>
+            <item row="4" column="1">
+             <property name="text">
+              <string>bcvbcvb</string>
+             </property>
+            </item>
+            <item row="4" column="2">
+             <property name="text">
+              <string>bcvbcvb</string>
+             </property>
+            </item>
+            <item row="4" column="5">
+             <property name="text">
+              <string>fvbccvbvc</string>
+             </property>
+            </item>
+            <item row="4" column="6">
+             <property name="text">
+              <string>fvbccvbvc</string>
+             </property>
+            </item>
+            <item row="7" column="6">
+             <property name="text">
+              <string>bcvbcvb</string>
+             </property>
+            </item>
+            <item row="8" column="3">
+             <property name="text">
+              <string>bcvbcvb</string>
+             </property>
+            </item>
+            <item row="8" column="5">
+             <property name="text">
+              <string>bcvbcvb</string>
+             </property>
+            </item>
+            <item row="8" column="6">
+             <property name="text">
+              <string>bcvbcvb</string>
+             </property>
+            </item>
+            <item row="9" column="2">
+             <property name="text">
+              <string>bcvbcvb</string>
+             </property>
+            </item>
+            <item row="9" column="5">
+             <property name="text">
+              <string>bcvbcvb</string>
+             </property>
+            </item>
+            <item row="9" column="6">
+             <property name="text">
+              <string>bcvbcvb</string>
+             </property>
+            </item>
+            <item row="10" column="1">
+             <property name="text">
+              <string>bcvbcvb</string>
+             </property>
+            </item>
+            <item row="10" column="2">
+             <property name="text">
+              <string>bcvbcvb</string>
+             </property>
+            </item>
+            <item row="10" column="3">
+             <property name="text">
+              <string>bcvbcvb</string>
+             </property>
+            </item>
+            <item row="11" column="0">
+             <property name="text">
+              <string>fvbccvbvc</string>
+             </property>
+            </item>
+            <item row="12" column="0">
+             <property name="text">
+              <string>fvbccvbvc</string>
+             </property>
+            </item>
+            <item row="13" column="0">
+             <property name="text">
+              <string>fvbccvbvc</string>
+             </property>
+            </item>
+            <item row="13" column="1">
+             <property name="text">
+              <string>fvbccvbvc</string>
+             </property>
+            </item>
+            <item row="14" column="0">
+             <property name="text">
+              <string>fvbccvbvc</string>
+             </property>
+            </item>
+            <item row="14" column="2">
+             <property name="text">
+              <string>fvbccvbvc</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="vlay_le">
-         <item>
-          <widget class="QLabel" name="lb_le_demo">
-           <property name="text">
-            <string>QLineEdit :</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_20">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="le_demo_th"/>
-         </item>
-         <item>
-          <widget class="QLineEdit" name="le_demo_tr"/>
-         </item>
-        </layout>
+        <widget class="QFrame" name="fr_le">
+         <layout class="QVBoxLayout" name="vlay_le">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="lb_le_demo">
+            <property name="text">
+             <string>QLineEdit :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_20">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="le_demo_th"/>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="le_demo_tr"/>
+          </item>
+         </layout>
+        </widget>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="vlay_te">
-         <item>
-          <widget class="QLabel" name="lb_te_demo">
-           <property name="text">
-            <string>QTextEdit :</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_21">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QTextEdit" name="te_demo_th"/>
-         </item>
-         <item>
-          <widget class="QTextEdit" name="te_demo_tr"/>
-         </item>
-        </layout>
+        <widget class="QFrame" name="fr_te">
+         <layout class="QVBoxLayout" name="vlay_te">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="lb_te_demo">
+            <property name="text">
+             <string>QTextEdit :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_21">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="te_demo_th"/>
+          </item>
+          <item>
+           <widget class="QTextEdit" name="te_demo_tr"/>
+          </item>
+         </layout>
+        </widget>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="vlay_pte">
-         <item>
-          <widget class="QLabel" name="lb_pte_demo">
-           <property name="text">
-            <string>QPlainText :</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_22">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item>
-          <widget class="QPlainTextEdit" name="pte_demo_th"/>
-         </item>
-         <item>
-          <widget class="QPlainTextEdit" name="pte_demo_tr"/>
-         </item>
-        </layout>
+        <widget class="QFrame" name="fr_pte">
+         <layout class="QVBoxLayout" name="vlay_pte">
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <property name="leftMargin">
+           <number>10</number>
+          </property>
+          <property name="topMargin">
+           <number>10</number>
+          </property>
+          <property name="rightMargin">
+           <number>10</number>
+          </property>
+          <property name="bottomMargin">
+           <number>10</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="lb_pte_demo">
+            <property name="text">
+             <string>QPlainText :</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_22">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Fixed</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPlainTextEdit" name="pte_demo_th"/>
+          </item>
+          <item>
+           <widget class="QPlainTextEdit" name="pte_demo_tr"/>
+          </item>
+         </layout>
+        </widget>
        </item>
        <item>
         <spacer name="verticalSpacer">
