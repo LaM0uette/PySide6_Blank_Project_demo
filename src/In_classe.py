@@ -8,6 +8,7 @@ class In_classe:
         self.DE(ui=ui)
         self.FR(ui=ui)
         self.LB(ui=ui)
+        self.LW(ui=ui)
         self.PB(ui=ui)
         self.SCA(ui=ui)
 
@@ -35,6 +36,9 @@ class In_classe:
         C_lb().demo(ui.lb_cb_demo, ui.lb_de_demo, ui.lb_lw_demo, ui.lb_pb_demo, ui.lb_ck_demo,
                     ui.lb_rb_demo, ui.lb_pg_demo, ui.lb_sb_demo, ui.lb_tw_demo, ui.lb_le_demo,
                     ui.lb_te_demo, ui.lb_pte_demo)
+    def LW(self, ui):
+        # Demo
+        C_lw().demo(ui.lw_demo)
     def PB(self, ui):
         # Menu_top
         C_pb().option(ui.pb_mt_option)

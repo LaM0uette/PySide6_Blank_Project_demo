@@ -35,7 +35,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-349</y>
+        <y>-400</y>
         <width>822</width>
         <height>3422</height>
        </rect>
@@ -360,7 +360,7 @@
            </spacer>
           </item>
           <item>
-           <widget class="QListView" name="lw_demo"/>
+           <widget class="QListWidget" name="lw_demo"/>
           </item>
          </layout>
         </widget>

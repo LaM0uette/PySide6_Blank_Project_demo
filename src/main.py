@@ -30,6 +30,10 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setWindowOpacity(config.opacity)
     def IN_CLASSE(self):
         In_classe(ui=self)
+
+        # Demo
+        for i in range(60):
+            self.lw_demo.addItem(f"je suis l'item : {i}")
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur="souris").CUR())

@@ -133,6 +133,7 @@ class C_wg:
         elif isinstance(self.wg, QtWidgets.QComboBox): wg_type = "QComboBox"
         elif isinstance(self.wg, QtWidgets.QDateEdit): wg_type = "QDateEdit"
         elif isinstance(self.wg, QtWidgets.QLabel): wg_type = "QLabel"
+        elif isinstance(self.wg, QtWidgets.QListWidget): wg_type = "QListWidget"
         elif isinstance(self.wg, QtWidgets.QPushButton): wg_type = "QPushButton"
 
         elif isinstance(self.wg, QtWidgets.QFrame): wg_type = "QFrame"
@@ -200,7 +201,7 @@ class C_wg:
         except: pass
 
         # Image
-        if val not in ("fr", "ckb", "rb"):
+        if val not in ("fr", "lw", "tw", "ckb", "rb", "sca"):
             try: Fct(wg=self.wg, img=self.img + self.th, dim=self.dim_ico).ICON()
             except: pass
 
@@ -208,12 +209,12 @@ class C_wg:
             # except: pass
 
         # Font
-        if val not in ("fr", ):
+        if val not in ("fr", "sca"):
             try: self.wg.setFont(Fct(font_size=self.font).FONT())
             except: pass
 
         # Paramètres
-        if val not in ("fr",):
+        if val not in ("fr", "sca"):
             try: self.wg.setAlignment(self.align)
             except: pass
             try: self.wg.setEditable(self.edit)
@@ -230,7 +231,7 @@ class C_wg:
             except: pass
 
         # Curseur
-        if val in ("sb", ) and self.colors_type == "tr":
+        if val in ("fr", "sb", "sca") and self.colors_type == "tr":
             try: self.wg.lineEdit().setCursor(Fct(cur="souris_main").CUR())
             except: pass
 
@@ -559,6 +560,33 @@ class C_wg:
                 f"{self.inc}"
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
+    def STL_LW(self):
+        self.STL_ALL()
+
+        stl = {
+            "th":
+                "QListWidget {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                f"border: {P_style().bd()}px solid rgb{self.c3};"
+                "}"
+                "QListWidget::item:selected {"
+                f"background-color: rgb{self.c2};"
+                f"color: rgb{self.bn1};"
+                "}"
+                "QListWidget::item:hover {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                "}"
+                "QListWidget::item:selected:hover {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.bn1};"
+                "}"
+
+                f"{self.inc}"
+        }
+        self.wg.setStyleSheet(stl.get(self.colors_type))
+        self.wg.setFrameShape(QtWidgets.QFrame.NoFrame)
     def STL_PB(self):
         self.STL_ALL()
 
