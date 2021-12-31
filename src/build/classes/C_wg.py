@@ -184,7 +184,7 @@ class C_wg:
             self.inc = rd + bd
             self.inc_flat = self.inc
 
-        if wg_type == "QScrollArea":
+        if wg_type in ("QComboBox", "QScrollArea"):
             self.inc += scroll
             self.inc_flat += scroll
 
@@ -238,6 +238,8 @@ class C_wg:
             except: pass
 
     def STL_CB(self):
+        self.STL_ALL()
+
         stl = {
             "th":
                 "QComboBox {"
@@ -247,21 +249,24 @@ class C_wg:
                 "font-weight: bold;"
                 f"selection-background-color: rgb{self.c3};"
                 f"selection-color: rgb{self.c1};"
+                "padding: 1px 0px 1px 3px;" #############################
                 "}"
 
                 "QComboBox::drop-down {"
-                f"width: {P_dim().p_aw_h9()}px;"
+                f"width: {self.wg.height()}px;"
                 f"border: none;"
                 "}"
 
                 "QComboBox::down-arrow {"
                 f"image: url({P_img().fleche_bottom() + 'bn1' + '.svg'});"
-                f"width: {P_dim().p_aw_h9()}px;"
+                f"width: {self.dim_ico}px;"
+                f"height: {self.dim_ico}px;"
                 "}"
 
                 "QComboBox::down-arrow:hover {"
                 f"image: url({P_img().fleche_bottom() + 'bn2' + '.svg'});"
-                f"width: {P_dim().p_aw_h9()}px;"
+                f"width: {self.dim_ico}px;"
+                f"height: {self.dim_ico}px;"
                 "}"
 
                 "QComboBox QAbstractItemView::item {"
@@ -276,11 +281,50 @@ class C_wg:
                 f"border: none;"
                 "}"
 
-                f"{self.inc}"
+                f"{self.inc}",
+            "tr":
+                "QComboBox {"
+                f"color: rgb{self.c3};"
+                f"font-size: {P_font().p()}px;"
+                "font-weight: bold;"
+                f"selection-background-color: rgb{self.c3};"
+                f"selection-color: rgb{self.c1};"
+                "padding: 1px 0px 1px 3px;" #############################
+                "}"
+
+                "QComboBox::drop-down {"
+                f"width: {self.wg.height()}px;"
+                f"border: none;"
+                "}"
+
+                "QComboBox::down-arrow {"
+                f"image: url({P_img().fleche_bottom() + 'bn1' + '.svg'});"
+                f"width: {self.dim_ico}px;"
+                f"height: {self.dim_ico}px;"
+                "}"
+
+                "QComboBox::down-arrow:hover {"
+                f"image: url({P_img().fleche_bottom() + 'bn2' + '.svg'});"
+                f"width: {self.dim_ico}px;"
+                f"height: {self.dim_ico}px;"
+                "}"
+
+                "QComboBox QAbstractItemView::item {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                f"border: none;"
+                "}"
+
+                "QComboBox QAbstractItemView::item:hover {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                f"border: none;"
+                "}"
+
+                f"{self.inc}",
+
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
-
-        self.STL_ALL()
     def STL_LB(self):
         stl = {
             "th":

@@ -11,4 +11,8 @@ class P_bd:
     def bd1_bd_bn1(self): return {"mat": "1111", "px": P_style().bd(), "th": P_rgb().bn1()}
     def bd1_bd_bn2(self): return {"mat": "1111", "px": P_style().bd(), "th": P_rgb().bn2()}
 
+    def bd0010_bd_th1(self): return {"mat": "0010", "px": P_style().bd(), "th": P_rgb().th1()}
+    def bd0010_bd_th2(self): return {"mat": "0010", "px": P_style().bd(), "th": P_rgb().th2()}
+    def bd0010_bd_th3(self): return {"mat": "0010", "px": P_style().bd(), "th": P_rgb().th3()}
     def bd0010_bd_bn1(self): return {"mat": "0010", "px": P_style().bd(), "th": P_rgb().bn1()}
+    def bd0010_bd_bn2(self): return {"mat": "0010", "px": P_style().bd(), "th": P_rgb().bn2()}
