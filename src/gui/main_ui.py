@@ -93,6 +93,7 @@ class Ui_main(object):
 
         self.pushButton = QPushButton(main)
         self.pushButton.setObjectName(u"pushButton")
+        self.pushButton.setCheckable(True)
 
         self.glay_main.addWidget(self.pushButton, 1, 0, 1, 1)
 

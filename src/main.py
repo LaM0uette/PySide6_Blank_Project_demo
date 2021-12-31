@@ -31,16 +31,12 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setCursor(Fct(cur="souris").CUR())
         self.setStyleSheet(f"background-color: rgb{P_rgb().th1()};")
     def IN_CLASSE(self):
-        # PB
-        C_pb().menu_top(
-            self.pb_mt_option,
-            self.pb_mt_reduire,
-            self.pb_mt_agrandir,
-            self.pb_mt_quitter,
-        )
-        C_pb().demo(
-            self.pushButton,
-        )
+        ### PB
+        "" # Menu_top
+        C_pb().option(self.pb_mt_option)
+        C_pb().reduire(self.pb_mt_reduire)
+        C_pb().agrandir(self.pb_mt_agrandir)
+        C_pb().quitter(self.pb_mt_quitter)
     def IN_WG(self):
         # Frame menu_top
         self.fr_menu_top.setFixedHeight(P_dim().h_mt())

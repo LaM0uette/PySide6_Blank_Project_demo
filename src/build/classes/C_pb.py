@@ -30,25 +30,43 @@ class C_pb(C_wg):
             C_wg(wg=wg, attrs=kwargs).STL_PB()
 
 
-    def menu_top(self, *args):
+    def option(self, *args):
         self.STL(list(args),
                  type="zoom",
                  colors_type = "tr",
                  colors = P_rgb().p_th1(),
                  dim = P_dim().p_r_mt(),
                  img = P_img().option(),
-                 th = "th3",
-                 th_hover = "bn1",
-                 cur = "souris",
+                 th = "th2",
+                 cur = "souris_main",
         )
-    def demo(self, *args):
+    def reduire(self, *args):
         self.STL(list(args),
-                 type="ico",
+                 type="zoom",
                  colors_type = "tr",
                  colors = P_rgb().p_th1(),
-                 dim = P_dim().p_aw_mt(),
-                 img = P_img().option(),
+                 dim = P_dim().p_r_mt(),
+                 img = P_img().reduire(),
+                 th = "bn1",
+                 cur = "souris_main",
+        )
+    def agrandir(self, *args):
+        self.STL(list(args),
+                 type="zoom",
+                 colors_type = "tr",
+                 colors = P_rgb().p_th1(),
+                 dim = P_dim().p_r_mt(),
+                 img = P_img().agrandir(),
                  th = "th3",
-                 th_hover = "bn1",
-                 cur = "souris",
+                 cur = "souris_main",
+        )
+    def quitter(self, *args):
+        self.STL(list(args),
+                 type="zoom",
+                 colors_type = "tr",
+                 colors = P_rgb().p_th1(),
+                 dim = P_dim().p_r_mt(),
+                 img = P_img().quitter(),
+                 th = "bn2",
+                 cur = "souris_main",
         )

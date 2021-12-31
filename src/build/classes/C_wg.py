@@ -195,7 +195,6 @@ class C_wg:
         except: pass
 
     def STL_PB(self):
-
         stl = {
             "txt":
                 "QPushButton {"
@@ -300,8 +299,7 @@ class C_wg:
         else: cls = Classe_wg.Classe_wg(wg=self.wg, dim_ico=self.dim_ico, DIM_ICO=self.DIM_ICO, img=self.img, img_check=self.img_check, th=self.th, th_hover=self.th_hover, th_check=self.th_check)
 
         if self.type == "check":
-            self.wg.enterEvent = cls.ENT_CHECK
-            self.wg.leaveEvent = cls.LVE_CHECK
+            self.wg.mousePressEvent = cls.MP_CHECK
         elif self.type == "ico":
             self.wg.enterEvent = cls.ENT_ICO
             self.wg.leaveEvent = cls.LVE_ICO
