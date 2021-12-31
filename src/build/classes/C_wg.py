@@ -1,6 +1,7 @@
 from PySide6 import QtCore, QtWidgets, QtGui
 
 from . import base
+from . import Classe_wg
 from ...build import *
 
 
@@ -14,6 +15,11 @@ class C_wg:
         attrs = self.kwargs.get("attrs")
         if attrs is None: return
 
+
+        ### TYPE
+        self.type = attrs.get("type")
+        if self.type is None:
+            self.type = base.TYPE
 
         ### COULEURS
         self.colors_type = attrs.get("colors_type")
@@ -34,8 +40,10 @@ class C_wg:
         if self.dim is None:
             self.dim = base.DIM
             self.dim_ico = 0
+            self.DIM_ICO = 0
         else:
             self.dim_ico = self.dim.get("h") * P_style().x_ico()
+            self.DIM_ICO = self.dim.get("h") * P_style().X_ICO()
 
 
         ### IMAGES
@@ -187,10 +195,6 @@ class C_wg:
         except: pass
 
     def STL_PB(self):
-        def enterEvent(event):
-            print(event)
-        def leaveEvent(event):
-            print(event)
 
         stl = {
             "txt":
@@ -292,5 +296,17 @@ class C_wg:
         self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
         self.wg.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
 
-        self.wg.enterEvent = enterEvent
-        self.wg.leaveEvent = leaveEvent
+        if self.type is None: return
+        else: cls = Classe_wg.Classe_wg(wg=self.wg, dim_ico=self.dim_ico, DIM_ICO=self.DIM_ICO, img=self.img, img_check=self.img_check, th=self.th, th_hover=self.th_hover, th_check=self.th_check)
+
+        if self.type == "check":
+            self.wg.enterEvent = cls.ENT_CHECK
+            self.wg.leaveEvent = cls.LVE_CHECK
+        elif self.type == "ico":
+            self.wg.enterEvent = cls.ENT_ICO
+            self.wg.leaveEvent = cls.LVE_ICO
+            self.wg.mousePressEvent = cls.MP_ICO
+        elif self.type == "zoom":
+            self.wg.enterEvent = cls.ENT_ZOOM
+            self.wg.leaveEvent = cls.LVE_ZOOM
+        else: return

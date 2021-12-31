@@ -1,6 +1,10 @@
 from ...build import *
 
 
+### TYPE
+TYPE = None
+
+
 ### COULEURS
 COLORS_TYPE = "th"
 COLORS = None

@@ -38,6 +38,9 @@ class main(Ui_main, QtWidgets.QWidget):
             self.pb_mt_agrandir,
             self.pb_mt_quitter,
         )
+        C_pb().demo(
+            self.pushButton,
+        )
     def IN_WG(self):
         # Frame menu_top
         self.fr_menu_top.setFixedHeight(P_dim().h_mt())

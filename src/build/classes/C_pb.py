@@ -10,6 +10,7 @@ class C_pb(C_wg):
 
     def STL(self, lst, **kwargs):
         """
+        type = "ico",
         colors_type = "tr",
         colors = P_rgb().p_th1(),
         dim = P_dim().p_r_mt(),
@@ -31,9 +32,21 @@ class C_pb(C_wg):
 
     def menu_top(self, *args):
         self.STL(list(args),
+                 type="zoom",
                  colors_type = "tr",
                  colors = P_rgb().p_th1(),
                  dim = P_dim().p_r_mt(),
+                 img = P_img().option(),
+                 th = "th3",
+                 th_hover = "bn1",
+                 cur = "souris",
+        )
+    def demo(self, *args):
+        self.STL(list(args),
+                 type="ico",
+                 colors_type = "tr",
+                 colors = P_rgb().p_th1(),
+                 dim = P_dim().p_aw_mt(),
                  img = P_img().option(),
                  th = "th3",
                  th_hover = "bn1",

@@ -89,7 +89,12 @@ class Ui_main(object):
 
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.glay_main.addItem(self.verticalSpacer, 1, 0, 1, 1)
+        self.glay_main.addItem(self.verticalSpacer, 2, 0, 1, 1)
+
+        self.pushButton = QPushButton(main)
+        self.pushButton.setObjectName(u"pushButton")
+
+        self.glay_main.addWidget(self.pushButton, 1, 0, 1, 1)
 
 
         self.retranslateUi(main)
@@ -99,5 +104,6 @@ class Ui_main(object):
 
     def retranslateUi(self, main):
         main.setWindowTitle(QCoreApplication.translate("main", u"Form", None))
+        self.pushButton.setText(QCoreApplication.translate("main", u"PushButton", None))
     # retranslateUi
 
