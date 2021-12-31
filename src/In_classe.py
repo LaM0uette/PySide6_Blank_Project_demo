@@ -11,6 +11,7 @@ class In_classe:
         self.LW(ui=ui)
         self.PB(ui=ui)
         self.SCA(ui=ui)
+        self.TW(ui=ui)
 
     def CB(self, ui):
         # Demo
@@ -59,3 +60,6 @@ class In_classe:
     def SCA(self, ui):
         # Demo
         C_sca().demo(ui.sca_main)
+    def TW(self, ui):
+        # Demo
+        C_tw().demo(ui.tw_demo)

@@ -155,6 +155,7 @@ class C_wg:
         elif isinstance(self.wg, QtWidgets.QLabel): wg_type = "QLabel"
         elif isinstance(self.wg, QtWidgets.QListWidget): wg_type = "QListWidget"
         elif isinstance(self.wg, QtWidgets.QPushButton): wg_type = "QPushButton"
+        elif isinstance(self.wg, QtWidgets.QTableWidget): wg_type = "QTableWidget"
 
         elif isinstance(self.wg, QtWidgets.QFrame): wg_type = "QFrame"
 
@@ -211,7 +212,7 @@ class C_wg:
             self.inc = rd + bd
             self.inc_flat = self.inc
 
-        if wg_type in {"QComboBox", "QScrollArea"}:
+        if wg_type in {"QComboBox", "QListWidget", "QScrollArea", "QTableWidget"}:
             self.inc += scroll
             self.inc_flat += scroll
 
@@ -747,3 +748,63 @@ class C_wg:
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
         self.wg.setFrameShape(QtWidgets.QFrame.NoFrame)
+    def STL_TW(self):
+        self.STL_ALL()
+
+        stl1 = {
+            "th":
+                "QTableCornerButton::section {"
+                f"background-color: rgb{self.c3};"
+                "}"
+                "QTableView {"
+                f"gridline-color: rgb{self.c3};"
+                f"color: rgb{self.c3};"
+                f"border: {P_style().bd()}px solid rgb{self.c3};"
+                "}"
+                "QTableView::item:selected {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                "}"
+                "QTableView::item:hover {"
+                f"background-color: rgb{self.bn1};"
+                f"color: rgb{self.c3};"
+                "}"
+                "QTableView::item:selected:hover {"
+                f"background-color: rgb{self.bn1};"
+                f"color: rgb{self.c3};"
+                "}"
+
+                f"{self.inc}"
+        }
+        stl2 = {
+            "th":
+                "QHeaderView::section {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                "border-style: none;"
+                "}"
+                "QHeaderView::section:checked {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                "}"
+        }
+        stl3 = {
+            "th":
+                "QHeaderView::section {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                "border-style: none;"
+                "}"
+                "QHeaderView::section:checked {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                "}"
+        }
+        self.wg.setStyleSheet(stl1.get(self.colors_type))
+        self.wg.horizontalHeader().setStyleSheet(stl2.get(self.colors_type))
+        self.wg.verticalHeader().setStyleSheet(stl3.get(self.colors_type))
+
+        self.wg.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.wg.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
+        self.wg.horizontalHeader().setDefaultAlignment(QtCore.Qt.AlignCenter)
+        self.wg.verticalHeader().setDefaultAlignment(QtCore.Qt.AlignCenter)
