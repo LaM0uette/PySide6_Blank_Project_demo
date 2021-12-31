@@ -16,8 +16,7 @@ class C_sca(C_wg):
         rd = P_rd().rd1_5(),
         bd = P_bd().bd1_bd_bn1(),
         """
-        for wg in lst:
-            C_wg(wg=wg, attrs=kwargs).STL_SCA()
+        for wg in lst: C_wg(wg=wg, attrs=kwargs).STL_SCA()
 
     def demo(self, *args):
         self.STL(list(args),

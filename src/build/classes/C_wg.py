@@ -1,4 +1,4 @@
-from PySide6 import QtCore, QtWidgets, QtGui
+from PySide6 import QtCore, QtWidgets
 
 from . import base
 from . import Classe_wg
@@ -140,24 +140,24 @@ class C_wg:
              f"border-bottom-right-radius: {self.r4}px;" \
              f"border-bottom-left-radius: {self.r3}px;" \
              "}"
-        scroll = "QScrollBar {" \
+        scroll = ".QScrollBar {" \
                  f"background-color: rgb{self.c1};" \
                  "width: 20px;" \
                  "height: 20px;" \
                  "}" \
-                 "QScrollBar::handle:vertical {" \
+                 ".QScrollBar::handle:vertical {" \
                  "min-height: 100px;" \
                  "}" \
-                 "QScrollBar::handle:vertical {" \
+                 ".QScrollBar::handle:vertical {" \
                  "min-height: 100px;" \
                  "}" \
-                 "QScrollBar::handle:horizontal {" \
+                 ".QScrollBar::handle:horizontal {" \
                  "min-width: 100px;" \
                  "}" \
-                 "QScrollBar::handle {" \
+                 ".QScrollBar::handle {" \
                  f"background-color: rgb{self.c3};" \
                  "}" \
-                 "QScrollBar::add-page, QScrollBar::sub-page {" \
+                 ".QScrollBar::add-page, .QScrollBar::sub-page {" \
                  f"background-color: rgb{self.c1};" \
                  f"border: rgb{self.c1};" \
                  "}"
@@ -168,7 +168,6 @@ class C_wg:
         else:
             self.inc = rd + bd
             self.inc_flat = self.inc
-
         if isinstance(self.wg, QtWidgets.QScrollArea):
             self.inc = scroll
 
@@ -304,6 +303,10 @@ class C_wg:
                 f"color: rgb{self.bn2};"
                 "}"
                 
+                "QPushButton:checked:pressed {"
+                f"color: rgb{self.bn2};"
+                "}"
+                
                 f"{self.inc_flat}",
             "tr":
                 "QPushButton {"
@@ -367,29 +370,8 @@ class C_wg:
         stl = {
             "th": f"{self.inc}"
         }
-        stlbis = "QScrollArea QScrollBar {" \
-                f"background-color: rgb{self.c1};" \
-                "width: 20px;" \
-                "height: 20px;" \
-                "}" \
-                "QScrollArea QScrollBar::handle:vertical {" \
-                "min-height: 100px;" \
-                "}" \
-                "QScrollArea QScrollBar::handle:vertical {" \
-                "min-height: 100px;" \
-                "}" \
-                "QScrollArea QScrollBar::handle:horizontal {" \
-                "min-width: 100px;" \
-                "}" \
-                "QScrollArea QScrollBar::handle {" \
-                f"background-color: rgb{self.c3};" \
-                "}" \
-                "QScrollArea QScrollBar::add-page, QScrollArea QScrollBar::sub-page {" \
-                f"background-color: rgb{self.c1};" \
-                f"border: rgb{self.c1};" \
-                "}" \
 
-        self.wg.setStyleSheet(stlbis)
+        self.wg.setStyleSheet(stl.get(self.colors_type))
         self.wg.setFrameShape(QtWidgets.QFrame.NoFrame)
 
         self.STL_ALL("sca")

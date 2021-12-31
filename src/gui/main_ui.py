@@ -23,75 +23,17 @@ class Ui_main(object):
     def setupUi(self, main):
         if not main.objectName():
             main.setObjectName(u"main")
+        main.resize(873, 720)
         self.glay_main = QGridLayout(main)
         self.glay_main.setSpacing(0)
         self.glay_main.setObjectName(u"glay_main")
-        self.glay_main.setContentsMargins(0, 0, 0, 0)
-        self.fr_menu_top = QFrame(main)
-        self.fr_menu_top.setObjectName(u"fr_menu_top")
-        self.fr_menu_top.setFrameShape(QFrame.StyledPanel)
-        self.fr_menu_top.setFrameShadow(QFrame.Raised)
-        self.hlay_menu_top = QHBoxLayout(self.fr_menu_top)
-        self.hlay_menu_top.setSpacing(0)
-        self.hlay_menu_top.setObjectName(u"hlay_menu_top")
-        self.hlay_menu_top.setContentsMargins(0, 0, 0, 0)
-        self.lb_mt_ico = QLabel(self.fr_menu_top)
-        self.lb_mt_ico.setObjectName(u"lb_mt_ico")
-
-        self.hlay_menu_top.addWidget(self.lb_mt_ico)
-
-        self.lb_mt_version = QLabel(self.fr_menu_top)
-        self.lb_mt_version.setObjectName(u"lb_mt_version")
-
-        self.hlay_menu_top.addWidget(self.lb_mt_version)
-
-        self.wg_mt_blank = QWidget(self.fr_menu_top)
-        self.wg_mt_blank.setObjectName(u"wg_mt_blank")
-
-        self.hlay_menu_top.addWidget(self.wg_mt_blank)
-
-        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.hlay_menu_top.addItem(self.horizontalSpacer_2)
-
-        self.lb_mt_nom = QLabel(self.fr_menu_top)
-        self.lb_mt_nom.setObjectName(u"lb_mt_nom")
-
-        self.hlay_menu_top.addWidget(self.lb_mt_nom)
-
-        self.horizontalSpacer_1 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.hlay_menu_top.addItem(self.horizontalSpacer_1)
-
-        self.pb_mt_option = QPushButton(self.fr_menu_top)
-        self.pb_mt_option.setObjectName(u"pb_mt_option")
-
-        self.hlay_menu_top.addWidget(self.pb_mt_option)
-
-        self.pb_mt_reduire = QPushButton(self.fr_menu_top)
-        self.pb_mt_reduire.setObjectName(u"pb_mt_reduire")
-
-        self.hlay_menu_top.addWidget(self.pb_mt_reduire)
-
-        self.pb_mt_agrandir = QPushButton(self.fr_menu_top)
-        self.pb_mt_agrandir.setObjectName(u"pb_mt_agrandir")
-
-        self.hlay_menu_top.addWidget(self.pb_mt_agrandir)
-
-        self.pb_mt_quitter = QPushButton(self.fr_menu_top)
-        self.pb_mt_quitter.setObjectName(u"pb_mt_quitter")
-
-        self.hlay_menu_top.addWidget(self.pb_mt_quitter)
-
-
-        self.glay_main.addWidget(self.fr_menu_top, 0, 0, 1, 1)
-
+        self.glay_main.setContentsMargins(0, 0, 0, 20)
         self.sca_main = QScrollArea(main)
         self.sca_main.setObjectName(u"sca_main")
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, 0, 636, 2591))
+        self.vlay_wg.setGeometry(QRect(0, 0, 854, 2470))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(50)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -202,22 +144,6 @@ class Ui_main(object):
 
         self.verticalLayout.addLayout(self.vlay_pb)
 
-        self.scrollArea = QScrollArea(self.vlay_wg)
-        self.scrollArea.setObjectName(u"scrollArea")
-        self.scrollArea.setWidgetResizable(True)
-        self.scrollAreaWidgetContents = QWidget()
-        self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 517, 521))
-        self.verticalLayout_2 = QVBoxLayout(self.scrollAreaWidgetContents)
-        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
-        self.verticalSpacer_33 = QSpacerItem(20, 500, QSizePolicy.Minimum, QSizePolicy.Fixed)
-
-        self.verticalLayout_2.addItem(self.verticalSpacer_33)
-
-        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
-
-        self.verticalLayout.addWidget(self.scrollArea)
-
         self.verticalSpacer_32 = QSpacerItem(20, 2000, QSizePolicy.Minimum, QSizePolicy.Fixed)
 
         self.verticalLayout.addItem(self.verticalSpacer_32)
@@ -229,6 +155,63 @@ class Ui_main(object):
         self.sca_main.setWidget(self.vlay_wg)
 
         self.glay_main.addWidget(self.sca_main, 3, 0, 1, 1)
+
+        self.fr_menu_top = QFrame(main)
+        self.fr_menu_top.setObjectName(u"fr_menu_top")
+        self.hlay_menu_top = QHBoxLayout(self.fr_menu_top)
+        self.hlay_menu_top.setSpacing(0)
+        self.hlay_menu_top.setObjectName(u"hlay_menu_top")
+        self.hlay_menu_top.setContentsMargins(0, 0, 0, 0)
+        self.lb_mt_ico = QLabel(self.fr_menu_top)
+        self.lb_mt_ico.setObjectName(u"lb_mt_ico")
+
+        self.hlay_menu_top.addWidget(self.lb_mt_ico)
+
+        self.lb_mt_version = QLabel(self.fr_menu_top)
+        self.lb_mt_version.setObjectName(u"lb_mt_version")
+
+        self.hlay_menu_top.addWidget(self.lb_mt_version)
+
+        self.wg_mt_blank = QWidget(self.fr_menu_top)
+        self.wg_mt_blank.setObjectName(u"wg_mt_blank")
+
+        self.hlay_menu_top.addWidget(self.wg_mt_blank)
+
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.hlay_menu_top.addItem(self.horizontalSpacer_2)
+
+        self.lb_mt_nom = QLabel(self.fr_menu_top)
+        self.lb_mt_nom.setObjectName(u"lb_mt_nom")
+
+        self.hlay_menu_top.addWidget(self.lb_mt_nom)
+
+        self.horizontalSpacer_1 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.hlay_menu_top.addItem(self.horizontalSpacer_1)
+
+        self.pb_mt_option = QPushButton(self.fr_menu_top)
+        self.pb_mt_option.setObjectName(u"pb_mt_option")
+
+        self.hlay_menu_top.addWidget(self.pb_mt_option)
+
+        self.pb_mt_reduire = QPushButton(self.fr_menu_top)
+        self.pb_mt_reduire.setObjectName(u"pb_mt_reduire")
+
+        self.hlay_menu_top.addWidget(self.pb_mt_reduire)
+
+        self.pb_mt_agrandir = QPushButton(self.fr_menu_top)
+        self.pb_mt_agrandir.setObjectName(u"pb_mt_agrandir")
+
+        self.hlay_menu_top.addWidget(self.pb_mt_agrandir)
+
+        self.pb_mt_quitter = QPushButton(self.fr_menu_top)
+        self.pb_mt_quitter.setObjectName(u"pb_mt_quitter")
+
+        self.hlay_menu_top.addWidget(self.pb_mt_quitter)
+
+
+        self.glay_main.addWidget(self.fr_menu_top, 0, 0, 1, 1)
 
 
         self.retranslateUi(main)
