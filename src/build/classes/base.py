@@ -8,7 +8,7 @@ TYPE = None
 ### COULEURS
 COLORS_TYPE = "th"
 COLORS = None
-C1, C2, C3, C4 = None, None, None, None
+C1, C2, C3, BN1, BN2 = None, None, None, None, None
 
 
 ### DIMENSIONS

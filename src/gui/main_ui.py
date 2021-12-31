@@ -16,14 +16,14 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
-    QLabel, QPushButton, QSizePolicy, QSpacerItem,
-    QVBoxLayout, QWidget)
+    QLabel, QPushButton, QScrollArea, QSizePolicy,
+    QSpacerItem, QVBoxLayout, QWidget)
 
 class Ui_main(object):
     def setupUi(self, main):
         if not main.objectName():
             main.setObjectName(u"main")
-        main.resize(756, 490)
+        main.resize(756, 777)
         self.glay_main = QGridLayout(main)
         self.glay_main.setSpacing(0)
         self.glay_main.setObjectName(u"glay_main")
@@ -87,20 +87,26 @@ class Ui_main(object):
 
         self.glay_main.addWidget(self.fr_menu_top, 0, 0, 1, 1)
 
-        self.vlay_wg = QVBoxLayout()
-        self.vlay_wg.setSpacing(20)
+        self.sca_main = QScrollArea(main)
+        self.sca_main.setObjectName(u"sca_main")
+        self.sca_main.setWidgetResizable(True)
+        self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setContentsMargins(50, 20, 50, 20)
+        self.vlay_wg.setGeometry(QRect(0, 0, 754, 750))
+        self.verticalLayout = QVBoxLayout(self.vlay_wg)
+        self.verticalLayout.setSpacing(50)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.verticalLayout.setContentsMargins(50, 20, 50, 20)
         self.vlay_pb = QVBoxLayout()
         self.vlay_pb.setSpacing(10)
         self.vlay_pb.setObjectName(u"vlay_pb")
         self.vlay_pb.setContentsMargins(0, -1, 0, -1)
-        self.lb_pb_demo = QLabel(main)
+        self.lb_pb_demo = QLabel(self.vlay_wg)
         self.lb_pb_demo.setObjectName(u"lb_pb_demo")
 
         self.vlay_pb.addWidget(self.lb_pb_demo)
 
-        self.line = QFrame(main)
+        self.line = QFrame(self.vlay_wg)
         self.line.setObjectName(u"line")
         self.line.setFrameShape(QFrame.HLine)
         self.line.setFrameShadow(QFrame.Sunken)
@@ -111,48 +117,70 @@ class Ui_main(object):
 
         self.vlay_pb.addItem(self.verticalSpacer_2)
 
-        self.pb_demo_txt = QPushButton(main)
+        self.pb_demo_txt = QPushButton(self.vlay_wg)
         self.pb_demo_txt.setObjectName(u"pb_demo_txt")
 
         self.vlay_pb.addWidget(self.pb_demo_txt)
 
-        self.pb_demo_txt_inv = QPushButton(main)
+        self.pb_demo_txt_inv = QPushButton(self.vlay_wg)
         self.pb_demo_txt_inv.setObjectName(u"pb_demo_txt_inv")
 
         self.vlay_pb.addWidget(self.pb_demo_txt_inv)
 
-        self.pb_demo_tr = QPushButton(main)
+        self.pb_demo_th = QPushButton(self.vlay_wg)
+        self.pb_demo_th.setObjectName(u"pb_demo_th")
+
+        self.vlay_pb.addWidget(self.pb_demo_th)
+
+        self.pb_demo_tr = QPushButton(self.vlay_wg)
         self.pb_demo_tr.setObjectName(u"pb_demo_tr")
 
         self.vlay_pb.addWidget(self.pb_demo_tr)
 
-        self.pb_demo_ck = QPushButton(main)
+        self.pb_demo_ck = QPushButton(self.vlay_wg)
         self.pb_demo_ck.setObjectName(u"pb_demo_ck")
         self.pb_demo_ck.setCheckable(True)
 
         self.vlay_pb.addWidget(self.pb_demo_ck)
 
-        self.pb_demo_ck_ico = QPushButton(main)
+        self.pb_demo_ck_ico = QPushButton(self.vlay_wg)
         self.pb_demo_ck_ico.setObjectName(u"pb_demo_ck_ico")
         self.pb_demo_ck_ico.setCheckable(True)
 
         self.vlay_pb.addWidget(self.pb_demo_ck_ico)
 
-        self.pb_demo_ico_ck = QPushButton(main)
+        self.pb_demo_ico_ck = QPushButton(self.vlay_wg)
         self.pb_demo_ico_ck.setObjectName(u"pb_demo_ico_ck")
         self.pb_demo_ico_ck.setCheckable(True)
 
         self.vlay_pb.addWidget(self.pb_demo_ico_ck)
 
+        self.pb_demo_zoom = QPushButton(self.vlay_wg)
+        self.pb_demo_zoom.setObjectName(u"pb_demo_zoom")
+        self.pb_demo_zoom.setCheckable(True)
 
-        self.vlay_wg.addLayout(self.vlay_pb)
+        self.vlay_pb.addWidget(self.pb_demo_zoom)
+
+        self.pb_demo_rd = QPushButton(self.vlay_wg)
+        self.pb_demo_rd.setObjectName(u"pb_demo_rd")
+
+        self.vlay_pb.addWidget(self.pb_demo_rd)
+
+        self.pb_demo_bd = QPushButton(self.vlay_wg)
+        self.pb_demo_bd.setObjectName(u"pb_demo_bd")
+
+        self.vlay_pb.addWidget(self.pb_demo_bd)
 
 
-        self.glay_main.addLayout(self.vlay_wg, 2, 0, 1, 1)
+        self.verticalLayout.addLayout(self.vlay_pb)
 
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.glay_main.addItem(self.verticalSpacer, 4, 0, 1, 1)
+        self.verticalLayout.addItem(self.verticalSpacer)
+
+        self.sca_main.setWidget(self.vlay_wg)
+
+        self.glay_main.addWidget(self.sca_main, 3, 0, 1, 1)
 
 
         self.retranslateUi(main)
@@ -165,9 +193,11 @@ class Ui_main(object):
         self.lb_pb_demo.setText(QCoreApplication.translate("main", u"QPushButton :", None))
         self.pb_demo_txt.setText(QCoreApplication.translate("main", u"PushButton text", None))
         self.pb_demo_txt_inv.setText(QCoreApplication.translate("main", u"PushButton text invers\u00e9", None))
+        self.pb_demo_th.setText(QCoreApplication.translate("main", u"PushButton th", None))
         self.pb_demo_tr.setText(QCoreApplication.translate("main", u"PushButton transparent", None))
         self.pb_demo_ck.setText(QCoreApplication.translate("main", u"PushButton checkable", None))
         self.pb_demo_ck_ico.setText(QCoreApplication.translate("main", u"PushButton checkable avec icone", None))
-        self.pb_demo_ico_ck.setText(QCoreApplication.translate("main", u"PushButton icone checkable", None))
+        self.pb_demo_rd.setText(QCoreApplication.translate("main", u"PushButton rd", None))
+        self.pb_demo_bd.setText(QCoreApplication.translate("main", u"PushButton bd", None))
     # retranslateUi
 

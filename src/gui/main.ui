@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>756</width>
-    <height>490</height>
+    <height>777</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -106,55 +106,159 @@
      </layout>
     </widget>
    </item>
-   <item row="2" column="0">
-    <layout class="QVBoxLayout" name="vlay_wg">
-     <property name="spacing">
-      <number>20</number>
+   <item row="3" column="0">
+    <widget class="QScrollArea" name="sca_main">
+     <property name="widgetResizable">
+      <bool>true</bool>
      </property>
-     <property name="leftMargin">
-      <number>50</number>
-     </property>
-     <property name="topMargin">
-      <number>20</number>
-     </property>
-     <property name="rightMargin">
-      <number>50</number>
-     </property>
-     <property name="bottomMargin">
-      <number>20</number>
-     </property>
-     <item>
-      <layout class="QVBoxLayout" name="vlay_pb">
+     <widget class="QWidget" name="vlay_wg">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>754</width>
+        <height>750</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
        <property name="spacing">
-        <number>10</number>
+        <number>50</number>
        </property>
        <property name="leftMargin">
-        <number>0</number>
+        <number>50</number>
+       </property>
+       <property name="topMargin">
+        <number>20</number>
        </property>
        <property name="rightMargin">
-        <number>0</number>
+        <number>50</number>
+       </property>
+       <property name="bottomMargin">
+        <number>20</number>
        </property>
        <item>
-        <widget class="QLabel" name="lb_pb_demo">
-         <property name="text">
-          <string>QPushButton :</string>
+        <layout class="QVBoxLayout" name="vlay_pb">
+         <property name="spacing">
+          <number>10</number>
          </property>
-        </widget>
+         <property name="leftMargin">
+          <number>0</number>
+         </property>
+         <property name="rightMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="lb_pb_demo">
+           <property name="text">
+            <string>QPushButton :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="Line" name="line">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>40</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pb_demo_txt">
+           <property name="text">
+            <string>PushButton text</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pb_demo_txt_inv">
+           <property name="text">
+            <string>PushButton text inversé</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pb_demo_th">
+           <property name="text">
+            <string>PushButton th</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pb_demo_tr">
+           <property name="text">
+            <string>PushButton transparent</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pb_demo_ck">
+           <property name="text">
+            <string>PushButton checkable</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pb_demo_ck_ico">
+           <property name="text">
+            <string>PushButton checkable avec icone</string>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pb_demo_ico_ck">
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pb_demo_zoom">
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pb_demo_rd">
+           <property name="text">
+            <string>PushButton rd</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pb_demo_bd">
+           <property name="text">
+            <string>PushButton bd</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
        <item>
-        <widget class="Line" name="line">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <spacer name="verticalSpacer_2">
+        <spacer name="verticalSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Fixed</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -164,73 +268,9 @@
          </property>
         </spacer>
        </item>
-       <item>
-        <widget class="QPushButton" name="pb_demo_txt">
-         <property name="text">
-          <string>PushButton text</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pb_demo_txt_inv">
-         <property name="text">
-          <string>PushButton text inversé</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pb_demo_tr">
-         <property name="text">
-          <string>PushButton transparent</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pb_demo_ck">
-         <property name="text">
-          <string>PushButton checkable</string>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pb_demo_ck_ico">
-         <property name="text">
-          <string>PushButton checkable avec icone</string>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="pb_demo_ico_ck">
-         <property name="text">
-          <string>PushButton icone checkable</string>
-         </property>
-         <property name="checkable">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
       </layout>
-     </item>
-    </layout>
-   </item>
-   <item row="4" column="0">
-    <spacer name="verticalSpacer">
-     <property name="orientation">
-      <enum>Qt::Vertical</enum>
-     </property>
-     <property name="sizeHint" stdset="0">
-      <size>
-       <width>20</width>
-       <height>40</height>
-      </size>
-     </property>
-    </spacer>
+     </widget>
+    </widget>
    </item>
   </layout>
  </widget>

@@ -30,9 +30,9 @@ class C_wg:
 
         val = lambda v: self.colors.get(v) if self.colors.get(v) is not None else base.COLORS
         if self.colors is None:
-            self.c1, self.c2, self.c3, self.bn = base.C1, base.C2, base.C3, base.C4
+            self.c1, self.c2, self.c3, self.bn1, self.bn2 = base.C1, base.C2, base.C3, base.BN1, base.BN2
         else:
-            self.c1, self.c2, self.c3, self.bn = val("c1"), val("c2"), val("c3"), val("bn")
+            self.c1, self.c2, self.c3, self.bn1, self.bn2 = val("c1"), val("c2"), val("c3"), val("bn1"), val("bn2")
 
 
         ### DIMENSIONS
@@ -210,7 +210,7 @@ class C_wg:
                 "}"
                 
                 "QPushButton:pressed {"
-                f"color: rgb{self.bn};"
+                f"color: rgb{self.bn1};"
                 "}"
                 
                 f"{self.inc}",
@@ -228,7 +228,7 @@ class C_wg:
                 "}"
 
                 "QPushButton:pressed {"
-                f"color: rgb{self.bn};"
+                f"color: rgb{self.bn1};"
                 "}"
                 
                 f"{self.inc}",
@@ -240,7 +240,7 @@ class C_wg:
 
                 "QPushButton:hover {"
                 f"background-color: rgb{self.c1};"
-                f"color: rgb{self.bn};"
+                f"color: rgb{self.bn1};"
                 "}"
 
                 "QPushButton:checked {"
@@ -250,7 +250,11 @@ class C_wg:
 
                 "QPushButton:checked:hover {"
                 f"background-color: rgb{self.c3};"
-                f"color: rgb{self.bn};"
+                f"color: rgb{self.bn1};"
+                "}"
+                
+                "QPushButton:pressed {"
+                f"color: rgb{self.bn2};"
                 "}"
                 
                 f"{self.inc_flat}",
@@ -260,11 +264,15 @@ class C_wg:
                 "}"
 
                 "QPushButton:hover {"
-                f"color: rgb{self.bn};"
+                f"color: rgb{self.bn1};"
                 "}"
 
                 "QPushButton:checked:hover {"
-                f"color: rgb{self.bn};"
+                f"color: rgb{self.bn1};"
+                "}"
+                
+                "QPushButton:pressed {"
+                f"color: rgb{self.bn2};"
                 "}"
                 
                 f"{self.inc_flat}",
