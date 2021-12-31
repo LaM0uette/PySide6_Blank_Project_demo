@@ -213,12 +213,12 @@ class C_wg:
             except: pass
             try: self.wg.viewport().setCursor(Fct(cur=self.cur).CUR())
             except: pass
-            try: self.wg.lineEdit().setCursor(Fct(cur="IBeam"))
+            try: self.wg.lineEdit().setCursor(Fct(cur="IBeam").CUR())
             except: pass
-            try: self.wg.calendarWidget().setCursor(Fct(cur="souris_main"))
+            try: self.wg.calendarWidget().setCursor(Fct(cur="souris_main").CUR())
             except: pass
         if val in "sb" and self.colors_type == "tr":
-            try: self.wg.lineEdit().setCursor(Fct(cur="souris_main"))
+            try: self.wg.lineEdit().setCursor(Fct(cur="souris_main").CUR())
             except: pass
 
         # Paramètres
@@ -281,6 +281,7 @@ class C_wg:
         self.wg.setStyleSheet(stl.get(self.colors_type))
 
         self.STL_ALL()
+        self.wg.lineEdit().setCursor(Fct(cur="IBeam").CUR())
     def STL_LB(self):
         stl = {
             "th":

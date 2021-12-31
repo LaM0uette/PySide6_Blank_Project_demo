@@ -19,6 +19,7 @@ class Fct:
         if cur is None: cur = "souris"
 
         cursor = P_cur().RTN_CUR(cur)
+        print(cursor)
         return QtGui.QCursor(QtGui.QPixmap(cursor[0]), cursor[1], cursor[2])
     def DIM(self):
         wg = self.kwargs.get("wg")
