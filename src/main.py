@@ -107,6 +107,10 @@ class main(Ui_main, QtWidgets.QWidget):
             self.dragPos = event.globalPosition().toPoint()
             event.accept()
     def mouseMoveEvent(self, event):
+        def act_move(event):
+            self.move(self.pos() + event.globalPosition().toPoint() - self.dragPos)
+            self.dragPos = event.globalPosition().toPoint()
+            event.accept()
         cur = QtGui.QCursor()
         height_verif = cur.pos().y() - self.pos().y()
 
@@ -117,16 +121,10 @@ class main(Ui_main, QtWidgets.QWidget):
 
         try:
             if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h_mt() and fen.windowState() != QtCore.Qt.WindowMaximized:
-                self.move(self.pos() + event.globalPosition().toPoint() - self.dragPos)
-                self.dragPos = event.globalPosition().toPoint()
-                event.accept()
-
+                act_move(event)
             if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h_mt() and fen.windowState() == QtCore.Qt.WindowMaximized:
                 fen.setWindowState(QtCore.Qt.WindowNoState)
-                self.move(self.pos() + event.globalPosition().toPoint() - self.dragPos)
-                self.dragPos = event.globalPosition().toPoint()
-                event.accept()
-
+                act_move(event)
         except AttributeError:
             pass
     def mouseReleaseEvent(self, event):

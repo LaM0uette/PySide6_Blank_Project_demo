@@ -185,7 +185,7 @@ class C_wg:
             self.inc = rd + bd
             self.inc_flat = self.inc
 
-        if wg_type in ("QComboBox", "QScrollArea"):
+        if wg_type in {"QComboBox", "QScrollArea"}:
             self.inc += scroll
             self.inc_flat += scroll
 
@@ -195,7 +195,7 @@ class C_wg:
         except: pass
 
         # Image
-        if not val in ("ckb", "rb"):
+        if val not in ("ckb", "rb"):
             try: Fct(wg=self.wg, img=self.img + self.th, dim=self.dim_ico).ICON()
             except: pass
 
@@ -223,7 +223,7 @@ class C_wg:
         except: pass
 
         # Curseur
-        if not val in ("fr", "lb", "pg", "sca"):
+        if val not in ("fr", "lb", "pg", "sca"):
             try: self.wg.setCursor(Fct(cur=self.cur).CUR())
             except: pass
             try: self.wg.view().setCursor(Fct(cur="souris_main").CUR())
