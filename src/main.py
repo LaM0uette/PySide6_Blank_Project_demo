@@ -143,7 +143,7 @@ class main(Ui_main, QtWidgets.QWidget):
         app.quit()
 
 
-PXM = P_img().main() + "th1" + ".svg"
+PXM = P_img().main() + "th3" + ".svg"
 app = QtWidgets.QApplication(sys.argv)
 splash = QtWidgets.QSplashScreen(QtGui.QPixmap(PXM).scaledToHeight(500), QtCore.Qt.WindowStaysOnTopHint)
 splash.show()
