@@ -5,6 +5,7 @@ class In_classe:
     def __init__(self, ui):
 
         self.CB(ui=ui)
+        self.DE(ui=ui)
         self.LB(ui=ui)
         self.PB(ui=ui)
         self.SCA(ui=ui)
@@ -13,6 +14,9 @@ class In_classe:
         # Demo
         C_cb().demo_th(ui.cb_demo_th)
         C_cb().demo_tr(ui.cb_demo_tr)
+    def DE(self, ui):
+        # Demo
+        C_de().demo(ui.de_demo)
     def LB(self, ui):
         # Titre app
         C_lb().h3_titre(ui.lb_mt_nom)

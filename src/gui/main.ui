@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>841</width>
-    <height>822</height>
+    <height>871</height>
    </rect>
   </property>
   <layout class="QGridLayout" name="glay_main">
@@ -21,7 +21,7 @@
     <number>0</number>
    </property>
    <property name="bottomMargin">
-    <number>20</number>
+    <number>0</number>
    </property>
    <property name="spacing">
     <number>0</number>
@@ -37,24 +37,24 @@
         <x>0</x>
         <y>0</y>
         <width>822</width>
-        <height>2452</height>
+        <height>3112</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <property name="spacing">
-        <number>50</number>
+        <number>100</number>
        </property>
        <property name="leftMargin">
         <number>50</number>
        </property>
        <property name="topMargin">
-        <number>20</number>
+        <number>50</number>
        </property>
        <property name="rightMargin">
         <number>50</number>
        </property>
        <property name="bottomMargin">
-        <number>20</number>
+        <number>50</number>
        </property>
        <item>
         <layout class="QVBoxLayout" name="vlay_cb">

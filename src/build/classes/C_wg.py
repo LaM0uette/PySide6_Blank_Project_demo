@@ -3,6 +3,7 @@ from PySide6 import QtCore, QtWidgets
 from . import base
 from . import Classe_wg
 from ...build import *
+from ...config import vrb
 
 
 class C_wg:
@@ -321,7 +322,111 @@ class C_wg:
 
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
+    def STL_DE(self):
+        self.wg.setCalendarPopup(True)
+        self.STL_ALL()
+
+        font_cal = P_font().p()
+        stl = {
+            "th":
+                "QDateEdit::drop-down {"
+                f"image: url({P_img().calendrier() + '.svg'});"
+                f"width: {self.dim_ico}px;"
+                f"height: {self.dim_ico}px;" #
+                "}"
+
+                "QDateEdit {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                "border: none;"
+                f"selection-background-color: rgb{self.c3};"
+                f"selection-color: rgb{self.c1};"
+                "}"
+
+                "QCalendarWidget QWidget {"
+                f"alternate-background-color: rgb{self.c2};"
+                f"color: rgb{self.c3};"
+                "}"
+
+                "QCalendarWidget QToolButton {"
+                f"font-size: {font_cal}px;"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                "}"
+                "QCalendarWidget QToolButton:hover {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.bn1};"
+                "}"
+
+                "QToolButton#qt_calendar_prevmonth {"
+                f"qproperty-icon: url({P_img().fleche_gauche() + 'bn1' + '.svg'});"
+                f"icon-size: {self.dim_ico}px, {self.dim_ico}px;"
+                "}"
+                "QToolButton#qt_calendar_nextmonth  {"
+                f"qproperty-icon: url({P_img().fleche_droite() + 'bn1' + '.svg'});"
+                f"icon-size: {self.dim_ico}px, {self.dim_ico}px;"
+                "}"
+
+                "QCalendarWidget QMenu {"
+                "width: 150px;"
+                f"font-size: {font_cal}px;"
+                "font-family: Berlin Sans FB Demi;"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                "}"
+
+                "QCalendarWidget QMenu::item:selected {"
+                "padding-left: 30px;"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                "}"
+
+                "QCalendarWidget QSpinBox {"
+                "width: 50px;"
+                f"font-size: {font_cal}px;"
+                "font-family: Berlin Sans FB Demi;"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                f"selection-background-color: rgb{self.c1};"
+                f"selection-color: rgb{self.c3};"
+                "}"
+
+                "QCalendarWidget QAbstractItemView {"
+                f"font-size: {font_cal}px;"
+                "font-family: Berlin Sans FB Demi;"
+                "font-weight: 30;"
+                "outline: 0px;"
+                "}"
+
+                "QCalendarWidget QWidget:item:hover {"
+                f"border: {P_style().bd()}px solid rgb{self.c3};"
+                "}"
+
+                "QCalendarWidget QAbstractItemView:enabled {"
+                f"background-color: rgb{self.c2};"
+                f"color: rgb{self.c3};"
+                f"selection-background-color: rgb{self.c3};"
+                f"selection-color: rgb{self.bn2};"
+                "}"
+
+                "QCalendarWidget QWidget#qt_calendar_navigationbar {"
+                f"background-color: rgb{self.c3};"
+                "}"
+
+                "QCalendarWidget QAbstractItemView:disabled {"
+                f"color: rgb{self.c1};"
+                "}"
+        }
+        self.wg.setStyleSheet(stl.get(self.colors_type)) if self.c1 is not None else False
+
+        dateDuJour = vrb.DATE_NOW_FORMAT.split("_")
+        QdateDuJour = QtCore.QDate(int(dateDuJour[2]), int(dateDuJour[1]), int(dateDuJour[0]))
+        self.wg.setDateTime(QtCore.QDateTime(QdateDuJour, QtCore.QTime(0, 0, 0)))
+        self.wg.setDate(QdateDuJour)
+        self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
     def STL_LB(self):
+        self.STL_ALL()
+
         stl = {
             "th":
                 "QLabel {"
@@ -338,9 +443,9 @@ class C_wg:
                 f"{self.inc}"
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
-
-        self.STL_ALL()
     def STL_PB(self):
+        self.STL_ALL()
+
         stl = {
             "txt":
                 "QPushButton {"
@@ -445,9 +550,7 @@ class C_wg:
                 
                 f"{self.inc_flat}",
         }
-
         self.wg.setStyleSheet(stl.get(self.colors_type))
-        self.STL_ALL()
 
         self.wg.setFlat(True)
         self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
@@ -467,6 +570,8 @@ class C_wg:
             self.wg.leaveEvent = cls.LVE_ZOOM
         else: return
     def STL_SCA(self):
+        self.STL_ALL("sca")
+
         stl = {
             "th":
                 ".QScrollArea .QWidget{"
@@ -476,8 +581,5 @@ class C_wg:
                 
                 f"{self.inc}"
         }
-
         self.wg.setStyleSheet(stl.get(self.colors_type))
         self.wg.setFrameShape(QtWidgets.QFrame.NoFrame)
-
-        self.STL_ALL("sca")
