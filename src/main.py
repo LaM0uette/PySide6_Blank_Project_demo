@@ -37,6 +37,10 @@ class main(Ui_main, QtWidgets.QWidget):
         C_pb().reduire(self.pb_mt_reduire)
         C_pb().agrandir(self.pb_mt_agrandir)
         C_pb().quitter(self.pb_mt_quitter)
+
+        "" # Demo
+        C_pb().demo_txt(self.pb_demo_txt)
+        C_pb().demo_txt_inv(self.pb_demo_txt_inv)
     def IN_WG(self):
         # Frame menu_top
         self.fr_menu_top.setFixedHeight(P_dim().h_mt())

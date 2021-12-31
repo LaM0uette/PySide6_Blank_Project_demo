@@ -158,7 +158,7 @@ class C_wg:
             except: pass
 
         # Police
-        try: self.wg.setFont(Fct(font_size=self.font)).FONT()
+        try: self.wg.setFont(Fct(font_size=self.font).FONT())
         except: pass
 
         # Curseur

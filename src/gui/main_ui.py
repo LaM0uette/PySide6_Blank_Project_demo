@@ -17,13 +17,13 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
     QLabel, QPushButton, QSizePolicy, QSpacerItem,
-    QWidget)
+    QVBoxLayout, QWidget)
 
 class Ui_main(object):
     def setupUi(self, main):
         if not main.objectName():
             main.setObjectName(u"main")
-        main.resize(1200, 750)
+        main.resize(756, 490)
         self.glay_main = QGridLayout(main)
         self.glay_main.setSpacing(0)
         self.glay_main.setObjectName(u"glay_main")
@@ -87,15 +87,48 @@ class Ui_main(object):
 
         self.glay_main.addWidget(self.fr_menu_top, 0, 0, 1, 1)
 
+        self.vlay_wg = QVBoxLayout()
+        self.vlay_wg.setObjectName(u"vlay_wg")
+        self.vlay_wg.setContentsMargins(50, 20, 50, 20)
+        self.vlay_pb = QVBoxLayout()
+        self.vlay_pb.setSpacing(10)
+        self.vlay_pb.setObjectName(u"vlay_pb")
+        self.vlay_pb.setContentsMargins(0, -1, 0, -1)
+        self.lb_pb_demo = QLabel(main)
+        self.lb_pb_demo.setObjectName(u"lb_pb_demo")
+
+        self.vlay_pb.addWidget(self.lb_pb_demo)
+
+        self.line = QFrame(main)
+        self.line.setObjectName(u"line")
+        self.line.setFrameShape(QFrame.HLine)
+        self.line.setFrameShadow(QFrame.Sunken)
+
+        self.vlay_pb.addWidget(self.line)
+
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.vlay_pb.addItem(self.verticalSpacer_2)
+
+        self.pb_demo_txt = QPushButton(main)
+        self.pb_demo_txt.setObjectName(u"pb_demo_txt")
+
+        self.vlay_pb.addWidget(self.pb_demo_txt)
+
+        self.pb_demo_txt_inv = QPushButton(main)
+        self.pb_demo_txt_inv.setObjectName(u"pb_demo_txt_inv")
+
+        self.vlay_pb.addWidget(self.pb_demo_txt_inv)
+
+
+        self.vlay_wg.addLayout(self.vlay_pb)
+
+
+        self.glay_main.addLayout(self.vlay_wg, 2, 0, 1, 1)
+
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.glay_main.addItem(self.verticalSpacer, 2, 0, 1, 1)
-
-        self.pushButton = QPushButton(main)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setCheckable(True)
-
-        self.glay_main.addWidget(self.pushButton, 1, 0, 1, 1)
+        self.glay_main.addItem(self.verticalSpacer, 4, 0, 1, 1)
 
 
         self.retranslateUi(main)
@@ -105,6 +138,8 @@ class Ui_main(object):
 
     def retranslateUi(self, main):
         main.setWindowTitle(QCoreApplication.translate("main", u"Form", None))
-        self.pushButton.setText(QCoreApplication.translate("main", u"PushButton", None))
+        self.lb_pb_demo.setText(QCoreApplication.translate("main", u"QPushButton :", None))
+        self.pb_demo_txt.setText(QCoreApplication.translate("main", u"PushButton text", None))
+        self.pb_demo_txt_inv.setText(QCoreApplication.translate("main", u"PushButton text invers\u00e9", None))
     # retranslateUi
 

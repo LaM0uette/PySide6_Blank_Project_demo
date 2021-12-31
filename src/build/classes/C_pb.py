@@ -38,8 +38,7 @@ class C_pb(C_wg):
                  dim = P_dim().p_r_mt(),
                  img = P_img().option(),
                  th = "th2",
-                 cur = "souris_main",
-        )
+                 cur = "souris_main")
     def reduire(self, *args):
         self.STL(list(args),
                  type="zoom",
@@ -48,8 +47,7 @@ class C_pb(C_wg):
                  dim = P_dim().p_r_mt(),
                  img = P_img().reduire(),
                  th = "bn1",
-                 cur = "souris_main",
-        )
+                 cur = "souris_main")
     def agrandir(self, *args):
         self.STL(list(args),
                  type="zoom",
@@ -58,8 +56,7 @@ class C_pb(C_wg):
                  dim = P_dim().p_r_mt(),
                  img = P_img().agrandir(),
                  th = "th3",
-                 cur = "souris_main",
-        )
+                 cur = "souris_main")
     def quitter(self, *args):
         self.STL(list(args),
                  type="zoom",
@@ -68,5 +65,19 @@ class C_pb(C_wg):
                  dim = P_dim().p_r_mt(),
                  img = P_img().quitter(),
                  th = "bn2",
-                 cur = "souris_main",
-        )
+                 cur = "souris_main")
+
+    def demo_txt(self, *args):
+        self.STL(list(args),
+                 colors_type = "txt",
+                 colors = P_rgb().p_th1(),
+                 dim = P_dim().p_aw_demo(),
+                 font = P_font().p(),
+                 cur = "main")
+    def demo_txt_inv(self, *args):
+        self.STL(list(args),
+                 colors_type = "txt_inv",
+                 colors = P_rgb().p_vert_th1(),
+                 dim = P_dim().p_aw_demo(),
+                 font = P_font().p(),
+                 cur = "main")

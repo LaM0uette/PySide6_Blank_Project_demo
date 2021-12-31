@@ -5,3 +5,14 @@ class Dim(Data):
         super().__init__(grp)
 
     def h_mt(self): return self.GET_VAL("h9")
+
+    def h_h0(self): return self.GET_VAL("h0")
+    def h_h1(self): return self.GET_VAL("h1")
+    def h_h2(self): return self.GET_VAL("h2")
+    def h_h3(self): return self.GET_VAL("h3")
+    def h_h4(self): return self.GET_VAL("h4")
+    def h_h5(self): return self.GET_VAL("h5")
+    def h_h6(self): return self.GET_VAL("h6")
+    def h_h7(self): return self.GET_VAL("h7")
+    def h_h8(self): return self.GET_VAL("h8")
+    def h_h9(self): return self.GET_VAL("h9")
