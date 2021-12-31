@@ -126,38 +126,53 @@ class C_wg:
 
 
         ### VAR
-        bd = "QWidget {" \
+        wg_type = ""
+        if isinstance(self.wg, QtWidgets.QComboBox): wg_type = "QComboBox"
+        elif isinstance(self.wg, QtWidgets.QLabel): wg_type = "QLabel"
+        elif isinstance(self.wg, QtWidgets.QPushButton): wg_type = "QPushButton"
+        elif isinstance(self.wg, QtWidgets.QScrollArea): wg_type = "QScrollArea"
+
+        bd = f"[class~='{wg_type}']" \
+             "{" \
              f"border-width: {self.bd_px}px;" \
              "border-style: solid;" \
              f"border-color: rgba{self.o1} rgba{self.o2} rgba{self.o3} rgba{self.o4};" \
              "}"
-        flat = "QWidget:flat {" \
-               "border: none;" \
-               "}"
-        rd = "QWidget {" \
+        rd = f"[class~='{wg_type}']" \
+             "{" \
              f"border-top-left-radius: {self.r1}px;" \
              f"border-top-right-radius: {self.r2}px;" \
              f"border-bottom-right-radius: {self.r4}px;" \
              f"border-bottom-left-radius: {self.r3}px;" \
              "}"
-        scroll = ".QScrollBar {" \
+        flat = f"[class~='{wg_type}']:flat" \
+               "{" \
+               "border: none;" \
+               "}"
+        scroll = f"[class~='{wg_type}'] QScrollBar " \
+                 "{" \
                  f"background-color: rgb{self.c1};" \
                  "width: 20px;" \
                  "height: 20px;" \
                  "}" \
-                 ".QScrollBar::handle:vertical {" \
+                 f"[class~='{wg_type}'] ::handle:vertical" \
+                 "{" \
                  "min-height: 100px;" \
                  "}" \
-                 ".QScrollBar::handle:vertical {" \
+                 f"[class~='{wg_type}'] ::handle:vertical" \
+                 "{" \
                  "min-height: 100px;" \
                  "}" \
-                 ".QScrollBar::handle:horizontal {" \
+                 f"[class~='{wg_type}'] ::handle:horizontal" \
+                 "{" \
                  "min-width: 100px;" \
                  "}" \
-                 ".QScrollBar::handle {" \
+                 f"[class~='{wg_type}']  QScrollBar::handle" \
+                 "{" \
                  f"background-color: rgb{self.c3};" \
                  "}" \
-                 ".QScrollBar::add-page, .QScrollBar::sub-page {" \
+                 f"[class~='{wg_type}']  QScrollBar::add-page, [class~='{wg_type}']  QScrollBar::sub-page" \
+                 "{" \
                  f"background-color: rgb{self.c1};" \
                  f"border: rgb{self.c1};" \
                  "}"
@@ -168,8 +183,10 @@ class C_wg:
         else:
             self.inc = rd + bd
             self.inc_flat = self.inc
-        if isinstance(self.wg, QtWidgets.QScrollArea):
-            self.inc = scroll
+
+        if wg_type == "QScrollArea":
+            self.inc += scroll
+            self.inc_flat += scroll
 
     def STL_ALL(self, val=""):
         # Dimensions
@@ -220,7 +237,50 @@ class C_wg:
         try: self.wg.setButtonSymbols(self.pb_sb)
         except: pass
 
+    def STL_CB(self):
+        stl = {
+            "th":
+                "QComboBox {"
+                f"background-color: rgb{self.c2};"
+                f"color: rgb{self.c3};"
+                f"font-size: {P_font().p()}px;"
+                "font-weight: bold;"
+                f"selection-background-color: rgb{self.c3};"
+                f"selection-color: rgb{self.c1};"
+                "}"
 
+                "QComboBox::drop-down {"
+                f"width: {P_dim().p_aw_h9()}px;"
+                f"border: none;"
+                "}"
+
+                "QComboBox::down-arrow {"
+                f"image: url({P_img().fleche_bottom() + 'bn1' + '.svg'});"
+                f"width: {P_dim().p_aw_h9()}px;"
+                "}"
+
+                "QComboBox::down-arrow:hover {"
+                f"image: url({P_img().fleche_bottom() + 'bn2' + '.svg'});"
+                f"width: {P_dim().p_aw_h9()}px;"
+                "}"
+
+                "QComboBox QAbstractItemView::item {"
+                f"background-color: rgb{self.c2};"
+                f"color: rgb{self.c3};"
+                f"border: none;"
+                "}"
+
+                "QComboBox QAbstractItemView::item:hover {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c2};"
+                f"border: none;"
+                "}"
+
+                f"{self.inc}"
+        }
+        self.wg.setStyleSheet(stl.get(self.colors_type))
+
+        self.STL_ALL()
     def STL_LB(self):
         stl = {
             "th":
@@ -368,7 +428,13 @@ class C_wg:
         else: return
     def STL_SCA(self):
         stl = {
-            "th": f"{self.inc}"
+            "th":
+                ".QScrollArea .QWidget{"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                "}"
+                
+                f"{self.inc}"
         }
 
         self.wg.setStyleSheet(stl.get(self.colors_type))

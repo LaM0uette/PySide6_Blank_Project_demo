@@ -5,6 +5,7 @@ from PySide6 import QtCore, QtWidgets, QtGui
 from .gui.main_ui import Ui_main
 from .build import *
 from .config import *
+from .In_classe import In_classe
 
 
 
@@ -27,36 +28,13 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setFixedWidth(config.widht)
         self.setFixedHeight(config.height)
         self.setWindowOpacity(config.opacity)
-
+    def IN_CLASSE(self):
+        In_classe(ui=self)
+    def IN_WG(self):
+        # Base
         self.setCursor(Fct(cur="souris").CUR())
         self.setStyleSheet(f"background-color: rgb{P_rgb().th1()};")
-    def IN_CLASSE(self):
-        ### QLabel
-        ""  # Menu_top
-        C_lb().h3_titre(self.lb_mt_nom)
-        C_lb().demo(self.lb_pb_demo)
 
-        ### QPushButton
-        ""  # Menu_top
-        C_pb().option(self.pb_mt_option)
-        C_pb().reduire(self.pb_mt_reduire)
-        C_pb().agrandir(self.pb_mt_agrandir)
-        C_pb().quitter(self.pb_mt_quitter)
-        ""  # Demo
-        C_pb().demo_txt(self.pb_demo_txt)
-        C_pb().demo_txt_inv(self.pb_demo_txt_inv)
-        C_pb().demo_th(self.pb_demo_th)
-        C_pb().demo_tr(self.pb_demo_tr)
-        C_pb().demo_ck(self.pb_demo_ck)
-        C_pb().demo_ck_ico(self.pb_demo_ck_ico, self.pb_demo_ico_ck)
-        C_pb().demo_zoom(self.pb_demo_zoom)
-        C_pb().demo_rd(self.pb_demo_rd)
-        C_pb().demo_bd(self.pb_demo_bd)
-
-        ### QScrollArea
-        ""  # Demo
-        C_sca().demo(self.sca_main)
-    def IN_WG(self):
         # Frame menu_top
         self.fr_menu_top.setFixedHeight(P_dim().h_mt())
 
