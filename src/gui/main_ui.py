@@ -23,7 +23,6 @@ class Ui_main(object):
     def setupUi(self, main):
         if not main.objectName():
             main.setObjectName(u"main")
-        main.resize(756, 777)
         self.glay_main = QGridLayout(main)
         self.glay_main.setSpacing(0)
         self.glay_main.setObjectName(u"glay_main")
@@ -92,26 +91,19 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, 0, 754, 750))
+        self.vlay_wg.setGeometry(QRect(0, 0, 636, 2591))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(50)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(50, 20, 50, 20)
         self.vlay_pb = QVBoxLayout()
-        self.vlay_pb.setSpacing(10)
+        self.vlay_pb.setSpacing(0)
         self.vlay_pb.setObjectName(u"vlay_pb")
         self.vlay_pb.setContentsMargins(0, -1, 0, -1)
         self.lb_pb_demo = QLabel(self.vlay_wg)
         self.lb_pb_demo.setObjectName(u"lb_pb_demo")
 
         self.vlay_pb.addWidget(self.lb_pb_demo)
-
-        self.line = QFrame(self.vlay_wg)
-        self.line.setObjectName(u"line")
-        self.line.setFrameShape(QFrame.HLine)
-        self.line.setFrameShadow(QFrame.Sunken)
-
-        self.vlay_pb.addWidget(self.line)
 
         self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Fixed)
 
@@ -122,20 +114,36 @@ class Ui_main(object):
 
         self.vlay_pb.addWidget(self.pb_demo_txt)
 
+        self.verticalSpacer_3 = QSpacerItem(20, 5, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.vlay_pb.addItem(self.verticalSpacer_3)
+
         self.pb_demo_txt_inv = QPushButton(self.vlay_wg)
         self.pb_demo_txt_inv.setObjectName(u"pb_demo_txt_inv")
 
         self.vlay_pb.addWidget(self.pb_demo_txt_inv)
+
+        self.verticalSpacer_4 = QSpacerItem(20, 5, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.vlay_pb.addItem(self.verticalSpacer_4)
 
         self.pb_demo_th = QPushButton(self.vlay_wg)
         self.pb_demo_th.setObjectName(u"pb_demo_th")
 
         self.vlay_pb.addWidget(self.pb_demo_th)
 
+        self.verticalSpacer_5 = QSpacerItem(20, 5, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.vlay_pb.addItem(self.verticalSpacer_5)
+
         self.pb_demo_tr = QPushButton(self.vlay_wg)
         self.pb_demo_tr.setObjectName(u"pb_demo_tr")
 
         self.vlay_pb.addWidget(self.pb_demo_tr)
+
+        self.verticalSpacer_6 = QSpacerItem(20, 5, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.vlay_pb.addItem(self.verticalSpacer_6)
 
         self.pb_demo_ck = QPushButton(self.vlay_wg)
         self.pb_demo_ck.setObjectName(u"pb_demo_ck")
@@ -143,11 +151,19 @@ class Ui_main(object):
 
         self.vlay_pb.addWidget(self.pb_demo_ck)
 
+        self.verticalSpacer_7 = QSpacerItem(20, 5, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.vlay_pb.addItem(self.verticalSpacer_7)
+
         self.pb_demo_ck_ico = QPushButton(self.vlay_wg)
         self.pb_demo_ck_ico.setObjectName(u"pb_demo_ck_ico")
         self.pb_demo_ck_ico.setCheckable(True)
 
         self.vlay_pb.addWidget(self.pb_demo_ck_ico)
+
+        self.verticalSpacer_8 = QSpacerItem(20, 5, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.vlay_pb.addItem(self.verticalSpacer_8)
 
         self.pb_demo_ico_ck = QPushButton(self.vlay_wg)
         self.pb_demo_ico_ck.setObjectName(u"pb_demo_ico_ck")
@@ -155,16 +171,28 @@ class Ui_main(object):
 
         self.vlay_pb.addWidget(self.pb_demo_ico_ck)
 
+        self.verticalSpacer_9 = QSpacerItem(20, 5, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.vlay_pb.addItem(self.verticalSpacer_9)
+
         self.pb_demo_zoom = QPushButton(self.vlay_wg)
         self.pb_demo_zoom.setObjectName(u"pb_demo_zoom")
         self.pb_demo_zoom.setCheckable(True)
 
         self.vlay_pb.addWidget(self.pb_demo_zoom)
 
+        self.verticalSpacer_10 = QSpacerItem(20, 5, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.vlay_pb.addItem(self.verticalSpacer_10)
+
         self.pb_demo_rd = QPushButton(self.vlay_wg)
         self.pb_demo_rd.setObjectName(u"pb_demo_rd")
 
         self.vlay_pb.addWidget(self.pb_demo_rd)
+
+        self.verticalSpacer_11 = QSpacerItem(20, 5, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.vlay_pb.addItem(self.verticalSpacer_11)
 
         self.pb_demo_bd = QPushButton(self.vlay_wg)
         self.pb_demo_bd.setObjectName(u"pb_demo_bd")
@@ -173,6 +201,26 @@ class Ui_main(object):
 
 
         self.verticalLayout.addLayout(self.vlay_pb)
+
+        self.scrollArea = QScrollArea(self.vlay_wg)
+        self.scrollArea.setObjectName(u"scrollArea")
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollAreaWidgetContents = QWidget()
+        self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 517, 521))
+        self.verticalLayout_2 = QVBoxLayout(self.scrollAreaWidgetContents)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalSpacer_33 = QSpacerItem(20, 500, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.verticalLayout_2.addItem(self.verticalSpacer_33)
+
+        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
+
+        self.verticalLayout.addWidget(self.scrollArea)
+
+        self.verticalSpacer_32 = QSpacerItem(20, 2000, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.verticalLayout.addItem(self.verticalSpacer_32)
 
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -189,7 +237,6 @@ class Ui_main(object):
     # setupUi
 
     def retranslateUi(self, main):
-        main.setWindowTitle(QCoreApplication.translate("main", u"Form", None))
         self.lb_pb_demo.setText(QCoreApplication.translate("main", u"QPushButton :", None))
         self.pb_demo_txt.setText(QCoreApplication.translate("main", u"PushButton text", None))
         self.pb_demo_txt_inv.setText(QCoreApplication.translate("main", u"PushButton text invers\u00e9", None))
@@ -199,5 +246,6 @@ class Ui_main(object):
         self.pb_demo_ck_ico.setText(QCoreApplication.translate("main", u"PushButton checkable avec icone", None))
         self.pb_demo_rd.setText(QCoreApplication.translate("main", u"PushButton rd", None))
         self.pb_demo_bd.setText(QCoreApplication.translate("main", u"PushButton bd", None))
+        pass
     # retranslateUi
 

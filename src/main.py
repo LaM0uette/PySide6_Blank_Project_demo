@@ -33,9 +33,8 @@ class main(Ui_main, QtWidgets.QWidget):
     def IN_CLASSE(self):
         ### QLabel
         ""  # Menu_top
-        C_lb().titre(self.lb_pb_demo)
-        C_lb().sous_titre(self.lb_mt_nom)
-
+        C_lb().h3_titre(self.lb_mt_nom)
+        C_lb().demo(self.lb_pb_demo)
 
         ### QPushButton
         ""  # Menu_top
@@ -53,6 +52,10 @@ class main(Ui_main, QtWidgets.QWidget):
         C_pb().demo_zoom(self.pb_demo_zoom)
         C_pb().demo_rd(self.pb_demo_rd)
         C_pb().demo_bd(self.pb_demo_bd)
+
+        ### QScrollArea
+        ""  # Demo
+        C_sca().demo(self.sca_main)
     def IN_WG(self):
         # Frame menu_top
         self.fr_menu_top.setFixedHeight(P_dim().h_mt())

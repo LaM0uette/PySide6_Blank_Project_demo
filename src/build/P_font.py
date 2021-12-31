@@ -6,4 +6,5 @@ class P_font(Data):
 
     def titre(self): return self.GET_VAL("h1")
     def sous_titre(self): return self.GET_VAL("h2")
+    def h3_titre(self): return self.GET_VAL("h3")
     def p(self): return self.GET_VAL("h4")

@@ -2,17 +2,6 @@
 <ui version="4.0">
  <class>main</class>
  <widget class="QWidget" name="main">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>756</width>
-    <height>777</height>
-   </rect>
-  </property>
-  <property name="windowTitle">
-   <string>Form</string>
-  </property>
   <layout class="QGridLayout" name="glay_main">
    <property name="leftMargin">
     <number>0</number>
@@ -116,8 +105,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>754</width>
-        <height>750</height>
+        <width>636</width>
+        <height>2591</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -139,7 +128,7 @@
        <item>
         <layout class="QVBoxLayout" name="vlay_pb">
          <property name="spacing">
-          <number>10</number>
+          <number>0</number>
          </property>
          <property name="leftMargin">
           <number>0</number>
@@ -151,13 +140,6 @@
           <widget class="QLabel" name="lb_pb_demo">
            <property name="text">
             <string>QPushButton :</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="Line" name="line">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
            </property>
           </widget>
          </item>
@@ -185,11 +167,43 @@
           </widget>
          </item>
          <item>
+          <spacer name="verticalSpacer_3">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
           <widget class="QPushButton" name="pb_demo_txt_inv">
            <property name="text">
             <string>PushButton text inversé</string>
            </property>
           </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_4">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
          </item>
          <item>
           <widget class="QPushButton" name="pb_demo_th">
@@ -199,11 +213,43 @@
           </widget>
          </item>
          <item>
+          <spacer name="verticalSpacer_5">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
           <widget class="QPushButton" name="pb_demo_tr">
            <property name="text">
             <string>PushButton transparent</string>
            </property>
           </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_6">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
          </item>
          <item>
           <widget class="QPushButton" name="pb_demo_ck">
@@ -216,6 +262,22 @@
           </widget>
          </item>
          <item>
+          <spacer name="verticalSpacer_7">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
           <widget class="QPushButton" name="pb_demo_ck_ico">
            <property name="text">
             <string>PushButton checkable avec icone</string>
@@ -226,11 +288,43 @@
           </widget>
          </item>
          <item>
+          <spacer name="verticalSpacer_8">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
           <widget class="QPushButton" name="pb_demo_ico_ck">
            <property name="checkable">
             <bool>true</bool>
            </property>
           </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_9">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
          </item>
          <item>
           <widget class="QPushButton" name="pb_demo_zoom">
@@ -240,11 +334,43 @@
           </widget>
          </item>
          <item>
+          <spacer name="verticalSpacer_10">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
           <widget class="QPushButton" name="pb_demo_rd">
            <property name="text">
             <string>PushButton rd</string>
            </property>
           </widget>
+         </item>
+         <item>
+          <spacer name="verticalSpacer_11">
+           <property name="orientation">
+            <enum>Qt::Vertical</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Fixed</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>20</width>
+             <height>5</height>
+            </size>
+           </property>
+          </spacer>
          </item>
          <item>
           <widget class="QPushButton" name="pb_demo_bd">
@@ -254,6 +380,57 @@
           </widget>
          </item>
         </layout>
+       </item>
+       <item>
+        <widget class="QScrollArea" name="scrollArea">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>517</width>
+            <height>521</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <spacer name="verticalSpacer_33">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeType">
+              <enum>QSizePolicy::Fixed</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>500</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_32">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>2000</height>
+          </size>
+         </property>
+        </spacer>
        </item>
        <item>
         <spacer name="verticalSpacer">

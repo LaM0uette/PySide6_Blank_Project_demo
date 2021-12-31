@@ -89,3 +89,9 @@ class Fct:
         icon.addPixmap(QtGui.QPixmap(img + ".svg"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         wg.setIcon(icon)
         wg.setIconSize(QtCore.QSize(dim, dim))
+    def PIXMAP(self):
+        wg, img, dim = self.kwargs.get("wg"), self.kwargs.get("img"), self.kwargs.get("dim")
+        if wg is None or img is None or dim is None: return
+
+        wg.setPixmap(QtGui.QPixmap(img + ".svg"))
+        wg.setScaledContents(True)

@@ -42,9 +42,10 @@ class C_wg:
             self.dim_ico = 0
             self.DIM_ICO = 0
         else:
-            self.dim_ico = self.dim.get("h") * P_style().x_ico()
-            self.DIM_ICO = self.dim.get("h") * P_style().X_ICO()
-
+            try:
+                self.dim_ico = self.dim.get("h") * P_style().x_ico()
+                self.DIM_ICO = self.dim.get("h") * P_style().X_ICO()
+            except: pass
 
         ### IMAGES
         self.img = attrs.get("img")
@@ -125,20 +126,41 @@ class C_wg:
 
 
         ### VAR
-        bd = "QPushButton {" \
+        bd = "QWidget {" \
              f"border-width: {self.bd_px}px;" \
              "border-style: solid;" \
              f"border-color: rgba{self.o1} rgba{self.o2} rgba{self.o3} rgba{self.o4};" \
              "}"
-        flat = "QPushButton:flat {" \
+        flat = "QWidget:flat {" \
                "border: none;" \
                "}"
-        rd = "QPushButton {" \
+        rd = "QWidget {" \
              f"border-top-left-radius: {self.r1}px;" \
              f"border-top-right-radius: {self.r2}px;" \
              f"border-bottom-right-radius: {self.r4}px;" \
              f"border-bottom-left-radius: {self.r3}px;" \
              "}"
+        scroll = "QScrollBar {" \
+                 f"background-color: rgb{self.c1};" \
+                 "width: 20px;" \
+                 "height: 20px;" \
+                 "}" \
+                 "QScrollBar::handle:vertical {" \
+                 "min-height: 100px;" \
+                 "}" \
+                 "QScrollBar::handle:vertical {" \
+                 "min-height: 100px;" \
+                 "}" \
+                 "QScrollBar::handle:horizontal {" \
+                 "min-width: 100px;" \
+                 "}" \
+                 "QScrollBar::handle {" \
+                 f"background-color: rgb{self.c3};" \
+                 "}" \
+                 "QScrollBar::add-page, QScrollBar::sub-page {" \
+                 f"background-color: rgb{self.c1};" \
+                 f"border: rgb{self.c1};" \
+                 "}"
 
         if self.bd.get("mat") == "0000":
             self.inc = rd
@@ -147,22 +169,28 @@ class C_wg:
             self.inc = rd + bd
             self.inc_flat = self.inc
 
-    def STL_ALL(self, val=None):
+        if isinstance(self.wg, QtWidgets.QScrollArea):
+            self.inc = scroll
+
+    def STL_ALL(self, val=""):
         # Dimensions
         try: Fct(wg=self.wg, w=self.dim.get("w"), h=self.dim.get("h")).DIM()
         except: pass
 
         # Image
-        if val is None:
+        if not val in ("ckb", "rb"):
             try: Fct(wg=self.wg, img=self.img + self.th, dim=self.dim_ico).ICON()
             except: pass
 
-        # Police
+            # try: Fct(wg=self.wg, img=self.img + self.th).PIXMAP()
+            # except: pass
+
+        # Font
         try: self.wg.setFont(Fct(font_size=self.font).FONT())
         except: pass
 
         # Curseur
-        if val is None:
+        if not val in ("fr", "lb", "pg", "sca"):
             try: self.wg.setCursor(Fct(cur=self.cur).CUR())
             except: pass
             try: self.wg.view().setCursor(Fct(cur="souris_main").CUR())
@@ -173,8 +201,7 @@ class C_wg:
             except: pass
             try: self.wg.calendarWidget().setCursor(Fct(cur="souris_main"))
             except: pass
-
-        if val is None and self.colors_type == "tr":
+        if val in "sb" and self.colors_type == "tr":
             try: self.wg.lineEdit().setCursor(Fct(cur="souris_main"))
             except: pass
 
@@ -201,13 +228,18 @@ class C_wg:
                 "QLabel {"
                 f"background-color: rgb{self.c1};"
                 f"color: rgb{self.c3};"
-                "}",
+                "}"
+                
+                f"{self.inc}",
             "tr":
                 "QLabel {"
                 f"color: rgb{self.c1};"
                 "}"
+
+                f"{self.inc}"
         }
-        self.wg.setStyleSheet(stl.get(self.colors_type)) if self.c1 is not None else False
+        self.wg.setStyleSheet(stl.get(self.colors_type))
+
         self.STL_ALL()
     def STL_PB(self):
         stl = {
@@ -331,3 +363,33 @@ class C_wg:
             self.wg.enterEvent = cls.ENT_ZOOM
             self.wg.leaveEvent = cls.LVE_ZOOM
         else: return
+    def STL_SCA(self):
+        stl = {
+            "th": f"{self.inc}"
+        }
+        stlbis = "QScrollArea QScrollBar {" \
+                f"background-color: rgb{self.c1};" \
+                "width: 20px;" \
+                "height: 20px;" \
+                "}" \
+                "QScrollArea QScrollBar::handle:vertical {" \
+                "min-height: 100px;" \
+                "}" \
+                "QScrollArea QScrollBar::handle:vertical {" \
+                "min-height: 100px;" \
+                "}" \
+                "QScrollArea QScrollBar::handle:horizontal {" \
+                "min-width: 100px;" \
+                "}" \
+                "QScrollArea QScrollBar::handle {" \
+                f"background-color: rgb{self.c3};" \
+                "}" \
+                "QScrollArea QScrollBar::add-page, QScrollArea QScrollBar::sub-page {" \
+                f"background-color: rgb{self.c1};" \
+                f"border: rgb{self.c1};" \
+                "}" \
+
+        self.wg.setStyleSheet(stlbis)
+        self.wg.setFrameShape(QtWidgets.QFrame.NoFrame)
+
+        self.STL_ALL("sca")
