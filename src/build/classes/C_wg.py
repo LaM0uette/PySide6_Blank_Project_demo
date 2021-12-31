@@ -245,8 +245,6 @@ class C_wg:
                 "QComboBox {"
                 f"background-color: rgb{self.c2};"
                 f"color: rgb{self.c3};"
-                f"font-size: {P_font().p()}px;"
-                "font-weight: bold;"
                 f"selection-background-color: rgb{self.c3};"
                 f"selection-color: rgb{self.c1};"
                 "padding: 1px 0px 1px 3px;" #############################
@@ -285,8 +283,6 @@ class C_wg:
             "tr":
                 "QComboBox {"
                 f"color: rgb{self.c3};"
-                f"font-size: {P_font().p()}px;"
-                "font-weight: bold;"
                 f"selection-background-color: rgb{self.c3};"
                 f"selection-color: rgb{self.c1};"
                 "padding: 1px 0px 1px 3px;" #############################
