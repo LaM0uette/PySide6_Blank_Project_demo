@@ -88,6 +88,7 @@ class Ui_main(object):
         self.glay_main.addWidget(self.fr_menu_top, 0, 0, 1, 1)
 
         self.vlay_wg = QVBoxLayout()
+        self.vlay_wg.setSpacing(20)
         self.vlay_wg.setObjectName(u"vlay_wg")
         self.vlay_wg.setContentsMargins(50, 20, 50, 20)
         self.vlay_pb = QVBoxLayout()
@@ -120,6 +121,29 @@ class Ui_main(object):
 
         self.vlay_pb.addWidget(self.pb_demo_txt_inv)
 
+        self.pb_demo_tr = QPushButton(main)
+        self.pb_demo_tr.setObjectName(u"pb_demo_tr")
+
+        self.vlay_pb.addWidget(self.pb_demo_tr)
+
+        self.pb_demo_ck = QPushButton(main)
+        self.pb_demo_ck.setObjectName(u"pb_demo_ck")
+        self.pb_demo_ck.setCheckable(True)
+
+        self.vlay_pb.addWidget(self.pb_demo_ck)
+
+        self.pb_demo_ck_ico = QPushButton(main)
+        self.pb_demo_ck_ico.setObjectName(u"pb_demo_ck_ico")
+        self.pb_demo_ck_ico.setCheckable(True)
+
+        self.vlay_pb.addWidget(self.pb_demo_ck_ico)
+
+        self.pb_demo_ico_ck = QPushButton(main)
+        self.pb_demo_ico_ck.setObjectName(u"pb_demo_ico_ck")
+        self.pb_demo_ico_ck.setCheckable(True)
+
+        self.vlay_pb.addWidget(self.pb_demo_ico_ck)
+
 
         self.vlay_wg.addLayout(self.vlay_pb)
 
@@ -141,5 +165,9 @@ class Ui_main(object):
         self.lb_pb_demo.setText(QCoreApplication.translate("main", u"QPushButton :", None))
         self.pb_demo_txt.setText(QCoreApplication.translate("main", u"PushButton text", None))
         self.pb_demo_txt_inv.setText(QCoreApplication.translate("main", u"PushButton text invers\u00e9", None))
+        self.pb_demo_tr.setText(QCoreApplication.translate("main", u"PushButton transparent", None))
+        self.pb_demo_ck.setText(QCoreApplication.translate("main", u"PushButton checkable", None))
+        self.pb_demo_ck_ico.setText(QCoreApplication.translate("main", u"PushButton checkable avec icone", None))
+        self.pb_demo_ico_ck.setText(QCoreApplication.translate("main", u"PushButton icone checkable", None))
     # retranslateUi
 

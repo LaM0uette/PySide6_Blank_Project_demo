@@ -41,6 +41,10 @@ class main(Ui_main, QtWidgets.QWidget):
         "" # Demo
         C_pb().demo_txt(self.pb_demo_txt)
         C_pb().demo_txt_inv(self.pb_demo_txt_inv)
+        C_pb().demo_tr(self.pb_demo_tr)
+        C_pb().demo_ck(self.pb_demo_ck)
+        C_pb().demo_ck_ico(self.pb_demo_ck_ico)
+        C_pb().demo_ico_ck(self.pb_demo_ico_ck)
     def IN_WG(self):
         # Frame menu_top
         self.fr_menu_top.setFixedHeight(P_dim().h_mt())

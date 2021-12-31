@@ -108,6 +108,9 @@
    </item>
    <item row="2" column="0">
     <layout class="QVBoxLayout" name="vlay_wg">
+     <property name="spacing">
+      <number>20</number>
+     </property>
      <property name="leftMargin">
       <number>50</number>
      </property>
@@ -172,6 +175,43 @@
         <widget class="QPushButton" name="pb_demo_txt_inv">
          <property name="text">
           <string>PushButton text inversé</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pb_demo_tr">
+         <property name="text">
+          <string>PushButton transparent</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pb_demo_ck">
+         <property name="text">
+          <string>PushButton checkable</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pb_demo_ck_ico">
+         <property name="text">
+          <string>PushButton checkable avec icone</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pb_demo_ico_ck">
+         <property name="text">
+          <string>PushButton icone checkable</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
