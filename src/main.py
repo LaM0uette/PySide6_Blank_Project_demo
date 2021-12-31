@@ -31,14 +31,19 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setCursor(Fct(cur="souris").CUR())
         self.setStyleSheet(f"background-color: rgb{P_rgb().th1()};")
     def IN_CLASSE(self):
-        ### PB
-        "" # Menu_top
+        ### QLabel
+        ""  # Menu_top
+        C_lb().titre(self.lb_pb_demo)
+        C_lb().sous_titre(self.lb_mt_nom)
+
+
+        ### QPushButton
+        ""  # Menu_top
         C_pb().option(self.pb_mt_option)
         C_pb().reduire(self.pb_mt_reduire)
         C_pb().agrandir(self.pb_mt_agrandir)
         C_pb().quitter(self.pb_mt_quitter)
-
-        "" # Demo
+        ""  # Demo
         C_pb().demo_txt(self.pb_demo_txt)
         C_pb().demo_txt_inv(self.pb_demo_txt_inv)
         C_pb().demo_th(self.pb_demo_th)

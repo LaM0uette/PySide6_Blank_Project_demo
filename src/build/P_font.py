@@ -1,7 +1,7 @@
 from .data.Data import Data
 
 class P_font(Data):
-    def __init__(self, grp="police"):
+    def __init__(self, grp="font"):
         super().__init__(grp)
 
     def titre(self): return self.GET_VAL("h1")

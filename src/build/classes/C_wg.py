@@ -194,6 +194,21 @@ class C_wg:
         try: self.wg.setButtonSymbols(self.pb_sb)
         except: pass
 
+
+    def STL_LB(self):
+        stl = {
+            "th":
+                "QLabel {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                "}",
+            "tr":
+                "QLabel {"
+                f"color: rgb{self.c1};"
+                "}"
+        }
+        self.wg.setStyleSheet(stl.get(self.colors_type)) if self.c1 is not None else False
+        self.STL_ALL()
     def STL_PB(self):
         stl = {
             "txt":

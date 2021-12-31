@@ -10,4 +10,4 @@ from .P_rgb import P_rgb
 from .P_scroll import P_scroll
 from .P_style import P_style
 from .functions import Fct
-from src.build.classes.C_pb import C_pb
+from .classes import *
