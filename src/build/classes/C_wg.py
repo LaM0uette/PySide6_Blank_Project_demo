@@ -129,6 +129,7 @@ class C_wg:
         ### VAR
         wg_type = ""
         if isinstance(self.wg, QtWidgets.QComboBox): wg_type = "QComboBox"
+        elif isinstance(self.wg, QtWidgets.QDateEdit): wg_type = "QDateEdit"
         elif isinstance(self.wg, QtWidgets.QLabel): wg_type = "QLabel"
         elif isinstance(self.wg, QtWidgets.QPushButton): wg_type = "QPushButton"
         elif isinstance(self.wg, QtWidgets.QScrollArea): wg_type = "QScrollArea"
@@ -223,6 +224,10 @@ class C_wg:
         except: pass
 
         # Curseur
+        if val in "sb" and self.colors_type == "tr":
+            try: self.wg.lineEdit().setCursor(Fct(cur="souris_main").CUR())
+            except: pass
+
         if val not in ("fr", "lb", "pg", "sca"):
             try: self.wg.setCursor(Fct(cur=self.cur).CUR())
             except: pass
@@ -233,9 +238,6 @@ class C_wg:
             try: self.wg.lineEdit().setCursor(Fct(cur="IBeam").CUR())
             except: pass
             try: self.wg.calendarWidget().setCursor(Fct(cur="souris_main").CUR())
-            except: pass
-        if val in "sb" and self.colors_type == "tr":
-            try: self.wg.lineEdit().setCursor(Fct(cur="souris_main").CUR())
             except: pass
 
     def STL_CB(self):
@@ -332,15 +334,17 @@ class C_wg:
                 "QDateEdit::drop-down {"
                 f"image: url({P_img().calendrier() + '.svg'});"
                 f"width: {self.dim_ico}px;"
-                f"height: {self.dim_ico}px;" #
+                f"height: {self.dim_ico}px;"
+                f"margin-top: {(self.dim.get('h') - self.dim_ico)/2.5}px;"
+                f"margin-right: {(self.dim.get('h') - self.dim_ico)/2.5}px;"
                 "}"
 
                 "QDateEdit {"
                 f"background-color: rgb{self.c1};"
                 f"color: rgb{self.c3};"
-                "border: none;"
                 f"selection-background-color: rgb{self.c3};"
                 f"selection-color: rgb{self.c1};"
+                "border: none;"
                 "}"
 
                 "QCalendarWidget QWidget {"
@@ -360,11 +364,11 @@ class C_wg:
 
                 "QToolButton#qt_calendar_prevmonth {"
                 f"qproperty-icon: url({P_img().fleche_gauche() + 'bn1' + '.svg'});"
-                f"icon-size: {self.dim_ico}px, {self.dim_ico}px;"
+                f"icon-size: {font_cal}px, {font_cal}px;"
                 "}"
                 "QToolButton#qt_calendar_nextmonth  {"
                 f"qproperty-icon: url({P_img().fleche_droite() + 'bn1' + '.svg'});"
-                f"icon-size: {self.dim_ico}px, {self.dim_ico}px;"
+                f"icon-size: {font_cal}px, {font_cal}px;"
                 "}"
 
                 "QCalendarWidget QMenu {"
@@ -416,6 +420,99 @@ class C_wg:
                 "QCalendarWidget QAbstractItemView:disabled {"
                 f"color: rgb{self.c1};"
                 "}"
+
+                f"{self.inc}",
+            "tr":
+                "QDateEdit::drop-down {"
+                f"image: url({P_img().calendrier() + '.svg'});"
+                f"width: {self.dim_ico}px;"
+                f"height: {self.dim_ico}px;"
+                f"margin-top: {(self.dim.get('h') - self.dim_ico) / 2.5}px;"
+                f"margin-right: {(self.dim.get('h') - self.dim_ico) / 2.5}px;"
+                "}"
+        
+                "QDateEdit {"
+                f"color: rgb{self.c3};"
+                f"selection-background-color: rgb{self.c3};"
+                f"selection-color: rgb{self.c1};"
+                "border: none;"
+                "}"
+        
+                "QCalendarWidget QWidget {"
+                f"alternate-background-color: rgb{self.c2};"
+                f"color: rgb{self.c3};"
+                "}"
+        
+                "QCalendarWidget QToolButton {"
+                f"font-size: {font_cal}px;"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                "}"
+                "QCalendarWidget QToolButton:hover {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.bn1};"
+                "}"
+        
+                "QToolButton#qt_calendar_prevmonth {"
+                f"qproperty-icon: url({P_img().fleche_gauche() + 'bn1' + '.svg'});"
+                f"icon-size: {font_cal}px, {font_cal}px;"
+                "}"
+                "QToolButton#qt_calendar_nextmonth  {"
+                f"qproperty-icon: url({P_img().fleche_droite() + 'bn1' + '.svg'});"
+                f"icon-size: {font_cal}px, {font_cal}px;"
+                "}"
+        
+                "QCalendarWidget QMenu {"
+                "width: 150px;"
+                f"font-size: {font_cal}px;"
+                "font-family: Berlin Sans FB Demi;"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                "}"
+        
+                "QCalendarWidget QMenu::item:selected {"
+                "padding-left: 30px;"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                "}"
+        
+                "QCalendarWidget QSpinBox {"
+                "width: 50px;"
+                f"font-size: {font_cal}px;"
+                "font-family: Berlin Sans FB Demi;"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                f"selection-background-color: rgb{self.c1};"
+                f"selection-color: rgb{self.c3};"
+                "}"
+        
+                "QCalendarWidget QAbstractItemView {"
+                f"font-size: {font_cal}px;"
+                "font-family: Berlin Sans FB Demi;"
+                "font-weight: 30;"
+                "outline: 0px;"
+                "}"
+        
+                "QCalendarWidget QWidget:item:hover {"
+                f"border: {P_style().bd()}px solid rgb{self.c3};"
+                "}"
+        
+                "QCalendarWidget QAbstractItemView:enabled {"
+                f"background-color: rgb{self.c2};"
+                f"color: rgb{self.c3};"
+                f"selection-background-color: rgb{self.c3};"
+                f"selection-color: rgb{self.bn2};"
+                "}"
+        
+                "QCalendarWidget QWidget#qt_calendar_navigationbar {"
+                f"background-color: rgb{self.c3};"
+                "}"
+        
+                "QCalendarWidget QAbstractItemView:disabled {"
+                f"color: rgb{self.c1};"
+                "}"
+        
+                f"{self.inc}"
         }
         self.wg.setStyleSheet(stl.get(self.colors_type)) if self.c1 is not None else False
 

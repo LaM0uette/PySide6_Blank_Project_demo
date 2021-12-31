@@ -16,7 +16,8 @@ class In_classe:
         C_cb().demo_tr(ui.cb_demo_tr)
     def DE(self, ui):
         # Demo
-        C_de().demo(ui.de_demo)
+        C_de().demo_th(ui.de_demo_th)
+        C_de().demo_tr(ui.de_demo_tr)
     def LB(self, ui):
         # Titre app
         C_lb().h3_titre(ui.lb_mt_nom)

@@ -37,7 +37,7 @@
         <x>0</x>
         <y>0</y>
         <width>822</width>
-        <height>3112</height>
+        <height>3138</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -277,7 +277,10 @@
           </spacer>
          </item>
          <item>
-          <widget class="QDateEdit" name="de_demo"/>
+          <widget class="QDateEdit" name="de_demo_th"/>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="de_demo_tr"/>
          </item>
         </layout>
        </item>

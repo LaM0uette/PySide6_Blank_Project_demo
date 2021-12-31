@@ -37,7 +37,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, 0, 822, 3112))
+        self.vlay_wg.setGeometry(QRect(0, 0, 822, 3138))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -109,10 +109,15 @@ class Ui_main(object):
 
         self.vlay_de.addItem(self.verticalSpacer_12)
 
-        self.de_demo = QDateEdit(self.vlay_wg)
-        self.de_demo.setObjectName(u"de_demo")
+        self.de_demo_th = QDateEdit(self.vlay_wg)
+        self.de_demo_th.setObjectName(u"de_demo_th")
 
-        self.vlay_de.addWidget(self.de_demo)
+        self.vlay_de.addWidget(self.de_demo_th)
+
+        self.de_demo_tr = QDateEdit(self.vlay_wg)
+        self.de_demo_tr.setObjectName(u"de_demo_tr")
+
+        self.vlay_de.addWidget(self.de_demo_tr)
 
 
         self.verticalLayout.addLayout(self.vlay_de)

@@ -22,8 +22,16 @@ class C_de(C_wg):
         for wg in lst: C_wg(wg=wg, attrs=kwargs).STL_DE()
 
 
-    def demo(self, *args):
+    def demo_th(self, *args):
         self.STL(list(args),
+                 colors_type="th",
+                 colors = P_rgb().p_th3(),
+                 dim = P_dim().p_aw_demo(),
+                 font=P_font().p(),
+                 cur="main")
+    def demo_tr(self, *args):
+        self.STL(list(args),
+                 colors_type="tr",
                  colors = P_rgb().p_th1(),
                  dim = P_dim().p_aw_demo(),
                  font=P_font().p(),
