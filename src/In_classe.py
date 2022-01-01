@@ -11,6 +11,7 @@ class In_classe:
         self.LW(ui=ui)
         self.PB(ui=ui)
         self.CK(ui=ui)
+        self.RB(ui=ui)
         self.SCA(ui=ui)
         self.TW(ui=ui)
 
@@ -62,6 +63,10 @@ class In_classe:
         # Demo
         C_ck().demo_th(ui.ck_demo_th_1, ui.ck_demo_th_2, ui.ck_demo_th_3)
         C_ck().demo_tr(ui.ck_demo_tr_1, ui.ck_demo_tr_2, ui.ck_demo_tr_3)
+    def RB(self, ui):
+        # Demo
+        C_rb().demo_th(ui.rb_demo_th_1, ui.rb_demo_th_2, ui.rb_demo_th_3)
+        C_rb().demo_tr(ui.rb_demo_tr_1, ui.rb_demo_tr_2, ui.rb_demo_tr_3)
     def SCA(self, ui):
         # Demo
         C_sca().demo(ui.sca_main)

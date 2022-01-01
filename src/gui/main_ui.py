@@ -37,7 +37,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -1141, 822, 3503))
+        self.vlay_wg.setGeometry(QRect(0, -1141, 822, 3584))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -278,7 +278,6 @@ class Ui_main(object):
 
         self.ck_demo_th_1 = QCheckBox(self.fr_ck)
         self.ck_demo_th_1.setObjectName(u"ck_demo_th_1")
-        self.ck_demo_th_1.setTristate(True)
 
         self.vlay_ck.addWidget(self.ck_demo_th_1)
 
@@ -325,20 +324,35 @@ class Ui_main(object):
 
         self.vlay_rb.addItem(self.verticalSpacer_16)
 
-        self.rb_demo_1 = QRadioButton(self.fr_rb)
-        self.rb_demo_1.setObjectName(u"rb_demo_1")
+        self.rb_demo_th_1 = QRadioButton(self.fr_rb)
+        self.rb_demo_th_1.setObjectName(u"rb_demo_th_1")
 
-        self.vlay_rb.addWidget(self.rb_demo_1)
+        self.vlay_rb.addWidget(self.rb_demo_th_1)
 
-        self.rb_demo_2 = QRadioButton(self.fr_rb)
-        self.rb_demo_2.setObjectName(u"rb_demo_2")
+        self.rb_demo_th_2 = QRadioButton(self.fr_rb)
+        self.rb_demo_th_2.setObjectName(u"rb_demo_th_2")
 
-        self.vlay_rb.addWidget(self.rb_demo_2)
+        self.vlay_rb.addWidget(self.rb_demo_th_2)
 
-        self.rb_demo_3 = QRadioButton(self.fr_rb)
-        self.rb_demo_3.setObjectName(u"rb_demo_3")
+        self.rb_demo_th_3 = QRadioButton(self.fr_rb)
+        self.rb_demo_th_3.setObjectName(u"rb_demo_th_3")
 
-        self.vlay_rb.addWidget(self.rb_demo_3)
+        self.vlay_rb.addWidget(self.rb_demo_th_3)
+
+        self.rb_demo_tr_1 = QRadioButton(self.fr_rb)
+        self.rb_demo_tr_1.setObjectName(u"rb_demo_tr_1")
+
+        self.vlay_rb.addWidget(self.rb_demo_tr_1)
+
+        self.rb_demo_tr_2 = QRadioButton(self.fr_rb)
+        self.rb_demo_tr_2.setObjectName(u"rb_demo_tr_2")
+
+        self.vlay_rb.addWidget(self.rb_demo_tr_2)
+
+        self.rb_demo_tr_3 = QRadioButton(self.fr_rb)
+        self.rb_demo_tr_3.setObjectName(u"rb_demo_tr_3")
+
+        self.vlay_rb.addWidget(self.rb_demo_tr_3)
 
 
         self.verticalLayout.addWidget(self.fr_rb)
@@ -780,9 +794,12 @@ class Ui_main(object):
         self.ck_demo_tr_2.setText(QCoreApplication.translate("main", u"CheckBox", None))
         self.ck_demo_tr_3.setText(QCoreApplication.translate("main", u"CheckBox", None))
         self.lb_rb_demo.setText(QCoreApplication.translate("main", u"QRadioButton :", None))
-        self.rb_demo_1.setText(QCoreApplication.translate("main", u"RadioButton", None))
-        self.rb_demo_2.setText(QCoreApplication.translate("main", u"RadioButton", None))
-        self.rb_demo_3.setText(QCoreApplication.translate("main", u"RadioButton", None))
+        self.rb_demo_th_1.setText(QCoreApplication.translate("main", u"RadioButton", None))
+        self.rb_demo_th_2.setText(QCoreApplication.translate("main", u"RadioButton", None))
+        self.rb_demo_th_3.setText(QCoreApplication.translate("main", u"RadioButton", None))
+        self.rb_demo_tr_1.setText(QCoreApplication.translate("main", u"RadioButton", None))
+        self.rb_demo_tr_2.setText(QCoreApplication.translate("main", u"RadioButton", None))
+        self.rb_demo_tr_3.setText(QCoreApplication.translate("main", u"RadioButton", None))
         self.lb_pg_demo.setText(QCoreApplication.translate("main", u"QProgressBar :", None))
         self.lb_sb_demo.setText(QCoreApplication.translate("main", u"QSpinBox / QDoubleSpinBox :", None))
         self.lb_tw_demo.setText(QCoreApplication.translate("main", u"QTableWidget :", None))

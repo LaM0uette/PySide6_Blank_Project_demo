@@ -37,7 +37,7 @@
         <x>0</x>
         <y>-1141</y>
         <width>822</width>
-        <height>3503</height>
+        <height>3584</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -757,21 +757,42 @@
            </spacer>
           </item>
           <item>
-           <widget class="QRadioButton" name="rb_demo_1">
+           <widget class="QRadioButton" name="rb_demo_th_1">
             <property name="text">
              <string>RadioButton</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QRadioButton" name="rb_demo_2">
+           <widget class="QRadioButton" name="rb_demo_th_2">
             <property name="text">
              <string>RadioButton</string>
             </property>
            </widget>
           </item>
           <item>
-           <widget class="QRadioButton" name="rb_demo_3">
+           <widget class="QRadioButton" name="rb_demo_th_3">
+            <property name="text">
+             <string>RadioButton</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="rb_demo_tr_1">
+            <property name="text">
+             <string>RadioButton</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="rb_demo_tr_2">
+            <property name="text">
+             <string>RadioButton</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="rb_demo_tr_3">
             <property name="text">
              <string>RadioButton</string>
             </property>

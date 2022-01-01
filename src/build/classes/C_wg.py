@@ -156,6 +156,7 @@ class C_wg:
         elif isinstance(self.wg, QtWidgets.QListWidget): wg_type = "QListWidget"
         elif isinstance(self.wg, QtWidgets.QPushButton): wg_type = "QPushButton"
         elif isinstance(self.wg, QtWidgets.QCheckBox): wg_type = "QCheckBox"
+        elif isinstance(self.wg, QtWidgets.QRadioButton): wg_type = "QRadioButton"
         elif isinstance(self.wg, QtWidgets.QTableWidget): wg_type = "QTableWidget"
 
         elif isinstance(self.wg, QtWidgets.QFrame): wg_type = "QFrame"
@@ -217,6 +218,7 @@ class C_wg:
             self.inc += scroll
             self.inc_flat += scroll
 
+
     def STL_ALL(self, val=""):  # sourcery skip: extract-method
         # Dimensions
         try: Fct(wg=self.wg, w=self.dim.get("w"), h=self.dim.get("h")).DIM()
@@ -236,7 +238,7 @@ class C_wg:
             except: pass
 
         # Paramètres
-        if val not in ("fr", "ck", "sca"):
+        if val not in ("fr", "ck", "rb", "sca"):
             try: self.wg.setAlignment(self.align)
             except: pass
             try: self.wg.setEditable(self.edit)
@@ -820,6 +822,95 @@ class C_wg:
                 "}"
                 
                 f"{self.inc}"
+        }
+        self.wg.setStyleSheet(stl.get(self.colors_type))
+        self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.wg.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
+    def STL_RB(self):
+        self.STL_ALL("rb")
+
+        stl = {
+            "th":
+                "QRadioButton {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                "}"
+
+                "QRadioButton:hover {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.bn1};"
+                "}"
+
+                "QRadioButton:checked {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                "}"
+
+                "QRadioButton:checked:hover {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.bn1};"
+                "}"
+
+                "QRadioButton:flat {"
+                "border: none;"
+                "}"
+
+                "QRadioButton::indicator {"
+                f"margin-left: {(self.dim.get('h') - (self.dim.get('h') * P_style().x_ico())) / 2}px;"
+                f"width: {self.dim.get('h') * P_style().x_ico()}px;"
+                f"height: {self.dim.get('h') * P_style().x_ico()}px"
+                "}"
+
+                "QRadioButton::indicator:unchecked {"
+                f"image: url({self.img + self.th + '.svg'});"
+                "}"
+
+                "QRadioButton::indicator:disabled {"
+                f"image: url({self.img + self.th + '.svg'});"
+                "}"
+
+                "QRadioButton::indicator:checked {"
+                f"image: url({self.img_check + self.th_check + '.svg'});"
+                "}"
+                
+                f"{self.inc}",
+            "tr":
+                "QRadioButton {"
+                f"color: rgb{self.c3};"
+                "spacing: 10px;"
+                "}"
+
+                "QRadioButton:hover {"
+                f"color: rgb{self.bn1};"
+                "}"
+
+                "QRadioButton:checked:hover {"
+                f"color: rgb{self.bn1};"
+                "}"
+
+                "QRadioButton:flat {"
+                "border: none;"
+                "}"
+
+                "QRadioButton::indicator {"
+                f"margin-left: {(self.dim.get('h') - (self.dim.get('h') * P_style().x_ico())) / 2}px;"
+                f"width: {self.dim.get('h') * P_style().x_ico()}px;"
+                f"height: {self.dim.get('h') * P_style().x_ico()}px"
+                "}"
+
+                "QRadioButton::indicator:unchecked {"
+                f"image: url({self.img + self.th + '.svg'});"
+                "}"
+
+                "QRadioButton::indicator:disabled {"
+                f"image: url({self.img + self.th + '.svg'});"
+                "}"
+
+                "QRadioButton::indicator:checked {"
+                f"image: url({self.img_check + self.th_check + '.svg'});"
+                "}"
+                
+                f"{self.inc}",
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
         self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
