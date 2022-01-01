@@ -6,6 +6,7 @@ class Dim(Data):
 
     def h_mt(self): return self.GET_VAL("h9")
     def h_mb(self): return self.GET_VAL("h9")
+    def h_mb_10(self): return self.h_mb() + 10
 
     def h_h0(self): return self.GET_VAL("h0")
     def h_h1(self): return self.GET_VAL("h1")

@@ -7,7 +7,7 @@ from ..In_classe import In_classe
 
 
 class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
-    sgn_ok = QtCore.Signal(str)
+    sgn_rep = QtCore.Signal(bool)
 
     def __init__(self, titre="Information", msg=":)", txt_pb_ok="Ok", txt_pb_annuler="Annuler", **kwargs):
         super(Dlg, self).__init__()
@@ -35,6 +35,8 @@ class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
         self.setWindowModality(QtCore.Qt.NonModal)
         self.setupUi(self)
         self.INIT()
+
+        self.show()
 
 
     ### INITIALISATION
@@ -82,7 +84,6 @@ class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
         # QPushButton
         try:
             C_pb().ok(self.pb_dlg_info_ok)
-            C_pb().annuler(self.pb_dlg_info_annuler)
         except: pass
         finally: pass
 
@@ -139,9 +140,6 @@ class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
     def IN_CONNECTIONS(self):
         ## Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
-
-        # Info
-        self.pb_dlg_info_ok.clicked.connect(self.test)
     def IN_ACT(self):
         pass
     def INIT(self):
@@ -153,6 +151,15 @@ class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
         self.IN_ACT()
 
 
+    ### ACTIONS
+    def INFO(self):
+        # Données
+        self.lb_info_texte.setText(self.msg)
+        self.pb_dlg_info_ok.setText(self.txt_pb_ok)
 
-    def test(self):
-        self.sgn_ok.emit("ok")
+        # Connection
+        self.pb_dlg_info_ok.clicked.connect(self.INFO_OK)
+
+
+    ### FONCTIONS
+    def INFO_OK(self): self.destroy()

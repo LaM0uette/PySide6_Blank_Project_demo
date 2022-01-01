@@ -204,15 +204,14 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.IN_ACT()
 
 
+    ### ACTIONS
+
+
     ### FONCTIONS
     def FCT_OPTION(self):
-        self.dlg = Dlg()
-        self.dlg.show()
-        self.dlg.sgn_ok.connect(self.test)
+        self.dlg = Dlg(msg="\tFichier créé avec succés dans le dossier source.")
+        self.dlg.INFO()
 
-    def test(self, e):
-        if e == "ok":
-            self.dlg.destroy()
 
     ### EVENT
     def EVT_CENTRE_FEN(self):
