@@ -2,14 +2,14 @@ import sys
 
 from PySide6 import QtCore, QtWidgets, QtGui
 
-from .gui.main_ui import Ui_main
+from .gui import *
 from .build import *
 from .config import *
 from .In_classe import In_classe
 
 
 
-class main(Ui_main, QtWidgets.QWidget):
+class main(main_ui.Ui_main, QtWidgets.QWidget):
     dragPos: QtCore.QPoint
     def __init__(self):
         super(main, self).__init__()

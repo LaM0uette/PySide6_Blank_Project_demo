@@ -64,20 +64,19 @@ class Fct:
             os.makedirs(lien_tm) if not os.path.exists(lien_tm) else False
 
             for svg in glob.glob(f"{lien}*.svg"):
-                if not "thc" in svg:
-                    for rep in dct_rep_th.keys():
+                if "thc" not in svg:
+                    for rep in dct_rep_th:
                         img_tm_svg = f"{pathlib.Path(svg).stem}{rep}.svg"
                         shutil.copyfile(svg, f"{lien_tm}/{img_tm_svg}")
 
                         for couleur in ls_couleurs:
-                            svgMod = open(f"{lien_tm}/{img_tm_svg}", "r+")
-                            data = svgMod.read()
+                            with open(f"{lien_tm}/{img_tm_svg}", "r+") as svgMod:
+                                data = svgMod.read()
 
-                            data = data.replace(couleur["rgb_base"], couleur[dct_rep_th[rep]])
-                            svgMod.seek(0)
-                            svgMod.write(data)
-                            svgMod.close()
-                elif "thc" in svg:
+                                data = data.replace(couleur["rgb_base"], couleur[dct_rep_th[rep]])
+                                svgMod.seek(0)
+                                svgMod.write(data)
+                else:
                     shutil.copyfile(svg, f"{lien_tm}/{pathlib.Path(svg).stem[:-4]}.svg")
     def ICON(self):
         wg, img, dim = self.kwargs.get("wg"), self.kwargs.get("img"), self.kwargs.get("dim")
