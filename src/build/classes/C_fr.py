@@ -18,6 +18,11 @@ class C_fr(C_wg):
         for wg in lst: C_wg(wg=wg, attrs=kwargs).STL_FR()
 
 
+    def dialog(self, *args):
+        self.STL(list(args),
+                 colors = P_rgb().p_u1(),
+                 dim = P_dim().p_all(),
+                 bd=P_bd().bd1_bd_th3(),)
     def menu_top(self, *args):
         self.STL(list(args),
                  colors = P_rgb().p_u1(),

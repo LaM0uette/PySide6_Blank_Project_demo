@@ -28,7 +28,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.setFixedHeight(config.height)
         self.setWindowOpacity(config.opacity)
     def IN_CLASSE(self):  # sourcery skip: extract-method
-        # In_classe(ui=self)
+        In_classe(ui=self)
 
         # QLineEdit | QTextEdit | QPlainTextEdit
         try:
@@ -71,8 +71,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         # QLabel
         try:
-            # Titre app
-            C_lb().h3_titre(self.lb_mt_nom)
+            # Version
+            C_lb().h4_titre(self.lb_mt_version)
 
             # Demo
             C_lb().demo(self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
@@ -94,7 +94,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             C_pb().option(self.pb_mt_option)
             C_pb().reduire(self.pb_mt_reduire)
             C_pb().agrandir(self.pb_mt_agrandir)
-            C_pb().quitter(self.pb_mt_quitter)
 
             # Demo
             C_pb().demo_txt(self.pb_demo_txt)

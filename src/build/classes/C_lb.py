@@ -45,6 +45,13 @@ class C_lb(C_wg):
                  dim = P_dim().p_aw_h9(),
                  font=P_font().h3_titre(),
                  align=P_align().c_c())
+    def h4_titre(self, *args):
+        self.STL(list(args),
+                 colors_type = "tr",
+                 colors = P_rgb().p_u3(),
+                 dim = P_dim().p_aw_h9(),
+                 font=P_font().h4_titre(),
+                 align=P_align().c_c())
 
     def demo(self, *args):
         self.STL(list(args),

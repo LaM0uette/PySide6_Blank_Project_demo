@@ -197,47 +197,47 @@ class C_wg:
 
 
         # [class ~='{wg_type}']
-        bd = f".{wg_type}" \
+        bd = f".{wg_type}#{self.wg.objectName()}" \
              "{" \
              f"border-width: {self.bd_px}px;" \
              "border-style: solid;" \
              f"border-color: rgba{self.o1} rgba{self.o2} rgba{self.o3} rgba{self.o4};" \
              f"padding: {self.pad}px;" \
              "}"
-        rd = f".{wg_type}" \
+        rd = f".{wg_type}#{self.wg.objectName()}" \
              "{" \
              f"border-top-left-radius: {self.r1}px;" \
              f"border-top-right-radius: {self.r2}px;" \
              f"border-bottom-right-radius: {self.r4}px;" \
              f"border-bottom-left-radius: {self.r3}px;" \
              "}"
-        flat = f".{wg_type}:flat" \
+        flat = f".{wg_type}#{self.wg.objectName()}:flat" \
                "{" \
                "border: none;" \
                "}"
-        scroll = f".{wg_type} QScrollBar " \
+        scroll = f".{wg_type}#{self.wg.objectName()} QScrollBar " \
                  "{" \
                  f"background-color: rgb{self.c1};" \
                  "width: 20px;" \
                  "height: 20px;" \
                  "}" \
-                 f".{wg_type} ::handle:vertical" \
+                 f".{wg_type}#{self.wg.objectName()} ::handle:vertical" \
                  "{" \
                  "min-height: 100px;" \
                  "}" \
-                 f".{wg_type} ::handle:vertical" \
+                 f".{wg_type}#{self.wg.objectName()} ::handle:vertical" \
                  "{" \
                  "min-height: 100px;" \
                  "}" \
-                 f".{wg_type} ::handle:horizontal" \
+                 f".{wg_type}#{self.wg.objectName()} ::handle:horizontal" \
                  "{" \
                  "min-width: 100px;" \
                  "}" \
-                 f".{wg_type}  QScrollBar::handle" \
+                 f".{wg_type}#{self.wg.objectName()}  QScrollBar::handle" \
                  "{" \
                  f"background-color: rgb{self.c3};" \
                  "}" \
-                 f".{wg_type}  QScrollBar::add-page, .{wg_type}  QScrollBar::sub-page" \
+                 f".{wg_type}#{self.wg.objectName()}  QScrollBar::add-page, .{wg_type}#{self.wg.objectName()} QScrollBar::sub-page" \
                  "{" \
                  f"background-color: rgb{self.c1};" \
                  f"border: rgb{self.c1};" \

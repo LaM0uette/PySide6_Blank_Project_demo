@@ -4,97 +4,77 @@ from .build import *
 class In_classe:
     def __init__(self, ui):
 
-        self.TXT(ui=ui)
-        self.CB(ui=ui)
-        self.DE(ui=ui)
-        self.FR(ui=ui)
-        self.LB(ui=ui)
-        self.LW(ui=ui)
-        self.PB(ui=ui)
-        self.CK(ui=ui)
-        self.RB(ui=ui)
-        self.PG(ui=ui)
-        self.SCA(ui=ui)
-        self.SB(ui=ui)
-        self.TW(ui=ui)
 
-        self.TB(ui=ui)
+        # QLineEdit | QTextEdit | QPlainTextEdit
+        try: pass
+        except: pass
+        finally: pass
 
-    def CB(self, ui):
-        # Demo
-        C_cb().demo_th(ui.cb_demo_th)
-        C_cb().demo_tr(ui.cb_demo_tr)
-    def DE(self, ui):
-        # Demo
-        C_de().demo_th(ui.de_demo_th)
-        C_de().demo_tr(ui.de_demo_tr)
-    def FR(self, ui):
-        # Menu_top
-        C_fr().menu_top(ui.fr_menu_top)
+        # QComboBox
+        try: pass
+        except: pass
+        finally: pass
 
-        # Demo
-        C_fr().demo(ui.fr_cb, ui.fr_de, ui.fr_lw, ui.fr_pb, ui.fr_ck,
-                    ui.fr_rb, ui.fr_pg, ui.fr_sb, ui.fr_tw, ui.fr_le,
-                    ui.fr_te, ui.fr_pte)
-        C_fr().demo_tb(ui.fr_tb_demo, ui.fr_tb_demo_2)
-    def LB(self, ui):
-        # Titre app
-        C_lb().h3_titre(ui.lb_mt_nom)
+        # QDateEdit
+        try: pass
+        except: pass
+        finally: pass
 
-        # Demo
-        C_lb().demo(ui.lb_cb_demo, ui.lb_de_demo, ui.lb_lw_demo, ui.lb_pb_demo, ui.lb_ck_demo,
-                    ui.lb_rb_demo, ui.lb_pg_demo, ui.lb_sb_demo, ui.lb_tw_demo, ui.lb_le_demo,
-                    ui.lb_te_demo, ui.lb_pte_demo)
-    def LW(self, ui):
-        # Demo
-        C_lw().demo(ui.lw_demo)
-    def PB(self, ui):
-        # Menu_top
-        C_pb().option(ui.pb_mt_option)
-        C_pb().reduire(ui.pb_mt_reduire)
-        C_pb().agrandir(ui.pb_mt_agrandir)
-        C_pb().quitter(ui.pb_mt_quitter)
+        # QFrame
+        try:
+            C_fr().dialog(ui.fr_main)
+            C_fr().menu_top(ui.fr_menu_top)
+        except: pass
+        finally: pass
 
-        # Demo
-        C_pb().demo_txt(ui.pb_demo_txt)
-        C_pb().demo_txt_inv(ui.pb_demo_txt_inv)
-        C_pb().demo_th(ui.pb_demo_th)
-        C_pb().demo_tr(ui.pb_demo_tr)
-        C_pb().demo_ck(ui.pb_demo_ck)
-        C_pb().demo_ck_ico(ui.pb_demo_ck_ico, ui.pb_demo_ico_ck)
-        C_pb().demo_zoom(ui.pb_demo_zoom)
-        C_pb().demo_rd(ui.pb_demo_rd)
-        C_pb().demo_bd(ui.pb_demo_bd)
-    def CK(self, ui):
-        # Demo
-        C_ck().demo_th(ui.ck_demo_th_1, ui.ck_demo_th_2, ui.ck_demo_th_3)
-        C_ck().demo_tr(ui.ck_demo_tr_1, ui.ck_demo_tr_2, ui.ck_demo_tr_3)
-    def RB(self, ui):
-        # Demo
-        C_rb().demo_th(ui.rb_demo_th_1, ui.rb_demo_th_2, ui.rb_demo_th_3)
-        C_rb().demo_tr(ui.rb_demo_tr_1, ui.rb_demo_tr_2, ui.rb_demo_tr_3)
-    def PG(self, ui):
-        # Demo
-        C_pg().demo(ui.pg_demo)
-    def SCA(self, ui):
-        # Demo
-        C_sca().demo(ui.sca_main)
-    def SB(self, ui):
-        # Demo
-        C_sb().demo_th(ui.sb_demo)
-        C_sb().demo_th_2(ui.sb_demo_2)
-        C_sb().demo_th_3(ui.sb_demo_3)
-        C_sb().demo_tr(ui.dsb_demo)
-    def TW(self, ui):
-        # Demo
-        C_tw().demo(ui.tw_demo)
-    def TXT(self, ui):
-        # Demo
-        C_txt().demoth(ui.le_demo_th)
-        C_txt().demotr(ui.le_demo_tr)
-        C_txt().demo_th(ui.te_demo_th, ui.pte_demo_th)
-        C_txt().demo_tr(ui.te_demo_tr, ui.pte_demo_tr)
+        # QLabel
+        try:
+            C_lb().h3_titre(ui.lb_mt_nom)
+        except: pass
+        finally: pass
 
-    def TB(self, ui):
-        # Demo
-        C_tb().demo(ui.tb_demo)
+        # QListWidget
+        try: pass
+        except: pass
+        finally: pass
+
+        # QPushButton
+        try:
+            C_pb().quitter(ui.pb_mt_quitter)
+        except: pass
+        finally: pass
+
+        # QCheckBox
+        try: pass
+        except: pass
+        finally: pass
+
+        # QRadioButton
+        try: pass
+        except: pass
+        finally: pass
+
+        # QProgressBar
+        try: pass
+        except: pass
+        finally: pass
+
+        # QScrollBoxArea
+        try: pass
+        except: pass
+        finally: pass
+
+        # QSpinBox | QDoubleSpinBox
+        try: pass
+        except: pass
+        finally: pass
+
+        # QTableWidget
+        try: pass
+        except: pass
+        finally: pass
+
+        # QToolBox
+        try: pass
+        except: pass
+        finally: pass
