@@ -37,7 +37,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -1141, 822, 3584))
+        self.vlay_wg.setGeometry(QRect(0, -1759, 822, 3584))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -383,28 +383,36 @@ class Ui_main(object):
 
         self.fr_sb = QFrame(self.vlay_wg)
         self.fr_sb.setObjectName(u"fr_sb")
-        self.vlay_sb = QVBoxLayout(self.fr_sb)
-        self.vlay_sb.setSpacing(10)
-        self.vlay_sb.setObjectName(u"vlay_sb")
-        self.vlay_sb.setContentsMargins(10, 10, 10, 10)
-        self.lb_sb_demo = QLabel(self.fr_sb)
-        self.lb_sb_demo.setObjectName(u"lb_sb_demo")
-
-        self.vlay_sb.addWidget(self.lb_sb_demo)
-
-        self.verticalSpacer_18 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Fixed)
-
-        self.vlay_sb.addItem(self.verticalSpacer_18)
-
+        self.glay_sb = QGridLayout(self.fr_sb)
+        self.glay_sb.setSpacing(10)
+        self.glay_sb.setObjectName(u"glay_sb")
+        self.glay_sb.setContentsMargins(10, 10, 10, 10)
         self.sb_demo = QSpinBox(self.fr_sb)
         self.sb_demo.setObjectName(u"sb_demo")
 
-        self.vlay_sb.addWidget(self.sb_demo)
+        self.glay_sb.addWidget(self.sb_demo, 2, 1, 1, 1)
+
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.glay_sb.addItem(self.horizontalSpacer, 2, 0, 1, 1)
+
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.glay_sb.addItem(self.horizontalSpacer_3, 2, 2, 1, 1)
+
+        self.lb_sb_demo = QLabel(self.fr_sb)
+        self.lb_sb_demo.setObjectName(u"lb_sb_demo")
+
+        self.glay_sb.addWidget(self.lb_sb_demo, 0, 0, 1, 3)
+
+        self.verticalSpacer_18 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.glay_sb.addItem(self.verticalSpacer_18, 1, 0, 1, 3)
 
         self.dsb_demo = QDoubleSpinBox(self.fr_sb)
         self.dsb_demo.setObjectName(u"dsb_demo")
 
-        self.vlay_sb.addWidget(self.dsb_demo)
+        self.glay_sb.addWidget(self.dsb_demo, 3, 0, 1, 3)
 
 
         self.verticalLayout.addWidget(self.fr_sb)

@@ -10,7 +10,7 @@ class C_fr(C_wg):
 
     def STL(self, lst, **kwargs):
         """
-        colors_type=str %,
+        colors=P_rgb().%,
         dim=P_dim().%,
         rd=P_rd().%,
         bd=P_bd().%,

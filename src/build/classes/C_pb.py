@@ -138,4 +138,4 @@ class C_pb(C_wg):
                  dim = P_dim().p_aw_demo(),
                  font = P_font().p(),
                  bd=P_bd().bd1_bd_bn1(),
-                 cur = "main")
+                 cur = "main",)

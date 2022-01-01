@@ -21,11 +21,14 @@ class C_wg:
         th_hover=str %,
         th_check=str %,
         font=P_font().%,
-        align=P_align().%,
         rd=P_rd().%,
         bd=P_bd().%,
+        align=P_align().%,
         edit=Bool %,
         scroll=P_scroll().%,
+        header={"h": Bool %, "v": Bool %},
+        pb_sb=P_pb_sb(). %,
+        pad=float %,
         cur=str %,
         """
 
@@ -139,8 +142,14 @@ class C_wg:
         if self.pb_sb is None:
             self.pb_sb = base.PB_SB
 
+        self.pad = attrs.get("pad")
+        if self.pad is None:
+            self.pad = base.PAD
+        elif self.pad == "bd":
+            self.pad = P_style().bd()
 
-        ### CURSOR
+
+            ### CURSOR
         self.cur = attrs.get("cur")
         if self.cur is None:
             self.cur = base.CUR
@@ -157,6 +166,8 @@ class C_wg:
         elif isinstance(self.wg, QtWidgets.QPushButton): wg_type = "QPushButton"
         elif isinstance(self.wg, QtWidgets.QCheckBox): wg_type = "QCheckBox"
         elif isinstance(self.wg, QtWidgets.QRadioButton): wg_type = "QRadioButton"
+        elif isinstance(self.wg, QtWidgets.QProgressBar): wg_type = "QProgressBar"
+        elif isinstance(self.wg, QtWidgets.QSpinBox): wg_type = "QSpinBox"
         elif isinstance(self.wg, QtWidgets.QTableWidget): wg_type = "QTableWidget"
 
         elif isinstance(self.wg, QtWidgets.QFrame): wg_type = "QFrame"
@@ -167,6 +178,7 @@ class C_wg:
              f"border-width: {self.bd_px}px;" \
              "border-style: solid;" \
              f"border-color: rgba{self.o1} rgba{self.o2} rgba{self.o3} rgba{self.o4};" \
+             f"padding: {self.pad}px;" \
              "}"
         rd = f".{wg_type}" \
              "{" \
@@ -213,7 +225,6 @@ class C_wg:
         else:
             self.inc = rd + bd
             self.inc_flat = self.inc
-
         if wg_type in {"QComboBox", "QListWidget", "QScrollArea", "QTableWidget"}:
             self.inc += scroll
             self.inc_flat += scroll
@@ -225,7 +236,7 @@ class C_wg:
         except: pass
 
         # Image
-        if val not in ("fr", "lw", "tw", "ck", "rb", "sca"):
+        if val not in ("fr", "lw", "tw", "ck", "rb", "sca", "sb"):
             try: Fct(wg=self.wg, img=self.img + self.th, dim=self.dim_ico).ICON()
             except: pass
 
@@ -258,7 +269,6 @@ class C_wg:
         if val in ("fr", "sb", "sca") and self.colors_type == "tr":
             try: self.wg.lineEdit().setCursor(Fct(cur="souris_main").CUR())
             except: pass
-
         if val not in ("fr", "lb", "pg", "sca"):
             try: self.wg.setCursor(Fct(cur=self.cur).CUR())
             except: pass
@@ -915,6 +925,22 @@ class C_wg:
         self.wg.setStyleSheet(stl.get(self.colors_type))
         self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
         self.wg.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
+    def STL_PG(self):
+        self.STL_ALL()
+
+        stl = {
+            "th":
+                "QProgressDialog {"
+                f"background-color: rgb{self.c1};"
+                "}"
+
+                "QProgressBar::chunk {"
+                f"background-color: rgb{self.c3};"
+                "}"
+                
+                f"{self.inc}"
+        }
+        self.wg.setStyleSheet(stl.get(self.colors_type))
     def STL_SCA(self):
         self.STL_ALL("sca")
 
@@ -929,6 +955,53 @@ class C_wg:
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
         self.wg.setFrameShape(QtWidgets.QFrame.NoFrame)
+    def STL_SB(self):
+        self.STL_ALL()
+
+        if self.pb_sb == QtWidgets.QAbstractSpinBox.ButtonSymbols.PlusMinus:
+            pb_up = P_img().calendrier()
+            pb_down = P_img().calendrier()
+        elif self.pb_sb == QtWidgets.QAbstractSpinBox.ButtonSymbols.UpDownArrows:
+            pb_up = P_img().fleche_top()
+            pb_down = P_img().fleche_bottom()
+
+        stl = {
+            "th":
+                "QSpinBox, QDoubleSpinBox {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                f"selection-background-color: rgb{self.c3};"
+                f"selection-color: rgb{self.c1};"
+                "}"
+                
+                "QSpinBox::down-button  {"
+                "subcontrol-origin: margin;"
+                "subcontrol-position: center left;"
+                f"image: url({pb_up + '.svg'});"
+                "}"
+                
+                "QSpinBox::up-button  {"
+                "subcontrol-origin: margin;"
+                "subcontrol-position: center right;"
+                f"image: url({pb_down + '.svg'});"
+                "}"
+                
+                f"{self.inc}",
+            "tr":
+                "QSpinBox, QDoubleSpinBox {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                f"selection-background-color: rgb{self.c1};"
+                f"selection-color: rgb{self.c3};"
+                "}"
+                
+                f"{self.inc}"
+        }
+        self.wg.setStyleSheet(stl.get(self.colors_type))
+
+        if self.colors_type == "tr":
+            self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.wg.setFrame(QtWidgets.QFrame.NoFrame)
     def STL_TW(self):
         self.STL_ALL()
 

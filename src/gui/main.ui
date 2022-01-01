@@ -35,7 +35,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-1141</y>
+        <y>-1759</y>
         <width>822</width>
         <height>3584</height>
        </rect>
@@ -854,10 +854,7 @@
        </item>
        <item>
         <widget class="QFrame" name="fr_sb">
-         <layout class="QVBoxLayout" name="vlay_sb">
-          <property name="spacing">
-           <number>10</number>
-          </property>
+         <layout class="QGridLayout" name="glay_sb">
           <property name="leftMargin">
            <number>10</number>
           </property>
@@ -870,14 +867,46 @@
           <property name="bottomMargin">
            <number>10</number>
           </property>
-          <item>
+          <property name="spacing">
+           <number>10</number>
+          </property>
+          <item row="2" column="1">
+           <widget class="QSpinBox" name="sb_demo"/>
+          </item>
+          <item row="2" column="0">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="2" column="2">
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="0" column="0" colspan="3">
            <widget class="QLabel" name="lb_sb_demo">
             <property name="text">
              <string>QSpinBox / QDoubleSpinBox :</string>
             </property>
            </widget>
           </item>
-          <item>
+          <item row="1" column="0" colspan="3">
            <spacer name="verticalSpacer_18">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
@@ -893,10 +922,7 @@
             </property>
            </spacer>
           </item>
-          <item>
-           <widget class="QSpinBox" name="sb_demo"/>
-          </item>
-          <item>
+          <item row="3" column="0" colspan="3">
            <widget class="QDoubleSpinBox" name="dsb_demo"/>
           </item>
          </layout>
