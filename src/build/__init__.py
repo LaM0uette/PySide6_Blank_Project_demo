@@ -11,5 +11,5 @@ from .P_scroll import P_scroll
 from .P_style import P_style
 
 from .functions import Fct
-from .dlg import Dlg
 from .classes import *
+from .dlg import Dlg

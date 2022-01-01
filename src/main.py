@@ -14,11 +14,10 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def __init__(self):
         super(main, self).__init__()
 
+        self.dlg = None
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setupUi(self)
         self.INIT()
-
-        self.show()
 
 
     ### INITIALISATION
@@ -28,12 +27,145 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.setFixedWidth(config.widht)
         self.setFixedHeight(config.height)
         self.setWindowOpacity(config.opacity)
-    def IN_CLASSE(self):
-        In_classe(ui=self)
+    def IN_CLASSE(self):  # sourcery skip: extract-method
+        # In_classe(ui=self)
+
+        # QLineEdit | QTextEdit | QPlainTextEdit
+        try:
+            # Demo
+            C_txt().demoth(self.le_demo_th)
+            C_txt().demotr(self.le_demo_tr)
+            C_txt().demo_th(self.te_demo_th, self.pte_demo_th)
+            C_txt().demo_tr(self.te_demo_tr, self.pte_demo_tr)
+        except: pass
+        finally: pass
+
+        # QComboBox
+        try:
+            # Demo
+            C_cb().demo_th(self.cb_demo_th)
+            C_cb().demo_tr(self.cb_demo_tr)
+        except: pass
+        finally: pass
+
+        # QDateEdit
+        try:
+            # Demo
+            C_de().demo_th(self.de_demo_th)
+            C_de().demo_tr(self.de_demo_tr)
+        except: pass
+        finally: pass
+
+        # QFrame
+        try:
+            # Menu_top
+            C_fr().menu_top(self.fr_menu_top)
+
+            # Demo
+            C_fr().demo(self.fr_cb, self.fr_de, self.fr_lw, self.fr_pb, self.fr_ck,
+                        self.fr_rb, self.fr_pg, self.fr_sb, self.fr_tw, self.fr_le,
+                        self.fr_te, self.fr_pte)
+            C_fr().demo_tb(self.fr_tb_demo, self.fr_tb_demo_2)
+        except: pass
+        finally: pass
+
+        # QLabel
+        try:
+            # Titre app
+            C_lb().h3_titre(self.lb_mt_nom)
+
+            # Demo
+            C_lb().demo(self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
+                        self.lb_rb_demo, self.lb_pg_demo, self.lb_sb_demo, self.lb_tw_demo, self.lb_le_demo,
+                        self.lb_te_demo, self.lb_pte_demo)
+        except: pass
+        finally: pass
+
+        # QListWidget
+        try:
+            # Demo
+            C_lw().demo(self.lw_demo)
+        except: pass
+        finally: pass
+
+        # QPushButton
+        try:
+            # Menu_top
+            C_pb().option(self.pb_mt_option)
+            C_pb().reduire(self.pb_mt_reduire)
+            C_pb().agrandir(self.pb_mt_agrandir)
+            C_pb().quitter(self.pb_mt_quitter)
+
+            # Demo
+            C_pb().demo_txt(self.pb_demo_txt)
+            C_pb().demo_txt_inv(self.pb_demo_txt_inv)
+            C_pb().demo_th(self.pb_demo_th)
+            C_pb().demo_tr(self.pb_demo_tr)
+            C_pb().demo_ck(self.pb_demo_ck)
+            C_pb().demo_ck_ico(self.pb_demo_ck_ico, self.pb_demo_ico_ck)
+            C_pb().demo_zoom(self.pb_demo_zoom)
+            C_pb().demo_rd(self.pb_demo_rd)
+            C_pb().demo_bd(self.pb_demo_bd)
+        except: pass
+        finally: pass
+
+        # QCheckBox
+        try:
+            # Demo
+            C_ck().demo_th(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3)
+            C_ck().demo_tr(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3)
+        except: pass
+        finally: pass
+
+        # QRadioButton
+        try:
+            # Demo
+            C_rb().demo_th(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3)
+            C_rb().demo_tr(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3)
+        except: pass
+        finally: pass
+
+        # QProgressBar
+        try:
+            # Demo
+            C_pg().demo(self.pg_demo)
+        except: pass
+        finally: pass
+
+        # QScrollBoxArea
+        try:
+            # Demo
+            C_sca().demo(self.sca_main)
+        except: pass
+        finally: pass
+
+        # QSpinBox | QDoubleSpinBox
+        try:
+            # Demo
+            C_sb().demo_th(self.sb_demo)
+            C_sb().demo_th_2(self.sb_demo_2)
+            C_sb().demo_th_3(self.sb_demo_3)
+            C_sb().demo_tr(self.dsb_demo)
+        except: pass
+        finally: pass
+
+        # QTableWidget
+        try:
+            # Demo
+            C_tw().demo(self.tw_demo)
+        except: pass
+        finally: pass
+
+        # QToolBox
+        try:
+            # Demo
+            C_tb().demo(self.tb_demo)
+        except: pass
+        finally: pass
+
 
         # Demo
-        for i in range(60):
-            self.lw_demo.addItem(f"je suis l'item : {i}")
+        for i in range(60): self.lw_demo.addItem(f"je suis l'item : {i}")
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur="souris").CUR())
@@ -75,8 +207,13 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
     ### FONCTIONS
     def FCT_OPTION(self):
-        pass
+        self.dlg = Dlg()
+        self.dlg.show()
+        self.dlg.sgn_ok.connect(self.test)
 
+    def test(self, e):
+        if e == "ok":
+            self.dlg.destroy()
 
     ### EVENT
     def EVT_CENTRE_FEN(self):
@@ -102,8 +239,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.hide()
         self.EVT_CENTRE_FEN()
     def EVT_QUITTER(self):
-
-
         app.quit()
         quit()
     def mousePressEvent(self, event):
@@ -153,5 +288,6 @@ app.processEvents()
 
 fen = main()
 splash.finish(fen)
+fen.show()
 
 sys.exit(app.exec())
