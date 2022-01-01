@@ -27,6 +27,10 @@ class C_fr(C_wg):
         self.STL(list(args),
                  colors = P_rgb().p_u1(),
                  dim = P_dim().p_aw_mt())
+    def menu_bottom(self, *args):
+        self.STL(list(args),
+                 colors = P_rgb().p_u2(),
+                 dim = P_dim().p_aw_mt())
 
     def demo(self, *args):
         self.STL(list(args),

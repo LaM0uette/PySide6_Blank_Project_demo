@@ -3,7 +3,6 @@ import time
 
 import psutil
 
-from src.build import *
 from src.config import *
 
 
@@ -15,7 +14,11 @@ if __name__ == "__main__":
 
     if config.auto_reload:
         os.startfile(os.path.abspath(f"{vrb.DO_SCRIPT}convert_ui.bat"))
+        time.sleep(0.5)
+
+        from src.build import *
+
         Fct().GEN_SVG()
-        time.sleep(0.4)
+        time.sleep(0.5)
 
     from src.main import app

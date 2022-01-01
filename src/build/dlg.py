@@ -40,7 +40,7 @@ class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
         self.setFixedWidth(self.width)
         self.setFixedHeight(self.height)
         self.setWindowOpacity(self.opacity)
-    def IN_CLASSE(self):
+    def IN_CLASSE(self):  # sourcery skip: extract-duplicate-method
         In_classe(ui=self)
 
         # QLineEdit | QTextEdit | QPlainTextEdit
@@ -59,12 +59,14 @@ class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
         finally: pass
 
         # QFrame
-        try: pass
+        try:
+            C_fr().menu_bottom(self.fr_pg_dlg_info)
         except: pass
         finally: pass
 
         # QLabel
-        try: pass
+        try:
+            C_lb().p(self.lb_info_texte)
         except: pass
         finally: pass
 
@@ -132,8 +134,8 @@ class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
         ## Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
 
-        #
-        self.pushButton.clicked.connect(self.test)
+        # Info
+        self.pb_dlg_info_ok.clicked.connect(self.test)
     def IN_ACT(self):
         pass
     def INIT(self):

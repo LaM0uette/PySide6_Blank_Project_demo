@@ -25,6 +25,7 @@ class C_wg:
         bd=P_bd().%,
         align=P_align().%,
         edit=Bool %,
+        word_wrap=Bool %,
         scroll=P_scroll().%,
         header={"h": Bool %, "v": Bool %},
         pb_sb=P_pb_sb(). %,
@@ -133,6 +134,10 @@ class C_wg:
         self.edit = attrs.get("edit")
         if self.edit is None:
             self.edit = base.EDIT
+
+        self.word_wrap = attrs.get("word_wrap")
+        if self.word_wrap is None:
+            self.word_wrap = base.WORD_WRAP
 
         self.scroll = attrs.get("scroll")
         if self.scroll is None:
@@ -322,6 +327,8 @@ class C_wg:
             try: self.wg.setAlignment(self.align)
             except: pass
             try: self.wg.setEditable(self.edit)
+            except: pass
+            try: self.wg.setWordWrap(self.word_wrap)
             except: pass
             try: self.wg.setHorizontalScrollBarPolicy(self.scroll.get("h"))
             except: pass
