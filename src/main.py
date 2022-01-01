@@ -102,6 +102,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.hide()
         self.EVT_CENTRE_FEN()
     def EVT_QUITTER(self):
+
+
         app.quit()
         quit()
     def mousePressEvent(self, event):

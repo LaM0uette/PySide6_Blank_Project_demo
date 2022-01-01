@@ -9,5 +9,7 @@ from .P_bd import P_bd
 from .P_rgb import P_rgb
 from .P_scroll import P_scroll
 from .P_style import P_style
+
 from .functions import Fct
+from .dlg import Dlg
 from .classes import *
