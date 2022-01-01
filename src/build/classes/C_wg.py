@@ -155,6 +155,7 @@ class C_wg:
         elif isinstance(self.wg, QtWidgets.QLabel): wg_type = "QLabel"
         elif isinstance(self.wg, QtWidgets.QListWidget): wg_type = "QListWidget"
         elif isinstance(self.wg, QtWidgets.QPushButton): wg_type = "QPushButton"
+        elif isinstance(self.wg, QtWidgets.QCheckBox): wg_type = "QCheckBox"
         elif isinstance(self.wg, QtWidgets.QTableWidget): wg_type = "QTableWidget"
 
         elif isinstance(self.wg, QtWidgets.QFrame): wg_type = "QFrame"
@@ -222,7 +223,7 @@ class C_wg:
         except: pass
 
         # Image
-        if val not in ("fr", "lw", "tw", "ckb", "rb", "sca"):
+        if val not in ("fr", "lw", "tw", "ck", "rb", "sca"):
             try: Fct(wg=self.wg, img=self.img + self.th, dim=self.dim_ico).ICON()
             except: pass
 
@@ -235,7 +236,7 @@ class C_wg:
             except: pass
 
         # Paramètres
-        if val not in ("fr", "sca"):
+        if val not in ("fr", "ck", "sca"):
             try: self.wg.setAlignment(self.align)
             except: pass
             try: self.wg.setEditable(self.edit)
@@ -734,6 +735,95 @@ class C_wg:
             self.wg.enterEvent = cls.ENT_ZOOM
             self.wg.leaveEvent = cls.LVE_ZOOM
         else: return
+    def STL_CK(self):
+        self.STL_ALL("ck")
+
+        stl = {
+            "th":
+                "QCheckBox {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                "}"
+
+                "QCheckBox:hover {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.bn1};"
+                "}"
+
+                "QCheckBox:checked {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                "}"
+
+                "QCheckBox:checked:hover {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.bn1};"
+                "}"
+
+                "QCheckBox:flat {"
+                "border: none;"
+                "}"
+
+                "QCheckBox::indicator {"
+                f"margin-left: {(self.dim.get('h') - (self.dim.get('h') * P_style().x_ico())) / 2}px;"
+                f"width: {self.dim.get('h') * P_style().x_ico()}px;"
+                f"height: {self.dim.get('h') * P_style().x_ico()}px"
+                "}"
+
+                "QCheckBox::indicator:unchecked {"
+                f"image: url({self.img + self.th + '.svg'});"
+                "}"
+
+                "QCheckBox::indicator:disabled {"
+                f"image: url({self.img + self.th + '.svg'});"
+                "}"
+
+                "QCheckBox::indicator:checked {"
+                f"image: url({self.img_check + self.th_check + '.svg'});"
+                "}"
+                
+                f"{self.inc}",
+            "tr":
+                "QCheckBox {"
+                f"color: rgb{self.c3};"
+                "spacing: 10px;"
+                "}"
+
+                "QCheckBox:hover {"
+                f"color: rgb{self.bn1};"
+                "}"
+
+                "QCheckBox:checked:hover {"
+                f"color: rgb{self.bn1};"
+                "}"
+
+                "QCheckBox:flat {"
+                "border: none;"
+                "}"
+
+                "QCheckBox::indicator {"
+                f"margin-left: {(self.dim.get('h') - (self.dim.get('h') * P_style().x_ico())) / 2}px;"
+                f"width: {self.dim.get('h') * P_style().x_ico()}px;"
+                f"height: {self.dim.get('h') * P_style().x_ico()}px"
+                "}"
+
+                "QCheckBox::indicator:unchecked {"
+                f"image: url({self.img + self.th + '.svg'});"
+                "}"
+
+                "QCheckBox::indicator:disabled {"
+                f"image: url({self.img + self.th + '.svg'});"
+                "}"
+
+                "QCheckBox::indicator:checked {"
+                f"image: url({self.img_check + self.th_check + '.svg'});"
+                "}"
+                
+                f"{self.inc}"
+        }
+        self.wg.setStyleSheet(stl.get(self.colors_type))
+        self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.wg.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
     def STL_SCA(self):
         self.STL_ALL("sca")
 
