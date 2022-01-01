@@ -37,7 +37,7 @@
         <x>0</x>
         <y>-1759</y>
         <width>822</width>
-        <height>3584</height>
+        <height>3644</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -870,34 +870,8 @@
           <property name="spacing">
            <number>10</number>
           </property>
-          <item row="2" column="1">
-           <widget class="QSpinBox" name="sb_demo"/>
-          </item>
-          <item row="2" column="0">
-           <spacer name="horizontalSpacer">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item row="2" column="2">
-           <spacer name="horizontalSpacer_3">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
+          <item row="5" column="0" colspan="3">
+           <widget class="QDoubleSpinBox" name="dsb_demo"/>
           </item>
           <item row="0" column="0" colspan="3">
            <widget class="QLabel" name="lb_sb_demo">
@@ -905,6 +879,9 @@
              <string>QSpinBox / QDoubleSpinBox :</string>
             </property>
            </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QSpinBox" name="sb_demo"/>
           </item>
           <item row="1" column="0" colspan="3">
            <spacer name="verticalSpacer_18">
@@ -922,8 +899,37 @@
             </property>
            </spacer>
           </item>
-          <item row="3" column="0" colspan="3">
-           <widget class="QDoubleSpinBox" name="dsb_demo"/>
+          <item row="3" column="1">
+           <widget class="QSpinBox" name="sb_demo_2"/>
+          </item>
+          <item row="4" column="1">
+           <widget class="QSpinBox" name="sb_demo_3"/>
+          </item>
+          <item row="2" column="0" rowspan="3">
+           <spacer name="horizontalSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="2" column="2" rowspan="3">
+           <spacer name="horizontalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
           </item>
          </layout>
         </widget>

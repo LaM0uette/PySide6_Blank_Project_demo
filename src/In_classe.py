@@ -78,6 +78,8 @@ class In_classe:
     def SB(self, ui):
         # Demo
         C_sb().demo_th(ui.sb_demo)
+        C_sb().demo_th_2(ui.sb_demo_2)
+        C_sb().demo_th_3(ui.sb_demo_3)
         C_sb().demo_tr(ui.dsb_demo)
     def TW(self, ui):
         # Demo

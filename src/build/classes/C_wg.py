@@ -28,7 +28,11 @@ class C_wg:
         scroll=P_scroll().%,
         header={"h": Bool %, "v": Bool %},
         pb_sb=P_pb_sb(). %,
+        pb_side=""=str %,
         pad=float %,
+        min=int | float %,
+        max=int | float %,
+        step=int | float %,
         cur=str %,
         """
 
@@ -148,6 +152,22 @@ class C_wg:
         elif self.pad == "bd":
             self.pad = P_style().bd()
 
+        self.pb_side = attrs.get("pb_side")
+        if self.pb_side is None:
+            self.pb_side = base.PB_SIDE
+
+        self.min = attrs.get("min")
+        if self.min is None:
+            self.min = base.MIN
+
+        self.max = attrs.get("max")
+        if self.max is None:
+            self.max = base.MAX
+
+        self.step = attrs.get("step")
+        if self.step is None:
+            self.step = base.STEP
+
 
             ### CURSOR
         self.cur = attrs.get("cur")
@@ -219,6 +239,49 @@ class C_wg:
                  f"border: rgb{self.c1};" \
                  "}"
 
+        try:
+            if self.pb_sb == QtWidgets.QAbstractSpinBox.ButtonSymbols.PlusMinus:
+                pb_up = P_img().plus()
+                pb_down = P_img().moins()
+            elif self.pb_sb == QtWidgets.QAbstractSpinBox.ButtonSymbols.UpDownArrows:
+                pb_up = P_img().fleche_top()
+                pb_down = P_img().fleche_bottom()
+            else:
+                pb_up = ""
+                pb_down = ""
+
+            dct_sb = {
+                "lr":
+                    "QSpinBox::up-button, QDoubleSpinBox::up-button  {"
+                    "subcontrol-origin: margin;"
+                    "subcontrol-position: center left;"
+                    f"image: url({pb_up + 'th3.svg'});"
+                    f"height: {self.dim_ico}px;"
+                    f"width: {self.dim_ico}px;"
+                    "}"
+                    
+                    "QSpinBox::down-button, QDoubleSpinBox::down-button  {"
+                    "subcontrol-origin: margin;"
+                    "subcontrol-position: center right;"
+                    f"image: url({pb_down + 'th3.svg'});"
+                    f"height: {self.dim_ico}px;"
+                    f"width: {self.dim_ico}px;"
+                    "}",
+                "tb":
+                    "QSpinBox::up-button, QDoubleSpinBox::up-button  {"
+                    f"image: url({pb_up + 'th3.svg'});"
+                    f"height: {self.dim_ico / 2}px;"
+                    f"width: {self.dim_ico / 2}px;"
+                    "}"
+                    
+                    "QSpinBox::down-button, QDoubleSpinBox::down-button  {"
+                    f"image: url({pb_down + 'th3.svg'});"
+                    f"height: {self.dim_ico / 2}px;"
+                    f"width: {self.dim_ico / 2}px;"
+                    "}"
+            }
+        except: dct_sb = {}
+
         if self.bd.get("mat") == "0000":
             self.inc = rd
             self.inc_flat = rd + flat
@@ -228,6 +291,8 @@ class C_wg:
         if wg_type in {"QComboBox", "QListWidget", "QScrollArea", "QTableWidget"}:
             self.inc += scroll
             self.inc_flat += scroll
+        if wg_type in {"QSpinBox"}:
+            self.inc += dct_sb.get(self.pb_side)
 
 
     def STL_ALL(self, val=""):  # sourcery skip: extract-method
@@ -266,9 +331,6 @@ class C_wg:
             except: pass
 
         # Curseur
-        if val in ("fr", "sb", "sca") and self.colors_type == "tr":
-            try: self.wg.lineEdit().setCursor(Fct(cur="souris_main").CUR())
-            except: pass
         if val not in ("fr", "lb", "pg", "sca"):
             try: self.wg.setCursor(Fct(cur=self.cur).CUR())
             except: pass
@@ -279,6 +341,9 @@ class C_wg:
             try: self.wg.lineEdit().setCursor(Fct(cur="IBeam").CUR())
             except: pass
             try: self.wg.calendarWidget().setCursor(Fct(cur="souris_main").CUR())
+            except: pass
+        if val in ("fr", "sb", "sca") and self.colors_type == "tr":
+            try: self.wg.lineEdit().setCursor(Fct(cur="souris_main").CUR())
             except: pass
 
     def STL_CB(self):
@@ -956,14 +1021,7 @@ class C_wg:
         self.wg.setStyleSheet(stl.get(self.colors_type))
         self.wg.setFrameShape(QtWidgets.QFrame.NoFrame)
     def STL_SB(self):
-        self.STL_ALL()
-
-        if self.pb_sb == QtWidgets.QAbstractSpinBox.ButtonSymbols.PlusMinus:
-            pb_up = P_img().calendrier()
-            pb_down = P_img().calendrier()
-        elif self.pb_sb == QtWidgets.QAbstractSpinBox.ButtonSymbols.UpDownArrows:
-            pb_up = P_img().fleche_top()
-            pb_down = P_img().fleche_bottom()
+        self.STL_ALL("sb")
 
         stl = {
             "th":
@@ -972,18 +1030,6 @@ class C_wg:
                 f"color: rgb{self.c3};"
                 f"selection-background-color: rgb{self.c3};"
                 f"selection-color: rgb{self.c1};"
-                "}"
-                
-                "QSpinBox::down-button  {"
-                "subcontrol-origin: margin;"
-                "subcontrol-position: center left;"
-                f"image: url({pb_up + '.svg'});"
-                "}"
-                
-                "QSpinBox::up-button  {"
-                "subcontrol-origin: margin;"
-                "subcontrol-position: center right;"
-                f"image: url({pb_down + '.svg'});"
                 "}"
                 
                 f"{self.inc}",
@@ -998,6 +1044,10 @@ class C_wg:
                 f"{self.inc}"
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
+
+        self.wg.setMinimum(self.min)
+        self.wg.setMaximum(self.max)
+        self.wg.setSingleStep(self.step)
 
         if self.colors_type == "tr":
             self.wg.setFocusPolicy(QtCore.Qt.NoFocus)

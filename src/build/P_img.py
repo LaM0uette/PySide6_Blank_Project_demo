@@ -26,3 +26,6 @@ class P_img:
     def fleche_droite(self): return self.SVG("ui", "fleche_droite")
     def fleche_gauche(self): return self.SVG("ui", "fleche_gauche")
     def fleche_top(self): return self.SVG("ui", "fleche_top")
+        #plus | moins
+    def plus(self): return self.SVG("ui", "plus")
+    def moins(self): return self.SVG("ui", "moins")

@@ -50,3 +50,7 @@ SCROLL = P_scroll().n_n()
 HEADER = {"h": True, "v": True}
 PB_SB = P_pb_sb().no()
 PAD = 0
+PB_SIDE = "tb"
+MIN = 0
+MAX = 99
+STEP = 1
