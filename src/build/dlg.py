@@ -28,6 +28,7 @@ class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
             self.opacity = 1
 
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        self.setWindowModality(QtCore.Qt.NonModal)
         self.setupUi(self)
         self.INIT()
 
