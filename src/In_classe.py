@@ -4,6 +4,7 @@ from .build import *
 class In_classe:
     def __init__(self, ui):
 
+        self.TXT(ui=ui)
         self.CB(ui=ui)
         self.DE(ui=ui)
         self.FR(ui=ui)
@@ -84,3 +85,9 @@ class In_classe:
     def TW(self, ui):
         # Demo
         C_tw().demo(ui.tw_demo)
+    def TXT(self, ui):
+        # Demo
+        C_txt().demoth(ui.le_demo_th)
+        C_txt().demotr(ui.le_demo_tr)
+        C_txt().demo_th(ui.te_demo_th, ui.pte_demo_th)
+        C_txt().demo_tr(ui.te_demo_tr, ui.pte_demo_tr)

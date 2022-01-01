@@ -1,4 +1,4 @@
-from PySide6 import QtCore, QtWidgets
+from PySide6 import QtCore, QtWidgets, QtGui
 
 from . import base
 from . import Classe_wg
@@ -189,6 +189,9 @@ class C_wg:
         elif isinstance(self.wg, QtWidgets.QProgressBar): wg_type = "QProgressBar"
         elif isinstance(self.wg, QtWidgets.QSpinBox): wg_type = "QSpinBox"
         elif isinstance(self.wg, QtWidgets.QTableWidget): wg_type = "QTableWidget"
+        elif isinstance(self.wg, QtWidgets.QLineEdit): wg_type = "QLineEdit"
+        elif isinstance(self.wg, QtWidgets.QTextEdit): wg_type = "QTextEdit"
+        elif isinstance(self.wg, QtWidgets.QPlainTextEdit): wg_type = "QPlainTextEdit"
 
         elif isinstance(self.wg, QtWidgets.QFrame): wg_type = "QFrame"
 
@@ -288,7 +291,7 @@ class C_wg:
         else:
             self.inc = rd + bd
             self.inc_flat = self.inc
-        if wg_type in {"QComboBox", "QListWidget", "QScrollArea", "QTableWidget"}:
+        if wg_type in {"QComboBox", "QListWidget", "QScrollArea", "QTableWidget", "QTextEdit", "QPlainTextEdit"}:
             self.inc += scroll
             self.inc_flat += scroll
         if wg_type in {"QSpinBox"}:
@@ -1112,3 +1115,25 @@ class C_wg:
         self.wg.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
         self.wg.horizontalHeader().setDefaultAlignment(QtCore.Qt.AlignCenter)
         self.wg.verticalHeader().setDefaultAlignment(QtCore.Qt.AlignCenter)
+    def STL_TXT(self):
+        self.STL_ALL()
+
+        stl = {
+            "th":
+                "QLineEdit, QPlainTextEdit, QTextEdit {"
+                f"background-color: rgb{self.c1};"
+                "}"
+
+                f"{self.inc}",
+            "tr":
+                "QLineEdit, QPlainTextEdit, QTextEdit {"
+                "}"
+
+                f"{self.inc}",
+        }
+        pl = QtGui.QPalette()
+        pl.setColor(QtGui.QPalette.PlaceholderText, QtGui.QColor(*self.c2))
+        pl.setColor(QtGui.QPalette.Text, QtGui.QColor(*self.c3))
+        self.wg.setPalette(pl)
+
+        self.wg.setStyleSheet(stl.get(self.colors_type))
