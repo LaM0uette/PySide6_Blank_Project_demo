@@ -18,3 +18,5 @@ class P_bd:
     def bd0010_bd_bn2(self): return {"mat": "0010", "px": P_style().bd(), "th": P_rgb().bn2()}
 
     def bd0101_bd_bn1(self): return {"mat": "0101", "px": P_style().bd(), "th": P_rgb().bn1()}
+
+    def bd1101_bd_bn1(self): return {"mat": "1101", "px": P_style().bd(), "th": P_rgb().bn1()}

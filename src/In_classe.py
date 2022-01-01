@@ -18,6 +18,8 @@ class In_classe:
         self.SB(ui=ui)
         self.TW(ui=ui)
 
+        self.TB(ui=ui)
+
     def CB(self, ui):
         # Demo
         C_cb().demo_th(ui.cb_demo_th)
@@ -34,6 +36,7 @@ class In_classe:
         C_fr().demo(ui.fr_cb, ui.fr_de, ui.fr_lw, ui.fr_pb, ui.fr_ck,
                     ui.fr_rb, ui.fr_pg, ui.fr_sb, ui.fr_tw, ui.fr_le,
                     ui.fr_te, ui.fr_pte)
+        C_fr().demo_tb(ui.fr_tb_demo, ui.fr_tb_demo_2)
     def LB(self, ui):
         # Titre app
         C_lb().h3_titre(ui.lb_mt_nom)
@@ -91,3 +94,7 @@ class In_classe:
         C_txt().demotr(ui.le_demo_tr)
         C_txt().demo_th(ui.te_demo_th, ui.pte_demo_th)
         C_txt().demo_tr(ui.te_demo_tr, ui.pte_demo_tr)
+
+    def TB(self, ui):
+        # Demo
+        C_tb().demo(ui.tb_demo)

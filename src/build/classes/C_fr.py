@@ -28,3 +28,8 @@ class C_fr(C_wg):
                  colors=P_rgb().p_u1(),
                  dim=P_dim().p_all(),
                  bd=P_bd().bd1_bd_bn1(),)
+    def demo_tb(self, *args):
+        self.STL(list(args),
+                 colors=P_rgb().p_th1(),
+                 dim=P_dim().p_all(),
+                 bd=P_bd().bd0010_bd_bn1(),)

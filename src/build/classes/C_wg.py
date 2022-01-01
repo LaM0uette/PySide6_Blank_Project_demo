@@ -178,6 +178,8 @@ class C_wg:
         ### VAR
         wg_type = ""
         if isinstance(self.wg, QtWidgets.QScrollArea): wg_type = "QScrollArea"
+        elif isinstance(self.wg, QtWidgets.QToolBox): wg_type = "QToolBox"
+
         elif isinstance(self.wg, QtWidgets.QComboBox): wg_type = "QComboBox"
         elif isinstance(self.wg, QtWidgets.QDateEdit): wg_type = "QDateEdit"
         elif isinstance(self.wg, QtWidgets.QLabel): wg_type = "QLabel"
@@ -192,6 +194,7 @@ class C_wg:
         elif isinstance(self.wg, QtWidgets.QTextEdit): wg_type = "QTextEdit"
         elif isinstance(self.wg, QtWidgets.QPlainTextEdit): wg_type = "QPlainTextEdit"
         elif isinstance(self.wg, QtWidgets.QFrame): wg_type = "QFrame"
+
 
         # [class ~='{wg_type}']
         bd = f".{wg_type}" \
@@ -289,7 +292,7 @@ class C_wg:
         else:
             self.inc = rd + bd
             self.inc_flat = self.inc
-        if wg_type in {"QComboBox", "QListWidget", "QScrollArea", "QTableWidget", "QTextEdit", "QPlainTextEdit"}:
+        if wg_type in {"QComboBox", "QListWidget", "QScrollArea", "QTableWidget", "QTextEdit", "QPlainTextEdit", "QToolBox"}:
             self.inc += scroll
             self.inc_flat += scroll
         if wg_type in {"QSpinBox"}:
@@ -302,7 +305,7 @@ class C_wg:
         except: pass
 
         # Image
-        if val not in ("fr", "lw", "tw", "ck", "rb", "sca", "sb"):
+        if val not in ("fr", "lw", "tw", "ck", "rb", "sca", "sb", "tb"):
             try: Fct(wg=self.wg, img=self.img + self.th, dim=self.dim_ico).ICON()
             except: pass
 
@@ -1134,4 +1137,27 @@ class C_wg:
         pl.setColor(QtGui.QPalette.Text, QtGui.QColor(*self.c3))
         self.wg.setPalette(pl)
 
+        self.wg.setStyleSheet(stl.get(self.colors_type))
+
+    def STL_TB(self):
+        self.STL_ALL("tb")
+
+        stl = {
+            "th":
+                "QToolBox::tab {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                "}"
+
+                "QToolBox::tab:hover {"
+                f"color: rgb{self.c2};"
+                "}"
+
+                "QToolBox::tab:selected {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.bn1};"
+                "}"
+
+                f"{self.inc}"
+        }
         self.wg.setStyleSheet(stl.get(self.colors_type))

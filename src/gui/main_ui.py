@@ -21,7 +21,7 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QDateEdit,
     QListWidgetItem, QPlainTextEdit, QProgressBar, QPushButton,
     QRadioButton, QScrollArea, QSizePolicy, QSpacerItem,
     QSpinBox, QTableWidget, QTableWidgetItem, QTextEdit,
-    QVBoxLayout, QWidget)
+    QToolBox, QVBoxLayout, QWidget)
 
 class Ui_main(object):
     def setupUi(self, main):
@@ -37,7 +37,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -2798, 822, 3644))
+        self.vlay_wg.setGeometry(QRect(0, -3021, 822, 3867))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -686,6 +686,41 @@ class Ui_main(object):
 
         self.verticalLayout.addWidget(self.fr_pte)
 
+        self.tb_demo = QToolBox(self.vlay_wg)
+        self.tb_demo.setObjectName(u"tb_demo")
+        self.page = QWidget()
+        self.page.setObjectName(u"page")
+        self.page.setGeometry(QRect(0, 0, 722, 69))
+        self.verticalLayout_2 = QVBoxLayout(self.page)
+        self.verticalLayout_2.setSpacing(0)
+        self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
+        self.fr_tb_demo = QFrame(self.page)
+        self.fr_tb_demo.setObjectName(u"fr_tb_demo")
+        self.fr_tb_demo.setFrameShape(QFrame.StyledPanel)
+        self.fr_tb_demo.setFrameShadow(QFrame.Raised)
+
+        self.verticalLayout_2.addWidget(self.fr_tb_demo)
+
+        self.tb_demo.addItem(self.page, u"Page 1")
+        self.page_2 = QWidget()
+        self.page_2.setObjectName(u"page_2")
+        self.page_2.setGeometry(QRect(0, 0, 722, 69))
+        self.verticalLayout_3 = QVBoxLayout(self.page_2)
+        self.verticalLayout_3.setSpacing(0)
+        self.verticalLayout_3.setObjectName(u"verticalLayout_3")
+        self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
+        self.fr_tb_demo_2 = QFrame(self.page_2)
+        self.fr_tb_demo_2.setObjectName(u"fr_tb_demo_2")
+        self.fr_tb_demo_2.setFrameShape(QFrame.StyledPanel)
+        self.fr_tb_demo_2.setFrameShadow(QFrame.Raised)
+
+        self.verticalLayout_3.addWidget(self.fr_tb_demo_2)
+
+        self.tb_demo.addItem(self.page_2, u"Page 2")
+
+        self.verticalLayout.addWidget(self.tb_demo)
+
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout.addItem(self.verticalSpacer)
@@ -753,6 +788,9 @@ class Ui_main(object):
 
 
         self.retranslateUi(main)
+
+        self.tb_demo.setCurrentIndex(1)
+
 
         QMetaObject.connectSlotsByName(main)
     # setupUi
@@ -977,6 +1015,8 @@ class Ui_main(object):
         self.lb_le_demo.setText(QCoreApplication.translate("main", u"QLineEdit :", None))
         self.lb_te_demo.setText(QCoreApplication.translate("main", u"QTextEdit :", None))
         self.lb_pte_demo.setText(QCoreApplication.translate("main", u"QPlainText :", None))
+        self.tb_demo.setItemText(self.tb_demo.indexOf(self.page), QCoreApplication.translate("main", u"Page 1", None))
+        self.tb_demo.setItemText(self.tb_demo.indexOf(self.page_2), QCoreApplication.translate("main", u"Page 2", None))
         pass
     # retranslateUi
 
