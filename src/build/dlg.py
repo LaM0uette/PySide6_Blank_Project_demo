@@ -9,10 +9,14 @@ from ..In_classe import In_classe
 class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
     sgn_ok = QtCore.Signal(str)
 
-    def __init__(self, titre="Information", **kwargs):
+    def __init__(self, titre="Information", msg=":)", txt_pb_ok="Ok", txt_pb_annuler="Annuler", **kwargs):
         super(Dlg, self).__init__()
 
         self.titre = titre
+        self.msg = msg
+        self.txt_pb_ok = txt_pb_ok
+        self.txt_pb_annuler = txt_pb_annuler
+
         self.kwargs = kwargs
 
         self.width = self.kwargs.get("w")
@@ -21,7 +25,7 @@ class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
 
         self.height = self.kwargs.get("h")
         if self.height is None:
-            self.height = config.height / 3
+            self.height = config.height / 4
 
         self.opacity = self.kwargs.get("opacity")
         if self.opacity is None:
@@ -76,7 +80,9 @@ class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
         finally: pass
 
         # QPushButton
-        try: pass
+        try:
+            C_pb().ok(self.pb_dlg_info_ok)
+            C_pb().annuler(self.pb_dlg_info_annuler)
         except: pass
         finally: pass
 
