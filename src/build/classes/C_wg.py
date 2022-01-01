@@ -178,7 +178,6 @@ class C_wg:
         ### VAR
         wg_type = ""
         if isinstance(self.wg, QtWidgets.QScrollArea): wg_type = "QScrollArea"
-
         elif isinstance(self.wg, QtWidgets.QComboBox): wg_type = "QComboBox"
         elif isinstance(self.wg, QtWidgets.QDateEdit): wg_type = "QDateEdit"
         elif isinstance(self.wg, QtWidgets.QLabel): wg_type = "QLabel"
@@ -192,7 +191,6 @@ class C_wg:
         elif isinstance(self.wg, QtWidgets.QLineEdit): wg_type = "QLineEdit"
         elif isinstance(self.wg, QtWidgets.QTextEdit): wg_type = "QTextEdit"
         elif isinstance(self.wg, QtWidgets.QPlainTextEdit): wg_type = "QPlainTextEdit"
-
         elif isinstance(self.wg, QtWidgets.QFrame): wg_type = "QFrame"
 
         # [class ~='{wg_type}']
@@ -1069,7 +1067,7 @@ class C_wg:
                 f"border: {P_style().bd()}px solid rgb{self.c3};"
                 "}"
                 "QTableView::item:selected {"
-                f"background-color: rgb{self.c1};"
+                f"background-color: rgb{self.c2};"
                 f"color: rgb{self.c3};"
                 "}"
                 "QTableView::item:hover {"
