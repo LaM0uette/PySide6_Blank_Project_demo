@@ -221,11 +221,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
     ### FONCTIONS
     def FCT_OPTION(self):
-        self.dlg = Dlg(msg="\tVoulez vous quitter ?.")
-        self.dlg.REP()
-        self.dlg.exec()
-
-        print(self.dlg)
+        Dlg(msg="trtretdrtdrt").ALERTE()
 
 
     ### EVENT
@@ -259,8 +255,11 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.hide()
         self.EVT_CENTRE_FEN()
     def EVT_QUITTER(self):
-        app.quit()
-        quit()
+        rep = Dlg().QUITTER()
+
+        if rep:
+            app.quit()
+            quit()
     def mousePressEvent(self, event):
         cur = QtGui.QCursor()
         verifHeight = cur.pos().y() - self.pos().y()

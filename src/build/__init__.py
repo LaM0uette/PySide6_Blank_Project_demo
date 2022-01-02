@@ -12,4 +12,5 @@ from .P_style import P_style
 
 from .functions import Fct
 from .classes import *
+from .dialog import Dialog
 from .dlg import Dlg
