@@ -1,4 +1,4 @@
-from PySide6 import QtCore, QtWidgets
+from PySide6 import QtCore, QtWidgets, QtGui
 
 from ..gui import *
 from ..build import *
@@ -9,33 +9,30 @@ from ..In_classe import In_classe
 class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
     sgn_rep = QtCore.Signal(bool)
 
-    def __init__(self, titre="Information", msg=":)", txt_pb_ok="Ok", txt_pb_annuler="Annuler", **kwargs):
+    def __init__(self, titre="Information", msg=":)", ico=P_img().main(), txt_pb_ok="Ok", txt_pb_annuler="Annuler", **kwargs):
         super(Dlg, self).__init__()
 
         self.titre = titre
         self.msg = msg
+        self.ico = ico
         self.txt_pb_ok = txt_pb_ok
         self.txt_pb_annuler = txt_pb_annuler
 
         self.kwargs = kwargs
 
         self.width = self.kwargs.get("w")
-        if self.width is None:
-            self.width = config.widht / 2
+        if self.width is None: self.width = config.widht / 2
 
         self.height = self.kwargs.get("h")
-        if self.height is None:
-            self.height = config.height / 4
+        if self.height is None: self.height = config.height / 4
 
         self.opacity = self.kwargs.get("opacity")
-        if self.opacity is None:
-            self.opacity = 1
+        if self.opacity is None: self.opacity = 1
 
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setWindowModality(QtCore.Qt.NonModal)
         self.setupUi(self)
         self.INIT()
-
         self.show()
 
 
@@ -132,7 +129,7 @@ class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
         # Icone de l'app
         dim = P_dim().p_c_mt()
         Fct(wg=self.lb_mt_ico, w=dim.get("w"), h=dim.get("h")).DIM()
-        # self.lb_mt_ico.setPixmap(QtGui.QPixmap(PXM))
+        self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}th3.svg"))
         self.lb_mt_ico.setScaledContents(True)
         self.lb_mt_nom.setText(self.titre)
     def IN_WG_BASE(self):
@@ -163,3 +160,28 @@ class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
 
     ### FONCTIONS
     def INFO_OK(self): self.destroy()
+
+
+    ### EVENT
+    def mousePressEvent(self, event):
+        cur = QtGui.QCursor()
+        verifHeight = cur.pos().y() - self.pos().y()
+        if event.buttons() == QtCore.Qt.LeftButton and verifHeight < P_dim().h_mt() and self.windowState() != QtCore.Qt.WindowMaximized:
+            self.dragPos = event.globalPosition().toPoint()
+            event.accept()
+    def mouseMoveEvent(self, event):
+        def act_move(event):
+            self.move(self.pos() + event.globalPosition().toPoint() - self.dragPos)
+            self.dragPos = event.globalPosition().toPoint()
+            event.accept()
+
+        cur = QtGui.QCursor()
+        height_verif = cur.pos().y() - self.pos().y()
+
+        try:
+            if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h_mt() and self.windowState() != QtCore.Qt.WindowMaximized:
+                act_move(event)
+            if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h_mt() and self.windowState() == QtCore.Qt.WindowMaximized:
+                self.setWindowState(QtCore.Qt.WindowNoState)
+                act_move(event)
+        except AttributeError: pass

@@ -209,29 +209,29 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
     ### FONCTIONS
     def FCT_OPTION(self):
-        self.dlg = Dlg(msg="\tFichier créé avec succés dans le dossier source.")
+        self.dlg = Dlg(msg="\tFichier créé avec succés dans le dossier source.", ico=P_img().info())
         self.dlg.INFO()
 
 
     ### EVENT
     def EVT_CENTRE_FEN(self):
         center = QtGui.QScreen.availableGeometry(QtWidgets.QApplication.primaryScreen()).center()
-        geo = fen.frameGeometry()
+        geo = self.frameGeometry()
         geo.moveCenter(center)
-        fen.move(geo.topLeft())
+        self.move(geo.topLeft())
 
         self.setFixedWidth(config.widht)
         self.setFixedHeight(config.height)
     def EVT_AGRANDIR_GDT(self):
-        if fen.windowState() == QtCore.Qt.WindowMaximized:
-            fen.setWindowState(QtCore.Qt.WindowNoState)
+        if self.windowState() == QtCore.Qt.WindowMaximized:
+            self.setWindowState(QtCore.Qt.WindowNoState)
             self.EVT_CENTRE_FEN()
         else:
-            fen.setWindowState(QtCore.Qt.WindowMaximized)
+            self.setWindowState(QtCore.Qt.WindowMaximized)
     def EVT_REDUIRE_GDT(self):
-        fen.setWindowState(QtCore.Qt.WindowNoState)
+        self.setWindowState(QtCore.Qt.WindowNoState)
         self.EVT_CENTRE_FEN()
-        fen.setWindowState(QtCore.Qt.WindowMinimized)
+        self.setWindowState(QtCore.Qt.WindowMinimized)
     def EVT_REDUIRE_HIDE_GDT(self):
         if config.auto_close: return self.EVT_QUITTER()
         self.hide()
@@ -242,7 +242,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def mousePressEvent(self, event):
         cur = QtGui.QCursor()
         verifHeight = cur.pos().y() - self.pos().y()
-        if event.buttons() == QtCore.Qt.LeftButton and verifHeight < P_dim().h_mt() and fen.windowState() != QtCore.Qt.WindowMaximized:
+        if event.buttons() == QtCore.Qt.LeftButton and verifHeight < P_dim().h_mt() and self.windowState() != QtCore.Qt.WindowMaximized:
             self.dragPos = event.globalPosition().toPoint()
             event.accept()
     def mouseMoveEvent(self, event):
@@ -253,23 +253,23 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         cur = QtGui.QCursor()
         height_verif = cur.pos().y() - self.pos().y()
 
-        if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h_mt() and fen.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
+        if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h_mt() and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
             self.setCursor(Fct(cur="agrandir").CUR())
         else:
             self.setCursor(Fct(cur="souris").CUR())
 
         try:
-            if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h_mt() and fen.windowState() != QtCore.Qt.WindowMaximized:
+            if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h_mt() and self.windowState() != QtCore.Qt.WindowMaximized:
                 act_move(event)
-            if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h_mt() and fen.windowState() == QtCore.Qt.WindowMaximized:
-                fen.setWindowState(QtCore.Qt.WindowNoState)
+            if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h_mt() and self.windowState() == QtCore.Qt.WindowMaximized:
+                self.setWindowState(QtCore.Qt.WindowNoState)
                 act_move(event)
         except AttributeError:
             pass
     def mouseReleaseEvent(self, event):
         cur = QtGui.QCursor()
         height_verif = cur.pos().y() - self.pos().y()
-        if height_verif < P_dim().h_mt() and fen.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
+        if height_verif < P_dim().h_mt() and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
             self.setCursor(Fct(cur="souris").CUR())
             self.EVT_AGRANDIR_GDT()
             event.accept()
