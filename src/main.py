@@ -221,7 +221,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
     ### FONCTIONS
     def FCT_OPTION(self):
-        Dlg(msg="trtretdrtdrt").ALERTE()
+        t = Dlg(msg="Tapez le mot de passe :").INPUT()
+        print(t)
 
 
     ### EVENT

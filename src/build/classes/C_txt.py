@@ -21,6 +21,16 @@ class C_txt(C_wg):
         for wg in lst:
             C_wg(wg=wg, attrs=kwargs).STL_TXT()
 
+
+    def tr(self, *args):
+        self.STL(list(args),
+                 colors_type = "tr",
+                 colors = P_rgb().p_th1(),
+                 dim = P_dim().p_aw_h9(),
+                 font=P_font().h3(),
+                 align=P_align().l_c(),
+                 bd = P_bd().bd0010_bd_th2())
+
     def demoth(self, *args):
         self.STL(list(args),
                  colors_type = "th",

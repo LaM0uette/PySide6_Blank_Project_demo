@@ -16,8 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
-    QLabel, QPushButton, QSizePolicy, QSpacerItem,
-    QStackedWidget, QVBoxLayout, QWidget)
+    QLabel, QLineEdit, QPushButton, QSizePolicy,
+    QSpacerItem, QStackedWidget, QVBoxLayout, QWidget)
 
 class Ui_Dlg(object):
     def setupUi(self, Dlg):
@@ -135,6 +135,61 @@ class Ui_Dlg(object):
         self.vlay_pg_dlg_rep.addWidget(self.fr_pg_dlg_rep)
 
         self.stk_dlg.addWidget(self.pg_dlg_rep)
+        self.pg_dlg_input = QWidget()
+        self.pg_dlg_input.setObjectName(u"pg_dlg_input")
+        self.vlay_pg_dlg_input = QVBoxLayout(self.pg_dlg_input)
+        self.vlay_pg_dlg_input.setSpacing(0)
+        self.vlay_pg_dlg_input.setObjectName(u"vlay_pg_dlg_input")
+        self.vlay_pg_dlg_input.setContentsMargins(0, 0, 0, 0)
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.vlay_pg_dlg_input.addItem(self.verticalSpacer)
+
+        self.vlay_dlg_input = QVBoxLayout()
+        self.vlay_dlg_input.setSpacing(10)
+        self.vlay_dlg_input.setObjectName(u"vlay_dlg_input")
+        self.vlay_dlg_input.setContentsMargins(20, -1, 20, -1)
+        self.lb_input_texte = QLabel(self.pg_dlg_input)
+        self.lb_input_texte.setObjectName(u"lb_input_texte")
+
+        self.vlay_dlg_input.addWidget(self.lb_input_texte)
+
+        self.le_input = QLineEdit(self.pg_dlg_input)
+        self.le_input.setObjectName(u"le_input")
+
+        self.vlay_dlg_input.addWidget(self.le_input)
+
+
+        self.vlay_pg_dlg_input.addLayout(self.vlay_dlg_input)
+
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.vlay_pg_dlg_input.addItem(self.verticalSpacer_2)
+
+        self.fr_pg_dlg_input = QFrame(self.pg_dlg_input)
+        self.fr_pg_dlg_input.setObjectName(u"fr_pg_dlg_input")
+        self.hlay_pg_dlg_input = QHBoxLayout(self.fr_pg_dlg_input)
+        self.hlay_pg_dlg_input.setSpacing(2)
+        self.hlay_pg_dlg_input.setObjectName(u"hlay_pg_dlg_input")
+        self.hlay_pg_dlg_input.setContentsMargins(0, 2, 0, 2)
+        self.horizontalSpacer_4 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.hlay_pg_dlg_input.addItem(self.horizontalSpacer_4)
+
+        self.pb_dlg_input_ok = QPushButton(self.fr_pg_dlg_input)
+        self.pb_dlg_input_ok.setObjectName(u"pb_dlg_input_ok")
+
+        self.hlay_pg_dlg_input.addWidget(self.pb_dlg_input_ok)
+
+        self.pb_dlg_input_annuler = QPushButton(self.fr_pg_dlg_input)
+        self.pb_dlg_input_annuler.setObjectName(u"pb_dlg_input_annuler")
+
+        self.hlay_pg_dlg_input.addWidget(self.pb_dlg_input_annuler)
+
+
+        self.vlay_pg_dlg_input.addWidget(self.fr_pg_dlg_input)
+
+        self.stk_dlg.addWidget(self.pg_dlg_input)
 
         self.vlay_fr_main.addWidget(self.stk_dlg)
 
@@ -144,13 +199,14 @@ class Ui_Dlg(object):
 
         self.retranslateUi(Dlg)
 
-        self.stk_dlg.setCurrentIndex(1)
+        self.stk_dlg.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(Dlg)
     # setupUi
 
     def retranslateUi(self, Dlg):
+        self.le_input.setPlaceholderText(QCoreApplication.translate("Dlg", u"...", None))
         pass
     # retranslateUi
 

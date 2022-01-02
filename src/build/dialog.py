@@ -8,6 +8,7 @@ from ..In_classe import In_classe
 
 class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
     sgn_rep = QtCore.Signal(bool)
+    sgn_txt = QtCore.Signal(str)
 
     def __init__(self, **kwargs):
         super(Dialog, self).__init__()
@@ -58,12 +59,18 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.setFixedHeight(self.height)
         self.setWindowOpacity(self.opacity)
     def IN_CLASSE(self):  # sourcery skip: extract-duplicate-method
-        In_classe(ui=self)
-
-        # QLineEdit | QTextEdit | QPlainTextEdit
+        # QScrollBoxArea
         try: pass
         except: pass
         finally: pass
+
+        # QLineEdit | QTextEdit | QPlainTextEdit
+        try:
+            C_txt().tr(self.le_input)
+        except: pass
+        finally: pass
+
+        In_classe(ui=self)
 
         # QComboBox
         try: pass
@@ -79,6 +86,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         try:
             C_fr().menu_bottom_dlg(self.fr_pg_dlg_msg)
             C_fr().menu_bottom_dlg(self.fr_pg_dlg_rep)
+            C_fr().menu_bottom_dlg(self.fr_pg_dlg_input)
         except: pass
         finally: pass
 
@@ -86,6 +94,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         try:
             C_lb().p(self.lb_msg_texte)
             C_lb().p(self.lb_rep_texte)
+            C_lb().p(self.lb_input_texte)
         except: pass
         finally: pass
 
@@ -99,6 +108,8 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             C_pb().ok(self.pb_dlg_msg_ok)
             C_pb().ok(self.pb_dlg_rep_ok)
             C_pb().annuler(self.pb_dlg_rep_annuler)
+            C_pb().ok(self.pb_dlg_input_ok)
+            C_pb().annuler(self.pb_dlg_input_annuler)
         except: pass
         finally: pass
 
@@ -113,11 +124,6 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         finally: pass
 
         # QProgressBar
-        try: pass
-        except: pass
-        finally: pass
-
-        # QScrollBoxArea
         try: pass
         except: pass
         finally: pass
@@ -195,12 +201,30 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         # Connection
         self.pb_dlg_rep_ok.clicked.connect(self.REP_OK)
         self.pb_dlg_rep_annuler.clicked.connect(self.OK)
+    def INPUT(self):
+        self.stk_dlg.setCurrentWidget(self.pg_dlg_input)
+
+        if self.ico == P_img().main():
+            self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}th3.svg"))
+            self.lb_mt_ico.setScaledContents(True)
+
+        # Données
+        self.lb_input_texte.setText(self.msg)
+        self.pb_dlg_input_ok.setText(self.txt_pb_ok)
+        self.pb_dlg_input_annuler.setText(self.txt_pb_annuler)
+
+        # Connection
+        self.pb_dlg_input_ok.clicked.connect(self.INPUT_OK)
+        self.pb_dlg_input_annuler.clicked.connect(self.OK)
 
 
     ### FONCTIONS
     def OK(self): self.close()
     def REP_OK(self):
         self.sgn_rep.emit(True)
+        self.close()
+    def INPUT_OK(self):
+        self.sgn_txt.emit(self.le_input.text())
         self.close()
 
 

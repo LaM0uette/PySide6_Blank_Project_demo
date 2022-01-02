@@ -25,6 +25,11 @@ class Dlg:
         self.dlg.REP()
         self.dlg.exec()
         return self.rtn
+    def INPUT(self):
+        self.dlg.sgn_txt.connect(self.RTN_SGN_REP)
+        self.dlg.INPUT()
+        self.dlg.exec()
+        return self.rtn
 
 
     # CUSTOMS
