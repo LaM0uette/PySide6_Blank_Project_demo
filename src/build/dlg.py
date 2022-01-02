@@ -13,6 +13,7 @@ class Dlg:
     def RTN_SGN_REP(self, val): self.rtn = val
 
 
+
     # MODELES
     def INFO(self):
         self.dlg.MSG(ico=P_img().info())
