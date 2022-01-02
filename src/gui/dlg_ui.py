@@ -100,34 +100,41 @@ class Ui_Dlg(object):
         self.vlay_pg_dlg_info.addWidget(self.fr_pg_dlg_msg)
 
         self.stk_dlg.addWidget(self.pg_dlg_msg)
-        self.pg_dlg_alerte = QWidget()
-        self.pg_dlg_alerte.setObjectName(u"pg_dlg_alerte")
-        self.verticalLayout = QVBoxLayout(self.pg_dlg_alerte)
-        self.verticalLayout.setObjectName(u"verticalLayout")
-        self.lb_alerte_texte = QLabel(self.pg_dlg_alerte)
-        self.lb_alerte_texte.setObjectName(u"lb_alerte_texte")
+        self.pg_dlg_rep = QWidget()
+        self.pg_dlg_rep.setObjectName(u"pg_dlg_rep")
+        self.vlay_pg_dlg_rep = QVBoxLayout(self.pg_dlg_rep)
+        self.vlay_pg_dlg_rep.setSpacing(0)
+        self.vlay_pg_dlg_rep.setObjectName(u"vlay_pg_dlg_rep")
+        self.vlay_pg_dlg_rep.setContentsMargins(0, 0, 0, 0)
+        self.lb_rep_texte = QLabel(self.pg_dlg_rep)
+        self.lb_rep_texte.setObjectName(u"lb_rep_texte")
 
-        self.verticalLayout.addWidget(self.lb_alerte_texte)
+        self.vlay_pg_dlg_rep.addWidget(self.lb_rep_texte)
 
-        self.fr_pg_dlg_alerte = QFrame(self.pg_dlg_alerte)
-        self.fr_pg_dlg_alerte.setObjectName(u"fr_pg_dlg_alerte")
-        self.hlay_pg_dlg_info_2 = QHBoxLayout(self.fr_pg_dlg_alerte)
-        self.hlay_pg_dlg_info_2.setSpacing(2)
-        self.hlay_pg_dlg_info_2.setObjectName(u"hlay_pg_dlg_info_2")
-        self.hlay_pg_dlg_info_2.setContentsMargins(0, 2, 0, 2)
+        self.fr_pg_dlg_rep = QFrame(self.pg_dlg_rep)
+        self.fr_pg_dlg_rep.setObjectName(u"fr_pg_dlg_rep")
+        self.hlay_pg_dlg_rep = QHBoxLayout(self.fr_pg_dlg_rep)
+        self.hlay_pg_dlg_rep.setSpacing(2)
+        self.hlay_pg_dlg_rep.setObjectName(u"hlay_pg_dlg_rep")
+        self.hlay_pg_dlg_rep.setContentsMargins(0, 2, 0, 2)
         self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.hlay_pg_dlg_info_2.addItem(self.horizontalSpacer_3)
+        self.hlay_pg_dlg_rep.addItem(self.horizontalSpacer_3)
 
-        self.pb_dlg_alerte_ok = QPushButton(self.fr_pg_dlg_alerte)
-        self.pb_dlg_alerte_ok.setObjectName(u"pb_dlg_alerte_ok")
+        self.pb_dlg_rep_ok = QPushButton(self.fr_pg_dlg_rep)
+        self.pb_dlg_rep_ok.setObjectName(u"pb_dlg_rep_ok")
 
-        self.hlay_pg_dlg_info_2.addWidget(self.pb_dlg_alerte_ok)
+        self.hlay_pg_dlg_rep.addWidget(self.pb_dlg_rep_ok)
+
+        self.pb_dlg_rep_annuler = QPushButton(self.fr_pg_dlg_rep)
+        self.pb_dlg_rep_annuler.setObjectName(u"pb_dlg_rep_annuler")
+
+        self.hlay_pg_dlg_rep.addWidget(self.pb_dlg_rep_annuler)
 
 
-        self.verticalLayout.addWidget(self.fr_pg_dlg_alerte)
+        self.vlay_pg_dlg_rep.addWidget(self.fr_pg_dlg_rep)
 
-        self.stk_dlg.addWidget(self.pg_dlg_alerte)
+        self.stk_dlg.addWidget(self.pg_dlg_rep)
 
         self.vlay_fr_main.addWidget(self.stk_dlg)
 

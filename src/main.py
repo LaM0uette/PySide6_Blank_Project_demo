@@ -16,18 +16,24 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         self.dlg = None
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        self.sizegrip = QtWidgets.QSizeGrip(self)
+
         self.setupUi(self)
         self.INIT()
-
 
 
     ### INITIALISATION
     def IN_BASE(self):
         ## Fenetre
         self.setWindowTitle(config.nom)
-        self.setMinimumWidth(config.widht)
-        self.setMinimumHeight(config.height)
         self.setWindowOpacity(config.opacity)
+
+        if config.resize:
+            self.setMinimumWidth(config.widht)
+            self.setMinimumHeight(config.height)
+        else:
+            self.setFixedWidth(config.widht)
+            self.setFixedHeight(config.height)
     def IN_CLASSE(self):  # sourcery skip: extract-method
         # QLineEdit | QTextEdit | QPlainTextEdit
         try:
@@ -183,7 +189,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         # SizeGrip
         if config.resize:
-            self.sizegrip = QtWidgets.QSizeGrip(self)
             self.sizegrip.setCursor(Fct(cur="fleche_nwse").CUR())
             self.sizegrip.setStyleSheet("QSizeGrip {"
                                    f"image: url({P_img().resize()}th3.svg);"
@@ -215,7 +220,12 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
     ### FONCTIONS
-    def FCT_OPTION(self): self.dlg = Dlg(msg="\tFichier créé avec succés dans le dossier source.").INFO()
+    def FCT_OPTION(self):
+        self.dlg = Dlg(msg="\tVoulez vous quitter ?.")
+        self.dlg.REP()
+        self.dlg.exec()
+
+        print(self.dlg)
 
 
     ### EVENT
@@ -225,8 +235,12 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         geo.moveCenter(center)
         self.move(geo.topLeft())
 
-        self.setMinimumWidth(config.widht)
-        self.setMinimumHeight(config.height)
+        if config.resize:
+            self.setMinimumWidth(config.widht)
+            self.setMinimumHeight(config.height)
+        else:
+            self.setFixedWidth(config.widht)
+            self.setFixedHeight(config.height)
     def EVT_AGRANDIR_GDT(self):
         if self.windowState() == QtCore.Qt.WindowMaximized:
             self.setWindowState(QtCore.Qt.WindowNoState)

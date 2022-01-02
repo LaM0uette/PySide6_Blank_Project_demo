@@ -170,14 +170,29 @@
           </item>
          </layout>
         </widget>
-        <widget class="QWidget" name="pg_dlg_alerte">
-         <layout class="QVBoxLayout" name="verticalLayout">
+        <widget class="QWidget" name="pg_dlg_rep">
+         <layout class="QVBoxLayout" name="vlay_pg_dlg_rep">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
           <item>
-           <widget class="QLabel" name="lb_alerte_texte"/>
+           <widget class="QLabel" name="lb_rep_texte"/>
           </item>
           <item>
-           <widget class="QFrame" name="fr_pg_dlg_alerte">
-            <layout class="QHBoxLayout" name="hlay_pg_dlg_info_2">
+           <widget class="QFrame" name="fr_pg_dlg_rep">
+            <layout class="QHBoxLayout" name="hlay_pg_dlg_rep">
              <property name="spacing">
               <number>2</number>
              </property>
@@ -207,7 +222,10 @@
               </spacer>
              </item>
              <item>
-              <widget class="QPushButton" name="pb_dlg_alerte_ok"/>
+              <widget class="QPushButton" name="pb_dlg_rep_ok"/>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pb_dlg_rep_annuler"/>
              </item>
             </layout>
            </widget>

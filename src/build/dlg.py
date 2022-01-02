@@ -6,7 +6,7 @@ from ..config import *
 from ..In_classe import In_classe
 
 
-class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
+class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
     sgn_rep = QtCore.Signal(bool)
 
     def __init__(self, titre="Information", msg=":)", ico=P_img().main(), txt_pb_ok="Ok", txt_pb_annuler="Annuler", **kwargs):
@@ -30,10 +30,9 @@ class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
         if self.opacity is None: self.opacity = 1
 
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
-        self.setWindowModality(QtCore.Qt.NonModal)
+        self.setWindowModality(QtCore.Qt.ApplicationModal)
         self.setupUi(self)
         self.INIT()
-        self.show()
 
 
     ### INITIALISATION
@@ -64,12 +63,14 @@ class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
         # QFrame
         try:
             C_fr().menu_bottom_dlg(self.fr_pg_dlg_msg)
+            C_fr().menu_bottom_dlg(self.fr_pg_dlg_rep)
         except: pass
         finally: pass
 
         # QLabel
         try:
             C_lb().p(self.lb_msg_texte)
+            C_lb().p(self.lb_rep_texte)
         except: pass
         finally: pass
 
@@ -81,6 +82,8 @@ class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
         # QPushButton
         try:
             C_pb().ok(self.pb_dlg_msg_ok)
+            C_pb().ok(self.pb_dlg_rep_ok)
+            C_pb().annuler(self.pb_dlg_rep_annuler)
         except: pass
         finally: pass
 
@@ -161,13 +164,29 @@ class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
         self.pb_dlg_msg_ok.setText(self.txt_pb_ok)
 
         # Connection
-        self.pb_dlg_msg_ok.clicked.connect(self.MSG_OK)
+        self.pb_dlg_msg_ok.clicked.connect(self.OK)
     def INFO(self): self.MSG(ico=P_img().info())
     def ALERTE(self): self.MSG(ico=P_img().alerte())
+    def REP(self):
+        self.stk_dlg.setCurrentWidget(self.pg_dlg_rep)
+
+        if self.ico == P_img().main():
+            self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}th3.svg"))
+            self.lb_mt_ico.setScaledContents(True)
+
+        # Données
+        self.lb_rep_texte.setText(self.msg)
+        self.pb_dlg_rep_ok.setText(self.txt_pb_ok)
+        self.pb_dlg_rep_annuler.setText(self.txt_pb_annuler)
+
+        # Connection
+        self.pb_dlg_rep_ok.clicked.connect(self.REP_OK)
+        self.pb_dlg_rep_annuler.clicked.connect(self.OK)
 
 
     ### FONCTIONS
-    def MSG_OK(self): self.destroy()
+    def OK(self): self.destroy()
+    def REP_OK(self): self.sgn_rep.emit(True)
 
 
     ### EVENT
