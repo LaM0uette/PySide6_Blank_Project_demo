@@ -22,8 +22,10 @@ class In_classe:
 
         # QFrame
         try:
-            C_fr().dialog(ui.fr_main)
+            C_fr().main(ui.fr_main)
             C_fr().menu_top(ui.fr_menu_top)
+            C_fr().body(ui.fr_body)
+            C_fr().menu_bottom(ui.fr_menu_bottom)
         except: pass
         finally: pass
 

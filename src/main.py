@@ -19,13 +19,13 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.setupUi(self)
         self.INIT()
 
-        sizegrip = QtWidgets.QSizeGrip(self)
-        sizegrip.setStyleSheet("QSizeGrip {"
-                               f"image: url({P_img().option()}th3.svg);"
-                               "width: 20px;"
-                               "height: 20px;"
-                               "}")
-        self.vlay_main.addWidget(sizegrip, 99, QtCore.Qt.AlignBottom | QtCore.Qt.AlignRight)
+        # sizegrip = QtWidgets.QSizeGrip(self)
+        # sizegrip.setStyleSheet("QSizeGrip {"
+        #                        f"image: url({P_img().option()}th3.svg);"
+        #                        "width: 20px;"
+        #                        "height: 20px;"
+        #                        "}")
+        # self.vlay_main.addWidget(sizegrip, 99, QtCore.Qt.AlignBottom | QtCore.Qt.AlignRight)
 
 
     ### INITIALISATION
@@ -36,8 +36,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # self.setFixedHeight(config.height)
         self.setWindowOpacity(config.opacity)
     def IN_CLASSE(self):  # sourcery skip: extract-method
-        In_classe(ui=self)
-
         # QLineEdit | QTextEdit | QPlainTextEdit
         try:
             # Demo
@@ -47,6 +45,15 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             C_txt().demo_tr(self.te_demo_tr, self.pte_demo_tr)
         except: pass
         finally: pass
+
+        # QScrollBoxArea
+        try:
+            # Demo
+            C_sca().demo(self.sca_main)
+        except: pass
+        finally: pass
+
+        In_classe(ui=self)
 
         # QComboBox
         try:
@@ -66,9 +73,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         # QFrame
         try:
-            # Menu_top
-            C_fr().menu_top(self.fr_menu_top)
-
             # Demo
             C_fr().demo(self.fr_cb, self.fr_de, self.fr_lw, self.fr_pb, self.fr_ck,
                         self.fr_rb, self.fr_pg, self.fr_sb, self.fr_tw, self.fr_le,
@@ -139,13 +143,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         except: pass
         finally: pass
 
-        # QScrollBoxArea
-        try:
-            # Demo
-            C_sca().demo(self.sca_main)
-        except: pass
-        finally: pass
-
         # QSpinBox | QDoubleSpinBox
         try:
             # Demo
@@ -176,10 +173,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur="souris").CUR())
-        self.setStyleSheet(f"background-color: rgb{P_rgb().th1()};")
-
-        # Frame menu_top
-        self.fr_menu_top.setFixedHeight(P_dim().h_mt())
 
         # Icone de l'app
         dim = P_dim().p_c_mt()

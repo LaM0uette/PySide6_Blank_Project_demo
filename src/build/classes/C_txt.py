@@ -32,7 +32,7 @@ class C_txt(C_wg):
     def demotr(self, *args):
         self.STL(list(args),
                  colors_type = "tr",
-                 colors = P_rgb().p_th3(),
+                 colors = P_rgb().p_th1(),
                  dim = P_dim().p_aw_demo(),
                  font=P_font().sous_titre(),
                  align=P_align().c_c(),
@@ -48,7 +48,7 @@ class C_txt(C_wg):
     def demo_tr(self, *args):
         self.STL(list(args),
                  colors_type = "tr",
-                 colors = P_rgb().p_th3(),
+                 colors = P_rgb().p_th1(),
                  dim = P_dim().p_list_demo(),
                  font=P_font().p(),
                  align=P_align().c_c(),

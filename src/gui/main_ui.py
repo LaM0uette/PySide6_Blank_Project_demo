@@ -27,17 +27,85 @@ class Ui_main(object):
     def setupUi(self, main):
         if not main.objectName():
             main.setObjectName(u"main")
-        main.resize(841, 871)
-        self.glay_main = QGridLayout(main)
-        self.glay_main.setSpacing(0)
-        self.glay_main.setObjectName(u"glay_main")
-        self.glay_main.setContentsMargins(0, 0, 0, 0)
-        self.sca_main = QScrollArea(main)
+        main.resize(841, 792)
+        self.vlay_main = QVBoxLayout(main)
+        self.vlay_main.setSpacing(0)
+        self.vlay_main.setObjectName(u"vlay_main")
+        self.vlay_main.setContentsMargins(0, 0, 0, 0)
+        self.fr_main = QFrame(main)
+        self.fr_main.setObjectName(u"fr_main")
+        self.fr_main.setFrameShape(QFrame.StyledPanel)
+        self.fr_main.setFrameShadow(QFrame.Raised)
+        self.vlay_fr_main = QVBoxLayout(self.fr_main)
+        self.vlay_fr_main.setSpacing(0)
+        self.vlay_fr_main.setObjectName(u"vlay_fr_main")
+        self.vlay_fr_main.setContentsMargins(0, 0, 0, 0)
+        self.fr_menu_top = QFrame(self.fr_main)
+        self.fr_menu_top.setObjectName(u"fr_menu_top")
+        self.hlay_menu_top = QHBoxLayout(self.fr_menu_top)
+        self.hlay_menu_top.setSpacing(0)
+        self.hlay_menu_top.setObjectName(u"hlay_menu_top")
+        self.hlay_menu_top.setContentsMargins(0, 0, 0, 0)
+        self.lb_mt_ico = QLabel(self.fr_menu_top)
+        self.lb_mt_ico.setObjectName(u"lb_mt_ico")
+
+        self.hlay_menu_top.addWidget(self.lb_mt_ico)
+
+        self.wg_mt_blank = QWidget(self.fr_menu_top)
+        self.wg_mt_blank.setObjectName(u"wg_mt_blank")
+
+        self.hlay_menu_top.addWidget(self.wg_mt_blank)
+
+        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.hlay_menu_top.addItem(self.horizontalSpacer_2)
+
+        self.lb_mt_nom = QLabel(self.fr_menu_top)
+        self.lb_mt_nom.setObjectName(u"lb_mt_nom")
+
+        self.hlay_menu_top.addWidget(self.lb_mt_nom)
+
+        self.horizontalSpacer_1 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.hlay_menu_top.addItem(self.horizontalSpacer_1)
+
+        self.pb_mt_option = QPushButton(self.fr_menu_top)
+        self.pb_mt_option.setObjectName(u"pb_mt_option")
+
+        self.hlay_menu_top.addWidget(self.pb_mt_option)
+
+        self.pb_mt_reduire = QPushButton(self.fr_menu_top)
+        self.pb_mt_reduire.setObjectName(u"pb_mt_reduire")
+
+        self.hlay_menu_top.addWidget(self.pb_mt_reduire)
+
+        self.pb_mt_agrandir = QPushButton(self.fr_menu_top)
+        self.pb_mt_agrandir.setObjectName(u"pb_mt_agrandir")
+
+        self.hlay_menu_top.addWidget(self.pb_mt_agrandir)
+
+        self.pb_mt_quitter = QPushButton(self.fr_menu_top)
+        self.pb_mt_quitter.setObjectName(u"pb_mt_quitter")
+
+        self.hlay_menu_top.addWidget(self.pb_mt_quitter)
+
+
+        self.vlay_fr_main.addWidget(self.fr_menu_top)
+
+        self.fr_body = QFrame(self.fr_main)
+        self.fr_body.setObjectName(u"fr_body")
+        self.fr_body.setFrameShape(QFrame.StyledPanel)
+        self.fr_body.setFrameShadow(QFrame.Raised)
+        self.hlay_body = QVBoxLayout(self.fr_body)
+        self.hlay_body.setSpacing(0)
+        self.hlay_body.setObjectName(u"hlay_body")
+        self.hlay_body.setContentsMargins(0, 0, 0, 0)
+        self.sca_main = QScrollArea(self.fr_body)
         self.sca_main.setObjectName(u"sca_main")
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, 0, 822, 3867))
+        self.vlay_wg.setGeometry(QRect(0, -2317, 818, 3867))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -690,7 +758,7 @@ class Ui_main(object):
         self.tb_demo.setObjectName(u"tb_demo")
         self.page = QWidget()
         self.page.setObjectName(u"page")
-        self.page.setGeometry(QRect(0, 0, 722, 69))
+        self.page.setGeometry(QRect(0, 0, 718, 69))
         self.verticalLayout_2 = QVBoxLayout(self.page)
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
@@ -705,7 +773,7 @@ class Ui_main(object):
         self.tb_demo.addItem(self.page, u"Page 1")
         self.page_2 = QWidget()
         self.page_2.setObjectName(u"page_2")
-        self.page_2.setGeometry(QRect(0, 0, 722, 69))
+        self.page_2.setGeometry(QRect(0, 0, 718, 69))
         self.verticalLayout_3 = QVBoxLayout(self.page_2)
         self.verticalLayout_3.setSpacing(0)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
@@ -727,64 +795,31 @@ class Ui_main(object):
 
         self.sca_main.setWidget(self.vlay_wg)
 
-        self.glay_main.addWidget(self.sca_main, 3, 0, 1, 1)
+        self.hlay_body.addWidget(self.sca_main)
 
-        self.fr_menu_top = QFrame(main)
-        self.fr_menu_top.setObjectName(u"fr_menu_top")
-        self.hlay_menu_top = QHBoxLayout(self.fr_menu_top)
-        self.hlay_menu_top.setSpacing(0)
-        self.hlay_menu_top.setObjectName(u"hlay_menu_top")
-        self.hlay_menu_top.setContentsMargins(0, 0, 0, 0)
-        self.lb_mt_ico = QLabel(self.fr_menu_top)
-        self.lb_mt_ico.setObjectName(u"lb_mt_ico")
 
-        self.hlay_menu_top.addWidget(self.lb_mt_ico)
+        self.vlay_fr_main.addWidget(self.fr_body)
 
-        self.lb_mt_version = QLabel(self.fr_menu_top)
+        self.fr_menu_bottom = QFrame(self.fr_main)
+        self.fr_menu_bottom.setObjectName(u"fr_menu_bottom")
+        self.hlay_menu_bottom = QHBoxLayout(self.fr_menu_bottom)
+        self.hlay_menu_bottom.setSpacing(0)
+        self.hlay_menu_bottom.setObjectName(u"hlay_menu_bottom")
+        self.hlay_menu_bottom.setContentsMargins(0, 0, 0, 0)
+        self.lb_mt_version = QLabel(self.fr_menu_bottom)
         self.lb_mt_version.setObjectName(u"lb_mt_version")
 
-        self.hlay_menu_top.addWidget(self.lb_mt_version)
+        self.hlay_menu_bottom.addWidget(self.lb_mt_version)
 
-        self.wg_mt_blank = QWidget(self.fr_menu_top)
-        self.wg_mt_blank.setObjectName(u"wg_mt_blank")
+        self.horizontalSpacer_4 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.hlay_menu_top.addWidget(self.wg_mt_blank)
-
-        self.horizontalSpacer_2 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.hlay_menu_top.addItem(self.horizontalSpacer_2)
-
-        self.lb_mt_nom = QLabel(self.fr_menu_top)
-        self.lb_mt_nom.setObjectName(u"lb_mt_nom")
-
-        self.hlay_menu_top.addWidget(self.lb_mt_nom)
-
-        self.horizontalSpacer_1 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.hlay_menu_top.addItem(self.horizontalSpacer_1)
-
-        self.pb_mt_option = QPushButton(self.fr_menu_top)
-        self.pb_mt_option.setObjectName(u"pb_mt_option")
-
-        self.hlay_menu_top.addWidget(self.pb_mt_option)
-
-        self.pb_mt_reduire = QPushButton(self.fr_menu_top)
-        self.pb_mt_reduire.setObjectName(u"pb_mt_reduire")
-
-        self.hlay_menu_top.addWidget(self.pb_mt_reduire)
-
-        self.pb_mt_agrandir = QPushButton(self.fr_menu_top)
-        self.pb_mt_agrandir.setObjectName(u"pb_mt_agrandir")
-
-        self.hlay_menu_top.addWidget(self.pb_mt_agrandir)
-
-        self.pb_mt_quitter = QPushButton(self.fr_menu_top)
-        self.pb_mt_quitter.setObjectName(u"pb_mt_quitter")
-
-        self.hlay_menu_top.addWidget(self.pb_mt_quitter)
+        self.hlay_menu_bottom.addItem(self.horizontalSpacer_4)
 
 
-        self.glay_main.addWidget(self.fr_menu_top, 0, 0, 1, 1)
+        self.vlay_fr_main.addWidget(self.fr_menu_bottom)
+
+
+        self.vlay_main.addWidget(self.fr_main)
 
 
         self.retranslateUi(main)
@@ -1013,8 +1048,14 @@ class Ui_main(object):
         self.tw_demo.setSortingEnabled(__sortingEnabled)
 
         self.lb_le_demo.setText(QCoreApplication.translate("main", u"QLineEdit :", None))
+        self.le_demo_th.setPlaceholderText(QCoreApplication.translate("main", u"Je suis le text de test...", None))
+        self.le_demo_tr.setPlaceholderText(QCoreApplication.translate("main", u"Je suis le text de test...", None))
         self.lb_te_demo.setText(QCoreApplication.translate("main", u"QTextEdit :", None))
+        self.te_demo_th.setPlaceholderText(QCoreApplication.translate("main", u"Je suis le text de test...", None))
+        self.te_demo_tr.setPlaceholderText(QCoreApplication.translate("main", u"Je suis le text de test...", None))
         self.lb_pte_demo.setText(QCoreApplication.translate("main", u"QPlainText :", None))
+        self.pte_demo_th.setPlaceholderText(QCoreApplication.translate("main", u"Je suis le text de test...", None))
+        self.pte_demo_tr.setPlaceholderText(QCoreApplication.translate("main", u"Je suis le text de test...", None))
         self.tb_demo.setItemText(self.tb_demo.indexOf(self.page), QCoreApplication.translate("main", u"Page 1", None))
         self.tb_demo.setItemText(self.tb_demo.indexOf(self.page_2), QCoreApplication.translate("main", u"Page 2", None))
         pass

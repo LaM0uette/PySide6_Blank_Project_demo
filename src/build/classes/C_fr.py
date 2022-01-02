@@ -18,16 +18,28 @@ class C_fr(C_wg):
         for wg in lst: C_wg(wg=wg, attrs=kwargs).STL_FR()
 
 
-    def dialog(self, *args):
+    def main(self, *args):
         self.STL(list(args),
                  colors = P_rgb().p_u1(),
                  dim = P_dim().p_all(),
-                 bd=P_bd().bd1_bd_th3(),)
+                 bd=P_bd().bd1_bd_bn1(),)
+
     def menu_top(self, *args):
         self.STL(list(args),
                  colors = P_rgb().p_u1(),
                  dim = P_dim().p_aw_mt())
+    def body(self, *args):
+        self.STL(list(args),
+                 colors = P_rgb().p_u1(),
+                 dim = P_dim().p_all())
     def menu_bottom(self, *args):
+        self.STL(list(args),
+                 colors = P_rgb().p_u3(),
+                 dim = P_dim().p_aw_mb())
+
+
+
+    def menu_bottom_10(self, *args):
         self.STL(list(args),
                  colors = P_rgb().p_u2(),
                  dim = P_dim().p_aw_mb_10())

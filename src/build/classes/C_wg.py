@@ -402,6 +402,7 @@ class C_wg:
                 f"{self.inc}",
             "tr":
                 "QComboBox {"
+                f"background-color: rgba(0, 0, 0, 0);"
                 f"color: rgb{self.c3};"
                 f"selection-background-color: rgb{self.c3};"
                 f"selection-color: rgb{self.c1};"
@@ -549,6 +550,7 @@ class C_wg:
                 "}"
         
                 "QDateEdit {"
+                f"background-color: rgba(0, 0, 0, 0);"
                 f"color: rgb{self.c3};"
                 f"selection-background-color: rgb{self.c3};"
                 f"selection-color: rgb{self.c1};"
@@ -643,7 +645,8 @@ class C_wg:
 
         stl = {
             "th":
-                ".QFrame {"
+                f".QFrame#{self.wg.objectName()} "
+                "{"
                 f"background-color: rgb{self.c1};"
                 "}"
 
@@ -1006,7 +1009,7 @@ class C_wg:
 
         stl = {
             "th":
-                "QProgressDialog {"
+                "QProgressBar {"
                 f"background-color: rgb{self.c1};"
                 "}"
 
@@ -1072,6 +1075,7 @@ class C_wg:
                 f"background-color: rgb{self.c3};"
                 "}"
                 "QTableView {"
+                f"background-color: rgba(0, 0, 0, 0);"
                 f"gridline-color: rgb{self.c3};"
                 f"color: rgb{self.c3};"
                 f"border: {P_style().bd()}px solid rgb{self.c3};"
@@ -1135,6 +1139,7 @@ class C_wg:
                 f"{self.inc}",
             "tr":
                 "QLineEdit, QPlainTextEdit, QTextEdit {"
+                f"background-color: rgba(0, 0, 0, 0);"
                 "}"
 
                 f"{self.inc}",

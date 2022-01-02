@@ -63,7 +63,7 @@ class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
 
         # QFrame
         try:
-            C_fr().menu_bottom(self.fr_pg_dlg_info)
+            C_fr().menu_bottom_10(self.fr_pg_dlg_info)
         except: pass
         finally: pass
 
