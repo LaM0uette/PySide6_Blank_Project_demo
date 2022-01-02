@@ -19,13 +19,21 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.setupUi(self)
         self.INIT()
 
+        sizegrip = QtWidgets.QSizeGrip(self)
+        sizegrip.setStyleSheet("QSizeGrip {"
+                               f"image: url({P_img().option()}th3.svg);"
+                               "width: 20px;"
+                               "height: 20px;"
+                               "}")
+        self.vlay_main.addWidget(sizegrip, 99, QtCore.Qt.AlignBottom | QtCore.Qt.AlignRight)
+
 
     ### INITIALISATION
     def IN_BASE(self):
         ## Fenetre
         self.setWindowTitle(config.nom)
-        self.setFixedWidth(config.widht)
-        self.setFixedHeight(config.height)
+        # self.setFixedWidth(config.widht)
+        # self.setFixedHeight(config.height)
         self.setWindowOpacity(config.opacity)
     def IN_CLASSE(self):  # sourcery skip: extract-method
         In_classe(ui=self)
@@ -205,6 +213,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
     ### ACTIONS
+    ""
 
 
     ### FONCTIONS

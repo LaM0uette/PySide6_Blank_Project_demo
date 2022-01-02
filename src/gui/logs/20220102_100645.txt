@@ -1,0 +1,11 @@
+[02/01/2022 - 10:06:45,03] Conversion des fichiers ui : 
+ 
+ 
+[02/01/2022 - 10:06:45,05] Conversion du fichier dlg.ui en cours... 
+[02/01/2022 - 10:06:45,05] Conversion du fichier dlg.ui terminé avec succés ! 
+ 
+[02/01/2022 - 10:06:45,05] Conversion du fichier main.ui en cours... 
+[02/01/2022 - 10:06:45,05] Conversion du fichier main.ui terminé avec succés ! 
+ 
+ 
+[02/01/2022 - 10:06:45,28] Conversion des fichiers ui terminés avec succés ! 
