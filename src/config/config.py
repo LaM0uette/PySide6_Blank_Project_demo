@@ -21,5 +21,6 @@ opacity = float(cfg["config"]["opacity"])
 cur = cfg["config"]["cur"]
 
 ### var _____________________
-auto_reload = True if cfg["var"]["autoreload"].lower() == "true" else False
-auto_close = True if cfg["var"]["autoClose"].lower() == "true" else False
+auto_reload = cfg["var"]["autoreload"].lower() == "true"
+auto_close = cfg["var"]["autoClose"].lower() == "true"
+resize = cfg["var"]["resize"].lower() == "true"

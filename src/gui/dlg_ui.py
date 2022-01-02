@@ -70,39 +70,64 @@ class Ui_Dlg(object):
 
         self.stk_dlg = QStackedWidget(self.fr_main)
         self.stk_dlg.setObjectName(u"stk_dlg")
-        self.pg_dlg_info = QWidget()
-        self.pg_dlg_info.setObjectName(u"pg_dlg_info")
-        self.vlay_pg_dlg_info = QVBoxLayout(self.pg_dlg_info)
+        self.pg_dlg_msg = QWidget()
+        self.pg_dlg_msg.setObjectName(u"pg_dlg_msg")
+        self.vlay_pg_dlg_info = QVBoxLayout(self.pg_dlg_msg)
         self.vlay_pg_dlg_info.setSpacing(0)
         self.vlay_pg_dlg_info.setObjectName(u"vlay_pg_dlg_info")
         self.vlay_pg_dlg_info.setContentsMargins(0, 0, 0, 0)
-        self.lb_info_texte = QLabel(self.pg_dlg_info)
-        self.lb_info_texte.setObjectName(u"lb_info_texte")
+        self.lb_msg_texte = QLabel(self.pg_dlg_msg)
+        self.lb_msg_texte.setObjectName(u"lb_msg_texte")
 
-        self.vlay_pg_dlg_info.addWidget(self.lb_info_texte)
+        self.vlay_pg_dlg_info.addWidget(self.lb_msg_texte)
 
-        self.fr_pg_dlg_info = QFrame(self.pg_dlg_info)
-        self.fr_pg_dlg_info.setObjectName(u"fr_pg_dlg_info")
-        self.hlay_pg_dlg_info = QHBoxLayout(self.fr_pg_dlg_info)
-        self.hlay_pg_dlg_info.setSpacing(5)
-        self.hlay_pg_dlg_info.setObjectName(u"hlay_pg_dlg_info")
-        self.hlay_pg_dlg_info.setContentsMargins(0, 5, 5, 5)
+        self.fr_pg_dlg_msg = QFrame(self.pg_dlg_msg)
+        self.fr_pg_dlg_msg.setObjectName(u"fr_pg_dlg_msg")
+        self.hlay_pg_dlg_msg = QHBoxLayout(self.fr_pg_dlg_msg)
+        self.hlay_pg_dlg_msg.setSpacing(2)
+        self.hlay_pg_dlg_msg.setObjectName(u"hlay_pg_dlg_msg")
+        self.hlay_pg_dlg_msg.setContentsMargins(0, 2, 0, 2)
         self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.hlay_pg_dlg_info.addItem(self.horizontalSpacer)
+        self.hlay_pg_dlg_msg.addItem(self.horizontalSpacer)
 
-        self.pb_dlg_info_ok = QPushButton(self.fr_pg_dlg_info)
-        self.pb_dlg_info_ok.setObjectName(u"pb_dlg_info_ok")
+        self.pb_dlg_msg_ok = QPushButton(self.fr_pg_dlg_msg)
+        self.pb_dlg_msg_ok.setObjectName(u"pb_dlg_msg_ok")
 
-        self.hlay_pg_dlg_info.addWidget(self.pb_dlg_info_ok)
+        self.hlay_pg_dlg_msg.addWidget(self.pb_dlg_msg_ok)
 
 
-        self.vlay_pg_dlg_info.addWidget(self.fr_pg_dlg_info)
+        self.vlay_pg_dlg_info.addWidget(self.fr_pg_dlg_msg)
 
-        self.stk_dlg.addWidget(self.pg_dlg_info)
-        self.page_4 = QWidget()
-        self.page_4.setObjectName(u"page_4")
-        self.stk_dlg.addWidget(self.page_4)
+        self.stk_dlg.addWidget(self.pg_dlg_msg)
+        self.pg_dlg_alerte = QWidget()
+        self.pg_dlg_alerte.setObjectName(u"pg_dlg_alerte")
+        self.verticalLayout = QVBoxLayout(self.pg_dlg_alerte)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.lb_alerte_texte = QLabel(self.pg_dlg_alerte)
+        self.lb_alerte_texte.setObjectName(u"lb_alerte_texte")
+
+        self.verticalLayout.addWidget(self.lb_alerte_texte)
+
+        self.fr_pg_dlg_alerte = QFrame(self.pg_dlg_alerte)
+        self.fr_pg_dlg_alerte.setObjectName(u"fr_pg_dlg_alerte")
+        self.hlay_pg_dlg_info_2 = QHBoxLayout(self.fr_pg_dlg_alerte)
+        self.hlay_pg_dlg_info_2.setSpacing(2)
+        self.hlay_pg_dlg_info_2.setObjectName(u"hlay_pg_dlg_info_2")
+        self.hlay_pg_dlg_info_2.setContentsMargins(0, 2, 0, 2)
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.hlay_pg_dlg_info_2.addItem(self.horizontalSpacer_3)
+
+        self.pb_dlg_alerte_ok = QPushButton(self.fr_pg_dlg_alerte)
+        self.pb_dlg_alerte_ok.setObjectName(u"pb_dlg_alerte_ok")
+
+        self.hlay_pg_dlg_info_2.addWidget(self.pb_dlg_alerte_ok)
+
+
+        self.verticalLayout.addWidget(self.fr_pg_dlg_alerte)
+
+        self.stk_dlg.addWidget(self.pg_dlg_alerte)
 
         self.vlay_fr_main.addWidget(self.stk_dlg)
 
@@ -112,7 +137,7 @@ class Ui_Dlg(object):
 
         self.retranslateUi(Dlg)
 
-        self.stk_dlg.setCurrentIndex(0)
+        self.stk_dlg.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(Dlg)

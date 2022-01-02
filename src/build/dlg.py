@@ -63,13 +63,13 @@ class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
 
         # QFrame
         try:
-            C_fr().menu_bottom_10(self.fr_pg_dlg_info)
+            C_fr().menu_bottom_dlg(self.fr_pg_dlg_msg)
         except: pass
         finally: pass
 
         # QLabel
         try:
-            C_lb().p(self.lb_info_texte)
+            C_lb().p(self.lb_msg_texte)
         except: pass
         finally: pass
 
@@ -80,7 +80,7 @@ class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
 
         # QPushButton
         try:
-            C_pb().ok(self.pb_dlg_info_ok)
+            C_pb().ok(self.pb_dlg_msg_ok)
         except: pass
         finally: pass
 
@@ -149,17 +149,25 @@ class Dlg(dlg_ui.Ui_Dlg, QtWidgets.QWidget):
 
 
     ### ACTIONS
-    def INFO(self):
+    def MSG(self, ico):
+        self.stk_dlg.setCurrentWidget(self.pg_dlg_msg)
+
+        if self.ico == P_img().main():
+            self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{ico}th3.svg"))
+            self.lb_mt_ico.setScaledContents(True)
+
         # Données
-        self.lb_info_texte.setText(self.msg)
-        self.pb_dlg_info_ok.setText(self.txt_pb_ok)
+        self.lb_msg_texte.setText(self.msg)
+        self.pb_dlg_msg_ok.setText(self.txt_pb_ok)
 
         # Connection
-        self.pb_dlg_info_ok.clicked.connect(self.INFO_OK)
+        self.pb_dlg_msg_ok.clicked.connect(self.MSG_OK)
+    def INFO(self): self.MSG(ico=P_img().info())
+    def ALERTE(self): self.MSG(ico=P_img().alerte())
 
 
     ### FONCTIONS
-    def INFO_OK(self): self.destroy()
+    def MSG_OK(self): self.destroy()
 
 
     ### EVENT

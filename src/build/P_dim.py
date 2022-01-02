@@ -8,11 +8,14 @@ class P_dim(Dim):
     def p_aw_mt(self): return {"w": None, "h": self.h_mt()}
     def p_aw_mb(self): return {"w": None, "h": self.h_mb()}
 
-    def p_aw_mb_10(self): return {"w": None, "h": self.h_mb_10()}
+    def p_aw_mb_dlg_2(self): return {"w": None, "h": self.h_mb_dlg_2()}
 
     def p_c_mt(self): return {"w": self.h_mt(), "h": self.h_mt()}
+    def p_c_mb(self): return {"w": self.h_mb(), "h": self.h_mb()}
     def p_r_mt(self): return {"w": self.h_mt()*1.4, "h": self.h_mt()}
-    def p_r_mb(self): return {"w": self.h_mb()*4, "h": self.h_mb()}
+    def p_r_mb(self): return {"w": self.h_mb()*1.4, "h": self.h_mb()}
+
+    def p_r_mb_dlg(self): return {"w": self.h_h6(), "h": self.h_mb_dlg()}
 
     def p_aw_h0(self): return {"w": None, "h": self.h_h0()}
     def p_aw_h1(self): return {"w": None, "h": self.h_h1()}

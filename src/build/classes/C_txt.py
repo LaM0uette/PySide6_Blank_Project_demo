@@ -26,7 +26,7 @@ class C_txt(C_wg):
                  colors_type = "th",
                  colors = P_rgb().p_th3(),
                  dim = P_dim().p_aw_demo(),
-                 font=P_font().sous_titre(),
+                 font=P_font().h2(),
                  align=P_align().c_c(),
                  bd = P_bd().bd0010_bd_th2())
     def demotr(self, *args):
@@ -34,7 +34,7 @@ class C_txt(C_wg):
                  colors_type = "tr",
                  colors = P_rgb().p_th1(),
                  dim = P_dim().p_aw_demo(),
-                 font=P_font().sous_titre(),
+                 font=P_font().h2(),
                  align=P_align().c_c(),
                  bd = P_bd().bd0010_bd_th2())
     def demo_th(self, *args):

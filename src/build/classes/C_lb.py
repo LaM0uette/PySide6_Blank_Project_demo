@@ -25,33 +25,33 @@ class C_lb(C_wg):
         for wg in lst:
             C_wg(wg=wg, attrs=kwargs).STL_LB()
 
-    def titre(self, *args):
+    def h1(self, *args):
         self.STL(list(args),
                  colors_type = "tr",
                  colors = P_rgb().p_u3(),
                  dim = P_dim().p_aw_h8(),
-                 font=P_font().titre(),
+                 font=P_font().h1(),
                  align=P_align().c_c())
-    def sous_titre(self, *args):
+    def h2(self, *args):
         self.STL(list(args),
                  colors_type = "tr",
                  colors = P_rgb().p_u3(),
                  dim = P_dim().p_aw_h9(),
-                 font=P_font().sous_titre(),
+                 font=P_font().h2(),
                  align=P_align().c_c())
-    def h3_titre(self, *args):
+    def h3(self, *args):
         self.STL(list(args),
                  colors_type = "tr",
                  colors = P_rgb().p_u3(),
                  dim = P_dim().p_aw_h9(),
-                 font=P_font().h3_titre(),
+                 font=P_font().h3(),
                  align=P_align().c_c())
-    def h4_titre(self, *args):
+    def h4(self, *args):
         self.STL(list(args),
                  colors_type = "tr",
                  colors = P_rgb().p_u3(),
                  dim = P_dim().p_aw_h9(),
-                 font=P_font().h4_titre(),
+                 font=P_font().h4(),
                  align=P_align().c_c())
     def p(self, *args):
         self.STL(list(args),
@@ -62,11 +62,19 @@ class C_lb(C_wg):
                  align=P_align().l_c(),
                  word_wrap=True,)
 
+    def mb(self, *args):
+        self.STL(list(args),
+                 colors_type = "tr",
+                 colors = P_rgb().p_u3(),
+                 dim = P_dim().p_aw_mb(),
+                 font=P_font().h4(),
+                 align=P_align().l_c())
+
     def demo(self, *args):
         self.STL(list(args),
                  colors_type = "tr",
                  colors = P_rgb().p_th3(),
                  dim = P_dim().p_aw_h8(),
-                 font=P_font().titre(),
+                 font=P_font().h1(),
                  align=P_align().c_b(),
                  bd = P_bd().bd0010_bd_bn1())

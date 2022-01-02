@@ -19,21 +19,14 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.setupUi(self)
         self.INIT()
 
-        # sizegrip = QtWidgets.QSizeGrip(self)
-        # sizegrip.setStyleSheet("QSizeGrip {"
-        #                        f"image: url({P_img().option()}th3.svg);"
-        #                        "width: 20px;"
-        #                        "height: 20px;"
-        #                        "}")
-        # self.vlay_main.addWidget(sizegrip, 99, QtCore.Qt.AlignBottom | QtCore.Qt.AlignRight)
 
 
     ### INITIALISATION
     def IN_BASE(self):
         ## Fenetre
         self.setWindowTitle(config.nom)
-        # self.setFixedWidth(config.widht)
-        # self.setFixedHeight(config.height)
+        self.setMinimumWidth(config.widht)
+        self.setMinimumHeight(config.height)
         self.setWindowOpacity(config.opacity)
     def IN_CLASSE(self):  # sourcery skip: extract-method
         # QLineEdit | QTextEdit | QPlainTextEdit
@@ -84,7 +77,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # QLabel
         try:
             # Version
-            C_lb().h4_titre(self.lb_mt_version)
+            C_lb().mb(self.lb_mb_version)
 
             # Demo
             C_lb().demo(self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
@@ -181,11 +174,23 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.lb_mt_ico.setScaledContents(True)
         self.lb_mt_nom.setText(config.nom)
 
-        # Version de l'app
-        self.lb_mt_version.setText(str(config.version))
-
         # Widget blanc pour centrer le nom de l'app
-        Fct(wg=self.wg_mt_blank, w=dim.get("w") * 3, h=dim.get("h")).DIM()
+        dim = P_dim().p_r_mb()
+        Fct(wg=self.wg_mt_blank, w=dim.get("w") * 4, h=dim.get("h")).DIM()
+
+        # Version de l'app
+        self.lb_mb_version.setText(f" Version : {config.version}")
+
+        # SizeGrip
+        if config.resize:
+            self.sizegrip = QtWidgets.QSizeGrip(self)
+            self.sizegrip.setCursor(Fct(cur="fleche_nwse").CUR())
+            self.sizegrip.setStyleSheet("QSizeGrip {"
+                                   f"image: url({P_img().resize()}th3.svg);"
+                                   f"width: {P_dim().h_mb()}px;"
+                                   f"height: {P_dim().h_mb()}px;"
+                                   "}")
+            self.hlay_menu_bottom.addWidget(self.sizegrip)
     def IN_WG_BASE(self):
         pass
     def IN_CONNECTIONS(self):
@@ -210,9 +215,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
     ### FONCTIONS
-    def FCT_OPTION(self):
-        self.dlg = Dlg(msg="\tFichier créé avec succés dans le dossier source.", ico=P_img().info())
-        self.dlg.INFO()
+    def FCT_OPTION(self): self.dlg = Dlg(msg="\tFichier créé avec succés dans le dossier source.").INFO()
 
 
     ### EVENT
@@ -222,16 +225,19 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         geo.moveCenter(center)
         self.move(geo.topLeft())
 
-        self.setFixedWidth(config.widht)
-        self.setFixedHeight(config.height)
+        self.setMinimumWidth(config.widht)
+        self.setMinimumHeight(config.height)
     def EVT_AGRANDIR_GDT(self):
         if self.windowState() == QtCore.Qt.WindowMaximized:
             self.setWindowState(QtCore.Qt.WindowNoState)
             self.EVT_CENTRE_FEN()
+            self.sizegrip.show()
         else:
             self.setWindowState(QtCore.Qt.WindowMaximized)
+            self.sizegrip.hide()
     def EVT_REDUIRE_GDT(self):
         self.setWindowState(QtCore.Qt.WindowNoState)
+        self.sizegrip.show()
         self.EVT_CENTRE_FEN()
         self.setWindowState(QtCore.Qt.WindowMinimized)
     def EVT_REDUIRE_HIDE_GDT(self):
@@ -265,6 +271,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
                 act_move(event)
             if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h_mt() and self.windowState() == QtCore.Qt.WindowMaximized:
                 self.setWindowState(QtCore.Qt.WindowNoState)
+                self.sizegrip.show()
                 act_move(event)
         except AttributeError:
             pass

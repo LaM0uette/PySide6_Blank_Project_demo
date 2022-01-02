@@ -24,5 +24,5 @@ class C_tb(C_wg):
         self.STL(list(args),
                  colors=P_rgb().p_th1(),
                  dim=P_dim().p_list_demo(),
-                 font=P_font().sous_titre(),
-                 bd=P_bd().bd1101_bd_bn1(),)
+                 font=P_font().h2(),
+                 bd=P_bd().bd1101_bd_bn1(), )

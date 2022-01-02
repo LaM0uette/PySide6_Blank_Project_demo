@@ -1768,7 +1768,7 @@
           <number>0</number>
          </property>
          <item>
-          <widget class="QLabel" name="lb_mt_version"/>
+          <widget class="QLabel" name="lb_mb_version"/>
          </item>
          <item>
           <spacer name="horizontalSpacer_4">

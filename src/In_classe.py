@@ -31,7 +31,7 @@ class In_classe:
 
         # QLabel
         try:
-            C_lb().h3_titre(ui.lb_mt_nom)
+            C_lb().h3(ui.lb_mt_nom)
         except: pass
         finally: pass
 

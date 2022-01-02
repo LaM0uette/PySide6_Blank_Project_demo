@@ -442,6 +442,7 @@ class C_wg:
 
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
+        self.wg.lineEdit().setFont(Fct(font_size=self.font).FONT())
     def STL_DE(self):
         self.wg.setCalendarPopup(True)
         self.STL_ALL()

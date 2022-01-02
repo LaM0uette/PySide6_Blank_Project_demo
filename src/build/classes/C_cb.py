@@ -26,16 +26,16 @@ class C_cb(C_wg):
                  colors_type="th",
                  colors=P_rgb().p_th1(),
                  dim=P_dim().p_aw_demo(),
-                 font = P_font().h3_titre(),
+                 font=P_font().h3(),
                  bd=P_bd().bd0010_bd_th3(),
                  edit=True,
-                 cur="souris_main",)
+                 cur="souris_main")
     def demo_tr(self, *args):
         self.STL(list(args),
                  colors_type="tr",
                  colors=P_rgb().p_th1(),
                  dim=P_dim().p_aw_demo(),
-                 font=P_font().h3_titre(),
+                 font=P_font().h3(),
                  bd=P_bd().bd0010_bd_th3(),
                  edit=False,
-                 cur="main",)
+                 cur="main")

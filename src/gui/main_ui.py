@@ -806,10 +806,10 @@ class Ui_main(object):
         self.hlay_menu_bottom.setSpacing(0)
         self.hlay_menu_bottom.setObjectName(u"hlay_menu_bottom")
         self.hlay_menu_bottom.setContentsMargins(0, 0, 0, 0)
-        self.lb_mt_version = QLabel(self.fr_menu_bottom)
-        self.lb_mt_version.setObjectName(u"lb_mt_version")
+        self.lb_mb_version = QLabel(self.fr_menu_bottom)
+        self.lb_mb_version.setObjectName(u"lb_mb_version")
 
-        self.hlay_menu_bottom.addWidget(self.lb_mt_version)
+        self.hlay_menu_bottom.addWidget(self.lb_mb_version)
 
         self.horizontalSpacer_4 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 

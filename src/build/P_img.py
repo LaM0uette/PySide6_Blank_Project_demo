@@ -15,6 +15,7 @@ class P_img:
     def reduire(self): return self.SVG("ui", "reduire")
     def agrandir(self): return self.SVG("ui", "agrandir")
     def quitter(self): return self.SVG("ui", "quitter")
+    def resize(self): return self.SVG("ui", "resize")
         #check
     def check(self): return self.SVG("ui", "check")
     def valider(self): return self.SVG("ui", "valider")
