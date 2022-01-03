@@ -180,6 +180,8 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_dlg_input_ok.setDefault(True)
 
     def OPTION(self):
+        def __get_item_trw(item):
+            print(item.text(0))
         def __appliquer():
             self.pb_dlg_option_appliquer.setVisible(False)
 
@@ -195,14 +197,12 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_dlg_option_annuler.setText(self.txt_pb_annuler)
 
         # Connection
+        self.trw_option.currentItemChanged.connect(__get_item_trw)
+
         self.pb_dlg_option_ok.clicked.connect(self._rep)
         self.pb_dlg_option_appliquer.clicked.connect(__appliquer)
         self.pb_dlg_option_annuler.clicked.connect(self._close)
         self.pb_dlg_option_ok.setDefault(True)
-
-
-        # TEST #
-
 
 
     ### EVENT
