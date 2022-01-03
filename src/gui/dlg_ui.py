@@ -23,7 +23,7 @@ class Ui_Dlg(object):
     def setupUi(self, Dlg):
         if not Dlg.objectName():
             Dlg.setObjectName(u"Dlg")
-        Dlg.resize(600, 165)
+        Dlg.resize(650, 699)
         self.glay_dlg = QGridLayout(Dlg)
         self.glay_dlg.setSpacing(0)
         self.glay_dlg.setObjectName(u"glay_dlg")
@@ -190,6 +190,35 @@ class Ui_Dlg(object):
         self.vlay_pg_dlg_input.addWidget(self.fr_pg_dlg_input)
 
         self.stk_dlg.addWidget(self.pg_dlg_input)
+        self.pg_dlg_option = QWidget()
+        self.pg_dlg_option.setObjectName(u"pg_dlg_option")
+        self.fr_pg_dlg_option = QFrame(self.pg_dlg_option)
+        self.fr_pg_dlg_option.setObjectName(u"fr_pg_dlg_option")
+        self.fr_pg_dlg_option.setGeometry(QRect(10, 640, 631, 27))
+        self.hlay_pg_dlg_option = QHBoxLayout(self.fr_pg_dlg_option)
+        self.hlay_pg_dlg_option.setSpacing(2)
+        self.hlay_pg_dlg_option.setObjectName(u"hlay_pg_dlg_option")
+        self.hlay_pg_dlg_option.setContentsMargins(0, 2, 0, 2)
+        self.horizontalSpacer_5 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.hlay_pg_dlg_option.addItem(self.horizontalSpacer_5)
+
+        self.pb_dlg_option_appliquer = QPushButton(self.fr_pg_dlg_option)
+        self.pb_dlg_option_appliquer.setObjectName(u"pb_dlg_option_appliquer")
+
+        self.hlay_pg_dlg_option.addWidget(self.pb_dlg_option_appliquer)
+
+        self.pb_dlg_option_ok = QPushButton(self.fr_pg_dlg_option)
+        self.pb_dlg_option_ok.setObjectName(u"pb_dlg_option_ok")
+
+        self.hlay_pg_dlg_option.addWidget(self.pb_dlg_option_ok)
+
+        self.pb_dlg_option_annuler = QPushButton(self.fr_pg_dlg_option)
+        self.pb_dlg_option_annuler.setObjectName(u"pb_dlg_option_annuler")
+
+        self.hlay_pg_dlg_option.addWidget(self.pb_dlg_option_annuler)
+
+        self.stk_dlg.addWidget(self.pg_dlg_option)
 
         self.vlay_fr_main.addWidget(self.stk_dlg)
 
@@ -199,7 +228,7 @@ class Ui_Dlg(object):
 
         self.retranslateUi(Dlg)
 
-        self.stk_dlg.setCurrentIndex(2)
+        self.stk_dlg.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(Dlg)

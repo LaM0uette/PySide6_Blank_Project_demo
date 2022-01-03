@@ -78,6 +78,12 @@ class C_pb(C_wg):
                  colors = P_rgb().p_vert_th2(),
                  dim = P_dim().p_r_mb_dlg(),
                  cur = "souris_main")
+    def appliquer(self, *args):
+        self.STL(list(args),
+                 colors_type = "txt_inv",
+                 colors = P_rgb().p_vert_th2(),
+                 dim = P_dim().p_r_mb_dlg(),
+                 cur = "souris_main")
     def annuler(self, *args):
         self.STL(list(args),
                  colors_type = "txt_inv",

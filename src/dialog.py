@@ -31,15 +31,19 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         if self.txt_pb_ok is None:
             self.txt_pb_ok = "Ok"
 
+        self.txt_pb_appliquer = self.kwargs.get("txt_pb_appliquer")
+        if self.txt_pb_appliquer is None:
+            self.txt_pb_appliquer = "Appliquer"
+
         self.txt_pb_annuler = self.kwargs.get("txt_pb_annuler")
         if self.txt_pb_annuler is None:
             self.txt_pb_annuler = "Annuler"
 
 
-        self.width = self.kwargs.get("w")
+        self.width = self.kwargs.get("width")
         if self.width is None: self.width = config.widht / 2
 
-        self.height = self.kwargs.get("h")
+        self.height = self.kwargs.get("height")
         if self.height is None: self.height = config.height / 4
 
         self.opacity = self.kwargs.get("opacity")
@@ -72,6 +76,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             C_.menu_bottom_dlg(self.fr_pg_dlg_msg)
             C_.menu_bottom_dlg(self.fr_pg_dlg_rep)
             C_.menu_bottom_dlg(self.fr_pg_dlg_input)
+            C_.menu_bottom_dlg(self.fr_pg_dlg_option)
 
         # QLabel
         with C_lb() as C_:
@@ -86,6 +91,9 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             C_.annuler(self.pb_dlg_rep_annuler)
             C_.ok(self.pb_dlg_input_ok)
             C_.annuler(self.pb_dlg_input_annuler)
+            C_.ok(self.pb_dlg_option_ok)
+            C_.appliquer(self.pb_dlg_option_appliquer)
+            C_.annuler(self.pb_dlg_option_annuler)
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur="souris").CUR())
@@ -101,7 +109,8 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.lb_mt_ico.setScaledContents(True)
         self.lb_mt_nom.setText(self.titre)
     def IN_WG_BASE(self):
-        pass
+        # Option
+        self.pb_dlg_option_appliquer.setVisible(False)
     def IN_CONNECTIONS(self):
         ## Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
@@ -154,7 +163,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_dlg_rep_annuler.clicked.connect(self._close)
         self.pb_dlg_rep_ok.setDefault(True)
     def INPUT(self):
-        def _input():
+        def __input():
             self.sgn_txt.emit(self.le_input.text())
             self.close()
 
@@ -166,9 +175,25 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_dlg_input_annuler.setText(self.txt_pb_annuler)
 
         # Connection
-        self.pb_dlg_input_ok.clicked.connect(_input)
+        self.pb_dlg_input_ok.clicked.connect(__input)
         self.pb_dlg_input_annuler.clicked.connect(self._close)
         self.pb_dlg_input_ok.setDefault(True)
+    def OPTION(self):
+        def __appliquer():
+            self.pb_dlg_option_appliquer.setVisible(False)
+
+        self._set_dlg(pg=self.pg_dlg_option)
+
+        # Données
+        self.pb_dlg_option_ok.setText(self.txt_pb_ok)
+        self.pb_dlg_option_appliquer.setText(self.txt_pb_appliquer)
+        self.pb_dlg_option_annuler.setText(self.txt_pb_annuler)
+
+        # Connection
+        self.pb_dlg_option_ok.clicked.connect(self._rep)
+        self.pb_dlg_option_appliquer.clicked.connect(__appliquer)
+        self.pb_dlg_option_annuler.clicked.connect(self._close)
+        self.pb_dlg_option_ok.setDefault(True)
 
 
     ### EVENT

@@ -191,7 +191,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
     ### FONCTIONS
     def FCT_OPTION(self):
-        t = Dlg(msg="Tapez le mot de passe :").INPUT()
+        t = Dlg().OPTION()
         print(t)
 
 

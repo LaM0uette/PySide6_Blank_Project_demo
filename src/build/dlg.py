@@ -31,6 +31,12 @@ class Dlg:
         self.dlg.INPUT()
         self.dlg.exec()
         return self.rtn
+    def OPTION(self):
+        dlg = Dialog(titre="Option", ico=P_img().option(), txt_pb_ok="Valider", width=650, height=700)
+        dlg.sgn_rep.connect(self.RTN_SGN_REP)
+        dlg.OPTION()
+        dlg.exec()
+        return self.rtn
 
 
     # CUSTOMS
