@@ -110,7 +110,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.lb_mt_nom.setText(self.titre)
     def IN_WG_BASE(self):
         # Option
-        self.pb_dlg_option_appliquer.setVisible(False)
+        self.pb_dlg_option_appliquer.setVisible(True)
     def IN_CONNECTIONS(self):
         ## Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
@@ -178,9 +178,14 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_dlg_input_ok.clicked.connect(__input)
         self.pb_dlg_input_annuler.clicked.connect(self._close)
         self.pb_dlg_input_ok.setDefault(True)
+
     def OPTION(self):
         def __appliquer():
             self.pb_dlg_option_appliquer.setVisible(False)
+
+            dl = Dialog()
+            dl.MSG(ico=P_img().info())
+            dl.exec()
 
         self._set_dlg(pg=self.pg_dlg_option)
 
@@ -194,6 +199,10 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_dlg_option_appliquer.clicked.connect(__appliquer)
         self.pb_dlg_option_annuler.clicked.connect(self._close)
         self.pb_dlg_option_ok.setDefault(True)
+
+
+        # TEST #
+
 
 
     ### EVENT

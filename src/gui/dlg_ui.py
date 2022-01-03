@@ -16,8 +16,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
-    QLabel, QLineEdit, QPushButton, QSizePolicy,
-    QSpacerItem, QStackedWidget, QVBoxLayout, QWidget)
+    QHeaderView, QLabel, QLineEdit, QPushButton,
+    QSizePolicy, QSpacerItem, QStackedWidget, QTreeWidget,
+    QTreeWidgetItem, QVBoxLayout, QWidget)
 
 class Ui_Dlg(object):
     def setupUi(self, Dlg):
@@ -218,6 +219,16 @@ class Ui_Dlg(object):
 
         self.hlay_pg_dlg_option.addWidget(self.pb_dlg_option_annuler)
 
+        self.treeWidget = QTreeWidget(self.pg_dlg_option)
+        QTreeWidgetItem(self.treeWidget)
+        QTreeWidgetItem(self.treeWidget)
+        __qtreewidgetitem = QTreeWidgetItem(self.treeWidget)
+        __qtreewidgetitem1 = QTreeWidgetItem(__qtreewidgetitem)
+        __qtreewidgetitem2 = QTreeWidgetItem(__qtreewidgetitem1)
+        __qtreewidgetitem3 = QTreeWidgetItem(__qtreewidgetitem2)
+        QTreeWidgetItem(__qtreewidgetitem3)
+        self.treeWidget.setObjectName(u"treeWidget")
+        self.treeWidget.setGeometry(QRect(70, 60, 491, 461))
         self.stk_dlg.addWidget(self.pg_dlg_option)
 
         self.vlay_fr_main.addWidget(self.stk_dlg)
@@ -236,6 +247,31 @@ class Ui_Dlg(object):
 
     def retranslateUi(self, Dlg):
         self.le_input.setPlaceholderText(QCoreApplication.translate("Dlg", u"...", None))
+        ___qtreewidgetitem = self.treeWidget.headerItem()
+        ___qtreewidgetitem.setText(4, QCoreApplication.translate("Dlg", u"New Column", None));
+        ___qtreewidgetitem.setText(3, QCoreApplication.translate("Dlg", u"New Column", None));
+        ___qtreewidgetitem.setText(2, QCoreApplication.translate("Dlg", u"New Column", None));
+        ___qtreewidgetitem.setText(1, QCoreApplication.translate("Dlg", u"New Column", None));
+        ___qtreewidgetitem.setText(0, QCoreApplication.translate("Dlg", u"1", None));
+
+        __sortingEnabled = self.treeWidget.isSortingEnabled()
+        self.treeWidget.setSortingEnabled(False)
+        ___qtreewidgetitem1 = self.treeWidget.topLevelItem(0)
+        ___qtreewidgetitem1.setText(0, QCoreApplication.translate("Dlg", u"New Item", None));
+        ___qtreewidgetitem2 = self.treeWidget.topLevelItem(1)
+        ___qtreewidgetitem2.setText(0, QCoreApplication.translate("Dlg", u"New Item", None));
+        ___qtreewidgetitem3 = self.treeWidget.topLevelItem(2)
+        ___qtreewidgetitem3.setText(0, QCoreApplication.translate("Dlg", u"New Item", None));
+        ___qtreewidgetitem4 = ___qtreewidgetitem3.child(0)
+        ___qtreewidgetitem4.setText(0, QCoreApplication.translate("Dlg", u"New Subitem", None));
+        ___qtreewidgetitem5 = ___qtreewidgetitem4.child(0)
+        ___qtreewidgetitem5.setText(0, QCoreApplication.translate("Dlg", u"New Subitem", None));
+        ___qtreewidgetitem6 = ___qtreewidgetitem5.child(0)
+        ___qtreewidgetitem6.setText(0, QCoreApplication.translate("Dlg", u"New Subitem", None));
+        ___qtreewidgetitem7 = ___qtreewidgetitem6.child(0)
+        ___qtreewidgetitem7.setText(0, QCoreApplication.translate("Dlg", u"New Subitem", None));
+        self.treeWidget.setSortingEnabled(__sortingEnabled)
+
         pass
     # retranslateUi
 
