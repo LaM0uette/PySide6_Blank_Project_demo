@@ -26,20 +26,17 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
     ### INITIALISATION
     def IN_BASE(self):
-        ## Fenetre
+        # Fenetre
         self.setWindowTitle(config.nom)
         self.setWindowOpacity(config.opacity)
         self._resize()
-    def IN_CLASSE(self):  # sourcery skip: extract-method
+    def IN_CLASSE(self):
         # QLineEdit | QTextEdit | QPlainTextEdit
-        try:
-            # Demo
-            C_txt().demoth(self.le_demo_th)
-            C_txt().demotr(self.le_demo_tr)
-            C_txt().demo_th(self.te_demo_th, self.pte_demo_th)
-            C_txt().demo_tr(self.te_demo_tr, self.pte_demo_tr)
-        except: pass
-        finally: pass
+        with C_txt() as C_:
+            C_.demoth(self.le_demo_th)
+            C_.demotr(self.le_demo_tr)
+            C_.demo_th(self.te_demo_th, self.pte_demo_th)
+            C_.demo_tr(self.te_demo_tr, self.pte_demo_tr)
 
         # QScrollBoxArea
         try:
@@ -172,7 +169,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # Icone de l'app
         dim = P_dim().p_c_mt()
         Fct(wg=self.lb_mt_ico, w=dim.get("w"), h=dim.get("h")).DIM()
-        self.lb_mt_ico.setPixmap(QtGui.QPixmap(PXM))
+        self.lb_mt_ico.setPixmap(QtGui.QPixmap(ICO_MAIN))
         self.lb_mt_ico.setScaledContents(True)
         self.lb_mt_nom.setText(config.nom)
 
@@ -211,7 +208,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.IN_ACT()
 
 
-    ### ACTIONS
+    ### _ACTIONS
     ""
 
 
@@ -234,6 +231,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         geo = self.frameGeometry()
         geo.moveCenter(center)
         self.move(geo.topLeft())
+
     def EVT_AGRANDIR_GDT(self):
         if self.windowState() == QtCore.Qt.WindowMaximized:
             self.win_state = QtCore.Qt.WindowNoState
@@ -255,6 +253,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         if rep:
             app.quit()
             quit()
+
     def mousePressEvent(self, event):
         cur = QtGui.QCursor()
         verifHeight = cur.pos().y() - self.pos().y()
@@ -290,10 +289,10 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             self.setCursor(Fct(cur="souris").CUR())
             self.EVT_AGRANDIR_GDT()
             event.accept()
-    def closeEvent(self, event: QtGui.QCloseEvent) -> None:
+    def closeEvent(self, event):
         event.accept()
         app.quit()
-    def showEvent(self, event:QtGui.QShowEvent) -> None:
+    def showEvent(self, event):
         if self.win_state == QtCore.Qt.WindowMaximized:
             self.setWindowState(self.win_state)
         else:
@@ -301,9 +300,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             self._resize()
 
 
-PXM = P_img().main() + "th3" + ".svg"
+ICO_MAIN = P_img().main() + "th3" + ".svg"
 app = QtWidgets.QApplication(sys.argv)
-splash = QtWidgets.QSplashScreen(QtGui.QPixmap(PXM).scaledToHeight(500), QtCore.Qt.WindowStaysOnTopHint)
+splash = QtWidgets.QSplashScreen(QtGui.QPixmap(ICO_MAIN).scaledToHeight(500), QtCore.Qt.WindowStaysOnTopHint)
 splash.show()
 app.processEvents()
 
