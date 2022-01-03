@@ -33,84 +33,73 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def IN_CLASSE(self):
         # QLineEdit | QTextEdit | QPlainTextEdit
         with C_txt() as C_:
+            # Demo
             C_.demoth(self.le_demo_th)
             C_.demotr(self.le_demo_tr)
             C_.demo_th(self.te_demo_th, self.pte_demo_th)
             C_.demo_tr(self.te_demo_tr, self.pte_demo_tr)
 
         # QScrollBoxArea
-        try:
+        with C_sca() as C_:
             # Demo
-            C_sca().demo(self.sca_main)
-        except: pass
-        finally: pass
+            C_.demo(self.sca_main)
+
 
         In_classe(ui=self)
 
+
         # QComboBox
-        try:
+        with C_cb() as C_:
             # Demo
-            C_cb().demo_th(self.cb_demo_th)
-            C_cb().demo_tr(self.cb_demo_tr)
-        except: pass
-        finally: pass
+            C_.demo_th(self.cb_demo_th)
+            C_.demo_tr(self.cb_demo_tr)
 
         # QDateEdit
-        try:
+        with C_de() as C_:
             # Demo
-            C_de().demo_th(self.de_demo_th)
-            C_de().demo_tr(self.de_demo_tr)
-        except: pass
-        finally: pass
+            C_.demo_th(self.de_demo_th)
+            C_.demo_tr(self.de_demo_tr)
 
         # QFrame
-        try:
+        with C_fr() as C_:
             # Demo
-            C_fr().demo(self.fr_cb, self.fr_de, self.fr_lw, self.fr_pb, self.fr_ck,
-                        self.fr_rb, self.fr_pg, self.fr_sb, self.fr_tw, self.fr_le,
-                        self.fr_te, self.fr_pte)
-            C_fr().demo_tb(self.fr_tb_demo, self.fr_tb_demo_2)
-        except: pass
-        finally: pass
+            C_.demo(self.fr_cb, self.fr_de, self.fr_lw, self.fr_pb, self.fr_ck,
+                    self.fr_rb, self.fr_pg, self.fr_sb, self.fr_tw, self.fr_le,
+                    self.fr_te, self.fr_pte)
+            C_.demo_tb(self.fr_tb_demo, self.fr_tb_demo_2)
 
         # QLabel
-        try:
+        with C_lb() as C_:
             # Version
-            C_lb().mb(self.lb_mb_version)
+            C_.mb(self.lb_mb_version)
 
             # Demo
-            C_lb().demo(self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
-                        self.lb_rb_demo, self.lb_pg_demo, self.lb_sb_demo, self.lb_tw_demo, self.lb_le_demo,
-                        self.lb_te_demo, self.lb_pte_demo)
-        except: pass
-        finally: pass
+            C_.demo(self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
+                    self.lb_rb_demo, self.lb_pg_demo, self.lb_sb_demo, self.lb_tw_demo, self.lb_le_demo,
+                    self.lb_te_demo, self.lb_pte_demo)
 
         # QListWidget
-        try:
+        with C_lw() as C_:
             # Demo
-            C_lw().demo(self.lw_demo)
-        except: pass
-        finally: pass
+            C_.demo(self.lw_demo)
 
         # QPushButton
-        try:
-            # Menu_top
-            C_pb().option(self.pb_mt_option)
-            C_pb().reduire(self.pb_mt_reduire)
-            C_pb().agrandir(self.pb_mt_agrandir)
+        with C_pb() as C_:
+            # Menu top
+            C_.option(self.pb_mt_option)
+            C_.reduire(self.pb_mt_reduire)
+            C_.agrandir(self.pb_mt_agrandir)
 
             # Demo
-            C_pb().demo_txt(self.pb_demo_txt)
-            C_pb().demo_txt_inv(self.pb_demo_txt_inv)
-            C_pb().demo_th(self.pb_demo_th)
-            C_pb().demo_tr(self.pb_demo_tr)
-            C_pb().demo_ck(self.pb_demo_ck)
-            C_pb().demo_ck_ico(self.pb_demo_ck_ico, self.pb_demo_ico_ck)
-            C_pb().demo_zoom(self.pb_demo_zoom)
-            C_pb().demo_rd(self.pb_demo_rd)
-            C_pb().demo_bd(self.pb_demo_bd)
-        except: pass
-        finally: pass
+            C_.demo_txt(self.pb_demo_txt)
+            C_.demo_txt_inv(self.pb_demo_txt_inv)
+            C_.demo_th(self.pb_demo_th)
+            C_.demo_tr(self.pb_demo_tr)
+            C_.demo_ck(self.pb_demo_ck)
+            C_.demo_ck_ico(self.pb_demo_ck_ico, self.pb_demo_ico_ck)
+            C_.demo_zoom(self.pb_demo_zoom)
+            C_.demo_rd(self.pb_demo_rd)
+            C_.demo_bd(self.pb_demo_bd)
 
         # QCheckBox
         try:
