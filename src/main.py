@@ -14,9 +14,11 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def __init__(self):
         super(main, self).__init__()
 
-        self.dlg = None
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+
+        self.dlg = None
         self.sizegrip = QtWidgets.QSizeGrip(self)
+        self.win_state = QtCore.Qt.WindowNoState
 
         self.setupUi(self)
         self.INIT()
@@ -27,13 +29,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         ## Fenetre
         self.setWindowTitle(config.nom)
         self.setWindowOpacity(config.opacity)
-
-        if config.resize:
-            self.setMinimumWidth(config.widht)
-            self.setMinimumHeight(config.height)
-        else:
-            self.setFixedWidth(config.widht)
-            self.setFixedHeight(config.height)
+        self._resize()
     def IN_CLASSE(self):  # sourcery skip: extract-method
         # QLineEdit | QTextEdit | QPlainTextEdit
         try:
@@ -191,10 +187,10 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         if config.resize:
             self.sizegrip.setCursor(Fct(cur="fleche_nwse").CUR())
             self.sizegrip.setStyleSheet("QSizeGrip {"
-                                   f"image: url({P_img().resize()}th3.svg);"
-                                   f"width: {P_dim().h_mb()}px;"
-                                   f"height: {P_dim().h_mb()}px;"
-                                   "}")
+                                        f"image: url({P_img().resize()}th3.svg);"
+                                        f"width: {P_dim().h_mb()}px;"
+                                        f"height: {P_dim().h_mb()}px;"
+                                        "}")
             self.hlay_menu_bottom.addWidget(self.sizegrip)
     def IN_WG_BASE(self):
         pass
@@ -226,35 +222,33 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
     ### EVENT
-    def EVT_CENTRE_FEN(self):
-        center = QtGui.QScreen.availableGeometry(QtWidgets.QApplication.primaryScreen()).center()
-        geo = self.frameGeometry()
-        geo.moveCenter(center)
-        self.move(geo.topLeft())
-
+    def _resize(self):
         if config.resize:
             self.setMinimumWidth(config.widht)
             self.setMinimumHeight(config.height)
         else:
             self.setFixedWidth(config.widht)
             self.setFixedHeight(config.height)
+    def _centre_fen(self):
+        center = QtGui.QScreen.availableGeometry(QtWidgets.QApplication.primaryScreen()).center()
+        geo = self.frameGeometry()
+        geo.moveCenter(center)
+        self.move(geo.topLeft())
     def EVT_AGRANDIR_GDT(self):
         if self.windowState() == QtCore.Qt.WindowMaximized:
-            self.setWindowState(QtCore.Qt.WindowNoState)
-            self.EVT_CENTRE_FEN()
-            self.sizegrip.show()
+            self.win_state = QtCore.Qt.WindowNoState
+            self._centre_fen()
+            self._resize()
         else:
-            self.setWindowState(QtCore.Qt.WindowMaximized)
-            self.sizegrip.hide()
+            self.win_state = QtCore.Qt.WindowMaximized
+
+        self.setWindowState(self.win_state)
     def EVT_REDUIRE_GDT(self):
-        self.setWindowState(QtCore.Qt.WindowNoState)
-        self.sizegrip.show()
-        self.EVT_CENTRE_FEN()
         self.setWindowState(QtCore.Qt.WindowMinimized)
     def EVT_REDUIRE_HIDE_GDT(self):
         if config.auto_close: return self.EVT_QUITTER()
         self.hide()
-        self.EVT_CENTRE_FEN()
+        self._centre_fen()
     def EVT_QUITTER(self):
         rep = Dlg().QUITTER()
 
@@ -272,6 +266,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             self.move(self.pos() + event.globalPosition().toPoint() - self.dragPos)
             self.dragPos = event.globalPosition().toPoint()
             event.accept()
+
         cur = QtGui.QCursor()
         height_verif = cur.pos().y() - self.pos().y()
 
@@ -285,10 +280,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
                 act_move(event)
             if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h_mt() and self.windowState() == QtCore.Qt.WindowMaximized:
                 self.setWindowState(QtCore.Qt.WindowNoState)
-                self.sizegrip.show()
+                self.win_state = QtCore.Qt.WindowNoState
                 act_move(event)
-        except AttributeError:
-            pass
+        except AttributeError: pass
     def mouseReleaseEvent(self, event):
         cur = QtGui.QCursor()
         height_verif = cur.pos().y() - self.pos().y()
@@ -299,6 +293,12 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def closeEvent(self, event: QtGui.QCloseEvent) -> None:
         event.accept()
         app.quit()
+    def showEvent(self, event:QtGui.QShowEvent) -> None:
+        if self.win_state == QtCore.Qt.WindowMaximized:
+            self.setWindowState(self.win_state)
+        else:
+            self.setWindowState(self.win_state)
+            self._resize()
 
 
 PXM = P_img().main() + "th3" + ".svg"
