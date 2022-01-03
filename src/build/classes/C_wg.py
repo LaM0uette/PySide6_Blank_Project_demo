@@ -124,7 +124,6 @@ class C_wg:
 
         val = lambda v: self.bd_th + (255,) if int(v) == 1 else base.BD_RGBA
         self.o1, self.o2, self.o3, self.o4 = val(self.bd_mat[:1]), val(self.bd_mat[1:2]), val(self.bd_mat[2:3]), val(self.bd_mat[3:4])
-        print(self.o1, self.o2, self.o3, self.o4)
 
 
         ### PARAMETRES
