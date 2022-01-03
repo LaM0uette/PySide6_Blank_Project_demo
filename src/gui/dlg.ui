@@ -357,62 +357,7 @@
           <property name="spacing">
            <number>0</number>
           </property>
-          <item row="0" column="0">
-           <widget class="QTreeWidget" name="trw_option">
-            <column>
-             <property name="text">
-              <string>1</string>
-             </property>
-            </column>
-            <item>
-             <property name="text">
-              <string>Général</string>
-             </property>
-             <item>
-              <property name="text">
-               <string>Polices</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Configurations</string>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Curseurs</string>
-              </property>
-             </item>
-            </item>
-            <item>
-             <property name="text">
-              <string>Thèmes</string>
-             </property>
-             <item>
-              <property name="text">
-               <string>T-Colors</string>
-              </property>
-             </item>
-            </item>
-            <item>
-             <property name="text">
-              <string>Infos</string>
-             </property>
-            </item>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QStackedWidget" name="stk_option">
-            <widget class="QWidget" name="pg_opt_gen"/>
-            <widget class="QWidget" name="pg_opt_font"/>
-            <widget class="QWidget" name="pg_opt_config"/>
-            <widget class="QWidget" name="pg_opt_cur"/>
-            <widget class="QWidget" name="pg_opt_themes"/>
-            <widget class="QWidget" name="pg_opt_tcolors"/>
-            <widget class="QWidget" name="pg_opt_infos"/>
-           </widget>
-          </item>
-          <item row="1" column="0" colspan="2">
+          <item row="1" column="0" colspan="3">
            <widget class="QFrame" name="fr_pg_dlg_option">
             <layout class="QHBoxLayout" name="hlay_pg_dlg_option">
              <property name="spacing">
@@ -454,6 +399,80 @@
              </item>
             </layout>
            </widget>
+          </item>
+          <item row="0" column="1">
+           <layout class="QHBoxLayout" name="hlay_option" stretch="0,0">
+            <property name="spacing">
+             <number>5</number>
+            </property>
+            <property name="leftMargin">
+             <number>5</number>
+            </property>
+            <property name="topMargin">
+             <number>5</number>
+            </property>
+            <property name="rightMargin">
+             <number>5</number>
+            </property>
+            <property name="bottomMargin">
+             <number>5</number>
+            </property>
+            <item>
+             <widget class="QTreeWidget" name="trw_option">
+              <column>
+               <property name="text">
+                <string/>
+               </property>
+              </column>
+              <item>
+               <property name="text">
+                <string>Général</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>Polices</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Configurations</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Curseurs</string>
+                </property>
+               </item>
+              </item>
+              <item>
+               <property name="text">
+                <string>Thèmes</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>T-Colors</string>
+                </property>
+               </item>
+              </item>
+              <item>
+               <property name="text">
+                <string>Infos</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item>
+             <widget class="QStackedWidget" name="stk_option">
+              <widget class="QWidget" name="pg_opt_gen"/>
+              <widget class="QWidget" name="pg_opt_font"/>
+              <widget class="QWidget" name="pg_opt_config"/>
+              <widget class="QWidget" name="pg_opt_cur"/>
+              <widget class="QWidget" name="pg_opt_themes"/>
+              <widget class="QWidget" name="pg_opt_tcolors"/>
+              <widget class="QWidget" name="pg_opt_infos"/>
+             </widget>
+            </item>
+           </layout>
           </item>
          </layout>
         </widget>

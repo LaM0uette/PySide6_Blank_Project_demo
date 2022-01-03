@@ -183,6 +183,7 @@ class C_wg:
         ### VAR
         wg_type = ""
         if isinstance(self.wg, QtWidgets.QScrollArea): wg_type = "QScrollArea"
+        elif isinstance(self.wg, QtWidgets.QTreeWidget): wg_type = "QTreeWidget"
         elif isinstance(self.wg, QtWidgets.QToolBox): wg_type = "QToolBox"
 
         elif isinstance(self.wg, QtWidgets.QComboBox): wg_type = "QComboBox"
@@ -1157,17 +1158,31 @@ class C_wg:
 
         stl = {
             "th":
-                "QToolBox::tab {"
+                "QHeaderView::section {"
+                f"background-color: rgb{self.c1};"
+                "}"
+                 
+                "QTreeView {"
+                f"background-color: rgb{self.c1};"
+                "}"
+                
+                "QTreeView::item {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                "}"
+                
+                "QTreeView::item:hover {"
                 f"background-color: rgb{self.c3};"
                 f"color: rgb{self.c1};"
                 "}"
-
-                "QToolBox::tab:hover {"
-                f"color: rgb{self.c2};"
+                
+                "QTreeView::item:selected {"
+                f"background-color: rgb{self.c2};"
+                f"color: rgb{self.bn1};"
                 "}"
-
-                "QToolBox::tab:selected {"
-                f"background-color: rgb{self.c1};"
+                
+                "QTreeView::item:selected:hover {"
+                f"background-color: rgb{self.c3};"
                 f"color: rgb{self.bn1};"
                 "}"
 

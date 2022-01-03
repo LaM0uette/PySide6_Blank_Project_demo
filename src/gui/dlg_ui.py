@@ -197,44 +197,6 @@ class Ui_Dlg(object):
         self.glay_stk_option.setSpacing(0)
         self.glay_stk_option.setObjectName(u"glay_stk_option")
         self.glay_stk_option.setContentsMargins(0, 0, 0, 0)
-        self.trw_option = QTreeWidget(self.pg_dlg_option)
-        __qtreewidgetitem = QTreeWidgetItem(self.trw_option)
-        QTreeWidgetItem(__qtreewidgetitem)
-        QTreeWidgetItem(__qtreewidgetitem)
-        QTreeWidgetItem(__qtreewidgetitem)
-        __qtreewidgetitem1 = QTreeWidgetItem(self.trw_option)
-        QTreeWidgetItem(__qtreewidgetitem1)
-        QTreeWidgetItem(self.trw_option)
-        self.trw_option.setObjectName(u"trw_option")
-
-        self.glay_stk_option.addWidget(self.trw_option, 0, 0, 1, 1)
-
-        self.stk_option = QStackedWidget(self.pg_dlg_option)
-        self.stk_option.setObjectName(u"stk_option")
-        self.pg_opt_gen = QWidget()
-        self.pg_opt_gen.setObjectName(u"pg_opt_gen")
-        self.stk_option.addWidget(self.pg_opt_gen)
-        self.pg_opt_font = QWidget()
-        self.pg_opt_font.setObjectName(u"pg_opt_font")
-        self.stk_option.addWidget(self.pg_opt_font)
-        self.pg_opt_config = QWidget()
-        self.pg_opt_config.setObjectName(u"pg_opt_config")
-        self.stk_option.addWidget(self.pg_opt_config)
-        self.pg_opt_cur = QWidget()
-        self.pg_opt_cur.setObjectName(u"pg_opt_cur")
-        self.stk_option.addWidget(self.pg_opt_cur)
-        self.pg_opt_themes = QWidget()
-        self.pg_opt_themes.setObjectName(u"pg_opt_themes")
-        self.stk_option.addWidget(self.pg_opt_themes)
-        self.pg_opt_tcolors = QWidget()
-        self.pg_opt_tcolors.setObjectName(u"pg_opt_tcolors")
-        self.stk_option.addWidget(self.pg_opt_tcolors)
-        self.pg_opt_infos = QWidget()
-        self.pg_opt_infos.setObjectName(u"pg_opt_infos")
-        self.stk_option.addWidget(self.pg_opt_infos)
-
-        self.glay_stk_option.addWidget(self.stk_option, 0, 1, 1, 1)
-
         self.fr_pg_dlg_option = QFrame(self.pg_dlg_option)
         self.fr_pg_dlg_option.setObjectName(u"fr_pg_dlg_option")
         self.hlay_pg_dlg_option = QHBoxLayout(self.fr_pg_dlg_option)
@@ -261,7 +223,53 @@ class Ui_Dlg(object):
         self.hlay_pg_dlg_option.addWidget(self.pb_dlg_option_annuler)
 
 
-        self.glay_stk_option.addWidget(self.fr_pg_dlg_option, 1, 0, 1, 2)
+        self.glay_stk_option.addWidget(self.fr_pg_dlg_option, 1, 0, 1, 3)
+
+        self.hlay_option = QHBoxLayout()
+        self.hlay_option.setSpacing(5)
+        self.hlay_option.setObjectName(u"hlay_option")
+        self.hlay_option.setContentsMargins(5, 5, 5, 5)
+        self.trw_option = QTreeWidget(self.pg_dlg_option)
+        self.trw_option.headerItem().setText(0, "")
+        __qtreewidgetitem = QTreeWidgetItem(self.trw_option)
+        QTreeWidgetItem(__qtreewidgetitem)
+        QTreeWidgetItem(__qtreewidgetitem)
+        QTreeWidgetItem(__qtreewidgetitem)
+        __qtreewidgetitem1 = QTreeWidgetItem(self.trw_option)
+        QTreeWidgetItem(__qtreewidgetitem1)
+        QTreeWidgetItem(self.trw_option)
+        self.trw_option.setObjectName(u"trw_option")
+
+        self.hlay_option.addWidget(self.trw_option)
+
+        self.stk_option = QStackedWidget(self.pg_dlg_option)
+        self.stk_option.setObjectName(u"stk_option")
+        self.pg_opt_gen = QWidget()
+        self.pg_opt_gen.setObjectName(u"pg_opt_gen")
+        self.stk_option.addWidget(self.pg_opt_gen)
+        self.pg_opt_font = QWidget()
+        self.pg_opt_font.setObjectName(u"pg_opt_font")
+        self.stk_option.addWidget(self.pg_opt_font)
+        self.pg_opt_config = QWidget()
+        self.pg_opt_config.setObjectName(u"pg_opt_config")
+        self.stk_option.addWidget(self.pg_opt_config)
+        self.pg_opt_cur = QWidget()
+        self.pg_opt_cur.setObjectName(u"pg_opt_cur")
+        self.stk_option.addWidget(self.pg_opt_cur)
+        self.pg_opt_themes = QWidget()
+        self.pg_opt_themes.setObjectName(u"pg_opt_themes")
+        self.stk_option.addWidget(self.pg_opt_themes)
+        self.pg_opt_tcolors = QWidget()
+        self.pg_opt_tcolors.setObjectName(u"pg_opt_tcolors")
+        self.stk_option.addWidget(self.pg_opt_tcolors)
+        self.pg_opt_infos = QWidget()
+        self.pg_opt_infos.setObjectName(u"pg_opt_infos")
+        self.stk_option.addWidget(self.pg_opt_infos)
+
+        self.hlay_option.addWidget(self.stk_option)
+
+
+        self.glay_stk_option.addLayout(self.hlay_option, 0, 1, 1, 1)
 
         self.stk_dlg.addWidget(self.pg_dlg_option)
 
@@ -281,25 +289,23 @@ class Ui_Dlg(object):
 
     def retranslateUi(self, Dlg):
         self.le_input.setPlaceholderText(QCoreApplication.translate("Dlg", u"...", None))
-        ___qtreewidgetitem = self.trw_option.headerItem()
-        ___qtreewidgetitem.setText(0, QCoreApplication.translate("Dlg", u"1", None));
 
         __sortingEnabled = self.trw_option.isSortingEnabled()
         self.trw_option.setSortingEnabled(False)
-        ___qtreewidgetitem1 = self.trw_option.topLevelItem(0)
-        ___qtreewidgetitem1.setText(0, QCoreApplication.translate("Dlg", u"G\u00e9n\u00e9ral", None));
-        ___qtreewidgetitem2 = ___qtreewidgetitem1.child(0)
-        ___qtreewidgetitem2.setText(0, QCoreApplication.translate("Dlg", u"Polices", None));
-        ___qtreewidgetitem3 = ___qtreewidgetitem1.child(1)
-        ___qtreewidgetitem3.setText(0, QCoreApplication.translate("Dlg", u"Configurations", None));
-        ___qtreewidgetitem4 = ___qtreewidgetitem1.child(2)
-        ___qtreewidgetitem4.setText(0, QCoreApplication.translate("Dlg", u"Curseurs", None));
-        ___qtreewidgetitem5 = self.trw_option.topLevelItem(1)
-        ___qtreewidgetitem5.setText(0, QCoreApplication.translate("Dlg", u"Th\u00e8mes", None));
-        ___qtreewidgetitem6 = ___qtreewidgetitem5.child(0)
-        ___qtreewidgetitem6.setText(0, QCoreApplication.translate("Dlg", u"T-Colors", None));
-        ___qtreewidgetitem7 = self.trw_option.topLevelItem(2)
-        ___qtreewidgetitem7.setText(0, QCoreApplication.translate("Dlg", u"Infos", None));
+        ___qtreewidgetitem = self.trw_option.topLevelItem(0)
+        ___qtreewidgetitem.setText(0, QCoreApplication.translate("Dlg", u"G\u00e9n\u00e9ral", None));
+        ___qtreewidgetitem1 = ___qtreewidgetitem.child(0)
+        ___qtreewidgetitem1.setText(0, QCoreApplication.translate("Dlg", u"Polices", None));
+        ___qtreewidgetitem2 = ___qtreewidgetitem.child(1)
+        ___qtreewidgetitem2.setText(0, QCoreApplication.translate("Dlg", u"Configurations", None));
+        ___qtreewidgetitem3 = ___qtreewidgetitem.child(2)
+        ___qtreewidgetitem3.setText(0, QCoreApplication.translate("Dlg", u"Curseurs", None));
+        ___qtreewidgetitem4 = self.trw_option.topLevelItem(1)
+        ___qtreewidgetitem4.setText(0, QCoreApplication.translate("Dlg", u"Th\u00e8mes", None));
+        ___qtreewidgetitem5 = ___qtreewidgetitem4.child(0)
+        ___qtreewidgetitem5.setText(0, QCoreApplication.translate("Dlg", u"T-Colors", None));
+        ___qtreewidgetitem6 = self.trw_option.topLevelItem(2)
+        ___qtreewidgetitem6.setText(0, QCoreApplication.translate("Dlg", u"Infos", None));
         self.trw_option.setSortingEnabled(__sortingEnabled)
 
         pass

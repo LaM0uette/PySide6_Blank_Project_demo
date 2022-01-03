@@ -31,5 +31,5 @@ class C_trw(C_wg):
                  colors=P_rgb().p_th1(),
                  dim=P_dim().p_ah_h5(),
                  font=P_font().h4(),
-                 bd=P_bd().bd0010_bd_th3(),
+                 bd=P_bd().bd1_bd_th3(),
                  cur="souris_main")
