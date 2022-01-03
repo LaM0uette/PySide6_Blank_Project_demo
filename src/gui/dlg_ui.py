@@ -297,7 +297,7 @@ class Ui_Dlg(object):
         ___qtreewidgetitem1 = ___qtreewidgetitem.child(0)
         ___qtreewidgetitem1.setText(0, QCoreApplication.translate("Dlg", u"Polices", None));
         ___qtreewidgetitem2 = ___qtreewidgetitem.child(1)
-        ___qtreewidgetitem2.setText(0, QCoreApplication.translate("Dlg", u"Configurations", None));
+        ___qtreewidgetitem2.setText(0, QCoreApplication.translate("Dlg", u"Config", None));
         ___qtreewidgetitem3 = ___qtreewidgetitem.child(2)
         ___qtreewidgetitem3.setText(0, QCoreApplication.translate("Dlg", u"Curseurs", None));
         ___qtreewidgetitem4 = self.trw_option.topLevelItem(1)
