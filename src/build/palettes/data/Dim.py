@@ -1,4 +1,4 @@
-from src.build.data.Data import Data
+from .Data import Data
 
 class Dim(Data):
     def __init__(self, grp="dimension"):

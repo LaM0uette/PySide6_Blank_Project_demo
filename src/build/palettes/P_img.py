@@ -1,4 +1,4 @@
-from ..config import vrb
+from ...config import vrb
 
 class P_img:
 

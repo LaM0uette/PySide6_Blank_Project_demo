@@ -1,4 +1,5 @@
 from . import *
+from ..dialog import Dialog
 
 
 class Dlg:

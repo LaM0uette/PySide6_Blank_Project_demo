@@ -1,9 +1,9 @@
 from PySide6 import QtCore, QtWidgets, QtGui
 
-from ..gui import *
-from ..build import *
-from ..config import *
-from ..In_classe import In_classe
+from .gui import *
+from .build import *
+from .config import *
+from .In_classe import In_classe
 
 
 class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):

@@ -1,7 +1,7 @@
 import json
 
-from ...config import vrb
-from ...config import config
+from ....config import vrb
+from ....config import config
 
 class Data:
     def __init__(self, grp=""):

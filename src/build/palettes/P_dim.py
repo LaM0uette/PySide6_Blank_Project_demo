@@ -1,4 +1,4 @@
-from src.build.data.Dim import Dim
+from .data.Dim import Dim
 
 class P_dim(Dim):
     def __init__(self):
