@@ -20,7 +20,7 @@ class C_trw(C_wg):
         font=P_font().%,
         rd=P_rd().%,
         bd=P_bd().%,
-        edit=Bool %,
+        scroll=P_scroll().%,
         cur=str %,
         """
         for wg in lst: C_wg(wg=wg, attrs=kwargs).STL_TRW()
@@ -29,7 +29,8 @@ class C_trw(C_wg):
         self.STL(list(args),
                  colors_type="th",
                  colors=P_rgb().p_th1(),
-                 dim=P_dim().p_ah_h6(),
+                 dim={"w": 150, "h": None},
                  font=P_font().h4(),
                  bd=P_bd().bd0100_bd_th3(),
+                 scroll=P_scroll().of_n(),
                  cur="souris_main")

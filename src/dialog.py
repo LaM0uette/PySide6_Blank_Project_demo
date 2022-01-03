@@ -188,7 +188,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             dct_pg = {
                 "Général": self.pg_opt_gen,
                 "Polices": self.pg_opt_font,
-                "Configurations": self.pg_opt_config,
+                "Config": self.pg_opt_config,
                 "Curseurs": self.pg_opt_cur,
                 "Thèmes": self.pg_opt_themes,
                 "T-Colors": self.pg_opt_tcolors,
