@@ -151,9 +151,9 @@
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>-2317</y>
+              <y>-3380</y>
               <width>818</width>
-              <height>3867</height>
+              <height>4359</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout">
@@ -1643,90 +1643,457 @@
               </widget>
              </item>
              <item>
-              <widget class="QToolBox" name="tb_demo">
-               <property name="currentIndex">
-                <number>1</number>
+              <widget class="QFrame" name="fr_tb">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
                </property>
-               <widget class="QWidget" name="page">
-                <property name="geometry">
-                 <rect>
-                  <x>0</x>
-                  <y>0</y>
-                  <width>718</width>
-                  <height>69</height>
-                 </rect>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="vlay_fr_tb">
+                <property name="spacing">
+                 <number>10</number>
                 </property>
-                <attribute name="label">
-                 <string>Page 1</string>
-                </attribute>
-                <layout class="QVBoxLayout" name="verticalLayout_2">
-                 <property name="spacing">
-                  <number>0</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QFrame" name="fr_tb_demo">
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
-                   </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-               <widget class="QWidget" name="page_2">
-                <property name="geometry">
-                 <rect>
-                  <x>0</x>
-                  <y>0</y>
-                  <width>718</width>
-                  <height>69</height>
-                 </rect>
+                <property name="leftMargin">
+                 <number>10</number>
                 </property>
-                <attribute name="label">
-                 <string>Page 2</string>
-                </attribute>
-                <layout class="QVBoxLayout" name="verticalLayout_3">
-                 <property name="spacing">
-                  <number>0</number>
-                 </property>
-                 <property name="leftMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="topMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="rightMargin">
-                  <number>0</number>
-                 </property>
-                 <property name="bottomMargin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QFrame" name="fr_tb_demo_2">
-                   <property name="frameShape">
-                    <enum>QFrame::StyledPanel</enum>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_tb_demo">
+                  <property name="text">
+                   <string>QToolBox :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_25">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QToolBox" name="tb_demo">
+                  <property name="currentIndex">
+                   <number>1</number>
+                  </property>
+                  <widget class="QWidget" name="page">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>696</width>
+                     <height>69</height>
+                    </rect>
                    </property>
-                   <property name="frameShadow">
-                    <enum>QFrame::Raised</enum>
-                   </property>
+                   <attribute name="label">
+                    <string>Page 1</string>
+                   </attribute>
+                   <layout class="QVBoxLayout" name="verticalLayout_2">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QFrame" name="fr_tb_demo">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
                   </widget>
-                 </item>
-                </layout>
-               </widget>
+                  <widget class="QWidget" name="page_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>696</width>
+                     <height>69</height>
+                    </rect>
+                   </property>
+                   <attribute name="label">
+                    <string>Page 2</string>
+                   </attribute>
+                   <layout class="QVBoxLayout" name="verticalLayout_3">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QFrame" name="fr_tb_demo_2">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_trw">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="vlay_fr_trw">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_trw_demo">
+                  <property name="text">
+                   <string>QTreeWidget :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_23">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QTreeWidget" name="trw_demo_th">
+                  <column>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </column>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>New Subitem</string>
+                      </property>
+                     </item>
+                    </item>
+                   </item>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                    </item>
+                   </item>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>New Subitem</string>
+                      </property>
+                     </item>
+                    </item>
+                   </item>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                    </item>
+                   </item>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                    </item>
+                   </item>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_24">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QTreeWidget" name="trw_demo_tr">
+                  <property name="headerHidden">
+                   <bool>true</bool>
+                  </property>
+                  <column>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </column>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>New Subitem</string>
+                      </property>
+                     </item>
+                    </item>
+                   </item>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                    </item>
+                   </item>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>New Subitem</string>
+                      </property>
+                     </item>
+                    </item>
+                   </item>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                    </item>
+                   </item>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                    </item>
+                   </item>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </item>
              <item>

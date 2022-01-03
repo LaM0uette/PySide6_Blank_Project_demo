@@ -34,3 +34,22 @@ class C_trw(C_wg):
                  bd=P_bd().bd0100_bd_th3(),
                  scroll=P_scroll().of_n(),
                  cur="souris_main")
+
+    def demo_th(self, *args):
+        self.STL(list(args),
+                 colors_type="th",
+                 colors=P_rgb().p_th1(),
+                 dim={"w": 300, "h": 200},
+                 font=P_font().h4(),
+                 bd=P_bd().bd0100_bd_th3(),
+                 scroll=P_scroll().of_n(),
+                 cur="souris_main")
+    def demo_tr(self, *args):
+        self.STL(list(args),
+                 colors_type="tr",
+                 colors=P_rgb().p_th1(),
+                 dim={"w": 300, "h": 200},
+                 font=P_font().h4(),
+                 bd=P_bd().bd0100_bd_th3(),
+                 scroll=P_scroll().of_n(),
+                 cur="souris_main")

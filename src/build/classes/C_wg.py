@@ -124,6 +124,7 @@ class C_wg:
 
         val = lambda v: self.bd_th + (255,) if int(v) == 1 else base.BD_RGBA
         self.o1, self.o2, self.o3, self.o4 = val(self.bd_mat[:1]), val(self.bd_mat[1:2]), val(self.bd_mat[2:3]), val(self.bd_mat[3:4])
+        print(self.o1, self.o2, self.o3, self.o4)
 
 
         ### PARAMETRES
@@ -298,7 +299,7 @@ class C_wg:
         else:
             self.inc = rd + bd
             self.inc_flat = self.inc
-        if wg_type in {"QComboBox", "QListWidget", "QScrollArea", "QTableWidget", "QTextEdit", "QPlainTextEdit", "QToolBox"}:
+        if wg_type in {"QComboBox", "QListWidget", "QScrollArea", "QTreeWidget", "QTableWidget", "QTextEdit", "QPlainTextEdit", "QToolBox"}:
             self.inc += scroll
             self.inc_flat += scroll
         if wg_type in {"QSpinBox"}:
