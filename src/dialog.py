@@ -140,7 +140,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         # Connection
         self.pb_dlg_msg_ok.clicked.connect(self._close)
-        self.pb_dlg_msg_ok.clicked.connect(self._close)
+        self.pb_dlg_msg_ok.setDefault(True)
     def REP(self):
         self._set_dlg(pg=self.pg_dlg_rep)
 
@@ -152,6 +152,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         # Connection
         self.pb_dlg_rep_ok.clicked.connect(self._rep)
         self.pb_dlg_rep_annuler.clicked.connect(self._close)
+        self.pb_dlg_rep_ok.setDefault(True)
     def INPUT(self):
         def _input():
             self.sgn_txt.emit(self.le_input.text())
@@ -167,6 +168,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         # Connection
         self.pb_dlg_input_ok.clicked.connect(_input)
         self.pb_dlg_input_annuler.clicked.connect(self._close)
+        self.pb_dlg_input_ok.setDefault(True)
 
 
     ### EVENT
