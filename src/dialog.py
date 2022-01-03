@@ -117,22 +117,22 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
 
     ### _ACTIONS
+    def _set_dlg(self, pg, ico=None):
+        self.stk_dlg.setCurrentWidget(pg)
+
+        if ico is None: ico = self.ico
+
+        self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{ico}th3.svg"))
+        self.lb_mt_ico.setScaledContents(True)
     def _close(self): self.close()
     def _rep(self):
         self.sgn_rep.emit(True)
-        self.close()
-    def _input(self):
-        self.sgn_txt.emit(self.le_input.text())
         self.close()
 
 
     ### FONCTIONS
     def MSG(self, ico):
-        self.stk_dlg.setCurrentWidget(self.pg_dlg_msg)
-
-        if self.ico == P_img().main():
-            self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{ico}th3.svg"))
-            self.lb_mt_ico.setScaledContents(True)
+        self._set_dlg(pg=self.pg_dlg_msg, ico=ico)
 
         # Données
         self.lb_msg_texte.setText(self.msg)
@@ -140,12 +140,9 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         # Connection
         self.pb_dlg_msg_ok.clicked.connect(self._close)
+        self.pb_dlg_msg_ok.clicked.connect(self._close)
     def REP(self):
-        self.stk_dlg.setCurrentWidget(self.pg_dlg_rep)
-
-        if self.ico == P_img().main():
-            self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}th3.svg"))
-            self.lb_mt_ico.setScaledContents(True)
+        self._set_dlg(pg=self.pg_dlg_rep)
 
         # Données
         self.lb_rep_texte.setText(self.msg)
@@ -156,11 +153,11 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_dlg_rep_ok.clicked.connect(self._rep)
         self.pb_dlg_rep_annuler.clicked.connect(self._close)
     def INPUT(self):
-        self.stk_dlg.setCurrentWidget(self.pg_dlg_input)
+        def _input():
+            self.sgn_txt.emit(self.le_input.text())
+            self.close()
 
-        if self.ico == P_img().main():
-            self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}th3.svg"))
-            self.lb_mt_ico.setScaledContents(True)
+        self._set_dlg(pg=self.pg_dlg_input)
 
         # Données
         self.lb_input_texte.setText(self.msg)
@@ -168,7 +165,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_dlg_input_annuler.setText(self.txt_pb_annuler)
 
         # Connection
-        self.pb_dlg_input_ok.clicked.connect(self._input)
+        self.pb_dlg_input_ok.clicked.connect(_input)
         self.pb_dlg_input_annuler.clicked.connect(self._close)
 
 

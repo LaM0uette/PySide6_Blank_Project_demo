@@ -811,7 +811,7 @@ class C_wg:
         self.wg.setStyleSheet(stl.get(self.colors_type))
 
         self.wg.setFlat(True)
-        self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
+        # self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
         self.wg.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
 
         if self.type is None: return
