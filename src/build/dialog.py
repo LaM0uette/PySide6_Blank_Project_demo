@@ -58,90 +58,34 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.setFixedWidth(self.width)
         self.setFixedHeight(self.height)
         self.setWindowOpacity(self.opacity)
-    def IN_CLASSE(self):  # sourcery skip: extract-duplicate-method
-        # QScrollBoxArea
-        try: pass
-        except: pass
-        finally: pass
-
+    def IN_CLASSE(self):
         # QLineEdit | QTextEdit | QPlainTextEdit
-        try:
-            C_txt().tr(self.le_input)
-        except: pass
-        finally: pass
+        with C_txt() as C_:
+            C_.tr(self.le_input)
+
 
         In_classe(ui=self)
 
-        # QComboBox
-        try: pass
-        except: pass
-        finally: pass
-
-        # QDateEdit
-        try: pass
-        except: pass
-        finally: pass
 
         # QFrame
-        try:
-            C_fr().menu_bottom_dlg(self.fr_pg_dlg_msg)
-            C_fr().menu_bottom_dlg(self.fr_pg_dlg_rep)
-            C_fr().menu_bottom_dlg(self.fr_pg_dlg_input)
-        except: pass
-        finally: pass
+        with C_fr() as C_:
+            C_.menu_bottom_dlg(self.fr_pg_dlg_msg)
+            C_.menu_bottom_dlg(self.fr_pg_dlg_rep)
+            C_.menu_bottom_dlg(self.fr_pg_dlg_input)
 
         # QLabel
-        try:
-            C_lb().p(self.lb_msg_texte)
-            C_lb().p(self.lb_rep_texte)
-            C_lb().p(self.lb_input_texte)
-        except: pass
-        finally: pass
-
-        # QListWidget
-        try: pass
-        except: pass
-        finally: pass
+        with C_lb() as C_:
+            C_.p(self.lb_msg_texte)
+            C_.p(self.lb_rep_texte)
+            C_.p(self.lb_input_texte)
 
         # QPushButton
-        try:
-            C_pb().ok(self.pb_dlg_msg_ok)
-            C_pb().ok(self.pb_dlg_rep_ok)
-            C_pb().annuler(self.pb_dlg_rep_annuler)
-            C_pb().ok(self.pb_dlg_input_ok)
-            C_pb().annuler(self.pb_dlg_input_annuler)
-        except: pass
-        finally: pass
-
-        # QCheckBox
-        try: pass
-        except: pass
-        finally: pass
-
-        # QRadioButton
-        try: pass
-        except: pass
-        finally: pass
-
-        # QProgressBar
-        try: pass
-        except: pass
-        finally: pass
-
-        # QSpinBox | QDoubleSpinBox
-        try: pass
-        except: pass
-        finally: pass
-
-        # QTableWidget
-        try: pass
-        except: pass
-        finally: pass
-
-        # QToolBox
-        try: pass
-        except: pass
-        finally: pass
+        with C_pb() as C_:
+            C_.ok(self.pb_dlg_msg_ok)
+            C_.ok(self.pb_dlg_rep_ok)
+            C_.annuler(self.pb_dlg_rep_annuler)
+            C_.ok(self.pb_dlg_input_ok)
+            C_.annuler(self.pb_dlg_input_annuler)
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur="souris").CUR())

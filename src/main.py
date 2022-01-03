@@ -85,7 +85,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         # QPushButton
         with C_pb() as C_:
-            # Menu top
+            # Menu_top
             C_.option(self.pb_mt_option)
             C_.reduire(self.pb_mt_reduire)
             C_.agrandir(self.pb_mt_agrandir)
@@ -102,51 +102,39 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             C_.demo_bd(self.pb_demo_bd)
 
         # QCheckBox
-        try:
+        with C_ck() as C_:
             # Demo
-            C_ck().demo_th(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3)
-            C_ck().demo_tr(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3)
-        except: pass
-        finally: pass
+            C_.demo_th(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3)
+            C_.demo_tr(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3)
 
         # QRadioButton
-        try:
+        with C_rb() as C_:
             # Demo
-            C_rb().demo_th(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3)
-            C_rb().demo_tr(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3)
-        except: pass
-        finally: pass
+            C_.demo_th(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3)
+            C_.demo_tr(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3)
 
         # QProgressBar
-        try:
+        with C_pg() as C_:
             # Demo
-            C_pg().demo(self.pg_demo)
-        except: pass
-        finally: pass
+            C_.demo(self.pg_demo)
 
         # QSpinBox | QDoubleSpinBox
-        try:
+        with C_sb() as C_:
             # Demo
-            C_sb().demo_th(self.sb_demo)
-            C_sb().demo_th_2(self.sb_demo_2)
-            C_sb().demo_th_3(self.sb_demo_3)
-            C_sb().demo_tr(self.dsb_demo)
-        except: pass
-        finally: pass
+            C_.demo_th(self.sb_demo)
+            C_.demo_th_2(self.sb_demo_2)
+            C_.demo_th_3(self.sb_demo_3)
+            C_.demo_tr(self.dsb_demo)
 
         # QTableWidget
-        try:
+        with C_tw() as C_:
             # Demo
-            C_tw().demo(self.tw_demo)
-        except: pass
-        finally: pass
+            C_.demo(self.tw_demo)
 
         # QToolBox
-        try:
+        with C_tb() as C_:
             # Demo
-            C_tb().demo(self.tb_demo)
-        except: pass
-        finally: pass
+            C_.demo(self.tb_demo)
 
 
         # Demo
