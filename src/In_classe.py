@@ -3,80 +3,50 @@ from .build import *
 
 class In_classe:
     def __init__(self, ui):
-
-
         # QLineEdit | QTextEdit | QPlainTextEdit
-        try: pass
-        except: pass
-        finally: pass
+        with C_le() as C_: pass
 
         # QComboBox
-        try: pass
-        except: pass
-        finally: pass
+        with C_cb() as C_: pass
 
         # QDateEdit
-        try: pass
-        except: pass
-        finally: pass
+        with C_de() as C_: pass
 
         # QFrame
-        try:
-            C_fr().main(ui.fr_main)
-            C_fr().menu_top(ui.fr_menu_top)
-            C_fr().body(ui.fr_body)
-            C_fr().menu_bottom(ui.fr_menu_bottom)
-        except: pass
-        finally: pass
+        with C_fr() as C_:
+            C_.main(ui.fr_main)
+            C_.menu_top(ui.fr_menu_top)
+            C_.body(ui.fr_body)
+            C_.menu_bottom(ui.fr_menu_bottom)
 
         # QLabel
-        try:
-            C_lb().h3(ui.lb_mt_nom)
-        except: pass
-        finally: pass
+        with C_lb() as C_:
+            C_.h3(ui.lb_mt_nom)
 
         # QListWidget
-        try: pass
-        except: pass
-        finally: pass
+        with C_lw() as C_: pass
 
         # QPushButton
-        try:
-            C_pb().quitter(ui.pb_mt_quitter)
-        except: pass
-        finally: pass
+        with C_pb() as C_:
+            C_.quitter(ui.pb_mt_quitter)
 
         # QCheckBox
-        try: pass
-        except: pass
-        finally: pass
+        with C_cb() as C_: pass
 
         # QRadioButton
-        try: pass
-        except: pass
-        finally: pass
+        with C_rb() as C_: pass
 
         # QProgressBar
-        try: pass
-        except: pass
-        finally: pass
+        with C_pg() as C_: pass
 
         # QScrollBoxArea
-        try: pass
-        except: pass
-        finally: pass
+        with C_sca() as C_: pass
 
         # QSpinBox | QDoubleSpinBox
-        try: pass
-        except: pass
-        finally: pass
+        with C_sb() as C_: pass
 
         # QTableWidget
-        try: pass
-        except: pass
-        finally: pass
+        with C_tw() as C_: pass
 
         # QToolBox
-        try: pass
-        except: pass
-        finally: pass
+        with C_tb() as C_: pass
