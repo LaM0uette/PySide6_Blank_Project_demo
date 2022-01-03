@@ -7,6 +7,10 @@ class C_pb(C_wg):
         super().__init__(**kwargs)
 
         self.kwargs = kwargs
+    def __enter__(self):
+        return self
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        return self
 
     def STL(self, lst, **kwargs):
         """
