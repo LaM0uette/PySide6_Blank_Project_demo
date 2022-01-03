@@ -29,7 +29,7 @@ class C_trw(C_wg):
         self.STL(list(args),
                  colors_type="th",
                  colors=P_rgb().p_th1(),
-                 dim=P_dim().p_ah_h5(),
+                 dim=P_dim().p_ah_h6(),
                  font=P_font().h4(),
-                 bd=P_bd().bd1_bd_th3(),
+                 bd=P_bd().bd0100_bd_th3(),
                  cur="souris_main")
