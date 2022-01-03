@@ -1152,6 +1152,28 @@ class C_wg:
 
         self.wg.setStyleSheet(stl.get(self.colors_type))
 
+    def STL_TRW(self):
+        self.STL_ALL("trw")
+
+        stl = {
+            "th":
+                "QToolBox::tab {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                "}"
+
+                "QToolBox::tab:hover {"
+                f"color: rgb{self.c2};"
+                "}"
+
+                "QToolBox::tab:selected {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.bn1};"
+                "}"
+
+                f"{self.inc}"
+        }
+        self.wg.setStyleSheet(stl.get(self.colors_type))
     def STL_TB(self):
         self.STL_ALL("tb")
 

@@ -94,6 +94,10 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             C_.ok(self.pb_dlg_option_ok)
             C_.appliquer(self.pb_dlg_option_appliquer)
             C_.annuler(self.pb_dlg_option_annuler)
+
+        # QTreeWidget
+        with C_trw() as C_:
+            C_.option(self.trw_option)
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur="souris").CUR())
@@ -180,8 +184,17 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_dlg_input_ok.setDefault(True)
 
     def OPTION(self):
-        def __get_item_trw(item):
-            print(item.text(0))
+        def __set_opt(item):
+            dct_pg = {
+                "Général": self.pg_opt_gen,
+                "Polices": self.pg_opt_font,
+                "Configurations": self.pg_opt_config,
+                "Curseurs": self.pg_opt_cur,
+                "Thèmes": self.pg_opt_themes,
+                "T-Colors": self.pg_opt_tcolors,
+                "Infos": self.pg_opt_infos,
+            }
+            self.stk_option.setCurrentWidget(dct_pg.get(item.text(0)))
         def __appliquer():
             self.pb_dlg_option_appliquer.setVisible(False)
 
@@ -197,7 +210,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_dlg_option_annuler.setText(self.txt_pb_annuler)
 
         # Connection
-        self.trw_option.currentItemChanged.connect(__get_item_trw)
+        self.trw_option.currentItemChanged.connect(__set_opt)
 
         self.pb_dlg_option_ok.clicked.connect(self._rep)
         self.pb_dlg_option_appliquer.clicked.connect(__appliquer)
