@@ -1160,6 +1160,8 @@ class C_wg:
             "th":
                 "QHeaderView::section {"
                 f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                "border: none"
                 "}"
                  
                 "QTreeView {"
@@ -1172,13 +1174,12 @@ class C_wg:
                 "}"
                 
                 "QTreeView::item:hover {"
-                f"background-color: rgb{self.c3};"
-                f"color: rgb{self.c1};"
+                f"color: rgb{self.bn1};"
                 "}"
                 
                 "QTreeView::item:selected {"
-                f"background-color: rgb{self.c2};"
-                f"color: rgb{self.bn1};"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
                 "}"
                 
                 "QTreeView::item:selected:hover {"
@@ -1186,6 +1187,38 @@ class C_wg:
                 f"color: rgb{self.bn1};"
                 "}"
 
+                f"{self.inc}",
+            "tr":
+                "QHeaderView::section {"
+                "background-color: rgba(0, 0, 0, 0);"
+                f"color: rgb{self.c3};"
+                "border: none"
+                "}"
+        
+                "QTreeView {"
+                "background-color: rgba(0, 0, 0, 0);"
+                "}"
+        
+                "QTreeView::item {"
+                "background-color: rgba(0, 0, 0, 0);"
+                f"color: rgb{self.c3};"
+                "}"
+        
+                "QTreeView::item:hover {"
+                "background-color: rgba(0, 0, 0, 0);"
+                f"color: rgb{self.bn1};"
+                "}"
+        
+                "QTreeView::item:selected {"
+                "background-color: rgba(0, 0, 0, 0);"
+                f"color: rgb{self.c2};"
+                "}"
+        
+                "QTreeView::item:selected:hover {"
+                "background-color: rgba(0, 0, 0, 0);"
+                f"color: rgb{self.bn2};"
+                "}"
+        
                 f"{self.inc}"
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
