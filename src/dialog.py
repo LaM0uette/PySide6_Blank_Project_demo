@@ -116,7 +116,17 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.IN_ACT()
 
 
-    ### ACTIONS
+    ### _ACTIONS
+    def _close(self): self.close()
+    def _rep(self):
+        self.sgn_rep.emit(True)
+        self.close()
+    def _input(self):
+        self.sgn_txt.emit(self.le_input.text())
+        self.close()
+
+
+    ### FONCTIONS
     def MSG(self, ico):
         self.stk_dlg.setCurrentWidget(self.pg_dlg_msg)
 
@@ -129,7 +139,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_dlg_msg_ok.setText(self.txt_pb_ok)
 
         # Connection
-        self.pb_dlg_msg_ok.clicked.connect(self.OK)
+        self.pb_dlg_msg_ok.clicked.connect(self._close)
     def REP(self):
         self.stk_dlg.setCurrentWidget(self.pg_dlg_rep)
 
@@ -143,8 +153,8 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_dlg_rep_annuler.setText(self.txt_pb_annuler)
 
         # Connection
-        self.pb_dlg_rep_ok.clicked.connect(self.REP_OK)
-        self.pb_dlg_rep_annuler.clicked.connect(self.OK)
+        self.pb_dlg_rep_ok.clicked.connect(self._rep)
+        self.pb_dlg_rep_annuler.clicked.connect(self._close)
     def INPUT(self):
         self.stk_dlg.setCurrentWidget(self.pg_dlg_input)
 
@@ -158,18 +168,8 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_dlg_input_annuler.setText(self.txt_pb_annuler)
 
         # Connection
-        self.pb_dlg_input_ok.clicked.connect(self.INPUT_OK)
-        self.pb_dlg_input_annuler.clicked.connect(self.OK)
-
-
-    ### FONCTIONS
-    def OK(self): self.close()
-    def REP_OK(self):
-        self.sgn_rep.emit(True)
-        self.close()
-    def INPUT_OK(self):
-        self.sgn_txt.emit(self.le_input.text())
-        self.close()
+        self.pb_dlg_input_ok.clicked.connect(self._input)
+        self.pb_dlg_input_annuler.clicked.connect(self._close)
 
 
     ### EVENT
