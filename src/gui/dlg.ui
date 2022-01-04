@@ -574,7 +574,7 @@
                    <item>
                     <widget class="QLabel" name="lb_opt_ft_h1">
                      <property name="text">
-                      <string>H1: </string>
+                      <string>Taille H1: </string>
                      </property>
                     </widget>
                    </item>
@@ -612,7 +612,7 @@
                    <item>
                     <widget class="QLabel" name="lb_opt_ft_h2">
                      <property name="text">
-                      <string>H2: </string>
+                      <string>Taille H2: </string>
                      </property>
                     </widget>
                    </item>
@@ -650,7 +650,7 @@
                    <item>
                     <widget class="QLabel" name="lb_opt_ft_h3">
                      <property name="text">
-                      <string>H3: </string>
+                      <string>Taille H3: </string>
                      </property>
                     </widget>
                    </item>
@@ -688,7 +688,7 @@
                    <item>
                     <widget class="QLabel" name="lb_opt_ft_h4">
                      <property name="text">
-                      <string>H4: </string>
+                      <string>Taille H4: </string>
                      </property>
                     </widget>
                    </item>
@@ -726,7 +726,7 @@
                    <item>
                     <widget class="QLabel" name="lb_opt_ft_h5">
                      <property name="text">
-                      <string>H5: </string>
+                      <string>Taille H5: </string>
                      </property>
                     </widget>
                    </item>

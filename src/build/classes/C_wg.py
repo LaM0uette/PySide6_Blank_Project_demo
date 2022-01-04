@@ -280,14 +280,14 @@ class C_wg:
                 "tb":
                     "QSpinBox::up-button, QDoubleSpinBox::up-button  {"
                     f"image: url({pb_up + 'th3.svg'});"
-                    f"height: {self.dim_ico / 2}px;"
-                    f"width: {self.dim_ico / 2}px;"
+                    f"height: {self.dim.get('h') / 2}px;"
+                    f"width: {self.dim.get('h') / 2}px;"
                     "}"
                     
                     "QSpinBox::down-button, QDoubleSpinBox::down-button  {"
                     f"image: url({pb_down + 'th3.svg'});"
-                    f"height: {self.dim_ico / 2}px;"
-                    f"width: {self.dim_ico / 2}px;"
+                    f"height: {self.dim.get('h') / 2}px;"
+                    f"width: {self.dim.get('h') / 2}px;"
                     "}"
             }
         except: dct_sb = {}

@@ -39,6 +39,8 @@ class P_dim(Dim):
     def p_ah_h8(self): return {"w": self.h_h8(), "h": None}
     def p_ah_h9(self): return {"w": self.h_h9(), "h": None}
 
+    def p_h8_h9(self): return {"w": self.h_h8(), "h": self.h_h9()}
+
     def p_aw_demo(self): return {"w": None, "h": self.h_h8()}
     def p_h5_h8_demo(self): return {"w": self.h_h5(), "h": self.h_h8()}
     def p_list_demo(self): return {"w": None, "h": self.h_h5()}
