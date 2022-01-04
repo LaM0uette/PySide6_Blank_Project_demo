@@ -218,11 +218,6 @@ class Ui_Dlg(object):
 
         self.hlay_pg_dlg_option.addWidget(self.pb_dlg_option_ok)
 
-        self.pb_dlg_option_annuler = QPushButton(self.fr_pg_dlg_option)
-        self.pb_dlg_option_annuler.setObjectName(u"pb_dlg_option_annuler")
-
-        self.hlay_pg_dlg_option.addWidget(self.pb_dlg_option_annuler)
-
 
         self.glay_stk_option.addWidget(self.fr_pg_dlg_option, 1, 0, 1, 3)
 

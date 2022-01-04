@@ -12,6 +12,7 @@ class Dlg:
 
 
     def RTN_SGN_REP(self, val): self.rtn = val
+    def RTN_SGN_RELOAD(self): self.rtn = True
 
 
     # MODELES
@@ -33,7 +34,7 @@ class Dlg:
         return self.rtn
     def OPTION(self):
         dlg = Dialog(titre="Option", ico=P_img().option(), width=800, height=500)
-        dlg.sgn_rep.connect(self.RTN_SGN_REP)
+        dlg.sgn_reload.connect(self.RTN_SGN_RELOAD)
         dlg.OPTION()
         dlg.exec()
         return self.rtn

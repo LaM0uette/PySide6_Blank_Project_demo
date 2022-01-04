@@ -394,9 +394,6 @@
              <item>
               <widget class="QPushButton" name="pb_dlg_option_ok"/>
              </item>
-             <item>
-              <widget class="QPushButton" name="pb_dlg_option_annuler"/>
-             </item>
             </layout>
            </widget>
           </item>

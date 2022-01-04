@@ -115,6 +115,7 @@ class Json:
             data.update(dct)
             fichier.seek(0)
             json.dump(data, fichier)
+            fichier.truncate()
     def REMOVE(self, key):
         with open(self.lien_json, "r+") as fichier:
             data = json.load(fichier)

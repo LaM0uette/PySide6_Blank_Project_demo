@@ -1,4 +1,5 @@
 import sys
+import importlib
 
 from PySide6 import QtCore, QtWidgets, QtGui
 
@@ -191,13 +192,15 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
     ### _ACTIONS
-    ""
+    def _reload(self):
+        importlib.reload(config)
+        self.IN_CLASSE()
 
 
     ### FONCTIONS
     def FCT_OPTION(self):
         t = Dlg().OPTION()
-        print(t)
+        if t: self._reload()
 
 
     ### EVENT

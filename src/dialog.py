@@ -11,6 +11,7 @@ from .In_classe import In_classe
 class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
     sgn_rep = QtCore.Signal(bool)
     sgn_txt = QtCore.Signal(str)
+    sgn_reload = QtCore.Signal()
 
     def __init__(self, **kwargs):
         super(Dialog, self).__init__()
@@ -99,7 +100,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         with C_pb() as C_:
             C_.ok(self.pb_dlg_msg_ok, self.pb_dlg_rep_ok, self.pb_dlg_input_ok, self.pb_dlg_option_ok)
             C_.appliquer(self.pb_dlg_option_appliquer)
-            C_.annuler(self.pb_dlg_rep_annuler, self.pb_dlg_input_annuler, self.pb_dlg_option_annuler)
+            C_.annuler(self.pb_dlg_rep_annuler, self.pb_dlg_input_annuler)
             C_.txt_h9(self.pb_opt_gen_font, self.pb_opt_gen_config, self.pb_opt_gen_cur, self.pb_opt_theme_colors)
 
         # QSpinBox | QDoubleSpinBox
@@ -164,6 +165,8 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
     def _reload(self):
         importlib.reload(config)
         self.IN_CLASSE()
+
+        self.sgn_reload.emit()
 
 
     ### FONCTIONS
@@ -251,7 +254,6 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         # Données
         self.pb_dlg_option_ok.setText(self.txt_pb_ok)
         self.pb_dlg_option_appliquer.setText(self.txt_pb_appliquer)
-        self.pb_dlg_option_annuler.setText(self.txt_pb_annuler)
 
         try:
             self.fcb_opt_ft_font.setCurrentText(config.font)
@@ -273,7 +275,6 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         self.pb_dlg_option_ok.clicked.connect(__ok)
         self.pb_dlg_option_appliquer.clicked.connect(__appliquer)
-        self.pb_dlg_option_annuler.clicked.connect(self._close)
 
         # Connection value change
         self.fcb_opt_ft_font.currentTextChanged.connect(__val_change_appliquer)
