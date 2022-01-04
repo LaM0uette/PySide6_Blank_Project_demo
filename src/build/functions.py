@@ -30,7 +30,7 @@ class Fct:
         wg.setFixedHeight(h) if h is not None else False
     def FONT(self):
         font = self.kwargs.get("font")
-        if font is None: font = "Berlin Sans FB Demi"
+        if font is None: font = config.font
 
         font_size = self.kwargs.get("font_size")
         if font_size is None: return

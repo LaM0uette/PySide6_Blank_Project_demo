@@ -229,6 +229,9 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_dlg_option_appliquer.setText(self.txt_pb_appliquer)
         self.pb_dlg_option_annuler.setText(self.txt_pb_annuler)
 
+        try: self.fcb_opt_ft_font.setCurrentText(config.font)
+        except: pass
+
         # Connection
         self.trw_option.itemClicked.connect(__set_opt)
 
@@ -240,6 +243,8 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_opt_gen_config.clicked.connect(lambda: self.stk_option.setCurrentWidget(dct_pg.get("Configs")[0]))
         self.pb_opt_gen_cur.clicked.connect(lambda: self.stk_option.setCurrentWidget(dct_pg.get("Curseurs")[0]))
         self.pb_opt_theme_colors.clicked.connect(lambda: self.stk_option.setCurrentWidget(dct_pg.get("T-Colors")[0]))
+
+        self.fcb_opt_ft_font.currentIndexChanged.connect(lambda: self.fcb_opt_ft_font.lineEdit().setFont(Fct(font_size=10).FONT()))
 
 
     ### EVENT

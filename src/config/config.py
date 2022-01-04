@@ -15,6 +15,7 @@ auteur = cfg["infos"]["auteur"]
 
 ### config ________________________
 theme = cfg["config"]["theme"]
+font = cfg["config"]["font"]
 widht = int(cfg["config"]["widht"])
 height = int(cfg["config"]["height"])
 opacity = float(cfg["config"]["opacity"])
