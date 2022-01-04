@@ -215,11 +215,10 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         # Connection
         self.trw_option.itemClicked.connect(__set_opt)
 
+        self.pb_dlg_option_ok.setDefault(True)
         self.pb_dlg_option_ok.clicked.connect(self._rep)
         self.pb_dlg_option_appliquer.clicked.connect(__appliquer)
         self.pb_dlg_option_annuler.clicked.connect(self._close)
-        self.pb_dlg_option_ok.setDefault(True)
-
         self.pb_opt_gen_font.clicked.connect(lambda: self.stk_option.setCurrentWidget(dct_pg.get("Polices")[0]))
         self.pb_opt_gen_config.clicked.connect(lambda: self.stk_option.setCurrentWidget(dct_pg.get("Configs")[0]))
         self.pb_opt_gen_cur.clicked.connect(lambda: self.stk_option.setCurrentWidget(dct_pg.get("Curseurs")[0]))
