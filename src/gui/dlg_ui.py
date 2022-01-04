@@ -24,7 +24,7 @@ class Ui_Dlg(object):
     def setupUi(self, Dlg):
         if not Dlg.objectName():
             Dlg.setObjectName(u"Dlg")
-        Dlg.resize(650, 699)
+        Dlg.resize(724, 699)
         self.glay_dlg = QGridLayout(Dlg)
         self.glay_dlg.setSpacing(0)
         self.glay_dlg.setObjectName(u"glay_dlg")
@@ -267,6 +267,42 @@ class Ui_Dlg(object):
         self.stk_option.addWidget(self.pg_opt_tcolors)
         self.pg_opt_infos = QWidget()
         self.pg_opt_infos.setObjectName(u"pg_opt_infos")
+        self.vlay_pg_opt_infos = QVBoxLayout(self.pg_opt_infos)
+        self.vlay_pg_opt_infos.setSpacing(0)
+        self.vlay_pg_opt_infos.setObjectName(u"vlay_pg_opt_infos")
+        self.vlay_pg_opt_infos.setContentsMargins(10, 10, 10, 10)
+        self.verticalSpacer_4 = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.vlay_pg_opt_infos.addItem(self.verticalSpacer_4)
+
+        self.lb_opt_info_nom = QLabel(self.pg_opt_infos)
+        self.lb_opt_info_nom.setObjectName(u"lb_opt_info_nom")
+
+        self.vlay_pg_opt_infos.addWidget(self.lb_opt_info_nom)
+
+        self.verticalSpacer_5 = QSpacerItem(20, 100, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.vlay_pg_opt_infos.addItem(self.verticalSpacer_5)
+
+        self.lb_opt_info_desc = QLabel(self.pg_opt_infos)
+        self.lb_opt_info_desc.setObjectName(u"lb_opt_info_desc")
+
+        self.vlay_pg_opt_infos.addWidget(self.lb_opt_info_desc)
+
+        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.vlay_pg_opt_infos.addItem(self.verticalSpacer_3)
+
+        self.lb_opt_info_auteur = QLabel(self.pg_opt_infos)
+        self.lb_opt_info_auteur.setObjectName(u"lb_opt_info_auteur")
+
+        self.vlay_pg_opt_infos.addWidget(self.lb_opt_info_auteur)
+
+        self.lb_opt_info_version = QLabel(self.pg_opt_infos)
+        self.lb_opt_info_version.setObjectName(u"lb_opt_info_version")
+
+        self.vlay_pg_opt_infos.addWidget(self.lb_opt_info_version)
+
         self.stk_option.addWidget(self.pg_opt_infos)
 
         self.hlay_option.addWidget(self.stk_option)

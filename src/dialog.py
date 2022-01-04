@@ -77,9 +77,8 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         # QLabel
         with C_lb() as C_:
-            C_.p(self.lb_msg_texte, self.lb_rep_texte, self.lb_input_texte)
-
-            C_.p(self.lb_opt_info_nom, self.lb_opt_info_desc, self.lb_opt_info_auteur)
+            C_.h1(self.lb_opt_info_nom)
+            C_.p(self.lb_msg_texte, self.lb_rep_texte, self.lb_input_texte, self.lb_opt_info_desc, self.lb_opt_info_auteur, self.lb_opt_info_version)
 
         # QPushButton
         with C_pb() as C_:
@@ -104,6 +103,14 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}th3.svg"))
         self.lb_mt_ico.setScaledContents(True)
         self.lb_mt_nom.setText(self.titre)
+
+
+        ### OPTION
+        ""#info
+        self.lb_opt_info_nom.setText(config.nom)
+        self.lb_opt_info_desc.setText(config.description)
+        self.lb_opt_info_auteur.setText(f"Auteur : {config.auteur}")
+        self.lb_opt_info_version.setText(f"Version : {config.version}")
     def IN_WG_BASE(self):
         # Option
         self.pb_dlg_option_appliquer.setVisible(True)
@@ -179,15 +186,15 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
     def OPTION(self):
         def __set_opt(item):
             dct_pg = {
-                "Général": self.pg_opt_gen,
-                "Polices": self.pg_opt_font,
-                "Config": self.pg_opt_config,
-                "Curseurs": self.pg_opt_cur,
-                "Thèmes": self.pg_opt_themes,
-                "T-Colors": self.pg_opt_tcolors,
-                "Infos": self.pg_opt_infos,
+                "Général": [self.pg_opt_gen],
+                "Polices": [self.pg_opt_font],
+                "Config": [self.pg_opt_config],
+                "Curseurs": [self.pg_opt_cur],
+                "Thèmes": [self.pg_opt_themes],
+                "T-Colors": [self.pg_opt_tcolors],
+                "Infos": [self.pg_opt_infos],
             }
-            self.stk_option.setCurrentWidget(dct_pg.get(item.text(0)))
+            self.stk_option.setCurrentWidget(dct_pg.get(item.text(0))[0])
         def __appliquer():
             self.pb_dlg_option_appliquer.setVisible(False)
 

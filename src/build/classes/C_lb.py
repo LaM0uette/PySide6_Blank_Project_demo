@@ -33,14 +33,14 @@ class C_lb(C_wg):
         self.STL(list(args),
                  colors_type = "tr",
                  colors = P_rgb().p_u3(),
-                 dim = P_dim().p_aw_h8(),
+                 dim = P_dim().p_aw_h7(),
                  font=P_font().h1(),
                  align=P_align().c_c())
     def h2(self, *args):
         self.STL(list(args),
                  colors_type = "tr",
                  colors = P_rgb().p_u3(),
-                 dim = P_dim().p_aw_h9(),
+                 dim = P_dim().p_aw_h8(),
                  font=P_font().h2(),
                  align=P_align().c_c())
     def h3(self, *args):

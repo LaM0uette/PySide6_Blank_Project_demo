@@ -5,7 +5,7 @@ from . import vrb
 
 ### FICHIER CONFIG ______________
 cfg = configparser.ConfigParser()
-cfg.read(vrb.INI_CONFIG)
+cfg.read(vrb.INI_CONFIG, encoding="utf-8")
 
 ### infos _______________
 nom = cfg["infos"]["nom"]
