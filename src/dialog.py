@@ -208,9 +208,11 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         def __appliquer():
             self.pb_dlg_option_appliquer.setVisible(False)
 
-            dl = Dialog()
-            dl.MSG(ico=P_img().info())
-            dl.exec()
+            self.config_ini = functions.INI(lien_ini=vrb.ini_cfg)
+            self.cfg = self.config_ini.OPEN_INI()
+            self.cfg["config"]["theme"] = self.cb_choix_theme.currentText()
+
+            self.config_ini.WRITE_INI(ini=self.cfg)
 
         dct_pg = {
             "Général": [self.pg_opt_gen],
@@ -229,13 +231,19 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_dlg_option_appliquer.setText(self.txt_pb_appliquer)
         self.pb_dlg_option_annuler.setText(self.txt_pb_annuler)
 
-        try: self.fcb_opt_ft_font.setCurrentText(config.font)
+        try:
+            self.fcb_opt_ft_font.setCurrentText(config.font)
+            self.sb_opt_ft_h1.setValue(P_font().h1())
+            self.sb_opt_ft_h2.setValue(P_font().h2())
+            self.sb_opt_ft_h3.setValue(P_font().h3())
+            self.sb_opt_ft_h4.setValue(P_font().h4())
+            self.sb_opt_ft_h5.setValue(P_font().h5())
         except: pass
 
-        # Connection
-        self.trw_option.itemClicked.connect(__set_opt)
 
+        # Connection
         self.pb_dlg_option_ok.setDefault(True)
+        self.trw_option.itemClicked.connect(__set_opt)
         self.pb_dlg_option_ok.clicked.connect(self._rep)
         self.pb_dlg_option_appliquer.clicked.connect(__appliquer)
         self.pb_dlg_option_annuler.clicked.connect(self._close)
@@ -243,8 +251,6 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_opt_gen_config.clicked.connect(lambda: self.stk_option.setCurrentWidget(dct_pg.get("Configs")[0]))
         self.pb_opt_gen_cur.clicked.connect(lambda: self.stk_option.setCurrentWidget(dct_pg.get("Curseurs")[0]))
         self.pb_opt_theme_colors.clicked.connect(lambda: self.stk_option.setCurrentWidget(dct_pg.get("T-Colors")[0]))
-
-        self.fcb_opt_ft_font.currentIndexChanged.connect(lambda: self.fcb_opt_ft_font.lineEdit().setFont(Fct(font_size=10).FONT()))
 
 
     ### EVENT
