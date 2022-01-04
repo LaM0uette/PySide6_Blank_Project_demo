@@ -518,7 +518,7 @@
                </layout>
               </widget>
               <widget class="QWidget" name="pg_opt_font"/>
-              <widget class="QWidget" name="pg_opt_config"/>
+              <widget class="QWidget" name="pg_opt_configs"/>
               <widget class="QWidget" name="pg_opt_cur"/>
               <widget class="QWidget" name="pg_opt_themes">
                <layout class="QVBoxLayout" name="vlay_pg_opt_themes">
