@@ -249,6 +249,29 @@ class Ui_Dlg(object):
         self.stk_option.addWidget(self.pg_opt_menu)
         self.pg_opt_gen = QWidget()
         self.pg_opt_gen.setObjectName(u"pg_opt_gen")
+        self.vlay_pg_opt_gen = QVBoxLayout(self.pg_opt_gen)
+        self.vlay_pg_opt_gen.setSpacing(10)
+        self.vlay_pg_opt_gen.setObjectName(u"vlay_pg_opt_gen")
+        self.vlay_pg_opt_gen.setContentsMargins(10, 20, 10, 10)
+        self.pb_opt_gen_font = QPushButton(self.pg_opt_gen)
+        self.pb_opt_gen_font.setObjectName(u"pb_opt_gen_font")
+
+        self.vlay_pg_opt_gen.addWidget(self.pb_opt_gen_font)
+
+        self.pb_opt_gen_config = QPushButton(self.pg_opt_gen)
+        self.pb_opt_gen_config.setObjectName(u"pb_opt_gen_config")
+
+        self.vlay_pg_opt_gen.addWidget(self.pb_opt_gen_config)
+
+        self.pb_opt_gen_cur = QPushButton(self.pg_opt_gen)
+        self.pb_opt_gen_cur.setObjectName(u"pb_opt_gen_cur")
+
+        self.vlay_pg_opt_gen.addWidget(self.pb_opt_gen_cur)
+
+        self.verticalSpacer_6 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.vlay_pg_opt_gen.addItem(self.verticalSpacer_6)
+
         self.stk_option.addWidget(self.pg_opt_gen)
         self.pg_opt_font = QWidget()
         self.pg_opt_font.setObjectName(u"pg_opt_font")
@@ -261,6 +284,19 @@ class Ui_Dlg(object):
         self.stk_option.addWidget(self.pg_opt_cur)
         self.pg_opt_themes = QWidget()
         self.pg_opt_themes.setObjectName(u"pg_opt_themes")
+        self.vlay_pg_opt_themes = QVBoxLayout(self.pg_opt_themes)
+        self.vlay_pg_opt_themes.setSpacing(10)
+        self.vlay_pg_opt_themes.setObjectName(u"vlay_pg_opt_themes")
+        self.vlay_pg_opt_themes.setContentsMargins(10, 20, 10, 10)
+        self.pb_opt_theme_colors = QPushButton(self.pg_opt_themes)
+        self.pb_opt_theme_colors.setObjectName(u"pb_opt_theme_colors")
+
+        self.vlay_pg_opt_themes.addWidget(self.pb_opt_theme_colors)
+
+        self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.vlay_pg_opt_themes.addItem(self.verticalSpacer_4)
+
         self.stk_option.addWidget(self.pg_opt_themes)
         self.pg_opt_tcolors = QWidget()
         self.pg_opt_tcolors.setObjectName(u"pg_opt_tcolors")
@@ -270,11 +306,7 @@ class Ui_Dlg(object):
         self.vlay_pg_opt_infos = QVBoxLayout(self.pg_opt_infos)
         self.vlay_pg_opt_infos.setSpacing(0)
         self.vlay_pg_opt_infos.setObjectName(u"vlay_pg_opt_infos")
-        self.vlay_pg_opt_infos.setContentsMargins(10, 10, 10, 10)
-        self.verticalSpacer_4 = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Fixed)
-
-        self.vlay_pg_opt_infos.addItem(self.verticalSpacer_4)
-
+        self.vlay_pg_opt_infos.setContentsMargins(10, 20, 10, 10)
         self.lb_opt_info_nom = QLabel(self.pg_opt_infos)
         self.lb_opt_info_nom.setObjectName(u"lb_opt_info_nom")
 
@@ -336,7 +368,7 @@ class Ui_Dlg(object):
         ___qtreewidgetitem1 = ___qtreewidgetitem.child(0)
         ___qtreewidgetitem1.setText(0, QCoreApplication.translate("Dlg", u"Polices", None));
         ___qtreewidgetitem2 = ___qtreewidgetitem.child(1)
-        ___qtreewidgetitem2.setText(0, QCoreApplication.translate("Dlg", u"Config", None));
+        ___qtreewidgetitem2.setText(0, QCoreApplication.translate("Dlg", u"Configs", None));
         ___qtreewidgetitem3 = ___qtreewidgetitem.child(2)
         ___qtreewidgetitem3.setText(0, QCoreApplication.translate("Dlg", u"Curseurs", None));
         ___qtreewidgetitem4 = self.trw_option.topLevelItem(1)
@@ -347,6 +379,10 @@ class Ui_Dlg(object):
         ___qtreewidgetitem6.setText(0, QCoreApplication.translate("Dlg", u"Infos", None));
         self.trw_option.setSortingEnabled(__sortingEnabled)
 
+        self.pb_opt_gen_font.setText(QCoreApplication.translate("Dlg", u"Police", None))
+        self.pb_opt_gen_config.setText(QCoreApplication.translate("Dlg", u"Configs", None))
+        self.pb_opt_gen_cur.setText(QCoreApplication.translate("Dlg", u"Curseurs", None))
+        self.pb_opt_theme_colors.setText(QCoreApplication.translate("Dlg", u"Couleurs", None))
         pass
     # retranslateUi
 

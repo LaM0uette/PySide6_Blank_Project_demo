@@ -85,6 +85,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             C_.ok(self.pb_dlg_msg_ok, self.pb_dlg_rep_ok, self.pb_dlg_input_ok, self.pb_dlg_option_ok)
             C_.appliquer(self.pb_dlg_option_appliquer)
             C_.annuler(self.pb_dlg_rep_annuler, self.pb_dlg_input_annuler, self.pb_dlg_option_annuler)
+            C_.txt_h9(self.pb_opt_gen_font, self.pb_opt_gen_config, self.pb_opt_gen_cur, self.pb_opt_theme_colors)
 
         # QTreeWidget
         with C_trw() as C_:
@@ -185,15 +186,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
     def OPTION(self):
         def __set_opt(item):
-            dct_pg = {
-                "Général": [self.pg_opt_gen],
-                "Polices": [self.pg_opt_font],
-                "Config": [self.pg_opt_config],
-                "Curseurs": [self.pg_opt_cur],
-                "Thèmes": [self.pg_opt_themes],
-                "T-Colors": [self.pg_opt_tcolors],
-                "Infos": [self.pg_opt_infos],
-            }
+
             self.stk_option.setCurrentWidget(dct_pg.get(item.text(0))[0])
         def __appliquer():
             self.pb_dlg_option_appliquer.setVisible(False)
@@ -201,6 +194,16 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             dl = Dialog()
             dl.MSG(ico=P_img().info())
             dl.exec()
+
+        dct_pg = {
+            "Général": [self.pg_opt_gen],
+            "Polices": [self.pg_opt_font],
+            "Configs": [self.pg_opt_config],
+            "Curseurs": [self.pg_opt_cur],
+            "Thèmes": [self.pg_opt_themes],
+            "T-Colors": [self.pg_opt_tcolors],
+            "Infos": [self.pg_opt_infos],
+        }
 
         self._set_dlg(pg=self.pg_dlg_option)
 
@@ -216,6 +219,11 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_dlg_option_appliquer.clicked.connect(__appliquer)
         self.pb_dlg_option_annuler.clicked.connect(self._close)
         self.pb_dlg_option_ok.setDefault(True)
+
+        self.pb_opt_gen_font.clicked.connect(self.stk_option.setCurrentWidget(dct_pg.get("Polices")[0]))
+        self.pb_opt_gen_config.clicked.connect(self.stk_option.setCurrentWidget(dct_pg.get("Configs")[0]))
+        self.pb_opt_gen_cur.clicked.connect(self.stk_option.setCurrentWidget(dct_pg.get("Curseurs")[0]))
+        self.pb_opt_theme_colors.clicked.connect(self.stk_option.setCurrentWidget(dct_pg.get("T-Colors")[0]))
 
 
     ### EVENT

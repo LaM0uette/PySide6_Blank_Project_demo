@@ -435,7 +435,7 @@
                </item>
                <item>
                 <property name="text">
-                 <string>Config</string>
+                 <string>Configs</string>
                 </property>
                </item>
                <item>
@@ -464,11 +464,101 @@
             <item>
              <widget class="QStackedWidget" name="stk_option">
               <widget class="QWidget" name="pg_opt_menu"/>
-              <widget class="QWidget" name="pg_opt_gen"/>
+              <widget class="QWidget" name="pg_opt_gen">
+               <layout class="QVBoxLayout" name="vlay_pg_opt_gen">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>20</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="pb_opt_gen_font">
+                  <property name="text">
+                   <string>Police</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pb_opt_gen_config">
+                  <property name="text">
+                   <string>Configs</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pb_opt_gen_cur">
+                  <property name="text">
+                   <string>Curseurs</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_6">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
               <widget class="QWidget" name="pg_opt_font"/>
               <widget class="QWidget" name="pg_opt_config"/>
               <widget class="QWidget" name="pg_opt_cur"/>
-              <widget class="QWidget" name="pg_opt_themes"/>
+              <widget class="QWidget" name="pg_opt_themes">
+               <layout class="QVBoxLayout" name="vlay_pg_opt_themes">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>20</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="pb_opt_theme_colors">
+                  <property name="text">
+                   <string>Couleurs</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_4">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
               <widget class="QWidget" name="pg_opt_tcolors"/>
               <widget class="QWidget" name="pg_opt_infos">
                <layout class="QVBoxLayout" name="vlay_pg_opt_infos">
@@ -479,7 +569,7 @@
                  <number>10</number>
                 </property>
                 <property name="topMargin">
-                 <number>10</number>
+                 <number>20</number>
                 </property>
                 <property name="rightMargin">
                  <number>10</number>
@@ -487,22 +577,6 @@
                 <property name="bottomMargin">
                  <number>10</number>
                 </property>
-                <item>
-                 <spacer name="verticalSpacer_4">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
                 <item>
                  <widget class="QLabel" name="lb_opt_info_nom"/>
                 </item>

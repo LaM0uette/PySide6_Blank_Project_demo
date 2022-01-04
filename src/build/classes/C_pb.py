@@ -91,6 +91,14 @@ class C_pb(C_wg):
                  dim = P_dim().p_r_mb_dlg(),
                  cur = "souris_main")
 
+    def txt_h9(self, *args):
+        self.STL(list(args),
+                 colors_type = "txt",
+                 colors = P_rgb().p_th1(),
+                 dim = P_dim().p_aw_h9(),
+                 font = P_font().p(),
+                 cur = "main")
+
     def demo_txt(self, *args):
         self.STL(list(args),
                  colors_type = "txt",
