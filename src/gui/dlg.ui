@@ -538,6 +538,9 @@
                  <widget class="QFontComboBox" name="fcb_opt_ft_font"/>
                 </item>
                 <item>
+                 <widget class="QComboBox" name="cb_opt_ft_font"/>
+                </item>
+                <item>
                  <spacer name="verticalSpacer_8">
                   <property name="orientation">
                    <enum>Qt::Vertical</enum>

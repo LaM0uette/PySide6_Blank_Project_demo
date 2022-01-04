@@ -50,7 +50,7 @@ class C_fr(C_wg):
         self.STL(list(args),
                  colors = P_rgb().p_th1(),
                  dim = P_dim().p_aw_h8(),
-                 bd=P_bd().bd1_bd_bn1())
+                 bd=P_bd().bd1_bd_th3())
 
     def demo(self, *args):
         self.STL(list(args),

@@ -25,6 +25,17 @@ class C_cb(C_wg):
         """
         for wg in lst: C_wg(wg=wg, attrs=kwargs).STL_CB()
 
+
+    def font(self, *args):
+        self.STL(list(args),
+                 colors_type="tr",
+                 colors=P_rgb().p_th1(),
+                 dim=P_dim().p_aw_h9(),
+                 font=P_font().h4(),
+                 bd=P_bd().bd0010_bd_th3(),
+                 edit=True,
+                 cur="souris_main")
+
     def demo_th(self, *args):
         self.STL(list(args),
                  colors_type="th",

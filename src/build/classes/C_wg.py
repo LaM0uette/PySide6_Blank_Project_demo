@@ -186,6 +186,7 @@ class C_wg:
         elif isinstance(self.wg, QtWidgets.QTreeWidget): wg_type = "QTreeWidget"
         elif isinstance(self.wg, QtWidgets.QToolBox): wg_type = "QToolBox"
 
+        elif isinstance(self.wg, QtWidgets.QFontComboBox): wg_type = "QFontComboBox"
         elif isinstance(self.wg, QtWidgets.QComboBox): wg_type = "QComboBox"
         elif isinstance(self.wg, QtWidgets.QDateEdit): wg_type = "QDateEdit"
         elif isinstance(self.wg, QtWidgets.QLabel): wg_type = "QLabel"
@@ -298,7 +299,7 @@ class C_wg:
         else:
             self.inc = rd + bd
             self.inc_flat = self.inc
-        if wg_type in {"QComboBox", "QListWidget", "QScrollArea", "QTreeWidget", "QTableWidget", "QTextEdit", "QPlainTextEdit", "QToolBox"}:
+        if wg_type in {"QFontComboBox", "QComboBox", "QListWidget", "QScrollArea", "QTreeWidget", "QTableWidget", "QTextEdit", "QPlainTextEdit", "QToolBox"}:
             self.inc += scroll
             self.inc_flat += scroll
         if wg_type in {"QSpinBox"}:

@@ -43,6 +43,7 @@ class C_sb(C_wg):
                  min=0,
                  max=99,
                  step=1,
+                 bd=P_bd().bd0010_bd_th3(),
                  cur="souris_main")
 
     def demo_th(self, *args):
