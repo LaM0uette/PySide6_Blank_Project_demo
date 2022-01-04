@@ -243,14 +243,16 @@ class Ui_Dlg(object):
 
         self.hlay_option.addWidget(self.trw_option)
 
-        self.scrollArea = QScrollArea(self.pg_dlg_option)
-        self.scrollArea.setObjectName(u"scrollArea")
-        self.scrollArea.setWidgetResizable(True)
+        self.sca_option = QScrollArea(self.pg_dlg_option)
+        self.sca_option.setObjectName(u"sca_option")
+        self.sca_option.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
         self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 556, 503))
-        self.verticalLayout = QVBoxLayout(self.scrollAreaWidgetContents)
-        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.vlay_sca_option = QVBoxLayout(self.scrollAreaWidgetContents)
+        self.vlay_sca_option.setSpacing(0)
+        self.vlay_sca_option.setObjectName(u"vlay_sca_option")
+        self.vlay_sca_option.setContentsMargins(0, 0, 0, 0)
         self.stk_option = QStackedWidget(self.scrollAreaWidgetContents)
         self.stk_option.setObjectName(u"stk_option")
         self.pg_opt_menu = QWidget()
@@ -483,11 +485,11 @@ class Ui_Dlg(object):
 
         self.stk_option.addWidget(self.pg_opt_infos)
 
-        self.verticalLayout.addWidget(self.stk_option)
+        self.vlay_sca_option.addWidget(self.stk_option)
 
-        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
+        self.sca_option.setWidget(self.scrollAreaWidgetContents)
 
-        self.hlay_option.addWidget(self.scrollArea)
+        self.hlay_option.addWidget(self.sca_option)
 
 
         self.glay_stk_option.addLayout(self.hlay_option, 0, 1, 1, 1)
@@ -533,15 +535,15 @@ class Ui_Dlg(object):
         self.pb_opt_gen_config.setText(QCoreApplication.translate("Dlg", u"Configs", None))
         self.pb_opt_gen_cur.setText(QCoreApplication.translate("Dlg", u"Curseurs", None))
         self.lb_opt_ft_h1.setText(QCoreApplication.translate("Dlg", u"Taille H1: ", None))
-        self.le_opt_ft_texte_h1.setText(QCoreApplication.translate("Dlg", u"TEST De la Police :)", None))
+        self.le_opt_ft_texte_h1.setText(QCoreApplication.translate("Dlg", u"TEST De la Police", None))
         self.lb_opt_ft_h2.setText(QCoreApplication.translate("Dlg", u"Taille H2: ", None))
-        self.le_opt_ft_texte_h2.setText(QCoreApplication.translate("Dlg", u"TEST De la Police :)", None))
+        self.le_opt_ft_texte_h2.setText(QCoreApplication.translate("Dlg", u"TEST De la Police", None))
         self.lb_opt_ft_h3.setText(QCoreApplication.translate("Dlg", u"Taille H3: ", None))
-        self.le_opt_ft_texte_h3.setText(QCoreApplication.translate("Dlg", u"TEST De la Police :)", None))
+        self.le_opt_ft_texte_h3.setText(QCoreApplication.translate("Dlg", u"TEST De la Police", None))
         self.lb_opt_ft_h4.setText(QCoreApplication.translate("Dlg", u"Taille H4: ", None))
-        self.le_opt_ft_texte_h4.setText(QCoreApplication.translate("Dlg", u"TEST De la Police :)", None))
+        self.le_opt_ft_texte_h4.setText(QCoreApplication.translate("Dlg", u"TEST De la Police", None))
         self.lb_opt_ft_h5.setText(QCoreApplication.translate("Dlg", u"Taille H5: ", None))
-        self.le_opt_ft_texte_h5.setText(QCoreApplication.translate("Dlg", u"TEST De la Police :)", None))
+        self.le_opt_ft_texte_h5.setText(QCoreApplication.translate("Dlg", u"TEST De la Police", None))
         self.pb_opt_theme_colors.setText(QCoreApplication.translate("Dlg", u"Couleurs", None))
         pass
     # retranslateUi

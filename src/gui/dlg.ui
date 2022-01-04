@@ -614,7 +614,7 @@
                        <item>
                         <widget class="QLineEdit" name="le_opt_ft_texte_h1">
                          <property name="text">
-                          <string>TEST De la Police :)</string>
+                          <string>TEST De la Police</string>
                          </property>
                         </widget>
                        </item>
@@ -652,7 +652,7 @@
                        <item>
                         <widget class="QLineEdit" name="le_opt_ft_texte_h2">
                          <property name="text">
-                          <string>TEST De la Police :)</string>
+                          <string>TEST De la Police</string>
                          </property>
                         </widget>
                        </item>
@@ -690,7 +690,7 @@
                        <item>
                         <widget class="QLineEdit" name="le_opt_ft_texte_h3">
                          <property name="text">
-                          <string>TEST De la Police :)</string>
+                          <string>TEST De la Police</string>
                          </property>
                         </widget>
                        </item>
@@ -728,7 +728,7 @@
                        <item>
                         <widget class="QLineEdit" name="le_opt_ft_texte_h4">
                          <property name="text">
-                          <string>TEST De la Police :)</string>
+                          <string>TEST De la Police</string>
                          </property>
                         </widget>
                        </item>
@@ -766,7 +766,7 @@
                        <item>
                         <widget class="QLineEdit" name="le_opt_ft_texte_h5">
                          <property name="text">
-                          <string>TEST De la Police :)</string>
+                          <string>TEST De la Police</string>
                          </property>
                         </widget>
                        </item>
