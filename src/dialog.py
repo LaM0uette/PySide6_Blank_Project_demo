@@ -1,3 +1,5 @@
+import importlib
+
 from PySide6 import QtCore, QtWidgets, QtGui
 
 from .gui import *
@@ -159,6 +161,9 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
     def _rep(self):
         self.sgn_rep.emit(True)
         self.close()
+    def _reload(self):
+        importlib.reload(config)
+        self.IN_CLASSE()
 
 
     ### FONCTIONS
@@ -203,16 +208,25 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
     def OPTION(self):
         def __set_opt(item):
-
             self.stk_option.setCurrentWidget(dct_pg.get(item.text(0))[0])
+        def __val_change_appliquer():
+            if not self.pb_dlg_option_appliquer.isVisible():
+                self.pb_dlg_option_appliquer.setVisible(True)
         def __appliquer():
             self.pb_dlg_option_appliquer.setVisible(False)
 
-            self.config_ini = functions.INI(lien_ini=vrb.ini_cfg)
-            self.cfg = self.config_ini.OPEN_INI()
-            self.cfg["config"]["theme"] = self.cb_choix_theme.currentText()
+            config_ini = Ini(lien_ini=vrb.INI_CONFIG)
+            config = config_ini.OPEN_INI()
+            config["config"]["font"] = self.fcb_opt_ft_font.currentText()
 
-            self.config_ini.WRITE_INI(ini=self.cfg)
+            config_ini.WRITE_INI(ini=config)
+            self._reload()
+        def __ok():
+            if self .pb_dlg_option_appliquer.isVisible():
+                __appliquer()
+                self._close()
+            else: self._close()
+
 
         dct_pg = {
             "Général": [self.pg_opt_gen],
@@ -223,7 +237,6 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             "T-Colors": [self.pg_opt_tcolors],
             "Infos": [self.pg_opt_infos],
         }
-
         self._set_dlg(pg=self.pg_dlg_option)
 
         # Données
@@ -241,16 +254,20 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         except: pass
 
 
-        # Connection
         self.pb_dlg_option_ok.setDefault(True)
+        # Connection
         self.trw_option.itemClicked.connect(__set_opt)
-        self.pb_dlg_option_ok.clicked.connect(self._rep)
-        self.pb_dlg_option_appliquer.clicked.connect(__appliquer)
-        self.pb_dlg_option_annuler.clicked.connect(self._close)
         self.pb_opt_gen_font.clicked.connect(lambda: self.stk_option.setCurrentWidget(dct_pg.get("Polices")[0]))
         self.pb_opt_gen_config.clicked.connect(lambda: self.stk_option.setCurrentWidget(dct_pg.get("Configs")[0]))
         self.pb_opt_gen_cur.clicked.connect(lambda: self.stk_option.setCurrentWidget(dct_pg.get("Curseurs")[0]))
         self.pb_opt_theme_colors.clicked.connect(lambda: self.stk_option.setCurrentWidget(dct_pg.get("T-Colors")[0]))
+
+        self.pb_dlg_option_ok.clicked.connect(__ok)
+        self.pb_dlg_option_appliquer.clicked.connect(__appliquer)
+        self.pb_dlg_option_annuler.clicked.connect(self._close)
+
+        # Connection value change
+        self.fcb_opt_ft_font.currentTextChanged.connect(__val_change_appliquer)
 
 
     ### EVENT
