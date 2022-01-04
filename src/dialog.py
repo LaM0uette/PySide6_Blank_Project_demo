@@ -133,7 +133,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.lb_opt_info_version.setText(f"Version : {config.version}")
     def IN_WG_BASE(self):
         # Option
-        self.pb_dlg_option_appliquer.setVisible(True)
+        self.pb_dlg_option_appliquer.setVisible(False)
         self.stk_option.setCurrentWidget(self.pg_opt_menu)
     def IN_CONNECTIONS(self):
         ## Menu_top
@@ -218,8 +218,17 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             config_ini = Ini(lien_ini=vrb.INI_CONFIG)
             config = config_ini.OPEN_INI()
             config["config"]["font"] = self.fcb_opt_ft_font.currentText()
-
             config_ini.WRITE_INI(ini=config)
+
+            dct = {
+                "h1": self.sb_opt_ft_h1.value(),
+                "h2": self.sb_opt_ft_h2.value(),
+                "h3": self.sb_opt_ft_h3.value(),
+                "h4": self.sb_opt_ft_h4.value(),
+                "h5": self.sb_opt_ft_h5.value(),
+            }
+            Json(lien_json=vrb.JS_FONT).UPDATE(dct)
+
             self._reload()
         def __ok():
             if self .pb_dlg_option_appliquer.isVisible():
@@ -268,6 +277,11 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         # Connection value change
         self.fcb_opt_ft_font.currentTextChanged.connect(__val_change_appliquer)
+        self.sb_opt_ft_h1.currentTextChanged.connect(__val_change_appliquer)
+        self.sb_opt_ft_h2.currentTextChanged.connect(__val_change_appliquer)
+        self.sb_opt_ft_h3.currentTextChanged.connect(__val_change_appliquer)
+        self.sb_opt_ft_h4.currentTextChanged.connect(__val_change_appliquer)
+        self.sb_opt_ft_h5.currentTextChanged.connect(__val_change_appliquer)
 
 
     ### EVENT
