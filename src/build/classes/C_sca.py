@@ -22,6 +22,13 @@ class C_sca(C_wg):
         """
         for wg in lst: C_wg(wg=wg, attrs=kwargs).STL_SCA()
 
+
+    def invisible(self, *args):
+        self.STL(list(args),
+                 colors = P_rgb().p_th1(),
+                 dim = P_dim().p_all(),
+                 scroll=P_scroll().of_of())
+
     def demo(self, *args):
         self.STL(list(args),
                  colors = P_rgb().p_th1(),

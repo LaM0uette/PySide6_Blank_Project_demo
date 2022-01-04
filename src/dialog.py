@@ -1,3 +1,5 @@
+from pprint import pprint
+
 from PySide6 import QtCore, QtWidgets, QtGui
 
 from .gui import *
@@ -72,12 +74,15 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             C_.tr_h4(self.le_opt_ft_texte_h4)
             C_.tr_h5(self.le_opt_ft_texte_h5)
 
+        # QScrollBoxArea
+        with C_sca() as C_:
+            C_.invisible(self.sca_option)
 
         In_classe(ui=self)
 
         # QComboBox
         with C_cb() as C_:
-            C_.font(self.fcb_opt_ft_font, self.cb_opt_ft_font)
+            C_.font(self.fcb_opt_ft_font)
 
         # QFrame
         with C_fr() as C_:
@@ -134,10 +139,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         ## Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
     def IN_ACT(self):
-        allFonts = QtGui.QFontDatabase().families()
-        print(allFonts)
-        stringList = QtCore.QStringList(allFonts)
-        self.cb_opt_ft_font.addItems(stringList)
+        pass
     def INIT(self):
         self.IN_BASE()
         self.IN_CLASSE()

@@ -15,9 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFontComboBox, QFrame,
-    QGridLayout, QHBoxLayout, QHeaderView, QLabel,
-    QLineEdit, QPushButton, QSizePolicy, QSpacerItem,
+from PySide6.QtWidgets import (QApplication, QFontComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QPushButton, QScrollArea, QSizePolicy, QSpacerItem,
     QSpinBox, QStackedWidget, QTreeWidget, QTreeWidgetItem,
     QVBoxLayout, QWidget)
 
@@ -243,7 +243,15 @@ class Ui_Dlg(object):
 
         self.hlay_option.addWidget(self.trw_option)
 
-        self.stk_option = QStackedWidget(self.pg_dlg_option)
+        self.scrollArea = QScrollArea(self.pg_dlg_option)
+        self.scrollArea.setObjectName(u"scrollArea")
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollAreaWidgetContents = QWidget()
+        self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 556, 503))
+        self.verticalLayout = QVBoxLayout(self.scrollAreaWidgetContents)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.stk_option = QStackedWidget(self.scrollAreaWidgetContents)
         self.stk_option.setObjectName(u"stk_option")
         self.pg_opt_menu = QWidget()
         self.pg_opt_menu.setObjectName(u"pg_opt_menu")
@@ -284,11 +292,6 @@ class Ui_Dlg(object):
         self.fcb_opt_ft_font.setObjectName(u"fcb_opt_ft_font")
 
         self.vlay_pg_opt_font.addWidget(self.fcb_opt_ft_font)
-
-        self.cb_opt_ft_font = QComboBox(self.pg_opt_font)
-        self.cb_opt_ft_font.setObjectName(u"cb_opt_ft_font")
-
-        self.vlay_pg_opt_font.addWidget(self.cb_opt_ft_font)
 
         self.verticalSpacer_8 = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Fixed)
 
@@ -480,7 +483,11 @@ class Ui_Dlg(object):
 
         self.stk_option.addWidget(self.pg_opt_infos)
 
-        self.hlay_option.addWidget(self.stk_option)
+        self.verticalLayout.addWidget(self.stk_option)
+
+        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
+
+        self.hlay_option.addWidget(self.scrollArea)
 
 
         self.glay_stk_option.addLayout(self.hlay_option, 0, 1, 1, 1)
