@@ -1,5 +1,3 @@
-from pprint import pprint
-
 from PySide6 import QtCore, QtWidgets, QtGui
 
 from .gui import *
