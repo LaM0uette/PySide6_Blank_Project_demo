@@ -244,6 +244,9 @@ class Ui_Dlg(object):
 
         self.stk_option = QStackedWidget(self.pg_dlg_option)
         self.stk_option.setObjectName(u"stk_option")
+        self.pg_opt_menu = QWidget()
+        self.pg_opt_menu.setObjectName(u"pg_opt_menu")
+        self.stk_option.addWidget(self.pg_opt_menu)
         self.pg_opt_gen = QWidget()
         self.pg_opt_gen.setObjectName(u"pg_opt_gen")
         self.stk_option.addWidget(self.pg_opt_gen)

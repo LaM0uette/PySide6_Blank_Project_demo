@@ -463,6 +463,7 @@
             </item>
             <item>
              <widget class="QStackedWidget" name="stk_option">
+              <widget class="QWidget" name="pg_opt_menu"/>
               <widget class="QWidget" name="pg_opt_gen"/>
               <widget class="QWidget" name="pg_opt_font"/>
               <widget class="QWidget" name="pg_opt_config"/>

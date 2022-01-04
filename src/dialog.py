@@ -115,6 +115,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
     def IN_WG_BASE(self):
         # Option
         self.pb_dlg_option_appliquer.setVisible(True)
+        self.stk_option.setCurrentWidget(self.pg_opt_menu)
     def IN_CONNECTIONS(self):
         ## Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
