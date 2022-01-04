@@ -277,11 +277,11 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         # Connection value change
         self.fcb_opt_ft_font.currentTextChanged.connect(__val_change_appliquer)
-        self.sb_opt_ft_h1.currentTextChanged.connect(__val_change_appliquer)
-        self.sb_opt_ft_h2.currentTextChanged.connect(__val_change_appliquer)
-        self.sb_opt_ft_h3.currentTextChanged.connect(__val_change_appliquer)
-        self.sb_opt_ft_h4.currentTextChanged.connect(__val_change_appliquer)
-        self.sb_opt_ft_h5.currentTextChanged.connect(__val_change_appliquer)
+        self.sb_opt_ft_h1.valueChanged.connect(__val_change_appliquer)
+        self.sb_opt_ft_h2.valueChanged.connect(__val_change_appliquer)
+        self.sb_opt_ft_h3.valueChanged.connect(__val_change_appliquer)
+        self.sb_opt_ft_h4.valueChanged.connect(__val_change_appliquer)
+        self.sb_opt_ft_h5.valueChanged.connect(__val_change_appliquer)
 
 
     ### EVENT

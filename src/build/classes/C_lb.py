@@ -78,7 +78,7 @@ class C_lb(C_wg):
         self.STL(list(args),
                  colors_type = "tr",
                  colors = P_rgb().p_th3(),
-                 dim = P_dim().p_aw_h8(),
+                 dim = P_dim().p_aw_h7(),
                  font=P_font().h1(),
                  align=P_align().c_b(),
                  bd = P_bd().bd0010_bd_bn1())
