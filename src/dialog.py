@@ -66,6 +66,11 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         # QLineEdit | QTextEdit | QPlainTextEdit
         with C_txt() as C_:
             C_.tr(self.le_input)
+            C_.tr_h1(self.le_opt_ft_texte_h1)
+            C_.tr_h2(self.le_opt_ft_texte_h2)
+            C_.tr_h3(self.le_opt_ft_texte_h3)
+            C_.tr_h4(self.le_opt_ft_texte_h4)
+            C_.tr_h5(self.le_opt_ft_texte_h5)
 
 
         In_classe(ui=self)
@@ -74,11 +79,13 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         # QFrame
         with C_fr() as C_:
             C_.menu_bottom_dlg(self.fr_pg_dlg_msg, self.fr_pg_dlg_rep, self.fr_pg_dlg_input, self.fr_pg_dlg_option)
+            C_.option_font(self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5)
 
         # QLabel
         with C_lb() as C_:
             C_.h1(self.lb_opt_info_nom)
-            C_.p(self.lb_msg_texte, self.lb_rep_texte, self.lb_input_texte, self.lb_opt_info_desc, self.lb_opt_info_auteur, self.lb_opt_info_version)
+            C_.p(self.lb_msg_texte, self.lb_rep_texte, self.lb_input_texte, self.lb_opt_info_desc, self.lb_opt_info_auteur, self.lb_opt_info_version,
+                 self.lb_opt_ft_h1, self.lb_opt_ft_h2, self.lb_opt_ft_h3, self.lb_opt_ft_h4, self.lb_opt_ft_h5)
 
         # QPushButton
         with C_pb() as C_:
@@ -86,6 +93,10 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             C_.appliquer(self.pb_dlg_option_appliquer)
             C_.annuler(self.pb_dlg_rep_annuler, self.pb_dlg_input_annuler, self.pb_dlg_option_annuler)
             C_.txt_h9(self.pb_opt_gen_font, self.pb_opt_gen_config, self.pb_opt_gen_cur, self.pb_opt_theme_colors)
+
+        # QSpinBox | QDoubleSpinBox
+        with C_sb() as C_:
+            C_.th1(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5)
 
         # QTreeWidget
         with C_trw() as C_:

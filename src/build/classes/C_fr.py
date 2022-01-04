@@ -46,6 +46,11 @@ class C_fr(C_wg):
                  colors = P_rgb().p_u2(),
                  dim = P_dim().p_aw_mb_dlg_2())
 
+    def option_font(self, *args):
+        self.STL(list(args),
+                 colors = P_rgb().p_u1(),
+                 dim = P_dim().p_aw_h7())
+
     def demo(self, *args):
         self.STL(list(args),
                  colors=P_rgb().p_u1(),

@@ -15,16 +15,17 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
-    QHeaderView, QLabel, QLineEdit, QPushButton,
-    QSizePolicy, QSpacerItem, QStackedWidget, QTreeWidget,
-    QTreeWidgetItem, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QFontComboBox, QFrame, QGridLayout,
+    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
+    QPushButton, QSizePolicy, QSpacerItem, QSpinBox,
+    QStackedWidget, QTreeWidget, QTreeWidgetItem, QVBoxLayout,
+    QWidget)
 
 class Ui_Dlg(object):
     def setupUi(self, Dlg):
         if not Dlg.objectName():
             Dlg.setObjectName(u"Dlg")
-        Dlg.resize(724, 699)
+        Dlg.resize(1133, 567)
         self.glay_dlg = QGridLayout(Dlg)
         self.glay_dlg.setSpacing(0)
         self.glay_dlg.setObjectName(u"glay_dlg")
@@ -275,6 +276,143 @@ class Ui_Dlg(object):
         self.stk_option.addWidget(self.pg_opt_gen)
         self.pg_opt_font = QWidget()
         self.pg_opt_font.setObjectName(u"pg_opt_font")
+        self.vlay_pg_opt_font = QVBoxLayout(self.pg_opt_font)
+        self.vlay_pg_opt_font.setSpacing(10)
+        self.vlay_pg_opt_font.setObjectName(u"vlay_pg_opt_font")
+        self.vlay_pg_opt_font.setContentsMargins(10, 20, 10, 10)
+        self.fcb_opt_ft_font = QFontComboBox(self.pg_opt_font)
+        self.fcb_opt_ft_font.setObjectName(u"fcb_opt_ft_font")
+
+        self.vlay_pg_opt_font.addWidget(self.fcb_opt_ft_font)
+
+        self.verticalSpacer_8 = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.vlay_pg_opt_font.addItem(self.verticalSpacer_8)
+
+        self.fr_opt_ft_h1 = QFrame(self.pg_opt_font)
+        self.fr_opt_ft_h1.setObjectName(u"fr_opt_ft_h1")
+        self.hlay_opt_ft_h1 = QHBoxLayout(self.fr_opt_ft_h1)
+        self.hlay_opt_ft_h1.setSpacing(0)
+        self.hlay_opt_ft_h1.setObjectName(u"hlay_opt_ft_h1")
+        self.hlay_opt_ft_h1.setContentsMargins(5, 5, 5, 5)
+        self.lb_opt_ft_h1 = QLabel(self.fr_opt_ft_h1)
+        self.lb_opt_ft_h1.setObjectName(u"lb_opt_ft_h1")
+
+        self.hlay_opt_ft_h1.addWidget(self.lb_opt_ft_h1)
+
+        self.sb_opt_ft_h1 = QSpinBox(self.fr_opt_ft_h1)
+        self.sb_opt_ft_h1.setObjectName(u"sb_opt_ft_h1")
+
+        self.hlay_opt_ft_h1.addWidget(self.sb_opt_ft_h1)
+
+        self.le_opt_ft_texte_h1 = QLineEdit(self.fr_opt_ft_h1)
+        self.le_opt_ft_texte_h1.setObjectName(u"le_opt_ft_texte_h1")
+
+        self.hlay_opt_ft_h1.addWidget(self.le_opt_ft_texte_h1)
+
+
+        self.vlay_pg_opt_font.addWidget(self.fr_opt_ft_h1)
+
+        self.fr_opt_ft_h2 = QFrame(self.pg_opt_font)
+        self.fr_opt_ft_h2.setObjectName(u"fr_opt_ft_h2")
+        self.hlay_opt_ft_h2 = QHBoxLayout(self.fr_opt_ft_h2)
+        self.hlay_opt_ft_h2.setSpacing(0)
+        self.hlay_opt_ft_h2.setObjectName(u"hlay_opt_ft_h2")
+        self.hlay_opt_ft_h2.setContentsMargins(5, 5, 5, 5)
+        self.lb_opt_ft_h2 = QLabel(self.fr_opt_ft_h2)
+        self.lb_opt_ft_h2.setObjectName(u"lb_opt_ft_h2")
+
+        self.hlay_opt_ft_h2.addWidget(self.lb_opt_ft_h2)
+
+        self.sb_opt_ft_h2 = QSpinBox(self.fr_opt_ft_h2)
+        self.sb_opt_ft_h2.setObjectName(u"sb_opt_ft_h2")
+
+        self.hlay_opt_ft_h2.addWidget(self.sb_opt_ft_h2)
+
+        self.le_opt_ft_texte_h2 = QLineEdit(self.fr_opt_ft_h2)
+        self.le_opt_ft_texte_h2.setObjectName(u"le_opt_ft_texte_h2")
+
+        self.hlay_opt_ft_h2.addWidget(self.le_opt_ft_texte_h2)
+
+
+        self.vlay_pg_opt_font.addWidget(self.fr_opt_ft_h2)
+
+        self.fr_opt_ft_h3 = QFrame(self.pg_opt_font)
+        self.fr_opt_ft_h3.setObjectName(u"fr_opt_ft_h3")
+        self.hlay_opt_ft_h3 = QHBoxLayout(self.fr_opt_ft_h3)
+        self.hlay_opt_ft_h3.setSpacing(0)
+        self.hlay_opt_ft_h3.setObjectName(u"hlay_opt_ft_h3")
+        self.hlay_opt_ft_h3.setContentsMargins(5, 5, 5, 5)
+        self.lb_opt_ft_h3 = QLabel(self.fr_opt_ft_h3)
+        self.lb_opt_ft_h3.setObjectName(u"lb_opt_ft_h3")
+
+        self.hlay_opt_ft_h3.addWidget(self.lb_opt_ft_h3)
+
+        self.sb_opt_ft_h3 = QSpinBox(self.fr_opt_ft_h3)
+        self.sb_opt_ft_h3.setObjectName(u"sb_opt_ft_h3")
+
+        self.hlay_opt_ft_h3.addWidget(self.sb_opt_ft_h3)
+
+        self.le_opt_ft_texte_h3 = QLineEdit(self.fr_opt_ft_h3)
+        self.le_opt_ft_texte_h3.setObjectName(u"le_opt_ft_texte_h3")
+
+        self.hlay_opt_ft_h3.addWidget(self.le_opt_ft_texte_h3)
+
+
+        self.vlay_pg_opt_font.addWidget(self.fr_opt_ft_h3)
+
+        self.fr_opt_ft_h4 = QFrame(self.pg_opt_font)
+        self.fr_opt_ft_h4.setObjectName(u"fr_opt_ft_h4")
+        self.hlay_opt_ft_h4 = QHBoxLayout(self.fr_opt_ft_h4)
+        self.hlay_opt_ft_h4.setSpacing(0)
+        self.hlay_opt_ft_h4.setObjectName(u"hlay_opt_ft_h4")
+        self.hlay_opt_ft_h4.setContentsMargins(5, 5, 5, 5)
+        self.lb_opt_ft_h4 = QLabel(self.fr_opt_ft_h4)
+        self.lb_opt_ft_h4.setObjectName(u"lb_opt_ft_h4")
+
+        self.hlay_opt_ft_h4.addWidget(self.lb_opt_ft_h4)
+
+        self.sb_opt_ft_h4 = QSpinBox(self.fr_opt_ft_h4)
+        self.sb_opt_ft_h4.setObjectName(u"sb_opt_ft_h4")
+
+        self.hlay_opt_ft_h4.addWidget(self.sb_opt_ft_h4)
+
+        self.le_opt_ft_texte_h4 = QLineEdit(self.fr_opt_ft_h4)
+        self.le_opt_ft_texte_h4.setObjectName(u"le_opt_ft_texte_h4")
+
+        self.hlay_opt_ft_h4.addWidget(self.le_opt_ft_texte_h4)
+
+
+        self.vlay_pg_opt_font.addWidget(self.fr_opt_ft_h4)
+
+        self.fr_opt_ft_h5 = QFrame(self.pg_opt_font)
+        self.fr_opt_ft_h5.setObjectName(u"fr_opt_ft_h5")
+        self.hlay_opt_ft_h5 = QHBoxLayout(self.fr_opt_ft_h5)
+        self.hlay_opt_ft_h5.setSpacing(0)
+        self.hlay_opt_ft_h5.setObjectName(u"hlay_opt_ft_h5")
+        self.hlay_opt_ft_h5.setContentsMargins(5, 5, 5, 5)
+        self.lb_opt_ft_h5 = QLabel(self.fr_opt_ft_h5)
+        self.lb_opt_ft_h5.setObjectName(u"lb_opt_ft_h5")
+
+        self.hlay_opt_ft_h5.addWidget(self.lb_opt_ft_h5)
+
+        self.sb_opt_ft_h5 = QSpinBox(self.fr_opt_ft_h5)
+        self.sb_opt_ft_h5.setObjectName(u"sb_opt_ft_h5")
+
+        self.hlay_opt_ft_h5.addWidget(self.sb_opt_ft_h5)
+
+        self.le_opt_ft_texte_h5 = QLineEdit(self.fr_opt_ft_h5)
+        self.le_opt_ft_texte_h5.setObjectName(u"le_opt_ft_texte_h5")
+
+        self.hlay_opt_ft_h5.addWidget(self.le_opt_ft_texte_h5)
+
+
+        self.vlay_pg_opt_font.addWidget(self.fr_opt_ft_h5)
+
+        self.verticalSpacer_7 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.vlay_pg_opt_font.addItem(self.verticalSpacer_7)
+
         self.stk_option.addWidget(self.pg_opt_font)
         self.pg_opt_configs = QWidget()
         self.pg_opt_configs.setObjectName(u"pg_opt_configs")
@@ -382,6 +520,16 @@ class Ui_Dlg(object):
         self.pb_opt_gen_font.setText(QCoreApplication.translate("Dlg", u"Police", None))
         self.pb_opt_gen_config.setText(QCoreApplication.translate("Dlg", u"Configs", None))
         self.pb_opt_gen_cur.setText(QCoreApplication.translate("Dlg", u"Curseurs", None))
+        self.lb_opt_ft_h1.setText(QCoreApplication.translate("Dlg", u"H1: ", None))
+        self.le_opt_ft_texte_h1.setText(QCoreApplication.translate("Dlg", u"TEST De la Police :)", None))
+        self.lb_opt_ft_h2.setText(QCoreApplication.translate("Dlg", u"H2: ", None))
+        self.le_opt_ft_texte_h2.setText(QCoreApplication.translate("Dlg", u"TEST De la Police :)", None))
+        self.lb_opt_ft_h3.setText(QCoreApplication.translate("Dlg", u"H3: ", None))
+        self.le_opt_ft_texte_h3.setText(QCoreApplication.translate("Dlg", u"TEST De la Police :)", None))
+        self.lb_opt_ft_h4.setText(QCoreApplication.translate("Dlg", u"H4: ", None))
+        self.le_opt_ft_texte_h4.setText(QCoreApplication.translate("Dlg", u"TEST De la Police :)", None))
+        self.lb_opt_ft_h5.setText(QCoreApplication.translate("Dlg", u"H5: ", None))
+        self.le_opt_ft_texte_h5.setText(QCoreApplication.translate("Dlg", u"TEST De la Police :)", None))
         self.pb_opt_theme_colors.setText(QCoreApplication.translate("Dlg", u"Couleurs", None))
         pass
     # retranslateUi

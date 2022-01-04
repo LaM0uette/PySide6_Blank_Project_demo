@@ -31,6 +31,20 @@ class C_sb(C_wg):
         """
         for wg in lst: C_wg(wg=wg, attrs=kwargs).STL_SB()
 
+    def th1(self, *args):
+        self.STL(list(args),
+                 colors_type="th",
+                 colors=P_rgb().p_th1(),
+                 dim=P_dim().p_aw_h9(),
+                 font=P_font().h3(),
+                 align=P_align().c_c(),
+                 edit=True,
+                 pb_sb=P_pb_sb().pl_mi(),
+                 pb_side="tb",
+                 min=0,
+                 max=99,
+                 step=1,
+                 cur="souris_main")
 
     def demo_th(self, *args):
         self.STL(list(args),

@@ -26,6 +26,42 @@ class C_txt(C_wg):
             C_wg(wg=wg, attrs=kwargs).STL_TXT()
 
 
+    def tr_h1(self, *args):
+        self.STL(list(args),
+                 colors_type = "tr",
+                 colors = P_rgb().p_th1(),
+                 dim = P_dim().p_all(),
+                 font=P_font().h1(),
+                 align=P_align().c_c())
+    def tr_h2(self, *args):
+        self.STL(list(args),
+                 colors_type = "tr",
+                 colors = P_rgb().p_th1(),
+                 dim = P_dim().p_all(),
+                 font=P_font().h2(),
+                 align=P_align().c_c())
+    def tr_h3(self, *args):
+        self.STL(list(args),
+                 colors_type = "tr",
+                 colors = P_rgb().p_th1(),
+                 dim = P_dim().p_all(),
+                 font=P_font().h3(),
+                 align=P_align().c_c())
+    def tr_h4(self, *args):
+        self.STL(list(args),
+                 colors_type = "tr",
+                 colors = P_rgb().p_th1(),
+                 dim = P_dim().p_all(),
+                 font=P_font().h4(),
+                 align=P_align().c_c())
+    def tr_h5(self, *args):
+        self.STL(list(args),
+                 colors_type = "tr",
+                 colors = P_rgb().p_th1(),
+                 dim = P_dim().p_all(),
+                 font=P_font().h5(),
+                 align=P_align().c_c())
+
     def tr(self, *args):
         self.STL(list(args),
                  colors_type = "tr",
