@@ -73,27 +73,19 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         # QFrame
         with C_fr() as C_:
-            C_.menu_bottom_dlg(self.fr_pg_dlg_msg)
-            C_.menu_bottom_dlg(self.fr_pg_dlg_rep)
-            C_.menu_bottom_dlg(self.fr_pg_dlg_input)
-            C_.menu_bottom_dlg(self.fr_pg_dlg_option)
+            C_.menu_bottom_dlg(self.fr_pg_dlg_msg, self.fr_pg_dlg_rep, self.fr_pg_dlg_input, self.fr_pg_dlg_option)
 
         # QLabel
         with C_lb() as C_:
-            C_.p(self.lb_msg_texte)
-            C_.p(self.lb_rep_texte)
-            C_.p(self.lb_input_texte)
+            C_.p(self.lb_msg_texte, self.lb_rep_texte, self.lb_input_texte)
+
+            C_.p(self.lb_opt_info_nom, self.lb_opt_info_desc, self.lb_opt_info_auteur)
 
         # QPushButton
         with C_pb() as C_:
-            C_.ok(self.pb_dlg_msg_ok)
-            C_.ok(self.pb_dlg_rep_ok)
-            C_.annuler(self.pb_dlg_rep_annuler)
-            C_.ok(self.pb_dlg_input_ok)
-            C_.annuler(self.pb_dlg_input_annuler)
-            C_.ok(self.pb_dlg_option_ok)
+            C_.ok(self.pb_dlg_msg_ok, self.pb_dlg_rep_ok, self.pb_dlg_input_ok, self.pb_dlg_option_ok)
             C_.appliquer(self.pb_dlg_option_appliquer)
-            C_.annuler(self.pb_dlg_option_annuler)
+            C_.annuler(self.pb_dlg_rep_annuler, self.pb_dlg_input_annuler, self.pb_dlg_option_annuler)
 
         # QTreeWidget
         with C_trw() as C_:

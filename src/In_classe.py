@@ -48,5 +48,8 @@ class In_classe:
         # QTableWidget
         # with C_tw() as C_: pass
 
+        # QTreeWidget
+        # with C_trw() as C_: pass
+
         # QToolBox
         # with C_tb() as C_: pass
