@@ -451,6 +451,7 @@ class Ui_Dlg(object):
         self.fr_opt_cfg_autoclose = QFrame(self.pg_opt_configs)
         self.fr_opt_cfg_autoclose.setObjectName(u"fr_opt_cfg_autoclose")
         self.gridLayout = QGridLayout(self.fr_opt_cfg_autoclose)
+        self.gridLayout.setSpacing(5)
         self.gridLayout.setObjectName(u"gridLayout")
         self.gridLayout.setContentsMargins(5, 5, 5, 5)
         self.ck_opt_cfg_autoclose = QCheckBox(self.fr_opt_cfg_autoclose)
@@ -480,7 +481,50 @@ class Ui_Dlg(object):
 
         self.vlay_pg_opt_configs.addWidget(self.fr_opt_cfg_autoclose)
 
-        self.verticalSpacer_9 = QSpacerItem(20, 378, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.fr_opt_cfg_resize = QFrame(self.pg_opt_configs)
+        self.fr_opt_cfg_resize.setObjectName(u"fr_opt_cfg_resize")
+        self.glay_fr_opt_cfg_resize = QGridLayout(self.fr_opt_cfg_resize)
+        self.glay_fr_opt_cfg_resize.setSpacing(5)
+        self.glay_fr_opt_cfg_resize.setObjectName(u"glay_fr_opt_cfg_resize")
+        self.glay_fr_opt_cfg_resize.setContentsMargins(5, 5, 5, 5)
+        self.lb_opt_cfg_resize = QLabel(self.fr_opt_cfg_resize)
+        self.lb_opt_cfg_resize.setObjectName(u"lb_opt_cfg_resize")
+
+        self.glay_fr_opt_cfg_resize.addWidget(self.lb_opt_cfg_resize, 0, 0, 1, 1)
+
+        self.ck_opt_cfg_resize = QCheckBox(self.fr_opt_cfg_resize)
+        self.ck_opt_cfg_resize.setObjectName(u"ck_opt_cfg_resize")
+
+        self.glay_fr_opt_cfg_resize.addWidget(self.ck_opt_cfg_resize, 0, 1, 1, 1)
+
+        self.lb_opt_cfg_resize_width = QLabel(self.fr_opt_cfg_resize)
+        self.lb_opt_cfg_resize_width.setObjectName(u"lb_opt_cfg_resize_width")
+
+        self.glay_fr_opt_cfg_resize.addWidget(self.lb_opt_cfg_resize_width, 1, 0, 1, 1)
+
+        self.lb_opt_cfg_resize_height = QLabel(self.fr_opt_cfg_resize)
+        self.lb_opt_cfg_resize_height.setObjectName(u"lb_opt_cfg_resize_height")
+
+        self.glay_fr_opt_cfg_resize.addWidget(self.lb_opt_cfg_resize_height, 2, 0, 1, 1)
+
+        self.sb_opt_cfg_resize_width = QSpinBox(self.fr_opt_cfg_resize)
+        self.sb_opt_cfg_resize_width.setObjectName(u"sb_opt_cfg_resize_width")
+
+        self.glay_fr_opt_cfg_resize.addWidget(self.sb_opt_cfg_resize_width, 1, 1, 1, 1)
+
+        self.sb_opt_cfg_resize_height = QSpinBox(self.fr_opt_cfg_resize)
+        self.sb_opt_cfg_resize_height.setObjectName(u"sb_opt_cfg_resize_height")
+
+        self.glay_fr_opt_cfg_resize.addWidget(self.sb_opt_cfg_resize_height, 2, 1, 1, 1)
+
+        self.horizontalSpacer_9 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.glay_fr_opt_cfg_resize.addItem(self.horizontalSpacer_9, 0, 2, 3, 1)
+
+
+        self.vlay_pg_opt_configs.addWidget(self.fr_opt_cfg_resize)
+
+        self.verticalSpacer_9 = QSpacerItem(20, 296, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.vlay_pg_opt_configs.addItem(self.verticalSpacer_9)
 
@@ -605,6 +649,9 @@ class Ui_Dlg(object):
         self.lb_opt_cfg_opacity.setText(QCoreApplication.translate("Dlg", u"Opacit\u00e9 ", None))
         self.lb_opt_cfg_autoclose.setText(QCoreApplication.translate("Dlg", u"Auto close : ", None))
         self.lb_opt_cfg_autoreload.setText(QCoreApplication.translate("Dlg", u"Auto reload : ", None))
+        self.lb_opt_cfg_resize.setText(QCoreApplication.translate("Dlg", u"Manuel : ", None))
+        self.lb_opt_cfg_resize_width.setText(QCoreApplication.translate("Dlg", u"Largeur : ", None))
+        self.lb_opt_cfg_resize_height.setText(QCoreApplication.translate("Dlg", u"Hauteur : ", None))
         self.pb_opt_theme_colors.setText(QCoreApplication.translate("Dlg", u"Couleurs", None))
         pass
     # retranslateUi

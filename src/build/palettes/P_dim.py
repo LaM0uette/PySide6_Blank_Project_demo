@@ -39,6 +39,17 @@ class P_dim(Dim):
     def p_ah_h8(self): return {"w": self.h_h8(), "h": None}
     def p_ah_h9(self): return {"w": self.h_h9(), "h": None}
 
+    def p_c_h0(self): return {"w": self.h_h0(), "h": self.h_h0()}
+    def p_c_h1(self): return {"w": self.h_h1(), "h": self.h_h1()}
+    def p_c_h2(self): return {"w": self.h_h2(), "h": self.h_h2()}
+    def p_c_h3(self): return {"w": self.h_h3(), "h": self.h_h3()}
+    def p_c_h4(self): return {"w": self.h_h4(), "h": self.h_h4()}
+    def p_c_h5(self): return {"w": self.h_h5(), "h": self.h_h5()}
+    def p_c_h6(self): return {"w": self.h_h6(), "h": self.h_h6()}
+    def p_c_h7(self): return {"w": self.h_h7(), "h": self.h_h7()}
+    def p_c_h8(self): return {"w": self.h_h8(), "h": self.h_h8()}
+    def p_c_h9(self): return {"w": self.h_h9(), "h": self.h_h9()}
+
     def p_h8_h9(self): return {"w": self.h_h8(), "h": self.h_h9()}
 
     def p_aw_demo(self): return {"w": None, "h": self.h_h8()}

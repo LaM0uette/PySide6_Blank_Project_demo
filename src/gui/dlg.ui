@@ -861,6 +861,9 @@
                        <property name="bottomMargin">
                         <number>5</number>
                        </property>
+                       <property name="spacing">
+                        <number>5</number>
+                       </property>
                        <item row="1" column="1">
                         <widget class="QCheckBox" name="ck_opt_cfg_autoclose"/>
                        </item>
@@ -898,6 +901,70 @@
                      </widget>
                     </item>
                     <item>
+                     <widget class="QFrame" name="fr_opt_cfg_resize">
+                      <layout class="QGridLayout" name="glay_fr_opt_cfg_resize">
+                       <property name="leftMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>5</number>
+                       </property>
+                       <property name="spacing">
+                        <number>5</number>
+                       </property>
+                       <item row="0" column="0">
+                        <widget class="QLabel" name="lb_opt_cfg_resize">
+                         <property name="text">
+                          <string>Manuel : </string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="1">
+                        <widget class="QCheckBox" name="ck_opt_cfg_resize"/>
+                       </item>
+                       <item row="1" column="0">
+                        <widget class="QLabel" name="lb_opt_cfg_resize_width">
+                         <property name="text">
+                          <string>Largeur : </string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="0">
+                        <widget class="QLabel" name="lb_opt_cfg_resize_height">
+                         <property name="text">
+                          <string>Hauteur : </string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="1">
+                        <widget class="QSpinBox" name="sb_opt_cfg_resize_width"/>
+                       </item>
+                       <item row="2" column="1">
+                        <widget class="QSpinBox" name="sb_opt_cfg_resize_height"/>
+                       </item>
+                       <item row="0" column="2" rowspan="3">
+                        <spacer name="horizontalSpacer_9">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
                      <spacer name="verticalSpacer_9">
                       <property name="orientation">
                        <enum>Qt::Vertical</enum>
@@ -905,7 +972,7 @@
                       <property name="sizeHint" stdset="0">
                        <size>
                         <width>20</width>
-                        <height>378</height>
+                        <height>40</height>
                        </size>
                       </property>
                      </spacer>

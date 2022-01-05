@@ -29,6 +29,17 @@ class C_ck(C_wg):
         for wg in lst: C_wg(wg=wg, attrs=kwargs).STL_CK()
 
 
+    def tr(self, *args):
+        self.STL(list(args),
+                 colors_type="tr",
+                 colors=P_rgb().p_th1(),
+                 dim=P_dim().p_c_h9(),
+                 img=P_img().check(),
+                 img_check=P_img().valider(),
+                 th="th3",
+                 th_check="bn1",
+                 cur="main")
+
     def demo_th(self, *args):
         self.STL(list(args),
                  colors_type="th",

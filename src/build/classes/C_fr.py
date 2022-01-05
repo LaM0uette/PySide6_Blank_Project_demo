@@ -54,7 +54,7 @@ class C_fr(C_wg):
     def option_config(self, *args):
         self.STL(list(args),
                  colors = P_rgb().p_th1(),
-                 dim = P_dim().p_aw_h7(),
+                 dim = P_dim().p_aw_h6(),
                  bd=P_bd().bd1_bd_th3())
 
     def demo(self, *args):

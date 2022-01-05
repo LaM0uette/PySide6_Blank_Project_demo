@@ -89,14 +89,14 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         with C_fr() as C_:
             C_.menu_bottom_dlg(self.fr_pg_dlg_msg, self.fr_pg_dlg_rep, self.fr_pg_dlg_input, self.fr_pg_dlg_option)
             C_.option_font(self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5)
-            C_.option_config(self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose)
+            C_.option_config(self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize)
 
         # QLabel
         with C_lb() as C_:
             C_.h1(self.lb_opt_info_nom)
             C_.p(self.lb_msg_texte, self.lb_rep_texte, self.lb_input_texte, self.lb_opt_info_desc, self.lb_opt_info_auteur, self.lb_opt_info_version,
                  self.lb_opt_ft_h1, self.lb_opt_ft_h2, self.lb_opt_ft_h3, self.lb_opt_ft_h4, self.lb_opt_ft_h5,
-                 self.lb_opt_cfg_opacity, self.lb_opt_cfg_autoreload, self.lb_opt_cfg_autoclose)
+                 self.lb_opt_cfg_opacity, self.lb_opt_cfg_autoreload, self.lb_opt_cfg_autoclose, self.lb_opt_cfg_resize, self.lb_opt_cfg_resize_width, self.lb_opt_cfg_resize_height)
 
         # QPushButton
         with C_pb() as C_:
@@ -107,11 +107,12 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         # QCheckBox
         with C_ck() as C_:
-            C_.demo_tr(self.ck_opt_cfg_autoreload, self.ck_opt_cfg_autoclose)
+            C_.tr(self.ck_opt_cfg_autoreload, self.ck_opt_cfg_autoclose, self.ck_opt_cfg_resize)
 
         # QSpinBox | QDoubleSpinBox
         with C_sb() as C_:
-            C_.th1(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity)
+            C_.th1(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity,
+                   self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height)
 
         # QTreeWidget
         with C_trw() as C_:
