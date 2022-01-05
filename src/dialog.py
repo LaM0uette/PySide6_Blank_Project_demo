@@ -111,8 +111,8 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         # QSpinBox | QDoubleSpinBox
         with C_sb() as C_:
-            C_.th1(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity,
-                   self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height)
+            C_.th1(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity)
+            C_.th1_full(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height)
 
         # QTreeWidget
         with C_trw() as C_:
@@ -269,6 +269,14 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             self.sb_opt_ft_h3.setValue(P_font().h3())
             self.sb_opt_ft_h4.setValue(P_font().h4())
             self.sb_opt_ft_h5.setValue(P_font().h5())
+
+            self.sb_opt_cfg_opacity.setValue(config.opacity)
+            self.ck_opt_cfg_autoreload.setChecked(True) if config.auto_reload == True else self.ck_opt_cfg_autoreload.setChecked(False)
+            self.ck_opt_cfg_autoclose.setChecked(True) if config.auto_close == True else self.ck_opt_cfg_autoclose.setChecked(False)
+            self.ck_opt_cfg_resize.setChecked(True) if config.resize == True else self.ck_opt_cfg_resize.setChecked(False)
+
+            self.sb_opt_cfg_resize_width.setValue(config.widht)
+            self.sb_opt_cfg_resize_height.setValue(config.height)
         except: pass
 
 

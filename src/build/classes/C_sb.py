@@ -41,7 +41,21 @@ class C_sb(C_wg):
                  edit=True,
                  pb_sb=P_pb_sb().no(),
                  min=0,
-                 max=99,
+                 max=100,
+                 step=1,
+                 bd=P_bd().bd0010_bd_th3(),
+                 cur="souris_main")
+    def th1_full(self, *args):
+        self.STL(list(args),
+                 colors_type="th",
+                 colors=P_rgb().p_th1(),
+                 dim=P_dim().p_h8_h9(),
+                 font=P_font().h3(),
+                 align=P_align().c_c(),
+                 edit=True,
+                 pb_sb=P_pb_sb().no(),
+                 min=0,
+                 max=99999,
                  step=1,
                  bd=P_bd().bd0010_bd_th3(),
                  cur="souris_main")

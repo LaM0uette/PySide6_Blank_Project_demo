@@ -524,7 +524,7 @@ class Ui_Dlg(object):
 
         self.vlay_pg_opt_configs.addWidget(self.fr_opt_cfg_resize)
 
-        self.verticalSpacer_9 = QSpacerItem(20, 296, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_9 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.vlay_pg_opt_configs.addItem(self.verticalSpacer_9)
 
