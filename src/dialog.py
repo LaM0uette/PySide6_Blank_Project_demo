@@ -185,7 +185,6 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.IN_CLASSE()
 
         self.sgn_reload.emit()
-
         self.setCursor(Fct(cur="souris").CUR())
 
         dlg = Dialog(msg="Modifications appliquées !\nCertains paramètres peuvent nécessiter un redémarrage de l'application.")
