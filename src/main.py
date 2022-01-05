@@ -66,7 +66,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             # Demo
             C_.demo(self.fr_cb, self.fr_de, self.fr_lw, self.fr_pb, self.fr_ck,
                     self.fr_rb, self.fr_pg, self.fr_sb, self.fr_tw, self.fr_le,
-                    self.fr_te, self.fr_pte, self.fr_tb, self.fr_trw)
+                    self.fr_te, self.fr_pte, self.fr_tb, self.fr_trw, self.fr_sd)
             C_.demo_tb(self.fr_tb_demo, self.fr_tb_demo_2)
 
         # QLabel
@@ -77,7 +77,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             # Demo
             C_.demo(self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
                     self.lb_rb_demo, self.lb_pg_demo, self.lb_sb_demo, self.lb_tw_demo, self.lb_le_demo,
-                    self.lb_te_demo, self.lb_pte_demo, self.lb_tb_demo, self.lb_trw_demo)
+                    self.lb_te_demo, self.lb_pte_demo, self.lb_tb_demo, self.lb_trw_demo, self.lb_sd_demo)
 
         # QListWidget
         with C_lw() as C_:
@@ -118,6 +118,12 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         with C_pg() as C_:
             # Demo
             C_.demo(self.pg_demo)
+
+        # QProgressBar
+        with C_sd() as C_:
+            # Demo
+            C_.demo_h(self.hsd_demo)
+            C_.demo_v(self.vsd_demo)
 
         # QSpinBox | QDoubleSpinBox
         with C_sb() as C_:

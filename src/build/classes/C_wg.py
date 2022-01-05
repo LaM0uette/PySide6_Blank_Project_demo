@@ -195,6 +195,7 @@ class C_wg:
         elif isinstance(self.wg, QtWidgets.QCheckBox): wg_type = "QCheckBox"
         elif isinstance(self.wg, QtWidgets.QRadioButton): wg_type = "QRadioButton"
         elif isinstance(self.wg, QtWidgets.QProgressBar): wg_type = "QProgressBar"
+        elif isinstance(self.wg, QtWidgets.QSlider): wg_type = "QSlider"
         elif isinstance(self.wg, QtWidgets.QSpinBox): wg_type = "QSpinBox"
         elif isinstance(self.wg, QtWidgets.QTableWidget): wg_type = "QTableWidget"
         elif isinstance(self.wg, QtWidgets.QLineEdit): wg_type = "QLineEdit"
@@ -1008,6 +1009,22 @@ class C_wg:
         self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
         self.wg.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
     def STL_PG(self):
+        self.STL_ALL()
+
+        stl = {
+            "th":
+                "QProgressBar {"
+                f"background-color: rgb{self.c1};"
+                "}"
+
+                "QProgressBar::chunk {"
+                f"background-color: rgb{self.c3};"
+                "}"
+                
+                f"{self.inc}"
+        }
+        self.wg.setStyleSheet(stl.get(self.colors_type))
+    def STL_SD(self):
         self.STL_ALL()
 
         stl = {

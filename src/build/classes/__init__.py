@@ -7,6 +7,7 @@ from .C_pb import C_pb
 from .C_ck import C_ck
 from .C_rb import C_rb
 from .C_pg import C_pg
+from .C_sd import C_sd
 from .C_sca import C_sca
 from .C_sb import C_sb
 from .C_tw import C_tw

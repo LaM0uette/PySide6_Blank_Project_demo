@@ -43,10 +43,6 @@ class Dlg:
         dlg.sgn_rgb.connect(self.RTN_SGN_REP)
         dlg.COLORS()
         dlg.exec()
-
-        self.dlg.sgn_rgb.connect(self.RTN_SGN_REP)
-        self.dlg.COLORS()
-        self.dlg.exec()
         return self.rtn
 
 

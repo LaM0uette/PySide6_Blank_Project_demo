@@ -18,8 +18,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFontComboBox,
     QFrame, QGridLayout, QHBoxLayout, QHeaderView,
     QLabel, QLineEdit, QPushButton, QScrollArea,
-    QSizePolicy, QSpacerItem, QSpinBox, QStackedWidget,
-    QTreeWidget, QTreeWidgetItem, QVBoxLayout, QWidget)
+    QSizePolicy, QSlider, QSpacerItem, QSpinBox,
+    QStackedWidget, QTreeWidget, QTreeWidgetItem, QVBoxLayout,
+    QWidget)
 
 class Ui_Dlg(object):
     def setupUi(self, Dlg):
@@ -649,6 +650,14 @@ class Ui_Dlg(object):
         self.sca_area_colors = QWidget()
         self.sca_area_colors.setObjectName(u"sca_area_colors")
         self.sca_area_colors.setGeometry(QRect(0, 0, 877, 404))
+        self.vsd = QSlider(self.sca_area_colors)
+        self.vsd.setObjectName(u"vsd")
+        self.vsd.setGeometry(QRect(70, 30, 22, 160))
+        self.vsd.setOrientation(Qt.Vertical)
+        self.horizontalSlider = QSlider(self.sca_area_colors)
+        self.horizontalSlider.setObjectName(u"horizontalSlider")
+        self.horizontalSlider.setGeometry(QRect(250, 120, 160, 22))
+        self.horizontalSlider.setOrientation(Qt.Horizontal)
         self.sca_colors.setWidget(self.sca_area_colors)
 
         self.vlay_pg_dlg_colors.addWidget(self.sca_colors)

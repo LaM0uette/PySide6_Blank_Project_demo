@@ -19,10 +19,10 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QDateEdit,
     QDoubleSpinBox, QFrame, QGridLayout, QHBoxLayout,
     QHeaderView, QLabel, QLineEdit, QListWidget,
     QListWidgetItem, QPlainTextEdit, QProgressBar, QPushButton,
-    QRadioButton, QScrollArea, QSizePolicy, QSpacerItem,
-    QSpinBox, QTableWidget, QTableWidgetItem, QTextEdit,
-    QToolBox, QTreeWidget, QTreeWidgetItem, QVBoxLayout,
-    QWidget)
+    QRadioButton, QScrollArea, QSizePolicy, QSlider,
+    QSpacerItem, QSpinBox, QTableWidget, QTableWidgetItem,
+    QTextEdit, QToolBox, QTreeWidget, QTreeWidgetItem,
+    QVBoxLayout, QWidget)
 
 class Ui_main(object):
     def setupUi(self, main):
@@ -106,7 +106,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -3380, 818, 4359))
+        self.vlay_wg.setGeometry(QRect(0, -1922, 818, 4640))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -449,6 +449,49 @@ class Ui_main(object):
 
 
         self.verticalLayout.addWidget(self.fr_pg)
+
+        self.fr_sd = QFrame(self.vlay_wg)
+        self.fr_sd.setObjectName(u"fr_sd")
+        self.fr_sd.setFrameShape(QFrame.StyledPanel)
+        self.fr_sd.setFrameShadow(QFrame.Raised)
+        self.gridLayout = QGridLayout(self.fr_sd)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.gridLayout.setContentsMargins(10, 10, 10, 10)
+        self.hsd_demo = QSlider(self.fr_sd)
+        self.hsd_demo.setObjectName(u"hsd_demo")
+        self.hsd_demo.setOrientation(Qt.Horizontal)
+
+        self.gridLayout.addWidget(self.hsd_demo, 2, 1, 1, 1)
+
+        self.vsd_demo = QSlider(self.fr_sd)
+        self.vsd_demo.setObjectName(u"vsd_demo")
+        self.vsd_demo.setOrientation(Qt.Vertical)
+
+        self.gridLayout.addWidget(self.vsd_demo, 4, 1, 1, 1, Qt.AlignHCenter)
+
+        self.horizontalSpacer_5 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout.addItem(self.horizontalSpacer_5, 4, 0, 1, 1)
+
+        self.lb_sd_demo = QLabel(self.fr_sd)
+        self.lb_sd_demo.setObjectName(u"lb_sd_demo")
+
+        self.gridLayout.addWidget(self.lb_sd_demo, 0, 0, 1, 3)
+
+        self.verticalSpacer_26 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.gridLayout.addItem(self.verticalSpacer_26, 1, 0, 1, 3)
+
+        self.horizontalSpacer_6 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout.addItem(self.horizontalSpacer_6, 4, 2, 1, 1)
+
+        self.verticalSpacer_27 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.gridLayout.addItem(self.verticalSpacer_27, 3, 0, 1, 3)
+
+
+        self.verticalLayout.addWidget(self.fr_sd)
 
         self.fr_sb = QFrame(self.vlay_wg)
         self.fr_sb.setObjectName(u"fr_sb")
@@ -996,6 +1039,7 @@ class Ui_main(object):
         self.rb_demo_tr_2.setText(QCoreApplication.translate("main", u"RadioButton", None))
         self.rb_demo_tr_3.setText(QCoreApplication.translate("main", u"RadioButton", None))
         self.lb_pg_demo.setText(QCoreApplication.translate("main", u"QProgressBar :", None))
+        self.lb_sd_demo.setText(QCoreApplication.translate("main", u"QSlider :", None))
         self.lb_sb_demo.setText(QCoreApplication.translate("main", u"QSpinBox / QDoubleSpinBox :", None))
         self.lb_tw_demo.setText(QCoreApplication.translate("main", u"QTableWidget :", None))
         ___qtablewidgetitem = self.tw_demo.horizontalHeaderItem(0)
