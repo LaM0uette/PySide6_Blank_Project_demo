@@ -23,9 +23,11 @@ class P_cur:
             "souris": self.souris,
             "souris_main": self.souris_main,
             "souris_non": self.souris_non,
+            "wait": self.wait,
         }
 
     def CUR(self, img): return f"{vrb.DO_CUR}{config.cur}/{img}.cur"
+    def ANI(self, img): return f"{vrb.DO_CUR}{config.cur}/{img}.ani"
     def RTN_CUR(self, cur="souris"): return self.dct.get(cur)()
 
 
@@ -47,3 +49,4 @@ class P_cur:
     def souris(self): return [self.CUR("souris"), 9, 1]
     def souris_main(self): return [self.CUR("souris_main"), 9, 1]
     def souris_non(self): return [self.CUR("souris_non"), 9, 1]
+    def wait(self): return [self.ANI("wait"), 16, 16]

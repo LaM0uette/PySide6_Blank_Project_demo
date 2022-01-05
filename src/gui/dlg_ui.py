@@ -15,11 +15,11 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QCheckBox, QFontComboBox, QFrame,
-    QGridLayout, QHBoxLayout, QHeaderView, QLabel,
-    QLineEdit, QPushButton, QScrollArea, QSizePolicy,
-    QSpacerItem, QSpinBox, QStackedWidget, QTreeWidget,
-    QTreeWidgetItem, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFontComboBox,
+    QFrame, QGridLayout, QHBoxLayout, QHeaderView,
+    QLabel, QLineEdit, QPushButton, QScrollArea,
+    QSizePolicy, QSpacerItem, QSpinBox, QStackedWidget,
+    QTreeWidget, QTreeWidgetItem, QVBoxLayout, QWidget)
 
 class Ui_Dlg(object):
     def setupUi(self, Dlg):
@@ -538,14 +538,19 @@ class Ui_Dlg(object):
         self.vlay_pg_opt_themes.setSpacing(10)
         self.vlay_pg_opt_themes.setObjectName(u"vlay_pg_opt_themes")
         self.vlay_pg_opt_themes.setContentsMargins(10, 20, 10, 10)
-        self.pb_opt_theme_colors = QPushButton(self.pg_opt_themes)
-        self.pb_opt_theme_colors.setObjectName(u"pb_opt_theme_colors")
+        self.cb_opt_tm_theme = QComboBox(self.pg_opt_themes)
+        self.cb_opt_tm_theme.setObjectName(u"cb_opt_tm_theme")
 
-        self.vlay_pg_opt_themes.addWidget(self.pb_opt_theme_colors)
+        self.vlay_pg_opt_themes.addWidget(self.cb_opt_tm_theme)
 
         self.verticalSpacer_4 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.vlay_pg_opt_themes.addItem(self.verticalSpacer_4)
+
+        self.pb_opt_tm_colors = QPushButton(self.pg_opt_themes)
+        self.pb_opt_tm_colors.setObjectName(u"pb_opt_tm_colors")
+
+        self.vlay_pg_opt_themes.addWidget(self.pb_opt_tm_colors)
 
         self.stk_option.addWidget(self.pg_opt_themes)
         self.pg_opt_tcolors = QWidget()
@@ -652,7 +657,7 @@ class Ui_Dlg(object):
         self.lb_opt_cfg_resize.setText(QCoreApplication.translate("Dlg", u"Manuel : ", None))
         self.lb_opt_cfg_resize_width.setText(QCoreApplication.translate("Dlg", u"Largeur : ", None))
         self.lb_opt_cfg_resize_height.setText(QCoreApplication.translate("Dlg", u"Hauteur : ", None))
-        self.pb_opt_theme_colors.setText(QCoreApplication.translate("Dlg", u"Couleurs", None))
+        self.pb_opt_tm_colors.setText(QCoreApplication.translate("Dlg", u"Couleurs", None))
         pass
     # retranslateUi
 

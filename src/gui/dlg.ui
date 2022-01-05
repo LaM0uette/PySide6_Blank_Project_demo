@@ -998,11 +998,7 @@
                      <number>10</number>
                     </property>
                     <item>
-                     <widget class="QPushButton" name="pb_opt_theme_colors">
-                      <property name="text">
-                       <string>Couleurs</string>
-                      </property>
-                     </widget>
+                     <widget class="QComboBox" name="cb_opt_tm_theme"/>
                     </item>
                     <item>
                      <spacer name="verticalSpacer_4">
@@ -1016,6 +1012,13 @@
                        </size>
                       </property>
                      </spacer>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="pb_opt_tm_colors">
+                      <property name="text">
+                       <string>Couleurs</string>
+                      </property>
+                     </widget>
                     </item>
                    </layout>
                   </widget>

@@ -1,4 +1,7 @@
+import glob
 import importlib
+import os
+import time
 
 from PySide6 import QtCore, QtWidgets, QtGui
 
@@ -84,6 +87,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         # QComboBox
         with C_cb() as C_:
             C_.font(self.fcb_opt_ft_font)
+            C_.font(self.cb_opt_tm_theme)
 
         # QFrame
         with C_fr() as C_:
@@ -103,7 +107,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             C_.ok(self.pb_dlg_msg_ok, self.pb_dlg_rep_ok, self.pb_dlg_input_ok, self.pb_dlg_option_ok)
             C_.appliquer(self.pb_dlg_option_appliquer)
             C_.annuler(self.pb_dlg_rep_annuler, self.pb_dlg_input_annuler)
-            C_.txt_h9(self.pb_opt_gen_font, self.pb_opt_gen_config, self.pb_opt_gen_cur, self.pb_opt_theme_colors)
+            C_.txt_h9(self.pb_opt_gen_font, self.pb_opt_gen_config, self.pb_opt_gen_cur, self.pb_opt_tm_colors)
 
         # QCheckBox
         with C_ck() as C_:
@@ -170,10 +174,19 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.sgn_rep.emit(True)
         self.close()
     def _reload(self):
+        self.setCursor(QtCore.Qt.WaitCursor)
+
         importlib.reload(config)
+
+        Fct().GEN_SVG()
+        time.sleep(0.5)
+
+        self.IN_WG()
         self.IN_CLASSE()
 
         self.sgn_reload.emit()
+
+        self.setCursor(Fct(cur="souris").CUR())
 
         dlg = Dialog(msg="Modifications appliquées !\nCertains paramètres peuvent nécessiter un redémarrage de l'application.")
         dlg.MSG(ico=P_img().info())
@@ -231,7 +244,8 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
             config_ini = Ini(lien_ini=vrb.INI_CONFIG)
             config = config_ini.OPEN_INI()
-            config["config"]["font"] = f"{self.fcb_opt_ft_font.currentText()}"
+            config["config"]["theme"] = self.cb_opt_tm_theme.currentText()
+            config["config"]["font"] = self.fcb_opt_ft_font.currentText()
             config["config"]["widht"] = f"{self.sb_opt_cfg_resize_width.value()}"
             config["config"]["height"] = f"{self.sb_opt_cfg_resize_height.value()}"
             config["config"]["opacity"] = f"{self.sb_opt_cfg_opacity.value() / 100}"
@@ -256,6 +270,14 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
                 self._close()
             else: self._close()
 
+        def __maj_cb_theme():
+            self.cb_opt_tm_theme.clear()
+            for i, js in enumerate(glob.glob(f"{vrb.DO_THEME}*.json")):
+                tm = os.path.basename(js).split(".")[0]
+                self.cb_opt_tm_theme.addItem(tm)
+                if tm == config.theme:
+                    self.cb_opt_tm_theme.setCurrentIndex(i)
+
 
         dct_pg = {
             "Général": [self.pg_opt_gen],
@@ -267,6 +289,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             "Infos": [self.pg_opt_infos],
         }
         self._set_dlg(pg=self.pg_dlg_option)
+        __maj_cb_theme()
 
         # Données
         self.pb_dlg_option_ok.setText(self.txt_pb_ok)
@@ -296,7 +319,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_opt_gen_font.clicked.connect(lambda: self.stk_option.setCurrentWidget(dct_pg.get("Polices")[0]))
         self.pb_opt_gen_config.clicked.connect(lambda: self.stk_option.setCurrentWidget(dct_pg.get("Configs")[0]))
         self.pb_opt_gen_cur.clicked.connect(lambda: self.stk_option.setCurrentWidget(dct_pg.get("Curseurs")[0]))
-        self.pb_opt_theme_colors.clicked.connect(lambda: self.stk_option.setCurrentWidget(dct_pg.get("T-Colors")[0]))
+        self.pb_opt_tm_colors.clicked.connect(lambda: self.stk_option.setCurrentWidget(dct_pg.get("T-Colors")[0]))
 
         self.pb_dlg_option_ok.clicked.connect(__ok)
         self.pb_dlg_option_appliquer.clicked.connect(__appliquer)
@@ -315,6 +338,8 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.ck_opt_cfg_autoreload.stateChanged.connect(__val_change_appliquer)
         self.ck_opt_cfg_autoclose.stateChanged.connect(__val_change_appliquer)
         self.ck_opt_cfg_resize.stateChanged.connect(__val_change_appliquer)
+
+        self.cb_opt_tm_theme.currentTextChanged.connect(__val_change_appliquer)
 
 
     ### EVENT
