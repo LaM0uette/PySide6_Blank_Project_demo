@@ -1014,6 +1014,61 @@
                      </spacer>
                     </item>
                     <item>
+                     <layout class="QHBoxLayout" name="hlay_opt_tm_colors">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="pb_opt_tm_th1">
+                        <property name="text">
+                         <string>TH1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="pb_opt_tm_th2">
+                        <property name="text">
+                         <string>TH2</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="pb_opt_tm_th3">
+                        <property name="text">
+                         <string>TH3</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="pb_opt_tm_bn1">
+                        <property name="text">
+                         <string>BN1</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="pb_opt_tm_bn2">
+                        <property name="text">
+                         <string>BN2</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item>
+                     <spacer name="verticalSpacer_10">
+                      <property name="orientation">
+                       <enum>Qt::Vertical</enum>
+                      </property>
+                      <property name="sizeHint" stdset="0">
+                       <size>
+                        <width>20</width>
+                        <height>40</height>
+                       </size>
+                      </property>
+                     </spacer>
+                    </item>
+                    <item>
                      <widget class="QPushButton" name="pb_opt_tm_colors">
                       <property name="text">
                        <string>Couleurs</string>

@@ -547,6 +547,41 @@ class Ui_Dlg(object):
 
         self.vlay_pg_opt_themes.addItem(self.verticalSpacer_4)
 
+        self.hlay_opt_tm_colors = QHBoxLayout()
+        self.hlay_opt_tm_colors.setSpacing(0)
+        self.hlay_opt_tm_colors.setObjectName(u"hlay_opt_tm_colors")
+        self.pb_opt_tm_th1 = QPushButton(self.pg_opt_themes)
+        self.pb_opt_tm_th1.setObjectName(u"pb_opt_tm_th1")
+
+        self.hlay_opt_tm_colors.addWidget(self.pb_opt_tm_th1)
+
+        self.pb_opt_tm_th2 = QPushButton(self.pg_opt_themes)
+        self.pb_opt_tm_th2.setObjectName(u"pb_opt_tm_th2")
+
+        self.hlay_opt_tm_colors.addWidget(self.pb_opt_tm_th2)
+
+        self.pb_opt_tm_th3 = QPushButton(self.pg_opt_themes)
+        self.pb_opt_tm_th3.setObjectName(u"pb_opt_tm_th3")
+
+        self.hlay_opt_tm_colors.addWidget(self.pb_opt_tm_th3)
+
+        self.pb_opt_tm_bn1 = QPushButton(self.pg_opt_themes)
+        self.pb_opt_tm_bn1.setObjectName(u"pb_opt_tm_bn1")
+
+        self.hlay_opt_tm_colors.addWidget(self.pb_opt_tm_bn1)
+
+        self.pb_opt_tm_bn2 = QPushButton(self.pg_opt_themes)
+        self.pb_opt_tm_bn2.setObjectName(u"pb_opt_tm_bn2")
+
+        self.hlay_opt_tm_colors.addWidget(self.pb_opt_tm_bn2)
+
+
+        self.vlay_pg_opt_themes.addLayout(self.hlay_opt_tm_colors)
+
+        self.verticalSpacer_10 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.vlay_pg_opt_themes.addItem(self.verticalSpacer_10)
+
         self.pb_opt_tm_colors = QPushButton(self.pg_opt_themes)
         self.pb_opt_tm_colors.setObjectName(u"pb_opt_tm_colors")
 
@@ -657,6 +692,11 @@ class Ui_Dlg(object):
         self.lb_opt_cfg_resize.setText(QCoreApplication.translate("Dlg", u"Manuel : ", None))
         self.lb_opt_cfg_resize_width.setText(QCoreApplication.translate("Dlg", u"Largeur : ", None))
         self.lb_opt_cfg_resize_height.setText(QCoreApplication.translate("Dlg", u"Hauteur : ", None))
+        self.pb_opt_tm_th1.setText(QCoreApplication.translate("Dlg", u"TH1", None))
+        self.pb_opt_tm_th2.setText(QCoreApplication.translate("Dlg", u"TH2", None))
+        self.pb_opt_tm_th3.setText(QCoreApplication.translate("Dlg", u"TH3", None))
+        self.pb_opt_tm_bn1.setText(QCoreApplication.translate("Dlg", u"BN1", None))
+        self.pb_opt_tm_bn2.setText(QCoreApplication.translate("Dlg", u"BN2", None))
         self.pb_opt_tm_colors.setText(QCoreApplication.translate("Dlg", u"Couleurs", None))
         pass
     # retranslateUi

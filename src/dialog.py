@@ -20,6 +20,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         super(Dialog, self).__init__()
 
         self.kwargs = kwargs
+        self.reload = False
 
         self.titre = self.kwargs.get("titre")
         if self.titre is None:
@@ -108,6 +109,11 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             C_.appliquer(self.pb_dlg_option_appliquer)
             C_.annuler(self.pb_dlg_rep_annuler, self.pb_dlg_input_annuler)
             C_.txt_h9(self.pb_opt_gen_font, self.pb_opt_gen_config, self.pb_opt_gen_cur, self.pb_opt_tm_colors)
+            C_.plein_th1(self.pb_opt_tm_th1)
+            C_.plein_th2(self.pb_opt_tm_th2)
+            C_.plein_th3(self.pb_opt_tm_th3)
+            C_.plein_bn1(self.pb_opt_tm_bn1)
+            C_.plein_bn2(self.pb_opt_tm_bn2)
 
         # QCheckBox
         with C_ck() as C_:
@@ -187,9 +193,12 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.sgn_reload.emit()
         self.setCursor(Fct(cur="souris").CUR())
 
-        dlg = Dialog(msg="Modifications appliquées !\nCertains paramètres peuvent nécessiter un redémarrage de l'application.")
-        dlg.MSG(ico=P_img().info())
-        dlg.exec()
+        if self.reload:
+            dlg = Dialog(msg="Modifications appliquées !\nCertains paramètres peuvent nécessiter un redémarrage de l'application.")
+            dlg.MSG(ico=P_img().info())
+            dlg.exec()
+
+            self.reload = False
 
 
     ### FONCTIONS
@@ -235,9 +244,11 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
     def OPTION(self):
         def __set_opt(item):
             self.stk_option.setCurrentWidget(dct_pg.get(item.text(0))[0])
-        def __val_change_appliquer():
+        def __val_change_appliquer(val=""):
             if not self.pb_dlg_option_appliquer.isVisible():
                 self.pb_dlg_option_appliquer.setVisible(True)
+            if val == "true":
+                self.reload = True
         def __appliquer():
             self.pb_dlg_option_appliquer.setVisible(False)
 
@@ -287,6 +298,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             "T-Colors": [self.pg_opt_tcolors],
             "Infos": [self.pg_opt_infos],
         }
+
         self._set_dlg(pg=self.pg_dlg_option)
         __maj_cb_theme()
 
@@ -332,11 +344,11 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.sb_opt_ft_h5.valueChanged.connect(__val_change_appliquer)
 
         self.sb_opt_cfg_opacity.valueChanged.connect(__val_change_appliquer)
-        self.sb_opt_cfg_resize_width.valueChanged.connect(__val_change_appliquer)
-        self.sb_opt_cfg_resize_height.valueChanged.connect(__val_change_appliquer)
+        self.sb_opt_cfg_resize_width.valueChanged.connect(lambda: __val_change_appliquer(val="true"))
+        self.sb_opt_cfg_resize_height.valueChanged.connect(lambda: __val_change_appliquer(val="true"))
         self.ck_opt_cfg_autoreload.stateChanged.connect(__val_change_appliquer)
         self.ck_opt_cfg_autoclose.stateChanged.connect(__val_change_appliquer)
-        self.ck_opt_cfg_resize.stateChanged.connect(__val_change_appliquer)
+        self.ck_opt_cfg_resize.stateChanged.connect(lambda: __val_change_appliquer(val="true"))
 
         self.cb_opt_tm_theme.currentTextChanged.connect(__val_change_appliquer)
 

@@ -99,6 +99,43 @@ class C_pb(C_wg):
                  font = P_font().p(),
                  cur = "main")
 
+    def plein_th1(self, *args):
+        self.STL(list(args),
+                 colors_type="th",
+                 colors=P_rgb().p_th1(),
+                 dim=P_dim().p_aw_h5(),
+                 font=P_font().p(),
+                 bd=P_bd().bd1_bd_th2(),
+                 cur="main")
+    def plein_th2(self, *args):
+        self.STL(list(args),
+                 colors_type="th",
+                 colors=P_rgb().p_th2(),
+                 dim=P_dim().p_aw_h5(),
+                 font=P_font().p(),
+                 cur="main")
+    def plein_th3(self, *args):
+        self.STL(list(args),
+                 colors_type="th",
+                 colors=P_rgb().p_th3(),
+                 dim=P_dim().p_aw_h5(),
+                 font=P_font().p(),
+                 cur="main")
+    def plein_bn1(self, *args):
+        self.STL(list(args),
+                 colors_type="th",
+                 colors=P_rgb().p_bn1(),
+                 dim=P_dim().p_aw_h5(),
+                 font=P_font().p(),
+                 cur="main")
+    def plein_bn2(self, *args):
+        self.STL(list(args),
+                 colors_type="th",
+                 colors=P_rgb().p_bn2(),
+                 dim=P_dim().p_aw_h5(),
+                 font=P_font().p(),
+                 cur="main")
+
     def demo_txt(self, *args):
         self.STL(list(args),
                  colors_type = "txt",
