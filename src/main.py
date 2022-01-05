@@ -194,6 +194,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     ### _ACTIONS
     def _reload(self):
         importlib.reload(config)
+        self.IN_BASE()
         self.IN_CLASSE()
 
 

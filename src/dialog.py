@@ -175,6 +175,10 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         self.sgn_reload.emit()
 
+        dlg = Dialog(msg="Modifications appliquées !\nCertains paramètres peuvent nécessiter un redémarrage de l'application.")
+        dlg.MSG(ico=P_img().info())
+        dlg.exec()
+
 
     ### FONCTIONS
     def MSG(self, ico):
