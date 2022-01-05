@@ -15,11 +15,11 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFontComboBox, QFrame, QGridLayout,
-    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
-    QPushButton, QScrollArea, QSizePolicy, QSpacerItem,
-    QSpinBox, QStackedWidget, QTreeWidget, QTreeWidgetItem,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QCheckBox, QFontComboBox, QFrame,
+    QGridLayout, QHBoxLayout, QHeaderView, QLabel,
+    QLineEdit, QPushButton, QScrollArea, QSizePolicy,
+    QSpacerItem, QSpinBox, QStackedWidget, QTreeWidget,
+    QTreeWidgetItem, QVBoxLayout, QWidget)
 
 class Ui_Dlg(object):
     def setupUi(self, Dlg):
@@ -241,14 +241,14 @@ class Ui_Dlg(object):
         self.sca_option = QScrollArea(self.pg_dlg_option)
         self.sca_option.setObjectName(u"sca_option")
         self.sca_option.setWidgetResizable(True)
-        self.scrollAreaWidgetContents = QWidget()
-        self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 556, 503))
-        self.vlay_sca_option = QVBoxLayout(self.scrollAreaWidgetContents)
+        self.sca_area_option = QWidget()
+        self.sca_area_option.setObjectName(u"sca_area_option")
+        self.sca_area_option.setGeometry(QRect(0, 0, 556, 503))
+        self.vlay_sca_option = QVBoxLayout(self.sca_area_option)
         self.vlay_sca_option.setSpacing(0)
         self.vlay_sca_option.setObjectName(u"vlay_sca_option")
         self.vlay_sca_option.setContentsMargins(0, 0, 0, 0)
-        self.stk_option = QStackedWidget(self.scrollAreaWidgetContents)
+        self.stk_option = QStackedWidget(self.sca_area_option)
         self.stk_option.setObjectName(u"stk_option")
         self.pg_opt_menu = QWidget()
         self.pg_opt_menu.setObjectName(u"pg_opt_menu")
@@ -421,6 +421,69 @@ class Ui_Dlg(object):
         self.stk_option.addWidget(self.pg_opt_font)
         self.pg_opt_configs = QWidget()
         self.pg_opt_configs.setObjectName(u"pg_opt_configs")
+        self.vlay_pg_opt_configs = QVBoxLayout(self.pg_opt_configs)
+        self.vlay_pg_opt_configs.setSpacing(10)
+        self.vlay_pg_opt_configs.setObjectName(u"vlay_pg_opt_configs")
+        self.vlay_pg_opt_configs.setContentsMargins(10, 20, 10, 10)
+        self.fr_opt_cfg_opacity = QFrame(self.pg_opt_configs)
+        self.fr_opt_cfg_opacity.setObjectName(u"fr_opt_cfg_opacity")
+        self.hlay_opt_fr_opt_cfg_opacity = QHBoxLayout(self.fr_opt_cfg_opacity)
+        self.hlay_opt_fr_opt_cfg_opacity.setSpacing(10)
+        self.hlay_opt_fr_opt_cfg_opacity.setObjectName(u"hlay_opt_fr_opt_cfg_opacity")
+        self.hlay_opt_fr_opt_cfg_opacity.setContentsMargins(5, 5, 5, 5)
+        self.lb_opt_cfg_opacity = QLabel(self.fr_opt_cfg_opacity)
+        self.lb_opt_cfg_opacity.setObjectName(u"lb_opt_cfg_opacity")
+
+        self.hlay_opt_fr_opt_cfg_opacity.addWidget(self.lb_opt_cfg_opacity)
+
+        self.sb_opt_cfg_opacity = QSpinBox(self.fr_opt_cfg_opacity)
+        self.sb_opt_cfg_opacity.setObjectName(u"sb_opt_cfg_opacity")
+
+        self.hlay_opt_fr_opt_cfg_opacity.addWidget(self.sb_opt_cfg_opacity)
+
+        self.horizontalSpacer_6 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.hlay_opt_fr_opt_cfg_opacity.addItem(self.horizontalSpacer_6)
+
+
+        self.vlay_pg_opt_configs.addWidget(self.fr_opt_cfg_opacity)
+
+        self.fr_opt_cfg_autoclose = QFrame(self.pg_opt_configs)
+        self.fr_opt_cfg_autoclose.setObjectName(u"fr_opt_cfg_autoclose")
+        self.gridLayout = QGridLayout(self.fr_opt_cfg_autoclose)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.gridLayout.setContentsMargins(5, 5, 5, 5)
+        self.ck_opt_cfg_autoclose = QCheckBox(self.fr_opt_cfg_autoclose)
+        self.ck_opt_cfg_autoclose.setObjectName(u"ck_opt_cfg_autoclose")
+
+        self.gridLayout.addWidget(self.ck_opt_cfg_autoclose, 1, 1, 1, 1)
+
+        self.lb_opt_cfg_autoclose = QLabel(self.fr_opt_cfg_autoclose)
+        self.lb_opt_cfg_autoclose.setObjectName(u"lb_opt_cfg_autoclose")
+
+        self.gridLayout.addWidget(self.lb_opt_cfg_autoclose, 1, 0, 1, 1)
+
+        self.lb_opt_cfg_autoreload = QLabel(self.fr_opt_cfg_autoclose)
+        self.lb_opt_cfg_autoreload.setObjectName(u"lb_opt_cfg_autoreload")
+
+        self.gridLayout.addWidget(self.lb_opt_cfg_autoreload, 0, 0, 1, 1)
+
+        self.ck_opt_cfg_autoreload = QCheckBox(self.fr_opt_cfg_autoclose)
+        self.ck_opt_cfg_autoreload.setObjectName(u"ck_opt_cfg_autoreload")
+
+        self.gridLayout.addWidget(self.ck_opt_cfg_autoreload, 0, 1, 1, 1)
+
+        self.horizontalSpacer_8 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.gridLayout.addItem(self.horizontalSpacer_8, 0, 2, 2, 1)
+
+
+        self.vlay_pg_opt_configs.addWidget(self.fr_opt_cfg_autoclose)
+
+        self.verticalSpacer_9 = QSpacerItem(20, 378, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.vlay_pg_opt_configs.addItem(self.verticalSpacer_9)
+
         self.stk_option.addWidget(self.pg_opt_configs)
         self.pg_opt_cur = QWidget()
         self.pg_opt_cur.setObjectName(u"pg_opt_cur")
@@ -482,7 +545,7 @@ class Ui_Dlg(object):
 
         self.vlay_sca_option.addWidget(self.stk_option)
 
-        self.sca_option.setWidget(self.scrollAreaWidgetContents)
+        self.sca_option.setWidget(self.sca_area_option)
 
         self.hlay_option.addWidget(self.sca_option)
 
@@ -539,6 +602,9 @@ class Ui_Dlg(object):
         self.le_opt_ft_texte_h4.setText(QCoreApplication.translate("Dlg", u"TEST De la Police", None))
         self.lb_opt_ft_h5.setText(QCoreApplication.translate("Dlg", u"Taille H5: ", None))
         self.le_opt_ft_texte_h5.setText(QCoreApplication.translate("Dlg", u"TEST De la Police", None))
+        self.lb_opt_cfg_opacity.setText(QCoreApplication.translate("Dlg", u"Opacit\u00e9 ", None))
+        self.lb_opt_cfg_autoclose.setText(QCoreApplication.translate("Dlg", u"Auto close : ", None))
+        self.lb_opt_cfg_autoreload.setText(QCoreApplication.translate("Dlg", u"Auto reload : ", None))
         self.pb_opt_theme_colors.setText(QCoreApplication.translate("Dlg", u"Couleurs", None))
         pass
     # retranslateUi
