@@ -200,8 +200,10 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
     ### FONCTIONS
     def FCT_OPTION(self):
-        t = Dlg().OPTION()
-        if t: self._reload()
+        # t = Dlg().OPTION()
+        # if t: self._reload()
+        col = Dlg().COLORS()
+        print(col)
 
 
     ### EVENT

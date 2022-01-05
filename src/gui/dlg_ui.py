@@ -25,7 +25,7 @@ class Ui_Dlg(object):
     def setupUi(self, Dlg):
         if not Dlg.objectName():
             Dlg.setObjectName(u"Dlg")
-        Dlg.resize(1133, 567)
+        Dlg.resize(881, 458)
         self.glay_dlg = QGridLayout(Dlg)
         self.glay_dlg.setSpacing(0)
         self.glay_dlg.setObjectName(u"glay_dlg")
@@ -72,126 +72,6 @@ class Ui_Dlg(object):
 
         self.stk_dlg = QStackedWidget(self.fr_main)
         self.stk_dlg.setObjectName(u"stk_dlg")
-        self.pg_dlg_msg = QWidget()
-        self.pg_dlg_msg.setObjectName(u"pg_dlg_msg")
-        self.vlay_pg_dlg_info = QVBoxLayout(self.pg_dlg_msg)
-        self.vlay_pg_dlg_info.setSpacing(0)
-        self.vlay_pg_dlg_info.setObjectName(u"vlay_pg_dlg_info")
-        self.vlay_pg_dlg_info.setContentsMargins(0, 0, 0, 0)
-        self.lb_msg_texte = QLabel(self.pg_dlg_msg)
-        self.lb_msg_texte.setObjectName(u"lb_msg_texte")
-
-        self.vlay_pg_dlg_info.addWidget(self.lb_msg_texte)
-
-        self.fr_pg_dlg_msg = QFrame(self.pg_dlg_msg)
-        self.fr_pg_dlg_msg.setObjectName(u"fr_pg_dlg_msg")
-        self.hlay_pg_dlg_msg = QHBoxLayout(self.fr_pg_dlg_msg)
-        self.hlay_pg_dlg_msg.setSpacing(2)
-        self.hlay_pg_dlg_msg.setObjectName(u"hlay_pg_dlg_msg")
-        self.hlay_pg_dlg_msg.setContentsMargins(0, 2, 0, 2)
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.hlay_pg_dlg_msg.addItem(self.horizontalSpacer)
-
-        self.pb_dlg_msg_ok = QPushButton(self.fr_pg_dlg_msg)
-        self.pb_dlg_msg_ok.setObjectName(u"pb_dlg_msg_ok")
-
-        self.hlay_pg_dlg_msg.addWidget(self.pb_dlg_msg_ok)
-
-
-        self.vlay_pg_dlg_info.addWidget(self.fr_pg_dlg_msg)
-
-        self.stk_dlg.addWidget(self.pg_dlg_msg)
-        self.pg_dlg_rep = QWidget()
-        self.pg_dlg_rep.setObjectName(u"pg_dlg_rep")
-        self.vlay_pg_dlg_rep = QVBoxLayout(self.pg_dlg_rep)
-        self.vlay_pg_dlg_rep.setSpacing(0)
-        self.vlay_pg_dlg_rep.setObjectName(u"vlay_pg_dlg_rep")
-        self.vlay_pg_dlg_rep.setContentsMargins(0, 0, 0, 0)
-        self.lb_rep_texte = QLabel(self.pg_dlg_rep)
-        self.lb_rep_texte.setObjectName(u"lb_rep_texte")
-
-        self.vlay_pg_dlg_rep.addWidget(self.lb_rep_texte)
-
-        self.fr_pg_dlg_rep = QFrame(self.pg_dlg_rep)
-        self.fr_pg_dlg_rep.setObjectName(u"fr_pg_dlg_rep")
-        self.hlay_pg_dlg_rep = QHBoxLayout(self.fr_pg_dlg_rep)
-        self.hlay_pg_dlg_rep.setSpacing(2)
-        self.hlay_pg_dlg_rep.setObjectName(u"hlay_pg_dlg_rep")
-        self.hlay_pg_dlg_rep.setContentsMargins(0, 2, 0, 2)
-        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.hlay_pg_dlg_rep.addItem(self.horizontalSpacer_3)
-
-        self.pb_dlg_rep_ok = QPushButton(self.fr_pg_dlg_rep)
-        self.pb_dlg_rep_ok.setObjectName(u"pb_dlg_rep_ok")
-
-        self.hlay_pg_dlg_rep.addWidget(self.pb_dlg_rep_ok)
-
-        self.pb_dlg_rep_annuler = QPushButton(self.fr_pg_dlg_rep)
-        self.pb_dlg_rep_annuler.setObjectName(u"pb_dlg_rep_annuler")
-
-        self.hlay_pg_dlg_rep.addWidget(self.pb_dlg_rep_annuler)
-
-
-        self.vlay_pg_dlg_rep.addWidget(self.fr_pg_dlg_rep)
-
-        self.stk_dlg.addWidget(self.pg_dlg_rep)
-        self.pg_dlg_input = QWidget()
-        self.pg_dlg_input.setObjectName(u"pg_dlg_input")
-        self.vlay_pg_dlg_input = QVBoxLayout(self.pg_dlg_input)
-        self.vlay_pg_dlg_input.setSpacing(0)
-        self.vlay_pg_dlg_input.setObjectName(u"vlay_pg_dlg_input")
-        self.vlay_pg_dlg_input.setContentsMargins(0, 0, 0, 0)
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.vlay_pg_dlg_input.addItem(self.verticalSpacer)
-
-        self.vlay_dlg_input = QVBoxLayout()
-        self.vlay_dlg_input.setSpacing(10)
-        self.vlay_dlg_input.setObjectName(u"vlay_dlg_input")
-        self.vlay_dlg_input.setContentsMargins(20, -1, 20, -1)
-        self.lb_input_texte = QLabel(self.pg_dlg_input)
-        self.lb_input_texte.setObjectName(u"lb_input_texte")
-
-        self.vlay_dlg_input.addWidget(self.lb_input_texte)
-
-        self.le_input = QLineEdit(self.pg_dlg_input)
-        self.le_input.setObjectName(u"le_input")
-
-        self.vlay_dlg_input.addWidget(self.le_input)
-
-
-        self.vlay_pg_dlg_input.addLayout(self.vlay_dlg_input)
-
-        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.vlay_pg_dlg_input.addItem(self.verticalSpacer_2)
-
-        self.fr_pg_dlg_input = QFrame(self.pg_dlg_input)
-        self.fr_pg_dlg_input.setObjectName(u"fr_pg_dlg_input")
-        self.hlay_pg_dlg_input = QHBoxLayout(self.fr_pg_dlg_input)
-        self.hlay_pg_dlg_input.setSpacing(2)
-        self.hlay_pg_dlg_input.setObjectName(u"hlay_pg_dlg_input")
-        self.hlay_pg_dlg_input.setContentsMargins(0, 2, 0, 2)
-        self.horizontalSpacer_4 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.hlay_pg_dlg_input.addItem(self.horizontalSpacer_4)
-
-        self.pb_dlg_input_ok = QPushButton(self.fr_pg_dlg_input)
-        self.pb_dlg_input_ok.setObjectName(u"pb_dlg_input_ok")
-
-        self.hlay_pg_dlg_input.addWidget(self.pb_dlg_input_ok)
-
-        self.pb_dlg_input_annuler = QPushButton(self.fr_pg_dlg_input)
-        self.pb_dlg_input_annuler.setObjectName(u"pb_dlg_input_annuler")
-
-        self.hlay_pg_dlg_input.addWidget(self.pb_dlg_input_annuler)
-
-
-        self.vlay_pg_dlg_input.addWidget(self.fr_pg_dlg_input)
-
-        self.stk_dlg.addWidget(self.pg_dlg_input)
         self.pg_dlg_option = QWidget()
         self.pg_dlg_option.setObjectName(u"pg_dlg_option")
         self.glay_stk_option = QGridLayout(self.pg_dlg_option)
@@ -243,7 +123,7 @@ class Ui_Dlg(object):
         self.sca_option.setWidgetResizable(True)
         self.sca_area_option = QWidget()
         self.sca_area_option.setObjectName(u"sca_area_option")
-        self.sca_area_option.setGeometry(QRect(0, 0, 556, 503))
+        self.sca_area_option.setGeometry(QRect(0, 0, 430, 394))
         self.vlay_sca_option = QVBoxLayout(self.sca_area_option)
         self.vlay_sca_option.setSpacing(0)
         self.vlay_sca_option.setObjectName(u"vlay_sca_option")
@@ -637,6 +517,161 @@ class Ui_Dlg(object):
         self.glay_stk_option.addLayout(self.hlay_option, 0, 1, 1, 1)
 
         self.stk_dlg.addWidget(self.pg_dlg_option)
+        self.pg_dlg_msg = QWidget()
+        self.pg_dlg_msg.setObjectName(u"pg_dlg_msg")
+        self.vlay_pg_dlg_info = QVBoxLayout(self.pg_dlg_msg)
+        self.vlay_pg_dlg_info.setSpacing(0)
+        self.vlay_pg_dlg_info.setObjectName(u"vlay_pg_dlg_info")
+        self.vlay_pg_dlg_info.setContentsMargins(0, 0, 0, 0)
+        self.lb_msg_texte = QLabel(self.pg_dlg_msg)
+        self.lb_msg_texte.setObjectName(u"lb_msg_texte")
+
+        self.vlay_pg_dlg_info.addWidget(self.lb_msg_texte)
+
+        self.fr_pg_dlg_msg = QFrame(self.pg_dlg_msg)
+        self.fr_pg_dlg_msg.setObjectName(u"fr_pg_dlg_msg")
+        self.hlay_pg_dlg_msg = QHBoxLayout(self.fr_pg_dlg_msg)
+        self.hlay_pg_dlg_msg.setSpacing(2)
+        self.hlay_pg_dlg_msg.setObjectName(u"hlay_pg_dlg_msg")
+        self.hlay_pg_dlg_msg.setContentsMargins(0, 2, 0, 2)
+        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.hlay_pg_dlg_msg.addItem(self.horizontalSpacer)
+
+        self.pb_dlg_msg_ok = QPushButton(self.fr_pg_dlg_msg)
+        self.pb_dlg_msg_ok.setObjectName(u"pb_dlg_msg_ok")
+
+        self.hlay_pg_dlg_msg.addWidget(self.pb_dlg_msg_ok)
+
+
+        self.vlay_pg_dlg_info.addWidget(self.fr_pg_dlg_msg)
+
+        self.stk_dlg.addWidget(self.pg_dlg_msg)
+        self.pg_dlg_rep = QWidget()
+        self.pg_dlg_rep.setObjectName(u"pg_dlg_rep")
+        self.vlay_pg_dlg_rep = QVBoxLayout(self.pg_dlg_rep)
+        self.vlay_pg_dlg_rep.setSpacing(0)
+        self.vlay_pg_dlg_rep.setObjectName(u"vlay_pg_dlg_rep")
+        self.vlay_pg_dlg_rep.setContentsMargins(0, 0, 0, 0)
+        self.lb_rep_texte = QLabel(self.pg_dlg_rep)
+        self.lb_rep_texte.setObjectName(u"lb_rep_texte")
+
+        self.vlay_pg_dlg_rep.addWidget(self.lb_rep_texte)
+
+        self.fr_pg_dlg_rep = QFrame(self.pg_dlg_rep)
+        self.fr_pg_dlg_rep.setObjectName(u"fr_pg_dlg_rep")
+        self.hlay_pg_dlg_rep = QHBoxLayout(self.fr_pg_dlg_rep)
+        self.hlay_pg_dlg_rep.setSpacing(2)
+        self.hlay_pg_dlg_rep.setObjectName(u"hlay_pg_dlg_rep")
+        self.hlay_pg_dlg_rep.setContentsMargins(0, 2, 0, 2)
+        self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.hlay_pg_dlg_rep.addItem(self.horizontalSpacer_3)
+
+        self.pb_dlg_rep_ok = QPushButton(self.fr_pg_dlg_rep)
+        self.pb_dlg_rep_ok.setObjectName(u"pb_dlg_rep_ok")
+
+        self.hlay_pg_dlg_rep.addWidget(self.pb_dlg_rep_ok)
+
+        self.pb_dlg_rep_annuler = QPushButton(self.fr_pg_dlg_rep)
+        self.pb_dlg_rep_annuler.setObjectName(u"pb_dlg_rep_annuler")
+
+        self.hlay_pg_dlg_rep.addWidget(self.pb_dlg_rep_annuler)
+
+
+        self.vlay_pg_dlg_rep.addWidget(self.fr_pg_dlg_rep)
+
+        self.stk_dlg.addWidget(self.pg_dlg_rep)
+        self.pg_dlg_input = QWidget()
+        self.pg_dlg_input.setObjectName(u"pg_dlg_input")
+        self.vlay_pg_dlg_input = QVBoxLayout(self.pg_dlg_input)
+        self.vlay_pg_dlg_input.setSpacing(0)
+        self.vlay_pg_dlg_input.setObjectName(u"vlay_pg_dlg_input")
+        self.vlay_pg_dlg_input.setContentsMargins(0, 0, 0, 0)
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.vlay_pg_dlg_input.addItem(self.verticalSpacer)
+
+        self.vlay_dlg_input = QVBoxLayout()
+        self.vlay_dlg_input.setSpacing(10)
+        self.vlay_dlg_input.setObjectName(u"vlay_dlg_input")
+        self.vlay_dlg_input.setContentsMargins(20, -1, 20, -1)
+        self.lb_input_texte = QLabel(self.pg_dlg_input)
+        self.lb_input_texte.setObjectName(u"lb_input_texte")
+
+        self.vlay_dlg_input.addWidget(self.lb_input_texte)
+
+        self.le_input = QLineEdit(self.pg_dlg_input)
+        self.le_input.setObjectName(u"le_input")
+
+        self.vlay_dlg_input.addWidget(self.le_input)
+
+
+        self.vlay_pg_dlg_input.addLayout(self.vlay_dlg_input)
+
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.vlay_pg_dlg_input.addItem(self.verticalSpacer_2)
+
+        self.fr_pg_dlg_input = QFrame(self.pg_dlg_input)
+        self.fr_pg_dlg_input.setObjectName(u"fr_pg_dlg_input")
+        self.hlay_pg_dlg_input = QHBoxLayout(self.fr_pg_dlg_input)
+        self.hlay_pg_dlg_input.setSpacing(2)
+        self.hlay_pg_dlg_input.setObjectName(u"hlay_pg_dlg_input")
+        self.hlay_pg_dlg_input.setContentsMargins(0, 2, 0, 2)
+        self.horizontalSpacer_4 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.hlay_pg_dlg_input.addItem(self.horizontalSpacer_4)
+
+        self.pb_dlg_input_ok = QPushButton(self.fr_pg_dlg_input)
+        self.pb_dlg_input_ok.setObjectName(u"pb_dlg_input_ok")
+
+        self.hlay_pg_dlg_input.addWidget(self.pb_dlg_input_ok)
+
+        self.pb_dlg_input_annuler = QPushButton(self.fr_pg_dlg_input)
+        self.pb_dlg_input_annuler.setObjectName(u"pb_dlg_input_annuler")
+
+        self.hlay_pg_dlg_input.addWidget(self.pb_dlg_input_annuler)
+
+
+        self.vlay_pg_dlg_input.addWidget(self.fr_pg_dlg_input)
+
+        self.stk_dlg.addWidget(self.pg_dlg_input)
+        self.pg_dlg_colors = QWidget()
+        self.pg_dlg_colors.setObjectName(u"pg_dlg_colors")
+        self.vlay_pg_dlg_colors = QVBoxLayout(self.pg_dlg_colors)
+        self.vlay_pg_dlg_colors.setSpacing(0)
+        self.vlay_pg_dlg_colors.setObjectName(u"vlay_pg_dlg_colors")
+        self.vlay_pg_dlg_colors.setContentsMargins(0, 0, 0, 0)
+        self.sca_colors = QScrollArea(self.pg_dlg_colors)
+        self.sca_colors.setObjectName(u"sca_colors")
+        self.sca_colors.setWidgetResizable(True)
+        self.sca_area_colors = QWidget()
+        self.sca_area_colors.setObjectName(u"sca_area_colors")
+        self.sca_area_colors.setGeometry(QRect(0, 0, 877, 404))
+        self.sca_colors.setWidget(self.sca_area_colors)
+
+        self.vlay_pg_dlg_colors.addWidget(self.sca_colors)
+
+        self.fr_pg_dlg_colors = QFrame(self.pg_dlg_colors)
+        self.fr_pg_dlg_colors.setObjectName(u"fr_pg_dlg_colors")
+        self.hlay_fr_pg_dlg_colors = QHBoxLayout(self.fr_pg_dlg_colors)
+        self.hlay_fr_pg_dlg_colors.setSpacing(2)
+        self.hlay_fr_pg_dlg_colors.setObjectName(u"hlay_fr_pg_dlg_colors")
+        self.hlay_fr_pg_dlg_colors.setContentsMargins(0, 2, 0, 2)
+        self.horizontalSpacer_7 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.hlay_fr_pg_dlg_colors.addItem(self.horizontalSpacer_7)
+
+        self.pb_dlg_colors_ok = QPushButton(self.fr_pg_dlg_colors)
+        self.pb_dlg_colors_ok.setObjectName(u"pb_dlg_colors_ok")
+
+        self.hlay_fr_pg_dlg_colors.addWidget(self.pb_dlg_colors_ok)
+
+
+        self.vlay_pg_dlg_colors.addWidget(self.fr_pg_dlg_colors)
+
+        self.stk_dlg.addWidget(self.pg_dlg_colors)
 
         self.vlay_fr_main.addWidget(self.stk_dlg)
 
@@ -646,14 +681,13 @@ class Ui_Dlg(object):
 
         self.retranslateUi(Dlg)
 
-        self.stk_dlg.setCurrentIndex(3)
+        self.stk_dlg.setCurrentIndex(4)
 
 
         QMetaObject.connectSlotsByName(Dlg)
     # setupUi
 
     def retranslateUi(self, Dlg):
-        self.le_input.setPlaceholderText(QCoreApplication.translate("Dlg", u"...", None))
 
         __sortingEnabled = self.trw_option.isSortingEnabled()
         self.trw_option.setSortingEnabled(False)
@@ -698,6 +732,7 @@ class Ui_Dlg(object):
         self.pb_opt_tm_bn1.setText(QCoreApplication.translate("Dlg", u"BN1", None))
         self.pb_opt_tm_bn2.setText(QCoreApplication.translate("Dlg", u"BN2", None))
         self.pb_opt_tm_colors.setText(QCoreApplication.translate("Dlg", u"Couleurs", None))
+        self.le_input.setPlaceholderText(QCoreApplication.translate("Dlg", u"...", None))
         pass
     # retranslateUi
 

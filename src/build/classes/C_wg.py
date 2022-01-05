@@ -1245,3 +1245,8 @@ class C_wg:
                 f"{self.inc}"
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
+
+
+"""
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));
+"""

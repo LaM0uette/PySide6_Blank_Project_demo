@@ -14,6 +14,7 @@ from .In_classe import In_classe
 class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
     sgn_rep = QtCore.Signal(bool)
     sgn_txt = QtCore.Signal(str)
+    sgn_rgb = QtCore.Signal(list)
     sgn_reload = QtCore.Signal()
 
     def __init__(self, **kwargs):
@@ -81,7 +82,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         # QScrollBoxArea
         with C_sca() as C_:
-            C_.invisible(self.sca_option)
+            C_.invisible(self.sca_option, self.sca_colors)
 
         In_classe(ui=self)
 
@@ -92,7 +93,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         # QFrame
         with C_fr() as C_:
-            C_.menu_bottom_dlg(self.fr_pg_dlg_msg, self.fr_pg_dlg_rep, self.fr_pg_dlg_input, self.fr_pg_dlg_option)
+            C_.menu_bottom_dlg(self.fr_pg_dlg_msg, self.fr_pg_dlg_rep, self.fr_pg_dlg_input, self.fr_pg_dlg_option, self.fr_pg_dlg_colors)
             C_.option_font(self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5)
             C_.option_config(self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize)
 
@@ -105,7 +106,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         # QPushButton
         with C_pb() as C_:
-            C_.ok(self.pb_dlg_msg_ok, self.pb_dlg_rep_ok, self.pb_dlg_input_ok, self.pb_dlg_option_ok)
+            C_.ok(self.pb_dlg_msg_ok, self.pb_dlg_rep_ok, self.pb_dlg_input_ok, self.pb_dlg_option_ok, self.pb_dlg_colors_ok)
             C_.appliquer(self.pb_dlg_option_appliquer)
             C_.annuler(self.pb_dlg_rep_annuler, self.pb_dlg_input_annuler)
             C_.txt_h9(self.pb_opt_gen_font, self.pb_opt_gen_config, self.pb_opt_gen_cur, self.pb_opt_tm_colors)
@@ -202,45 +203,6 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
 
     ### FONCTIONS
-    def MSG(self, ico):
-        self._set_dlg(pg=self.pg_dlg_msg, ico=ico)
-
-        # Données
-        self.lb_msg_texte.setText(self.msg)
-        self.pb_dlg_msg_ok.setText(self.txt_pb_ok)
-
-        # Connection
-        self.pb_dlg_msg_ok.clicked.connect(self._close)
-        self.pb_dlg_msg_ok.setDefault(True)
-    def REP(self):
-        self._set_dlg(pg=self.pg_dlg_rep)
-
-        # Données
-        self.lb_rep_texte.setText(self.msg)
-        self.pb_dlg_rep_ok.setText(self.txt_pb_ok)
-        self.pb_dlg_rep_annuler.setText(self.txt_pb_annuler)
-
-        # Connection
-        self.pb_dlg_rep_ok.clicked.connect(self._rep)
-        self.pb_dlg_rep_annuler.clicked.connect(self._close)
-        self.pb_dlg_rep_ok.setDefault(True)
-    def INPUT(self):
-        def __input():
-            self.sgn_txt.emit(self.le_input.text())
-            self.close()
-
-        self._set_dlg(pg=self.pg_dlg_input)
-
-        # Données
-        self.lb_input_texte.setText(self.msg)
-        self.pb_dlg_input_ok.setText(self.txt_pb_ok)
-        self.pb_dlg_input_annuler.setText(self.txt_pb_annuler)
-
-        # Connection
-        self.pb_dlg_input_ok.clicked.connect(__input)
-        self.pb_dlg_input_annuler.clicked.connect(self._close)
-        self.pb_dlg_input_ok.setDefault(True)
-
     def OPTION(self):
         def __set_opt(item):
             self.stk_option.setCurrentWidget(dct_pg.get(item.text(0))[0])
@@ -351,6 +313,59 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.ck_opt_cfg_resize.stateChanged.connect(lambda: __val_change_appliquer(val="true"))
 
         self.cb_opt_tm_theme.currentTextChanged.connect(__val_change_appliquer)
+    def MSG(self, ico):
+        self._set_dlg(pg=self.pg_dlg_msg, ico=ico)
+
+        # Données
+        self.lb_msg_texte.setText(self.msg)
+        self.pb_dlg_msg_ok.setText(self.txt_pb_ok)
+
+        # Connection
+        self.pb_dlg_msg_ok.clicked.connect(self._close)
+        self.pb_dlg_msg_ok.setDefault(True)
+    def REP(self):
+        self._set_dlg(pg=self.pg_dlg_rep)
+
+        # Données
+        self.lb_rep_texte.setText(self.msg)
+        self.pb_dlg_rep_ok.setText(self.txt_pb_ok)
+        self.pb_dlg_rep_annuler.setText(self.txt_pb_annuler)
+
+        # Connection
+        self.pb_dlg_rep_ok.clicked.connect(self._rep)
+        self.pb_dlg_rep_annuler.clicked.connect(self._close)
+        self.pb_dlg_rep_ok.setDefault(True)
+    def INPUT(self):
+        def __input():
+            self.sgn_txt.emit(self.le_input.text())
+            self.close()
+
+        self._set_dlg(pg=self.pg_dlg_input)
+
+        # Données
+        self.lb_input_texte.setText(self.msg)
+        self.pb_dlg_input_ok.setText(self.txt_pb_ok)
+        self.pb_dlg_input_annuler.setText(self.txt_pb_annuler)
+
+        # Connection
+        self.pb_dlg_input_ok.clicked.connect(__input)
+        self.pb_dlg_input_annuler.clicked.connect(self._close)
+        self.pb_dlg_input_ok.setDefault(True)
+    def COLORS(self):
+        def __input():
+            self.sgn_rgb.emit([0, 0, 0])
+            self.close()
+
+        self._set_dlg(pg=self.pg_dlg_colors)
+
+        # Données
+        self.pb_dlg_colors_ok.setText(self.txt_pb_ok)
+
+        # Connection
+        self.pb_dlg_colors_ok.clicked.connect(__input)
+        self.pb_dlg_colors_ok.setDefault(True)
+
+
 
 
     ### EVENT
