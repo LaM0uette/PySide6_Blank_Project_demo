@@ -227,7 +227,13 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
             config_ini = Ini(lien_ini=vrb.INI_CONFIG)
             config = config_ini.OPEN_INI()
-            config["config"]["font"] = self.fcb_opt_ft_font.currentText()
+            config["config"]["font"] = f"{self.fcb_opt_ft_font.currentText()}"
+            config["config"]["widht"] = f"{self.sb_opt_cfg_resize_width.value()}"
+            config["config"]["height"] = f"{self.sb_opt_cfg_resize_height.value()}"
+            config["config"]["opacity"] = f"{self.sb_opt_cfg_opacity.value() / 100}"
+            config["var"]["autoreload"] = "true" if self.ck_opt_cfg_autoreload.isChecked() == True else "false"
+            config["var"]["autoclose"] = "true" if self.ck_opt_cfg_autoclose.isChecked() == True else "false"
+            config["var"]["resize"] = "true" if self.ck_opt_cfg_resize.isChecked() == True else "false"
             config_ini.WRITE_INI(ini=config)
 
             dct = {
@@ -270,7 +276,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             self.sb_opt_ft_h4.setValue(P_font().h4())
             self.sb_opt_ft_h5.setValue(P_font().h5())
 
-            self.sb_opt_cfg_opacity.setValue(config.opacity)
+            self.sb_opt_cfg_opacity.setValue(config.opacity*100)
             self.ck_opt_cfg_autoreload.setChecked(True) if config.auto_reload == True else self.ck_opt_cfg_autoreload.setChecked(False)
             self.ck_opt_cfg_autoclose.setChecked(True) if config.auto_close == True else self.ck_opt_cfg_autoclose.setChecked(False)
             self.ck_opt_cfg_resize.setChecked(True) if config.resize == True else self.ck_opt_cfg_resize.setChecked(False)
@@ -298,6 +304,13 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.sb_opt_ft_h3.valueChanged.connect(__val_change_appliquer)
         self.sb_opt_ft_h4.valueChanged.connect(__val_change_appliquer)
         self.sb_opt_ft_h5.valueChanged.connect(__val_change_appliquer)
+
+        self.sb_opt_cfg_opacity.valueChanged.connect(__val_change_appliquer)
+        self.sb_opt_cfg_resize_width.valueChanged.connect(__val_change_appliquer)
+        self.sb_opt_cfg_resize_height.valueChanged.connect(__val_change_appliquer)
+        self.ck_opt_cfg_autoreload.stateChanged.connect(__val_change_appliquer)
+        self.ck_opt_cfg_autoclose.stateChanged.connect(__val_change_appliquer)
+        self.ck_opt_cfg_resize.stateChanged.connect(__val_change_appliquer)
 
 
     ### EVENT
