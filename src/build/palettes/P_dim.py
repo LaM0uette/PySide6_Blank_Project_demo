@@ -76,9 +76,6 @@ class P_dim(Dim):
             super().__init__(w=1, h=1.4)
 
 
-    def demo(self): return self.aw().h8()
-
-
 """
     def p_aw_mt(self): return {"w": None, "h": self.h_mt()}
     def p_aw_mb(self): return {"w": None, "h": self.h_mb()}
