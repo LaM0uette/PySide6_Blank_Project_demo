@@ -31,4 +31,4 @@ class C_tw(C_wg):
                  dim=P_dim().aw().h5(),
                  font=P_font().h4(),
                  cur="croix",
-                 scroll=P_scroll().of_n(), )
+                 scroll=P_scroll().off().nd(), )

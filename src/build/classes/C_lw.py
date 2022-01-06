@@ -31,4 +31,4 @@ class C_lw(C_wg):
                  dim=P_dim().aw().h5(),
                  font=P_font().h4(),
                  cur="souris_main",
-                 scroll=P_scroll().of_n(), )
+                 scroll=P_scroll().off().nd(), )

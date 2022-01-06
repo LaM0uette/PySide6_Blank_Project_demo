@@ -27,10 +27,10 @@ class C_sca(C_wg):
         self.STL(list(args),
                  colors = P_rgb().p_th1(),
                  dim = P_dim().all(),
-                 scroll=P_scroll().of_of())
+                 scroll=P_scroll().off().off())
 
     def demo(self, *args):
         self.STL(list(args),
                  colors = P_rgb().p_th1(),
                  dim = P_dim().all(),
-                 scroll=P_scroll().of_n())
+                 scroll=P_scroll().off().nd())

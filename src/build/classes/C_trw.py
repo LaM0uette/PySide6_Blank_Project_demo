@@ -32,7 +32,7 @@ class C_trw(C_wg):
                  dim={"w": 150, "h": None},
                  font=P_font().h4(),
                  bd=P_bd().right().th3(),
-                 scroll=P_scroll().of_n(),
+                 scroll=P_scroll().off().nd(),
                  cur="souris_main")
 
     def demo_th(self, *args):
@@ -42,7 +42,7 @@ class C_trw(C_wg):
                  dim={"w": 300, "h": 200},
                  font=P_font().h4(),
                  bd=P_bd().right().th3(),
-                 scroll=P_scroll().of_n(),
+                 scroll=P_scroll().off().nd(),
                  cur="souris_main")
     def demo_tr(self, *args):
         self.STL(list(args),
@@ -51,5 +51,5 @@ class C_trw(C_wg):
                  dim={"w": 300, "h": 200},
                  font=P_font().h4(),
                  bd=P_bd().right().th3(),
-                 scroll=P_scroll().of_n(),
+                 scroll=P_scroll().off().nd(),
                  cur="souris_main")
