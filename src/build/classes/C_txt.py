@@ -32,35 +32,35 @@ class C_txt(C_wg):
                  colors = P_rgb().p_th1(),
                  dim = P_dim().p_all(),
                  font=P_font().h1(),
-                 align=P_align().c_c())
+                 align=P_align().c().c())
     def tr_h2(self, *args):
         self.STL(list(args),
                  colors_type = "tr",
                  colors = P_rgb().p_th1(),
                  dim = P_dim().p_all(),
                  font=P_font().h2(),
-                 align=P_align().c_c())
+                 align=P_align().c().c())
     def tr_h3(self, *args):
         self.STL(list(args),
                  colors_type = "tr",
                  colors = P_rgb().p_th1(),
                  dim = P_dim().p_all(),
                  font=P_font().h3(),
-                 align=P_align().c_c())
+                 align=P_align().c().c())
     def tr_h4(self, *args):
         self.STL(list(args),
                  colors_type = "tr",
                  colors = P_rgb().p_th1(),
                  dim = P_dim().p_all(),
                  font=P_font().h4(),
-                 align=P_align().c_c())
+                 align=P_align().c().c())
     def tr_h5(self, *args):
         self.STL(list(args),
                  colors_type = "tr",
                  colors = P_rgb().p_th1(),
                  dim = P_dim().p_all(),
                  font=P_font().h5(),
-                 align=P_align().c_c())
+                 align=P_align().c().c())
 
     def tr(self, *args):
         self.STL(list(args),
@@ -68,7 +68,7 @@ class C_txt(C_wg):
                  colors = P_rgb().p_th1(),
                  dim = P_dim().p_aw_h9(),
                  font=P_font().h3(),
-                 align=P_align().l_c(),
+                 align=P_align().l().c(),
                  bd = P_bd().bd0010_bd_th2())
 
     def demoth(self, *args):
@@ -77,7 +77,7 @@ class C_txt(C_wg):
                  colors = P_rgb().p_th3(),
                  dim = P_dim().p_aw_demo(),
                  font=P_font().h2(),
-                 align=P_align().c_c(),
+                 align=P_align().c().c(),
                  bd = P_bd().bd0010_bd_th2())
     def demotr(self, *args):
         self.STL(list(args),
@@ -85,7 +85,7 @@ class C_txt(C_wg):
                  colors = P_rgb().p_th1(),
                  dim = P_dim().p_aw_demo(),
                  font=P_font().h2(),
-                 align=P_align().c_c(),
+                 align=P_align().c().c(),
                  bd = P_bd().bd0010_bd_th2())
     def demo_th(self, *args):
         self.STL(list(args),
@@ -93,7 +93,7 @@ class C_txt(C_wg):
                  colors = P_rgb().p_th3(),
                  dim = P_dim().p_list_demo(),
                  font=P_font().p(),
-                 align=P_align().c_c(),
+                 align=P_align().c().c(),
                  rd=P_rd().rd1_30(),)
     def demo_tr(self, *args):
         self.STL(list(args),
@@ -101,5 +101,5 @@ class C_txt(C_wg):
                  colors = P_rgb().p_th1(),
                  dim = P_dim().p_list_demo(),
                  font=P_font().p(),
-                 align=P_align().c_c(),
+                 align=P_align().c().c(),
                  bd = P_bd().bd1_bd_th2())

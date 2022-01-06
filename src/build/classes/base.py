@@ -44,7 +44,7 @@ CUR = P_cur().souris()
 
 
 ### PARAMETRES
-ALIGN = P_align().c_c()
+ALIGN = P_align().c().c()
 EDIT = False
 WORD_WRAP = False
 SCROLL = P_scroll().n_n()
