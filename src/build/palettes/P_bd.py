@@ -16,6 +16,7 @@ class P_bd:
         def bn1(self): return {"mat": self.mat, "px": self.bd, "th": P_rgb().bn1()}
         def bn2(self): return {"mat": self.mat, "px": self.bd, "th": P_rgb().bn2()}
 
+
     class all(rtn):
         def __init__(self):
             super().__init__(mat="1111")
