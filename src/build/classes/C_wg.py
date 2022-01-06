@@ -1037,9 +1037,6 @@ class C_wg:
                 "border-radius: 5px;"
                 "height: 20px;"
                 "margin: 0px;"
-                "position: absolute;"
-                "top: 40px; "
-                "bottom: 40px;"
                 f"background-color: rgb{self.c2};"
                 "}"
                 
@@ -1051,7 +1048,7 @@ class C_wg:
                 "border: none;"
                 "height: 20px;"
                 "width: 20px;"
-                "margin: 0px;"
+                "margin: -10px 0px;"
                 "border-radius: 5px;"
                 f"background-color: rgb{self.c3};"
                 "}"
@@ -1060,6 +1057,34 @@ class C_wg:
                 f"background-color: rgb{self.bn1};"
                 "}"
                 "QSlider::handle:horizontal:pressed {"
+                f"background-color: rgb{self.bn2};"
+                "}"
+                
+                
+                "QSlider::groove:vertical {"
+                "border-radius: 5px;"
+                "width: 20px;"
+                "margin: 0px;"
+                f"background-color: rgb{self.c2};"
+                "}"
+                
+                "QSlider::groove:vertical:hover {"
+                f"background-color: rgb{self.c2};"
+                "}"
+                
+                "QSlider::handle:vertical {"
+                "border: none;"
+                "height: 20px;"
+                "width: 20px;"
+                "margin: 0px -10px;"
+                "border-radius: 5px;"
+                f"background-color: rgb{self.c3};"
+                "}"
+                
+                "QSlider::handle:vertical:hover {"
+                f"background-color: rgb{self.bn1};"
+                "}"
+                "QSlider::handle:vertical:pressed {"
                 f"background-color: rgb{self.bn2};"
                 "}"
                 
