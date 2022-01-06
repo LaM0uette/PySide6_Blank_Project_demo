@@ -27,5 +27,5 @@ class C_pg(C_wg):
         self.STL(list(args),
                  colors=P_rgb().p_th1(),
                  dim=P_dim().p_aw_demo(),
-                 bd=P_bd().bd0101_bd_bn1(),
+                 bd=P_bd().rl().bn1(),
                  pad="bd",)

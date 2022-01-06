@@ -31,7 +31,7 @@ class C_trw(C_wg):
                  colors=P_rgb().p_th1(),
                  dim={"w": 150, "h": None},
                  font=P_font().h4(),
-                 bd=P_bd().bd0100_bd_th3(),
+                 bd=P_bd().right().th3(),
                  scroll=P_scroll().of_n(),
                  cur="souris_main")
 
@@ -41,7 +41,7 @@ class C_trw(C_wg):
                  colors=P_rgb().p_th1(),
                  dim={"w": 300, "h": 200},
                  font=P_font().h4(),
-                 bd=P_bd().bd0100_bd_th3(),
+                 bd=P_bd().right().th3(),
                  scroll=P_scroll().of_n(),
                  cur="souris_main")
     def demo_tr(self, *args):
@@ -50,6 +50,6 @@ class C_trw(C_wg):
                  colors=P_rgb().p_th1(),
                  dim={"w": 300, "h": 200},
                  font=P_font().h4(),
-                 bd=P_bd().bd0100_bd_th3(),
+                 bd=P_bd().right().th3(),
                  scroll=P_scroll().of_n(),
                  cur="souris_main")

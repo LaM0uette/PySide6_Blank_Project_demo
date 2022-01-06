@@ -69,7 +69,7 @@ class C_txt(C_wg):
                  dim = P_dim().p_aw_h9(),
                  font=P_font().h3(),
                  align=P_align().l().c(),
-                 bd = P_bd().bd0010_bd_th2())
+                 bd = P_bd().bottom().th2())
 
     def demoth(self, *args):
         self.STL(list(args),
@@ -78,7 +78,7 @@ class C_txt(C_wg):
                  dim = P_dim().p_aw_demo(),
                  font=P_font().h2(),
                  align=P_align().c().c(),
-                 bd = P_bd().bd0010_bd_th2())
+                 bd = P_bd().bottom().th2())
     def demotr(self, *args):
         self.STL(list(args),
                  colors_type = "tr",
@@ -86,7 +86,7 @@ class C_txt(C_wg):
                  dim = P_dim().p_aw_demo(),
                  font=P_font().h2(),
                  align=P_align().c().c(),
-                 bd = P_bd().bd0010_bd_th2())
+                 bd = P_bd().bottom().th2())
     def demo_th(self, *args):
         self.STL(list(args),
                  colors_type = "th",
@@ -102,4 +102,4 @@ class C_txt(C_wg):
                  dim = P_dim().p_list_demo(),
                  font=P_font().p(),
                  align=P_align().c().c(),
-                 bd = P_bd().bd1_bd_th2())
+                 bd = P_bd().all().th2())

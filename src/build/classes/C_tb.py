@@ -29,4 +29,4 @@ class C_tb(C_wg):
                  colors=P_rgb().p_th1(),
                  dim=P_dim().p_list_demo(),
                  font=P_font().h2(),
-                 bd=P_bd().bd1101_bd_bn1(), )
+                 bd=P_bd().trl().bn1())

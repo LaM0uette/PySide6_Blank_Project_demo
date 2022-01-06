@@ -50,7 +50,7 @@ class C_ck(C_wg):
                  th="th3",
                  th_check="bn1",
                  rd=P_rd().rd1_5(),
-                 bd=P_bd().bd1_bd_bn1(),
+                 bd=P_bd().all().bn1(),
                  cur="main",)
     def demo_tr(self, *args):
         self.STL(list(args),

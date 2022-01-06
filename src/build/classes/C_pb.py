@@ -105,7 +105,7 @@ class C_pb(C_wg):
                  colors=P_rgb().p_th1(),
                  dim=P_dim().p_aw_h5(),
                  font=P_font().p(),
-                 bd=P_bd().bd1_bd_th2(),
+                 bd=P_bd().all().th2(),
                  cur="main")
     def plein_th2(self, *args):
         self.STL(list(args),
@@ -205,5 +205,5 @@ class C_pb(C_wg):
                  colors = P_rgb().p_th3(),
                  dim = P_dim().p_aw_demo(),
                  font = P_font().p(),
-                 bd=P_bd().bd1_bd_bn1(),
+                 bd=P_bd().all().bn1(),
                  cur = "main",)

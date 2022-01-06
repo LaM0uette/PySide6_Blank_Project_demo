@@ -32,7 +32,7 @@ class C_cb(C_wg):
                  colors=P_rgb().p_th1(),
                  dim=P_dim().p_aw_h9(),
                  font=P_font().h4(),
-                 bd=P_bd().bd0010_bd_th3(),
+                 bd=P_bd().bottom().th3(),
                  edit=True,
                  cur="souris_main")
     def font(self, *args):
@@ -41,7 +41,7 @@ class C_cb(C_wg):
                  colors=P_rgb().p_th1(),
                  dim=P_dim().p_aw_h9(),
                  font=P_font().h4(),
-                 bd=P_bd().bd0010_bd_th3(),
+                 bd=P_bd().bottom().th3(),
                  edit=True,
                  cur="souris_main")
 
@@ -51,7 +51,7 @@ class C_cb(C_wg):
                  colors=P_rgb().p_th1(),
                  dim=P_dim().p_aw_demo(),
                  font=P_font().h3(),
-                 bd=P_bd().bd0010_bd_th3(),
+                 bd=P_bd().bottom().th3(),
                  edit=True,
                  cur="souris_main")
     def demo_tr(self, *args):
@@ -60,6 +60,6 @@ class C_cb(C_wg):
                  colors=P_rgb().p_th1(),
                  dim=P_dim().p_aw_demo(),
                  font=P_font().h3(),
-                 bd=P_bd().bd0010_bd_th3(),
+                 bd=P_bd().bottom().th3(),
                  edit=False,
                  cur="main")

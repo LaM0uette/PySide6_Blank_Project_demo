@@ -43,7 +43,7 @@ class C_sb(C_wg):
                  min=0,
                  max=100,
                  step=1,
-                 bd=P_bd().bd0010_bd_th3(),
+                 bd=P_bd().bottom().th3(),
                  cur="souris_main")
     def th1_full(self, *args):
         self.STL(list(args),
@@ -57,7 +57,7 @@ class C_sb(C_wg):
                  min=0,
                  max=99999,
                  step=1,
-                 bd=P_bd().bd0010_bd_th3(),
+                 bd=P_bd().bottom().th3(),
                  cur="souris_main")
     def th1_(self, *args):
         self.STL(list(args),
@@ -71,7 +71,7 @@ class C_sb(C_wg):
                  min=0,
                  max=255,
                  step=1,
-                 bd=P_bd().bd1_bd_th3(),
+                 bd=P_bd().all().th3(),
                  rd=P_rd().rd1010().rd5(),
                  cur="souris_main")
 
