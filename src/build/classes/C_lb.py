@@ -33,28 +33,28 @@ class C_lb(C_wg):
         self.STL(list(args),
                  colors_type = "tr",
                  colors = P_rgb().p_u3(),
-                 dim = P_dim().p_aw_h7(),
+                 dim = P_dim().aw().h7(),
                  font=P_font().h1(),
                  align=P_align().c().c())
     def h2(self, *args):
         self.STL(list(args),
                  colors_type = "tr",
                  colors = P_rgb().p_u3(),
-                 dim = P_dim().p_aw_h8(),
+                 dim = P_dim().aw().h8(),
                  font=P_font().h2(),
                  align=P_align().c().c())
     def h3(self, *args):
         self.STL(list(args),
                  colors_type = "tr",
                  colors = P_rgb().p_u3(),
-                 dim = P_dim().p_aw_h9(),
+                 dim = P_dim().aw().h9(),
                  font=P_font().h3(),
                  align=P_align().c().c())
     def h4(self, *args):
         self.STL(list(args),
                  colors_type = "tr",
                  colors = P_rgb().p_u3(),
-                 dim = P_dim().p_aw_h9(),
+                 dim = P_dim().aw().h9(),
                  font=P_font().h4(),
                  align=P_align().c().c())
     def p(self, *args):
@@ -78,7 +78,7 @@ class C_lb(C_wg):
         self.STL(list(args),
                  colors_type = "tr",
                  colors = P_rgb().p_th3(),
-                 dim = P_dim().p_aw_h7(),
+                 dim = P_dim().aw().h7(),
                  font=P_font().h1(),
                  align=P_align().c().b(),
                  bd = P_bd().bottom().bn1())

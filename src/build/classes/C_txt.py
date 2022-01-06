@@ -66,7 +66,7 @@ class C_txt(C_wg):
         self.STL(list(args),
                  colors_type = "tr",
                  colors = P_rgb().p_th1(),
-                 dim = P_dim().p_aw_h9(),
+                 dim = P_dim().aw().h9(),
                  font=P_font().h3(),
                  align=P_align().l().c(),
                  bd = P_bd().bottom().th2())
