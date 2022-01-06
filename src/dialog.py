@@ -129,6 +129,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         with C_sb() as C_:
             C_.th1(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity)
             C_.th1_full(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height)
+            C_.th1_(self.spinBox)
 
         # QTreeWidget
         with C_trw() as C_:

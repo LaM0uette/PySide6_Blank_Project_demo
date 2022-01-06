@@ -290,7 +290,7 @@ class C_wg:
                     f"image: url({pb_down + 'th3.svg'});"
                     f"height: {self.dim.get('h') / 2}px;"
                     f"width: {self.dim.get('h') / 2}px;"
-                    "}"
+                    "}",
             }
         except: dct_sb = {}
 

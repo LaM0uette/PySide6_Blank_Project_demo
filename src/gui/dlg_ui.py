@@ -662,6 +662,12 @@ class Ui_Dlg(object):
         self.sd_opt_rgb_blue.setObjectName(u"sd_opt_rgb_blue")
         self.sd_opt_rgb_blue.setGeometry(QRect(250, 230, 160, 22))
         self.sd_opt_rgb_blue.setOrientation(Qt.Horizontal)
+        self.label = QLabel(self.sca_area_colors)
+        self.label.setObjectName(u"label")
+        self.label.setGeometry(QRect(250, 90, 47, 13))
+        self.spinBox = QSpinBox(self.sca_area_colors)
+        self.spinBox.setObjectName(u"spinBox")
+        self.spinBox.setGeometry(QRect(380, 80, 42, 22))
         self.sca_colors.setWidget(self.sca_area_colors)
 
         self.vlay_pg_dlg_colors.addWidget(self.sca_colors)
@@ -746,6 +752,7 @@ class Ui_Dlg(object):
         self.pb_opt_tm_bn2.setText(QCoreApplication.translate("Dlg", u"BN2", None))
         self.pb_opt_tm_colors.setText(QCoreApplication.translate("Dlg", u"Couleurs", None))
         self.le_input.setPlaceholderText(QCoreApplication.translate("Dlg", u"...", None))
+        self.label.setText(QCoreApplication.translate("Dlg", u"RED", None))
         pass
     # retranslateUi
 
