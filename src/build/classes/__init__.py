@@ -1,4 +1,6 @@
-from .ComboBox import ComboBox
+from . import C_QComboBox
+
+from .C_cb import C_cb
 from .C_de import C_de
 from .C_fr import C_fr
 from .C_lb import C_lb

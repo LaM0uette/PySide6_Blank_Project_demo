@@ -87,7 +87,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         In_classe(ui=self)
 
         # QComboBox
-        with ComboBox() as C_:
+        with C_cb() as C_:
             C_.font(self.fcb_opt_ft_font)
             C_.font(self.cb_opt_tm_theme)
 

@@ -2,7 +2,7 @@ from .C_wg import C_wg
 from ...build import *
 
 
-class ComboBox(C_wg):
+class C_cb(C_wg):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 

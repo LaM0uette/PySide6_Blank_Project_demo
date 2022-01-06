@@ -49,10 +49,20 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         In_classe(ui=self)
 
 
-        with ComboBox() as cls:
-            # Demo
-            cls.demo_th(self.cb_demo_th)
-            cls.demo_tr(self.cb_demo_tr)
+        ### QComboBox ###
+        cls = C_QComboBox
+        cls.test(self.cb_demo_th, self.cb_demo_tr)
+
+
+
+
+
+
+
+        # with C_cb() as cls:
+        #     # Demo
+        #     cls.demo_th(self.cb_demo_th)
+        #     cls.demo_tr(self.cb_demo_tr)
 
         # QDateEdit
         with C_de() as cls:
