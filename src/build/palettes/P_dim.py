@@ -68,12 +68,30 @@ class P_dim(Dim):
     class carr(rtn):
         def __init__(self):
             super().__init__(w=1, h=1)
-    class w_rect(rtn):
+    class w_rect_1_4(rtn):
         def __init__(self):
             super().__init__(w=1.4, h=1)
-    class h_rect(rtn):
+    class h_rect_1_4(rtn):
         def __init__(self):
             super().__init__(w=1, h=1.4)
+    class w_rect_2(rtn):
+        def __init__(self):
+            super().__init__(w=2, h=1)
+    class h_rect_2(rtn):
+        def __init__(self):
+            super().__init__(w=1, h=2)
+    class w_rect_3(rtn):
+        def __init__(self):
+            super().__init__(w=3, h=1)
+    class h_rect_3(rtn):
+        def __init__(self):
+            super().__init__(w=1, h=3)
+    class w_rect_4(rtn):
+        def __init__(self):
+            super().__init__(w=4, h=1)
+    class h_rect_4(rtn):
+        def __init__(self):
+            super().__init__(w=1, h=4)
 
 
 """

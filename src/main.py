@@ -163,7 +163,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.lb_mt_nom.setText(config.nom)
 
         # Widget blanc pour centrer le nom de l'app
-        dim = P_dim().w_rect().h10()
+        dim = P_dim().w_rect_1_4().h10()
         Fct(wg=self.wg_mt_blank, w=dim.get("w") * 4, h=dim.get("h")).DIM()
 
         # Version de l'app

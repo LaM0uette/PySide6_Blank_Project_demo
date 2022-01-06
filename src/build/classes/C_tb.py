@@ -27,6 +27,6 @@ class C_tb(C_wg):
     def demo(self, *args):
         self.STL(list(args),
                  colors=P_rgb().p_th1(),
-                 dim=P_dim().p_list_demo(),
+                 dim=P_dim().aw().h5(),
                  font=P_font().h2(),
                  bd=P_bd().trl().bn1())

@@ -40,7 +40,7 @@ class C_pb(C_wg):
                  type="zoom",
                  colors_type = "tr",
                  colors = P_rgb().p_th1(),
-                 dim = P_dim().w_rect().h9(),
+                 dim = P_dim().w_rect_1_4().h9(),
                  img = P_img().option(),
                  th = "th2",
                  cur = "souris_main")
@@ -49,7 +49,7 @@ class C_pb(C_wg):
                  type="zoom",
                  colors_type = "tr",
                  colors = P_rgb().p_th1(),
-                 dim = P_dim().w_rect().h9(),
+                 dim = P_dim().w_rect_1_4().h9(),
                  img = P_img().reduire(),
                  th = "bn1",
                  cur = "souris_main")
@@ -58,7 +58,7 @@ class C_pb(C_wg):
                  type="zoom",
                  colors_type = "tr",
                  colors = P_rgb().p_th1(),
-                 dim = P_dim().w_rect().h9(),
+                 dim = P_dim().w_rect_1_4().h9(),
                  img = P_img().agrandir(),
                  th = "th3",
                  cur = "souris_main")
@@ -67,7 +67,7 @@ class C_pb(C_wg):
                  type="zoom",
                  colors_type = "tr",
                  colors = P_rgb().p_th1(),
-                 dim = P_dim().w_rect().h9(),
+                 dim = P_dim().w_rect_1_4().h9(),
                  img = P_img().quitter(),
                  th = "bn2",
                  cur = "souris_main")
@@ -76,19 +76,19 @@ class C_pb(C_wg):
         self.STL(list(args),
                  colors_type = "txt",
                  colors = P_rgb().p_vert_th2(),
-                 dim = P_dim().w_rect().h9(),
+                 dim = P_dim().w_rect_1_4().h9(),
                  cur = "souris_main")
     def appliquer(self, *args):
         self.STL(list(args),
                  colors_type = "txt_inv",
                  colors = P_rgb().p_vert_th2(),
-                 dim = P_dim().w_rect().h9(),
+                 dim = P_dim().w_rect_1_4().h9(),
                  cur = "souris_main")
     def annuler(self, *args):
         self.STL(list(args),
                  colors_type = "txt_inv",
                  colors = P_rgb().p_rouge_th2(),
-                 dim = P_dim().w_rect().h9(),
+                 dim = P_dim().w_rect_1_4().h9(),
                  cur = "souris_main")
 
     def txt_h9(self, *args):
@@ -140,35 +140,35 @@ class C_pb(C_wg):
         self.STL(list(args),
                  colors_type = "txt",
                  colors = P_rgb().p_th1(),
-                 dim = P_dim().w_rect().h8(),
+                 dim = P_dim().aw().h8(),
                  font = P_font().p(),
                  cur = "main")
     def demo_txt_inv(self, *args):
         self.STL(list(args),
                  colors_type = "txt_inv",
                  colors = P_rgb().p_vert_th1(),
-                 dim = P_dim().w_rect().h8(),
+                 dim = P_dim().aw().h8(),
                  font = P_font().p(),
                  cur = "main")
     def demo_th(self, *args):
         self.STL(list(args),
                  colors_type = "th",
                  colors = P_rgb().p_th3(),
-                 dim = P_dim().w_rect().h8(),
+                 dim = P_dim().aw().h8(),
                  font = P_font().p(),
                  cur = "main")
     def demo_tr(self, *args):
         self.STL(list(args),
                  colors_type = "tr",
                  colors = P_rgb().p_th1(),
-                 dim = P_dim().w_rect().h8(),
+                 dim = P_dim().aw().h8(),
                  font = P_font().p(),
                  cur = "main")
     def demo_ck(self, *args):
         self.STL(list(args),
                  colors_type = "th",
                  colors = P_rgb().p_th3(),
-                 dim = P_dim().w_rect().h8(),
+                 dim = P_dim().aw().h8(),
                  font = P_font().p(),
                  cur = "main")
     def demo_ck_ico(self, *args):
@@ -176,7 +176,7 @@ class C_pb(C_wg):
                  type="check",
                  colors_type="tr",
                  colors=P_rgb().p_th1(),
-                 dim=P_dim().w_rect().h8(),
+                 dim=P_dim().aw().h8(),
                  img=P_img().check(),
                  img_check=P_img().valider(),
                  th="th3",
@@ -188,14 +188,14 @@ class C_pb(C_wg):
                  type="zoom",
                  colors_type = "tr",
                  colors = P_rgb().p_th1(),
-                 dim = P_dim().w_rect().h8(),
+                 dim = P_dim().aw().h8(),
                  img = P_img().calendrier(),
                  cur = "main")
     def demo_rd(self, *args):
         self.STL(list(args),
                  colors_type = "th",
                  colors = P_rgb().p_th3(),
-                 dim = P_dim().w_rect().h8(),
+                 dim = P_dim().aw().h8(),
                  font = P_font().p(),
                  rd=P_rd().rd1_5(),
                  cur = "main")
@@ -203,7 +203,7 @@ class C_pb(C_wg):
         self.STL(list(args),
                  colors_type = "th",
                  colors = P_rgb().p_th3(),
-                 dim = P_dim().w_rect().h8(),
+                 dim = P_dim().aw().h8(),
                  font = P_font().p(),
                  bd=P_bd().all().bn1(),
-                 cur = "main",)
+                 cur = "main", )

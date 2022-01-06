@@ -33,19 +33,19 @@ class C_rb(C_wg):
         self.STL(list(args),
                  colors_type="th",
                  colors=P_rgb().p_th1(),
-                 dim=P_dim().w_rect().h8(),
+                 dim=P_dim().aw().h8(),
                  img=P_img().check(),
                  img_check=P_img().valider(),
                  th="th3",
                  th_check="bn1",
                  rd=P_rd().rd1_5(),
                  bd=P_bd().all().bn1(),
-                 cur="main",)
+                 cur="main", )
     def demo_tr(self, *args):
         self.STL(list(args),
                  colors_type="tr",
                  colors=P_rgb().p_th1(),
-                 dim=P_dim().w_rect().h8(),
+                 dim=P_dim().aw().h8(),
                  img=P_img().check(),
                  img_check=P_img().valider(),
                  th="th3",

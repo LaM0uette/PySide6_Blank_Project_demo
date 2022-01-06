@@ -31,9 +31,9 @@ class C_sd(C_wg):
         self.STL(list(args),
                  colors_type="th",
                  colors=P_rgb().p_th1(),
-                 dim=P_dim().p_aw_demo())
+                 dim=P_dim().aw().h8())
     def demo_v(self, *args):
         self.STL(list(args),
                  colors_type="rond",
                  colors=P_rgb().p_th1(),
-                 dim=P_dim().p_c_h5())
+                 dim=P_dim().carr().h5())
