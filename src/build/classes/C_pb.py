@@ -96,7 +96,7 @@ class C_pb(C_wg):
                  colors_type = "txt",
                  colors = P_rgb().p_th1(),
                  dim = P_dim().aw().h9(),
-                 font = P_font().p(),
+                 font = P_font().h4(),
                  cur = "main")
 
     def plein_th1(self, *args):
@@ -104,7 +104,7 @@ class C_pb(C_wg):
                  colors_type="th",
                  colors=P_rgb().p_th1(),
                  dim=P_dim().aw().h5(),
-                 font=P_font().p(),
+                 font=P_font().h4(),
                  bd=P_bd().all().th2(),
                  cur="main")
     def plein_th2(self, *args):
@@ -112,28 +112,28 @@ class C_pb(C_wg):
                  colors_type="th",
                  colors=P_rgb().p_th2(),
                  dim=P_dim().aw().h5(),
-                 font=P_font().p(),
+                 font=P_font().h4(),
                  cur="main")
     def plein_th3(self, *args):
         self.STL(list(args),
                  colors_type="th",
                  colors=P_rgb().p_th3(),
                  dim=P_dim().aw().h5(),
-                 font=P_font().p(),
+                 font=P_font().h4(),
                  cur="main")
     def plein_bn1(self, *args):
         self.STL(list(args),
                  colors_type="th",
                  colors=P_rgb().p_bn1(),
                  dim=P_dim().aw().h5(),
-                 font=P_font().p(),
+                 font=P_font().h4(),
                  cur="main")
     def plein_bn2(self, *args):
         self.STL(list(args),
                  colors_type="th",
                  colors=P_rgb().p_bn2(),
                  dim=P_dim().aw().h5(),
-                 font=P_font().p(),
+                 font=P_font().h4(),
                  cur="main")
 
     def demo_txt(self, *args):
@@ -141,35 +141,35 @@ class C_pb(C_wg):
                  colors_type = "txt",
                  colors = P_rgb().p_th1(),
                  dim = P_dim().aw().h8(),
-                 font = P_font().p(),
+                 font = P_font().h4(),
                  cur = "main")
     def demo_txt_inv(self, *args):
         self.STL(list(args),
                  colors_type = "txt_inv",
                  colors = P_rgb().p_vert_th1(),
                  dim = P_dim().aw().h8(),
-                 font = P_font().p(),
+                 font = P_font().h4(),
                  cur = "main")
     def demo_th(self, *args):
         self.STL(list(args),
                  colors_type = "th",
                  colors = P_rgb().p_th3(),
                  dim = P_dim().aw().h8(),
-                 font = P_font().p(),
+                 font = P_font().h4(),
                  cur = "main")
     def demo_tr(self, *args):
         self.STL(list(args),
                  colors_type = "tr",
                  colors = P_rgb().p_th1(),
                  dim = P_dim().aw().h8(),
-                 font = P_font().p(),
+                 font = P_font().h4(),
                  cur = "main")
     def demo_ck(self, *args):
         self.STL(list(args),
                  colors_type = "th",
                  colors = P_rgb().p_th3(),
                  dim = P_dim().aw().h8(),
-                 font = P_font().p(),
+                 font = P_font().h4(),
                  cur = "main")
     def demo_ck_ico(self, *args):
         self.STL(list(args),
@@ -181,7 +181,7 @@ class C_pb(C_wg):
                  img_check=P_img().valider(),
                  th="th3",
                  th_check="bn1",
-                 font=P_font().p(),
+                 font=P_font().h4(),
                  cur="main")
     def demo_zoom(self, *args):
         self.STL(list(args),
@@ -196,14 +196,14 @@ class C_pb(C_wg):
                  colors_type = "th",
                  colors = P_rgb().p_th3(),
                  dim = P_dim().aw().h8(),
-                 font = P_font().p(),
-                 rd=P_rd().rd1_5(),
+                 font = P_font().h4(),
+                 rd=P_rd().all().px_5(),
                  cur = "main")
     def demo_bd(self, *args):
         self.STL(list(args),
                  colors_type = "th",
                  colors = P_rgb().p_th3(),
                  dim = P_dim().aw().h8(),
-                 font = P_font().p(),
+                 font = P_font().h4(),
                  bd=P_bd().all().bn1(),
                  cur = "main", )

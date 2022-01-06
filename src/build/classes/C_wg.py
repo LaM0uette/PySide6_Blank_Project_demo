@@ -450,7 +450,7 @@ class C_wg:
         self.wg.setCalendarPopup(True)
         self.STL_ALL()
 
-        font_cal = P_font().p()
+        font_cal = P_font().h4()
         stl = {
             "th":
                 "QDateEdit::drop-down {"

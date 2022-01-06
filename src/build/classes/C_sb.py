@@ -72,7 +72,7 @@ class C_sb(C_wg):
                  max=255,
                  step=1,
                  bd=P_bd().all().th3(),
-                 rd=P_rd().rd1010().rd5(),
+                 rd=P_rd().left().px_5(),
                  cur="souris_main")
 
     def demo_th(self, *args):

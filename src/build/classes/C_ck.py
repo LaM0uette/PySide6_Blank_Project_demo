@@ -49,7 +49,7 @@ class C_ck(C_wg):
                  img_check=P_img().valider(),
                  th="th3",
                  th_check="bn1",
-                 rd=P_rd().rd1_5(),
+                 rd=P_rd().all().px_5(),
                  bd=P_bd().all().bn1(),
                  cur="main",)
     def demo_tr(self, *args):

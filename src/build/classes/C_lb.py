@@ -62,9 +62,9 @@ class C_lb(C_wg):
                  colors_type = "tr",
                  colors = P_rgb().p_u3(),
                  dim = P_dim().all(),
-                 font=P_font().p(),
+                 font=P_font().h4(),
                  align=P_align().l().c(),
-                 word_wrap=True,)
+                 word_wrap=True, )
 
     def mb(self, *args):
         self.STL(list(args),

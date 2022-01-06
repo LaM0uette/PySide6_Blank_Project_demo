@@ -29,6 +29,6 @@ class C_tw(C_wg):
         self.STL(list(args),
                  colors=P_rgb().p_th1(),
                  dim=P_dim().aw().h5(),
-                 font=P_font().p(),
+                 font=P_font().h4(),
                  cur="croix",
                  scroll=P_scroll().of_n(), )

@@ -31,12 +31,12 @@ class C_de(C_wg):
                  colors_type="th",
                  colors = P_rgb().p_th3(),
                  dim = P_dim().aw().h8(),
-                 font=P_font().p(),
+                 font=P_font().h4(),
                  cur="main")
     def demo_tr(self, *args):
         self.STL(list(args),
                  colors_type="tr",
                  colors = P_rgb().p_th1(),
                  dim = P_dim().aw().h8(),
-                 font=P_font().p(),
+                 font=P_font().h4(),
                  cur="main")

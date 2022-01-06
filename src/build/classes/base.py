@@ -22,7 +22,7 @@ TH_CHECK = "bn2"
 
 
 ### FONT
-FONT = P_font().p()
+FONT = P_font().h4()
 
 
 ### RADIUS

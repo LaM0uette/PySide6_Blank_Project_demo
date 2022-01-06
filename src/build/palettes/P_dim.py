@@ -92,24 +92,3 @@ class P_dim(Dim):
     class h_rect_4(rtn):
         def __init__(self):
             super().__init__(w=1, h=4)
-
-
-"""
-    def p_aw_mt(self): return {"w": None, "h": self.h_mt()}
-    def p_aw_mb(self): return {"w": None, "h": self.h_mb()}
-
-    def p_aw_mb_dlg_2(self): return {"w": None, "h": self.h_mb_dlg_2()}
-
-    def p_c_mt(self): return {"w": self.h_mt(), "h": self.h_mt()}
-    def p_c_mb(self): return {"w": self.h_mb(), "h": self.h_mb()}
-    def p_r_mt(self): return {"w": self.h_mt()*1.4, "h": self.h_mt()}
-    def p_r_mb(self): return {"w": self.h_mb()*1.4, "h": self.h_mb()}
-
-    def p_r_mb_dlg(self): return {"w": self.h_h6(), "h": self.h_mb_dlg()}
-
-    def p_h8_h9(self): return {"w": self.h_h8(), "h": self.h_h9()}
-
-    def p_aw_demo(self): return {"w": None, "h": self.h_h8()}
-    def p_h5_h8_demo(self): return {"w": self.h_h5(), "h": self.h_h8()}
-    def p_list_demo(self): return {"w": None, "h": self.h_h5()}
-"""

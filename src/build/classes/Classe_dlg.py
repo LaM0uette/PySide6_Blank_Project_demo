@@ -20,7 +20,7 @@ class MB(QtWidgets.QMessageBox):
                            f"color: rgb{P_rgb().th1};"
                            f"border: {P_style().bd()}px solid rgb{P_rgb().th1};"
 
-                           f"font-size: {P_font().p()}px;"
+                           f"font-size: {P_font().h4()}px;"
                            "font-family: Berlin Sans FB Demi;"
                            "}"
 
@@ -31,7 +31,7 @@ class MB(QtWidgets.QMessageBox):
                            "}")
         self.setWindowTitle(title)
         self.setText(msg)
-        self.setFont(Fct(font_size=P_font().p()).FONT())
+        self.setFont(Fct(font_size=P_font().h4()).FONT())
 
         self.setWindowModality(QtCore.Qt.NonModal)
         self.setWindowIcon(QtGui.QIcon(ico))
