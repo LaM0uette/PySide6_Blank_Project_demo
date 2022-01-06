@@ -1088,7 +1088,66 @@ class C_wg:
                 f"background-color: rgb{self.bn2};"
                 "}"
                 
-                f"{self.inc}"
+                f"{self.inc}",
+            "rond":
+                "QSlider {"
+                "margin: 0px"
+                "}"
+        
+                "QSlider::groove:horizontal {"
+                "border-radius: 10px;"
+                "height: 20px;"
+                "margin: 0px;"
+                f"background-color: rgb{self.c2};"
+                "}"
+        
+                "QSlider::groove:horizontal:hover {"
+                f"background-color: rgb{self.c2};"
+                "}"
+        
+                "QSlider::handle:horizontal {"
+                "border: none;"
+                "height: 5px;"
+                "width: 14px;"
+                "margin: -5px 0px;"
+                "border-radius: 15px;"
+                f"border: 8px solid rgb{self.c3};"
+                "}"
+                
+                "QSlider::handle:horizontal:hover {"
+                f"border: 8px solid rgb{self.bn1};"
+                "}"
+                "QSlider::handle:horizontal:pressed {"
+                f"border: 8px solid rgb{self.bn2};"
+                "}"
+        
+        
+                "QSlider::groove:vertical {"
+                "border-radius: 10px;"
+                "width: 20px;"
+                "margin: 0px;"
+                f"background-color: rgb{self.c2};"
+                "}"
+        
+                "QSlider::groove:vertical:hover {"
+                f"background-color: rgb{self.c2};"
+                "}"
+        
+                "QSlider::handle:vertical {"
+                "border: none;"
+                "height: 14px;"
+                "width: 5px;"
+                "margin: 0px -5px;"
+                "border-radius: 15px;"
+                f"border: 8px solid rgb{self.c3};"
+                "}"
+                
+                "QSlider::handle:vertical:hover {"
+                f"border: 8px solid rgb{self.bn1};"
+                "}"
+                "QSlider::handle:vertical:pressed {"
+                f"border: 8px solid rgb{self.bn2};"
+                "}"
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
     def STL_SCA(self):

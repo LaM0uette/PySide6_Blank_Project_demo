@@ -15,19 +15,19 @@ class C_sd(C_wg):
     def STL(self, lst, **kwargs):
         """
         colors_type=str %,
+        colors=P_rgb().%,
         dim=P_dim().%,
-        rd=P_rd().%,
-        bd=P_bd().%,
-        pad=float %,
         """
         for wg in lst: C_wg(wg=wg, attrs=kwargs).STL_SD()
 
 
     def demo_h(self, *args):
         self.STL(list(args),
+                 colors_type="th",
                  colors=P_rgb().p_th1(),
                  dim=P_dim().p_aw_demo())
     def demo_v(self, *args):
         self.STL(list(args),
+                 colors_type="rond",
                  colors=P_rgb().p_th1(),
-                 dim=P_dim().p_aw_h6())
+                 dim=P_dim().p_c_h5())
