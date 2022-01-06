@@ -1029,12 +1029,38 @@ class C_wg:
 
         stl = {
             "th":
-                "QProgressBar {"
-                f"background-color: rgb{self.c1};"
+                "QSlider {"
+                "margin: 0px"
                 "}"
-
-                "QProgressBar::chunk {"
+                
+                "QSlider::groove:horizontal {"
+                "border-radius: 5px;"
+                "height: 20px;"
+                "margin: 0px;"
+                "position: absolute;"
+                "top: 40px; "
+                "bottom: 40px;"
+                f"background-color: rgb{self.c2};"
+                "}"
+                
+                "QSlider::groove:horizontal:hover {"
+                f"background-color: rgb{self.c2};"
+                "}"
+                
+                "QSlider::handle:horizontal {"
+                "border: none;"
+                "height: 20px;"
+                "width: 20px;"
+                "margin: 0px;"
+                "border-radius: 5px;"
                 f"background-color: rgb{self.c3};"
+                "}"
+                
+                "QSlider::handle:horizontal:hover {"
+                f"background-color: rgb{self.bn1};"
+                "}"
+                "QSlider::handle:horizontal:pressed {"
+                f"background-color: rgb{self.bn2};"
                 "}"
                 
                 f"{self.inc}"
@@ -1267,3 +1293,5 @@ class C_wg:
 """
 background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 255, 255, 255), stop:1 rgba(255, 255, 255, 255));
 """
+
+
