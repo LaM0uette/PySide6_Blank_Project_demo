@@ -2,7 +2,7 @@ from PySide6 import QtCore
 
 
 class P_align:
-
+    
     class c:
         align = QtCore.Qt.AlignCenter
         def c(self): return self.align | QtCore.Qt.AlignVCenter
