@@ -26,6 +26,6 @@ class C_pg(C_wg):
     def demo(self, *args):
         self.STL(list(args),
                  colors=P_rgb().p_th1(),
-                 dim=P_dim().p_aw_demo(),
+                 dim=P_dim().w_rect().h8(),
                  bd=P_bd().rl().bn1(),
                  pad="bd",)
