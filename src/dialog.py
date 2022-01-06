@@ -72,7 +72,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.setWindowOpacity(self.opacity)
     def IN_CLASSE(self):
         # QLineEdit | QTextEdit | QPlainTextEdit
-        with C_txt() as C_:
+        with Texte() as C_:
             C_.tr(self.le_input)
             C_.tr_h1(self.le_opt_ft_texte_h1)
             C_.tr_h2(self.le_opt_ft_texte_h2)
@@ -87,7 +87,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         In_classe(ui=self)
 
         # QComboBox
-        with C_cb() as C_:
+        with ComboBox() as C_:
             C_.font(self.fcb_opt_ft_font)
             C_.font(self.cb_opt_tm_theme)
 

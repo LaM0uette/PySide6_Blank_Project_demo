@@ -33,120 +33,119 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self._resize()
     def IN_CLASSE(self):
         # QLineEdit | QTextEdit | QPlainTextEdit
-        with C_txt() as C_:
+        with Texte() as cls:
             # Demo
-            C_.demoth(self.le_demo_th)
-            C_.demotr(self.le_demo_tr)
-            C_.demo_th(self.te_demo_th, self.pte_demo_th)
-            C_.demo_tr(self.te_demo_tr, self.pte_demo_tr)
+            cls.demoth(self.le_demo_th)
+            cls.demotr(self.le_demo_tr)
+            cls.demo_th(self.te_demo_th, self.pte_demo_th)
+            cls.demo_tr(self.te_demo_tr, self.pte_demo_tr)
 
         # QScrollBoxArea
-        with C_sca() as C_:
+        with C_sca() as cls:
             # Demo
-            C_.demo(self.sca_main)
+            cls.demo(self.sca_main)
 
 
         In_classe(ui=self)
 
 
-        # QComboBox
-        with C_cb() as C_:
+        with ComboBox() as cls:
             # Demo
-            C_.demo_th(self.cb_demo_th)
-            C_.demo_tr(self.cb_demo_tr)
+            cls.demo_th(self.cb_demo_th)
+            cls.demo_tr(self.cb_demo_tr)
 
         # QDateEdit
-        with C_de() as C_:
+        with C_de() as cls:
             # Demo
-            C_.demo_th(self.de_demo_th)
-            C_.demo_tr(self.de_demo_tr)
+            cls.demo_th(self.de_demo_th)
+            cls.demo_tr(self.de_demo_tr)
 
         # QFrame
-        with C_fr() as C_:
+        with C_fr() as cls:
             # Demo
-            C_.demo(self.fr_cb, self.fr_de, self.fr_lw, self.fr_pb, self.fr_ck,
+            cls.demo(self.fr_cb, self.fr_de, self.fr_lw, self.fr_pb, self.fr_ck,
                     self.fr_rb, self.fr_pg, self.fr_sb, self.fr_tw, self.fr_le,
                     self.fr_te, self.fr_pte, self.fr_tb, self.fr_trw, self.fr_sd)
-            C_.demo_tb(self.fr_tb_demo, self.fr_tb_demo_2)
+            cls.demo_tb(self.fr_tb_demo, self.fr_tb_demo_2)
 
         # QLabel
-        with C_lb() as C_:
+        with C_lb() as cls:
             # Version
-            C_.mb(self.lb_mb_version)
+            cls.mb(self.lb_mb_version)
 
             # Demo
-            C_.demo(self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
+            cls.demo(self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
                     self.lb_rb_demo, self.lb_pg_demo, self.lb_sb_demo, self.lb_tw_demo, self.lb_le_demo,
                     self.lb_te_demo, self.lb_pte_demo, self.lb_tb_demo, self.lb_trw_demo, self.lb_sd_demo)
 
         # QListWidget
-        with C_lw() as C_:
+        with C_lw() as cls:
             # Demo
-            C_.demo(self.lw_demo)
+            cls.demo(self.lw_demo)
 
         # QPushButton
-        with C_pb() as C_:
+        with C_pb() as cls:
             # Menu_top
-            C_.option(self.pb_mt_option)
-            C_.reduire(self.pb_mt_reduire)
-            C_.agrandir(self.pb_mt_agrandir)
+            cls.option(self.pb_mt_option)
+            cls.reduire(self.pb_mt_reduire)
+            cls.agrandir(self.pb_mt_agrandir)
 
             # Demo
-            C_.demo_txt(self.pb_demo_txt)
-            C_.demo_txt_inv(self.pb_demo_txt_inv)
-            C_.demo_th(self.pb_demo_th)
-            C_.demo_tr(self.pb_demo_tr)
-            C_.demo_ck(self.pb_demo_ck)
-            C_.demo_ck_ico(self.pb_demo_ck_ico, self.pb_demo_ico_ck)
-            C_.demo_zoom(self.pb_demo_zoom)
-            C_.demo_rd(self.pb_demo_rd)
-            C_.demo_bd(self.pb_demo_bd)
+            cls.demo_txt(self.pb_demo_txt)
+            cls.demo_txt_inv(self.pb_demo_txt_inv)
+            cls.demo_th(self.pb_demo_th)
+            cls.demo_tr(self.pb_demo_tr)
+            cls.demo_ck(self.pb_demo_ck)
+            cls.demo_ck_ico(self.pb_demo_ck_ico, self.pb_demo_ico_ck)
+            cls.demo_zoom(self.pb_demo_zoom)
+            cls.demo_rd(self.pb_demo_rd)
+            cls.demo_bd(self.pb_demo_bd)
 
         # QCheckBox
-        with C_ck() as C_:
+        with C_ck() as cls:
             # Demo
-            C_.demo_th(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3)
-            C_.demo_tr(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3)
+            cls.demo_th(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3)
+            cls.demo_tr(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3)
 
         # QRadioButton
-        with C_rb() as C_:
+        with C_rb() as cls:
             # Demo
-            C_.demo_th(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3)
-            C_.demo_tr(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3)
+            cls.demo_th(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3)
+            cls.demo_tr(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3)
 
         # QProgressBar
-        with C_pg() as C_:
+        with C_pg() as cls:
             # Demo
-            C_.demo(self.pg_demo)
+            cls.demo(self.pg_demo)
 
         # QSlider
-        with C_sd() as C_:
+        with C_sd() as cls:
             # Demo
-            C_.demo_h(self.hsd_demo)
-            C_.demo_v(self.vsd_demo)
+            cls.demo_h(self.hsd_demo)
+            cls.demo_v(self.vsd_demo)
 
         # QSpinBox | QDoubleSpinBox
-        with C_sb() as C_:
+        with C_sb() as cls:
             # Demo
-            C_.demo_th(self.sb_demo)
-            C_.demo_th_2(self.sb_demo_2)
-            C_.demo_th_3(self.sb_demo_3)
-            C_.demo_tr(self.dsb_demo)
+            cls.demo_th(self.sb_demo)
+            cls.demo_th_2(self.sb_demo_2)
+            cls.demo_th_3(self.sb_demo_3)
+            cls.demo_tr(self.dsb_demo)
 
         # QTableWidget
-        with C_tw() as C_:
+        with C_tw() as cls:
             # Demo
-            C_.demo(self.tw_demo)
+            cls.demo(self.tw_demo)
 
         # QToolBox
-        with C_tb() as C_:
+        with C_tb() as cls:
             # Demo
-            C_.demo(self.tb_demo)
+            cls.demo(self.tb_demo)
 
         # QTreeWidget
-        with C_trw() as C_:
-            C_.demo_th(self.trw_demo_th)
-            C_.demo_tr(self.trw_demo_tr)
+        with C_trw() as cls:
+            cls.demo_th(self.trw_demo_th)
+            cls.demo_tr(self.trw_demo_tr)
 
 
         # Demo

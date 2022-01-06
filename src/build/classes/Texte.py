@@ -2,7 +2,7 @@ from .C_wg import C_wg
 from ...build import *
 
 
-class C_txt(C_wg):
+class Texte(C_wg):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 

@@ -2,7 +2,7 @@ from .C_wg import C_wg
 from ...build import *
 
 
-class C_cb(C_wg):
+class ComboBox(C_wg):
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
@@ -13,16 +13,6 @@ class C_cb(C_wg):
         return self
 
     def STL(self, lst, **kwargs):
-        """
-        colors_type=str %,
-        colors=P_rgb().%,
-        dim=P_dim().%,
-        font=P_font().%,
-        rd=P_rd().%,
-        bd=P_bd().%,
-        edit=Bool %,
-        cur=str %,
-        """
         for wg in lst: C_wg(wg=wg, attrs=kwargs).STL_CB()
 
 
@@ -63,3 +53,16 @@ class C_cb(C_wg):
                  bd=P_bd().bottom().th3(),
                  edit=False,
                  cur="main")
+
+
+
+"""
+        colors_type=str %,
+        colors=P_rgb().%,
+        dim=P_dim().%,
+        font=P_font().%,
+        rd=P_rd().%,
+        bd=P_bd().%,
+        edit=Bool %,
+        cur=str %,
+        """
