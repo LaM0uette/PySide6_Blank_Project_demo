@@ -156,14 +156,14 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.setCursor(Fct(cur="souris").CUR())
 
         # Icone de l'app
-        dim = P_dim().p_c_mt()
+        dim = P_dim().carr().h9()
         Fct(wg=self.lb_mt_ico, w=dim.get("w"), h=dim.get("h")).DIM()
         self.lb_mt_ico.setPixmap(QtGui.QPixmap(ICO_MAIN))
         self.lb_mt_ico.setScaledContents(True)
         self.lb_mt_nom.setText(config.nom)
 
         # Widget blanc pour centrer le nom de l'app
-        dim = P_dim().p_r_mb()
+        dim = P_dim().w_rect().h10()
         Fct(wg=self.wg_mt_blank, w=dim.get("w") * 4, h=dim.get("h")).DIM()
 
         # Version de l'app
@@ -174,8 +174,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             self.sizegrip.setCursor(Fct(cur="fleche_nwse").CUR())
             self.sizegrip.setStyleSheet("QSizeGrip {"
                                         f"image: url({P_img().resize()}th3.svg);"
-                                        f"width: {P_dim().h_mb()}px;"
-                                        f"height: {P_dim().h_mb()}px;"
+                                        f"width: {P_dim().h10()}px;"
+                                        f"height: {P_dim().h10()}px;"
                                         "}")
             self.hlay_menu_bottom.addWidget(self.sizegrip)
     def IN_WG_BASE(self):
@@ -251,7 +251,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def mousePressEvent(self, event):
         cur = QtGui.QCursor()
         verifHeight = cur.pos().y() - self.pos().y()
-        if event.buttons() == QtCore.Qt.LeftButton and verifHeight < P_dim().h_mt() and self.windowState() != QtCore.Qt.WindowMaximized:
+        if event.buttons() == QtCore.Qt.LeftButton and verifHeight < P_dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized:
             self.dragPos = event.globalPosition().toPoint()
             event.accept()
     def mouseMoveEvent(self, event):
@@ -263,15 +263,15 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         cur = QtGui.QCursor()
         height_verif = cur.pos().y() - self.pos().y()
 
-        if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h_mt() and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
+        if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
             self.setCursor(Fct(cur="agrandir").CUR())
         else:
             self.setCursor(Fct(cur="souris").CUR())
 
         try:
-            if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h_mt() and self.windowState() != QtCore.Qt.WindowMaximized:
+            if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized:
                 act_move(event)
-            if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h_mt() and self.windowState() == QtCore.Qt.WindowMaximized:
+            if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h9() and self.windowState() == QtCore.Qt.WindowMaximized:
                 self.setWindowState(QtCore.Qt.WindowNoState)
                 self.win_state = QtCore.Qt.WindowNoState
                 act_move(event)
@@ -279,7 +279,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def mouseReleaseEvent(self, event):
         cur = QtGui.QCursor()
         height_verif = cur.pos().y() - self.pos().y()
-        if height_verif < P_dim().h_mt() and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
+        if height_verif < P_dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
             self.setCursor(Fct(cur="souris").CUR())
             self.EVT_AGRANDIR_GDT()
             event.accept()

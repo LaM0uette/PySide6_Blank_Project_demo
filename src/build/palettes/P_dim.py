@@ -4,44 +4,82 @@ class P_dim(Dim):
     def __init__(self):
         super().__init__()
 
-    class rtn_w:
-        def __init__(self, w=None):
+    class rtn:
+        def __init__(self, w=None, h=None):
             self.w = w
-
-        def h0(self): return {"w": self.w, "h": P_dim().h_h0()}
-        def h1(self): return {"w": self.w, "h": P_dim().h_h1()}
-        def h2(self): return {"w": self.w, "h": P_dim().h_h2()}
-        def h3(self): return {"w": self.w, "h": P_dim().h_h3()}
-        def h4(self): return {"w": self.w, "h": P_dim().h_h4()}
-        def h5(self): return {"w": self.w, "h": P_dim().h_h5()}
-        def h6(self): return {"w": self.w, "h": P_dim().h_h6()}
-        def h7(self): return {"w": self.w, "h": P_dim().h_h7()}
-        def h8(self): return {"w": self.w, "h": P_dim().h_h8()}
-        def h9(self): return {"w": self.w, "h": P_dim().h_h9()}
-    class rtn_h:
-        def __init__(self, h=None):
             self.h = h
 
-        def h0(self): return {"w": P_dim().h_h0(), "h": self.h}
-        def h1(self): return {"w": P_dim().h_h1(), "h": self.h}
-        def h2(self): return {"w": P_dim().h_h2(), "h": self.h}
-        def h3(self): return {"w": P_dim().h_h3(), "h": self.h}
-        def h4(self): return {"w": P_dim().h_h4(), "h": self.h}
-        def h5(self): return {"w": P_dim().h_h5(), "h": self.h}
-        def h6(self): return {"w": P_dim().h_h6(), "h": self.h}
-        def h7(self): return {"w": P_dim().h_h7(), "h": self.h}
-        def h8(self): return {"w": P_dim().h_h8(), "h": self.h}
-        def h9(self): return {"w": P_dim().h_h9(), "h": self.h}
+        def h(self):
+            return {"w": self.w, "h": self.h}
+        def h0(self):
+            if self.w is not None: self.w *= P_dim().h0()
+            if self.h is not None: self.h *= P_dim().h0()
+            return {"w": self.w, "h": self.h}
+        def h1(self):
+            if self.w is not None: self.w *= P_dim().h1()
+            if self.h is not None: self.h *= P_dim().h1()
+            return {"w": self.w, "h": self.h}
+        def h2(self):
+            if self.w is not None: self.w *= P_dim().h2()
+            if self.h is not None: self.h *= P_dim().h2()
+            return {"w": self.w, "h": self.h}
+        def h3(self):
+            if self.w is not None: self.w *= P_dim().h3()
+            if self.h is not None: self.h *= P_dim().h3()
+            return {"w": self.w, "h": self.h}
+        def h4(self):
+            if self.w is not None: self.w *= P_dim().h4()
+            if self.h is not None: self.h *= P_dim().h4()
+            return {"w": self.w, "h": self.h}
+        def h5(self):
+            if self.w is not None: self.w *= P_dim().h5()
+            if self.h is not None: self.h *= P_dim().h5()
+            return {"w": self.w, "h": self.h}
+        def h6(self):
+            if self.w is not None: self.w *= P_dim().h6()
+            if self.h is not None: self.h *= P_dim().h6()
+            return {"w": self.w, "h": self.h}
+        def h7(self):
+            if self.w is not None: self.w *= P_dim().h7()
+            if self.h is not None: self.h *= P_dim().h7()
+            return {"w": self.w, "h": self.h}
+        def h8(self):
+            if self.w is not None: self.w *= P_dim().h8()
+            if self.h is not None: self.h *= P_dim().h8()
+            return {"w": self.w, "h": self.h}
+        def h9(self):
+            if self.w is not None: self.w *= P_dim().h9()
+            if self.h is not None: self.h *= P_dim().h9()
+            return {"w": self.w, "h": self.h}
+        def h10(self):
+            if self.w is not None: self.w *= P_dim().h10()
+            if self.h is not None: self.h *= P_dim().h10()
+            return {"w": self.w, "h": self.h}
 
-
-    class aw(rtn_w):
+    class all(rtn):
         def __init__(self):
-            super().__init__(w=None)
-    class ah(rtn_h):
+            super().__init__()
+    class aw(rtn):
         def __init__(self):
-            super().__init__(h=None)
+            super().__init__(w=None, h=1)
+    class ah(rtn):
+        def __init__(self):
+            super().__init__(w=None, h=1)
+    class carr(rtn):
+        def __init__(self):
+            super().__init__(w=1, h=1)
+    class w_rect(rtn):
+        def __init__(self):
+            super().__init__(w=1.4, h=1)
+    class h_rect(rtn):
+        def __init__(self):
+            super().__init__(w=1, h=1.4)
 
-    def p_all(self): return {"w": None, "h": None}
+
+    def demo(self): return self.aw().h8()
+
+
+"""
     def p_aw_mt(self): return {"w": None, "h": self.h_mt()}
     def p_aw_mb(self): return {"w": None, "h": self.h_mb()}
 
@@ -54,19 +92,9 @@ class P_dim(Dim):
 
     def p_r_mb_dlg(self): return {"w": self.h_h6(), "h": self.h_mb_dlg()}
 
-    def p_c_h0(self): return {"w": self.h_h0(), "h": self.h_h0()}
-    def p_c_h1(self): return {"w": self.h_h1(), "h": self.h_h1()}
-    def p_c_h2(self): return {"w": self.h_h2(), "h": self.h_h2()}
-    def p_c_h3(self): return {"w": self.h_h3(), "h": self.h_h3()}
-    def p_c_h4(self): return {"w": self.h_h4(), "h": self.h_h4()}
-    def p_c_h5(self): return {"w": self.h_h5(), "h": self.h_h5()}
-    def p_c_h6(self): return {"w": self.h_h6(), "h": self.h_h6()}
-    def p_c_h7(self): return {"w": self.h_h7(), "h": self.h_h7()}
-    def p_c_h8(self): return {"w": self.h_h8(), "h": self.h_h8()}
-    def p_c_h9(self): return {"w": self.h_h9(), "h": self.h_h9()}
-
     def p_h8_h9(self): return {"w": self.h_h8(), "h": self.h_h9()}
 
     def p_aw_demo(self): return {"w": None, "h": self.h_h8()}
     def p_h5_h8_demo(self): return {"w": self.h_h5(), "h": self.h_h8()}
     def p_list_demo(self): return {"w": None, "h": self.h_h5()}
+"""
