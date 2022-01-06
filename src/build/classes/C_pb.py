@@ -76,19 +76,19 @@ class C_pb(C_wg):
         self.STL(list(args),
                  colors_type = "txt",
                  colors = P_rgb().p_vert_th2(),
-                 dim = P_dim().w_rect_1_4().h9(),
+                 dim = P_dim().ah().h6(),
                  cur = "souris_main")
     def appliquer(self, *args):
         self.STL(list(args),
                  colors_type = "txt_inv",
                  colors = P_rgb().p_vert_th2(),
-                 dim = P_dim().w_rect_1_4().h9(),
+                 dim = P_dim().ah().h6(),
                  cur = "souris_main")
     def annuler(self, *args):
         self.STL(list(args),
                  colors_type = "txt_inv",
                  colors = P_rgb().p_rouge_th2(),
-                 dim = P_dim().w_rect_1_4().h9(),
+                 dim = P_dim().ah().h6(),
                  cur = "souris_main")
 
     def txt_h9(self, *args):

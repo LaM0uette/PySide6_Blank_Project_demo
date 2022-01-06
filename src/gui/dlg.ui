@@ -109,7 +109,7 @@
       <item>
        <widget class="QStackedWidget" name="stk_dlg">
         <property name="currentIndex">
-         <number>4</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="pg_dlg_option">
          <layout class="QGridLayout" name="glay_stk_option">
@@ -144,7 +144,7 @@
               <number>0</number>
              </property>
              <property name="bottomMargin">
-              <number>2</number>
+              <number>0</number>
              </property>
              <item>
               <spacer name="horizontalSpacer_5">
@@ -239,8 +239,8 @@
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>397</width>
-                 <height>290</height>
+                 <width>430</width>
+                 <height>396</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="vlay_sca_option">
@@ -955,7 +955,7 @@
               <number>0</number>
              </property>
              <property name="bottomMargin">
-              <number>2</number>
+              <number>0</number>
              </property>
              <item>
               <spacer name="horizontalSpacer">
@@ -1014,7 +1014,7 @@
               <number>0</number>
              </property>
              <property name="bottomMargin">
-              <number>2</number>
+              <number>0</number>
              </property>
              <item>
               <spacer name="horizontalSpacer_3">
@@ -1122,7 +1122,7 @@
               <number>0</number>
              </property>
              <property name="bottomMargin">
-              <number>2</number>
+              <number>0</number>
              </property>
              <item>
               <spacer name="horizontalSpacer_4">
@@ -1176,7 +1176,7 @@
                <x>0</x>
                <y>0</y>
                <width>877</width>
-               <height>404</height>
+               <height>406</height>
               </rect>
              </property>
              <widget class="QSlider" name="sd_opt_rgb_red">
@@ -1260,7 +1260,7 @@
               <number>0</number>
              </property>
              <property name="bottomMargin">
-              <number>2</number>
+              <number>0</number>
              </property>
              <item>
               <spacer name="horizontalSpacer_7">

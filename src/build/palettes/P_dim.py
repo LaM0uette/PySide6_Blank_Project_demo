@@ -64,7 +64,7 @@ class P_dim(Dim):
             super().__init__(w=None, h=1)
     class ah(rtn):
         def __init__(self):
-            super().__init__(w=None, h=1)
+            super().__init__(w=1, h=None)
     class carr(rtn):
         def __init__(self):
             super().__init__(w=1, h=1)
