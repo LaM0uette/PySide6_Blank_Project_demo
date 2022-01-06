@@ -51,7 +51,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         ### QComboBox ###
         cls = C_QComboBox
-        cls.test(self.cb_demo_th, self.cb_demo_tr)
+        cls.base(self.cb_demo_th, self.cb_demo_tr)
 
 
 

@@ -1,6 +1,6 @@
 from PySide6 import QtCore, QtWidgets, QtGui
 
-from . import base
+from . import p_base
 from . import Classe_wg
 from ...build import *
 from ...config import vrb
@@ -48,18 +48,18 @@ class C_wg:
         ### TYPE
         self.type = attrs.get("type")
         if self.type is None:
-            self.type = base.TYPE
+            self.type = p_base.TYPE
 
         ### COULEURS
         self.colors_type = attrs.get("colors_type")
         if self.colors_type is None:
-            self.colors_type = base.COLORS_TYPE
+            self.colors_type = p_base.COLORS_TYPE
 
         self.colors = attrs.get("colors")
 
-        val = lambda v: self.colors.get(v) if self.colors.get(v) is not None else base.COLORS
+        val = lambda v: self.colors.get(v) if self.colors.get(v) is not None else p_base.COLORS
         if self.colors is None:
-            self.c1, self.c2, self.c3, self.bn1, self.bn2 = base.C1, base.C2, base.C3, base.BN1, base.BN2
+            self.c1, self.c2, self.c3, self.bn1, self.bn2 = p_base.C1, p_base.C2, p_base.C3, p_base.BN1, p_base.BN2
         else:
             self.c1, self.c2, self.c3, self.bn1, self.bn2 = val("c1"), val("c2"), val("c3"), val("bn1"), val("bn2")
 
@@ -67,7 +67,7 @@ class C_wg:
         ### DIMENSIONS
         self.dim = attrs.get("dim")
         if self.dim is None:
-            self.dim = base.DIM
+            self.dim = p_base.DIM
             self.dim_ico = 0
             self.DIM_ICO = 0
         else:
@@ -81,103 +81,103 @@ class C_wg:
         self.img_check = attrs.get("img_check")
 
         val = lambda v, v_th: attrs.get(v) if attrs.get(v) is not None else v_th
-        self.th = val("th", base.TH)
-        self.th_hover = val("th_hover", base.TH_HOVER)
-        self.th_check = val("th_check", base.TH_CHECK)
+        self.th = val("th", p_base.TH)
+        self.th_hover = val("th_hover", p_base.TH_HOVER)
+        self.th_check = val("th_check", p_base.TH_CHECK)
 
 
         ### FONT
         self.font = attrs.get("font")
         if self.font is None:
-            self.font = base.FONT
+            self.font = p_base.FONT
 
 
         ### RADIUS
         self.rd = attrs.get("rd")
         if self.rd is None:
-            self.rd = base.RD
+            self.rd = p_base.RD
 
         self.rd_mat = self.rd.get("mat")
         if self.rd_mat is None:
-            self.rd_mat = base.RD_MAT
+            self.rd_mat = p_base.RD_MAT
 
-        val = lambda v: self.rd.get("px") if int(v) == 1 else base.RD_PX
+        val = lambda v: self.rd.get("px") if int(v) == 1 else p_base.RD_PX
         self.r1, self.r2, self.r3, self.r4 = val(self.rd_mat[:1]), val(self.rd_mat[1:2]), val(self.rd_mat[2:3]), val(self.rd_mat[3:4])
 
 
         ### BORDURES
         self.bd = attrs.get("bd")
         if self.bd is None:
-            self.bd = base.BD
+            self.bd = p_base.BD
 
         self.bd_mat = self.bd.get("mat")
         if self.bd_mat is None:
-            self.bd_mat = base.BD_MAT
+            self.bd_mat = p_base.BD_MAT
 
         self.bd_px = self.bd.get("px")
         if self.bd_px is None:
-            self.bd_px = base.BD_PX
+            self.bd_px = p_base.BD_PX
 
         self.bd_th = self.bd.get("th")
         if self.bd_th is None:
-            self.bd_th = base.BD_TH
+            self.bd_th = p_base.BD_TH
 
-        val = lambda v: self.bd_th + (255,) if int(v) == 1 else base.BD_RGBA
+        val = lambda v: self.bd_th + (255,) if int(v) == 1 else p_base.BD_RGBA
         self.o1, self.o2, self.o3, self.o4 = val(self.bd_mat[:1]), val(self.bd_mat[1:2]), val(self.bd_mat[2:3]), val(self.bd_mat[3:4])
 
 
         ### PARAMETRES
         self.align = attrs.get("align")
         if self.align is None:
-            self.align = base.ALIGN
+            self.align = p_base.ALIGN
 
         self.edit = attrs.get("edit")
         if self.edit is None:
-            self.edit = base.EDIT
+            self.edit = p_base.EDIT
 
         self.word_wrap = attrs.get("word_wrap")
         if self.word_wrap is None:
-            self.word_wrap = base.WORD_WRAP
+            self.word_wrap = p_base.WORD_WRAP
 
         self.scroll = attrs.get("scroll")
         if self.scroll is None:
-            self.scroll = base.SCROLL
+            self.scroll = p_base.SCROLL
 
         self.header = attrs.get("header")
         if self.header is None:
-            self.header = base.HEADER
+            self.header = p_base.HEADER
 
         self.pb_sb = attrs.get("pb_sb")
         if self.pb_sb is None:
-            self.pb_sb = base.PB_SB
+            self.pb_sb = p_base.PB_SB
 
         self.pad = attrs.get("pad")
         if self.pad is None:
-            self.pad = base.PAD
+            self.pad = p_base.PAD
         elif self.pad == "bd":
             self.pad = P_style().bd()
 
         self.pb_side = attrs.get("pb_side")
         if self.pb_side is None:
-            self.pb_side = base.PB_SIDE
+            self.pb_side = p_base.PB_SIDE
 
         self.min = attrs.get("min")
         if self.min is None:
-            self.min = base.MIN
+            self.min = p_base.MIN
 
         self.max = attrs.get("max")
         if self.max is None:
-            self.max = base.MAX
+            self.max = p_base.MAX
 
         self.step = attrs.get("step")
         if self.step is None:
-            self.step = base.STEP
+            self.step = p_base.STEP
 
 
             ### CURSOR
         self.cur = attrs.get("cur")
         if self.cur is None:
-            self.cur = base.CUR
+            self.cur = p_base.CUR
 
 
         ### VAR
