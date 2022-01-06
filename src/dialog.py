@@ -120,6 +120,11 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         with C_ck() as C_:
             C_.tr(self.ck_opt_cfg_autoreload, self.ck_opt_cfg_autoclose, self.ck_opt_cfg_resize)
 
+        # QSlider
+        with C_sd() as C_:
+            # Demo
+            C_.th_rond(self.sd_opt_rgb_red, self.sd_opt_rgb_green, self.sd_opt_rgb_blue)
+
         # QSpinBox | QDoubleSpinBox
         with C_sb() as C_:
             C_.th1(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity)

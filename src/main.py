@@ -119,7 +119,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             # Demo
             C_.demo(self.pg_demo)
 
-        # QProgressBar
+        # QSlider
         with C_sd() as C_:
             # Demo
             C_.demo_h(self.hsd_demo)
