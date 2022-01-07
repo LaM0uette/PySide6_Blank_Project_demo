@@ -33,7 +33,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self._resize()
     def IN_CLASSE(self):
         # QLineEdit | QTextEdit | QPlainTextEdit
-        with Texte() as cls:
+        with C_txt() as cls:
             # Demo
             cls.demoth(self.le_demo_th)
             cls.demotr(self.le_demo_tr)
@@ -48,21 +48,11 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         In_classe(ui=self)
 
-
         ### QComboBox ###
-        cls = C_QComboBox
-        cls.base(self.cb_demo_th, self.cb_demo_tr)
-
-
-
-
-
-
-
-        # with C_cb() as cls:
-        #     # Demo
-        #     cls.demo_th(self.cb_demo_th)
-        #     cls.demo_tr(self.cb_demo_tr)
+        with C_cb() as cls:
+            # Demo
+            cls.demo_th(self.cb_demo_th)
+            cls.demo_tr(self.cb_demo_tr)
 
         # QDateEdit
         with C_de() as cls:
@@ -215,10 +205,10 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
     ### FONCTIONS
     def FCT_OPTION(self):
-        # t = Dlg().OPTION()
-        # if t: self._reload()
-        col = Dlg().COLORS()
-        print(col)
+        t = Dlg().OPTION()
+        if t: self._reload()
+        # col = Dlg().COLORS()
+        # print(col)
 
 
     ### EVENT

@@ -2,11 +2,10 @@ from .C_wg import C_wg
 from ...build import *
 
 
-class C_cb(C_wg):
-    def __init__(self, **kwargs):
-        super().__init__(**kwargs)
+class C_cb:
+    def __init__(self):
+        super().__init__()
 
-        self.kwargs = kwargs
     def __enter__(self):
         return self
     def __exit__(self, exc_type, exc_val, exc_tb):
@@ -53,16 +52,3 @@ class C_cb(C_wg):
                  bd=P_bd().bottom().th3(),
                  edit=False,
                  cur="main")
-
-
-
-"""
-        colors_type=str %,
-        colors=P_rgb().%,
-        dim=P_dim().%,
-        font=P_font().%,
-        rd=P_rd().%,
-        bd=P_bd().%,
-        edit=Bool %,
-        cur=str %,
-        """
