@@ -10,8 +10,8 @@ class wg:
                  dim,
                  img,
                  img_check,
-                 th,
-                 th_check,
+                 tm,
+                 tm_check,
                  font,
                  bd,
                  rd,
@@ -46,13 +46,13 @@ class wg:
         height: {dim.get('h') * P_style().x_ico()}px
         }}
         QCheckBox::indicator:unchecked {{
-        image: url({img + th + '.svg'});
+        image: url({img + tm + '.svg'});
         }}
         QCheckBox::indicator:disabled {{
-        image: url({img + th + '.svg'});
+        image: url({img + tm + '.svg'});
         }}
         QCheckBox::indicator:checked {{
-        image: url({img_check + th_check + '.svg'});
+        image: url({img_check + tm_check + '.svg'});
         }}
         
 

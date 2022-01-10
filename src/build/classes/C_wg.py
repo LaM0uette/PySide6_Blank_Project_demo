@@ -81,9 +81,9 @@ class C_wg:
         self.img_check = attrs.get("img_check")
 
         val = lambda v, v_th: attrs.get(v) if attrs.get(v) is not None else v_th
-        self.th = val("th", p_base.TH)
-        self.th_hover = val("th_hover", p_base.TH_HOVER)
-        self.th_check = val("th_check", p_base.TH_CHECK)
+        self.th = val("th", p_base.TM)
+        self.th_hover = val("th_hover", p_base.TM_HOVER)
+        self.th_check = val("th_check", p_base.TM_CHECK)
 
 
         ### FONT

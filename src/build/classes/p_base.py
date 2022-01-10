@@ -16,9 +16,9 @@ DIM = {"w": None, "h": None}
 
 
 ### IMAGES
-TH = ""
-TH_HOVER = "bn1"
-TH_CHECK = "bn2"
+TM = ""
+TM_HOVER = "bn1"
+TM_CHECK = "bn2"
 
 
 ### FONT
