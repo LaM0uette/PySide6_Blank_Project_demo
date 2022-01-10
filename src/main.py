@@ -31,6 +31,20 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.setWindowOpacity(config.opacity)
         self._resize()
     def IN_CLASSE(self):
+        def COMBO_BOX():
+            Combo_box.base(self.cb_demo_th).th()
+            Combo_box.base(self.cb_demo_tr).tr()
+
+
+        def _func_try():
+            try: COMBO_BOX()
+            except: print("COMBO_BOX ne fonctionne pas !")
+        _func_try()
+
+
+
+
+
         # QLineEdit | QTextEdit | QPlainTextEdit
         with C_txt() as cls:
             # Demo
@@ -48,15 +62,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         In_classe(ui=self)
 
 
-        Combo_box.base(self.cb_demo_th).th()
-        Combo_box.base(self.cb_demo_tr).tr()
 
-
-        ### QComboBox ###
-        # with C_cb() as cls:
-        #     # Demo
-        #     cls.demo_th(self.cb_demo_th)
-        #     cls.demo_tr(self.cb_demo_tr)
 
         # QDateEdit
         with C_de() as cls:

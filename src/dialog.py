@@ -71,6 +71,19 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.setFixedHeight(self.height)
         self.setWindowOpacity(self.opacity)
     def IN_CLASSE(self):
+        def COMBO_BOX():
+            Combo_box.base(self.fcb_opt_ft_font, self.cb_opt_tm_theme).tr()
+
+
+        def _func_try():
+            try: COMBO_BOX()
+            except: print("COMBO_BOX ne fonctionne pas !")
+        _func_try()
+
+
+
+
+
         # QLineEdit | QTextEdit | QPlainTextEdit
         with C_txt() as C_:
             C_.tr(self.le_input)
@@ -86,10 +99,6 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         In_classe(ui=self)
 
-        # QComboBox
-        with C_cb() as C_:
-            C_.font(self.fcb_opt_ft_font)
-            C_.font(self.cb_opt_tm_theme)
 
         # QFrame
         with C_fr() as C_:
