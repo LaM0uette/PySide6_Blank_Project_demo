@@ -446,6 +446,94 @@ class C_wg:
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
         self.wg.lineEdit().setFont(Fct(font_size=self.font).FONT())
+    def STL_CK(self):
+        self.STL_ALL("ck")
+
+        stl = {
+            "th":
+                "QCheckBox {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                "}"
+
+                "QCheckBox:hover {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.bn1};"
+                "}"
+
+                "QCheckBox:checked {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.c1};"
+                "}"
+
+                "QCheckBox:checked:hover {"
+                f"background-color: rgb{self.c3};"
+                f"color: rgb{self.bn1};"
+                "}"
+
+                "QCheckBox:flat {"
+                "border: none;"
+                "}"
+
+                "QCheckBox::indicator {"
+                f"margin-left: {(self.dim.get('h') - (self.dim.get('h') * P_style().x_ico())) / 2}px;"
+                f"width: {self.dim.get('h') * P_style().x_ico()}px;"
+                f"height: {self.dim.get('h') * P_style().x_ico()}px"
+                "}"
+
+                "QCheckBox::indicator:unchecked {"
+                f"image: url({self.img + self.th + '.svg'});"
+                "}"
+
+                "QCheckBox::indicator:disabled {"
+                f"image: url({self.img + self.th + '.svg'});"
+                "}"
+
+                "QCheckBox::indicator:checked {"
+                f"image: url({self.img_check + self.th_check + '.svg'});"
+                "}"
+
+                f"{self.inc}",
+            "tr":
+                "QCheckBox {"
+                f"color: rgb{self.c3};"
+                "spacing: 10px;"
+                "}"
+
+                "QCheckBox:hover {"
+                f"color: rgb{self.bn1};"
+                "}"
+
+                "QCheckBox:checked:hover {"
+                f"color: rgb{self.bn1};"
+                "}"
+
+                "QCheckBox:flat {"
+                "border: none;"
+                "}"
+
+                "QCheckBox::indicator {"
+                f"margin-left: {(self.dim.get('h') - (self.dim.get('h') * P_style().x_ico())) / 2}px;"
+                f"width: {self.dim.get('h') * P_style().x_ico()}px;"
+                f"height: {self.dim.get('h') * P_style().x_ico()}px"
+                "}"
+
+                "QCheckBox::indicator:unchecked {"
+                f"image: url({self.img + self.th + '.svg'});"
+                "}"
+
+                "QCheckBox::indicator:disabled {"
+                f"image: url({self.img + self.th + '.svg'});"
+                "}"
+
+                "QCheckBox::indicator:checked {"
+                f"image: url({self.img_check + self.th_check + '.svg'});"
+                "}"
+
+                f"{self.inc}"
+        }
+        self.wg.setStyleSheet(stl.get(self.colors_type))
+
     def STL_DE(self):
         self.wg.setCalendarPopup(True)
         self.STL_ALL()
@@ -830,95 +918,7 @@ class C_wg:
             self.wg.enterEvent = cls.ENT_ZOOM
             self.wg.leaveEvent = cls.LVE_ZOOM
         else: return
-    def STL_CK(self):
-        self.STL_ALL("ck")
 
-        stl = {
-            "th":
-                "QCheckBox {"
-                f"background-color: rgb{self.c1};"
-                f"color: rgb{self.c3};"
-                "}"
-
-                "QCheckBox:hover {"
-                f"background-color: rgb{self.c1};"
-                f"color: rgb{self.bn1};"
-                "}"
-
-                "QCheckBox:checked {"
-                f"background-color: rgb{self.c3};"
-                f"color: rgb{self.c1};"
-                "}"
-
-                "QCheckBox:checked:hover {"
-                f"background-color: rgb{self.c3};"
-                f"color: rgb{self.bn1};"
-                "}"
-
-                "QCheckBox:flat {"
-                "border: none;"
-                "}"
-
-                "QCheckBox::indicator {"
-                f"margin-left: {(self.dim.get('h') - (self.dim.get('h') * P_style().x_ico())) / 2}px;"
-                f"width: {self.dim.get('h') * P_style().x_ico()}px;"
-                f"height: {self.dim.get('h') * P_style().x_ico()}px"
-                "}"
-
-                "QCheckBox::indicator:unchecked {"
-                f"image: url({self.img + self.th + '.svg'});"
-                "}"
-
-                "QCheckBox::indicator:disabled {"
-                f"image: url({self.img + self.th + '.svg'});"
-                "}"
-
-                "QCheckBox::indicator:checked {"
-                f"image: url({self.img_check + self.th_check + '.svg'});"
-                "}"
-                
-                f"{self.inc}",
-            "tr":
-                "QCheckBox {"
-                f"color: rgb{self.c3};"
-                "spacing: 10px;"
-                "}"
-
-                "QCheckBox:hover {"
-                f"color: rgb{self.bn1};"
-                "}"
-
-                "QCheckBox:checked:hover {"
-                f"color: rgb{self.bn1};"
-                "}"
-
-                "QCheckBox:flat {"
-                "border: none;"
-                "}"
-
-                "QCheckBox::indicator {"
-                f"margin-left: {(self.dim.get('h') - (self.dim.get('h') * P_style().x_ico())) / 2}px;"
-                f"width: {self.dim.get('h') * P_style().x_ico()}px;"
-                f"height: {self.dim.get('h') * P_style().x_ico()}px"
-                "}"
-
-                "QCheckBox::indicator:unchecked {"
-                f"image: url({self.img + self.th + '.svg'});"
-                "}"
-
-                "QCheckBox::indicator:disabled {"
-                f"image: url({self.img + self.th + '.svg'});"
-                "}"
-
-                "QCheckBox::indicator:checked {"
-                f"image: url({self.img_check + self.th_check + '.svg'});"
-                "}"
-                
-                f"{self.inc}"
-        }
-        self.wg.setStyleSheet(stl.get(self.colors_type))
-        self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.wg.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
     def STL_RB(self):
         self.STL_ALL("rb")
 
@@ -1006,8 +1006,6 @@ class C_wg:
                 f"{self.inc}",
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
-        self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.wg.setContextMenuPolicy(QtCore.Qt.CustomContextMenu)
     def STL_PG(self):
         self.STL_ALL()
 

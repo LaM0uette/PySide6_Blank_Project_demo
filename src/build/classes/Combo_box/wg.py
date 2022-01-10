@@ -98,17 +98,17 @@ class wg:
         }}
 """
         style_type = {
-            "th":
-                f"""
-                QComboBox {{
-                background-color: rgb{colors.get("c2")};
-                }}""",
+            "th": f"""
+            /* COMBOBOX */
+            QComboBox {{
+            background-color: rgb{colors.get("c2")};
+            }}""",
 
-            "tr":
-                """
-                QComboBox {
-                background-color: rgba(0, 0, 0, 0);
-                }"""
+            "tr": """
+            /* COMBOBOX */
+            QComboBox {
+            background-color: rgba(0, 0, 0, 0);
+            }"""
         }
 
 

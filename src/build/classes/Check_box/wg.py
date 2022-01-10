@@ -8,10 +8,13 @@ class wg:
                  colors_type,
                  colors,
                  dim,
+                 img,
+                 img_check,
+                 th,
+                 th_check,
                  font,
                  bd,
                  rd,
-                 edit,
                  cur
     ):
         bds = Attrs(bd=bd).GET_BD()
@@ -19,42 +22,37 @@ class wg:
 
 
         style_gen = f"""
-        /* COMBOBOX */
-        QComboBox {{
+        /* CHECKBOX */
+        QCheckBox {{
         color: rgb{colors.get("c3")};
-        selection-background-color: rgb{colors.get("c3")};
-        selection-color: rgb{colors.get("c1")};
-        padding: 1px 0px 1px 3px;
+        }}
+        QCheckBox:hover {{
+        color: rgb{colors.get("bn1")};
+        }}
+        QCheckBox:checked {{
+        color: rgb{colors.get("c1")};
+        }}
+        QCheckBox:checked:hover {{
+        color: rgb{colors.get("bn1")};
+        }}
+        QCheckBox:flat {{
+        border: none;
         }}
         
-        /* BOUTON DE DEROULEMENT */
-        QComboBox::drop-down {{
-        width: {dim.get("h")}px;
-        border: none;
+        /* IMG */
+        QCheckBox::indicator {{
+        margin-left: {(dim.get('h') - (dim.get('h') * P_style().x_ico())) / 2}px;
+        width: {dim.get('h') * P_style().x_ico()}px;
+        height: {dim.get('h') * P_style().x_ico()}px
         }}
-
-        /* IMAGE DU BOUTON DE DEROULEMENT */
-        QComboBox::down-arrow {{
-        image: url({P_img().fleche_bottom() + "bn1" + ".svg"});
-        width: {dim.get("h") * P_style().x_ico()}px;
-        height: {dim.get("h") * P_style().x_ico()}px;
+        QCheckBox::indicator:unchecked {{
+        image: url({img + th + '.svg'});
         }}
-        QComboBox::down-arrow:hover {{
-        image: url({P_img().fleche_bottom() + "bn2" + ".svg"});
-        width: {dim.get("h") * P_style().x_ico()}px;
-        height: {dim.get("h") * P_style().x_ico()}px;
+        QCheckBox::indicator:disabled {{
+        image: url({img + th + '.svg'});
         }}
-
-        /* ELEMENTS DEROULEMENT */
-        QComboBox QAbstractItemView::item {{
-        background-color: rgb{colors.get("c1")};
-        color: rgb{colors.get("c3")};
-        border: none;
-        }}
-        QComboBox QAbstractItemView::item:hover {{
-        background-color: rgb{colors.get("c3")};
-        color: rgb{colors.get("c1")};
-        border: none;
+        QCheckBox::indicator:checked {{
+        image: url({img_check + th_check + '.svg'});
         }}
         
 
@@ -73,42 +71,37 @@ class wg:
         border-bottom-right-radius: {rds.get("r4")}px;
         border-bottom-left-radius: {rds.get("r3")}px;
         }}
-        
-        /* SCROLL */
-        QComboBox QScrollBar {{
-        background-color: rgb{colors.get("c1")};
-        width: 20px;
-        height: 20px;
-        }}
-        QComboBox ::handle:vertical {{
-        min-height: 100px;
-        }}
-        QComboBox ::handle:vertical {{
-        min-height: 100px;
-        }}
-        QComboBox ::handle:horizontal {{
-        min-width: 100px;
-        }}
-        QComboBox QScrollBar::handle {{
-        background-color: rgb{colors.get("c3")};
-        }}
-        QComboBox QScrollBar::add-page, QComboBox QScrollBar::sub-page {{
-        background-color: rgb{colors.get("c1")};
-        border: rgb{colors.get("c1")};
-        }}
 """
         style_type = {
-            "th":
-                f"""
-                QComboBox {{
-                background-color: rgb{colors.get("c2")};
-                }}""",
+            "th": f"""
+            QCheckBox {{
+            background-color: rgb{colors.get("c1")};
+            spacing: 10px;
+            }}
+            QCheckBox:hover {{
+            background-color: rgb{colors.get("c1")};
+            }}
+            QCheckBox:checked {{
+            background-color: rgb{colors.get("c3")};
+            }}
+            QCheckBox:checked:hover {{
+            background-color: rgb{colors.get("c3")};
+            }}""",
 
-            "tr":
-                """
-                QComboBox {
-                background-color: rgba(0, 0, 0, 0);
-                }"""
+            "tr": """
+            QCheckBox {
+            background-color: rgba(0, 0, 0, 0);
+            spacing: 10px;
+            }
+            QCheckBox:hover {
+            background-color: rgba(0, 0, 0, 0);
+            }
+            QCheckBox:checked {
+            background-color: rgba(0, 0, 0, 0);
+            }
+            QCheckBox:checked:hover {
+            background-color: rgba(0, 0, 0, 0);
+            }"""
         }
 
 
@@ -120,11 +113,5 @@ class wg:
                 Fct(wg=wg, w=dim.get("w"), h=dim.get("h")).DIM()
                 wg.setFont(Fct(font_size=font).FONT())
 
-                wg.setEditable(edit)
-
                 wg.setCursor(Fct(cur=cur).CUR())
-                wg.view().setCursor(Fct(cur=P_cur().souris_main()).CUR())
-                if edit:
-                    wg.lineEdit().setFont(Fct(font_size=font).FONT())
-                    wg.lineEdit().setCursor(Fct(cur=P_cur().IBeam()).CUR())
             except: pass
