@@ -101,7 +101,7 @@ class wg:
             "th": f"""
             /* COMBOBOX */
             QComboBox {{
-            background-color: rgb{colors.get("c2")};
+            background-color: rgb{colors.get("c1")};
             }}""",
 
             "tr": """

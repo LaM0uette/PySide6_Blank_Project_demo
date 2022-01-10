@@ -61,9 +61,9 @@ class rtn:
 class base(rtn):
     def __init__(self, *args):
         super().__init__(*args,
-                         colors = P_rgb().p_th1(),
+                         colors = P_rgb().p_th3(),
                          dim = P_dim().aw().h9(),
-                         tm="th3",
-                         tm_check="bn1",
+                         tm="th2",
+                         tm_check="th3",
                          font = P_font().h4(),
         )

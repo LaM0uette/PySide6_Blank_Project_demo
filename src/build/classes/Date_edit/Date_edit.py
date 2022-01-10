@@ -11,7 +11,7 @@ class rtn:
                  font=p_base.FONT,
                  bd=p_base.BD,
                  rd=p_base.RD,
-                 edit=p_base.EDIT,
+                 align=p_base.ALIGN,
                  cur=p_base.CUR
     ):
         self.wgs = wgs
@@ -22,7 +22,7 @@ class rtn:
         self.font = font
         self.bd = bd
         self.rd = rd
-        self.edit = edit
+        self.align = align
         self.cur = cur
 
     def rtn(self):
@@ -34,19 +34,15 @@ class rtn:
             font=self.font,
             bd=self.bd,
             rd=self.rd,
-            edit=self.edit,
+            align=self.align,
             cur=self.cur
         )
 
     def th(self):
         self.colors_type = "th"
-        self.edit = False
-        self.cur = P_cur().main()
         self.rtn()
     def tr(self):
         self.colors_type = "tr"
-        self.edit = True
-        self.cur = P_cur().souris_main()
         self.rtn()
 
 class base(rtn):
