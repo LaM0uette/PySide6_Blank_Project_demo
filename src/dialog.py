@@ -1,5 +1,4 @@
 import glob
-import importlib
 import os
 import time
 
@@ -73,11 +72,16 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
     def IN_CLASSE(self):
         def COMBO_BOX():
             Combo_box.base(self.fcb_opt_ft_font, self.cb_opt_tm_theme).tr()
-
+        def CHECK_BOX():
+            Check_box.base(self.ck_opt_cfg_autoreload, self.ck_opt_cfg_autoclose, self.ck_opt_cfg_resize).tr()
 
         def _func_try():
             try: COMBO_BOX()
             except: print("COMBO_BOX ne fonctionne pas !")
+
+            try: CHECK_BOX()
+            except: print("CHECK_BOX ne fonctionne pas !")
+
         _func_try()
 
 
@@ -124,10 +128,6 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             C_.plein_th3(self.pb_opt_tm_th3)
             C_.plein_bn1(self.pb_opt_tm_bn1)
             C_.plein_bn2(self.pb_opt_tm_bn2)
-
-        # QCheckBox
-        with C_ck() as C_:
-            C_.tr(self.ck_opt_cfg_autoreload, self.ck_opt_cfg_autoclose, self.ck_opt_cfg_resize)
 
         # QSlider
         with C_sd() as C_:

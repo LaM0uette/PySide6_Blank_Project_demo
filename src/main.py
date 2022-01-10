@@ -39,6 +39,10 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Check_box.base(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3).th()
             Check_box.base(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3).tr()
 
+        def DATE_EDIT():
+            Date_edit.base(self.de_demo_th).th()
+            Date_edit.base(self.de_demo_tr).tr()
+
 
         def _func_try():
             try: COMBO_BOX()
@@ -46,6 +50,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
             try: CHECK_BOX()
             except: print("CHECK_BOX ne fonctionne pas !")
+
+            try: DATE_EDIT()
+            except: print("DATE_EDIT ne fonctionne pas !")
 
         _func_try()
 
@@ -69,14 +76,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         In_classe(ui=self)
 
-
-
-
-        # QDateEdit
-        with C_de() as cls:
-            # Demo
-            cls.demo_th(self.de_demo_th)
-            cls.demo_tr(self.de_demo_tr)
 
         # QFrame
         with C_fr() as cls:

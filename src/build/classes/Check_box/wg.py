@@ -29,9 +29,6 @@ class wg:
         QCheckBox:hover {{
         color: rgb{colors.get("bn1")};
         }}
-        QCheckBox:checked {{
-        color: rgb{colors.get("c1")};
-        }}
         QCheckBox:checked:hover {{
         color: rgb{colors.get("bn1")};
         }}
@@ -57,7 +54,7 @@ class wg:
         
 
         /* BORDURES */
-        QComboBox {{
+        QCheckBox {{
         border-width: {P_style().bd()}px;
         border-style: solid;
         border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
@@ -65,7 +62,7 @@ class wg:
         }}
         
         /* RAYONS */
-        QComboBox {{
+        QCheckBox {{
         border-top-left-radius: {rds.get("r1")}px;
         border-top-right-radius: {rds.get("r2")}px;
         border-bottom-right-radius: {rds.get("r4")}px;
@@ -83,25 +80,27 @@ class wg:
             }}
             QCheckBox:checked {{
             background-color: rgb{colors.get("c3")};
+            color: rgb{colors.get("c1")};
             }}
             QCheckBox:checked:hover {{
             background-color: rgb{colors.get("c3")};
             }}""",
 
-            "tr": """
-            QCheckBox {
+            "tr": f"""
+            QCheckBox {{
             background-color: rgba(0, 0, 0, 0);
             spacing: 10px;
-            }
-            QCheckBox:hover {
+            }}
+            QCheckBox:hover {{
             background-color: rgba(0, 0, 0, 0);
-            }
-            QCheckBox:checked {
+            }}
+            QCheckBox:checked {{
             background-color: rgba(0, 0, 0, 0);
-            }
-            QCheckBox:checked:hover {
+            color: rgb{colors.get("c3")};
+            }}
+            QCheckBox:checked:hover {{
             background-color: rgba(0, 0, 0, 0);
-            }"""
+            }}"""
         }
 
 

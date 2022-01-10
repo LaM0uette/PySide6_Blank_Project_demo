@@ -5,7 +5,6 @@ from .C_fr import C_fr
 from .C_lb import C_lb
 from .C_lw import C_lw
 from .C_pb import C_pb
-from .C_ck import C_ck
 from .C_rb import C_rb
 from .C_pg import C_pg
 from .C_sd import C_sd

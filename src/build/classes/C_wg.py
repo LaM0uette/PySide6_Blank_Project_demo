@@ -534,6 +534,7 @@ class C_wg:
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
 
+
     def STL_DE(self):
         self.wg.setCalendarPopup(True)
         self.STL_ALL()

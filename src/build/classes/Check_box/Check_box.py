@@ -50,6 +50,8 @@ class rtn:
     def th(self):
         self.colors_type = "th"
         self.cur = P_cur().main()
+        self.bd = P_bd().all().bn1()
+        self.rd = P_rd().all().px_5()
         self.rtn()
     def tr(self):
         self.colors_type = "tr"
@@ -61,6 +63,7 @@ class base(rtn):
         super().__init__(*args,
                          colors = P_rgb().p_th1(),
                          dim = P_dim().aw().h9(),
+                         tm="th3",
+                         tm_check="bn1",
                          font = P_font().h4(),
-                         bd = P_bd().bottom().th3()
         )
