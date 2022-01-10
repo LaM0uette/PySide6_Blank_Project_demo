@@ -59,8 +59,8 @@ class rtn:
         self.rtn()
 
 class base(rtn):
-    def __init__(self, *args):
-        super().__init__(*args,
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
                          colors = P_rgb().p_th3(),
                          dim = P_dim().aw().h9(),
                          tm="th2",
