@@ -6,7 +6,6 @@ class Attrs:
                  bd=p_base.BD,
                  rd=p_base.RD
     ):
-
         self.bd = bd
         self.rd = rd
 

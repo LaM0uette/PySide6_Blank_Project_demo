@@ -60,10 +60,9 @@ class wg:
 
                     /* BORDURES */
                     QComboBox {{
-                    border-width: {P_style().bd()}px;
+                    border-width: {bd.get("px")}px;
                     border-style: solid;
                     border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
-                    padding: {P_style().bd()}px;
                     }}
 
                     /* RAYONS */

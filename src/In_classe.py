@@ -5,9 +5,9 @@ class In_classe:
     def __init__(self, ui):
         def FRAME():
             Frame.base(ui.fr_main).cadre()
-            # Frame.base(ui.fr_body).tr()
-            # Frame.base(ui.fr_menu_top).aw_h9()
-            # Frame.base(ui.fr_menu_bottom).menu_bot()
+            Frame.base(ui.fr_body).tr()
+            Frame.base(ui.fr_menu_top).aw_h9()
+            Frame.base(ui.fr_menu_bottom).menu_bot()
 
 
         def _func_try():
