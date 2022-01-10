@@ -143,10 +143,13 @@ class wg:
 """
         style_type = {
             "th": f"""
+            /* DATEEDIT */
             QDateEdit {{
             background-color: rgb{colors.get("c1")};
             }}""",
+
             "tr": """
+            /* DATEEDIT */
             QDateEdit {
             background-color: rgba(0, 0, 0, 0);
             }"""

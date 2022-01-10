@@ -43,6 +43,12 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Date_edit.base(self.de_demo_th).th()
             Date_edit.base(self.de_demo_tr).tr()
 
+        def FRAME():
+            Frame.base(self.fr_cb, self.fr_de, self.fr_lw, self.fr_pb, self.fr_ck,
+                       self.fr_rb, self.fr_pg, self.fr_sb, self.fr_tw, self.fr_le,
+                       self.fr_te, self.fr_pte, self.fr_tb, self.fr_trw, self.fr_sd).th()
+            Frame.base(self.fr_tb_demo, self.fr_tb_demo_2).tr()
+
 
         def _func_try():
             try: COMBO_BOX()
@@ -53,6 +59,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
             try: DATE_EDIT()
             except: print("DATE_EDIT ne fonctionne pas !")
+
+            try: FRAME()
+            except: print("FRAME ne fonctionne pas !")
 
         _func_try()
 
@@ -76,14 +85,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         In_classe(ui=self)
 
-
-        # QFrame
-        with C_fr() as cls:
-            # Demo
-            cls.demo(self.fr_cb, self.fr_de, self.fr_lw, self.fr_pb, self.fr_ck,
-                    self.fr_rb, self.fr_pg, self.fr_sb, self.fr_tw, self.fr_le,
-                    self.fr_te, self.fr_pte, self.fr_tb, self.fr_trw, self.fr_sd)
-            cls.demo_tb(self.fr_tb_demo, self.fr_tb_demo_2)
 
         # QLabel
         with C_lb() as cls:
