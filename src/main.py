@@ -35,10 +35,18 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Combo_box.base(self.cb_demo_th).th()
             Combo_box.base(self.cb_demo_tr).tr()
 
+        def CHECK_BOX():
+            Check_box.base(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3).th()
+            Check_box.base(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3).tr()
+
 
         def _func_try():
             try: COMBO_BOX()
             except: print("COMBO_BOX ne fonctionne pas !")
+
+            try: CHECK_BOX()
+            except: print("CHECK_BOX ne fonctionne pas !")
+
         _func_try()
 
 
@@ -110,12 +118,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             cls.demo_zoom(self.pb_demo_zoom)
             cls.demo_rd(self.pb_demo_rd)
             cls.demo_bd(self.pb_demo_bd)
-
-        # QCheckBox
-        with C_ck() as cls:
-            # Demo
-            cls.demo_th(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3)
-            cls.demo_tr(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3)
 
         # QRadioButton
         with C_rb() as cls:
