@@ -1,5 +1,4 @@
 import sys
-import importlib
 
 from PySide6 import QtCore, QtWidgets, QtGui
 
@@ -48,11 +47,16 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         In_classe(ui=self)
 
+
+        Combo_box.base(self.cb_demo_th).th()
+        Combo_box.base(self.cb_demo_tr).tr()
+
+
         ### QComboBox ###
-        with C_cb() as cls:
-            # Demo
-            cls.demo_th(self.cb_demo_th)
-            cls.demo_tr(self.cb_demo_tr)
+        # with C_cb() as cls:
+        #     # Demo
+        #     cls.demo_th(self.cb_demo_th)
+        #     cls.demo_tr(self.cb_demo_tr)
 
         # QDateEdit
         with C_de() as cls:
@@ -152,7 +156,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         for i in range(60): self.lw_demo.addItem(f"je suis l'item : {i}")
     def IN_WG(self):
         # Base
-        self.setCursor(Fct(cur="souris").CUR())
+        self.setCursor(Fct(cur=P_cur().souris()).CUR())
 
         # Icone de l'app
         dim = P_dim().carr().h9()
@@ -170,7 +174,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         # SizeGrip
         if config.resize:
-            self.sizegrip.setCursor(Fct(cur="fleche_nwse").CUR())
+            self.sizegrip.setCursor(Fct(cur=P_cur().fleche_nwse()).CUR())
             self.sizegrip.setStyleSheet("QSizeGrip {"
                                         f"image: url({P_img().resize()}th3.svg);"
                                         f"width: {P_dim().h10()}px;"
@@ -199,6 +203,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     ### _ACTIONS
     def _reload(self):
         importlib.reload(config)
+        importlib.reload(rld)
+
         self.IN_BASE()
         self.IN_CLASSE()
 
@@ -263,9 +269,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         height_verif = cur.pos().y() - self.pos().y()
 
         if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
-            self.setCursor(Fct(cur="agrandir").CUR())
+            self.setCursor(Fct(cur=P_cur().agrandir()).CUR())
         else:
-            self.setCursor(Fct(cur="souris").CUR())
+            self.setCursor(Fct(cur=P_cur().souris()).CUR())
 
         try:
             if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized:
@@ -279,7 +285,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         cur = QtGui.QCursor()
         height_verif = cur.pos().y() - self.pos().y()
         if height_verif < P_dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
-            self.setCursor(Fct(cur="souris").CUR())
+            self.setCursor(Fct(cur=P_cur().souris()).CUR())
             self.EVT_AGRANDIR_GDT()
             event.accept()
     def closeEvent(self, event):

@@ -348,13 +348,13 @@ class C_wg:
         if val not in ("fr", "lb", "pg", "sca"):
             try: self.wg.setCursor(Fct(cur=self.cur).CUR())
             except: pass
-            try: self.wg.view().setCursor(Fct(cur="souris_main").CUR())
+            try: self.wg.view().setCursor(Fct(cur=P_cur().souris_main()).CUR())
             except: pass
             try: self.wg.viewport().setCursor(Fct(cur=self.cur).CUR())
             except: pass
-            try: self.wg.lineEdit().setCursor(Fct(cur="IBeam").CUR())
+            try: self.wg.lineEdit().setCursor(Fct(cur=P_cur().IBeam()).CUR())
             except: pass
-            try: self.wg.calendarWidget().setCursor(Fct(cur="souris_main").CUR())
+            try: self.wg.calendarWidget().setCursor(Fct(cur=P_cur().souris_main()).CUR())
             except: pass
         if val in ("fr", "sb", "sca") and self.colors_type == "tr":
             try: self.wg.lineEdit().setCursor(Fct(cur="souris_main").CUR())

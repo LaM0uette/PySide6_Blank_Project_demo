@@ -4,7 +4,7 @@ from ...build import *
 
 class C_cb:
     def __init__(self):
-        super().__init__()
+        pass
 
     def __enter__(self):
         return self

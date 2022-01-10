@@ -136,7 +136,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             C_.option(self.trw_option)
     def IN_WG(self):
         # Base
-        self.setCursor(Fct(cur="souris").CUR())
+        self.setCursor(Fct(cur=P_cur().souris()).CUR())
         self.setStyleSheet(f"background-color: rgb{P_rgb().th1()};")
 
         # Frame menu_top
@@ -198,7 +198,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.IN_CLASSE()
 
         self.sgn_reload.emit()
-        self.setCursor(Fct(cur="souris").CUR())
+        self.setCursor(Fct(cur=P_cur().souris()).CUR())
 
         if self.reload:
             dlg = Dialog(msg="Modifications appliquées !\nCertains paramètres peuvent nécessiter un redémarrage de l'application.")
