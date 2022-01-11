@@ -79,9 +79,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             Frame.base(self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5,
                        self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize).cadre_th3()
         def LABEL():
-            Label.menu_bottom_dlg().th()
-
-            C_.h1(self.lb_opt_info_nom)
+            Label.base(self.lb_opt_info_nom).th()
 
 
         def _func_try():

@@ -46,7 +46,7 @@ CUR = P_cur().souris()
 ### PARAMETRES
 ALIGN = P_align().c().c()
 EDIT = False
-WORD_WRAP = False
+WORD_WRAP = True
 SCROLL = P_scroll().nd().nd()
 HEADER = {"h": True, "v": True}
 PB_SB = P_pb_sb().no()

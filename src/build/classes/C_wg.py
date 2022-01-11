@@ -731,9 +731,6 @@ class C_wg:
         self.wg.setDateTime(QtCore.QDateTime(QdateDuJour, QtCore.QTime(0, 0, 0)))
         self.wg.setDate(QdateDuJour)
         self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
-
-
-
     def STL_FR(self):
         self.STL_ALL("fr")
 
@@ -767,6 +764,9 @@ class C_wg:
                 f"{self.inc}"
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
+
+
+
     def STL_LW(self):
         self.STL_ALL()
 

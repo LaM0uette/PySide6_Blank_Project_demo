@@ -50,6 +50,12 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Frame.base(self.fr_body, self.fr_tb_demo, self.fr_tb_demo_2).tr()
             Frame.menu_bottom(self.fr_menu_bottom).th()
 
+        def LABEL():
+            Label.base(self.lb_mb_version).tr()
+            Label.base(self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
+                              self.lb_rb_demo, self.lb_pg_demo, self.lb_sb_demo, self.lb_tw_demo, self.lb_le_demo,
+                              self.lb_te_demo, self.lb_pte_demo, self.lb_tb_demo, self.lb_trw_demo, self.lb_sd_demo).bottom()
+
 
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
@@ -65,6 +71,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
             try: FRAME()
             except: print(f"FRAME{err}")
+
+            try: LABEL()
+            except: print(f"LABEL{err}")
 
         _func_try()
 
@@ -87,17 +96,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         In_classe(ui=self)
-
-
-        # QLabel
-        with C_lb() as cls:
-            # Version
-            cls.mb(self.lb_mb_version)
-
-            # Demo
-            cls.demo(self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
-                    self.lb_rb_demo, self.lb_pg_demo, self.lb_sb_demo, self.lb_tw_demo, self.lb_le_demo,
-                    self.lb_te_demo, self.lb_pte_demo, self.lb_tb_demo, self.lb_trw_demo, self.lb_sd_demo)
 
         # QListWidget
         with C_lw() as cls:
