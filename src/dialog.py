@@ -74,18 +74,25 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             Combo_box.base(self.fcb_opt_ft_font, self.cb_opt_tm_theme).tr()
         def CHECK_BOX():
             Check_box.base(self.ck_opt_cfg_autoreload, self.ck_opt_cfg_autoclose, self.ck_opt_cfg_resize).tr()
+        def FRAME():
+            Frame.menu_bottom_dlg(self.fr_pg_dlg_msg, self.fr_pg_dlg_rep, self.fr_pg_dlg_input, self.fr_pg_dlg_option, self.fr_pg_dlg_colors).th()
+            Frame.base(self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5,
+                       self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize).cadre_th3()
+
 
         def _func_try():
+            err = f"[ {self.objectName()} ] ne fonctionne pas !"
+
             try: COMBO_BOX()
-            except: print("COMBO_BOX ne fonctionne pas !")
+            except: print(f"COMBO_BOX{err}")
 
             try: CHECK_BOX()
-            except: print("CHECK_BOX ne fonctionne pas !")
+            except: print(f"CHECK_BOX{err}")
+
+            try: FRAME()
+            except: print(f"FRAME{err}")
 
         _func_try()
-
-
-
 
 
         # QLineEdit | QTextEdit | QPlainTextEdit
@@ -103,12 +110,6 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         In_classe(ui=self)
 
-
-        # QFrame
-        # with C_fr() as C_:
-        #     C_.menu_bottom_dlg(self.fr_pg_dlg_msg, self.fr_pg_dlg_rep, self.fr_pg_dlg_input, self.fr_pg_dlg_option, self.fr_pg_dlg_colors)
-        #     C_.option_font(self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5)
-        #     C_.option_config(self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize)
 
         # QLabel
         with C_lb() as C_:

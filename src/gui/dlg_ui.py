@@ -483,7 +483,7 @@ class Ui_Dlg(object):
 
         self.vlay_pg_opt_infos.addWidget(self.lb_opt_info_nom)
 
-        self.verticalSpacer_5 = QSpacerItem(20, 100, QSizePolicy.Minimum, QSizePolicy.Fixed)
+        self.verticalSpacer_5 = QSpacerItem(20, 80, QSizePolicy.Minimum, QSizePolicy.Fixed)
 
         self.vlay_pg_opt_infos.addItem(self.verticalSpacer_5)
 
@@ -649,7 +649,7 @@ class Ui_Dlg(object):
         self.sca_colors.setWidgetResizable(True)
         self.sca_area_colors = QWidget()
         self.sca_area_colors.setObjectName(u"sca_area_colors")
-        self.sca_area_colors.setGeometry(QRect(0, 0, 877, 406))
+        self.sca_area_colors.setGeometry(QRect(0, 0, 98, 28))
         self.sd_opt_rgb_red = QSlider(self.sca_area_colors)
         self.sd_opt_rgb_red.setObjectName(u"sd_opt_rgb_red")
         self.sd_opt_rgb_red.setGeometry(QRect(250, 120, 160, 22))
@@ -700,7 +700,7 @@ class Ui_Dlg(object):
 
         self.retranslateUi(Dlg)
 
-        self.stk_dlg.setCurrentIndex(1)
+        self.stk_dlg.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Dlg)

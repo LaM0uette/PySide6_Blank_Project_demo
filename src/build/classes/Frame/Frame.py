@@ -35,25 +35,39 @@ class rtn:
     def tr(self):
         self.colors_type = "tr"
         self.rtn()
-    def cadre(self):
-        self.colors_type = "tr"
-        self.bd = P_bd().all().bn1()
-        self.rtn()
 
-    def menu_top(self):
-        self.colors_type = "th"
-        self.colors = P_rgb().p_th1()
-        self.dim = P_dim().aw().h9()
-        self.rtn()
-    def menu_bot(self):
-        self.colors_type = "th"
-        self.colors = P_rgb().p_th2()
-        self.dim = P_dim().aw().h10()
-        self.rtn()
+    def cadre_th2(self):
+        self.bd = P_bd().all().th2()
+        self.tr()
+    def cadre_th3(self):
+        self.bd = P_bd().all().th3()
+        self.tr()
+    def cadre_bn1(self):
+        self.bd = P_bd().all().bn1()
+        self.tr()
+
 
 class base(rtn):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-                         colors = P_rgb().p_th3(),
-                         dim = P_dim().all(),
+                         colors=P_rgb().p_th3(),
+                         dim=P_dim().all(),
+        )
+class menu_top(rtn):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+                         colors=P_rgb().p_th1(),
+                         dim=P_dim().aw().h9(),
+        )
+class menu_bottom(rtn):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+                         colors=P_rgb().p_th2(),
+                         dim=P_dim().aw().h10(),
+        )
+class menu_bottom_dlg(rtn):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+                         colors=P_rgb().p_th2(),
+                         dim=P_dim().aw().h9(),
         )

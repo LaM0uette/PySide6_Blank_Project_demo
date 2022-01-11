@@ -46,22 +46,25 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         def FRAME():
             Frame.base(self.fr_cb, self.fr_de, self.fr_lw, self.fr_pb, self.fr_ck,
                        self.fr_rb, self.fr_pg, self.fr_sb, self.fr_tw, self.fr_le,
-                       self.fr_te, self.fr_pte, self.fr_tb, self.fr_trw, self.fr_sd).cadre()
-            Frame.base(self.fr_tb_demo, self.fr_tb_demo_2).tr()
+                       self.fr_te, self.fr_pte, self.fr_tb, self.fr_trw, self.fr_sd).cadre_bn1()
+            Frame.base(self.fr_body, self.fr_tb_demo, self.fr_tb_demo_2).tr()
+            Frame.menu_bottom(self.fr_menu_bottom).th()
 
 
         def _func_try():
+            err = f"[ {self.objectName()} ] ne fonctionne pas !"
+
             try: COMBO_BOX()
-            except: print("COMBO_BOX ne fonctionne pas !")
+            except: print(f"COMBO_BOX{err}")
 
             try: CHECK_BOX()
-            except: print("CHECK_BOX ne fonctionne pas !")
+            except: print(f"CHECK_BOX{err}")
 
             try: DATE_EDIT()
-            except: print("DATE_EDIT ne fonctionne pas !")
+            except: print(f"DATE_EDIT{err}")
 
             try: FRAME()
-            except: print("FRAME ne fonctionne pas !")
+            except: print(f"FRAME{err}")
 
         _func_try()
 

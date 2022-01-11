@@ -33,7 +33,7 @@ RD = {"mat": RD_MAT, "px": RD_PX}
 
 ### BORDURES
 BD_MAT = "0000"
-BD_PX = P_style().bd()
+BD_PX = 0
 BD_TH = P_rgb().bn1()
 BD = {"mat": BD_MAT, "px": BD_PX, "th": BD_TH}
 BD_RGBA = (0, 0, 0, 0)

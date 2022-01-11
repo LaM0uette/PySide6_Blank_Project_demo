@@ -17,7 +17,7 @@ class Dlg:
 
     # MODELES
     def OPTION(self):
-        dlg = Dialog(titre="Option", ico=P_img().option(), width=800, height=500)
+        dlg = Dialog(titre="Option", ico=P_img().option(), width=800, height=600)
         dlg.sgn_reload.connect(self.RTN_SGN_RELOAD)
         dlg.OPTION()
         dlg.exec()
