@@ -58,8 +58,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Push_button.menu_top(self.pb_mt_reduire).reduire()
             Push_button.menu_top(self.pb_mt_agrandir).agrandir()
 
-            Push_button.base(self.pb_demo_txt).txt()
-            Push_button.base(self.pb_demo_txt_inv).txt_inv()
+            Push_button.base_txt(self.pb_demo_txt).txt()
+            Push_button.base_txt(self.pb_demo_txt_inv).txt_inv()
+
             Push_button.base(self.pb_demo_th, self.pb_demo_ck).th()
             Push_button.base(self.pb_demo_tr).tr()
             Push_button.base(self.pb_demo_rd).demo_rd()

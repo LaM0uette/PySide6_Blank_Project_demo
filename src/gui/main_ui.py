@@ -106,11 +106,59 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -890, 818, 4743))
+        self.vlay_wg.setGeometry(QRect(0, 0, 818, 4743))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.verticalLayout.setContentsMargins(50, 50, 50, 50)
+        self.fr_ck = QFrame(self.vlay_wg)
+        self.fr_ck.setObjectName(u"fr_ck")
+        self.vlay_ck = QVBoxLayout(self.fr_ck)
+        self.vlay_ck.setSpacing(10)
+        self.vlay_ck.setObjectName(u"vlay_ck")
+        self.vlay_ck.setContentsMargins(10, 10, 10, 10)
+        self.lb_ck_demo = QLabel(self.fr_ck)
+        self.lb_ck_demo.setObjectName(u"lb_ck_demo")
+
+        self.vlay_ck.addWidget(self.lb_ck_demo)
+
+        self.verticalSpacer_15 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.vlay_ck.addItem(self.verticalSpacer_15)
+
+        self.ck_demo_th_1 = QCheckBox(self.fr_ck)
+        self.ck_demo_th_1.setObjectName(u"ck_demo_th_1")
+
+        self.vlay_ck.addWidget(self.ck_demo_th_1)
+
+        self.ck_demo_th_2 = QCheckBox(self.fr_ck)
+        self.ck_demo_th_2.setObjectName(u"ck_demo_th_2")
+
+        self.vlay_ck.addWidget(self.ck_demo_th_2)
+
+        self.ck_demo_th_3 = QCheckBox(self.fr_ck)
+        self.ck_demo_th_3.setObjectName(u"ck_demo_th_3")
+
+        self.vlay_ck.addWidget(self.ck_demo_th_3)
+
+        self.ck_demo_tr_1 = QCheckBox(self.fr_ck)
+        self.ck_demo_tr_1.setObjectName(u"ck_demo_tr_1")
+
+        self.vlay_ck.addWidget(self.ck_demo_tr_1)
+
+        self.ck_demo_tr_2 = QCheckBox(self.fr_ck)
+        self.ck_demo_tr_2.setObjectName(u"ck_demo_tr_2")
+
+        self.vlay_ck.addWidget(self.ck_demo_tr_2)
+
+        self.ck_demo_tr_3 = QCheckBox(self.fr_ck)
+        self.ck_demo_tr_3.setObjectName(u"ck_demo_tr_3")
+
+        self.vlay_ck.addWidget(self.ck_demo_tr_3)
+
+
+        self.verticalLayout.addWidget(self.fr_ck)
+
         self.fr_cb = QFrame(self.vlay_wg)
         self.fr_cb.setObjectName(u"fr_cb")
         self.vlay_cb = QVBoxLayout(self.fr_cb)
@@ -334,54 +382,6 @@ class Ui_main(object):
 
 
         self.verticalLayout.addWidget(self.fr_pb)
-
-        self.fr_ck = QFrame(self.vlay_wg)
-        self.fr_ck.setObjectName(u"fr_ck")
-        self.vlay_ck = QVBoxLayout(self.fr_ck)
-        self.vlay_ck.setSpacing(10)
-        self.vlay_ck.setObjectName(u"vlay_ck")
-        self.vlay_ck.setContentsMargins(10, 10, 10, 10)
-        self.lb_ck_demo = QLabel(self.fr_ck)
-        self.lb_ck_demo.setObjectName(u"lb_ck_demo")
-
-        self.vlay_ck.addWidget(self.lb_ck_demo)
-
-        self.verticalSpacer_15 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Fixed)
-
-        self.vlay_ck.addItem(self.verticalSpacer_15)
-
-        self.ck_demo_th_1 = QCheckBox(self.fr_ck)
-        self.ck_demo_th_1.setObjectName(u"ck_demo_th_1")
-
-        self.vlay_ck.addWidget(self.ck_demo_th_1)
-
-        self.ck_demo_th_2 = QCheckBox(self.fr_ck)
-        self.ck_demo_th_2.setObjectName(u"ck_demo_th_2")
-
-        self.vlay_ck.addWidget(self.ck_demo_th_2)
-
-        self.ck_demo_th_3 = QCheckBox(self.fr_ck)
-        self.ck_demo_th_3.setObjectName(u"ck_demo_th_3")
-
-        self.vlay_ck.addWidget(self.ck_demo_th_3)
-
-        self.ck_demo_tr_1 = QCheckBox(self.fr_ck)
-        self.ck_demo_tr_1.setObjectName(u"ck_demo_tr_1")
-
-        self.vlay_ck.addWidget(self.ck_demo_tr_1)
-
-        self.ck_demo_tr_2 = QCheckBox(self.fr_ck)
-        self.ck_demo_tr_2.setObjectName(u"ck_demo_tr_2")
-
-        self.vlay_ck.addWidget(self.ck_demo_tr_2)
-
-        self.ck_demo_tr_3 = QCheckBox(self.fr_ck)
-        self.ck_demo_tr_3.setObjectName(u"ck_demo_tr_3")
-
-        self.vlay_ck.addWidget(self.ck_demo_tr_3)
-
-
-        self.verticalLayout.addWidget(self.fr_ck)
 
         self.fr_rb = QFrame(self.vlay_wg)
         self.fr_rb.setObjectName(u"fr_rb")
@@ -983,6 +983,13 @@ class Ui_main(object):
     # setupUi
 
     def retranslateUi(self, main):
+        self.lb_ck_demo.setText(QCoreApplication.translate("main", u"QCheckBox :", None))
+        self.ck_demo_th_1.setText(QCoreApplication.translate("main", u"CheckBox", None))
+        self.ck_demo_th_2.setText(QCoreApplication.translate("main", u"CheckBox", None))
+        self.ck_demo_th_3.setText(QCoreApplication.translate("main", u"CheckBox", None))
+        self.ck_demo_tr_1.setText(QCoreApplication.translate("main", u"CheckBox", None))
+        self.ck_demo_tr_2.setText(QCoreApplication.translate("main", u"CheckBox", None))
+        self.ck_demo_tr_3.setText(QCoreApplication.translate("main", u"CheckBox", None))
         self.lb_cb_demo.setText(QCoreApplication.translate("main", u"QComboBox :", None))
         self.cb_demo_th.setItemText(0, QCoreApplication.translate("main", u"cb_demo_th", None))
         self.cb_demo_th.setItemText(1, QCoreApplication.translate("main", u"cb_demo_th", None))
@@ -1029,13 +1036,6 @@ class Ui_main(object):
         self.pb_demo_ck_ico.setText(QCoreApplication.translate("main", u"PushButton checkable avec icone", None))
         self.pb_demo_rd.setText(QCoreApplication.translate("main", u"PushButton rd", None))
         self.pb_demo_bd.setText(QCoreApplication.translate("main", u"PushButton bd", None))
-        self.lb_ck_demo.setText(QCoreApplication.translate("main", u"QCheckBox :", None))
-        self.ck_demo_th_1.setText(QCoreApplication.translate("main", u"CheckBox", None))
-        self.ck_demo_th_2.setText(QCoreApplication.translate("main", u"CheckBox", None))
-        self.ck_demo_th_3.setText(QCoreApplication.translate("main", u"CheckBox", None))
-        self.ck_demo_tr_1.setText(QCoreApplication.translate("main", u"CheckBox", None))
-        self.ck_demo_tr_2.setText(QCoreApplication.translate("main", u"CheckBox", None))
-        self.ck_demo_tr_3.setText(QCoreApplication.translate("main", u"CheckBox", None))
         self.lb_rb_demo.setText(QCoreApplication.translate("main", u"QRadioButton :", None))
         self.rb_demo_th_1.setText(QCoreApplication.translate("main", u"RadioButton", None))
         self.rb_demo_th_2.setText(QCoreApplication.translate("main", u"RadioButton", None))

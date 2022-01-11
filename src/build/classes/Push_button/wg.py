@@ -45,15 +45,15 @@ class wg:
             style_type = {
                 "txt": f"""
                 QPushButton {{
-                background-color: rgba{colors.get("c3")};
-                color: rgb{colors.get("c1")};
-                border: {P_style().bd()}px solid rgb{colors.get("c1")};
+                background-color: rgb{colors.get("c1")};
+                color: rgb{colors.get("c3")};
+                border: {P_style().bd()}px solid rgb{colors.get("c3")};
                 }}
                 
                 QPushButton:hover {{
-                background-color: rgb{colors.get("c1")};
-                color: rgb{colors.get("c3")};
-                border: {P_style().bd()}px solid rgb{colors.get("c1")};
+                background-color: rgb{colors.get("c3")};
+                color: rgb{colors.get("c1")};
+                border: {P_style().bd()}px solid rgb{colors.get("c3")};
                 }}
 
                 QPushButton:pressed {{
@@ -62,15 +62,15 @@ class wg:
 
                 "txt_inv": f"""
                 QPushButton {{
-                background-color: rgb{colors.get("c1")};
-                color: rgb{colors.get("c3")};
-                border: {P_style().bd()}px solid rgb{colors.get("c1")};
+                background-color: rgb{colors.get("c3")};
+                color: rgb{colors.get("c1")};
+                border: {P_style().bd()}px solid rgb{colors.get("c3")};
                 }}
                 
                 QPushButton:hover {{
-                background-color: rgba{colors.get("c3")};
-                color: rgb{colors.get("c1")};
-                border: {P_style().bd()}px solid rgb{colors.get("c1")};
+                background-color: rgb{colors.get("c1")};
+                color: rgb{colors.get("c3")};
+                border: {P_style().bd()}px solid rgb{colors.get("c3")};
                 }}
 
                 QPushButton:pressed {{
@@ -167,7 +167,9 @@ class wg:
                 border: none;
                 }}"""
             }
-            style = style_gen + style_type.get(colors_type)
+
+            if colors_type not in("txt", "txt_inv"): style = style_gen + style_type.get(colors_type)
+            else: style = style_type.get(colors_type)
 
             wg.setStyleSheet(style)
 

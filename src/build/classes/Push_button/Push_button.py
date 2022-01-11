@@ -100,6 +100,26 @@ class rtn:
         self.img = P_img().calendrier()
         self.zoom()
 
+    def plein(self):
+        self.dim = P_dim().aw().h5()
+        self.th()
+    def plein_th1(self):
+        self.colors=P_rgb().p_th1()
+        self.bd = P_bd().all().th2()
+        self.plein()
+    def plein_th2(self):
+        self.colors=P_rgb().p_th2()
+        self.plein()
+    def plein_th3(self):
+        self.colors=P_rgb().p_th3()
+        self.plein()
+    def plein_bn1(self):
+        self.colors=P_rgb().p_bn1()
+        self.plein()
+    def plein_bn2(self):
+        self.colors=P_rgb().p_bn2()
+        self.plein()
+
     def demo_rd(self):
         self.rd = P_rd().all().px_5()
         self.th()
@@ -108,6 +128,14 @@ class rtn:
         self.th()
 
 
+class base_txt(rtn):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+                         colors=P_rgb().p_th1(),
+                         dim=P_dim().aw().h9(),
+                         font=P_font().h4(),
+                         cur=P_cur().main(),
+        )
 class base(rtn):
     def __init__(self, *wgs):
         super().__init__(*wgs,
@@ -147,4 +175,21 @@ class zoom(rtn):
                          img=P_img().main(),
                          font=P_font().h4(),
                          cur=P_cur().main(),
+        )
+
+class dlg_ok(rtn):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+                         colors=P_rgb().p_vert_th2(),
+                         dim=P_dim().ah().h6(),
+                         font=P_font().h4(),
+                         cur=P_cur().souris_main(),
+        )
+class dlg_nok(rtn):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+                         colors=P_rgb().p_rouge_th2(),
+                         dim=P_dim().ah().h6(),
+                         font=P_font().h4(),
+                         cur=P_cur().souris_main(),
         )

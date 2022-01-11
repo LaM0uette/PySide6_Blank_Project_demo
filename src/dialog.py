@@ -84,6 +84,18 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
                        self.lb_opt_info_version, self.lb_opt_ft_h1, self.lb_opt_ft_h2, self.lb_opt_ft_h3, self.lb_opt_ft_h4, self.lb_opt_ft_h5,
                        self.lb_opt_cfg_opacity, self.lb_opt_cfg_autoreload, self.lb_opt_cfg_autoclose, self.lb_opt_cfg_resize,
                        self.lb_opt_cfg_resize_width, self.lb_opt_cfg_resize_height).tr()
+        def PUSH_BUTTON():
+            Push_button.dlg_ok(self.pb_dlg_msg_ok, self.pb_dlg_rep_ok, self.pb_dlg_input_ok, self.pb_dlg_option_ok, self.pb_dlg_colors_ok).txt()
+            Push_button.dlg_ok(self.pb_dlg_option_appliquer).txt_inv()
+            Push_button.dlg_nok(self.pb_dlg_rep_annuler, self.pb_dlg_input_annuler).txt_inv()
+
+            Push_button.base_txt(self.pb_opt_gen_font, self.pb_opt_gen_config, self.pb_opt_gen_cur, self.pb_opt_tm_colors).txt()
+
+            Push_button.base(self.pb_opt_tm_th1).plein_th1()
+            Push_button.base(self.pb_opt_tm_th2).plein_th2()
+            Push_button.base(self.pb_opt_tm_th3).plein_th3()
+            Push_button.base(self.pb_opt_tm_bn1).plein_bn1()
+            Push_button.base(self.pb_opt_tm_bn2).plein_bn2()
 
 
         def _func_try():
@@ -100,6 +112,9 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
             try: LABEL()
             except: print(f"LABEL{err}")
+
+            try: PUSH_BUTTON()
+            except: print(f"PUSH_BUTTON{err}")
         _func_try()
 
 
@@ -118,18 +133,6 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         In_classe(ui=self)
 
-
-        # QPushButton
-        with C_pb() as C_:
-            C_.ok(self.pb_dlg_msg_ok, self.pb_dlg_rep_ok, self.pb_dlg_input_ok, self.pb_dlg_option_ok, self.pb_dlg_colors_ok)
-            C_.appliquer(self.pb_dlg_option_appliquer)
-            C_.annuler(self.pb_dlg_rep_annuler, self.pb_dlg_input_annuler)
-            C_.txt_h9(self.pb_opt_gen_font, self.pb_opt_gen_config, self.pb_opt_gen_cur, self.pb_opt_tm_colors)
-            C_.plein_th1(self.pb_opt_tm_th1)
-            C_.plein_th2(self.pb_opt_tm_th2)
-            C_.plein_th3(self.pb_opt_tm_th3)
-            C_.plein_bn1(self.pb_opt_tm_bn1)
-            C_.plein_bn2(self.pb_opt_tm_bn2)
 
         # QSlider
         with C_sd() as C_:
