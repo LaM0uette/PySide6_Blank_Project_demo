@@ -62,15 +62,13 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Push_button.base(self.pb_demo_txt_inv).txt_inv()
             Push_button.base(self.pb_demo_th, self.pb_demo_ck).th()
             Push_button.base(self.pb_demo_tr).tr()
+            Push_button.base(self.pb_demo_rd).demo_rd()
+            Push_button.base(self.pb_demo_bd).demo_bd()
 
             Push_button.ck_ico(self.pb_demo_ck_ico, self.pb_demo_ico_ck).tr()
 
             Push_button.zoom(self.pb_demo_zoom).zoom_calendrier()
-            # cls.demo_zoom(self.pb_demo_zoom)
 
-
-            # cls.demo_rd(self.pb_demo_rd)
-            # cls.demo_bd(self.pb_demo_bd)
 
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"

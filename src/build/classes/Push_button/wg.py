@@ -28,20 +28,20 @@ class wg:
         for wg in wgs:
             style_gen = f"""
             /* BORDURES */
-            QPushButton {{
+            .QPushButton#{wg.objectName()} {{
             border-width: {bd.get("px")}px;
             border-style: solid;
             border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
             }}
 
             /* RAYONS */
-            QPushButton {{
+            .QPushButton#{wg.objectName()} {{
             border-top-left-radius: {rds.get("r1")}px;
             border-top-right-radius: {rds.get("r2")}px;
             border-bottom-right-radius: {rds.get("r4")}px;
             border-bottom-left-radius: {rds.get("r3")}px;
             }}
-            """
+"""
             style_type = {
                 "txt": f"""
                 QPushButton {{
@@ -137,12 +137,8 @@ class wg:
 
                 "zoom": f"""
                 QPushButton {{
-                background-color: rgb{colors.get("c1")};
+                background-color: rgba(0, 0, 0, 0);
                 color: rgb{colors.get("c3")};
-                }}
-                
-                QPushButton:checked {{
-                background-color: rgb{colors.get("c3")};
                 }}
 
                 QPushButton:pressed {{

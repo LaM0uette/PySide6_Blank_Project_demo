@@ -100,6 +100,13 @@ class rtn:
         self.img = P_img().calendrier()
         self.zoom()
 
+    def demo_rd(self):
+        self.rd = P_rd().all().px_5()
+        self.th()
+    def demo_bd(self):
+        self.bd = P_bd().all().bn1()
+        self.th()
+
 
 class base(rtn):
     def __init__(self, *wgs):
