@@ -6,7 +6,7 @@ class In_classe:
         def FRAME():
             Frame.base(ui.fr_main).cadre()
             Frame.base(ui.fr_body).tr()
-            Frame.base(ui.fr_menu_top).aw_h9()
+            Frame.base(ui.fr_menu_top).menu_top()
             Frame.base(ui.fr_menu_bottom).menu_bot()
 
 

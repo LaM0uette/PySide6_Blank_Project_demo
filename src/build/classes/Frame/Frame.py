@@ -40,11 +40,11 @@ class rtn:
         self.bd = P_bd().all().bn1()
         self.rtn()
 
-    def aw_h9(self):
+    def menu_top(self):
         self.colors_type = "th"
+        self.colors = P_rgb().p_th1()
         self.dim = P_dim().aw().h9()
         self.rtn()
-
     def menu_bot(self):
         self.colors_type = "th"
         self.colors = P_rgb().p_th2()

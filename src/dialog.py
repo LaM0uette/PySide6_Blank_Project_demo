@@ -105,10 +105,10 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
 
         # QFrame
-        with C_fr() as C_:
-            C_.menu_bottom_dlg(self.fr_pg_dlg_msg, self.fr_pg_dlg_rep, self.fr_pg_dlg_input, self.fr_pg_dlg_option, self.fr_pg_dlg_colors)
-            C_.option_font(self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5)
-            C_.option_config(self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize)
+        # with C_fr() as C_:
+        #     C_.menu_bottom_dlg(self.fr_pg_dlg_msg, self.fr_pg_dlg_rep, self.fr_pg_dlg_input, self.fr_pg_dlg_option, self.fr_pg_dlg_colors)
+        #     C_.option_font(self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5)
+        #     C_.option_config(self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize)
 
         # QLabel
         with C_lb() as C_:
