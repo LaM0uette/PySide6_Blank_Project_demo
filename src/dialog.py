@@ -78,6 +78,10 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             Frame.menu_bottom_dlg(self.fr_pg_dlg_msg, self.fr_pg_dlg_rep, self.fr_pg_dlg_input, self.fr_pg_dlg_option, self.fr_pg_dlg_colors).th()
             Frame.base(self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5,
                        self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize).cadre_th3()
+        def LABEL():
+            Label.menu_bottom_dlg().th()
+
+            C_.h1(self.lb_opt_info_nom)
 
 
         def _func_try():
@@ -91,6 +95,9 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
             try: FRAME()
             except: print(f"FRAME{err}")
+
+            try: LABEL()
+            except: print(f"LABEL{err}")
 
         _func_try()
 
@@ -113,7 +120,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         # QLabel
         with C_lb() as C_:
-            C_.h1(self.lb_opt_info_nom)
+
             C_.p(self.lb_msg_texte, self.lb_rep_texte, self.lb_input_texte, self.lb_opt_info_desc, self.lb_opt_info_auteur, self.lb_opt_info_version,
                  self.lb_opt_ft_h1, self.lb_opt_ft_h2, self.lb_opt_ft_h3, self.lb_opt_ft_h4, self.lb_opt_ft_h5,
                  self.lb_opt_cfg_opacity, self.lb_opt_cfg_autoreload, self.lb_opt_cfg_autoclose, self.lb_opt_cfg_resize, self.lb_opt_cfg_resize_width, self.lb_opt_cfg_resize_height)
