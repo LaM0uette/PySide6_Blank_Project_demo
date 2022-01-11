@@ -701,6 +701,7 @@ class Ui_Dlg(object):
         self.retranslateUi(Dlg)
 
         self.stk_dlg.setCurrentIndex(0)
+        self.stk_option.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(Dlg)

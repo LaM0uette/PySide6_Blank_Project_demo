@@ -261,6 +261,9 @@
                 </property>
                 <item>
                  <widget class="QStackedWidget" name="stk_option">
+                  <property name="currentIndex">
+                   <number>2</number>
+                  </property>
                   <widget class="QWidget" name="pg_opt_menu"/>
                   <widget class="QWidget" name="pg_opt_gen">
                    <layout class="QVBoxLayout" name="vlay_pg_opt_gen">
