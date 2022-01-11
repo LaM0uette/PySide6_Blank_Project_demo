@@ -48,7 +48,7 @@ class C_wg:
         ### TYPE
         self.type = attrs.get("type")
         if self.type is None:
-            self.type = p_base.TYPE
+            self.type = p_base.PB_TYPE
 
         ### COULEURS
         self.colors_type = attrs.get("colors_type")
@@ -791,9 +791,6 @@ class C_wg:
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
         self.wg.setFrameShape(QtWidgets.QFrame.NoFrame)
-
-
-
     def STL_PB(self):
         self.STL_ALL()
 
@@ -920,6 +917,9 @@ class C_wg:
             self.wg.enterEvent = cls.ENT_ZOOM
             self.wg.leaveEvent = cls.LVE_ZOOM
         else: return
+
+
+
 
     def STL_RB(self):
         self.STL_ALL("rb")

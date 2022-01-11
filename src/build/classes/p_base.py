@@ -2,7 +2,7 @@ from ...build import *
 
 
 ### TYPE
-TYPE = None
+PB_TYPE = None
 
 
 ### COULEURS

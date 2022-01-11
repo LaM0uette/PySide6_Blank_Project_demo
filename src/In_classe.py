@@ -8,6 +8,8 @@ class In_classe:
             Frame.menu_top(ui.fr_menu_top).th()
         def LABEL():
             Label.h3(ui.lb_mt_nom).tr()
+        def PUSH_BUTTON():
+            Push_button.menu_top(ui.pb_mt_quitter).quitter()
 
 
         def _func_try():
@@ -19,9 +21,7 @@ class In_classe:
             try: LABEL()
             except: print(f"LABEL{err}")
 
+            try: PUSH_BUTTON()
+            except: print(f"PUSH_BUTTON{err}")
+
         _func_try()
-
-
-
-        with C_pb() as C_:
-            C_.quitter(ui.pb_mt_quitter)
