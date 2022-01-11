@@ -55,6 +55,29 @@ class wg:
             border-bottom-right-radius: {rds.get("r4")}px;
             border-bottom-left-radius: {rds.get("r3")}px;
             }}
+            
+            /* SCROLL */
+            QListWidget QScrollBar {{
+            background-color: rgb{colors.get("c1")};
+            width: 20px;
+            height: 20px;
+            }}
+            QListWidget ::handle:vertical {{
+            min-height: 100px;
+            }}
+            QListWidget ::handle:vertical {{
+            min-height: 100px;
+            }}
+            QListWidget ::handle:horizontal {{
+            min-width: 100px;
+            }}
+            QListWidget QScrollBar::handle {{
+            background-color: rgb{colors.get("c3")};
+            }}
+            QListWidget QScrollBar::add-page, QListWidget QScrollBar::sub-page {{
+            background-color: rgb{colors.get("c1")};
+            border: rgb{colors.get("c1")};
+            }}
             """
             style_type = {
                 "th": f"""
