@@ -59,7 +59,7 @@ class wg:
                 QPushButton:pressed {{
                 color: rgb{colors.get("bn1")};
                 }}""",
-                
+
                 "txt_inv": f"""
                 QPushButton {{
                 background-color: rgb{colors.get("c1")};
@@ -76,7 +76,7 @@ class wg:
                 QPushButton:pressed {{
                 color: rgb{colors.get("bn1")};
                 }}""",
-                
+
                 "th": f"""
                 QPushButton {{
                 background-color: rgb{colors.get("c1")};
@@ -100,8 +100,16 @@ class wg:
 
                 QPushButton:pressed {{
                 color: rgb{colors.get("bn2")};
-                }}""",
+                }}
                 
+                QPushButton:checked:pressed {{
+                color: rgb{colors.get("bn2")};
+                }}
+                
+                QPushButton:flat {{
+                border: none;
+                }}""",
+
                 "tr": f"""
                 QPushButton {{
                 color: rgb{colors.get("c3")};
@@ -117,8 +125,16 @@ class wg:
 
                 QPushButton:pressed {{
                 color: rgb{colors.get("bn2")};
-                }}""",
+                }}
                 
+                QPushButton:checked:pressed {{
+                color: rgb{colors.get("bn2")};
+                }}
+                
+                QPushButton:flat {{
+                border: none;
+                }}""",
+
                 "zoom": f"""
                 QPushButton {{
                 background-color: rgb{colors.get("c1")};
@@ -131,8 +147,16 @@ class wg:
 
                 QPushButton:pressed {{
                 color: rgb{colors.get("bn1")};
-                }}""",
+                }}
                 
+                QPushButton:checked:pressed {{
+                color: rgb{colors.get("bn1")};
+                }}
+                
+                QPushButton:flat {{
+                border: none;
+                }}""",
+
                 "uni": f"""
                 QPushButton {{
                 background-color: rgb{colors.get("c1")};
@@ -141,6 +165,10 @@ class wg:
 
                 QPushButton:pressed {{
                 color: rgb{colors.get("bn1")};
+                }}
+                
+                QPushButton:flat {{
+                border: none;
                 }}"""
             }
             style = style_gen + style_type.get(colors_type)
@@ -160,8 +188,8 @@ class wg:
             except: pass
 
             try:
-                if pb_type is None: return
-                else: cls = Classe_wg.Classe_wg(wg=wg,
+                if pb_type is not None:
+                    cls = Classe_wg.Classe_wg(wg=wg,
                                                 dim_ico=dim.get("h") * x_ico,
                                                 DIM_ICO=dim.get("h") * X_ICO,
                                                 img=img,
@@ -170,14 +198,13 @@ class wg:
                                                 tm_hover=tm_hover,
                                                 tm_check=tm_check)
 
-                if pb_type == "check":
-                    wg.mousePressEvent = cls.MP_CHECK
-                elif pb_type == "ico":
-                    wg.enterEvent = cls.ENT_ICO
-                    wg.leaveEvent = cls.LVE_ICO
-                    wg.mousePressEvent = cls.MP_ICO
-                elif pb_type == "zoom":
-                    wg.enterEvent = cls.ENT_ZOOM
-                    wg.leaveEvent = cls.LVE_ZOOM
-                else: return
+                    if pb_type == "check":
+                        wg.mousePressEvent = cls.MP_CHECK
+                    elif pb_type == "ico":
+                        wg.enterEvent = cls.ENT_ICO
+                        wg.leaveEvent = cls.LVE_ICO
+                        wg.mousePressEvent = cls.MP_ICO
+                    elif pb_type == "zoom":
+                        wg.enterEvent = cls.ENT_ZOOM
+                        wg.leaveEvent = cls.LVE_ZOOM
             except: pass

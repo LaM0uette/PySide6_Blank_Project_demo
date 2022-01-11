@@ -4,7 +4,8 @@ from ....build import *
 
 
 class rtn:
-    def __init__(self, *wgs,
+    def __init__(self,
+                 *wgs,
                  pb_type=p_base.PB_TYPE,
                  colors_type=p_base.COLORS_TYPE,
                  colors=p_base.COLORS,
@@ -95,21 +96,48 @@ class rtn:
         self.tm = "bn2"
         self.tr()
 
+    def zoom_calendrier(self):
+        self.img = P_img().calendrier()
+        self.zoom()
+
 
 class base(rtn):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-                         colors = P_rgb().p_th3(),
-                         dim = P_dim().aw().h9(),
-                         font = P_font().h4(),
-                         cur=P_cur().main()
+                         colors=P_rgb().p_th3(),
+                         dim=P_dim().aw().h9(),
+                         font=P_font().h4(),
+                         cur=P_cur().main(),
         )
 class menu_top(rtn):
     def __init__(self, *wgs):
         super().__init__(*wgs,
                          pb_type="zoom",
-                         colors = P_rgb().p_th3(),
-                         dim = P_dim().w_rect_1_4().h9(),
-                         font = P_font().h4(),
-                         cur=P_cur().souris_main()
+                         colors=P_rgb().p_th3(),
+                         dim=P_dim().w_rect_1_4().h9(),
+                         font=P_font().h4(),
+                         cur=P_cur().souris_main(),
+        )
+class ck_ico(rtn):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+                         pb_type="check",
+                         colors=P_rgb().p_th3(),
+                         dim=P_dim().aw().h9(),
+                         img=P_img().check(),
+                         img_check=P_img().valider(),
+                         tm="th2",
+                         tm_check="th3",
+                         font=P_font().h4(),
+                         cur=P_cur().main(),
+        )
+class zoom(rtn):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+                         pb_type="zoom",
+                         colors=P_rgb().p_th3(),
+                         dim=P_dim().aw().h9(),
+                         img=P_img().main(),
+                         font=P_font().h4(),
+                         cur=P_cur().main(),
         )
