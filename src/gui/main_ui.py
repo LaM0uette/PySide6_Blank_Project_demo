@@ -106,7 +106,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -1922, 818, 4640))
+        self.vlay_wg.setGeometry(QRect(0, -144, 818, 4743))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -202,7 +202,7 @@ class Ui_main(object):
         self.fr_lw = QFrame(self.vlay_wg)
         self.fr_lw.setObjectName(u"fr_lw")
         self.vlay_lw = QVBoxLayout(self.fr_lw)
-        self.vlay_lw.setSpacing(0)
+        self.vlay_lw.setSpacing(10)
         self.vlay_lw.setObjectName(u"vlay_lw")
         self.vlay_lw.setContentsMargins(10, 10, 10, 10)
         self.lb_lw_demo = QLabel(self.fr_lw)
@@ -214,10 +214,15 @@ class Ui_main(object):
 
         self.vlay_lw.addItem(self.verticalSpacer_13)
 
-        self.lw_demo = QListWidget(self.fr_lw)
-        self.lw_demo.setObjectName(u"lw_demo")
+        self.lw_demo_th = QListWidget(self.fr_lw)
+        self.lw_demo_th.setObjectName(u"lw_demo_th")
 
-        self.vlay_lw.addWidget(self.lw_demo)
+        self.vlay_lw.addWidget(self.lw_demo_th)
+
+        self.lw_demo_tr = QListWidget(self.fr_lw)
+        self.lw_demo_tr.setObjectName(u"lw_demo_tr")
+
+        self.vlay_lw.addWidget(self.lw_demo_tr)
 
 
         self.verticalLayout.addWidget(self.fr_lw)

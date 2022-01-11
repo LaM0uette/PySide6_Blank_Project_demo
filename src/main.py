@@ -50,6 +50,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Label.h1(self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
                               self.lb_rb_demo, self.lb_pg_demo, self.lb_sb_demo, self.lb_tw_demo, self.lb_le_demo,
                               self.lb_te_demo, self.lb_pte_demo, self.lb_tb_demo, self.lb_trw_demo, self.lb_sd_demo).bottom_bn1()
+        def LIST_WIDGET():
+            List_widget.base(self.lw_demo_th).th()
+            List_widget.base(self.lw_demo_tr).tr()
 
 
         def _func_try():
@@ -69,6 +72,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
             try: LABEL()
             except: print(f"LABEL{err}")
+
+            try: LIST_WIDGET()
+            except: print(f"LIST_WIDGET{err}")
         _func_try()
 
 
@@ -91,10 +97,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         In_classe(ui=self)
 
-        # QListWidget
-        with C_lw() as cls:
-            # Demo
-            cls.demo(self.lw_demo)
 
         # QPushButton
         with C_pb() as cls:
@@ -156,7 +158,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         # Demo
-        for i in range(60): self.lw_demo.addItem(f"je suis l'item : {i}")
+        for i in range(60):
+            self.lw_demo_th.addItem(f"je suis l'item : {i}")
+            self.lw_demo_tr.addItem(f"je suis l'item : {i}")
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur=P_cur().souris()).CUR())

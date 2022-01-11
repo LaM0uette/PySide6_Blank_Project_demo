@@ -764,9 +764,6 @@ class C_wg:
                 f"{self.inc}"
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
-
-
-
     def STL_LW(self):
         self.STL_ALL()
 
@@ -794,6 +791,9 @@ class C_wg:
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
         self.wg.setFrameShape(QtWidgets.QFrame.NoFrame)
+
+
+
     def STL_PB(self):
         self.STL_ALL()
 

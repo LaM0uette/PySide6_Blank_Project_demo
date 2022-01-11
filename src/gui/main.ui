@@ -151,9 +151,9 @@
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>-1922</y>
+              <y>-144</y>
               <width>818</width>
-              <height>4640</height>
+              <height>4743</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout">
@@ -438,7 +438,7 @@
               <widget class="QFrame" name="fr_lw">
                <layout class="QVBoxLayout" name="vlay_lw">
                 <property name="spacing">
-                 <number>0</number>
+                 <number>10</number>
                 </property>
                 <property name="leftMargin">
                  <number>10</number>
@@ -476,7 +476,10 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QListWidget" name="lw_demo"/>
+                 <widget class="QListWidget" name="lw_demo_th"/>
+                </item>
+                <item>
+                 <widget class="QListWidget" name="lw_demo_tr"/>
                 </item>
                </layout>
               </widget>
