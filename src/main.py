@@ -53,6 +53,15 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         def LIST_WIDGET():
             List_widget.base(self.lw_demo_th).th()
             List_widget.base(self.lw_demo_tr).tr()
+        def PUSH_BUTTON():
+            Push_button.base(self.pb_mt_option).th()
+            Push_button.base(self.pb_mt_reduire).th()
+            Push_button.base(self.pb_mt_agrandir).th()
+
+
+            # cls.option(self.pb_mt_option)
+            # cls.reduire(self.pb_mt_reduire)
+            # cls.agrandir(self.pb_mt_agrandir)
 
 
         def _func_try():
@@ -75,6 +84,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
             try: LIST_WIDGET()
             except: print(f"LIST_WIDGET{err}")
+
+            try: PUSH_BUTTON()
+            except: print(f"PUSH_BUTTON{err}")
         _func_try()
 
 
@@ -100,11 +112,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         # QPushButton
         with C_pb() as cls:
-            # Menu_top
-            cls.option(self.pb_mt_option)
-            cls.reduire(self.pb_mt_reduire)
-            cls.agrandir(self.pb_mt_agrandir)
-
             # Demo
             cls.demo_txt(self.pb_demo_txt)
             cls.demo_txt_inv(self.pb_demo_txt_inv)
