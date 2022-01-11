@@ -100,7 +100,6 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
             try: LABEL()
             except: print(f"LABEL{err}")
-
         _func_try()
 
 

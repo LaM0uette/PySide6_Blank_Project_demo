@@ -8,7 +8,6 @@ from .config import *
 from .In_classe import In_classe
 
 
-
 class main(main_ui.Ui_main, QtWidgets.QWidget):
     dragPos: QtCore.QPoint
     def __init__(self):
@@ -70,7 +69,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
             try: LABEL()
             except: print(f"LABEL{err}")
-
         _func_try()
 
 
