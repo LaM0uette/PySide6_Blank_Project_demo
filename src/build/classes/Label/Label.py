@@ -45,8 +45,8 @@ class rtn:
         self.colors_type = "tr"
         self.rtn()
 
-    def bottom(self):
-        self.bd = P_bd().bottom().th2()
+    def bottom_bn1(self):
+        self.bd = P_bd().bottom().bn1()
         self.tr()
 
 class base(rtn):
@@ -54,10 +54,35 @@ class base(rtn):
         super().__init__(*wgs,
                          colors = P_rgb().p_th3(),
                          font = P_font().h4(),
+                         align = P_align().l().c()
         )
 class h1(rtn):
     def __init__(self, *wgs):
         super().__init__(*wgs,
                          colors = P_rgb().p_th3(),
                          font = P_font().h1(),
+        )
+class h2(rtn):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+                         colors = P_rgb().p_th3(),
+                         font = P_font().h2(),
+        )
+class h3(rtn):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+                         colors = P_rgb().p_th3(),
+                         font = P_font().h3(),
+        )
+class h4(rtn):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+                         colors = P_rgb().p_th3(),
+                         font = P_font().h4(),
+        )
+class h5(rtn):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+                         colors = P_rgb().p_th3(),
+                         font = P_font().h5(),
         )

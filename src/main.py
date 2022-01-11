@@ -34,27 +34,23 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         def COMBO_BOX():
             Combo_box.base(self.cb_demo_th).th()
             Combo_box.base(self.cb_demo_tr).tr()
-
         def CHECK_BOX():
             Check_box.base(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3).th()
             Check_box.base(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3).tr()
-
         def DATE_EDIT():
             Date_edit.base(self.de_demo_th).th()
             Date_edit.base(self.de_demo_tr).tr()
-
         def FRAME():
             Frame.base(self.fr_cb, self.fr_de, self.fr_lw, self.fr_pb, self.fr_ck,
                        self.fr_rb, self.fr_pg, self.fr_sb, self.fr_tw, self.fr_le,
                        self.fr_te, self.fr_pte, self.fr_tb, self.fr_trw, self.fr_sd).cadre_bn1()
             Frame.base(self.fr_body, self.fr_tb_demo, self.fr_tb_demo_2).tr()
             Frame.menu_bottom(self.fr_menu_bottom).th()
-
         def LABEL():
             Label.base(self.lb_mb_version).tr()
-            Label.base(self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
+            Label.h1(self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
                               self.lb_rb_demo, self.lb_pg_demo, self.lb_sb_demo, self.lb_tw_demo, self.lb_le_demo,
-                              self.lb_te_demo, self.lb_pte_demo, self.lb_tb_demo, self.lb_trw_demo, self.lb_sd_demo).bottom()
+                              self.lb_te_demo, self.lb_pte_demo, self.lb_tb_demo, self.lb_trw_demo, self.lb_sd_demo).bottom_bn1()
 
 
         def _func_try():

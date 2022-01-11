@@ -79,7 +79,11 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             Frame.base(self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5,
                        self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize).cadre_th3()
         def LABEL():
-            Label.base(self.lb_opt_info_nom).th()
+            Label.h1(self.lb_opt_info_nom).tr()
+            Label.base(self.lb_msg_texte, self.lb_rep_texte, self.lb_input_texte, self.lb_opt_info_desc, self.lb_opt_info_auteur,
+                       self.lb_opt_info_version, self.lb_opt_ft_h1, self.lb_opt_ft_h2, self.lb_opt_ft_h3, self.lb_opt_ft_h4, self.lb_opt_ft_h5,
+                       self.lb_opt_cfg_opacity, self.lb_opt_cfg_autoreload, self.lb_opt_cfg_autoclose, self.lb_opt_cfg_resize,
+                       self.lb_opt_cfg_resize_width, self.lb_opt_cfg_resize_height).tr()
 
 
         def _func_try():
@@ -115,13 +119,6 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         In_classe(ui=self)
 
-
-        # QLabel
-        with C_lb() as C_:
-
-            C_.p(self.lb_msg_texte, self.lb_rep_texte, self.lb_input_texte, self.lb_opt_info_desc, self.lb_opt_info_auteur, self.lb_opt_info_version,
-                 self.lb_opt_ft_h1, self.lb_opt_ft_h2, self.lb_opt_ft_h3, self.lb_opt_ft_h4, self.lb_opt_ft_h5,
-                 self.lb_opt_cfg_opacity, self.lb_opt_cfg_autoreload, self.lb_opt_cfg_autoclose, self.lb_opt_cfg_resize, self.lb_opt_cfg_resize_width, self.lb_opt_cfg_resize_height)
 
         # QPushButton
         with C_pb() as C_:

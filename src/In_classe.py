@@ -6,6 +6,8 @@ class In_classe:
         def FRAME():
             Frame.base(ui.fr_main).cadre_th2()
             Frame.menu_top(ui.fr_menu_top).th()
+        def LABEL():
+            Label.h3(ui.lb_mt_nom).tr()
 
 
         def _func_try():
@@ -14,14 +16,12 @@ class In_classe:
             try: FRAME()
             except: print(f"FRAME{err}")
 
+            try: LABEL()
+            except: print(f"LABEL{err}")
+
         _func_try()
 
-
-        # QLabel
-        with C_lb() as C_:
-            C_.h3(ui.lb_mt_nom)
 
 
         with C_pb() as C_:
             C_.quitter(ui.pb_mt_quitter)
-
