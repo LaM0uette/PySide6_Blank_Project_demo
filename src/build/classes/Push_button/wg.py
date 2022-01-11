@@ -85,7 +85,7 @@ class wg:
                 
                 QPushButton:hover {{
                 background-color: rgb{colors.get("c1")};
-                color: rgb{colors.get("c2")};
+                color: rgb{colors.get("bn1")};
                 }}
                 
                 QPushButton:checked {{
@@ -95,11 +95,11 @@ class wg:
                 
                 QPushButton:checked:hover {{
                 background-color: rgb{colors.get("c3")};
-                color: rgb{colors.get("c2")};
+                color: rgb{colors.get("bn1")};
                 }}
 
                 QPushButton:pressed {{
-                color: rgb{colors.get("bn1")};
+                color: rgb{colors.get("bn2")};
                 }}""",
                 
                 "tr": f"""
