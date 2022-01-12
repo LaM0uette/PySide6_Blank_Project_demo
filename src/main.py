@@ -117,6 +117,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
 
+
+
+
         # QLineEdit | QTextEdit | QPlainTextEdit
         with C_txt() as cls:
             # Demo
