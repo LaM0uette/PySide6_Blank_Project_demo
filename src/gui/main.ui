@@ -151,9 +151,9 @@
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>-596</y>
+              <y>-1093</y>
               <width>818</width>
-              <height>5695</height>
+              <height>5415</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout">
@@ -566,7 +566,7 @@
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
-                    <height>200</height>
+                    <height>120</height>
                    </size>
                   </property>
                   <property name="frameShape">
@@ -582,7 +582,7 @@
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
-                    <height>200</height>
+                    <height>120</height>
                    </size>
                   </property>
                   <property name="frameShape">
@@ -597,8 +597,8 @@
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="fr_lw_2">
-               <layout class="QVBoxLayout" name="vlay_lw_2">
+              <widget class="QFrame" name="fr_lb">
+               <layout class="QVBoxLayout" name="vlay_lb">
                 <property name="spacing">
                  <number>10</number>
                 </property>
@@ -615,9 +615,9 @@
                  <number>10</number>
                 </property>
                 <item>
-                 <widget class="QLabel" name="lb_lw_demo_2">
+                 <widget class="QLabel" name="lb_lb_demo">
                   <property name="text">
-                   <string>QListWidget :</string>
+                   <string>QLabel :</string>
                   </property>
                  </widget>
                 </item>
@@ -638,10 +638,18 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QListWidget" name="lw_demo_th_2"/>
+                 <widget class="QLabel" name="lb_lb_demo_th">
+                  <property name="text">
+                   <string>QLabel th</string>
+                  </property>
+                 </widget>
                 </item>
                 <item>
-                 <widget class="QListWidget" name="lw_demo_tr_2"/>
+                 <widget class="QLabel" name="lb_lb_demo_tr">
+                  <property name="text">
+                   <string>QLabel tr</string>
+                  </property>
+                 </widget>
                 </item>
                </layout>
               </widget>

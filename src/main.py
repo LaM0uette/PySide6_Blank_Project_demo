@@ -49,12 +49,17 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Frame.menu_bottom(self.fr_menu_bottom).th()
         def LABEL():
             Label.base(self.lb_mb_version).tr()
+            Label.base(self.lb_lb_demo_th).th()
+            Label.base(self.lb_lb_demo_tr).tr()
             Label.h1(self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
-                              self.lb_rb_demo, self.lb_pg_demo, self.lb_sb_demo, self.lb_tw_demo, self.lb_le_demo,
-                              self.lb_te_demo, self.lb_pte_demo, self.lb_tb_demo, self.lb_trw_demo, self.lb_sd_demo).bottom_bn1()
+                     self.lb_rb_demo, self.lb_pg_demo, self.lb_sb_demo, self.lb_tw_demo, self.lb_le_demo,
+                     self.lb_te_demo, self.lb_pte_demo, self.lb_tb_demo, self.lb_trw_demo, self.lb_sd_demo,
+                     self.lb_fr_demo, self.lb_lb_demo).bottom_bn1()
         def LIST_WIDGET():
             List_widget.base(self.lw_demo_th).th()
             List_widget.base(self.lw_demo_tr).tr()
+        def PROGRESS_BAR():
+            Progress_bar.base(self.pg_demo).option()
         def PUSH_BUTTON():
             Push_button.menu_top(self.pb_mt_option).option()
             Push_button.menu_top(self.pb_mt_reduire).reduire()
@@ -94,6 +99,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             try: LIST_WIDGET()
             except: print(f"LIST_WIDGET{err}")
 
+            try: PROGRESS_BAR()
+            except: print(f"PROGRESS_BAR{err}")
+
             try: PUSH_BUTTON()
             except: print(f"PUSH_BUTTON{err}")
         _func_try()
@@ -123,11 +131,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             # Demo
             cls.demo_th(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3)
             cls.demo_tr(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3)
-
-        # QProgressBar
-        with C_pg() as cls:
-            # Demo
-            cls.demo(self.pg_demo)
 
         # QSlider
         with C_sd() as cls:
