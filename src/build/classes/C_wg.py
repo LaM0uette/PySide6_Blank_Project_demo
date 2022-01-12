@@ -917,7 +917,22 @@ class C_wg:
             self.wg.enterEvent = cls.ENT_ZOOM
             self.wg.leaveEvent = cls.LVE_ZOOM
         else: return
+    def STL_PG(self):
+        self.STL_ALL()
 
+        stl = {
+            "th":
+                "QProgressBar {"
+                f"background-color: rgb{self.c1};"
+                "}"
+
+                "QProgressBar::chunk {"
+                f"background-color: rgb{self.c3};"
+                "}"
+
+                f"{self.inc}"
+        }
+        self.wg.setStyleSheet(stl.get(self.colors_type))
 
 
 
@@ -1006,22 +1021,6 @@ class C_wg:
                 "}"
                 
                 f"{self.inc}",
-        }
-        self.wg.setStyleSheet(stl.get(self.colors_type))
-    def STL_PG(self):
-        self.STL_ALL()
-
-        stl = {
-            "th":
-                "QProgressBar {"
-                f"background-color: rgb{self.c1};"
-                "}"
-
-                "QProgressBar::chunk {"
-                f"background-color: rgb{self.c3};"
-                "}"
-                
-                f"{self.inc}"
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
     def STL_SD(self):

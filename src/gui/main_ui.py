@@ -106,7 +106,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -1093, 818, 5415))
+        self.vlay_wg.setGeometry(QRect(0, -1481, 818, 5466))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -340,7 +340,7 @@ class Ui_main(object):
         self.fr_pg = QFrame(self.vlay_wg)
         self.fr_pg.setObjectName(u"fr_pg")
         self.vlay_pg = QVBoxLayout(self.fr_pg)
-        self.vlay_pg.setSpacing(0)
+        self.vlay_pg.setSpacing(10)
         self.vlay_pg.setObjectName(u"vlay_pg")
         self.vlay_pg.setContentsMargins(10, 10, 10, 10)
         self.lb_pg_demo = QLabel(self.fr_pg)
@@ -352,11 +352,17 @@ class Ui_main(object):
 
         self.vlay_pg.addItem(self.verticalSpacer_17)
 
-        self.pg_demo = QProgressBar(self.fr_pg)
-        self.pg_demo.setObjectName(u"pg_demo")
-        self.pg_demo.setValue(24)
+        self.pg_demo_th = QProgressBar(self.fr_pg)
+        self.pg_demo_th.setObjectName(u"pg_demo_th")
+        self.pg_demo_th.setValue(33)
 
-        self.vlay_pg.addWidget(self.pg_demo)
+        self.vlay_pg.addWidget(self.pg_demo_th)
+
+        self.pg_demo_tr = QProgressBar(self.fr_pg)
+        self.pg_demo_tr.setObjectName(u"pg_demo_tr")
+        self.pg_demo_tr.setValue(66)
+
+        self.vlay_pg.addWidget(self.pg_demo_tr)
 
 
         self.verticalLayout.addWidget(self.fr_pg)

@@ -59,7 +59,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             List_widget.base(self.lw_demo_th).th()
             List_widget.base(self.lw_demo_tr).tr()
         def PROGRESS_BAR():
-            Progress_bar.base(self.pg_demo).option()
+            Progress_bar.base(self.pg_demo_th).th()
+            Progress_bar.base(self.pg_demo_tr).tr()
         def PUSH_BUTTON():
             Push_button.menu_top(self.pb_mt_option).option()
             Push_button.menu_top(self.pb_mt_reduire).reduire()

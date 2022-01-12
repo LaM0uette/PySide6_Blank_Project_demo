@@ -151,9 +151,9 @@
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>-1093</y>
+              <y>-1481</y>
               <width>818</width>
-              <height>5415</height>
+              <height>5466</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout">
@@ -708,7 +708,7 @@
               <widget class="QFrame" name="fr_pg">
                <layout class="QVBoxLayout" name="vlay_pg">
                 <property name="spacing">
-                 <number>0</number>
+                 <number>10</number>
                 </property>
                 <property name="leftMargin">
                  <number>10</number>
@@ -746,9 +746,16 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QProgressBar" name="pg_demo">
+                 <widget class="QProgressBar" name="pg_demo_th">
                   <property name="value">
-                   <number>24</number>
+                   <number>33</number>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QProgressBar" name="pg_demo_tr">
+                  <property name="value">
+                   <number>66</number>
                   </property>
                  </widget>
                 </item>
