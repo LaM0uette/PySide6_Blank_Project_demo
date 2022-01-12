@@ -1,5 +1,5 @@
 from ..Attrs import Attrs
-from .. import Classe_wg
+from . import Classe_wg
 from ....build import *
 
 
@@ -188,13 +188,13 @@ class wg:
             try:
                 if pb_type is not None:
                     cls = Classe_wg.Classe_wg(wg=wg,
-                                                dim_ico=dim.get("h") * x_ico,
-                                                DIM_ICO=dim.get("h") * X_ICO,
-                                                img=img,
-                                                img_check=img_check,
-                                                tm=tm,
-                                                tm_hover=tm_hover,
-                                                tm_check=tm_check)
+                                              dim_ico=dim.get("h") * x_ico,
+                                              DIM_ICO=dim.get("h") * X_ICO,
+                                              img=img,
+                                              img_check=img_check,
+                                              tm=tm,
+                                              tm_hover=tm_hover,
+                                              tm_check=tm_check)
 
                     if pb_type == "check":
                         wg.mousePressEvent = cls.MP_CHECK

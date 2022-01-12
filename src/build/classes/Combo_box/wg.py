@@ -20,7 +20,7 @@ class wg:
         for wg in wgs:
             style_gen = f"""
                     /* COMBOBOX */
-                    QComboBox {{
+                    QComboBox, QFontComboBox {{
                     color: rgb{colors.get("c3")};
                     selection-background-color: rgb{colors.get("c3")};
                     selection-color: rgb{colors.get("c1")};
@@ -28,30 +28,30 @@ class wg:
                     }}
 
                     /* BOUTON DE DEROULEMENT */
-                    QComboBox::drop-down {{
+                    QComboBox::drop-down, QFontComboBox::drop-down {{
                     width: {dim.get("h")}px;
                     border: none;
                     }}
 
                     /* IMAGE DU BOUTON DE DEROULEMENT */
-                    QComboBox::down-arrow {{
+                    QComboBox::down-arrow, QFontComboBox::down-arrow {{
                     image: url({P_img().fleche_bottom() + "bn1" + ".svg"});
                     width: {dim.get("h") * P_style().x_ico()}px;
                     height: {dim.get("h") * P_style().x_ico()}px;
                     }}
-                    QComboBox::down-arrow:hover {{
+                    QComboBox::down-arrow:hover, QFontComboBox::down-arrow:hover {{
                     image: url({P_img().fleche_bottom() + "bn2" + ".svg"});
                     width: {dim.get("h") * P_style().x_ico()}px;
                     height: {dim.get("h") * P_style().x_ico()}px;
                     }}
 
                     /* ELEMENTS DEROULEMENT */
-                    QComboBox QAbstractItemView::item {{
+                    QComboBox QAbstractItemView::item, QFontComboBox QAbstractItemView::item {{
                     background-color: rgb{colors.get("c1")};
                     color: rgb{colors.get("c3")};
                     border: none;
                     }}
-                    QComboBox QAbstractItemView::item:hover {{
+                    QComboBox QAbstractItemView::item:hover, QFontComboBox QAbstractItemView::item:hover {{
                     background-color: rgb{colors.get("c3")};
                     color: rgb{colors.get("c1")};
                     border: none;
@@ -59,14 +59,14 @@ class wg:
 
 
                     /* BORDURES */
-                    .QComboBox#{wg.objectName()} {{
+                    .QComboBox#{wg.objectName()}, .QFontComboBox#{wg.objectName()} {{
                     border-width: {bd.get("px")}px;
                     border-style: solid;
                     border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
                     }}
 
                     /* RAYONS */
-                    .QComboBox#{wg.objectName()} {{
+                    .QComboBox#{wg.objectName()}, .QFontComboBox#{wg.objectName()} {{
                     border-top-left-radius: {rds.get("r1")}px;
                     border-top-right-radius: {rds.get("r2")}px;
                     border-bottom-right-radius: {rds.get("r4")}px;
@@ -74,24 +74,24 @@ class wg:
                     }}
 
                     /* SCROLL */
-                    QComboBox QScrollBar {{
+                    QComboBox QScrollBar, QFontComboBox QScrollBar {{
                     background-color: rgb{colors.get("c1")};
                     width: 20px;
                     height: 20px;
                     }}
-                    QComboBox ::handle:vertical {{
+                    QComboBox::handle:vertical, QFontComboBox::handle:vertical {{
                     min-height: 100px;
                     }}
-                    QComboBox ::handle:vertical {{
+                    QComboBox::handle:vertical, QFontComboBox::handle:vertical {{
                     min-height: 100px;
                     }}
-                    QComboBox ::handle:horizontal {{
+                    QComboBox::handle:horizontal, QFontComboBox::handle:horizontal {{
                     min-width: 100px;
                     }}
-                    QComboBox QScrollBar::handle {{
+                    QComboBox QScrollBar::handle, QFontComboBox QScrollBar::handle {{
                     background-color: rgb{colors.get("c3")};
                     }}
-                    QComboBox QScrollBar::add-page, QComboBox QScrollBar::sub-page {{
+                    QComboBox QScrollBar::add-page, QComboBox QScrollBar::sub-page, QFontComboBox QScrollBar::add-page, QFontComboBox QScrollBar::sub-page {{
                     background-color: rgb{colors.get("c1")};
                     border: rgb{colors.get("c1")};
                     }}
@@ -99,12 +99,12 @@ class wg:
             style_type = {
                 "th": f"""
                         /* COMBOBOX */
-                        QComboBox {{
+                        QComboBox, QFontComboBox {{
                         background-color: rgb{colors.get("c1")};
                         }}""",
                 "tr": """
                         /* COMBOBOX */
-                        QComboBox {
+                        QComboBox, QFontComboBox {
                         background-color: rgba(0, 0, 0, 0);
                         }"""
             }

@@ -1,7 +1,7 @@
 from PySide6 import QtCore, QtWidgets, QtGui
 
 from . import p_base
-from . import Classe_wg
+from .Push_button import Classe_wg
 from ...build import *
 from ...config import vrb
 
