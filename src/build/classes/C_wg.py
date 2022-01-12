@@ -933,9 +933,6 @@ class C_wg:
                 f"{self.inc}"
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
-
-
-
     def STL_RB(self):
         self.STL_ALL("rb")
 
@@ -1023,6 +1020,9 @@ class C_wg:
                 f"{self.inc}",
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
+
+
+
     def STL_SD(self):
         self.STL_ALL()
 

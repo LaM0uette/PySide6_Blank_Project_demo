@@ -77,6 +77,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Push_button.ck_ico(self.pb_demo_ck_ico, self.pb_demo_ico_ck).tr()
 
             Push_button.zoom(self.pb_demo_zoom).zoom_calendrier()
+        def RADIO_BUTTON():
+            Radio_button.base(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3).th()
+            Radio_button.base(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3).tr()
 
 
         def _func_try():
@@ -105,6 +108,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
             try: PUSH_BUTTON()
             except: print(f"PUSH_BUTTON{err}")
+
+            try: RADIO_BUTTON()
+            except: print(f"RADIO_BUTTON{err}")
         _func_try()
 
 
@@ -126,12 +132,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         In_classe(ui=self)
-
-        # QRadioButton
-        with C_rb() as cls:
-            # Demo
-            cls.demo_th(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3)
-            cls.demo_tr(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3)
 
         # QSlider
         with C_sd() as cls:

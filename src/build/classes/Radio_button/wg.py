@@ -22,84 +22,77 @@ class wg:
 
         for wg in wgs:
             style_gen = f"""
-                    /* CHECKBOX */
-                    QCheckBox {{
-                    color: rgb{colors.get("c3")};
-                    }}
-                    QCheckBox:hover {{
-                    color: rgb{colors.get("bn1")};
-                    }}
-                    QCheckBox:checked:hover {{
-                    color: rgb{colors.get("bn1")};
-                    }}
-                    QCheckBox:flat {{
-                    border: none;
-                    }}
+            QRadioButton:hover {{
+            color: rgb{colors.get("bn1")};
+            }}
 
-                    /* IMG */
-                    QCheckBox::indicator {{
-                    margin-left: {(dim.get('h') - (dim.get('h') * P_style().x_ico())) / 2}px;
-                    width: {dim.get('h') * P_style().x_ico()}px;
-                    height: {dim.get('h') * P_style().x_ico()}px
-                    }}
-                    QCheckBox::indicator:unchecked {{
-                    image: url({img + tm + '.svg'});
-                    }}
-                    QCheckBox::indicator:disabled {{
-                    image: url({img + tm + '.svg'});
-                    }}
-                    QCheckBox::indicator:checked {{
-                    image: url({img_check + tm_check + '.svg'});
-                    }}
+            QRadioButton:checked:hover {{
+            color: rgb{colors.get("bn1")};
+            }}
+
+            QRadioButton:flat {{
+            border: none;
+            }}
+            
+            QRadioButton::indicator {{
+            margin-left: {(dim.get('h') - (dim.get('h') * P_style().x_ico())) / 2}px;
+            width: {dim.get('h') * P_style().x_ico()}px;
+            height: {dim.get('h') * P_style().x_ico()}px
+            }}
+            
+            QRadioButton::indicator:unchecked {{
+            image: url({img + tm + '.svg'});
+            }}
+            
+            QRadioButton::indicator:disabled {{
+            image: url({img + tm + '.svg'});
+            }}
+            
+            QRadioButton::indicator:checked {{
+            image: url({img_check + tm_check + '.svg'});
+            }}
+            
 
 
-                    /* BORDURES */
-                    .QCheckBox#{wg.objectName()} {{
-                    border-width: {bd.get("px")}px;
-                    border-style: solid;
-                    border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
-                    padding: {P_style().bd()}px;
-                    }}
+            /* BORDURES */
+            .QRadioButton#{wg.objectName()} {{
+            border-width: {bd.get("px")}px;
+            border-style: solid;
+            border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
+            padding: {P_style().bd()}px;
+            }}
 
-                    /* RAYONS */
-                    .QCheckBox#{wg.objectName()} {{
-                    border-top-left-radius: {rds.get("r1")}px;
-                    border-top-right-radius: {rds.get("r2")}px;
-                    border-bottom-right-radius: {rds.get("r4")}px;
-                    border-bottom-left-radius: {rds.get("r3")}px;
-                    }}
+            /* RAYONS */
+            .QRadioButton#{wg.objectName()} {{
+            border-top-left-radius: {rds.get("r1")}px;
+            border-top-right-radius: {rds.get("r2")}px;
+            border-bottom-right-radius: {rds.get("r4")}px;
+            border-bottom-left-radius: {rds.get("r3")}px;
+            }}
             """
             style_type = {
                 "th": f"""
-                        QCheckBox {{
-                        background-color: rgb{colors.get("c1")};
-                        spacing: 10px;
-                        }}
-                        QCheckBox:hover {{
-                        background-color: rgb{colors.get("c1")};
-                        }}
-                        QCheckBox:checked {{
-                        background-color: rgb{colors.get("c3")};
-                        color: rgb{colors.get("c1")};
-                        }}
-                        QCheckBox:checked:hover {{
-                        background-color: rgb{colors.get("c3")};
-                        }}""",
+                QRadioButton {{
+                background-color: rgb{colors.get("c1")};
+                color: rgb{colors.get("c3")};
+                }}
+                
+                QRadioButton:checked {{
+                background-color: rgb{colors.get("c3")};
+                color: rgb{colors.get("c1")};
+                }}
+                
+                QRadioButton:checked:hover {{
+                background-color: rgb{colors.get("c3")};
+                }}
+                """,
+
                 "tr": f"""
-                        QCheckBox {{
-                        background-color: rgba(0, 0, 0, 0);
-                        spacing: 10px;
-                        }}
-                        QCheckBox:hover {{
-                        background-color: rgba(0, 0, 0, 0);
-                        }}
-                        QCheckBox:checked {{
-                        background-color: rgba(0, 0, 0, 0);
-                        color: rgb{colors.get("c3")};
-                        }}
-                        QCheckBox:checked:hover {{
-                        background-color: rgba(0, 0, 0, 0);
-                        }}"""
+                QRadioButton {{
+                color: rgb{colors.get("c3")};
+                spacing: 10px;
+                }}
+                """
             }
             style = style_gen + style_type.get(colors_type)
 
