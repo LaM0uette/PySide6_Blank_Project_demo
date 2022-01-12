@@ -151,7 +151,7 @@
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>-1481</y>
+              <y>-2951</y>
               <width>818</width>
               <height>5466</height>
              </rect>
@@ -1233,9 +1233,6 @@
                 <property name="spacing">
                  <number>10</number>
                 </property>
-                <item row="5" column="0" colspan="3">
-                 <widget class="QDoubleSpinBox" name="dsb_demo"/>
-                </item>
                 <item row="0" column="0" colspan="3">
                  <widget class="QLabel" name="lb_sb_demo">
                   <property name="text">
@@ -1268,8 +1265,11 @@
                 <item row="4" column="1">
                  <widget class="QSpinBox" name="sb_demo_3"/>
                 </item>
-                <item row="2" column="0" rowspan="3">
-                 <spacer name="horizontalSpacer">
+                <item row="5" column="1">
+                 <widget class="QDoubleSpinBox" name="dsb_demo"/>
+                </item>
+                <item row="2" column="2" rowspan="4">
+                 <spacer name="horizontalSpacer_3">
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
@@ -1281,8 +1281,8 @@
                   </property>
                  </spacer>
                 </item>
-                <item row="2" column="2" rowspan="3">
-                 <spacer name="horizontalSpacer_3">
+                <item row="2" column="0" rowspan="4">
+                 <spacer name="horizontalSpacer">
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>

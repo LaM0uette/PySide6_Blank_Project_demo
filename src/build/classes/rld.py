@@ -9,6 +9,7 @@ from .List_widget import List_widget
 from .Progress_bar import Progress_bar
 from .Push_button import Push_button
 from .Radio_button import Radio_button
+from .Spin_box import Spin_box
 
 
 importlib.reload(Check_box)
@@ -20,3 +21,4 @@ importlib.reload(List_widget)
 importlib.reload(Progress_bar)
 importlib.reload(Push_button)
 importlib.reload(Radio_button)
+importlib.reload(Spin_box)

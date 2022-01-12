@@ -163,11 +163,11 @@ class C_wg:
 
         self.min = attrs.get("min")
         if self.min is None:
-            self.min = p_base.MIN
+            self.min = p_base.VAL_MIN
 
         self.max = attrs.get("max")
         if self.max is None:
-            self.max = p_base.MAX
+            self.max = p_base.VAL_MAX
 
         self.step = attrs.get("step")
         if self.step is None:
@@ -1020,7 +1020,38 @@ class C_wg:
                 f"{self.inc}",
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
+    def STL_SB(self):
+        self.STL_ALL("sb")
 
+        stl = {
+            "th":
+                "QSpinBox, QDoubleSpinBox {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                f"selection-background-color: rgb{self.c3};"
+                f"selection-color: rgb{self.c1};"
+                "}"
+
+                f"{self.inc}",
+            "tr":
+                "QSpinBox, QDoubleSpinBox {"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                f"selection-background-color: rgb{self.c1};"
+                f"selection-color: rgb{self.c3};"
+                "}"
+
+                f"{self.inc}"
+        }
+        self.wg.setStyleSheet(stl.get(self.colors_type))
+
+        self.wg.setMinimum(self.min)
+        self.wg.setMaximum(self.max)
+        self.wg.setSingleStep(self.step)
+
+        if self.colors_type == "tr":
+            self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
+        self.wg.setFrame(QtWidgets.QFrame.NoFrame)
 
 
     def STL_SD(self):
@@ -1163,38 +1194,7 @@ class C_wg:
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
         self.wg.setFrameShape(QtWidgets.QFrame.NoFrame)
-    def STL_SB(self):
-        self.STL_ALL("sb")
 
-        stl = {
-            "th":
-                "QSpinBox, QDoubleSpinBox {"
-                f"background-color: rgb{self.c1};"
-                f"color: rgb{self.c3};"
-                f"selection-background-color: rgb{self.c3};"
-                f"selection-color: rgb{self.c1};"
-                "}"
-                
-                f"{self.inc}",
-            "tr":
-                "QSpinBox, QDoubleSpinBox {"
-                f"background-color: rgb{self.c1};"
-                f"color: rgb{self.c3};"
-                f"selection-background-color: rgb{self.c1};"
-                f"selection-color: rgb{self.c3};"
-                "}"
-                
-                f"{self.inc}"
-        }
-        self.wg.setStyleSheet(stl.get(self.colors_type))
-
-        self.wg.setMinimum(self.min)
-        self.wg.setMaximum(self.max)
-        self.wg.setSingleStep(self.step)
-
-        if self.colors_type == "tr":
-            self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
-        self.wg.setFrame(QtWidgets.QFrame.NoFrame)
     def STL_TW(self):
         self.STL_ALL()
 

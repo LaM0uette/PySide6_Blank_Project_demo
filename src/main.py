@@ -80,6 +80,11 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         def RADIO_BUTTON():
             Radio_button.base(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3).th()
             Radio_button.base(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3).tr()
+        def SPIN_BOX():
+            Spin_box.plus_minus(self.sb_demo).th()
+            Spin_box.up_down(self.sb_demo_2).th()
+            Spin_box.plus_minus(self.sb_demo_3).th_lr()
+            Spin_box.base(self.dsb_demo).tr()
 
 
         def _func_try():
@@ -111,6 +116,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
             try: RADIO_BUTTON()
             except: print(f"RADIO_BUTTON{err}")
+
+            try: SPIN_BOX()
+            except: print(f"SPIN_BOX{err}")
         _func_try()
 
 
@@ -141,14 +149,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             # Demo
             cls.demo_h(self.hsd_demo)
             cls.demo_v(self.vsd_demo)
-
-        # QSpinBox | QDoubleSpinBox
-        with C_sb() as cls:
-            # Demo
-            cls.demo_th(self.sb_demo)
-            cls.demo_th_2(self.sb_demo_2)
-            cls.demo_th_3(self.sb_demo_3)
-            cls.demo_tr(self.dsb_demo)
 
         # QTableWidget
         with C_tw() as cls:

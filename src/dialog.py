@@ -96,6 +96,10 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             Push_button.base(self.pb_opt_tm_th3).plein_th3()
             Push_button.base(self.pb_opt_tm_bn1).plein_bn1()
             Push_button.base(self.pb_opt_tm_bn2).plein_bn2()
+        def SPIN_BOX():
+            Spin_box.plus_minus(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity).bd_th3()
+            Spin_box.plus_minus_infini(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height).bd_th3()
+            Spin_box.rgb(self.spinBox).bd_th3()
 
 
         def _func_try():
@@ -115,6 +119,9 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
             try: PUSH_BUTTON()
             except: print(f"PUSH_BUTTON{err}")
+
+            try: SPIN_BOX()
+            except: print(f"SPIN_BOX{err}")
         _func_try()
 
 
@@ -138,12 +145,6 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         with C_sd() as C_:
             # Demo
             C_.th_rond(self.sd_opt_rgb_red, self.sd_opt_rgb_green, self.sd_opt_rgb_blue)
-
-        # QSpinBox | QDoubleSpinBox
-        with C_sb() as C_:
-            C_.th1(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity)
-            C_.th1_full(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height)
-            C_.th1_(self.spinBox)
 
         # QTreeWidget
         with C_trw() as C_:
