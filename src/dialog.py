@@ -104,6 +104,12 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             Spin_box.plus_minus(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity).bd_th3()
             Spin_box.plus_minus_infini(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height).bd_th3()
             Spin_box.rgb(self.spinBox).bd_th3()
+        def TEXT_EDIT():
+            Text_edit.h1(self.le_opt_ft_texte_h1).tr()
+            Text_edit.h2(self.le_opt_ft_texte_h2).tr()
+            Text_edit.h3(self.le_opt_ft_texte_h3).tr()
+            Text_edit.h4(self.le_opt_ft_texte_h4).tr()
+            Text_edit.h5(self.le_opt_ft_texte_h5).tr()
 
 
         def _func_try():
@@ -132,17 +138,10 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
             try: SPIN_BOX()
             except: print(f"SPIN_BOX{err}")
+
+            try: TEXT_EDIT()
+            except: print(f"TEXT_EDIT{err}")
         _func_try()
-
-
-        # QLineEdit | QTextEdit | QPlainTextEdit
-        with C_txt() as C_:
-            C_.tr(self.le_input)
-            C_.tr_h1(self.le_opt_ft_texte_h1)
-            C_.tr_h2(self.le_opt_ft_texte_h2)
-            C_.tr_h3(self.le_opt_ft_texte_h3)
-            C_.tr_h4(self.le_opt_ft_texte_h4)
-            C_.tr_h5(self.le_opt_ft_texte_h5)
 
 
         In_classe(ui=self)
