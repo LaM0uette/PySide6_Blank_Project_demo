@@ -106,7 +106,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -4471, 818, 5486))
+        self.vlay_wg.setGeometry(QRect(0, -3765, 818, 5567))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -1020,6 +1020,11 @@ class Ui_main(object):
 
         self.vlay_pte.addWidget(self.pte_demo_th)
 
+        self.pte_demo_tr = QPlainTextEdit(self.fr_pte)
+        self.pte_demo_tr.setObjectName(u"pte_demo_tr")
+
+        self.vlay_pte.addWidget(self.pte_demo_tr)
+
 
         self.verticalLayout.addWidget(self.fr_pte)
 
@@ -1044,7 +1049,7 @@ class Ui_main(object):
         self.tb_demo.setObjectName(u"tb_demo")
         self.page = QWidget()
         self.page.setObjectName(u"page")
-        self.page.setGeometry(QRect(0, 0, 100, 30))
+        self.page.setGeometry(QRect(0, 0, 696, 69))
         self.verticalLayout_2 = QVBoxLayout(self.page)
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
@@ -1189,11 +1194,6 @@ class Ui_main(object):
 
 
         self.vlay_fr_main.addWidget(self.fr_menu_bottom)
-
-        self.pte_demo_tr = QPlainTextEdit(self.fr_main)
-        self.pte_demo_tr.setObjectName(u"pte_demo_tr")
-
-        self.vlay_fr_main.addWidget(self.pte_demo_tr)
 
 
         self.vlay_main.addWidget(self.fr_main)
@@ -1590,6 +1590,7 @@ class Ui_main(object):
         self.te_demo_tr.setPlaceholderText(QCoreApplication.translate("main", u"Je suis le text de test...", None))
         self.lb_pte_demo.setText(QCoreApplication.translate("main", u"QPlainText :", None))
         self.pte_demo_th.setPlaceholderText(QCoreApplication.translate("main", u"Je suis le text de test...", None))
+        self.pte_demo_tr.setPlaceholderText(QCoreApplication.translate("main", u"Je suis le text de test...", None))
         self.lb_tb_demo.setText(QCoreApplication.translate("main", u"QToolBox :", None))
         self.tb_demo.setItemText(self.tb_demo.indexOf(self.page), QCoreApplication.translate("main", u"Page 1", None))
         self.tb_demo.setItemText(self.tb_demo.indexOf(self.page_2), QCoreApplication.translate("main", u"Page 2", None))
@@ -1696,7 +1697,6 @@ class Ui_main(object):
         ___qtreewidgetitem45.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
         self.trw_demo_tr.setSortingEnabled(__sortingEnabled3)
 
-        self.pte_demo_tr.setPlaceholderText(QCoreApplication.translate("main", u"Je suis le text de test...", None))
         pass
     # retranslateUi
 

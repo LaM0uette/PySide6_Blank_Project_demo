@@ -37,14 +37,14 @@ class wg:
             style_type = {
                 "th": f"""
                 /* LABEL */
-                QLabel {{
+                .QLabel {{
                 background-color: rgb{colors.get("c1")};
                 color: rgb{colors.get("c3")};
                 }}""",
 
                 "tr": f"""
                 /* LABEL */
-                QLabel {{
+                .QLabel {{
                 background-color: rgba(0, 0, 0, 0);
                 color: rgb{colors.get("c1")};
                 }}"""
