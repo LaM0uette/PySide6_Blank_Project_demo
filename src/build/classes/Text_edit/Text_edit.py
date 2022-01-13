@@ -9,7 +9,6 @@ class rtn:
                  colors=p_base.COLORS,
                  dim=p_base.DIM,
                  align=p_base.ALIGN,
-                 word_wrap=p_base.WORD_WRAP,
                  font=p_base.FONT,
                  bd=p_base.BD,
                  rd=p_base.RD
@@ -20,7 +19,6 @@ class rtn:
         self.colors = colors
         self.dim = dim
         self.align = align
-        self.word_wrap = word_wrap
         self.font = font
         self.bd = bd
         self.rd = rd
@@ -32,7 +30,6 @@ class rtn:
             colors=self.colors,
             dim=self.dim,
             align=self.align,
-            word_wrap=self.word_wrap,
             font=self.font,
             bd=self.bd,
             rd=self.rd,

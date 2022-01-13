@@ -12,7 +12,6 @@ class wg:
                  dim,
                  font,
                  align,
-                 word_wrap,
                  bd,
                  rd,
     ):
@@ -21,6 +20,11 @@ class wg:
 
         for wg in wgs:
             style_gen = f"""
+            QLineEdit, QPlainTextEdit, QTextEdit {{
+            selection-background-color: rgb{colors.get("c3")};
+            selection-color: rgb{colors.get("c1")};
+            }}
+            
             /* BORDURES */
             .QLineEdit#{wg.objectName()}, .QPlainTextEdit#{wg.objectName()}, .QTextEdit#{wg.objectName()} {{
             border-width: {bd.get("px")}px;
@@ -63,13 +67,23 @@ class wg:
                 "th": f"""
                 QLineEdit, QPlainTextEdit, QTextEdit {{
                 background-color: rgb{colors.get("c1")};
+                color: rgb{colors.get("bn1")};
+                }}
+                
+                QLineEdit[text=''], QPlainTextEdit[plainText=''], QTextEdit[plainText=''] {{
+                color: rgb{colors.get("c3")};
                 }}
                 """,
 
-                "tr": """
-                QLineEdit, QPlainTextEdit, QTextEdit {
+                "tr": f"""
+                QLineEdit, QPlainTextEdit, QTextEdit {{
                 background-color: rgba(0, 0, 0, 0);
-                }
+                color: rgb{colors.get("bn1")};
+                }}
+                
+                QLineEdit[text=''], QPlainTextEdit[plainText=''], QTextEdit[plainText=''] {{
+                color: rgb{colors.get("c3")};
+                }}
                 """
             }
             style = style_gen + style_type.get(colors_type)
@@ -88,9 +102,5 @@ class wg:
             try:wg.viewport().setCursor(Fct(cur=P_cur().IBeam()).CUR())
             except: pass
 
-            try:
-                pl = QtGui.QPalette()
-                pl.setColor(QtGui.QPalette.PlaceholderText, QtGui.QColor(*colors.get("c2")))
-                pl.setColor(QtGui.QPalette.Text, QtGui.QColor(*colors.get("c3")))
-                wg.setPalette(pl)
+            try: wg.textChanged.connect(lambda: wg.setStyleSheet(style))
             except: pass
