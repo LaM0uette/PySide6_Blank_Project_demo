@@ -80,6 +80,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         def RADIO_BUTTON():
             Radio_button.base(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3).th()
             Radio_button.base(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3).tr()
+        def SCROLL_BOX_AREA():
+            Scroll_box_area.base(self.sca_main).tr()
         def SPIN_BOX():
             Spin_box.plus_minus(self.sb_demo).th()
             Spin_box.up_down(self.sb_demo_2).th()
@@ -117,6 +119,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             try: RADIO_BUTTON()
             except: print(f"RADIO_BUTTON{err}")
 
+            try: SCROLL_BOX_AREA()
+            except: print(f"SCROLL_BOX_AREA{err}")
+
             try: SPIN_BOX()
             except: print(f"SPIN_BOX{err}")
         _func_try()
@@ -135,11 +140,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             cls.demotr(self.le_demo_tr)
             cls.demo_th(self.te_demo_th, self.pte_demo_th)
             cls.demo_tr(self.te_demo_tr, self.pte_demo_tr)
-
-        # QScrollBoxArea
-        with C_sca() as cls:
-            # Demo
-            cls.demo(self.sca_main)
 
 
         In_classe(ui=self)
