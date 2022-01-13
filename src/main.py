@@ -81,7 +81,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Radio_button.base(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3).th()
             Radio_button.base(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3).tr()
         def SCROLL_BOX_AREA():
-            Scroll_box_area.base(self.sca_main).tr()
+            Scroll_box_area.base(self.sca_main).th()
         def SPIN_BOX():
             Spin_box.plus_minus(self.sb_demo).th()
             Spin_box.up_down(self.sb_demo_2).th()

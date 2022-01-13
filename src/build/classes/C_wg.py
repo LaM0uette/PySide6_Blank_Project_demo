@@ -1020,6 +1020,20 @@ class C_wg:
                 f"{self.inc}",
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
+    def STL_SCA(self):
+        self.STL_ALL("sca")
+
+        stl = {
+            "th":
+                ".QScrollArea .QWidget{"
+                f"background-color: rgb{self.c1};"
+                f"color: rgb{self.c3};"
+                "}"
+
+                f"{self.inc}"
+        }
+        self.wg.setStyleSheet(stl.get(self.colors_type))
+        self.wg.setFrameShape(QtWidgets.QFrame.NoFrame)
     def STL_SB(self):
         self.STL_ALL("sb")
 
@@ -1180,20 +1194,7 @@ class C_wg:
                 "}"
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
-    def STL_SCA(self):
-        self.STL_ALL("sca")
 
-        stl = {
-            "th":
-                ".QScrollArea .QWidget{"
-                f"background-color: rgb{self.c1};"
-                f"color: rgb{self.c3};"
-                "}"
-                
-                f"{self.inc}"
-        }
-        self.wg.setStyleSheet(stl.get(self.colors_type))
-        self.wg.setFrameShape(QtWidgets.QFrame.NoFrame)
 
     def STL_TW(self):
         self.STL_ALL()

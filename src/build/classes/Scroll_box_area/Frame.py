@@ -10,7 +10,6 @@ class rtn:
                  dim=p_base.DIM,
                  bd=p_base.BD,
                  rd=p_base.RD,
-                 scroll=p_base.SCROLL,
                  ):
         self.wgs = wgs
 
@@ -19,7 +18,6 @@ class rtn:
         self.dim = dim
         self.bd = bd
         self.rd = rd
-        self.scroll = scroll
 
     def rtn(self):
         wg(
@@ -29,7 +27,6 @@ class rtn:
             dim=self.dim,
             bd=self.bd,
             rd=self.rd,
-            scroll=self.scroll,
         )
 
     def th(self):
@@ -39,14 +36,38 @@ class rtn:
         self.colors_type = "tr"
         self.rtn()
 
-    def invisible(self):
-        self.scroll = P_scroll().off().off()
+    def cadre_th2(self):
+        self.bd = P_bd().all().th2()
+        self.tr()
+    def cadre_th3(self):
+        self.bd = P_bd().all().th3()
+        self.tr()
+    def cadre_bn1(self):
+        self.bd = P_bd().all().bn1()
         self.tr()
 
 
 class base(rtn):
     def __init__(self, *wgs):
         super().__init__(*wgs,
+                         colors=P_rgb().p_th3(),
+                         dim=P_dim().all(),
+        )
+class menu_top(rtn):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
                          colors=P_rgb().p_th1(),
-                         scroll=P_scroll().off().nd()
+                         dim=P_dim().aw().h9(),
+        )
+class menu_bottom(rtn):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+                         colors=P_rgb().p_th2(),
+                         dim=P_dim().aw().h10(),
+        )
+class menu_bottom_dlg(rtn):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+                         colors=P_rgb().p_th2(),
+                         dim=P_dim().aw().h9(),
         )

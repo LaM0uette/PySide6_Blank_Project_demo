@@ -12,6 +12,7 @@ class wg:
                  dim,
                  bd,
                  rd,
+                 scroll
     ):
         bds = Attrs(bd=bd).GET_BD()
         rds = Attrs(rd=rd).GET_RD()
@@ -32,18 +33,40 @@ class wg:
                     border-bottom-right-radius: {rds.get("r4")}px;
                     border-bottom-left-radius: {rds.get("r3")}px;
                     }}
+
+                    /* SCROLL */
+                    .QScrollArea QScrollBar {{
+                    background-color: rgb{colors.get("c1")};
+                    width: 20px;
+                    height: 20px;
+                    }}
+                    .QScrollArea::handle:vertical {{
+                    min-height: 100px;
+                    }}
+                    .QScrollArea::handle:vertical {{
+                    min-height: 100px;
+                    }}
+                    .QScrollArea::handle:horizontal {{
+                    min-width: 100px;
+                    }}
+                    .QScrollArea QScrollBar::handle {{
+                    background-color: rgb{colors.get("c3")};
+                    }}
+                    .QScrollArea QScrollBar::add-page, .QScrollArea QScrollBar::sub-page {{
+                    background-color: rgb{colors.get("c1")};
+                    border: rgb{colors.get("c1")};
+                    }}
             """
             style_type = {
                 "th": f"""
-                        /* FRAME */
-                        .QFrame#{wg.objectName()} {{
-                        background-color: rgb{colors.get("c1")};
-                        }}""",
+                .QScrollArea .QWidget {{
+                background-color: rgb{colors.get("c1")};
+                }}""",
+
                 "tr": f"""
-                        /* FRAME */
-                        .QFrame#{wg.objectName()} {{
-                        background-color: rgba(0, 0, 0, 0);
-                        }}"""
+                .QScrollArea .QWidget {{
+                background-color: rgba(0, 0, 0, 0);
+                }}"""
             }
             style = style_gen + style_type.get(colors_type)
 
@@ -51,6 +74,9 @@ class wg:
 
             try:
                 Fct(wg=wg, w=dim.get("w"), h=dim.get("h")).DIM()
+
+                wg.setHorizontalScrollBarPolicy(scroll.get("h"))
+                wg.setVerticalScrollBarPolicy(scroll.get("v"))
 
                 wg.setFrameShape(QtWidgets.QFrame.NoFrame)
             except: pass

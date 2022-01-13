@@ -96,6 +96,8 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             Push_button.base(self.pb_opt_tm_th3).plein_th3()
             Push_button.base(self.pb_opt_tm_bn1).plein_bn1()
             Push_button.base(self.pb_opt_tm_bn2).plein_bn2()
+        def SCROLL_BOX_AREA():
+            Scroll_box_area.base(self.sca_option, self.sca_colors).invisible()
         def SPIN_BOX():
             Spin_box.plus_minus(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity).bd_th3()
             Spin_box.plus_minus_infini(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height).bd_th3()
@@ -120,6 +122,9 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             try: PUSH_BUTTON()
             except: print(f"PUSH_BUTTON{err}")
 
+            try: SCROLL_BOX_AREA()
+            except: print(f"SCROLL_BOX_AREA{err}")
+
             try: SPIN_BOX()
             except: print(f"SPIN_BOX{err}")
         _func_try()
@@ -134,9 +139,6 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             C_.tr_h4(self.le_opt_ft_texte_h4)
             C_.tr_h5(self.le_opt_ft_texte_h5)
 
-        # QScrollBoxArea
-        with C_sca() as C_:
-            C_.invisible(self.sca_option, self.sca_colors)
 
         In_classe(ui=self)
 

@@ -36,6 +36,10 @@ class rtn:
         self.colors_type = "tr"
         self.rtn()
 
+    def th1(self):
+        self.colors = P_rgb().p_th1()
+        self.th()
+
     def cadre_th2(self):
         self.bd = P_bd().all().th2()
         self.tr()
