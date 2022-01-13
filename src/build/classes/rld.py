@@ -12,6 +12,7 @@ from .Radio_button import Radio_button
 from .Scroll_box_area import Scroll_box_area
 from .Slider import Slider
 from .Spin_box import Spin_box
+from .Table_widget import Table_widget
 
 
 importlib.reload(Check_box)
@@ -26,3 +27,4 @@ importlib.reload(Radio_button)
 importlib.reload(Scroll_box_area)
 importlib.reload(Slider)
 importlib.reload(Spin_box)
+importlib.reload(Table_widget)

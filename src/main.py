@@ -90,6 +90,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Spin_box.up_down(self.sb_demo_2).th()
             Spin_box.plus_minus(self.sb_demo_3).th_lr()
             Spin_box.base(self.dsb_demo).tr()
+        def TABLE_WIDGET():
+            Table_widget.base(self.tw_demo).th()
 
 
         def _func_try():
@@ -130,6 +132,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
             try: SPIN_BOX()
             except: print(f"SPIN_BOX{err}")
+
+            try: TABLE_WIDGET()
+            except: print(f"TABLE_WIDGET{err}")
         _func_try()
 
 
@@ -149,11 +154,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         In_classe(ui=self)
-
-        # QTableWidget
-        with C_tw() as cls:
-            # Demo
-            cls.demo(self.tw_demo)
 
         # QToolBox
         with C_tb() as cls:

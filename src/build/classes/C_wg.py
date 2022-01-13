@@ -1066,9 +1066,6 @@ class C_wg:
         if self.colors_type == "tr":
             self.wg.setFocusPolicy(QtCore.Qt.NoFocus)
         self.wg.setFrame(QtWidgets.QFrame.NoFrame)
-
-
-
     def STL_SD(self):
         self.STL_ALL()
 
@@ -1195,6 +1192,7 @@ class C_wg:
                 "}"
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
+
 
 
     def STL_TW(self):
