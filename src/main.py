@@ -93,6 +93,11 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         def TABLE_WIDGET():
             Table_widget.base(self.tw_demo_th).th()
             Table_widget.base(self.tw_demo_tr).tr()
+        def TEXT_EDIT():
+            Text_edit.base(self.le_demo_th).th()
+            Text_edit.base(self.le_demo_tr).bottom_th2()
+            Text_edit.base_bloc(self.te_demo_th, self.pte_demo_th).th()
+            Text_edit.base_bloc(self.te_demo_tr, self.pte_demo_tr).tr()
 
 
         def _func_try():
@@ -136,22 +141,16 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
             try: TABLE_WIDGET()
             except: print(f"TABLE_WIDGET{err}")
+
+            try: TEXT_EDIT()
+            except: print(f"TEXT_EDIT{err}")
+
+
         _func_try()
 
 
 
 
-
-
-
-
-        # QLineEdit | QTextEdit | QPlainTextEdit
-        with C_txt() as cls:
-            # Demo
-            cls.demoth(self.le_demo_th)
-            cls.demotr(self.le_demo_tr)
-            cls.demo_th(self.te_demo_th, self.pte_demo_th)
-            cls.demo_tr(self.te_demo_tr, self.pte_demo_tr)
 
 
         In_classe(ui=self)

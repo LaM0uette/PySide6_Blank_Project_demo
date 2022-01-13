@@ -1192,9 +1192,6 @@ class C_wg:
                 "}"
         }
         self.wg.setStyleSheet(stl.get(self.colors_type))
-
-
-
     def STL_TW(self):
         self.STL_ALL()
 
@@ -1279,6 +1276,8 @@ class C_wg:
         self.wg.setPalette(pl)
 
         self.wg.setStyleSheet(stl.get(self.colors_type))
+
+
 
     def STL_TRW(self):
         self.STL_ALL("trw")

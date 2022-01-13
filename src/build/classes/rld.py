@@ -13,6 +13,7 @@ from .Scroll_box_area import Scroll_box_area
 from .Slider import Slider
 from .Spin_box import Spin_box
 from .Table_widget import Table_widget
+from .Text_edit import Text_edit
 
 
 importlib.reload(Check_box)
@@ -28,3 +29,4 @@ importlib.reload(Scroll_box_area)
 importlib.reload(Slider)
 importlib.reload(Spin_box)
 importlib.reload(Table_widget)
+importlib.reload(Text_edit)

@@ -1,3 +1,5 @@
+from PySide6 import QtGui
+
 from ..Attrs import Attrs
 from ....build import *
 
@@ -19,35 +21,56 @@ class wg:
 
         for wg in wgs:
             style_gen = f"""
-                    /* BORDURES */
-                    .QLabel#{wg.objectName()} {{
-                    border-width: {bd.get("px")}px;
-                    border-style: solid;
-                    border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
-                    }}
+            /* BORDURES */
+            .QLineEdit#{wg.objectName()}, .QPlainTextEdit#{wg.objectName()}, .QTextEdit#{wg.objectName()} {{
+            border-width: {bd.get("px")}px;
+            border-style: solid;
+            border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
+            }}
 
-                    /* RAYONS */
-                    .QLabel#{wg.objectName()} {{
-                    border-top-left-radius: {rds.get("r1")}px;
-                    border-top-right-radius: {rds.get("r2")}px;
-                    border-bottom-right-radius: {rds.get("r4")}px;
-                    border-bottom-left-radius: {rds.get("r3")}px;
-                    }}
+            /* RAYONS */
+            .QLineEdit#{wg.objectName()}, .QPlainTextEdit#{wg.objectName()}, .QTextEdit#{wg.objectName()} {{
+            border-top-left-radius: {rds.get("r1")}px;
+            border-top-right-radius: {rds.get("r2")}px;
+            border-bottom-right-radius: {rds.get("r4")}px;
+            border-bottom-left-radius: {rds.get("r3")}px;
+            }}
+
+            /* SCROLL */
+            QPlainTextEdit QScrollBar, QTextEdit QScrollBar {{
+            background-color: rgb{colors.get("c1")};
+            width: 20px;
+            height: 20px;
+            }}
+            QPlainTextEdit::handle:vertical, QTextEdit::handle:vertical {{
+            min-height: 100px;
+            }}
+            QPlainTextEdit::handle:vertical, QTextEdit::handle:vertical {{
+            min-height: 100px;
+            }}
+            QPlainTextEdit::handle:horizontal, QTextEdit::handle:horizontal {{
+            min-width: 100px;
+            }}
+            QPlainTextEdit QScrollBar::handle, QTextEdit QScrollBar::handle {{
+            background-color: rgb{colors.get("c3")};
+            }}
+            QPlainTextEdit QScrollBar::add-page, QPlainTextEdit QScrollBar::sub-page, QTextEdit QScrollBar::add-page, QTextEdit QScrollBar::sub-page {{
+            background-color: rgb{colors.get("c1")};
+            border: rgb{colors.get("c1")};
+            }}
             """
             style_type = {
                 "th": f"""
-                /* LABEL */
-                QLabel {{
+                QLineEdit, QPlainTextEdit, QTextEdit {{
                 background-color: rgb{colors.get("c1")};
-                color: rgb{colors.get("c3")};
-                }}""",
+                }}
+                """,
 
-                "tr": f"""
-                /* LABEL */
-                QLabel {{
+                "tr": """
+                QLineEdit, QPlainTextEdit, QTextEdit {
                 background-color: rgba(0, 0, 0, 0);
-                color: rgb{colors.get("c1")};
-                }}"""
+                }
+                """
             }
             style = style_gen + style_type.get(colors_type)
 
@@ -58,5 +81,16 @@ class wg:
                 wg.setFont(Fct(font_size=font).FONT())
 
                 wg.setAlignment(align)
-                wg.setWordWrap(word_wrap)
+
+                wg.setCursor(Fct(cur=P_cur().IBeam()).CUR())
+            except: pass
+
+            try:wg.viewport().setCursor(Fct(cur=P_cur().IBeam()).CUR())
+            except: pass
+
+            try:
+                pl = QtGui.QPalette()
+                pl.setColor(QtGui.QPalette.PlaceholderText, QtGui.QColor(*colors.get("c2")))
+                pl.setColor(QtGui.QPalette.Text, QtGui.QColor(*colors.get("c3")))
+                wg.setPalette(pl)
             except: pass
