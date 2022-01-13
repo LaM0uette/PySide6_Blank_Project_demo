@@ -1,5 +1,3 @@
-from PySide6 import QtWidgets
-
 from ..Attrs import Attrs
 from ....build import *
 
@@ -12,6 +10,7 @@ class wg:
                  dim,
                  bd,
                  rd,
+                 cur
     ):
         bds = Attrs(bd=bd).GET_BD()
         rds = Attrs(rd=rd).GET_RD()
@@ -19,14 +18,14 @@ class wg:
         for wg in wgs:
             style_gen = f"""
                     /* BORDURES */
-                    .QFrame#{wg.objectName()} {{
+                    .QSlider#{wg.objectName()} {{
                     border-width: {bd.get("px")}px;
                     border-style: solid;
                     border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
                     }}
 
                     /* RAYONS */
-                    .QFrame#{wg.objectName()} {{
+                    .QSlider#{wg.objectName()} {{
                     border-top-left-radius: {rds.get("r1")}px;
                     border-top-right-radius: {rds.get("r2")}px;
                     border-bottom-right-radius: {rds.get("r4")}px;
@@ -35,15 +34,126 @@ class wg:
             """
             style_type = {
                 "th": f"""
-                        /* FRAME */
-                        .QFrame#{wg.objectName()} {{
-                        background-color: rgb{colors.get("c1")};
-                        }}""",
-                "tr": f"""
-                        /* FRAME */
-                        .QFrame#{wg.objectName()} {{
-                        background-color: rgba(0, 0, 0, 0);
-                        }}"""
+                /* SLIDER  */
+                QSlider {{
+                margin: 0px
+                }}
+                
+                /* BARRE_H */
+                QSlider::groove:horizontal {{
+                border-radius: 5px;
+                height: 20px;
+                margin: 0px;
+                background-color: rgb{colors.get("c3")};
+                }}
+                QSlider::groove:horizontal:hover {{
+                background-color: rgb{colors.get("c3")};
+                }}
+                
+                /* CURSEUR_H */
+                QSlider::handle:horizontal {{
+                border: none;
+                height: 20px;
+                width: 20px;
+                margin: -10px 0px;
+                border-radius: 5px;
+                background-color: rgb{colors.get("c1")};
+                }}
+                QSlider::handle:horizontal:hover {{
+                background-color: rgb{colors.get("bn1")};
+                }}
+                QSlider::handle:horizontal:pressed {{
+                background-color: rgb{colors.get("bn2")};
+                }}
+                
+                /* BARRE_V */
+                QSlider::groove:vertical {{
+                border-radius: 5px;
+                width: 20px;
+                margin: 0px;
+                background-color: rgb{colors.get("c3")};
+                }}
+                QSlider::groove:vertical:hover {{
+                background-color: rgb{colors.get("c3")};
+                }}
+                
+                /* CURSEUR_V */
+                QSlider::handle:vertical {{
+                border: none;
+                height: 20px;
+                width: 20px;
+                margin: 0px -10px;
+                border-radius: 5px;
+                background-color: rgb{colors.get("c1")};
+                }}
+                QSlider::handle:vertical:hover {{
+                background-color: rgb{colors.get("bn1")};
+                }}
+                QSlider::handle:vertical:pressed {{
+                background-color: rgb{colors.get("bn2")};
+                }}
+                """,
+                
+                "rond": f"""
+                /* SLIDER  */
+                QSlider {{
+                margin: 0px
+                }}
+                
+                /* BARRE_H */
+                QSlider::groove:horizontal {{
+                border-radius: 10px;
+                height: 20px;
+                margin: 0px;
+                background-color: rgb{colors.get("c3")};
+                }}
+                QSlider::groove:horizontal:hover {{
+                background-color: rgb{colors.get("c3")};
+                }}
+                
+                /* CURSEUR_H */
+                QSlider::handle:horizontal {{
+                border: none;
+                height: 5px;
+                width: 14px;
+                margin: -5px 0px;
+                border-radius: 15px;
+                border: 8px solid rgb{colors.get("c1")};
+                }}
+                QSlider::handle:horizontal:hover {{
+                border: 8px solid rgb{colors.get("bn1")};
+                }}
+                QSlider::handle:horizontal:pressed {{
+                border: 8px solid rgb{colors.get("bn2")};
+                }}
+                
+                /* BARRE_V */
+                QSlider::groove:vertical {{
+                border-radius: 10px;
+                width: 20px;
+                margin: 0px;
+                background-color: rgb{colors.get("c3")};
+                }}
+                QSlider::groove:vertical:hover {{
+                background-color: rgb{colors.get("c3")};
+                }}
+                
+                /* CURSEUR_V */
+                QSlider::handle:vertical {{
+                border: none;
+                height: 14px;
+                width: 5px;
+                margin: 0px -5px;
+                border-radius: 15px;
+                border: 8px solid rgb{colors.get("c1")};
+                }}
+                QSlider::handle:vertical:hover {{
+                border: 8px solid rgb{colors.get("bn1")};
+                }}
+                QSlider::handle:vertical:pressed {{
+                border: 8px solid rgb{colors.get("bn2")};
+                }}
+                """
             }
             style = style_gen + style_type.get(colors_type)
 
@@ -51,6 +161,5 @@ class wg:
 
             try:
                 Fct(wg=wg, w=dim.get("w"), h=dim.get("h")).DIM()
-
-                wg.setFrameShape(QtWidgets.QFrame.NoFrame)
+                wg.setCursor(Fct(cur=cur).CUR())
             except: pass

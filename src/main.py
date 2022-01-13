@@ -82,6 +82,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Radio_button.base(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3).tr()
         def SCROLL_BOX_AREA():
             Scroll_box_area.base(self.sca_main).th()
+        def SLIDER():
+            Slider.base(self.hsd_demo).th()
+            Slider.base(self.vsd_demo).rond()
         def SPIN_BOX():
             Spin_box.plus_minus(self.sb_demo).th()
             Spin_box.up_down(self.sb_demo_2).th()
@@ -122,6 +125,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             try: SCROLL_BOX_AREA()
             except: print(f"SCROLL_BOX_AREA{err}")
 
+            try: SLIDER()
+            except: print(f"SLIDER{err}")
+
             try: SPIN_BOX()
             except: print(f"SPIN_BOX{err}")
         _func_try()
@@ -143,12 +149,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         In_classe(ui=self)
-
-        # QSlider
-        with C_sd() as cls:
-            # Demo
-            cls.demo_h(self.hsd_demo)
-            cls.demo_v(self.vsd_demo)
 
         # QTableWidget
         with C_tw() as cls:

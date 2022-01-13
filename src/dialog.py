@@ -98,6 +98,8 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             Push_button.base(self.pb_opt_tm_bn2).plein_bn2()
         def SCROLL_BOX_AREA():
             Scroll_box_area.base(self.sca_option, self.sca_colors).invisible()
+        def SLIDER():
+            Slider.base(self.sd_opt_rgb_red, self.sd_opt_rgb_green, self.sd_opt_rgb_blue).rond()
         def SPIN_BOX():
             Spin_box.plus_minus(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity).bd_th3()
             Spin_box.plus_minus_infini(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height).bd_th3()
@@ -125,6 +127,9 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             try: SCROLL_BOX_AREA()
             except: print(f"SCROLL_BOX_AREA{err}")
 
+            try: SLIDER()
+            except: print(f"SLIDER{err}")
+
             try: SPIN_BOX()
             except: print(f"SPIN_BOX{err}")
         _func_try()
@@ -142,11 +147,6 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         In_classe(ui=self)
 
-
-        # QSlider
-        with C_sd() as C_:
-            # Demo
-            C_.th_rond(self.sd_opt_rgb_red, self.sd_opt_rgb_green, self.sd_opt_rgb_blue)
 
         # QTreeWidget
         with C_trw() as C_:
