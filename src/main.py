@@ -91,7 +91,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Spin_box.plus_minus(self.sb_demo_3).th_lr()
             Spin_box.base(self.dsb_demo).tr()
         def TABLE_WIDGET():
-            Table_widget.base(self.tw_demo).th()
+            Table_widget.base(self.tw_demo_th).th()
+            Table_widget.base(self.tw_demo_tr).tr()
 
 
         def _func_try():

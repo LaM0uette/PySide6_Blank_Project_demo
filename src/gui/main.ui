@@ -151,9 +151,9 @@
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>-2951</y>
+              <y>-3043</y>
               <width>818</width>
-              <height>5466</height>
+              <height>5567</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout">
@@ -1301,7 +1301,7 @@
               <widget class="QFrame" name="fr_tw">
                <layout class="QVBoxLayout" name="vlay_tw">
                 <property name="spacing">
-                 <number>0</number>
+                 <number>10</number>
                 </property>
                 <property name="leftMargin">
                  <number>10</number>
@@ -1339,7 +1339,381 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QTableWidget" name="tw_demo">
+                 <widget class="QTableWidget" name="tw_demo_th">
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <row>
+                   <property name="text">
+                    <string>New Row</string>
+                   </property>
+                  </row>
+                  <column>
+                   <property name="text">
+                    <string>New Column</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>New Column</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>New Column</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>New Column</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>New Column</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>New Column</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>New Column</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>New Column</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>New Column</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>New Column</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>New Column</string>
+                   </property>
+                  </column>
+                  <column>
+                   <property name="text">
+                    <string>New Column</string>
+                   </property>
+                  </column>
+                  <item row="0" column="0">
+                   <property name="text">
+                    <string>fdsfsdf</string>
+                   </property>
+                  </item>
+                  <item row="0" column="1">
+                   <property name="text">
+                    <string>sdfsdfsdfsd</string>
+                   </property>
+                  </item>
+                  <item row="0" column="2">
+                   <property name="text">
+                    <string>fdsfdsf</string>
+                   </property>
+                  </item>
+                  <item row="1" column="0">
+                   <property name="text">
+                    <string>vcbfgnbg</string>
+                   </property>
+                  </item>
+                  <item row="1" column="1">
+                   <property name="text">
+                    <string>gfhfhgf</string>
+                   </property>
+                  </item>
+                  <item row="1" column="2">
+                   <property name="text">
+                    <string>dsf</string>
+                   </property>
+                  </item>
+                  <item row="1" column="3">
+                   <property name="text">
+                    <string>fvbccvbvc</string>
+                   </property>
+                  </item>
+                  <item row="2" column="0">
+                   <property name="text">
+                    <string>vcbfgnbg</string>
+                   </property>
+                  </item>
+                  <item row="2" column="1">
+                   <property name="text">
+                    <string>vcbfgnbg</string>
+                   </property>
+                  </item>
+                  <item row="2" column="2">
+                   <property name="text">
+                    <string>hfghgfh</string>
+                   </property>
+                  </item>
+                  <item row="2" column="3">
+                   <property name="text">
+                    <string>bcvbcvb</string>
+                   </property>
+                  </item>
+                  <item row="2" column="5">
+                   <property name="text">
+                    <string>fvbccvbvc</string>
+                   </property>
+                  </item>
+                  <item row="2" column="6">
+                   <property name="text">
+                    <string>fvbccvbvc</string>
+                   </property>
+                  </item>
+                  <item row="3" column="0">
+                   <property name="text">
+                    <string>nhnbv</string>
+                   </property>
+                  </item>
+                  <item row="3" column="1">
+                   <property name="text">
+                    <string>bcvbcvb</string>
+                   </property>
+                  </item>
+                  <item row="3" column="2">
+                   <property name="text">
+                    <string>dsf</string>
+                   </property>
+                  </item>
+                  <item row="3" column="3">
+                   <property name="text">
+                    <string>bcvbcvb</string>
+                   </property>
+                  </item>
+                  <item row="3" column="6">
+                   <property name="text">
+                    <string>fvbccvbvc</string>
+                   </property>
+                  </item>
+                  <item row="4" column="0">
+                   <property name="text">
+                    <string>bcvbcvb</string>
+                   </property>
+                  </item>
+                  <item row="4" column="1">
+                   <property name="text">
+                    <string>bcvbcvb</string>
+                   </property>
+                  </item>
+                  <item row="4" column="2">
+                   <property name="text">
+                    <string>bcvbcvb</string>
+                   </property>
+                  </item>
+                  <item row="4" column="5">
+                   <property name="text">
+                    <string>fvbccvbvc</string>
+                   </property>
+                  </item>
+                  <item row="4" column="6">
+                   <property name="text">
+                    <string>fvbccvbvc</string>
+                   </property>
+                  </item>
+                  <item row="7" column="6">
+                   <property name="text">
+                    <string>bcvbcvb</string>
+                   </property>
+                  </item>
+                  <item row="8" column="3">
+                   <property name="text">
+                    <string>bcvbcvb</string>
+                   </property>
+                  </item>
+                  <item row="8" column="5">
+                   <property name="text">
+                    <string>bcvbcvb</string>
+                   </property>
+                  </item>
+                  <item row="8" column="6">
+                   <property name="text">
+                    <string>bcvbcvb</string>
+                   </property>
+                  </item>
+                  <item row="9" column="2">
+                   <property name="text">
+                    <string>bcvbcvb</string>
+                   </property>
+                  </item>
+                  <item row="9" column="5">
+                   <property name="text">
+                    <string>bcvbcvb</string>
+                   </property>
+                  </item>
+                  <item row="9" column="6">
+                   <property name="text">
+                    <string>bcvbcvb</string>
+                   </property>
+                  </item>
+                  <item row="10" column="1">
+                   <property name="text">
+                    <string>bcvbcvb</string>
+                   </property>
+                  </item>
+                  <item row="10" column="2">
+                   <property name="text">
+                    <string>bcvbcvb</string>
+                   </property>
+                  </item>
+                  <item row="10" column="3">
+                   <property name="text">
+                    <string>bcvbcvb</string>
+                   </property>
+                  </item>
+                  <item row="11" column="0">
+                   <property name="text">
+                    <string>fvbccvbvc</string>
+                   </property>
+                  </item>
+                  <item row="12" column="0">
+                   <property name="text">
+                    <string>fvbccvbvc</string>
+                   </property>
+                  </item>
+                  <item row="13" column="0">
+                   <property name="text">
+                    <string>fvbccvbvc</string>
+                   </property>
+                  </item>
+                  <item row="13" column="1">
+                   <property name="text">
+                    <string>fvbccvbvc</string>
+                   </property>
+                  </item>
+                  <item row="14" column="0">
+                   <property name="text">
+                    <string>fvbccvbvc</string>
+                   </property>
+                  </item>
+                  <item row="14" column="2">
+                   <property name="text">
+                    <string>fvbccvbvc</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QTableWidget" name="tw_demo_tr">
                   <row>
                    <property name="text">
                     <string>New Row</string>

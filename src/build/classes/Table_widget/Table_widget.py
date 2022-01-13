@@ -9,10 +9,12 @@ class rtn:
                  colors=p_base.COLORS,
                  dim=p_base.DIM,
                  font=p_base.FONT,
+                 hd_font=p_base.HD_FONT,
                  bd=p_base.BD,
                  rd=p_base.RD,
                  scroll=p_base.SCROLL,
-                 cur=p_base.CUR
+                 header=p_base.HEADER,
+                 cur=P_cur().croix()
                  ):
         self.wgs = wgs
 
@@ -20,9 +22,11 @@ class rtn:
         self.colors = colors
         self.dim = dim
         self.font = font
+        self.hd_font = hd_font
         self.bd = bd
         self.rd = rd
         self.scroll = scroll
+        self.header = header
         self.cur = cur
 
     def rtn(self):
@@ -32,9 +36,11 @@ class rtn:
             colors=self.colors,
             dim=self.dim,
             font=self.font,
+            hd_font=self.hd_font,
             bd=self.bd,
             rd=self.rd,
             scroll=self.scroll,
+            header=self.header,
             cur=self.cur,
         )
 
@@ -43,12 +49,15 @@ class rtn:
         self.rtn()
     def tr(self):
         self.colors_type = "tr"
+        self.bd = P_bd().all().bn1()
+        self.header = {"h": False, "v": False}
         self.rtn()
 
 class base(rtn):
     def __init__(self, *wgs):
         super().__init__(*wgs,
                          colors = P_rgb().p_th3(),
-                         font = P_font().h4(),
-                         scroll=P_scroll().off().nd(),
+                         dim = P_dim().aw().h5(),
+                         font = P_font().h5(),
+                         scroll=P_scroll().nd().nd(),
         )
