@@ -1068,6 +1068,7 @@ class C_wg:
         self.wg.setFrame(QtWidgets.QFrame.NoFrame)
 
 
+
     def STL_SD(self):
         self.STL_ALL()
 
