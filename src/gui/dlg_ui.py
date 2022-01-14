@@ -26,7 +26,7 @@ class Ui_Dlg(object):
     def setupUi(self, Dlg):
         if not Dlg.objectName():
             Dlg.setObjectName(u"Dlg")
-        Dlg.resize(881, 458)
+        Dlg.resize(909, 757)
         self.glay_dlg = QGridLayout(Dlg)
         self.glay_dlg.setSpacing(0)
         self.glay_dlg.setObjectName(u"glay_dlg")
@@ -132,7 +132,7 @@ class Ui_Dlg(object):
         self.sca_option.setWidgetResizable(True)
         self.sca_area_option = QWidget()
         self.sca_area_option.setObjectName(u"sca_area_option")
-        self.sca_area_option.setGeometry(QRect(0, 0, 430, 310))
+        self.sca_area_option.setGeometry(QRect(0, 0, 444, 354))
         self.vlay_sca_option = QVBoxLayout(self.sca_area_option)
         self.vlay_sca_option.setSpacing(0)
         self.vlay_sca_option.setObjectName(u"vlay_sca_option")
@@ -664,28 +664,104 @@ class Ui_Dlg(object):
         self.vlay_pg_dlg_colors.setContentsMargins(0, 0, 0, 0)
         self.sca_colors = QScrollArea(self.pg_dlg_colors)
         self.sca_colors.setObjectName(u"sca_colors")
+        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
+        sizePolicy1.setHorizontalStretch(0)
+        sizePolicy1.setVerticalStretch(0)
+        sizePolicy1.setHeightForWidth(self.sca_colors.sizePolicy().hasHeightForWidth())
+        self.sca_colors.setSizePolicy(sizePolicy1)
         self.sca_colors.setWidgetResizable(True)
         self.sca_area_colors = QWidget()
         self.sca_area_colors.setObjectName(u"sca_area_colors")
-        self.sca_area_colors.setGeometry(QRect(0, 0, 877, 215))
+        self.sca_area_colors.setGeometry(QRect(0, 0, 905, 226))
+        self.hlay_sca_area_colors = QHBoxLayout(self.sca_area_colors)
+        self.hlay_sca_area_colors.setSpacing(10)
+        self.hlay_sca_area_colors.setObjectName(u"hlay_sca_area_colors")
+        self.hlay_sca_area_colors.setContentsMargins(10, 10, 10, 0)
+        self.glay_sca_area_colors = QGridLayout()
+        self.glay_sca_area_colors.setSpacing(0)
+        self.glay_sca_area_colors.setObjectName(u"glay_sca_area_colors")
+        self.sb_opt_rgb_green = QSpinBox(self.sca_area_colors)
+        self.sb_opt_rgb_green.setObjectName(u"sb_opt_rgb_green")
+
+        self.glay_sca_area_colors.addWidget(self.sb_opt_rgb_green, 4, 2, 1, 1)
+
+        self.lb_opt_rgb_green = QLabel(self.sca_area_colors)
+        self.lb_opt_rgb_green.setObjectName(u"lb_opt_rgb_green")
+
+        self.glay_sca_area_colors.addWidget(self.lb_opt_rgb_green, 4, 0, 1, 1)
+
+        self.lb_opt_rgb_blue = QLabel(self.sca_area_colors)
+        self.lb_opt_rgb_blue.setObjectName(u"lb_opt_rgb_blue")
+
+        self.glay_sca_area_colors.addWidget(self.lb_opt_rgb_blue, 7, 0, 1, 1)
+
+        self.sb_opt_rgb_blue = QSpinBox(self.sca_area_colors)
+        self.sb_opt_rgb_blue.setObjectName(u"sb_opt_rgb_blue")
+
+        self.glay_sca_area_colors.addWidget(self.sb_opt_rgb_blue, 7, 2, 1, 1)
+
+        self.lb_opt_rgb_red = QLabel(self.sca_area_colors)
+        self.lb_opt_rgb_red.setObjectName(u"lb_opt_rgb_red")
+
+        self.glay_sca_area_colors.addWidget(self.lb_opt_rgb_red, 0, 0, 1, 1)
+
+        self.horizontalSpacer_12 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.glay_sca_area_colors.addItem(self.horizontalSpacer_12, 7, 1, 1, 1)
+
         self.sd_opt_rgb_red = QSlider(self.sca_area_colors)
         self.sd_opt_rgb_red.setObjectName(u"sd_opt_rgb_red")
-        self.sd_opt_rgb_red.setGeometry(QRect(250, 120, 160, 22))
         self.sd_opt_rgb_red.setOrientation(Qt.Horizontal)
+
+        self.glay_sca_area_colors.addWidget(self.sd_opt_rgb_red, 1, 0, 1, 3)
+
         self.sd_opt_rgb_green = QSlider(self.sca_area_colors)
         self.sd_opt_rgb_green.setObjectName(u"sd_opt_rgb_green")
-        self.sd_opt_rgb_green.setGeometry(QRect(250, 170, 160, 22))
         self.sd_opt_rgb_green.setOrientation(Qt.Horizontal)
+
+        self.glay_sca_area_colors.addWidget(self.sd_opt_rgb_green, 5, 0, 1, 3)
+
+        self.sb_opt_rgb_red = QSpinBox(self.sca_area_colors)
+        self.sb_opt_rgb_red.setObjectName(u"sb_opt_rgb_red")
+
+        self.glay_sca_area_colors.addWidget(self.sb_opt_rgb_red, 0, 2, 1, 1)
+
+        self.verticalSpacer_12 = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.glay_sca_area_colors.addItem(self.verticalSpacer_12, 6, 0, 1, 3)
+
         self.sd_opt_rgb_blue = QSlider(self.sca_area_colors)
         self.sd_opt_rgb_blue.setObjectName(u"sd_opt_rgb_blue")
-        self.sd_opt_rgb_blue.setGeometry(QRect(250, 230, 160, 22))
         self.sd_opt_rgb_blue.setOrientation(Qt.Horizontal)
-        self.label = QLabel(self.sca_area_colors)
-        self.label.setObjectName(u"label")
-        self.label.setGeometry(QRect(250, 90, 47, 13))
-        self.spinBox = QSpinBox(self.sca_area_colors)
-        self.spinBox.setObjectName(u"spinBox")
-        self.spinBox.setGeometry(QRect(380, 80, 42, 22))
+
+        self.glay_sca_area_colors.addWidget(self.sd_opt_rgb_blue, 8, 0, 1, 3)
+
+        self.verticalSpacer_13 = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.glay_sca_area_colors.addItem(self.verticalSpacer_13, 2, 0, 1, 3)
+
+        self.horizontalSpacer_11 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.glay_sca_area_colors.addItem(self.horizontalSpacer_11, 4, 1, 1, 1)
+
+        self.verticalSpacer_11 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.glay_sca_area_colors.addItem(self.verticalSpacer_11, 9, 0, 1, 3)
+
+        self.horizontalSpacer_10 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.glay_sca_area_colors.addItem(self.horizontalSpacer_10, 0, 1, 1, 1)
+
+
+        self.hlay_sca_area_colors.addLayout(self.glay_sca_area_colors)
+
+        self.frame = QFrame(self.sca_area_colors)
+        self.frame.setObjectName(u"frame")
+        self.frame.setFrameShape(QFrame.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Raised)
+
+        self.hlay_sca_area_colors.addWidget(self.frame)
+
         self.sca_colors.setWidget(self.sca_area_colors)
 
         self.vlay_pg_dlg_colors.addWidget(self.sca_colors)
@@ -721,7 +797,7 @@ class Ui_Dlg(object):
         self.retranslateUi(Dlg)
 
         self.stk_dlg.setCurrentIndex(4)
-        self.stk_option.setCurrentIndex(7)
+        self.stk_option.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(Dlg)
@@ -773,7 +849,9 @@ class Ui_Dlg(object):
         self.pb_opt_tm_bn2.setText(QCoreApplication.translate("Dlg", u"BN2", None))
         self.pb_opt_tm_colors.setText(QCoreApplication.translate("Dlg", u"Couleurs", None))
         self.le_input.setPlaceholderText(QCoreApplication.translate("Dlg", u"...", None))
-        self.label.setText(QCoreApplication.translate("Dlg", u"RED", None))
+        self.lb_opt_rgb_green.setText(QCoreApplication.translate("Dlg", u"GREEN", None))
+        self.lb_opt_rgb_blue.setText(QCoreApplication.translate("Dlg", u"BLUE", None))
+        self.lb_opt_rgb_red.setText(QCoreApplication.translate("Dlg", u"RED", None))
         pass
     # retranslateUi
 

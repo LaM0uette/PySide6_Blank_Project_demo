@@ -46,3 +46,9 @@ class base(rtn):
                          colors=P_rgb().p_th3(),
                          dim=P_dim().carr().h5(),
         )
+class rgb(rtn):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+                         colors=P_rgb().p_th3(),
+                         dim=P_dim().aw().h8(),
+        )

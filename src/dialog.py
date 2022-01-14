@@ -80,6 +80,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
                        self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize).cadre_th3()
         def LABEL():
             Label.h1(self.lb_opt_info_nom).tr()
+            Label.h4(self.lb_opt_rgb_red, self.lb_opt_rgb_green, self.lb_opt_rgb_blue).tr()
             Label.base(self.lb_msg_texte, self.lb_rep_texte, self.lb_input_texte, self.lb_opt_info_desc, self.lb_opt_info_auteur,
                        self.lb_opt_info_version, self.lb_opt_ft_h1, self.lb_opt_ft_h2, self.lb_opt_ft_h3, self.lb_opt_ft_h4, self.lb_opt_ft_h5,
                        self.lb_opt_cfg_opacity, self.lb_opt_cfg_autoreload, self.lb_opt_cfg_autoclose, self.lb_opt_cfg_resize,
@@ -99,11 +100,11 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         def SCROLL_BOX_AREA():
             Scroll_box_area.base(self.sca_option, self.sca_colors).invisible()
         def SLIDER():
-            Slider.base(self.sd_opt_rgb_red, self.sd_opt_rgb_green, self.sd_opt_rgb_blue).rond()
+            Slider.rgb(self.sd_opt_rgb_red, self.sd_opt_rgb_green, self.sd_opt_rgb_blue).rond()
         def SPIN_BOX():
             Spin_box.plus_minus(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity).bd_th3()
             Spin_box.plus_minus_infini(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height).bd_th3()
-            Spin_box.rgb(self.spinBox).bd_th3()
+            Spin_box.rgb(self.sb_opt_rgb_red, self.sb_opt_rgb_green, self.sb_opt_rgb_blue).bd_th3()
         def TEXT_EDIT():
             Text_edit.h1(self.le_opt_ft_texte_h1).tr()
             Text_edit.h2(self.le_opt_ft_texte_h2).tr()
@@ -384,8 +385,6 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         # Connection
         self.pb_dlg_colors_ok.clicked.connect(__input)
         self.pb_dlg_colors_ok.setDefault(True)
-
-
 
 
     ### EVENT

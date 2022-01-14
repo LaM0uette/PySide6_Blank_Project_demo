@@ -70,6 +70,11 @@ class Ui_main(object):
 
         self.hlay_menu_top.addItem(self.horizontalSpacer_1)
 
+        self.pb_mt_option_2 = QPushButton(self.fr_menu_top)
+        self.pb_mt_option_2.setObjectName(u"pb_mt_option_2")
+
+        self.hlay_menu_top.addWidget(self.pb_mt_option_2)
+
         self.pb_mt_option = QPushButton(self.fr_menu_top)
         self.pb_mt_option.setObjectName(u"pb_mt_option")
 
@@ -106,7 +111,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -4941, 818, 5700))
+        self.vlay_wg.setGeometry(QRect(0, 0, 818, 5700))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")

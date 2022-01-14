@@ -199,6 +199,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.pb_mt_reduire.clicked.connect(lambda: self.EVT_REDUIRE_GDT())
         self.pb_mt_agrandir.clicked.connect(lambda: self.EVT_AGRANDIR_GDT())
         self.pb_mt_quitter.clicked.connect(lambda: self.EVT_REDUIRE_HIDE_GDT())
+
+        self.pb_mt_option_2.clicked.connect(lambda: self.TEMPO())
     def IN_ACT(self):
         pass
     def INIT(self):
@@ -225,6 +227,11 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         if t: self._reload()
         # col = Dlg().COLORS()
         # print(col)
+
+
+    def TEMPO(self):
+        col = Dlg().COLORS()
+        print(col)
 
 
     ### EVENT
