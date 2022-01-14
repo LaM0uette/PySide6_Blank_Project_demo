@@ -549,6 +549,8 @@ class Ui_Dlg(object):
 
         self.pb_dlg_msg_ok = QPushButton(self.fr_pg_dlg_msg)
         self.pb_dlg_msg_ok.setObjectName(u"pb_dlg_msg_ok")
+        sizePolicy.setHeightForWidth(self.pb_dlg_msg_ok.sizePolicy().hasHeightForWidth())
+        self.pb_dlg_msg_ok.setSizePolicy(sizePolicy)
 
         self.hlay_pg_dlg_msg.addWidget(self.pb_dlg_msg_ok)
 
@@ -579,11 +581,15 @@ class Ui_Dlg(object):
 
         self.pb_dlg_rep_ok = QPushButton(self.fr_pg_dlg_rep)
         self.pb_dlg_rep_ok.setObjectName(u"pb_dlg_rep_ok")
+        sizePolicy.setHeightForWidth(self.pb_dlg_rep_ok.sizePolicy().hasHeightForWidth())
+        self.pb_dlg_rep_ok.setSizePolicy(sizePolicy)
 
         self.hlay_pg_dlg_rep.addWidget(self.pb_dlg_rep_ok)
 
         self.pb_dlg_rep_annuler = QPushButton(self.fr_pg_dlg_rep)
         self.pb_dlg_rep_annuler.setObjectName(u"pb_dlg_rep_annuler")
+        sizePolicy.setHeightForWidth(self.pb_dlg_rep_annuler.sizePolicy().hasHeightForWidth())
+        self.pb_dlg_rep_annuler.setSizePolicy(sizePolicy)
 
         self.hlay_pg_dlg_rep.addWidget(self.pb_dlg_rep_annuler)
 
@@ -634,11 +640,15 @@ class Ui_Dlg(object):
 
         self.pb_dlg_input_ok = QPushButton(self.fr_pg_dlg_input)
         self.pb_dlg_input_ok.setObjectName(u"pb_dlg_input_ok")
+        sizePolicy.setHeightForWidth(self.pb_dlg_input_ok.sizePolicy().hasHeightForWidth())
+        self.pb_dlg_input_ok.setSizePolicy(sizePolicy)
 
         self.hlay_pg_dlg_input.addWidget(self.pb_dlg_input_ok)
 
         self.pb_dlg_input_annuler = QPushButton(self.fr_pg_dlg_input)
         self.pb_dlg_input_annuler.setObjectName(u"pb_dlg_input_annuler")
+        sizePolicy.setHeightForWidth(self.pb_dlg_input_annuler.sizePolicy().hasHeightForWidth())
+        self.pb_dlg_input_annuler.setSizePolicy(sizePolicy)
 
         self.hlay_pg_dlg_input.addWidget(self.pb_dlg_input_annuler)
 
@@ -657,7 +667,7 @@ class Ui_Dlg(object):
         self.sca_colors.setWidgetResizable(True)
         self.sca_area_colors = QWidget()
         self.sca_area_colors.setObjectName(u"sca_area_colors")
-        self.sca_area_colors.setGeometry(QRect(0, 0, 877, 406))
+        self.sca_area_colors.setGeometry(QRect(0, 0, 877, 215))
         self.sd_opt_rgb_red = QSlider(self.sca_area_colors)
         self.sd_opt_rgb_red.setObjectName(u"sd_opt_rgb_red")
         self.sd_opt_rgb_red.setGeometry(QRect(250, 120, 160, 22))
@@ -692,6 +702,8 @@ class Ui_Dlg(object):
 
         self.pb_dlg_colors_ok = QPushButton(self.fr_pg_dlg_colors)
         self.pb_dlg_colors_ok.setObjectName(u"pb_dlg_colors_ok")
+        sizePolicy.setHeightForWidth(self.pb_dlg_colors_ok.sizePolicy().hasHeightForWidth())
+        self.pb_dlg_colors_ok.setSizePolicy(sizePolicy)
 
         self.hlay_fr_pg_dlg_colors.addWidget(self.pb_dlg_colors_ok)
 
@@ -708,7 +720,7 @@ class Ui_Dlg(object):
 
         self.retranslateUi(Dlg)
 
-        self.stk_dlg.setCurrentIndex(0)
+        self.stk_dlg.setCurrentIndex(4)
         self.stk_option.setCurrentIndex(7)
 
 

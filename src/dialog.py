@@ -223,7 +223,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
 
     ### FONCTIONS
-    def OPTION(self):
+    def OPTION(self ):
         def __set_opt(item):
             self.stk_option.setCurrentWidget(dct_pg.get(item.text(0))[0])
         def __val_change_appliquer(val=""):
