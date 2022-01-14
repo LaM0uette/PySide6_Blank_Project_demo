@@ -81,23 +81,31 @@ class Ui_Dlg(object):
         self.glay_stk_option.setContentsMargins(0, 0, 0, 0)
         self.fr_pg_dlg_option = QFrame(self.pg_dlg_option)
         self.fr_pg_dlg_option.setObjectName(u"fr_pg_dlg_option")
-        self.hlay_pg_dlg_option = QHBoxLayout(self.fr_pg_dlg_option)
-        self.hlay_pg_dlg_option.setSpacing(2)
-        self.hlay_pg_dlg_option.setObjectName(u"hlay_pg_dlg_option")
-        self.hlay_pg_dlg_option.setContentsMargins(0, 0, 0, 0)
-        self.horizontalSpacer_5 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+        self.glay_fr_pg_dlg_option = QGridLayout(self.fr_pg_dlg_option)
+        self.glay_fr_pg_dlg_option.setObjectName(u"glay_fr_pg_dlg_option")
+        self.glay_fr_pg_dlg_option.setHorizontalSpacing(2)
+        self.glay_fr_pg_dlg_option.setVerticalSpacing(0)
+        self.glay_fr_pg_dlg_option.setContentsMargins(0, 2, 0, 0)
+        self.pb_dlg_option_ok = QPushButton(self.fr_pg_dlg_option)
+        self.pb_dlg_option_ok.setObjectName(u"pb_dlg_option_ok")
+        sizePolicy = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.pb_dlg_option_ok.sizePolicy().hasHeightForWidth())
+        self.pb_dlg_option_ok.setSizePolicy(sizePolicy)
 
-        self.hlay_pg_dlg_option.addItem(self.horizontalSpacer_5)
+        self.glay_fr_pg_dlg_option.addWidget(self.pb_dlg_option_ok, 0, 2, 1, 1)
 
         self.pb_dlg_option_appliquer = QPushButton(self.fr_pg_dlg_option)
         self.pb_dlg_option_appliquer.setObjectName(u"pb_dlg_option_appliquer")
+        sizePolicy.setHeightForWidth(self.pb_dlg_option_appliquer.sizePolicy().hasHeightForWidth())
+        self.pb_dlg_option_appliquer.setSizePolicy(sizePolicy)
 
-        self.hlay_pg_dlg_option.addWidget(self.pb_dlg_option_appliquer)
+        self.glay_fr_pg_dlg_option.addWidget(self.pb_dlg_option_appliquer, 0, 1, 1, 1)
 
-        self.pb_dlg_option_ok = QPushButton(self.fr_pg_dlg_option)
-        self.pb_dlg_option_ok.setObjectName(u"pb_dlg_option_ok")
+        self.horizontalSpacer_5 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.hlay_pg_dlg_option.addWidget(self.pb_dlg_option_ok)
+        self.glay_fr_pg_dlg_option.addItem(self.horizontalSpacer_5, 0, 0, 1, 1)
 
 
         self.glay_stk_option.addWidget(self.fr_pg_dlg_option, 1, 0, 1, 3)
@@ -124,7 +132,7 @@ class Ui_Dlg(object):
         self.sca_option.setWidgetResizable(True)
         self.sca_area_option = QWidget()
         self.sca_area_option.setObjectName(u"sca_area_option")
-        self.sca_area_option.setGeometry(QRect(0, 0, 430, 398))
+        self.sca_area_option.setGeometry(QRect(0, 0, 430, 310))
         self.vlay_sca_option = QVBoxLayout(self.sca_area_option)
         self.vlay_sca_option.setSpacing(0)
         self.vlay_sca_option.setObjectName(u"vlay_sca_option")
@@ -534,7 +542,7 @@ class Ui_Dlg(object):
         self.hlay_pg_dlg_msg = QHBoxLayout(self.fr_pg_dlg_msg)
         self.hlay_pg_dlg_msg.setSpacing(2)
         self.hlay_pg_dlg_msg.setObjectName(u"hlay_pg_dlg_msg")
-        self.hlay_pg_dlg_msg.setContentsMargins(0, 0, 0, 0)
+        self.hlay_pg_dlg_msg.setContentsMargins(0, 2, 0, 0)
         self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.hlay_pg_dlg_msg.addItem(self.horizontalSpacer)
@@ -564,7 +572,7 @@ class Ui_Dlg(object):
         self.hlay_pg_dlg_rep = QHBoxLayout(self.fr_pg_dlg_rep)
         self.hlay_pg_dlg_rep.setSpacing(2)
         self.hlay_pg_dlg_rep.setObjectName(u"hlay_pg_dlg_rep")
-        self.hlay_pg_dlg_rep.setContentsMargins(0, 0, 0, 0)
+        self.hlay_pg_dlg_rep.setContentsMargins(0, 0, 2, 0)
         self.horizontalSpacer_3 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.hlay_pg_dlg_rep.addItem(self.horizontalSpacer_3)
@@ -619,7 +627,7 @@ class Ui_Dlg(object):
         self.hlay_pg_dlg_input = QHBoxLayout(self.fr_pg_dlg_input)
         self.hlay_pg_dlg_input.setSpacing(2)
         self.hlay_pg_dlg_input.setObjectName(u"hlay_pg_dlg_input")
-        self.hlay_pg_dlg_input.setContentsMargins(0, 0, 0, 0)
+        self.hlay_pg_dlg_input.setContentsMargins(0, 2, 0, 0)
         self.horizontalSpacer_4 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.hlay_pg_dlg_input.addItem(self.horizontalSpacer_4)
@@ -649,7 +657,7 @@ class Ui_Dlg(object):
         self.sca_colors.setWidgetResizable(True)
         self.sca_area_colors = QWidget()
         self.sca_area_colors.setObjectName(u"sca_area_colors")
-        self.sca_area_colors.setGeometry(QRect(0, 0, 877, 408))
+        self.sca_area_colors.setGeometry(QRect(0, 0, 877, 406))
         self.sd_opt_rgb_red = QSlider(self.sca_area_colors)
         self.sd_opt_rgb_red.setObjectName(u"sd_opt_rgb_red")
         self.sd_opt_rgb_red.setGeometry(QRect(250, 120, 160, 22))
@@ -677,7 +685,7 @@ class Ui_Dlg(object):
         self.hlay_fr_pg_dlg_colors = QHBoxLayout(self.fr_pg_dlg_colors)
         self.hlay_fr_pg_dlg_colors.setSpacing(2)
         self.hlay_fr_pg_dlg_colors.setObjectName(u"hlay_fr_pg_dlg_colors")
-        self.hlay_fr_pg_dlg_colors.setContentsMargins(0, 0, 0, 0)
+        self.hlay_fr_pg_dlg_colors.setContentsMargins(0, 2, 0, 0)
         self.horizontalSpacer_7 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.hlay_fr_pg_dlg_colors.addItem(self.horizontalSpacer_7)
@@ -700,8 +708,8 @@ class Ui_Dlg(object):
 
         self.retranslateUi(Dlg)
 
-        self.stk_dlg.setCurrentIndex(2)
-        self.stk_option.setCurrentIndex(2)
+        self.stk_dlg.setCurrentIndex(0)
+        self.stk_option.setCurrentIndex(7)
 
 
         QMetaObject.connectSlotsByName(Dlg)

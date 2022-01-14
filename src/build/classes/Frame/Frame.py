@@ -73,5 +73,5 @@ class menu_bottom_dlg(rtn):
     def __init__(self, *wgs):
         super().__init__(*wgs,
                          colors=P_rgb().p_th2(),
-                         dim=P_dim().aw().h9()
+                         dim=P_dim().aw().h8()
         )
