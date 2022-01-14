@@ -39,7 +39,7 @@ class Dlg:
         self.dlg.exec()
         return self.rtn
     def COLORS(self):
-        dlg = Dialog(titre="RGB", ico=P_img().option(), width=600, height=300)
+        dlg = Dialog(titre="RGB", ico=P_img().option(), width=700, height=450)
         dlg.sgn_rgb.connect(self.RTN_SGN_REP)
         dlg.COLORS()
         dlg.exec()

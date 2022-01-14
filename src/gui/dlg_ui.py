@@ -664,107 +664,106 @@ class Ui_Dlg(object):
         self.vlay_pg_dlg_colors.setContentsMargins(0, 0, 0, 0)
         self.sca_colors = QScrollArea(self.pg_dlg_colors)
         self.sca_colors.setObjectName(u"sca_colors")
-        sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
-        sizePolicy1.setHorizontalStretch(0)
-        sizePolicy1.setVerticalStretch(0)
-        sizePolicy1.setHeightForWidth(self.sca_colors.sizePolicy().hasHeightForWidth())
-        self.sca_colors.setSizePolicy(sizePolicy1)
         self.sca_colors.setWidgetResizable(True)
         self.sca_area_colors = QWidget()
         self.sca_area_colors.setObjectName(u"sca_area_colors")
-        self.sca_area_colors.setGeometry(QRect(0, 0, 905, 226))
+        self.sca_area_colors.setGeometry(QRect(0, 0, 905, 364))
         self.hlay_sca_area_colors = QHBoxLayout(self.sca_area_colors)
         self.hlay_sca_area_colors.setSpacing(10)
         self.hlay_sca_area_colors.setObjectName(u"hlay_sca_area_colors")
-        self.hlay_sca_area_colors.setContentsMargins(0, 0, 0, 0)
+        self.hlay_sca_area_colors.setContentsMargins(10, 10, 10, 0)
+        self.glay_sca_area_colors = QGridLayout()
+        self.glay_sca_area_colors.setSpacing(0)
+        self.glay_sca_area_colors.setObjectName(u"glay_sca_area_colors")
         self.fr_opt_rgb_rgb = QFrame(self.sca_area_colors)
         self.fr_opt_rgb_rgb.setObjectName(u"fr_opt_rgb_rgb")
         self.fr_opt_rgb_rgb.setFrameShape(QFrame.StyledPanel)
         self.fr_opt_rgb_rgb.setFrameShadow(QFrame.Raised)
-        self.vlay_fr_opt_rgb_rgb = QVBoxLayout(self.fr_opt_rgb_rgb)
-        self.vlay_fr_opt_rgb_rgb.setSpacing(0)
-        self.vlay_fr_opt_rgb_rgb.setObjectName(u"vlay_fr_opt_rgb_rgb")
-        self.vlay_fr_opt_rgb_rgb.setContentsMargins(10, 10, 10, 0)
-        self.glay_sca_area_colors = QGridLayout()
-        self.glay_sca_area_colors.setSpacing(0)
-        self.glay_sca_area_colors.setObjectName(u"glay_sca_area_colors")
-        self.sb_opt_rgb_green = QSpinBox(self.fr_opt_rgb_rgb)
-        self.sb_opt_rgb_green.setObjectName(u"sb_opt_rgb_green")
 
-        self.glay_sca_area_colors.addWidget(self.sb_opt_rgb_green, 4, 2, 1, 1)
-
-        self.lb_opt_rgb_green = QLabel(self.fr_opt_rgb_rgb)
-        self.lb_opt_rgb_green.setObjectName(u"lb_opt_rgb_green")
-
-        self.glay_sca_area_colors.addWidget(self.lb_opt_rgb_green, 4, 0, 1, 1)
-
-        self.lb_opt_rgb_blue = QLabel(self.fr_opt_rgb_rgb)
-        self.lb_opt_rgb_blue.setObjectName(u"lb_opt_rgb_blue")
-
-        self.glay_sca_area_colors.addWidget(self.lb_opt_rgb_blue, 7, 0, 1, 1)
-
-        self.sb_opt_rgb_blue = QSpinBox(self.fr_opt_rgb_rgb)
-        self.sb_opt_rgb_blue.setObjectName(u"sb_opt_rgb_blue")
-
-        self.glay_sca_area_colors.addWidget(self.sb_opt_rgb_blue, 7, 2, 1, 1)
-
-        self.lb_opt_rgb_red = QLabel(self.fr_opt_rgb_rgb)
-        self.lb_opt_rgb_red.setObjectName(u"lb_opt_rgb_red")
-
-        self.glay_sca_area_colors.addWidget(self.lb_opt_rgb_red, 0, 0, 1, 1)
-
-        self.horizontalSpacer_12 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.glay_sca_area_colors.addItem(self.horizontalSpacer_12, 7, 1, 1, 1)
-
-        self.sd_opt_rgb_red = QSlider(self.fr_opt_rgb_rgb)
-        self.sd_opt_rgb_red.setObjectName(u"sd_opt_rgb_red")
-        self.sd_opt_rgb_red.setOrientation(Qt.Horizontal)
-
-        self.glay_sca_area_colors.addWidget(self.sd_opt_rgb_red, 1, 0, 1, 3)
-
-        self.sd_opt_rgb_green = QSlider(self.fr_opt_rgb_rgb)
-        self.sd_opt_rgb_green.setObjectName(u"sd_opt_rgb_green")
-        self.sd_opt_rgb_green.setOrientation(Qt.Horizontal)
-
-        self.glay_sca_area_colors.addWidget(self.sd_opt_rgb_green, 5, 0, 1, 3)
-
-        self.sb_opt_rgb_red = QSpinBox(self.fr_opt_rgb_rgb)
-        self.sb_opt_rgb_red.setObjectName(u"sb_opt_rgb_red")
-
-        self.glay_sca_area_colors.addWidget(self.sb_opt_rgb_red, 0, 2, 1, 1)
-
-        self.verticalSpacer_12 = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Fixed)
-
-        self.glay_sca_area_colors.addItem(self.verticalSpacer_12, 6, 0, 1, 3)
-
-        self.sd_opt_rgb_blue = QSlider(self.fr_opt_rgb_rgb)
-        self.sd_opt_rgb_blue.setObjectName(u"sd_opt_rgb_blue")
-        self.sd_opt_rgb_blue.setOrientation(Qt.Horizontal)
-
-        self.glay_sca_area_colors.addWidget(self.sd_opt_rgb_blue, 8, 0, 1, 3)
-
-        self.verticalSpacer_13 = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Fixed)
-
-        self.glay_sca_area_colors.addItem(self.verticalSpacer_13, 2, 0, 1, 3)
-
-        self.horizontalSpacer_11 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.glay_sca_area_colors.addItem(self.horizontalSpacer_11, 4, 1, 1, 1)
+        self.glay_sca_area_colors.addWidget(self.fr_opt_rgb_rgb, 1, 4, 9, 1)
 
         self.verticalSpacer_11 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.glay_sca_area_colors.addItem(self.verticalSpacer_11, 9, 0, 1, 3)
+        self.glay_sca_area_colors.addItem(self.verticalSpacer_11, 10, 0, 1, 5)
+
+        self.sb_opt_rgb_green = QSpinBox(self.sca_area_colors)
+        self.sb_opt_rgb_green.setObjectName(u"sb_opt_rgb_green")
+
+        self.glay_sca_area_colors.addWidget(self.sb_opt_rgb_green, 5, 2, 1, 1)
+
+        self.lb_opt_rgb_green = QLabel(self.sca_area_colors)
+        self.lb_opt_rgb_green.setObjectName(u"lb_opt_rgb_green")
+
+        self.glay_sca_area_colors.addWidget(self.lb_opt_rgb_green, 5, 0, 1, 1)
+
+        self.lb_opt_rgb_blue = QLabel(self.sca_area_colors)
+        self.lb_opt_rgb_blue.setObjectName(u"lb_opt_rgb_blue")
+
+        self.glay_sca_area_colors.addWidget(self.lb_opt_rgb_blue, 8, 0, 1, 1)
+
+        self.sb_opt_rgb_blue = QSpinBox(self.sca_area_colors)
+        self.sb_opt_rgb_blue.setObjectName(u"sb_opt_rgb_blue")
+
+        self.glay_sca_area_colors.addWidget(self.sb_opt_rgb_blue, 8, 2, 1, 1)
+
+        self.lb_opt_rgb_red = QLabel(self.sca_area_colors)
+        self.lb_opt_rgb_red.setObjectName(u"lb_opt_rgb_red")
+
+        self.glay_sca_area_colors.addWidget(self.lb_opt_rgb_red, 1, 0, 1, 1)
+
+        self.horizontalSpacer_12 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.glay_sca_area_colors.addItem(self.horizontalSpacer_12, 8, 1, 1, 1)
+
+        self.sd_opt_rgb_red = QSlider(self.sca_area_colors)
+        self.sd_opt_rgb_red.setObjectName(u"sd_opt_rgb_red")
+        self.sd_opt_rgb_red.setOrientation(Qt.Horizontal)
+
+        self.glay_sca_area_colors.addWidget(self.sd_opt_rgb_red, 2, 0, 1, 3)
+
+        self.sd_opt_rgb_green = QSlider(self.sca_area_colors)
+        self.sd_opt_rgb_green.setObjectName(u"sd_opt_rgb_green")
+        self.sd_opt_rgb_green.setOrientation(Qt.Horizontal)
+
+        self.glay_sca_area_colors.addWidget(self.sd_opt_rgb_green, 6, 0, 1, 3)
+
+        self.sb_opt_rgb_red = QSpinBox(self.sca_area_colors)
+        self.sb_opt_rgb_red.setObjectName(u"sb_opt_rgb_red")
+
+        self.glay_sca_area_colors.addWidget(self.sb_opt_rgb_red, 1, 2, 1, 1)
+
+        self.verticalSpacer_12 = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.glay_sca_area_colors.addItem(self.verticalSpacer_12, 7, 0, 1, 3)
+
+        self.sd_opt_rgb_blue = QSlider(self.sca_area_colors)
+        self.sd_opt_rgb_blue.setObjectName(u"sd_opt_rgb_blue")
+        self.sd_opt_rgb_blue.setOrientation(Qt.Horizontal)
+
+        self.glay_sca_area_colors.addWidget(self.sd_opt_rgb_blue, 9, 0, 1, 3)
+
+        self.verticalSpacer_13 = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.glay_sca_area_colors.addItem(self.verticalSpacer_13, 3, 0, 1, 3)
+
+        self.horizontalSpacer_11 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.glay_sca_area_colors.addItem(self.horizontalSpacer_11, 5, 1, 1, 1)
 
         self.horizontalSpacer_10 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.glay_sca_area_colors.addItem(self.horizontalSpacer_10, 0, 1, 1, 1)
+        self.glay_sca_area_colors.addItem(self.horizontalSpacer_10, 1, 1, 1, 1)
+
+        self.horizontalSpacer_13 = QSpacerItem(10, 20, QSizePolicy.Fixed, QSizePolicy.Minimum)
+
+        self.glay_sca_area_colors.addItem(self.horizontalSpacer_13, 5, 3, 1, 1)
+
+        self.verticalSpacer_14 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.glay_sca_area_colors.addItem(self.verticalSpacer_14, 0, 0, 1, 4)
 
 
-        self.vlay_fr_opt_rgb_rgb.addLayout(self.glay_sca_area_colors)
-
-
-        self.hlay_sca_area_colors.addWidget(self.fr_opt_rgb_rgb)
+        self.hlay_sca_area_colors.addLayout(self.glay_sca_area_colors)
 
         self.sca_colors.setWidget(self.sca_area_colors)
 

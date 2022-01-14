@@ -78,6 +78,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             Frame.menu_bottom_dlg(self.fr_pg_dlg_msg, self.fr_pg_dlg_rep, self.fr_pg_dlg_input, self.fr_pg_dlg_option, self.fr_pg_dlg_colors).th()
             Frame.base(self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5,
                        self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize).cadre_th3()
+            Frame.base(self.fr_opt_rgb_rgb).radius()
         def LABEL():
             Label.h1(self.lb_opt_info_nom).tr()
             Label.h4(self.lb_opt_rgb_red, self.lb_opt_rgb_green, self.lb_opt_rgb_blue).tr()
@@ -383,11 +384,6 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             self.sb_opt_rgb_green.setValue(self.sd_opt_rgb_green.value())
             self.sb_opt_rgb_blue.setValue(self.sd_opt_rgb_blue.value())
 
-            stl = f"""
-            .QFrame#fr_opt_rgb_rgb {{
-            background-color: rgb{rgb};
-            }}"""
-            # self.fr_opt_rgb_rgb.setStyleSheet(stl)
 
             rgb_r = {"c1": (0, self.sd_opt_rgb_green.value(), self.sd_opt_rgb_blue.value()) + (255,),
                      "c2": (255, self.sd_opt_rgb_green.value(), self.sd_opt_rgb_blue.value()) + (255,)}
@@ -398,6 +394,8 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             rgb_b = {"c1": (self.sd_opt_rgb_red.value(), self.sd_opt_rgb_green.value(), 0) + (255,),
                      "c2": (self.sd_opt_rgb_red.value(), self.sd_opt_rgb_green.value(), 255) + (255,)}
 
+
+            Frame.base(self.fr_opt_rgb_rgb, colors={"c1": rgb}).radius()
             Slider.rgb(self.sd_opt_rgb_red, gradient_colors=rgb_r).rgb()
             Slider.rgb(self.sd_opt_rgb_green, gradient_colors=rgb_g).rgb()
             Slider.rgb(self.sd_opt_rgb_blue, gradient_colors=rgb_b).rgb()
@@ -418,6 +416,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         self.sd_opt_rgb_red.setValue(1)
         self.sd_opt_rgb_red.setValue(0)
+        self.fr_opt_rgb_rgb.setFixedWidth(self.fr_opt_rgb_rgb.height())
 
 
     ### EVENT

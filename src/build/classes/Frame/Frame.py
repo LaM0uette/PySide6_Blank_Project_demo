@@ -50,11 +50,15 @@ class rtn:
         self.bd = P_bd().all().bn1()
         self.tr()
 
+    def radius(self):
+        self.rd = P_rd().all().px_15()
+        self.th()
+
 
 class base(rtn):
-    def __init__(self, *wgs):
+    def __init__(self, *wgs, colors=P_rgb().p_th3()):
         super().__init__(*wgs,
-                         colors=P_rgb().p_th3(),
+                         colors=colors,
                          dim=P_dim().all(),
         )
 class menu_top(rtn):
