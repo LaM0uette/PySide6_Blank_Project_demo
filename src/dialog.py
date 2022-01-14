@@ -375,7 +375,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_dlg_input_ok.setDefault(True)
     def COLORS(self):
         def __input():
-            self.sgn_rgb.emit([0, 0, 0])
+            self.sgn_rgb.emit((self.sd_opt_rgb_red.value(), self.sd_opt_rgb_green.value(), self.sd_opt_rgb_blue.value()))
             self.close()
         def __set_fr_color():
             rgb = self.sd_opt_rgb_red.value(), self.sd_opt_rgb_green.value(), self.sd_opt_rgb_blue.value()
