@@ -14,6 +14,8 @@ from .Slider import Slider
 from .Spin_box import Spin_box
 from .Table_widget import Table_widget
 from .Text_edit import Text_edit
+from .Tool_box import Tool_box
+from .Tree_widget import Tree_widget
 
 
 importlib.reload(Check_box)
@@ -30,3 +32,5 @@ importlib.reload(Slider)
 importlib.reload(Spin_box)
 importlib.reload(Table_widget)
 importlib.reload(Text_edit)
+importlib.reload(Tool_box)
+importlib.reload(Tree_widget)

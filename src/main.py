@@ -44,7 +44,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
                        self.fr_rb, self.fr_pg, self.fr_sb, self.fr_tw, self.fr_le,
                        self.fr_te, self.fr_pte, self.fr_tb, self.fr_trw, self.fr_sd,
                        self.fr_demo_cadre, self.fr_fr, self.fr_lb).cadre_bn1()
-            Frame.base(self.fr_body, self.fr_tb_demo, self.fr_tb_demo_2).tr()
+            Frame.base(self.fr_body, self.fr_tb_demo_th_1, self.fr_tb_demo_th_2).th()
+            Frame.base(self.fr_body, self.fr_tb_demo_tr_1, self.fr_tb_demo_tr_2).tr()
             Frame.base(self.fr_demo_th).th()
             Frame.menu_bottom(self.fr_menu_bottom).th()
         def LABEL():
@@ -98,6 +99,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Text_edit.base(self.le_demo_tr).bottom_th2()
             Text_edit.base_bloc(self.te_demo_th, self.pte_demo_th).th()
             Text_edit.base_bloc(self.te_demo_tr, self.pte_demo_tr).tr()
+        def TOOL_BOX():
+            Tool_box.base(self.tb_demo_th).th()
+            Tool_box.base(self.tb_demo_tr).tr()
 
 
         def _func_try():
@@ -145,20 +149,13 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             try: TEXT_EDIT()
             except: print(f"TEXT_EDIT{err}")
 
+            try: TOOL_BOX()
+            except: print(f"TOOL_BOX{err}")
+
 
         _func_try()
-
-
-
-
-
-
         In_classe(ui=self)
 
-        # QToolBox
-        with C_tb() as cls:
-            # Demo
-            cls.demo(self.tb_demo)
 
         # QTreeWidget
         with C_trw() as cls:

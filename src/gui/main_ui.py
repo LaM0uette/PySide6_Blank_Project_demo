@@ -106,7 +106,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -3655, 818, 5567))
+        self.vlay_wg.setGeometry(QRect(0, -4676, 818, 5700))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -1045,8 +1045,8 @@ class Ui_main(object):
 
         self.vlay_fr_tb.addItem(self.verticalSpacer_25)
 
-        self.tb_demo = QToolBox(self.fr_tb)
-        self.tb_demo.setObjectName(u"tb_demo")
+        self.tb_demo_th = QToolBox(self.fr_tb)
+        self.tb_demo_th.setObjectName(u"tb_demo_th")
         self.page = QWidget()
         self.page.setObjectName(u"page")
         self.page.setGeometry(QRect(0, 0, 696, 69))
@@ -1054,14 +1054,14 @@ class Ui_main(object):
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.fr_tb_demo = QFrame(self.page)
-        self.fr_tb_demo.setObjectName(u"fr_tb_demo")
-        self.fr_tb_demo.setFrameShape(QFrame.StyledPanel)
-        self.fr_tb_demo.setFrameShadow(QFrame.Raised)
+        self.fr_tb_demo_th_1 = QFrame(self.page)
+        self.fr_tb_demo_th_1.setObjectName(u"fr_tb_demo_th_1")
+        self.fr_tb_demo_th_1.setFrameShape(QFrame.StyledPanel)
+        self.fr_tb_demo_th_1.setFrameShadow(QFrame.Raised)
 
-        self.verticalLayout_2.addWidget(self.fr_tb_demo)
+        self.verticalLayout_2.addWidget(self.fr_tb_demo_th_1)
 
-        self.tb_demo.addItem(self.page, u"Page 1")
+        self.tb_demo_th.addItem(self.page, u"Page 1")
         self.page_2 = QWidget()
         self.page_2.setObjectName(u"page_2")
         self.page_2.setGeometry(QRect(0, 0, 696, 69))
@@ -1069,16 +1069,51 @@ class Ui_main(object):
         self.verticalLayout_3.setSpacing(0)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
         self.verticalLayout_3.setContentsMargins(0, 0, 0, 0)
-        self.fr_tb_demo_2 = QFrame(self.page_2)
-        self.fr_tb_demo_2.setObjectName(u"fr_tb_demo_2")
-        self.fr_tb_demo_2.setFrameShape(QFrame.StyledPanel)
-        self.fr_tb_demo_2.setFrameShadow(QFrame.Raised)
+        self.fr_tb_demo_th_2 = QFrame(self.page_2)
+        self.fr_tb_demo_th_2.setObjectName(u"fr_tb_demo_th_2")
+        self.fr_tb_demo_th_2.setFrameShape(QFrame.StyledPanel)
+        self.fr_tb_demo_th_2.setFrameShadow(QFrame.Raised)
 
-        self.verticalLayout_3.addWidget(self.fr_tb_demo_2)
+        self.verticalLayout_3.addWidget(self.fr_tb_demo_th_2)
 
-        self.tb_demo.addItem(self.page_2, u"Page 2")
+        self.tb_demo_th.addItem(self.page_2, u"Page 2")
 
-        self.vlay_fr_tb.addWidget(self.tb_demo)
+        self.vlay_fr_tb.addWidget(self.tb_demo_th)
+
+        self.tb_demo_tr = QToolBox(self.fr_tb)
+        self.tb_demo_tr.setObjectName(u"tb_demo_tr")
+        self.page_3 = QWidget()
+        self.page_3.setObjectName(u"page_3")
+        self.page_3.setGeometry(QRect(0, 0, 696, 69))
+        self.verticalLayout_4 = QVBoxLayout(self.page_3)
+        self.verticalLayout_4.setSpacing(0)
+        self.verticalLayout_4.setObjectName(u"verticalLayout_4")
+        self.verticalLayout_4.setContentsMargins(0, 0, 0, 0)
+        self.fr_tb_demo_tr_1 = QFrame(self.page_3)
+        self.fr_tb_demo_tr_1.setObjectName(u"fr_tb_demo_tr_1")
+        self.fr_tb_demo_tr_1.setFrameShape(QFrame.StyledPanel)
+        self.fr_tb_demo_tr_1.setFrameShadow(QFrame.Raised)
+
+        self.verticalLayout_4.addWidget(self.fr_tb_demo_tr_1)
+
+        self.tb_demo_tr.addItem(self.page_3, u"Page 1")
+        self.page_4 = QWidget()
+        self.page_4.setObjectName(u"page_4")
+        self.page_4.setGeometry(QRect(0, 0, 696, 69))
+        self.verticalLayout_5 = QVBoxLayout(self.page_4)
+        self.verticalLayout_5.setSpacing(0)
+        self.verticalLayout_5.setObjectName(u"verticalLayout_5")
+        self.verticalLayout_5.setContentsMargins(0, 0, 0, 0)
+        self.fr_tb_demo_tr_2 = QFrame(self.page_4)
+        self.fr_tb_demo_tr_2.setObjectName(u"fr_tb_demo_tr_2")
+        self.fr_tb_demo_tr_2.setFrameShape(QFrame.StyledPanel)
+        self.fr_tb_demo_tr_2.setFrameShadow(QFrame.Raised)
+
+        self.verticalLayout_5.addWidget(self.fr_tb_demo_tr_2)
+
+        self.tb_demo_tr.addItem(self.page_4, u"Page 2")
+
+        self.vlay_fr_tb.addWidget(self.tb_demo_tr)
 
 
         self.verticalLayout.addWidget(self.fr_tb)
@@ -1201,7 +1236,8 @@ class Ui_main(object):
 
         self.retranslateUi(main)
 
-        self.tb_demo.setCurrentIndex(1)
+        self.tb_demo_th.setCurrentIndex(1)
+        self.tb_demo_tr.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(main)
@@ -1597,8 +1633,10 @@ class Ui_main(object):
         self.pte_demo_th.setPlaceholderText(QCoreApplication.translate("main", u"Je suis le text de test...", None))
         self.pte_demo_tr.setPlaceholderText(QCoreApplication.translate("main", u"Je suis le text de test...", None))
         self.lb_tb_demo.setText(QCoreApplication.translate("main", u"QToolBox :", None))
-        self.tb_demo.setItemText(self.tb_demo.indexOf(self.page), QCoreApplication.translate("main", u"Page 1", None))
-        self.tb_demo.setItemText(self.tb_demo.indexOf(self.page_2), QCoreApplication.translate("main", u"Page 2", None))
+        self.tb_demo_th.setItemText(self.tb_demo_th.indexOf(self.page), QCoreApplication.translate("main", u"Page 1", None))
+        self.tb_demo_th.setItemText(self.tb_demo_th.indexOf(self.page_2), QCoreApplication.translate("main", u"Page 2", None))
+        self.tb_demo_tr.setItemText(self.tb_demo_tr.indexOf(self.page_3), QCoreApplication.translate("main", u"Page 1", None))
+        self.tb_demo_tr.setItemText(self.tb_demo_tr.indexOf(self.page_4), QCoreApplication.translate("main", u"Page 2", None))
         self.lb_trw_demo.setText(QCoreApplication.translate("main", u"QTreeWidget :", None))
 
         __sortingEnabled2 = self.trw_demo_th.isSortingEnabled()
