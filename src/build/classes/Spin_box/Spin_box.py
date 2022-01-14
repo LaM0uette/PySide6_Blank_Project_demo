@@ -118,8 +118,10 @@ class rgb(rtn):
     def __init__(self, *wgs):
         super().__init__(*wgs,
                          colors=P_rgb().p_th3(),
-                         dim=P_dim().w_rect_2().h9(),
+                         dim=P_dim().w_rect_3().h9(),
+                         tm="th2",
                          font=P_font().h3(),
-                         val_max=255,
-                         no_focus=True
+                         pb_sb=P_pb_sb().pl_mi(),
+                         pb_side="lr",
+                         val_max=255
         )
