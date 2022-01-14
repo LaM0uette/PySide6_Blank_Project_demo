@@ -50,7 +50,7 @@ class rtn:
     def tr(self):
         self.colors_type = "tr"
         self.bd = P_bd().all().bn1()
-        self.header = {"h": False, "v": False}
+        self.header = P_header().ff()
         self.rtn()
 
 class base(rtn):
