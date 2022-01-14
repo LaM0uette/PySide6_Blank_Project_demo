@@ -8,6 +8,7 @@ PB_TYPE = None
 ### COULEURS
 COLORS_TYPE = "th"
 COLORS = None
+GRADIENT_COLORS = {"c1": (0, 0, 0), "c2": (255, 255, 255)}
 C1, C2, C3, BN1, BN2 = None, None, None, None, None
 
 

@@ -7,9 +7,13 @@ class wg:
                  *wgs,
                  colors_type,
                  colors,
+                 gradient_colors,
                  dim,
                  bd,
                  rd,
+                 val_min,
+                 val_max,
+                 step,
                  cur
     ):
         bds = Attrs(bd=bd).GET_BD()
@@ -36,6 +40,7 @@ class wg:
                 "th": f"""
                 /* SLIDER  */
                 QSlider {{
+                background-color: rgba(0, 0, 0, 0);
                 margin: 0px
                 }}
                 
@@ -97,6 +102,7 @@ class wg:
                 "rond": f"""
                 /* SLIDER  */
                 QSlider {{
+                background-color: rgba(0, 0, 0, 0);
                 margin: 0px
                 }}
                 
@@ -153,7 +159,54 @@ class wg:
                 QSlider::handle:vertical:pressed {{
                 border: 8px solid rgb{colors.get("bn2")};
                 }}
-                """
+                """,
+
+                "rgb": f"""
+                /* SLIDER  */
+                QSlider {{
+                background-color: rgba(0, 0, 0, 0);
+                margin: 0px
+                }}
+
+                /* BARRE_H */
+                QSlider::groove:horizontal {{
+                border-radius: 10px;
+                height: 20px;
+                margin: 0px;
+                background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{gradient_colors.get("c1")}, stop:1 rgba{gradient_colors.get("c2")});
+                }}
+
+                /* CURSEUR_H */
+                QSlider::handle:horizontal {{
+                border: none;
+                height: 5px;
+                width: 14px;
+                margin: -5px 0px;
+                border-radius: 15px;
+                border: 8px solid rgb{colors.get("c1")};
+                }}
+
+                /* BARRE_V */
+                QSlider::groove:vertical {{
+                border-radius: 10px;
+                width: 20px;
+                margin: 0px;
+                background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{gradient_colors.get("c1")}, stop:1 rgba{gradient_colors.get("c2")});
+                }}
+                
+                QSlider::groove:vertical:hover {{
+                background-color: rgb{colors.get("c3")};
+                }}
+
+                /* CURSEUR_V */
+                QSlider::handle:vertical {{
+                border: none;
+                height: 14px;
+                width: 5px;
+                margin: 0px -5px;
+                border-radius: 15px;
+                border: 8px solid rgb{colors.get("c1")};
+                }}"""
             }
             style = style_gen + style_type.get(colors_type)
 
@@ -161,5 +214,10 @@ class wg:
 
             try:
                 Fct(wg=wg, w=dim.get("w"), h=dim.get("h")).DIM()
+
+                wg.setMinimum(val_min)
+                wg.setMaximum(val_max)
+                wg.setSingleStep(step)
+
                 wg.setCursor(Fct(cur=cur).CUR())
             except: pass
