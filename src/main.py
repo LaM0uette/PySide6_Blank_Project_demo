@@ -106,7 +106,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Tree_widget.base(self.trw_demo_th).th()
             Tree_widget.base(self.trw_demo_tr).tr()
 
-
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
 
@@ -157,8 +156,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
             try: TREE_WIDGET()
             except: print(f"TREE_WIDGET{err}")
-
         _func_try()
+
         In_classe(ui=self)
 
         # Demo

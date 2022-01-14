@@ -111,8 +111,7 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             Text_edit.h4(self.le_opt_ft_texte_h4).tr()
             Text_edit.h5(self.le_opt_ft_texte_h5).tr()
         def TREE_WIDGET():
-            Tree_widget.base(self.trw_option).invisible()
-
+            Tree_widget.base(self.trw_option).option()
 
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
@@ -146,8 +145,8 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
             try: TREE_WIDGET()
             except: print(f"TREE_WIDGET{err}")
-
         _func_try()
+
         In_classe(ui=self)
     def IN_WG(self):
         # Base

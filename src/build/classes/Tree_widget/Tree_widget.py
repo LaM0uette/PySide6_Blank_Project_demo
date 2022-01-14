@@ -45,7 +45,9 @@ class rtn:
         self.colors_type = "tr"
         self.rtn()
 
-    def invisible(self):
+    def option(self):
+        self.dim = P_dim().ah().h5()
+        self.bd = P_bd().right().th3()
         self.scroll=P_scroll().off().off()
         self.tr()
 
@@ -54,9 +56,7 @@ class base(rtn):
     def __init__(self, *wgs):
         super().__init__(*wgs,
                          colors=P_rgb().p_th3(),
-                         dim=P_dim().aw().h5(),
                          font=P_font().h4(),
-                         bd=P_bd().right().bn1(),
                          scroll=P_scroll().off().nd(),
                          cur=P_cur().souris_main()
         )
