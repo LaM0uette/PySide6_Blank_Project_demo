@@ -110,6 +110,8 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             Text_edit.h3(self.le_opt_ft_texte_h3).tr()
             Text_edit.h4(self.le_opt_ft_texte_h4).tr()
             Text_edit.h5(self.le_opt_ft_texte_h5).tr()
+        def TREE_WIDGET():
+            Tree_widget.base(self.trw_option).invisible()
 
 
         def _func_try():
@@ -141,15 +143,12 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
             try: TEXT_EDIT()
             except: print(f"TEXT_EDIT{err}")
+
+            try: TREE_WIDGET()
+            except: print(f"TREE_WIDGET{err}")
+
         _func_try()
-
-
         In_classe(ui=self)
-
-
-        # QTreeWidget
-        with C_trw() as C_:
-            C_.option(self.trw_option)
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur=P_cur().souris()).CUR())

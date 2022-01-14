@@ -106,7 +106,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -4676, 818, 5700))
+        self.vlay_wg.setGeometry(QRect(0, -4941, 818, 5700))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -1122,19 +1122,11 @@ class Ui_main(object):
         self.fr_trw.setObjectName(u"fr_trw")
         self.fr_trw.setFrameShape(QFrame.StyledPanel)
         self.fr_trw.setFrameShadow(QFrame.Raised)
-        self.vlay_fr_trw = QVBoxLayout(self.fr_trw)
-        self.vlay_fr_trw.setSpacing(10)
-        self.vlay_fr_trw.setObjectName(u"vlay_fr_trw")
-        self.vlay_fr_trw.setContentsMargins(10, 10, 10, 10)
-        self.lb_trw_demo = QLabel(self.fr_trw)
-        self.lb_trw_demo.setObjectName(u"lb_trw_demo")
-
-        self.vlay_fr_trw.addWidget(self.lb_trw_demo)
-
-        self.verticalSpacer_23 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Fixed)
-
-        self.vlay_fr_trw.addItem(self.verticalSpacer_23)
-
+        self.glay_fr_trw = QGridLayout(self.fr_trw)
+        self.glay_fr_trw.setObjectName(u"glay_fr_trw")
+        self.glay_fr_trw.setHorizontalSpacing(0)
+        self.glay_fr_trw.setVerticalSpacing(10)
+        self.glay_fr_trw.setContentsMargins(10, 10, 10, 10)
         self.trw_demo_th = QTreeWidget(self.fr_trw)
         self.trw_demo_th.headerItem().setText(0, "")
         __qtreewidgetitem = QTreeWidgetItem(self.trw_demo_th)
@@ -1162,11 +1154,11 @@ class Ui_main(object):
         QTreeWidgetItem(__qtreewidgetitem11)
         self.trw_demo_th.setObjectName(u"trw_demo_th")
 
-        self.vlay_fr_trw.addWidget(self.trw_demo_th)
+        self.glay_fr_trw.addWidget(self.trw_demo_th, 2, 1, 1, 1)
 
         self.verticalSpacer_24 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Fixed)
 
-        self.vlay_fr_trw.addItem(self.verticalSpacer_24)
+        self.glay_fr_trw.addItem(self.verticalSpacer_24, 3, 1, 1, 1)
 
         self.trw_demo_tr = QTreeWidget(self.fr_trw)
         self.trw_demo_tr.headerItem().setText(0, "")
@@ -1196,7 +1188,24 @@ class Ui_main(object):
         self.trw_demo_tr.setObjectName(u"trw_demo_tr")
         self.trw_demo_tr.setHeaderHidden(True)
 
-        self.vlay_fr_trw.addWidget(self.trw_demo_tr)
+        self.glay_fr_trw.addWidget(self.trw_demo_tr, 4, 1, 1, 1)
+
+        self.horizontalSpacer_8 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.glay_fr_trw.addItem(self.horizontalSpacer_8, 2, 2, 3, 1)
+
+        self.horizontalSpacer_7 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.glay_fr_trw.addItem(self.horizontalSpacer_7, 2, 0, 3, 1)
+
+        self.lb_trw_demo = QLabel(self.fr_trw)
+        self.lb_trw_demo.setObjectName(u"lb_trw_demo")
+
+        self.glay_fr_trw.addWidget(self.lb_trw_demo, 0, 0, 1, 3)
+
+        self.verticalSpacer_23 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.glay_fr_trw.addItem(self.verticalSpacer_23, 1, 0, 1, 3)
 
 
         self.verticalLayout.addWidget(self.fr_trw)
@@ -1637,7 +1646,6 @@ class Ui_main(object):
         self.tb_demo_th.setItemText(self.tb_demo_th.indexOf(self.page_2), QCoreApplication.translate("main", u"Page 2", None))
         self.tb_demo_tr.setItemText(self.tb_demo_tr.indexOf(self.page_3), QCoreApplication.translate("main", u"Page 1", None))
         self.tb_demo_tr.setItemText(self.tb_demo_tr.indexOf(self.page_4), QCoreApplication.translate("main", u"Page 2", None))
-        self.lb_trw_demo.setText(QCoreApplication.translate("main", u"QTreeWidget :", None))
 
         __sortingEnabled2 = self.trw_demo_th.isSortingEnabled()
         self.trw_demo_th.setSortingEnabled(False)
@@ -1740,6 +1748,7 @@ class Ui_main(object):
         ___qtreewidgetitem45.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
         self.trw_demo_tr.setSortingEnabled(__sortingEnabled3)
 
+        self.lb_trw_demo.setText(QCoreApplication.translate("main", u"QTreeWidget :", None))
         pass
     # retranslateUi
 

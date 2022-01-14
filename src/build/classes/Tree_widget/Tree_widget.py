@@ -11,6 +11,7 @@ class rtn:
                  font=p_base.FONT,
                  bd=p_base.BD,
                  rd=p_base.RD,
+                 scroll=p_base.SCROLL,
                  cur=p_base.CUR,
                  ):
         self.wgs = wgs
@@ -21,6 +22,7 @@ class rtn:
         self.font = font
         self.bd = bd
         self.rd = rd
+        self.scroll = scroll
         self.cur = cur
 
     def rtn(self):
@@ -32,6 +34,7 @@ class rtn:
             font=self.font,
             bd=self.bd,
             rd=self.rd,
+            scroll=self.scroll,
             cur=self.cur,
         )
 
@@ -42,12 +45,18 @@ class rtn:
         self.colors_type = "tr"
         self.rtn()
 
+    def invisible(self):
+        self.scroll=P_scroll().off().off()
+        self.tr()
+
 
 class base(rtn):
     def __init__(self, *wgs):
         super().__init__(*wgs,
                          colors=P_rgb().p_th3(),
                          dim=P_dim().aw().h5(),
-                         font=P_font().h3(),
-                         bd=P_bd().all().th3()
+                         font=P_font().h4(),
+                         bd=P_bd().right().bn1(),
+                         scroll=P_scroll().off().nd(),
+                         cur=P_cur().souris_main()
         )

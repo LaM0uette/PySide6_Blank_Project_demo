@@ -102,6 +102,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         def TOOL_BOX():
             Tool_box.base(self.tb_demo_th).th()
             Tool_box.base(self.tb_demo_tr).tr()
+        def TREE_WIDGET():
+            Tree_widget.base(self.trw_demo_th).th()
+            Tree_widget.base(self.trw_demo_tr).tr()
 
 
         def _func_try():
@@ -152,16 +155,11 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             try: TOOL_BOX()
             except: print(f"TOOL_BOX{err}")
 
+            try: TREE_WIDGET()
+            except: print(f"TREE_WIDGET{err}")
 
         _func_try()
         In_classe(ui=self)
-
-
-        # QTreeWidget
-        with C_trw() as cls:
-            cls.demo_th(self.trw_demo_th)
-            cls.demo_tr(self.trw_demo_tr)
-
 
         # Demo
         for i in range(60):
