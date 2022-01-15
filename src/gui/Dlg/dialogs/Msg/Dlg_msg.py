@@ -92,6 +92,10 @@ class Dlg_msg(msg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.lb_mt_ico.setScaledContents(True)
         self.lb_mt_nom.setText(self.titre)
 
+
+        self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}th3.svg"))
+        self.lb_mt_ico.setScaledContents(True)
+
         # texte
         self.lb_msg_text.setText(self.msg)
 
@@ -115,22 +119,6 @@ class Dlg_msg(msg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.IN_WG_BASE()
         self.IN_CONNECTIONS()
         self.IN_ACT()
-
-
-    ### _ACTIONS
-    def _set_ico(self, ico=None):
-        if ico is None: ico = self.ico
-        self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{ico}th3.svg"))
-        self.lb_mt_ico.setScaledContents(True)
-
-
-    ### FONCTIONS
-    def INFO(self):
-        self._set_ico(ico=P_img().info())
-    def ALERTE(self):
-        self._set_ico(ico=P_img().alerte())
-    def AUTRES(self, ico):
-        self._set_ico(ico=ico)
 
 
     ### EVENT
