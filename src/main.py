@@ -234,9 +234,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # col = Dlg().COLORS()
         # print(col)
 
-        msg = Dlg_msg(msg="test")
-        msg.ALERTE()
-        msg.exec()
+        Msg().INFO()
 
 
     ### EVENT

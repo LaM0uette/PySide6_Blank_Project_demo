@@ -1,1 +1,1 @@
-from .Msg import Dlg_msg
+from .Msg import *
