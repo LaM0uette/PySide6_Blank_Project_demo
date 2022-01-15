@@ -23,8 +23,12 @@ class Dlg:
         dlg.exec()
         return self.rtn
     def INFO(self):
-        self.dlg.MSG(ico=P_img().info())
-        self.dlg.exec()
+        # self.dlg.MSG(ico=P_img().info())
+        # self.dlg.exec()
+
+        Msg().MSG(ico=P_img().info())
+        Msg().exec()
+
     def ALERTE(self):
         self.dlg.MSG(ico=P_img().alerte())
         self.dlg.exec()
