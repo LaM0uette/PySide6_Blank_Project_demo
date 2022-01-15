@@ -71,6 +71,7 @@ class Ui_Dlg(object):
         self.vlay_msg_body = QVBoxLayout()
         self.vlay_msg_body.setSpacing(0)
         self.vlay_msg_body.setObjectName(u"vlay_msg_body")
+        self.vlay_msg_body.setContentsMargins(20, -1, 20, -1)
         self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.vlay_msg_body.addItem(self.verticalSpacer_2)

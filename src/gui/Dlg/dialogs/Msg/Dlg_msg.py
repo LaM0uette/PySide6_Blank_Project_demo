@@ -2,44 +2,30 @@ from PySide6 import QtCore, QtWidgets, QtGui
 
 from ... import msg_ui
 from .....build import *
-from .....config import *
 from .....In_classe import In_classe
 
 
 class Dlg_msg(msg_ui.Ui_Dlg, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
 
-    def __init__(self, **kwargs):
+    def __init__(self,
+                 titre,
+                 msg,
+                 ico,
+                 txt_pb_ok,
+                 width,
+                 height,
+                 opacity,
+    ):
         super(Dlg_msg, self).__init__()
 
-        self.kwargs = kwargs
-
-        self.titre = self.kwargs.get("titre")
-        if self.titre is None:
-            self.titre = "Information"
-
-        self.msg = self.kwargs.get("msg")
-        if self.msg is None:
-            self.msg = ":)"
-
-        self.ico = self.kwargs.get("ico")
-        if self.ico is None:
-            self.ico = P_img().main()
-
-        self.txt_pb_ok = self.kwargs.get("txt_pb_ok")
-        if self.txt_pb_ok is None:
-            self.txt_pb_ok = "Ok"
-
-
-
-        self.width = self.kwargs.get("width")
-        if self.width is None: self.width = config.widht / 2
-
-        self.height = self.kwargs.get("height")
-        if self.height is None: self.height = config.height / 4
-
-        self.opacity = self.kwargs.get("opacity")
-        if self.opacity is None: self.opacity = 1
+        self.titre = titre
+        self.msg = msg
+        self.ico = ico
+        self.txt_pb_ok = txt_pb_ok
+        self.width = width
+        self.height = height
+        self.opacity = opacity
 
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setWindowModality(QtCore.Qt.ApplicationModal)
