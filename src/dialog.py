@@ -373,17 +373,24 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
         self.pb_dlg_input_ok.clicked.connect(__input)
         self.pb_dlg_input_annuler.clicked.connect(self._close)
         self.pb_dlg_input_ok.setDefault(True)
-    def COLORS(self):
+    def COLORS(self, rgb=(0, 0, 0)):
         def __input():
             self.sgn_rgb.emit((self.sd_opt_rgb_red.value(), self.sd_opt_rgb_green.value(), self.sd_opt_rgb_blue.value()))
             self.close()
-        def __set_fr_color():
-            rgb = self.sd_opt_rgb_red.value(), self.sd_opt_rgb_green.value(), self.sd_opt_rgb_blue.value()
-
+        def __set_sb_val():
             self.sb_opt_rgb_red.setValue(self.sd_opt_rgb_red.value())
             self.sb_opt_rgb_green.setValue(self.sd_opt_rgb_green.value())
             self.sb_opt_rgb_blue.setValue(self.sd_opt_rgb_blue.value())
 
+            __set_fr_color()
+        def __set_sd_val():
+            self.sd_opt_rgb_red.setValue(self.sb_opt_rgb_red.value())
+            self.sd_opt_rgb_green.setValue(self.sb_opt_rgb_green.value())
+            self.sd_opt_rgb_blue.setValue(self.sb_opt_rgb_blue.value())
+
+            __set_fr_color()
+        def __set_fr_color():
+            rgb = self.sd_opt_rgb_red.value(), self.sd_opt_rgb_green.value(), self.sd_opt_rgb_blue.value()
 
             rgb_r = {"c1": (0, self.sd_opt_rgb_green.value(), self.sd_opt_rgb_blue.value()) + (255,),
                      "c2": (255, self.sd_opt_rgb_green.value(), self.sd_opt_rgb_blue.value()) + (255,)}
@@ -394,7 +401,6 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
             rgb_b = {"c1": (self.sd_opt_rgb_red.value(), self.sd_opt_rgb_green.value(), 0) + (255,),
                      "c2": (self.sd_opt_rgb_red.value(), self.sd_opt_rgb_green.value(), 255) + (255,)}
 
-
             Frame.base(self.fr_opt_rgb_rgb, colors={"c1": rgb}).radius()
             Slider.rgb(self.sd_opt_rgb_red, gradient_colors=rgb_r).rgb()
             Slider.rgb(self.sd_opt_rgb_green, gradient_colors=rgb_g).rgb()
@@ -404,19 +410,27 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
 
         # Données
         self.pb_dlg_colors_ok.setText(self.txt_pb_ok)
+        self.fr_opt_rgb_rgb.setFixedWidth(self.fr_opt_rgb_rgb.height())
 
         # Connection
         self.pb_dlg_colors_ok.setDefault(True)
         self.pb_dlg_colors_ok.clicked.connect(__input)
 
-        self.sd_opt_rgb_red.valueChanged.connect(lambda: __set_fr_color())
-        self.sd_opt_rgb_green.valueChanged.connect(lambda: __set_fr_color())
-        self.sd_opt_rgb_blue.valueChanged.connect(lambda: __set_fr_color())
+        self.sd_opt_rgb_red.valueChanged.connect(lambda: __set_sb_val())
+        self.sd_opt_rgb_green.valueChanged.connect(lambda: __set_sb_val())
+        self.sd_opt_rgb_blue.valueChanged.connect(lambda: __set_sb_val())
 
+        self.sb_opt_rgb_red.valueChanged.connect(lambda: __set_sd_val())
+        self.sb_opt_rgb_green.valueChanged.connect(lambda: __set_sd_val())
+        self.sb_opt_rgb_blue.valueChanged.connect(lambda: __set_sd_val())
 
+        # init
         self.sd_opt_rgb_red.setValue(1)
         self.sd_opt_rgb_red.setValue(0)
-        self.fr_opt_rgb_rgb.setFixedWidth(self.fr_opt_rgb_rgb.height())
+
+        self.sd_opt_rgb_red.setValue(rgb[0])
+        self.sd_opt_rgb_green.setValue(rgb[1])
+        self.sd_opt_rgb_blue.setValue(rgb[2])
 
 
     ### EVENT
