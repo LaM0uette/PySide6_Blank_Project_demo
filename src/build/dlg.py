@@ -1,5 +1,6 @@
 from . import *
 from ..dialog import Dialog
+from ..gui.Dlg.dialogs import *
 
 
 class Dlg:
@@ -22,12 +23,12 @@ class Dlg:
         dlg.OPTION()
         dlg.exec()
         return self.rtn
-    def INFO(self):
-        # self.dlg.MSG(ico=P_img().info())
-        # self.dlg.exec()
+    def MSG(self):
+        msg = Dlg_msg(msg="test")
+        msg.MSG(ico=P_img().info())
+        msg.exec()
 
-        Msg().MSG(ico=P_img().info())
-        Msg().exec()
+        print(msg.tt)
 
     def ALERTE(self):
         self.dlg.MSG(ico=P_img().alerte())

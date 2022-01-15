@@ -68,38 +68,39 @@ class Ui_Dlg(object):
 
         self.vlay_fr_main.addWidget(self.fr_menu_top)
 
-        self.fr_msg_body = QVBoxLayout()
-        self.fr_msg_body.setObjectName(u"fr_msg_body")
+        self.vlay_msg_body = QVBoxLayout()
+        self.vlay_msg_body.setSpacing(0)
+        self.vlay_msg_body.setObjectName(u"vlay_msg_body")
         self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.fr_msg_body.addItem(self.verticalSpacer_2)
+        self.vlay_msg_body.addItem(self.verticalSpacer_2)
 
         self.lb_msg_text = QLabel(self.fr_main)
         self.lb_msg_text.setObjectName(u"lb_msg_text")
 
-        self.fr_msg_body.addWidget(self.lb_msg_text)
+        self.vlay_msg_body.addWidget(self.lb_msg_text)
 
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.fr_msg_body.addItem(self.verticalSpacer)
+        self.vlay_msg_body.addItem(self.verticalSpacer)
 
 
-        self.vlay_fr_main.addLayout(self.fr_msg_body)
+        self.vlay_fr_main.addLayout(self.vlay_msg_body)
 
         self.fr_msg_bottom = QFrame(self.fr_main)
         self.fr_msg_bottom.setObjectName(u"fr_msg_bottom")
-        self.hlay_pg_dlg_msg = QHBoxLayout(self.fr_msg_bottom)
-        self.hlay_pg_dlg_msg.setSpacing(2)
-        self.hlay_pg_dlg_msg.setObjectName(u"hlay_pg_dlg_msg")
-        self.hlay_pg_dlg_msg.setContentsMargins(0, 2, 0, 0)
+        self.hlay_msg_bottom = QHBoxLayout(self.fr_msg_bottom)
+        self.hlay_msg_bottom.setSpacing(2)
+        self.hlay_msg_bottom.setObjectName(u"hlay_msg_bottom")
+        self.hlay_msg_bottom.setContentsMargins(0, 2, 0, 0)
         self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.hlay_pg_dlg_msg.addItem(self.horizontalSpacer)
+        self.hlay_msg_bottom.addItem(self.horizontalSpacer)
 
         self.pb_msg_ok = QPushButton(self.fr_msg_bottom)
         self.pb_msg_ok.setObjectName(u"pb_msg_ok")
 
-        self.hlay_pg_dlg_msg.addWidget(self.pb_msg_ok)
+        self.hlay_msg_bottom.addWidget(self.pb_msg_ok)
 
 
         self.vlay_fr_main.addWidget(self.fr_msg_bottom)

@@ -6,6 +6,7 @@ from .gui import *
 from .build import *
 from .config import *
 from .In_classe import In_classe
+# from .gui.Dlg.dialogs import *
 
 
 class main(main_ui.Ui_main, QtWidgets.QWidget):
@@ -230,8 +231,12 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
     def TEMPO(self):
-        col = Dlg().COLORS()
-        print(col)
+        # col = Dlg().COLORS()
+        # print(col)
+
+        msg = Dlg_msg(msg="test")
+        msg.ALERTE()
+        msg.exec()
 
 
     ### EVENT
