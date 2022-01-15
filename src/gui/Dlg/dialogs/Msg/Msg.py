@@ -33,8 +33,10 @@ class Msg:
 
 
     def INFO(self):
+        self.titre = "INFO"
         self.ico = P_img().info()
         self._rtn()
     def ALERTE(self):
+        self.titre = "ALERTE"
         self.ico = P_img().alerte()
         self._rtn()
