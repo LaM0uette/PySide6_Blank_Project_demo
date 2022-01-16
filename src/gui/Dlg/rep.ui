@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Msg</class>
- <widget class="QWidget" name="Msg">
+ <class>Rep</class>
+ <widget class="QWidget" name="Rep">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -107,7 +107,7 @@
        </widget>
       </item>
       <item>
-       <layout class="QVBoxLayout" name="vlay_msg_body">
+       <layout class="QVBoxLayout" name="vlay_rep_body">
         <property name="spacing">
          <number>0</number>
         </property>
@@ -131,7 +131,7 @@
          </spacer>
         </item>
         <item>
-         <widget class="QLabel" name="lb_msg_text"/>
+         <widget class="QLabel" name="lb_rep_text"/>
         </item>
         <item>
          <spacer name="verticalSpacer">
@@ -149,8 +149,8 @@
        </layout>
       </item>
       <item>
-       <widget class="QFrame" name="fr_msg_bottom">
-        <layout class="QHBoxLayout" name="hlay_msg_bottom">
+       <widget class="QFrame" name="fr_rep_bottom">
+        <layout class="QHBoxLayout" name="hlay_rep_bottom">
          <property name="spacing">
           <number>2</number>
          </property>
@@ -180,7 +180,10 @@
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="pb_msg_ok"/>
+          <widget class="QPushButton" name="pb_rep_ok"/>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pb_rep_annuler"/>
          </item>
         </layout>
        </widget>

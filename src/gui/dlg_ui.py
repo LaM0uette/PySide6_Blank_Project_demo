@@ -796,7 +796,7 @@ class Ui_Dlg(object):
 
         self.retranslateUi(Dlg)
 
-        self.stk_dlg.setCurrentIndex(4)
+        self.stk_dlg.setCurrentIndex(2)
         self.stk_option.setCurrentIndex(1)
 
 

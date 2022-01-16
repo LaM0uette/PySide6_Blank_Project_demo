@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'msg.ui'
+## Form generated from reading UI file 'rep.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.2.2
 ##
@@ -19,16 +19,16 @@ from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
     QLabel, QPushButton, QSizePolicy, QSpacerItem,
     QVBoxLayout, QWidget)
 
-class Ui_Msg(object):
-    def setupUi(self, Msg):
-        if not Msg.objectName():
-            Msg.setObjectName(u"Msg")
-        Msg.resize(773, 261)
-        self.glay_dlg = QGridLayout(Msg)
+class Ui_Rep(object):
+    def setupUi(self, Rep):
+        if not Rep.objectName():
+            Rep.setObjectName(u"Rep")
+        Rep.resize(773, 261)
+        self.glay_dlg = QGridLayout(Rep)
         self.glay_dlg.setSpacing(0)
         self.glay_dlg.setObjectName(u"glay_dlg")
         self.glay_dlg.setContentsMargins(0, 0, 0, 0)
-        self.fr_main = QFrame(Msg)
+        self.fr_main = QFrame(Rep)
         self.fr_main.setObjectName(u"fr_main")
         self.fr_main.setFrameShape(QFrame.StyledPanel)
         self.fr_main.setFrameShadow(QFrame.Raised)
@@ -68,54 +68,59 @@ class Ui_Msg(object):
 
         self.vlay_fr_main.addWidget(self.fr_menu_top)
 
-        self.vlay_msg_body = QVBoxLayout()
-        self.vlay_msg_body.setSpacing(0)
-        self.vlay_msg_body.setObjectName(u"vlay_msg_body")
-        self.vlay_msg_body.setContentsMargins(20, -1, 20, -1)
+        self.vlay_rep_body = QVBoxLayout()
+        self.vlay_rep_body.setSpacing(0)
+        self.vlay_rep_body.setObjectName(u"vlay_rep_body")
+        self.vlay_rep_body.setContentsMargins(20, -1, 20, -1)
         self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.vlay_msg_body.addItem(self.verticalSpacer_2)
+        self.vlay_rep_body.addItem(self.verticalSpacer_2)
 
-        self.lb_msg_text = QLabel(self.fr_main)
-        self.lb_msg_text.setObjectName(u"lb_msg_text")
+        self.lb_rep_text = QLabel(self.fr_main)
+        self.lb_rep_text.setObjectName(u"lb_rep_text")
 
-        self.vlay_msg_body.addWidget(self.lb_msg_text)
+        self.vlay_rep_body.addWidget(self.lb_rep_text)
 
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.vlay_msg_body.addItem(self.verticalSpacer)
+        self.vlay_rep_body.addItem(self.verticalSpacer)
 
 
-        self.vlay_fr_main.addLayout(self.vlay_msg_body)
+        self.vlay_fr_main.addLayout(self.vlay_rep_body)
 
-        self.fr_msg_bottom = QFrame(self.fr_main)
-        self.fr_msg_bottom.setObjectName(u"fr_msg_bottom")
-        self.hlay_msg_bottom = QHBoxLayout(self.fr_msg_bottom)
-        self.hlay_msg_bottom.setSpacing(2)
-        self.hlay_msg_bottom.setObjectName(u"hlay_msg_bottom")
-        self.hlay_msg_bottom.setContentsMargins(0, 2, 0, 0)
+        self.fr_rep_bottom = QFrame(self.fr_main)
+        self.fr_rep_bottom.setObjectName(u"fr_rep_bottom")
+        self.hlay_rep_bottom = QHBoxLayout(self.fr_rep_bottom)
+        self.hlay_rep_bottom.setSpacing(2)
+        self.hlay_rep_bottom.setObjectName(u"hlay_rep_bottom")
+        self.hlay_rep_bottom.setContentsMargins(0, 2, 0, 0)
         self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.hlay_msg_bottom.addItem(self.horizontalSpacer)
+        self.hlay_rep_bottom.addItem(self.horizontalSpacer)
 
-        self.pb_msg_ok = QPushButton(self.fr_msg_bottom)
-        self.pb_msg_ok.setObjectName(u"pb_msg_ok")
+        self.pb_rep_ok = QPushButton(self.fr_rep_bottom)
+        self.pb_rep_ok.setObjectName(u"pb_rep_ok")
 
-        self.hlay_msg_bottom.addWidget(self.pb_msg_ok)
+        self.hlay_rep_bottom.addWidget(self.pb_rep_ok)
+
+        self.pb_rep_annuler = QPushButton(self.fr_rep_bottom)
+        self.pb_rep_annuler.setObjectName(u"pb_rep_annuler")
+
+        self.hlay_rep_bottom.addWidget(self.pb_rep_annuler)
 
 
-        self.vlay_fr_main.addWidget(self.fr_msg_bottom)
+        self.vlay_fr_main.addWidget(self.fr_rep_bottom)
 
 
         self.glay_dlg.addWidget(self.fr_main, 1, 0, 1, 1)
 
 
-        self.retranslateUi(Msg)
+        self.retranslateUi(Rep)
 
-        QMetaObject.connectSlotsByName(Msg)
+        QMetaObject.connectSlotsByName(Rep)
     # setupUi
 
-    def retranslateUi(self, Msg):
+    def retranslateUi(self, Rep):
         pass
     # retranslateUi
 

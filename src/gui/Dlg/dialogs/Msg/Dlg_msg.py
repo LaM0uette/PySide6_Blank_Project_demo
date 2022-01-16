@@ -5,7 +5,7 @@ from .....build import *
 from .....In_classe import In_classe
 
 
-class Dlg_msg(msg_ui.Ui_Dlg, QtWidgets.QDialog):
+class Dlg_msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
 
     def __init__(self,
