@@ -1,3 +1,5 @@
+from PySide6 import QtWidgets
+
 from ..Attrs import Attrs
 from . import Classe_wg
 from ....build import *
@@ -181,6 +183,7 @@ class wg:
                     Fct(wg=wg, img=f"{img}{tm}", dim=dim.get("h") * x_ico).ICON()
 
                 wg.setFlat(True)
+                wg.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
 
                 wg.setCursor(Fct(cur=cur).CUR())
             except: pass
