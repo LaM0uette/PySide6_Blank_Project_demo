@@ -8,6 +8,7 @@ from .....In_classe import In_classe
 class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
     rep = False
+    input = ""
 
     def __init__(self,
                  titre,
@@ -48,12 +49,12 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
     def IN_CLASSE(self):
         def FRAME():
             Frame.base(self.fr_main).cadre_th3()
-            Frame.menu_bottom_dlg(self.fr_rep_bottom).th()
+            Frame.menu_bottom_dlg(self.fr_input_bottom).th()
         def LABEL():
-            Label.base(self.lb_rep_text).tr()
+            Label.base(self.lb_input_text).tr()
         def PUSH_BUTTON():
-            Push_button.dlg_ok(self.pb_rep_ok).txt()
-            Push_button.dlg_nok(self.pb_rep_annuler).txt_inv()
+            Push_button.dlg_ok(self.pb_input_ok).txt()
+            Push_button.dlg_nok(self.pb_input_annuler).txt_inv()
 
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
@@ -90,13 +91,13 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
 
 
         # Message
-        self.lb_rep_text.setText(self.msg)
+        self.lb_input_text.setText(self.msg)
 
 
         # pb ok
-        self.pb_rep_ok.setText(self.txt_pb_ok)
-        self.pb_rep_annuler.setText(self.txt_pb_annuler)
-        self.pb_rep_annuler.setDefault(True)
+        self.pb_input_ok.setText(self.txt_pb_ok)
+        self.pb_input_annuler.setText(self.txt_pb_annuler)
+        self.pb_input_annuler.setDefault(True)
     def IN_WG_BASE(self):
         pass
     def IN_CONNECTIONS(self):
@@ -104,8 +105,8 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
 
         # pb ok
-        self.pb_rep_ok.clicked.connect(lambda: self.FCT_OK())
-        self.pb_rep_annuler.clicked.connect(lambda: self.close())
+        self.pb_input_ok.clicked.connect(lambda: self.FCT_OK())
+        self.pb_input_annuler.clicked.connect(lambda: self.close())
     def IN_ACT(self):
         pass
     def INIT(self):
@@ -120,6 +121,7 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
     ### FONCTIONS
     def FCT_OK(self):
         self.rep = True
+        self.input = "test"
         self.close()
 
 

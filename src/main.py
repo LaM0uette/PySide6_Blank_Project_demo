@@ -238,8 +238,13 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # Msg().INFO(msg="Je suis le nouveau message de la boite de dialog que je suis en train de créer.")
 
         # rep
-        rep = Rep().ALERTE(msg="Voulez vous quitter cette application ?")
-        print(rep)
+        # rep = Rep().ALERTE(msg="Voulez vous quitter cette application ?")
+        # print(rep)
+
+        # input
+        rep, txt = Input().TXT(msg="Entrez votre texte :")
+
+        if rep: print(txt)
 
 
     ### EVENT

@@ -26,28 +26,10 @@ class Input:
         )
         msg.exec()
 
-        return msg.rep
+        return msg.rep, msg.input
 
 
-    def INFO(self, titre="INFO", msg="", ico=P_img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
-        return self._rtn(
-            titre=titre,
-            msg=msg,
-            ico=ico,
-            tm=tm,
-            txt_pb_ok=txt_pb_ok,
-            txt_pb_annuler=txt_pb_annuler
-        )
-    def ALERTE(self, titre="ALERTE", msg="", ico=P_img().alerte(), tm="th3", txt_pb_ok="Valider", txt_pb_annuler="Annuler"):
-        return self._rtn(
-            titre=titre,
-            msg=msg,
-            ico=ico,
-            tm=tm,
-            txt_pb_ok=txt_pb_ok,
-            txt_pb_annuler=txt_pb_annuler
-        )
-    def QUITTER(self, titre="Quitter", msg="Voulez vous quitter cette application ?", ico=P_img().quitter(), tm="bn2", txt_pb_ok="Quitter", txt_pb_annuler="Annuler"):
+    def TXT(self, titre="INFO", msg="", ico=P_img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
         return self._rtn(
             titre=titre,
             msg=msg,
