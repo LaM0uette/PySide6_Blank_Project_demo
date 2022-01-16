@@ -1,8 +1,0 @@
-[15/01/2022 - 16:31:56,51] Conversion des fichiers ui : 
- 
- 
-[15/01/2022 - 16:31:56,51] Conversion du fichier msg.ui en cours... 
-[15/01/2022 - 16:31:56,51] Conversion du fichier msg.ui terminé avec succés ! 
- 
- 
-[15/01/2022 - 16:31:56,67] Conversion des fichiers ui terminés avec succés ! 
