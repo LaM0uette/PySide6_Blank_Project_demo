@@ -60,6 +60,8 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
             Slider.rgb(self.sd_rgb_red, self.sd_rgb_green, self.sd_rgb_blue).rond()
         def SPIN_BOX():
             Spin_box.rgb(self.sb_rgb_red, self.sb_rgb_green, self.sb_rgb_blue).bd_th3()
+        def TEXT_EDIT():
+            Text_edit.h3(self.le_rgb_hex).tr()
 
 
         def _func_try():
@@ -79,6 +81,9 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
 
             try: SPIN_BOX()
             except: print(f"SPIN_BOX{err}")
+
+            try: TEXT_EDIT()
+            except: print(f"TEXT_EDIT{err}")
         _func_try()
 
         In_classe(ui=self)
@@ -124,13 +129,15 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         self.sb_rgb_red.valueChanged.connect(lambda: self._set_sd_val())
         self.sb_rgb_green.valueChanged.connect(lambda: self._set_sd_val())
         self.sb_rgb_blue.valueChanged.connect(lambda: self._set_sd_val())
+        # hex
+        self.le_rgb_hex.textEdited.connect(lambda: self._set_rgb_val_hex())
 
         # pb ok
         self.pb_rgb_ok.clicked.connect(lambda: self.FCT_OK())
         self.pb_rgb_annuler.clicked.connect(lambda: self.close())
     def IN_WG_BASE(self):
         # Frame colors
-        self.fr_rgb_colors.setFixedWidth(150)
+        self.fr_rgb_colors.setFixedWidth(250)
 
         # slider / spin box
         self.sd_rgb_red.setValue(1)
@@ -163,6 +170,24 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         self.sd_rgb_blue.setValue(self.sb_rgb_blue.value())
 
         self._set_fr_color()
+    def _set_rgb_val_hex(self):
+        hex_colors = self.le_rgb_hex.text()
+
+        try: rgb = Fct().HEX_RGB(hex_colors=hex_colors)
+        except: return
+
+        if len(rgb) == 3:
+            r = rgb[0]
+            g = rgb[1]
+            b = rgb[2]
+
+            self.sb_rgb_red.setValue(r)
+            self.sb_rgb_green.setValue(g)
+            self.sb_rgb_blue.setValue(b)
+
+            self.sd_rgb_red.setValue(r)
+            self.sd_rgb_green.setValue(g)
+            self.sd_rgb_blue.setValue(b)
     def _set_fr_color(self):
         rgb = self.sd_rgb_red.value(), self.sd_rgb_green.value(), self.sd_rgb_blue.value()
 
@@ -175,6 +200,7 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         rgb_b = {"c1": (self.sd_rgb_red.value(), self.sd_rgb_green.value(), 0) + (255,),
                  "c2": (self.sd_rgb_red.value(), self.sd_rgb_green.value(), 255) + (255,)}
 
+        self.le_rgb_hex.setText(Fct().RGB_HEX(rgb=rgb))
         Frame.base(self.fr_rgb_colors, colors={"c1": rgb}).radius()
         Slider.rgb(self.sd_rgb_red, gradient_colors=rgb_r).rgb()
         Slider.rgb(self.sd_rgb_green, gradient_colors=rgb_g).rgb()

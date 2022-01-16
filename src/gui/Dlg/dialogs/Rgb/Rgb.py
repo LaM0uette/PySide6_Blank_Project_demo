@@ -4,7 +4,7 @@ from .....build import *
 
 class Rgb:
     def __init__(self,
-                 width=600,
+                 width=700,
                  height=400,
                  opacity=1
     ):

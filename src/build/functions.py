@@ -93,6 +93,12 @@ class Fct:
 
         wg.setPixmap(QtGui.QPixmap(img + ".svg"))
         wg.setScaledContents(True)
+    def RGB_HEX(self, rgb):
+        return "#" + "%02x%02x%02x" % rgb
+    def HEX_RGB(self, hex_colors):
+        rgb = hex_colors.lstrip('#')
+        lv = len(rgb)
+        return tuple(int(rgb[i:i + lv // 3], 16) for i in range(0, lv, lv // 3))
 
 
 ### FICHIERS
