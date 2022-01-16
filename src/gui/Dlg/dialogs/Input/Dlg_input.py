@@ -55,6 +55,9 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
         def PUSH_BUTTON():
             Push_button.dlg_ok(self.pb_input_ok).txt()
             Push_button.dlg_nok(self.pb_input_annuler).txt_inv()
+        def TEXT_EDIT():
+            Text_edit.base(self.le_input_text).th()
+
 
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
@@ -67,6 +70,9 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
 
             try: PUSH_BUTTON()
             except: print(f"PUSH_BUTTON{err}")
+
+            try: TEXT_EDIT()
+            except: print(f"TEXT_EDIT{err}")
         _func_try()
 
         In_classe(ui=self)
@@ -99,7 +105,7 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
         self.pb_input_annuler.setText(self.txt_pb_annuler)
         self.pb_input_annuler.setDefault(True)
     def IN_WG_BASE(self):
-        pass
+        self.le_input_text.setPlaceholderText(self.msg)
     def IN_CONNECTIONS(self):
         # Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
@@ -121,7 +127,7 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
     ### FONCTIONS
     def FCT_OK(self):
         self.rep = True
-        self.input = "test"
+        self.input = self.le_input_text.text()
         self.close()
 
 
