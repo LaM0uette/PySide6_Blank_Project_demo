@@ -16,14 +16,15 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
-    QLabel, QPushButton, QSizePolicy, QSpacerItem,
-    QVBoxLayout, QWidget)
+    QLabel, QPushButton, QSizePolicy, QSlider,
+    QSpacerItem, QSpinBox, QTimeEdit, QVBoxLayout,
+    QWidget)
 
 class Ui_Rgb(object):
     def setupUi(self, Rgb):
         if not Rgb.objectName():
             Rgb.setObjectName(u"Rgb")
-        Rgb.resize(773, 261)
+        Rgb.resize(773, 388)
         self.glay_dlg = QGridLayout(Rgb)
         self.glay_dlg.setSpacing(0)
         self.glay_dlg.setObjectName(u"glay_dlg")
@@ -72,13 +73,100 @@ class Ui_Rgb(object):
         self.vlay_rgb_body.setSpacing(0)
         self.vlay_rgb_body.setObjectName(u"vlay_rgb_body")
         self.vlay_rgb_body.setContentsMargins(20, -1, 20, -1)
-        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.glay_rgb = QGridLayout()
+        self.glay_rgb.setObjectName(u"glay_rgb")
+        self.glay_rgb.setHorizontalSpacing(20)
+        self.glay_rgb.setVerticalSpacing(0)
+        self.fr_rgb_colors = QFrame(self.fr_main)
+        self.fr_rgb_colors.setObjectName(u"fr_rgb_colors")
+        self.fr_rgb_colors.setFrameShape(QFrame.StyledPanel)
+        self.fr_rgb_colors.setFrameShadow(QFrame.Raised)
 
-        self.vlay_rgb_body.addItem(self.verticalSpacer_2)
+        self.glay_rgb.addWidget(self.fr_rgb_colors, 2, 3, 8, 1)
 
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_14 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.vlay_rgb_body.addItem(self.verticalSpacer)
+        self.glay_rgb.addItem(self.verticalSpacer_14, 0, 0, 1, 4)
+
+        self.horizontalSpacer_10 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.glay_rgb.addItem(self.horizontalSpacer_10, 2, 1, 1, 1)
+
+        self.verticalSpacer_11 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.glay_rgb.addItem(self.verticalSpacer_11, 10, 0, 1, 4)
+
+        self.sb_rgb_blue = QSpinBox(self.fr_main)
+        self.sb_rgb_blue.setObjectName(u"sb_rgb_blue")
+
+        self.glay_rgb.addWidget(self.sb_rgb_blue, 8, 2, 1, 1)
+
+        self.lb_rgb_blue = QLabel(self.fr_main)
+        self.lb_rgb_blue.setObjectName(u"lb_rgb_blue")
+
+        self.glay_rgb.addWidget(self.lb_rgb_blue, 8, 0, 1, 1)
+
+        self.sb_rgb_green = QSpinBox(self.fr_main)
+        self.sb_rgb_green.setObjectName(u"sb_rgb_green")
+
+        self.glay_rgb.addWidget(self.sb_rgb_green, 5, 2, 1, 1)
+
+        self.lb_rgb_red = QLabel(self.fr_main)
+        self.lb_rgb_red.setObjectName(u"lb_rgb_red")
+
+        self.glay_rgb.addWidget(self.lb_rgb_red, 2, 0, 1, 1)
+
+        self.lb_rgb_green = QLabel(self.fr_main)
+        self.lb_rgb_green.setObjectName(u"lb_rgb_green")
+
+        self.glay_rgb.addWidget(self.lb_rgb_green, 5, 0, 1, 1)
+
+        self.horizontalSpacer_12 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.glay_rgb.addItem(self.horizontalSpacer_12, 8, 1, 1, 1)
+
+        self.sd_rgb_red = QSlider(self.fr_main)
+        self.sd_rgb_red.setObjectName(u"sd_rgb_red")
+        self.sd_rgb_red.setOrientation(Qt.Horizontal)
+
+        self.glay_rgb.addWidget(self.sd_rgb_red, 3, 0, 1, 3)
+
+        self.sd_rgb_green = QSlider(self.fr_main)
+        self.sd_rgb_green.setObjectName(u"sd_rgb_green")
+        self.sd_rgb_green.setOrientation(Qt.Horizontal)
+
+        self.glay_rgb.addWidget(self.sd_rgb_green, 6, 0, 1, 3)
+
+        self.sb_rgb_red = QSpinBox(self.fr_main)
+        self.sb_rgb_red.setObjectName(u"sb_rgb_red")
+
+        self.glay_rgb.addWidget(self.sb_rgb_red, 2, 2, 1, 1)
+
+        self.verticalSpacer_12 = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.glay_rgb.addItem(self.verticalSpacer_12, 7, 0, 1, 3)
+
+        self.sd_rgb_blue = QSlider(self.fr_main)
+        self.sd_rgb_blue.setObjectName(u"sd_rgb_blue")
+        self.sd_rgb_blue.setOrientation(Qt.Horizontal)
+
+        self.glay_rgb.addWidget(self.sd_rgb_blue, 9, 0, 1, 3)
+
+        self.verticalSpacer_13 = QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.glay_rgb.addItem(self.verticalSpacer_13, 4, 0, 1, 3)
+
+        self.horizontalSpacer_11 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
+
+        self.glay_rgb.addItem(self.horizontalSpacer_11, 5, 1, 1, 1)
+
+        self.timeEdit = QTimeEdit(self.fr_main)
+        self.timeEdit.setObjectName(u"timeEdit")
+
+        self.glay_rgb.addWidget(self.timeEdit, 1, 1, 1, 1)
+
+
+        self.vlay_rgb_body.addLayout(self.glay_rgb)
 
 
         self.vlay_fr_main.addLayout(self.vlay_rgb_body)

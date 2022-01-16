@@ -14,7 +14,7 @@ if __name__ == "__main__":
 
     if config.auto_reload:
         os.startfile(os.path.abspath(f"{vrb.DO_SCRIPT}convert_ui.bat"))
-        time.sleep(0.5)
+        time.sleep(1)
 
         from src.build import *
 
