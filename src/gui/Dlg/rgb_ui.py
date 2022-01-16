@@ -154,10 +154,11 @@ class Ui_Rgb(object):
 
         self.fr_rgb_colors = QFrame(self.fr_main)
         self.fr_rgb_colors.setObjectName(u"fr_rgb_colors")
+        self.fr_rgb_colors.setMinimumSize(QSize(20, 0))
         self.fr_rgb_colors.setFrameShape(QFrame.StyledPanel)
         self.fr_rgb_colors.setFrameShadow(QFrame.Raised)
 
-        self.glay_rgb.addWidget(self.fr_rgb_colors, 2, 3, 6, 1)
+        self.glay_rgb.addWidget(self.fr_rgb_colors, 1, 3, 8, 1)
 
 
         self.vlay_rgb_body.addLayout(self.glay_rgb)

@@ -103,7 +103,9 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
 
 
         # Message
-        # self.lb_rgb_text.setText(f"{self.msg}: ")
+        self.lb_rgb_red.setText("ROUGE")
+        self.lb_rgb_green.setText("VERT")
+        self.lb_rgb_blue.setText("BLEU")
 
 
         # pb ok
@@ -128,7 +130,7 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         self.pb_rgb_annuler.clicked.connect(lambda: self.close())
     def IN_WG_BASE(self):
         # Frame colors
-        self.fr_rgb_colors.setFixedWidth(100)
+        self.fr_rgb_colors.setFixedWidth(150)
 
         # slider / spin box
         self.sd_rgb_red.setValue(1)
