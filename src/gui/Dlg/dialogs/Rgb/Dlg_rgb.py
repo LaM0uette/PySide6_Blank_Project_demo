@@ -50,12 +50,16 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         def FRAME():
             Frame.base(self.fr_main).cadre_th3()
             Frame.menu_bottom_dlg(self.fr_rgb_bottom).th()
+            Frame.base(self.fr_rgb_colors).radius()
         def LABEL():
-            pass
-            # Label.base(self.lb_rgb_text).tr()
+            Label.h4(self.lb_rgb_red, self.lb_rgb_green, self.lb_rgb_blue).tr()
         def PUSH_BUTTON():
             Push_button.dlg_ok(self.pb_rgb_ok).txt()
             Push_button.dlg_nok(self.pb_rgb_annuler).txt_inv()
+        def SLIDER():
+            Slider.rgb(self.sd_rgb_red, self.sd_rgb_green, self.sd_rgb_blue).rond()
+        def SPIN_BOX():
+            Spin_box.rgb(self.sb_rgb_red, self.sb_rgb_green, self.sb_rgb_blue).bd_th3()
 
 
         def _func_try():
@@ -69,6 +73,12 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
 
             try: PUSH_BUTTON()
             except: print(f"PUSH_BUTTON{err}")
+
+            try: SLIDER()
+            except: print(f"SLIDER{err}")
+
+            try: SPIN_BOX()
+            except: print(f"SPIN_BOX{err}")
         _func_try()
 
         In_classe(ui=self)
@@ -101,7 +111,7 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         self.pb_rgb_annuler.setText(self.txt_pb_annuler)
         self.pb_rgb_annuler.setDefault(True)
     def IN_WG_BASE(self):
-        pass
+        self.fr_rgb_colors.setFixedWidth(100)
     def IN_CONNECTIONS(self):
         # Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
