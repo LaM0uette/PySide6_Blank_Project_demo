@@ -69,7 +69,7 @@ class Ui_Input(object):
         self.vlay_fr_main.addWidget(self.fr_menu_top)
 
         self.vlay_input_body = QVBoxLayout()
-        self.vlay_input_body.setSpacing(0)
+        self.vlay_input_body.setSpacing(2)
         self.vlay_input_body.setObjectName(u"vlay_input_body")
         self.vlay_input_body.setContentsMargins(20, -1, 20, -1)
         self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)

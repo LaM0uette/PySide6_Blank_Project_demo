@@ -109,7 +109,7 @@
       <item>
        <layout class="QVBoxLayout" name="vlay_input_body">
         <property name="spacing">
-         <number>0</number>
+         <number>2</number>
         </property>
         <property name="leftMargin">
          <number>20</number>

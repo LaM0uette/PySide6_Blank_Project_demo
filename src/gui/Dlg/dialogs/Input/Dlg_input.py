@@ -56,7 +56,7 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
             Push_button.dlg_ok(self.pb_input_ok).txt()
             Push_button.dlg_nok(self.pb_input_annuler).txt_inv()
         def TEXT_EDIT():
-            Text_edit.base(self.le_input_text).th()
+            Text_edit.base(self.le_input_text).bottom_th2()
 
 
         def _func_try():

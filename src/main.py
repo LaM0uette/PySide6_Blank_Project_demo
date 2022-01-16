@@ -97,7 +97,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Table_widget.base(self.tw_demo_tr).tr()
         def TEXT_EDIT():
             Text_edit.base(self.le_demo_th).th()
-            Text_edit.base(self.le_demo_tr).bottom_th2()
+            Text_edit.base(self.le_demo_tr).bottom_tr2()
             Text_edit.base_bloc(self.te_demo_th, self.pte_demo_th).th()
             Text_edit.base_bloc(self.te_demo_tr, self.pte_demo_tr).tr()
         def TOOL_BOX():
