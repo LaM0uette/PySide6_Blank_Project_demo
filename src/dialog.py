@@ -272,18 +272,6 @@ class Dialog(dlg_ui.Ui_Dlg, QtWidgets.QDialog):
                 if tm == config.theme:
                     self.cb_opt_tm_theme.setCurrentIndex(i)
 
-        def __maj_tm_rgb():
-            col = Dialog().COLORS()
-            print(col)
-
-            # dct = {
-            #     "h1": self.sb_opt_ft_h1.value()
-            # }
-            # Json(lien_json=vrb.JS_FONT).UPDATE(dct)
-            #
-            # self._reload()
-
-
         dct_pg = {
             "Général": [self.pg_opt_gen],
             "Polices": [self.pg_opt_font],
