@@ -2,7 +2,7 @@ from .Dlg_rgb import Dlg_rgb
 from .....build import *
 
 
-class Input:
+class Rgb:
     def __init__(self,
                  width=600,
                  height=200,
@@ -26,7 +26,7 @@ class Input:
         )
         msg.exec()
 
-        return msg.rep, msg.input
+        return msg.rep, msg.rgb
 
 
     def TXT(self, titre="INPUT", msg="", ico=P_img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):

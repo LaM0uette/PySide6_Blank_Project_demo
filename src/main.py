@@ -242,9 +242,12 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # print(rep)
 
         # input
-        rep, txt = Input().TXT(msg="Entrez votre texte")
+        # rep, txt = Input().TXT(msg="Entrez votre texte")
+        # if rep: print(txt)
 
-        if rep: print(txt)
+        # rgb
+        rep, rgb = Rgb().TXT(msg="Entrez votre texte")
+        if rep: print(rgb)
 
 
     ### EVENT
