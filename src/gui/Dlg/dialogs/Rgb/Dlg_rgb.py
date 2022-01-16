@@ -111,10 +111,28 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         self.pb_rgb_annuler.setText(self.txt_pb_annuler)
         self.pb_rgb_annuler.setDefault(True)
     def IN_WG_BASE(self):
+        # Frame colors
         self.fr_rgb_colors.setFixedWidth(100)
+
+        # slider / spin box
+        self.sd_rgb_red.setValue(1)
+        self.sd_rgb_red.setValue(0)
+
+        self.sd_rgb_red.setValue(self.rgb[0])
+        self.sd_rgb_green.setValue(self.rgb[1])
+        self.sd_rgb_blue.setValue(self.rgb[2])
     def IN_CONNECTIONS(self):
         # Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
+
+        # Slider
+        self.sd_rgb_red.valueChanged.connect(lambda: self._set_sb_val())
+        self.sd_rgb_green.valueChanged.connect(lambda: self._set_sb_val())
+        self.sd_rgb_blue.valueChanged.connect(lambda: self._set_sb_val())
+        # Spin box
+        self.sb_rgb_red.valueChanged.connect(lambda: self._set_sd_val())
+        self.sb_rgb_green.valueChanged.connect(lambda: self._set_sd_val())
+        self.sb_rgb_blue.valueChanged.connect(lambda: self._set_sd_val())
 
         # pb ok
         self.pb_rgb_ok.clicked.connect(lambda: self.FCT_OK())
@@ -130,10 +148,41 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         self.IN_ACT()
 
 
+    ### ACTIONS
+    def _set_sb_val(self):
+        self.sb_rgb_red.setValue(self.sd_rgb_red.value())
+        self.sb_rgb_green.setValue(self.sd_rgb_green.value())
+        self.sb_rgb_blue.setValue(self.sd_rgb_blue.value())
+
+        self._set_fr_color()
+    def _set_sd_val(self):
+        self.sd_rgb_red.setValue(self.sb_rgb_red.value())
+        self.sd_rgb_green.setValue(self.sb_rgb_green.value())
+        self.sd_rgb_blue.setValue(self.sb_rgb_blue.value())
+
+        self._set_fr_color()
+    def _set_fr_color(self):
+        rgb = self.sd_rgb_red.value(), self.sd_rgb_green.value(), self.sd_rgb_blue.value()
+
+        rgb_r = {"c1": (0, self.sd_rgb_green.value(), self.sd_rgb_blue.value()) + (255,),
+                 "c2": (255, self.sd_rgb_green.value(), self.sd_rgb_blue.value()) + (255,)}
+
+        rgb_g = {"c1": (self.sd_rgb_red.value(), 0, self.sd_rgb_blue.value()) + (255,),
+                 "c2": (self.sd_rgb_red.value(), 255, self.sd_rgb_blue.value()) + (255,)}
+
+        rgb_b = {"c1": (self.sd_rgb_red.value(), self.sd_rgb_green.value(), 0) + (255,),
+                 "c2": (self.sd_rgb_red.value(), self.sd_rgb_green.value(), 255) + (255,)}
+
+        Frame.base(self.fr_rgb_colors, colors={"c1": rgb}).radius()
+        Slider.rgb(self.sd_rgb_red, gradient_colors=rgb_r).rgb()
+        Slider.rgb(self.sd_rgb_green, gradient_colors=rgb_g).rgb()
+        Slider.rgb(self.sd_rgb_blue, gradient_colors=rgb_b).rgb()
+
+
     ### FONCTIONS
     def FCT_OK(self):
         self.rep = True
-        self.rgb = [0, 0, 0]
+        self.rgb = [self.sd_rgb_red.value(), self.sd_rgb_green.value(), self.sd_rgb_blue.value()]
         self.close()
 
 

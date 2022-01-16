@@ -261,7 +261,7 @@
             </property>
            </spacer>
           </item>
-          <item row="1" column="3" rowspan="7">
+          <item row="2" column="3" rowspan="6">
            <widget class="QFrame" name="fr_rgb_colors">
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
