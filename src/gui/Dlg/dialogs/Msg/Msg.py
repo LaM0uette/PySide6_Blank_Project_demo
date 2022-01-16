@@ -13,17 +13,29 @@ class Msg:
         self.opacity = opacity
 
     def _rtn(self, titre, msg, ico, txt_pb_ok):
-        msg = Dlg_msg(titre=titre,
-                      msg=msg,
-                      ico=ico,
-                      txt_pb_ok=txt_pb_ok,
-                      width=self.width,
-                      height=self.height,
-                      opacity=self.opacity)
+        msg = Dlg_msg(
+            titre=titre,
+            msg=msg,
+            ico=ico,
+            txt_pb_ok=txt_pb_ok,
+            width=self.width,
+            height=self.height,
+            opacity=self.opacity
+        )
         msg.exec()
 
 
     def INFO(self, titre="INFO", msg="", ico=P_img().info(), txt_pb_ok="Ok"):
-        self._rtn(titre=titre, msg=msg, ico=ico, txt_pb_ok=txt_pb_ok,)
+        self._rtn(
+            titre=titre,
+            msg=msg,
+            ico=ico,
+            txt_pb_ok=txt_pb_ok
+        )
     def ALERTE(self, titre="ALERTE", msg="", ico=P_img().alerte(), txt_pb_ok="Ok"):
-        self._rtn(titre=titre, msg=msg, ico=ico, txt_pb_ok=txt_pb_ok, )
+        self._rtn(
+            titre=titre,
+            msg=msg,
+            ico=ico,
+            txt_pb_ok=txt_pb_ok
+        )

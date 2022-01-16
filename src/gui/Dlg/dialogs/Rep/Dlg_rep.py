@@ -7,12 +7,14 @@ from .....In_classe import In_classe
 
 class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
+    rep = False
 
     def __init__(self,
                  titre,
                  msg,
                  ico,
                  txt_pb_ok,
+                 txt_pb_annuler,
                  width,
                  height,
                  opacity,
@@ -23,6 +25,7 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
         self.msg = msg
         self.ico = ico
         self.txt_pb_ok = txt_pb_ok
+        self.txt_pb_annuler = txt_pb_annuler
         self.width = width
         self.height = height
         self.opacity = opacity
@@ -43,11 +46,12 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
     def IN_CLASSE(self):
         def FRAME():
             Frame.base(self.fr_main).cadre_th3()
-            Frame.menu_bottom_dlg(self.fr_msg_bottom).th()
+            Frame.menu_bottom_dlg(self.fr_rep_bottom).th()
         def LABEL():
-            Label.base(self.lb_msg_text).tr()
+            Label.base(self.lb_rep_text).tr()
         def PUSH_BUTTON():
-            Push_button.dlg_ok(self.pb_msg_ok).txt()
+            Push_button.dlg_ok(self.pb_rep_ok).txt_inv()
+            Push_button.dlg_nok(self.pb_rep_annuler).txt()
 
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
@@ -84,12 +88,13 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
 
 
         # Message
-        self.lb_msg_text.setText(self.msg)
+        self.lb_rep_text.setText(self.msg)
 
 
         # pb ok
-        self.pb_msg_ok.setText(self.txt_pb_ok)
-        self.pb_msg_ok.setDefault(True)
+        self.pb_rep_ok.setText(self.txt_pb_ok)
+        self.pb_rep_annuler.setText(self.txt_pb_annuler)
+        self.pb_rep_annuler.setDefault(True)
     def IN_WG_BASE(self):
         pass
     def IN_CONNECTIONS(self):
@@ -97,7 +102,8 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
 
         # pb ok
-        self.pb_msg_ok.clicked.connect(lambda: self.close())
+        self.pb_rep_ok.clicked.connect(lambda: self.FCT_OK())
+        self.pb_rep_annuler.clicked.connect(lambda: self.close())
     def IN_ACT(self):
         pass
     def INIT(self):
@@ -107,6 +113,12 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
         self.IN_WG_BASE()
         self.IN_CONNECTIONS()
         self.IN_ACT()
+
+
+    ### FONCTIONS
+    def FCT_OK(self):
+        self.rep = True
+        self.close()
 
 
     ### EVENT
