@@ -36,7 +36,7 @@ class Rep:
             txt_pb_ok=txt_pb_ok,
             txt_pb_annuler=txt_pb_annuler
         )
-    def ALERTE(self, titre="ALERTE", msg="", ico=P_img().alerte(), txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
+    def ALERTE(self, titre="ALERTE", msg="", ico=P_img().alerte(), txt_pb_ok="Valider", txt_pb_annuler="Annuler"):
         return self._rtn(
             titre=titre,
             msg=msg,

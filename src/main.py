@@ -234,7 +234,12 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # col = Dlg().COLORS()
         # print(col)
 
-        Msg().INFO(msg="Je suis le nouveau message de la boite de dialog que je suis en train de créer.")
+        # info
+        # Msg().INFO(msg="Je suis le nouveau message de la boite de dialog que je suis en train de créer.")
+
+        # rep
+        rep = Rep().ALERTE(msg="Voulez vous quitter cette application ?")
+        print(rep)
 
 
     ### EVENT

@@ -50,8 +50,8 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
         def LABEL():
             Label.base(self.lb_rep_text).tr()
         def PUSH_BUTTON():
-            Push_button.dlg_ok(self.pb_rep_ok).txt_inv()
-            Push_button.dlg_nok(self.pb_rep_annuler).txt()
+            Push_button.dlg_ok(self.pb_rep_ok).txt()
+            Push_button.dlg_nok(self.pb_rep_annuler).txt_inv()
 
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
