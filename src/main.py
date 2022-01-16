@@ -15,7 +15,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
 
-        self.dlg = None
         self.sizegrip = QtWidgets.QSizeGrip(self)
         self.win_state = QtCore.Qt.WindowNoState
 
@@ -298,7 +297,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             self._resize()
 
 
-ICO_MAIN = P_img().main() + "th3" + ".svg"
+ICO_MAIN = f"{P_img().main()}th3.svg"
 app = QtWidgets.QApplication(sys.argv)
 splash = QtWidgets.QSplashScreen(QtGui.QPixmap(ICO_MAIN).scaledToHeight(500), QtCore.Qt.WindowStaysOnTopHint)
 splash.show()
