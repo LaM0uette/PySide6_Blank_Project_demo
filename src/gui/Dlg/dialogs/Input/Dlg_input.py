@@ -97,7 +97,8 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
 
 
         # Message
-        self.lb_input_text.setText(self.msg)
+        self.lb_input_text.setText(f"{self.msg}: ")
+        self.le_input_text.setPlaceholderText(f"{self.msg}...")
 
 
         # pb ok
@@ -105,7 +106,7 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
         self.pb_input_annuler.setText(self.txt_pb_annuler)
         self.pb_input_annuler.setDefault(True)
     def IN_WG_BASE(self):
-        self.le_input_text.setPlaceholderText(self.msg)
+        pass
     def IN_CONNECTIONS(self):
         # Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
