@@ -13,6 +13,7 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
                  titre,
                  msg,
                  ico,
+                 tm,
                  txt_pb_ok,
                  txt_pb_annuler,
                  width,
@@ -24,6 +25,7 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
         self.titre = titre
         self.msg = msg
         self.ico = ico
+        self.tm = tm
         self.txt_pb_ok = txt_pb_ok
         self.txt_pb_annuler = txt_pb_annuler
         self.width = width
@@ -83,7 +85,7 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
         self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}th3.svg"))
         self.lb_mt_ico.setScaledContents(True)
         self.lb_mt_nom.setText(self.titre)
-        self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}th3.svg"))
+        self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}{self.tm}.svg"))
         self.lb_mt_ico.setScaledContents(True)
 
 

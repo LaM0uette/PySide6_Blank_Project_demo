@@ -12,6 +12,7 @@ class Dlg_msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
                  titre,
                  msg,
                  ico,
+                 tm,
                  txt_pb_ok,
                  width,
                  height,
@@ -22,6 +23,7 @@ class Dlg_msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
         self.titre = titre
         self.msg = msg
         self.ico = ico
+        self.tm = tm
         self.txt_pb_ok = txt_pb_ok
         self.width = width
         self.height = height
@@ -76,11 +78,9 @@ class Dlg_msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
         # Menu_top
         dim = P_dim().carr().h9()
         Fct(wg=self.lb_mt_ico, w=dim.get("w"), h=dim.get("h")).DIM()
-        self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}th3.svg"))
+        self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}{self.tm}.svg"))
         self.lb_mt_ico.setScaledContents(True)
         self.lb_mt_nom.setText(self.titre)
-        self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}th3.svg"))
-        self.lb_mt_ico.setScaledContents(True)
 
 
         # Message
