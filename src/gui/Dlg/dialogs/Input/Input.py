@@ -13,7 +13,7 @@ class Input:
         self.opacity = opacity
 
     def _rtn(self, titre, msg, ico, tm, txt_pb_ok, txt_pb_annuler):
-        msg = Dlg_rep(
+        msg = Dlg_input(
             titre=titre,
             msg=msg,
             ico=ico,

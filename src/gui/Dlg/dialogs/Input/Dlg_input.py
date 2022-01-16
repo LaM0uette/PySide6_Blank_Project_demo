@@ -5,7 +5,7 @@ from .....build import *
 from .....In_classe import In_classe
 
 
-class Dlg_input(rep_ui.Ui_Input, QtWidgets.QDialog):
+class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
     rep = False
 
