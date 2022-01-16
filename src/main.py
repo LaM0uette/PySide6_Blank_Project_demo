@@ -6,7 +6,6 @@ from .gui import *
 from .build import *
 from .config import *
 from .In_classe import In_classe
-# from .gui.Dlg.dialogs import *
 
 
 class main(main_ui.Ui_main, QtWidgets.QWidget):
@@ -194,7 +193,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             self.hlay_menu_bottom.addWidget(self.sizegrip)
     def IN_CONNECTIONS(self):
         ## Menu_top
-        self.pb_mt_option.clicked.connect(lambda: self.FCT_OPTION())
+        self.pb_mt_option.clicked.connect(lambda: Option(fen=fen).MAIN())
         self.pb_mt_reduire.clicked.connect(lambda: self.EVT_REDUIRE_GDT())
         self.pb_mt_agrandir.clicked.connect(lambda: self.EVT_AGRANDIR_GDT())
         self.pb_mt_quitter.clicked.connect(lambda: self.EVT_REDUIRE_HIDE_GDT())
@@ -215,8 +214,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
     ### FONCTIONS
-    def FCT_OPTION(self):
-        Option(fen=fen).MAIN()
 
 
     ### EVENT
