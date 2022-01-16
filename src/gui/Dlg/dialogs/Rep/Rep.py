@@ -44,3 +44,11 @@ class Rep:
             txt_pb_ok=txt_pb_ok,
             txt_pb_annuler=txt_pb_annuler
         )
+    def QUITTER(self, titre="ALERTE", msg="Voulez vous quitter cette application ?", ico=P_img().alerte(), txt_pb_ok="Valider", txt_pb_annuler="Annuler"):
+        return self._rtn(
+            titre=titre,
+            msg=msg,
+            ico=ico,
+            txt_pb_ok=txt_pb_ok,
+            txt_pb_annuler=txt_pb_annuler
+        )

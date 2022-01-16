@@ -272,7 +272,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.hide()
         self._centre_fen()
     def EVT_QUITTER(self):
-        rep = Dlg().QUITTER()
+        rep = Rep().QUITTER()
 
         if rep:
             app.quit()
