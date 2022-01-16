@@ -25,9 +25,11 @@ class Rep:
         )
         msg.exec()
 
+        return msg.rep
+
 
     def INFO(self, titre="INFO", msg="", ico=P_img().info(), txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
-        self._rtn(
+        return self._rtn(
             titre=titre,
             msg=msg,
             ico=ico,
@@ -35,7 +37,7 @@ class Rep:
             txt_pb_annuler=txt_pb_annuler
         )
     def ALERTE(self, titre="ALERTE", msg="", ico=P_img().alerte(), txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
-        self._rtn(
+        return self._rtn(
             titre=titre,
             msg=msg,
             ico=ico,

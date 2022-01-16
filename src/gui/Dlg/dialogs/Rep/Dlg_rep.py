@@ -98,7 +98,7 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
     def IN_WG_BASE(self):
         pass
     def IN_CONNECTIONS(self):
-        ## Menu_top
+        # Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
 
         # pb ok
