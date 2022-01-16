@@ -8,11 +8,11 @@ from .....In_classe import In_classe
 class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
     rep = False
-    rgb = ""
+    rgb = [0, 0, 0]
 
     def __init__(self,
                  titre,
-                 msg,
+                 rgb,
                  ico,
                  tm,
                  txt_pb_ok,
@@ -24,7 +24,7 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         super(Dlg_rgb, self).__init__()
 
         self.titre = titre
-        self.msg = msg
+        self.rgb = rgb
         self.ico = ico
         self.tm = tm
         self.txt_pb_ok = txt_pb_ok
@@ -123,7 +123,7 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     ### FONCTIONS
     def FCT_OK(self):
         self.rep = True
-        self.rgb = "je suis un test"
+        self.rgb = [0, 0, 0]
         self.close()
 
 

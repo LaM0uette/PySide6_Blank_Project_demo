@@ -5,17 +5,17 @@ from .....build import *
 class Rgb:
     def __init__(self,
                  width=600,
-                 height=200,
+                 height=400,
                  opacity=1
     ):
         self.width = width
         self.height = height
         self.opacity = opacity
 
-    def _rtn(self, titre, msg, ico, tm, txt_pb_ok, txt_pb_annuler):
+    def _rtn(self, titre, rgb, ico, tm, txt_pb_ok, txt_pb_annuler):
         msg = Dlg_rgb(
             titre=titre,
-            msg=msg,
+            rgb=rgb,
             ico=ico,
             tm=tm,
             txt_pb_ok=txt_pb_ok,
@@ -29,10 +29,12 @@ class Rgb:
         return msg.rep, msg.rgb
 
 
-    def TXT(self, titre="INPUT", msg="", ico=P_img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
+    def GET(self, titre="RGB", rgb=None, ico=P_img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
+        if rgb is None: rgb = [0, 0, 0]
+
         return self._rtn(
             titre=titre,
-            msg=msg,
+            rgb=rgb,
             ico=ico,
             tm=tm,
             txt_pb_ok=txt_pb_ok,

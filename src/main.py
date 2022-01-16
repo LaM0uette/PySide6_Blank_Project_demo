@@ -246,7 +246,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # if rep: print(txt)
 
         # rgb
-        rep, rgb = Rgb().TXT(msg="Entrez votre texte")
+        rep, rgb = Rgb().GET()
         if rep: print(rgb)
 
 
