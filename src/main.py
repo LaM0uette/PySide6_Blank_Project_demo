@@ -192,8 +192,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
                                         f"height: {P_dim().h10()}px;"
                                         "}")
             self.hlay_menu_bottom.addWidget(self.sizegrip)
-    def IN_WG_BASE(self):
-        pass
     def IN_CONNECTIONS(self):
         ## Menu_top
         self.pb_mt_option.clicked.connect(lambda: self.FCT_OPTION())
@@ -202,14 +200,16 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.pb_mt_quitter.clicked.connect(lambda: self.EVT_REDUIRE_HIDE_GDT())
 
         self.pb_mt_option_2.clicked.connect(lambda: self.TEMPO())
+    def IN_WG_BASE(self):
+        pass
     def IN_ACT(self):
         pass
     def INIT(self):
         self.IN_BASE()
         self.IN_CLASSE()
         self.IN_WG()
-        self.IN_WG_BASE()
         self.IN_CONNECTIONS()
+        self.IN_WG_BASE()
         self.IN_ACT()
 
 

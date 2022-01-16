@@ -110,17 +110,6 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         self.pb_rgb_ok.setText(self.txt_pb_ok)
         self.pb_rgb_annuler.setText(self.txt_pb_annuler)
         self.pb_rgb_annuler.setDefault(True)
-    def IN_WG_BASE(self):
-        # Frame colors
-        self.fr_rgb_colors.setFixedWidth(100)
-
-        # slider / spin box
-        self.sd_rgb_red.setValue(1)
-        self.sd_rgb_red.setValue(0)
-
-        self.sd_rgb_red.setValue(self.rgb[0])
-        self.sd_rgb_green.setValue(self.rgb[1])
-        self.sd_rgb_blue.setValue(self.rgb[2])
     def IN_CONNECTIONS(self):
         # Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
@@ -137,14 +126,25 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         # pb ok
         self.pb_rgb_ok.clicked.connect(lambda: self.FCT_OK())
         self.pb_rgb_annuler.clicked.connect(lambda: self.close())
+    def IN_WG_BASE(self):
+        # Frame colors
+        self.fr_rgb_colors.setFixedWidth(100)
+
+        # slider / spin box
+        self.sd_rgb_red.setValue(1)
+        self.sd_rgb_red.setValue(0)
+
+        self.sd_rgb_red.setValue(self.rgb[0])
+        self.sd_rgb_green.setValue(self.rgb[1])
+        self.sd_rgb_blue.setValue(self.rgb[2])
     def IN_ACT(self):
         pass
     def INIT(self):
         self.IN_BASE()
         self.IN_CLASSE()
         self.IN_WG()
-        self.IN_WG_BASE()
         self.IN_CONNECTIONS()
+        self.IN_WG_BASE()
         self.IN_ACT()
 
 
