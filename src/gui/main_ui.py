@@ -70,11 +70,6 @@ class Ui_main(object):
 
         self.hlay_menu_top.addItem(self.horizontalSpacer_1)
 
-        self.pb_mt_option_2 = QPushButton(self.fr_menu_top)
-        self.pb_mt_option_2.setObjectName(u"pb_mt_option_2")
-
-        self.hlay_menu_top.addWidget(self.pb_mt_option_2)
-
         self.pb_mt_option = QPushButton(self.fr_menu_top)
         self.pb_mt_option.setObjectName(u"pb_mt_option")
 

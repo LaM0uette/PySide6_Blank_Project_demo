@@ -159,7 +159,7 @@
         <item>
          <widget class="QStackedWidget" name="stk_option">
           <property name="currentIndex">
-           <number>2</number>
+           <number>6</number>
           </property>
           <widget class="QWidget" name="pg_opt_menu"/>
           <widget class="QWidget" name="pg_opt_gen">
@@ -190,13 +190,6 @@
              <widget class="QPushButton" name="pb_opt_gen_config">
               <property name="text">
                <string>Configs</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="pb_opt_gen_cur">
-              <property name="text">
-               <string>Curseurs</string>
               </property>
              </widget>
             </item>

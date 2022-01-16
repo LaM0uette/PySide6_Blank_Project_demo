@@ -104,9 +104,6 @@
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="pb_mt_option_2"/>
-         </item>
-         <item>
           <widget class="QPushButton" name="pb_mt_option"/>
          </item>
          <item>

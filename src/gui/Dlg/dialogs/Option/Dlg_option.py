@@ -15,6 +15,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
 
     def __init__(self,
+                 fen,
                  titre,
                  msg,
                  ico,
@@ -27,6 +28,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
     ):
         super(Dlg_option, self).__init__()
 
+        self.fen = fen
         self.titre = titre
         self.msg = msg
         self.ico = ico
@@ -37,6 +39,12 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.height = height
         self.opacity = opacity
 
+        self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        self.setWindowModality(QtCore.Qt.ApplicationModal)
+        self.setupUi(self)
+
+        # Global
+        self.reload = False
         self.dct_pg = {
             "Général": [self.pg_opt_gen],
             "Polices": [self.pg_opt_font],
@@ -46,10 +54,9 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
             "Infos": [self.pg_opt_infos],
         }
 
-        self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
-        self.setWindowModality(QtCore.Qt.ApplicationModal)
-        self.setupUi(self)
         self.INIT()
+
+
 
 
     ### INITIALISATION
@@ -78,7 +85,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         def PUSH_BUTTON():
             Push_button.dlg_ok(self.pb_opt_appliquer).txt()
             Push_button.dlg_ok(self.pb_opt_ok).txt_inv()
-            Push_button.base_txt(self.pb_opt_gen_font, self.pb_opt_gen_config, self.pb_opt_gen_cur, self.pb_opt_tm_colors).txt()
+            Push_button.base_txt(self.pb_opt_gen_font, self.pb_opt_gen_config, self.pb_opt_tm_colors).txt()
             Push_button.base(self.pb_opt_tm_th1).plein_th1()
             Push_button.base(self.pb_opt_tm_th2).plein_th2()
             Push_button.base(self.pb_opt_tm_th3).plein_th3()
@@ -142,9 +149,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}{self.tm}.svg"))
         self.lb_mt_ico.setScaledContents(True)
 
-        # stk
-        self.stk_option.setCurrentWidget(self.pg_opt_menu)
-
         # Configs
         try:
             self.fcb_opt_ft_font.setCurrentText(config.font)
@@ -173,7 +177,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         # pb ok / appliquer
         self.pb_opt_ok.setText(self.txt_pb_ok)
         self.pb_opt_appliquer.setText(self.txt_pb_appliquer)
-        self.pb_opt_appliquer.setVisible(False)
         self.pb_opt_appliquer.setDefault(True)
     def IN_CONNECTIONS(self):
         # Menu_top
@@ -182,11 +185,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.trw_option.itemClicked.connect(self._set_opt)
         self.pb_opt_gen_font.clicked.connect(lambda: self.stk_option.setCurrentWidget(self.dct_pg.get("Polices")[0]))
         self.pb_opt_gen_config.clicked.connect(lambda: self.stk_option.setCurrentWidget(self.dct_pg.get("Configs")[0]))
-        self.pb_opt_gen_cur.clicked.connect(lambda: self.stk_option.setCurrentWidget(self.dct_pg.get("Curseurs")[0]))
         self.pb_opt_tm_colors.clicked.connect(lambda: self.stk_option.setCurrentWidget(self.dct_pg.get("T-Colors")[0]))
-
-        self.pb_opt_ok.clicked.connect(self._ok)
-        self.pb_opt_appliquer.clicked.connect(self._appliquer)
 
         # Connection value change
         self.fcb_opt_ft_font.currentTextChanged.connect(self._val_change_appliquer)
@@ -207,9 +206,13 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
 
         # pb ok
         self.pb_opt_ok.clicked.connect(lambda: self.FCT_OK())
-        self.pb_opt_appliquer.clicked.connect(lambda: self.close())
+        self.pb_opt_appliquer.clicked.connect(self._appliquer)
     def IN_WG_BASE(self):
-        pass
+        # stk
+        self.stk_option.setCurrentWidget(self.pg_opt_menu)
+
+        # pb appliquer
+        self.pb_opt_appliquer.setVisible(False)
     def IN_ACT(self):
         self._maj_cb_theme()
     def INIT(self):
@@ -226,12 +229,16 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.setCursor(QtCore.Qt.WaitCursor)
 
         importlib.reload(config)
+        importlib.reload(rld)
 
         Fct().GEN_SVG()
         time.sleep(0.5)
 
         self.IN_WG()
         self.IN_CLASSE()
+
+        self.fen.IN_BASE()
+        self.fen.IN_CLASSE()
 
         # self.sgn_reload.emit()
         self.setCursor(Fct(cur=P_cur().souris()).CUR())
@@ -279,16 +286,14 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         Json(lien_json=vrb.JS_FONT).UPDATE(dct)
 
         self._reload()
-    def _ok(self):
-        if self.pb_opt_appliquer.isVisible():
-            self._appliquer()
-            self.close()
-        else: self.close()
 
 
     ### FONCTIONS
     def FCT_OK(self):
-        self.close()
+        if self.pb_opt_appliquer.isVisible():
+            self._appliquer()
+            self.close()
+        else: self.close()
 
 
     ### EVENT

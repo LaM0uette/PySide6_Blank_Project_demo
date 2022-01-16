@@ -198,8 +198,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.pb_mt_reduire.clicked.connect(lambda: self.EVT_REDUIRE_GDT())
         self.pb_mt_agrandir.clicked.connect(lambda: self.EVT_AGRANDIR_GDT())
         self.pb_mt_quitter.clicked.connect(lambda: self.EVT_REDUIRE_HIDE_GDT())
-
-        self.pb_mt_option_2.clicked.connect(lambda: self.TEMPO())
     def IN_WG_BASE(self):
         pass
     def IN_ACT(self):
@@ -214,44 +212,11 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
     ### _ACTIONS
-    def _reload(self):
-        importlib.reload(config)
-        importlib.reload(rld)
-
-        self.IN_BASE()
-        self.IN_CLASSE()
 
 
     ### FONCTIONS
     def FCT_OPTION(self):
-        t = Dlg().OPTION()
-        if t: self._reload()
-        # col = Dlg().COLORS()
-        # print(col)
-
-
-    def TEMPO(self):
-        # col = Dlg().COLORS()
-        # print(col)
-
-        # info
-        # Msg().INFO(msg="Je suis le nouveau message de la boite de dialog que je suis en train de créer.")
-
-        # rep
-        # rep = Rep().ALERTE(msg="Voulez vous quitter cette application ?")
-        # print(rep)
-
-        # input
-        # rep, txt = Input().TXT(msg="Entrez votre texte")
-        # if rep: print(txt)
-
-        # rgb
-        # rep, rgb = Rgb().GET()
-        # if rep: print(rgb)
-
-
-        # option
-        Option().MAIN()
+        Option(fen=fen).MAIN()
 
 
     ### EVENT

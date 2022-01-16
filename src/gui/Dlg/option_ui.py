@@ -107,11 +107,6 @@ class Ui_Option(object):
 
         self.vlay_pg_opt_gen.addWidget(self.pb_opt_gen_config)
 
-        self.pb_opt_gen_cur = QPushButton(self.pg_opt_gen)
-        self.pb_opt_gen_cur.setObjectName(u"pb_opt_gen_cur")
-
-        self.vlay_pg_opt_gen.addWidget(self.pb_opt_gen_cur)
-
         self.verticalSpacer_11 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.vlay_pg_opt_gen.addItem(self.verticalSpacer_11)
@@ -496,7 +491,7 @@ class Ui_Option(object):
 
         self.retranslateUi(Option)
 
-        self.stk_option.setCurrentIndex(2)
+        self.stk_option.setCurrentIndex(6)
 
 
         QMetaObject.connectSlotsByName(Option)
@@ -522,7 +517,6 @@ class Ui_Option(object):
 
         self.pb_opt_gen_font.setText(QCoreApplication.translate("Option", u"Police", None))
         self.pb_opt_gen_config.setText(QCoreApplication.translate("Option", u"Configs", None))
-        self.pb_opt_gen_cur.setText(QCoreApplication.translate("Option", u"Curseurs", None))
         self.lb_opt_ft_h1.setText(QCoreApplication.translate("Option", u"Taille H1: ", None))
         self.le_opt_ft_texte_h1.setText(QCoreApplication.translate("Option", u"TEST De la Police", None))
         self.lb_opt_ft_h2.setText(QCoreApplication.translate("Option", u"Taille H2: ", None))

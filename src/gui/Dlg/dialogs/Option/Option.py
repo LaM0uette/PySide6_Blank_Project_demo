@@ -4,16 +4,19 @@ from .....build import *
 
 class Option:
     def __init__(self,
+                 fen,
                  width=800,
                  height=600,
                  opacity=1
     ):
+        self.fen = fen
         self.width = width
         self.height = height
         self.opacity = opacity
 
     def _rtn(self, titre, msg, ico, tm, txt_pb_appliquer, txt_pb_ok):
         msg = Dlg_option(
+            fen=self.fen,
             titre=titre,
             msg=msg,
             ico=ico,
