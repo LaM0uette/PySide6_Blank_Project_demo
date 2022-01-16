@@ -7,15 +7,14 @@ from .....In_classe import In_classe
 
 class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
-    rep = False
 
     def __init__(self,
                  titre,
                  msg,
                  ico,
                  tm,
+                 txt_pb_appliquer,
                  txt_pb_ok,
-                 txt_pb_annuler,
                  width,
                  height,
                  opacity,
@@ -27,7 +26,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.ico = ico
         self.tm = tm
         self.txt_pb_ok = txt_pb_ok
-        self.txt_pb_annuler = txt_pb_annuler
+        self.txt_pb_appliquer = txt_pb_appliquer
         self.width = width
         self.height = height
         self.opacity = opacity
@@ -48,12 +47,12 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
     def IN_CLASSE(self):
         def FRAME():
             Frame.base(self.fr_main).cadre_th3()
-            Frame.menu_bottom_dlg(self.fr_rep_bottom).th()
+            Frame.menu_bottom_dlg(self.fr_opt_bottom).th()
         def LABEL():
-            Label.base(self.lb_rep_text).tr()
+            Label.base(self.lb_opt_text).tr()
         def PUSH_BUTTON():
-            Push_button.dlg_ok(self.pb_rep_ok).txt()
-            Push_button.dlg_nok(self.pb_rep_annuler).txt_inv()
+            Push_button.dlg_ok(self.pb_opt_appliquer).txt()
+            Push_button.dlg_ok(self.pb_opt_ok).txt_inv()
 
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
@@ -90,20 +89,20 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
 
 
         # Message
-        self.lb_rep_text.setText(self.msg)
+        self.lb_opt_text.setText(self.msg)
 
 
         # pb ok
-        self.pb_rep_ok.setText(self.txt_pb_ok)
-        self.pb_rep_annuler.setText(self.txt_pb_annuler)
-        self.pb_rep_annuler.setDefault(True)
+        self.pb_opt_ok.setText(self.txt_pb_ok)
+        self.pb_opt_appliquer.setText(self.txt_pb_appliquer)
+        self.pb_opt_appliquer.setDefault(True)
     def IN_CONNECTIONS(self):
         # Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
 
         # pb ok
-        self.pb_rep_ok.clicked.connect(lambda: self.FCT_OK())
-        self.pb_rep_annuler.clicked.connect(lambda: self.close())
+        self.pb_opt_ok.clicked.connect(lambda: self.FCT_OK())
+        self.pb_opt_appliquer.clicked.connect(lambda: self.close())
     def IN_WG_BASE(self):
         pass
     def IN_ACT(self):
@@ -119,7 +118,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
 
     ### FONCTIONS
     def FCT_OK(self):
-        self.rep = True
         self.close()
 
 

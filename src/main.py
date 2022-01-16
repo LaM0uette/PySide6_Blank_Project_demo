@@ -246,8 +246,12 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # if rep: print(txt)
 
         # rgb
-        rep, rgb = Rgb().GET()
-        if rep: print(rgb)
+        # rep, rgb = Rgb().GET()
+        # if rep: print(rgb)
+
+
+        # option
+        Option().MAIN()
 
 
     ### EVENT
