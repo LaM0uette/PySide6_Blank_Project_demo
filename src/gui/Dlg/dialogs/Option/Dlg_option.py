@@ -5,6 +5,7 @@ import time
 from PySide6 import QtCore, QtWidgets, QtGui
 
 from .. import Msg
+from .. import Rgb
 from ... import option_ui
 from .....build import *
 from .....config import *
@@ -295,7 +296,15 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self._reload()
 
     def _pb_tm_maj(self, tm):
-        print(tm)
+        dct_colors = {
+            "th1": P_rgb().p_u1().get("c1"),
+            "th2": P_rgb().p_u2().get("c1"),
+            "th3": P_rgb().p_u3().get("c1"),
+            "bn1": P_rgb().p_u_bn1().get("c1"),
+            "bn2": P_rgb().p_u_bn2().get("c1")
+        }
+
+        Rgb().GET(rgb=dct_colors.get(tm))
 
 
     ### FONCTIONS

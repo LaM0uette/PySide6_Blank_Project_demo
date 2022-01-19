@@ -8,7 +8,7 @@ from .....In_classe import In_classe
 class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
     rep = False
-    rgb = [0, 0, 0]
+    rgb_rtn = (0, 0, 0)
 
     def __init__(self,
                  titre,
@@ -210,7 +210,7 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     ### FONCTIONS
     def FCT_OK(self):
         self.rep = True
-        self.rgb = [self.sd_rgb_red.value(), self.sd_rgb_green.value(), self.sd_rgb_blue.value()]
+        self.rgb_rtn = (self.sd_rgb_red.value(), self.sd_rgb_green.value(), self.sd_rgb_blue.value())
         self.close()
 
 
