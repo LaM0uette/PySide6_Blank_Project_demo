@@ -204,6 +204,13 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
 
         self.cb_opt_tm_theme.currentTextChanged.connect(self._val_change_appliquer)
 
+        # pb tm
+        self.pb_opt_tm_th1.doubleClick.connect(lambda: self._pb_tm_maj(tm="th1"))
+        self.pb_opt_tm_th2.clicked.connect(lambda: self._pb_tm_maj(tm="th2"))
+        self.pb_opt_tm_th3.clicked.connect(lambda: self._pb_tm_maj(tm="th3"))
+        self.pb_opt_tm_bn1.clicked.connect(lambda: self._pb_tm_maj(tm="bn1"))
+        self.pb_opt_tm_bn2.clicked.connect(lambda: self._pb_tm_maj(tm="bn2"))
+
         # pb ok
         self.pb_opt_ok.clicked.connect(lambda: self.FCT_OK())
         self.pb_opt_appliquer.clicked.connect(self._appliquer)
@@ -286,6 +293,9 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         Json(lien_json=vrb.JS_FONT).UPDATE(dct)
 
         self._reload()
+
+    def _pb_tm_maj(self, tm):
+        print(tm)
 
 
     ### FONCTIONS
