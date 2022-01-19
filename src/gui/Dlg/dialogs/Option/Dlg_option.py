@@ -90,6 +90,11 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
             Push_button.base(self.pb_opt_tm_th3).plein_th3()
             Push_button.base(self.pb_opt_tm_bn1).plein_bn1()
             Push_button.base(self.pb_opt_tm_bn2).plein_bn2()
+
+            Push_button.menu_top(self.pb_opt_tcolors_th1_cophex, self.pb_opt_tcolors_th2_cophex, self.pb_opt_tcolors_th3_cophex,
+                                 self.pb_opt_tcolors_bn1_cophex, self.pb_opt_tcolors_bn2_cophex).copier()
+            Push_button.menu_top(self.pb_opt_tcolors_th1_lock, self.pb_opt_tcolors_th2_lock, self.pb_opt_tcolors_th3_lock,
+                                 self.pb_opt_tcolors_bn1_lock, self.pb_opt_tcolors_bn2_lock).lock()
         def SPIN_BOX():
             Spin_box.plus_minus(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity).bd_th3()
             Spin_box.plus_minus_infini(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height).bd_th3()

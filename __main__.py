@@ -16,9 +16,9 @@ if __name__ == "__main__":
         os.startfile(os.path.abspath(f"{vrb.DO_SCRIPT}convert_ui.bat"))
         time.sleep(1)
 
-        # from src.build import *
+        from src.build import *
 
-        # Fct().GEN_SVG()
-        # time.sleep(0.5)
+        Fct().GEN_SVG()
+        time.sleep(0.5)
 
     from src.main import app

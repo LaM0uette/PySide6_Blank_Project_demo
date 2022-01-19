@@ -96,6 +96,15 @@ class rtn:
         self.tm = "bn2"
         self.tr()
 
+    def copier(self):
+        self.img = P_img().copier()
+        self.tm = "bn1"
+        self.tr()
+    def lock(self):
+        self.img = P_img().lock()
+        self.tm = "bn1"
+        self.tr()
+
     def zoom_calendrier(self):
         self.img = P_img().calendrier()
         self.zoom()
