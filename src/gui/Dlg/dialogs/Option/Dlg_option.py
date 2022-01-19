@@ -95,9 +95,10 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
                                  self.pb_opt_tcolors_bn1_cophex, self.pb_opt_tcolors_bn2_cophex).copier()
             Push_button.ck_ico(self.pb_opt_tcolors_th1_lock, self.pb_opt_tcolors_th2_lock, self.pb_opt_tcolors_th3_lock,
                                  self.pb_opt_tcolors_bn1_lock, self.pb_opt_tcolors_bn2_lock,
-                               img=P_img().check(),
-                               img_check=P_img().valider(),
-                               tm_check="th3",).tr()
+                               img=P_img().unlock(),
+                               img_check=P_img().lock(),
+                               tm="th3",
+                               tm_check="bn1",).tr()
         def SPIN_BOX():
             Spin_box.plus_minus(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity).bd_th3()
             Spin_box.plus_minus_infini(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height).bd_th3()
@@ -218,6 +219,9 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.pb_opt_tm_bn1.clicked.connect(lambda: self._pb_tm_maj(tm="bn1"))
         self.pb_opt_tm_bn2.clicked.connect(lambda: self._pb_tm_maj(tm="bn2"))
 
+        self._space = QtGui.QShortcut(QtGui.QKeySequence(QtCore.Qt.Key_Space), self)
+        self._space.activated.connect(self._tm_random)
+
         # pb ok
         self.pb_opt_ok.clicked.connect(lambda: self.FCT_OK())
         self.pb_opt_appliquer.clicked.connect(self._appliquer)
@@ -319,6 +323,8 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
             Json(lien_json=f"{vrb.DO_THEME}{config.theme}.json").UPDATE(dct)
 
             self._reload()
+    def _tm_random(self):
+        print("test")
 
 
     ### FONCTIONS
