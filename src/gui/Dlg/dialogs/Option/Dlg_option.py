@@ -205,7 +205,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.cb_opt_tm_theme.currentTextChanged.connect(self._val_change_appliquer)
 
         # pb tm
-        self.pb_opt_tm_th1.doubleClick.connect(lambda: self._pb_tm_maj(tm="th1"))
+        self.pb_opt_tm_th1.clicked.connect(lambda: self._pb_tm_maj(tm="th1"))
         self.pb_opt_tm_th2.clicked.connect(lambda: self._pb_tm_maj(tm="th2"))
         self.pb_opt_tm_th3.clicked.connect(lambda: self._pb_tm_maj(tm="th3"))
         self.pb_opt_tm_bn1.clicked.connect(lambda: self._pb_tm_maj(tm="bn1"))
