@@ -67,7 +67,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.setWindowOpacity(self.opacity)
     def IN_CLASSE(self):
         def COMBO_BOX():
-            Combo_box.base(self.fcb_opt_ft_font, self.cb_opt_tm_theme).tr()
+            Combo_box.base(self.fcb_opt_ft_font, self.cb_opt_tm_theme, self.cb_opt_tcolors_mode).tr()
         def CHECK_BOX():
             Check_box.base(self.ck_opt_cfg_autoreload, self.ck_opt_cfg_autoclose, self.ck_opt_cfg_resize).tr()
         def FRAME():
@@ -84,7 +84,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         def PUSH_BUTTON():
             Push_button.dlg_ok(self.pb_opt_appliquer).txt()
             Push_button.dlg_ok(self.pb_opt_ok).txt_inv()
-            Push_button.base_txt(self.pb_opt_gen_font, self.pb_opt_gen_config, self.pb_opt_tm_colors).txt()
+            Push_button.base_txt(self.pb_opt_gen_font, self.pb_opt_gen_config, self.pb_opt_tm_colors, self.pb_opt_tcolors_save).txt()
             Push_button.base(self.pb_opt_tm_th1).plein_th1()
             Push_button.base(self.pb_opt_tm_th2).plein_th2()
             Push_button.base(self.pb_opt_tm_th3).plein_th3()
