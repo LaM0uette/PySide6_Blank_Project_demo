@@ -17,10 +17,11 @@ class P_img:
     def quitter(self): return self.SVG("ui", "quitter")
     def resize(self): return self.SVG("ui", "resize")
     def copier(self): return self.SVG("ui", "copier")
-    def lock(self): return self.SVG("ui", "lock")
         #check
     def check(self): return self.SVG("ui", "check")
     def valider(self): return self.SVG("ui", "valider")
+    def lock(self): return self.SVG("ui", "lock")
+    def unlock(self): return self.SVG("ui", "unlock")
         #notif
     def alerte(self): return self.SVG("ui", "alerte")
     def info(self): return self.SVG("ui", "info")

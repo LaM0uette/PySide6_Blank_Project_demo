@@ -444,6 +444,7 @@ class Ui_Option(object):
 
         self.pb_opt_tcolors_th1_lock = QPushButton(self.pg_opt_tcolors)
         self.pb_opt_tcolors_th1_lock.setObjectName(u"pb_opt_tcolors_th1_lock")
+        self.pb_opt_tcolors_th1_lock.setCheckable(True)
 
         self.glay_opt_tcolors_th1.addWidget(self.pb_opt_tcolors_th1_lock, 1, 1, 1, 1)
 
@@ -468,6 +469,7 @@ class Ui_Option(object):
 
         self.pb_opt_tcolors_th2_lock = QPushButton(self.pg_opt_tcolors)
         self.pb_opt_tcolors_th2_lock.setObjectName(u"pb_opt_tcolors_th2_lock")
+        self.pb_opt_tcolors_th2_lock.setCheckable(True)
 
         self.glay_opt_tcolors_th2.addWidget(self.pb_opt_tcolors_th2_lock, 2, 1, 1, 1)
 
@@ -492,6 +494,7 @@ class Ui_Option(object):
 
         self.pb_opt_tcolors_th3_lock = QPushButton(self.pg_opt_tcolors)
         self.pb_opt_tcolors_th3_lock.setObjectName(u"pb_opt_tcolors_th3_lock")
+        self.pb_opt_tcolors_th3_lock.setCheckable(True)
 
         self.glay_opt_tcolors_th3.addWidget(self.pb_opt_tcolors_th3_lock, 1, 1, 1, 1)
 
@@ -516,6 +519,7 @@ class Ui_Option(object):
 
         self.pb_opt_tcolors_bn1_lock = QPushButton(self.pg_opt_tcolors)
         self.pb_opt_tcolors_bn1_lock.setObjectName(u"pb_opt_tcolors_bn1_lock")
+        self.pb_opt_tcolors_bn1_lock.setCheckable(True)
 
         self.glay_opt_tcolors_bn1.addWidget(self.pb_opt_tcolors_bn1_lock, 1, 1, 1, 1)
 
@@ -540,6 +544,7 @@ class Ui_Option(object):
 
         self.pb_opt_tcolors_bn2_lock = QPushButton(self.pg_opt_tcolors)
         self.pb_opt_tcolors_bn2_lock.setObjectName(u"pb_opt_tcolors_bn2_lock")
+        self.pb_opt_tcolors_bn2_lock.setCheckable(True)
 
         self.glay_opt_tcolors_bn2.addWidget(self.pb_opt_tcolors_bn2_lock, 1, 1, 1, 1)
 

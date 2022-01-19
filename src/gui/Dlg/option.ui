@@ -780,7 +780,11 @@
                  <widget class="QPushButton" name="pb_opt_tcolors_th1_cophex"/>
                 </item>
                 <item row="1" column="1">
-                 <widget class="QPushButton" name="pb_opt_tcolors_th1_lock"/>
+                 <widget class="QPushButton" name="pb_opt_tcolors_th1_lock">
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
                 </item>
                 <item row="0" column="0" colspan="2">
                  <widget class="QFrame" name="fr_opt_tcolors_th1">
@@ -806,7 +810,11 @@
                  <widget class="QPushButton" name="pb_opt_tcolors_th2_cophex"/>
                 </item>
                 <item row="2" column="1">
-                 <widget class="QPushButton" name="pb_opt_tcolors_th2_lock"/>
+                 <widget class="QPushButton" name="pb_opt_tcolors_th2_lock">
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
                 </item>
                 <item row="0" column="0" colspan="2">
                  <widget class="QFrame" name="fr_opt_tcolors_th2">
@@ -832,7 +840,11 @@
                  <widget class="QPushButton" name="pb_opt_tcolors_th3_cophex"/>
                 </item>
                 <item row="1" column="1">
-                 <widget class="QPushButton" name="pb_opt_tcolors_th3_lock"/>
+                 <widget class="QPushButton" name="pb_opt_tcolors_th3_lock">
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
                 </item>
                 <item row="0" column="0" colspan="2">
                  <widget class="QFrame" name="fr_opt_tcolors_th3">
@@ -858,7 +870,11 @@
                  <widget class="QPushButton" name="pb_opt_tcolors_bn1_cophex"/>
                 </item>
                 <item row="1" column="1">
-                 <widget class="QPushButton" name="pb_opt_tcolors_bn1_lock"/>
+                 <widget class="QPushButton" name="pb_opt_tcolors_bn1_lock">
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
                 </item>
                 <item row="0" column="0" colspan="2">
                  <widget class="QFrame" name="fr_opt_tcolors_bn1">
@@ -884,7 +900,11 @@
                  <widget class="QPushButton" name="pb_opt_tcolors_bn2_cophex"/>
                 </item>
                 <item row="1" column="1">
-                 <widget class="QPushButton" name="pb_opt_tcolors_bn2_lock"/>
+                 <widget class="QPushButton" name="pb_opt_tcolors_bn2_lock">
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
                 </item>
                 <item row="0" column="0" colspan="2">
                  <widget class="QFrame" name="fr_opt_tcolors_bn2">

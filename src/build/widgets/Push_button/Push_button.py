@@ -163,15 +163,20 @@ class menu_top(rtn):
                          cur=P_cur().souris_main(),
         )
 class ck_ico(rtn):
-    def __init__(self, *wgs):
+    def __init__(self, *wgs,
+                 img=P_img().check(),
+                 img_check=P_img().valider(),
+                 tm="th2",
+                 tm_check="th3",
+                 ):
         super().__init__(*wgs,
                          pb_type="check",
                          colors=P_rgb().p_th3(),
                          dim=P_dim().aw().h9(),
-                         img=P_img().check(),
-                         img_check=P_img().valider(),
-                         tm="th2",
-                         tm_check="th3",
+                         img=img,
+                         img_check=img_check,
+                         tm=tm,
+                         tm_check=tm_check,
                          font=P_font().h4(),
                          cur=P_cur().main(),
         )
