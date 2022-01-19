@@ -303,7 +303,14 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         }
         rep, colors = Rgb().GET(rgb=dct_colors.get(tm))
         if rep:
-            print(colors)
+            self._val_change_appliquer()
+
+            dct = {
+                f"{tm}": list(colors),
+            }
+            Json(lien_json=f"{vrb.DO_THEME}{config.theme}.json").UPDATE(dct)
+
+            self._reload()
 
 
     ### FONCTIONS
