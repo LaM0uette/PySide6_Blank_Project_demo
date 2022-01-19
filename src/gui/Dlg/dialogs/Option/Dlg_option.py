@@ -4,9 +4,9 @@ import time
 
 from PySide6 import QtCore, QtWidgets, QtGui
 
-from .. import Msg
-from .. import Rgb
 from ... import option_ui
+from ..Msg import Msg
+from ..Rgb import Rgb
 from .....build import *
 from .....config import *
 from .....In_classe import In_classe
@@ -56,8 +56,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         }
 
         self.INIT()
-
-
 
 
     ### INITIALISATION
@@ -303,9 +301,8 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
             "bn1": P_rgb().p_u_bn1().get("c1"),
             "bn2": P_rgb().p_u_bn2().get("c1")
         }
-
-        rgb = Rgb().GET(rgb=dct_colors.get(tm))
-        print(rgb)
+        colors = Rgb().GET(rgb=dct_colors.get(tm))
+        print(colors)
 
 
     ### FONCTIONS

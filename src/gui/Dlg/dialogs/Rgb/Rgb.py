@@ -26,7 +26,7 @@ class Rgb:
         )
         msg.exec()
 
-        return msg.rep, msg.rgb
+        return msg.rep, msg.rgb_rtn
 
 
     def GET(self, titre="RGB", rgb=None, ico=P_img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
