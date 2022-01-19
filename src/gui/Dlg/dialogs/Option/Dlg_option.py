@@ -1,5 +1,6 @@
 import glob
 import os
+import random
 import time
 
 from PySide6 import QtCore, QtWidgets, QtGui
@@ -324,7 +325,14 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
 
             self._reload()
     def _tm_random(self):
-        print("test")
+        def __rgb_random():
+            return random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)
+
+        if not self.pb_opt_tcolors_th1_lock.isChecked(): Frame.base(self.fr_opt_tcolors_th1, colors={"c1": __rgb_random()}).th()
+        if not self.pb_opt_tcolors_th2_lock.isChecked(): Frame.base(self.fr_opt_tcolors_th2, colors={"c1": __rgb_random()}).th()
+        if not self.pb_opt_tcolors_th3_lock.isChecked(): Frame.base(self.fr_opt_tcolors_th3, colors={"c1": __rgb_random()}).th()
+        if not self.pb_opt_tcolors_bn1_lock.isChecked(): Frame.base(self.fr_opt_tcolors_bn1, colors={"c1": __rgb_random()}).th()
+        if not self.pb_opt_tcolors_bn2_lock.isChecked(): Frame.base(self.fr_opt_tcolors_bn2, colors={"c1": __rgb_random()}).th()
 
 
     ### FONCTIONS
