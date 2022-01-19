@@ -301,8 +301,9 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
             "bn1": P_rgb().p_u_bn1().get("c1"),
             "bn2": P_rgb().p_u_bn2().get("c1")
         }
-        colors = Rgb().GET(rgb=dct_colors.get(tm))
-        print(colors)
+        rep, colors = Rgb().GET(rgb=dct_colors.get(tm))
+        if rep:
+            print(colors)
 
 
     ### FONCTIONS
