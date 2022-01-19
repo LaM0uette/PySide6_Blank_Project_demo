@@ -30,7 +30,7 @@ class Rgb:
 
 
     def GET(self, titre="RGB", rgb=None, ico=P_img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
-        if rgb is None: rgb = [0, 0, 0]
+        if rgb is None: rgb = (0, 0, 0)
 
         return self._rtn(
             titre=titre,
