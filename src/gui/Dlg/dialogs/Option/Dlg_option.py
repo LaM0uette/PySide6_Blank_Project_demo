@@ -4,6 +4,7 @@ import random
 import time
 
 from PySide6 import QtCore, QtWidgets, QtGui
+import pyperclip
 
 from ... import option_ui
 from ..Msg import Msg
@@ -217,6 +218,22 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self._space = QtGui.QShortcut(QtGui.QKeySequence(QtCore.Qt.Key_Space), self)
         self._space.activated.connect(self._tm_random)
 
+        self.pb_opt_tcolors_hex1.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
+        self.pb_opt_tcolors_hex2.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
+        self.pb_opt_tcolors_hex3.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
+        self.pb_opt_tcolors_hex4.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
+        self.pb_opt_tcolors_hex5.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
+        self.pb_opt_tcolors_hex6.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
+        self.pb_opt_tcolors_hex7.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
+        self.pb_opt_tcolors_hex8.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
+        self.pb_opt_tcolors_hex9.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
+        self.pb_opt_tcolors_hex10.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
+        self.pb_opt_tcolors_hex11.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
+        self.pb_opt_tcolors_hex12.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
+        self.pb_opt_tcolors_hex13.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
+        self.pb_opt_tcolors_hex14.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
+        self.pb_opt_tcolors_hex15.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
+
         # pb ok
         self.pb_opt_ok.clicked.connect(lambda: self.FCT_OK())
         self.pb_opt_appliquer.clicked.connect(self._appliquer)
@@ -324,6 +341,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
             for pb in args:
                 colors = random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)
                 Push_button.rgb(pb, colors={"c1": colors, "bn1": P_rgb().p_u_bn1()}, dim=P_dim().aw().h7()).uni()
+                pb.setText(str(colors))
 
         __rgb_random(self.pb_opt_tcolors_hex1, self.pb_opt_tcolors_hex2, self.pb_opt_tcolors_hex3, self.pb_opt_tcolors_hex4, self.pb_opt_tcolors_hex5,
                      self.pb_opt_tcolors_hex6, self.pb_opt_tcolors_hex7, self.pb_opt_tcolors_hex8, self.pb_opt_tcolors_hex9, self.pb_opt_tcolors_hex10,
