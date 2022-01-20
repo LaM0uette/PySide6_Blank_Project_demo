@@ -319,34 +319,15 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
 
             self._reload()
     def _tm_random(self):
-        def __rgb_random():
-            return random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)
+        def __rgb_random(*args):
+            for pb in args:
+                colors = random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)
+                Push_button.rgb(pb, colors={"c1": colors, "bn1": P_rgb().p_u_bn1()}, dim=P_dim().aw().h7()).uni()
 
-        Push_button.rgb(self.pb_opt_tcolors_hex1, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex2, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex3, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex4, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex5, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex6, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex7, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex8, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex9, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex10, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex11, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex12, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex13, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex14, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex15, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex16, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex17, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex18, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex19, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex20, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex21, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex22, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex23, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex24, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
-        Push_button.rgb(self.pb_opt_tcolors_hex25, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        __rgb_random(self.pb_opt_tcolors_hex1, self.pb_opt_tcolors_hex2, self.pb_opt_tcolors_hex3, self.pb_opt_tcolors_hex4, self.pb_opt_tcolors_hex5,
+                     self.pb_opt_tcolors_hex6, self.pb_opt_tcolors_hex7, self.pb_opt_tcolors_hex8, self.pb_opt_tcolors_hex9, self.pb_opt_tcolors_hex10,
+                     self.pb_opt_tcolors_hex11, self.pb_opt_tcolors_hex12, self.pb_opt_tcolors_hex13, self.pb_opt_tcolors_hex14, self.pb_opt_tcolors_hex15)
+
 
 
         # if not self.pb_opt_tcolors_th1_lock.isChecked(): Frame.base(self.fr_opt_tcolors_th1, colors={"c1": __rgb_random()}).th()

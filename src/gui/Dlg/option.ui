@@ -893,6 +893,15 @@
               <item row="0" column="0">
                <widget class="QPushButton" name="pb_opt_tcolors_hex1"/>
               </item>
+              <item row="2" column="1">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex12"/>
+              </item>
+              <item row="2" column="3">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex14"/>
+              </item>
+              <item row="2" column="2">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex13"/>
+              </item>
               <item row="0" column="1">
                <widget class="QPushButton" name="pb_opt_tcolors_hex2"/>
               </item>
@@ -911,11 +920,11 @@
               <item row="1" column="0">
                <widget class="QPushButton" name="pb_opt_tcolors_hex6"/>
               </item>
-              <item row="3" column="0">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex16"/>
+              <item row="1" column="3">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex9"/>
               </item>
-              <item row="4" column="0">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex21"/>
+              <item row="1" column="4">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex10"/>
               </item>
               <item row="1" column="1">
                <widget class="QPushButton" name="pb_opt_tcolors_hex7"/>
@@ -923,47 +932,8 @@
               <item row="1" column="2">
                <widget class="QPushButton" name="pb_opt_tcolors_hex8"/>
               </item>
-              <item row="1" column="3">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex9"/>
-              </item>
-              <item row="1" column="4">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex10"/>
-              </item>
               <item row="2" column="4">
                <widget class="QPushButton" name="pb_opt_tcolors_hex15"/>
-              </item>
-              <item row="3" column="4">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex20"/>
-              </item>
-              <item row="4" column="4">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex25"/>
-              </item>
-              <item row="4" column="3">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex24"/>
-              </item>
-              <item row="4" column="2">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex23"/>
-              </item>
-              <item row="4" column="1">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex22"/>
-              </item>
-              <item row="3" column="1">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex17"/>
-              </item>
-              <item row="2" column="1">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex12"/>
-              </item>
-              <item row="2" column="2">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex13"/>
-              </item>
-              <item row="2" column="3">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex14"/>
-              </item>
-              <item row="3" column="3">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex19"/>
-              </item>
-              <item row="3" column="2">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex18"/>
               </item>
              </layout>
             </item>
