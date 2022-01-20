@@ -77,6 +77,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
             Frame.menu_bottom_dlg(self.fr_opt_bottom).th()
             Frame.base(self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5,
                        self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize).cadre_th3()
+            Frame.base(self.fr_opt_tcolors_th1, self.fr_opt_tcolors_th2, self.fr_opt_tcolors_th3, self.fr_opt_tcolors_bn1, self.fr_opt_tcolors_bn2, dim=P_dim().aw().h5()).th()
         def LABEL():
             Label.h1(self.lb_opt_info_nom).tr()
             Label.base(self.lb_opt_info_desc, self.lb_opt_info_auteur, self.lb_opt_info_version, self.lb_opt_ft_h1,
@@ -355,7 +356,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
     def _tm_frame(self, fr):
         try:
             rgb = (int(pyperclip.paste()[1:-1].split(", ")[0]), int(pyperclip.paste()[1:-1].split(", ")[1]), int(pyperclip.paste()[1:-1].split(", ")[2]))
-            Frame.base(fr, colors={"c1": rgb}).th()
+            Frame.base(fr, colors={"c1": rgb}, dim=P_dim().aw().h5()).th()
         except: return
 
 
