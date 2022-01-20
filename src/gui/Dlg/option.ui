@@ -761,178 +761,131 @@
              <widget class="QComboBox" name="cb_opt_tcolors_mode"/>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="hlay_opt_tcolors_pal">
+             <layout class="QGridLayout" name="glay_opt_tcolors">
               <property name="spacing">
                <number>0</number>
               </property>
-              <property name="rightMargin">
-               <number>0</number>
-              </property>
-              <item>
-               <layout class="QGridLayout" name="glay_opt_tcolors_th1">
-                <property name="horizontalSpacing">
-                 <number>1</number>
-                </property>
-                <property name="verticalSpacing">
-                 <number>0</number>
-                </property>
-                <item row="1" column="0">
-                 <widget class="QPushButton" name="pb_opt_tcolors_th1_cophex"/>
-                </item>
-                <item row="0" column="0">
-                 <widget class="QFrame" name="fr_opt_tcolors_th1">
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QGridLayout" name="glay_opt_tcolors_th2">
-                <property name="horizontalSpacing">
-                 <number>1</number>
-                </property>
-                <property name="verticalSpacing">
-                 <number>0</number>
-                </property>
-                <item row="2" column="0">
-                 <widget class="QPushButton" name="pb_opt_tcolors_th2_cophex"/>
-                </item>
-                <item row="0" column="0">
-                 <widget class="QFrame" name="fr_opt_tcolors_th2">
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QGridLayout" name="glay_opt_tcolors_th3">
-                <property name="horizontalSpacing">
-                 <number>1</number>
-                </property>
-                <property name="verticalSpacing">
-                 <number>0</number>
-                </property>
-                <item row="1" column="0">
-                 <widget class="QPushButton" name="pb_opt_tcolors_th3_cophex"/>
-                </item>
-                <item row="0" column="0">
-                 <widget class="QFrame" name="fr_opt_tcolors_th3">
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QGridLayout" name="glay_opt_tcolors_bn1">
-                <property name="horizontalSpacing">
-                 <number>1</number>
-                </property>
-                <property name="verticalSpacing">
-                 <number>0</number>
-                </property>
-                <item row="1" column="0">
-                 <widget class="QPushButton" name="pb_opt_tcolors_bn1_cophex"/>
-                </item>
-                <item row="0" column="0">
-                 <widget class="QFrame" name="fr_opt_tcolors_bn1">
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <layout class="QGridLayout" name="glay_opt_tcolors_bn2">
-                <property name="horizontalSpacing">
-                 <number>1</number>
-                </property>
-                <property name="verticalSpacing">
-                 <number>0</number>
-                </property>
-                <item row="1" column="0">
-                 <widget class="QPushButton" name="pb_opt_tcolors_bn2_cophex"/>
-                </item>
-                <item row="0" column="0">
-                 <widget class="QFrame" name="fr_opt_tcolors_bn2">
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QGridLayout" name="gridLayout">
-              <property name="spacing">
-               <number>0</number>
-              </property>
-              <item row="0" column="0">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex1"/>
-              </item>
-              <item row="2" column="1">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex12"/>
-              </item>
-              <item row="2" column="3">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex14"/>
-              </item>
-              <item row="2" column="2">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex13"/>
-              </item>
-              <item row="0" column="1">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex2"/>
-              </item>
-              <item row="0" column="3">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex4"/>
-              </item>
-              <item row="0" column="2">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex3"/>
-              </item>
-              <item row="0" column="4">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex5"/>
-              </item>
-              <item row="2" column="0">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex11"/>
-              </item>
-              <item row="1" column="0">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex6"/>
+              <item row="1" column="2">
+               <widget class="QPushButton" name="pb_opt_tcolors_th3_cophex"/>
               </item>
               <item row="1" column="3">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex9"/>
-              </item>
-              <item row="1" column="4">
-               <widget class="QPushButton" name="pb_opt_tcolors_hex10"/>
+               <widget class="QPushButton" name="pb_opt_tcolors_bn1_cophex"/>
               </item>
               <item row="1" column="1">
+               <widget class="QPushButton" name="pb_opt_tcolors_th2_cophex"/>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="pb_opt_tcolors_th1_cophex"/>
+              </item>
+              <item row="1" column="4">
+               <widget class="QPushButton" name="pb_opt_tcolors_bn2_cophex"/>
+              </item>
+              <item row="2" column="0" colspan="5">
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item row="3" column="0">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex1"/>
+              </item>
+              <item row="0" column="4">
+               <widget class="QFrame" name="fr_opt_tcolors_bn2">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QFrame" name="fr_opt_tcolors_bn1">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QFrame" name="fr_opt_tcolors_th3">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="0">
+               <widget class="QFrame" name="fr_opt_tcolors_th1">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QFrame" name="fr_opt_tcolors_th2">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex12"/>
+              </item>
+              <item row="5" column="3">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex14"/>
+              </item>
+              <item row="5" column="2">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex13"/>
+              </item>
+              <item row="3" column="1">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex2"/>
+              </item>
+              <item row="3" column="3">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex4"/>
+              </item>
+              <item row="3" column="2">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex3"/>
+              </item>
+              <item row="3" column="4">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex5"/>
+              </item>
+              <item row="5" column="0">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex11"/>
+              </item>
+              <item row="4" column="0">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex6"/>
+              </item>
+              <item row="4" column="3">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex9"/>
+              </item>
+              <item row="4" column="4">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex10"/>
+              </item>
+              <item row="4" column="1">
                <widget class="QPushButton" name="pb_opt_tcolors_hex7"/>
               </item>
-              <item row="1" column="2">
+              <item row="4" column="2">
                <widget class="QPushButton" name="pb_opt_tcolors_hex8"/>
               </item>
-              <item row="2" column="4">
+              <item row="5" column="4">
                <widget class="QPushButton" name="pb_opt_tcolors_hex15"/>
               </item>
              </layout>

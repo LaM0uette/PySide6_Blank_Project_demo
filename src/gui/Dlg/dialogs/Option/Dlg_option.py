@@ -218,21 +218,27 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self._space = QtGui.QShortcut(QtGui.QKeySequence(QtCore.Qt.Key_Space), self)
         self._space.activated.connect(self._tm_random)
 
-        self.pb_opt_tcolors_hex1.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
-        self.pb_opt_tcolors_hex2.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
-        self.pb_opt_tcolors_hex3.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
-        self.pb_opt_tcolors_hex4.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
-        self.pb_opt_tcolors_hex5.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
-        self.pb_opt_tcolors_hex6.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
-        self.pb_opt_tcolors_hex7.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
-        self.pb_opt_tcolors_hex8.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
-        self.pb_opt_tcolors_hex9.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
-        self.pb_opt_tcolors_hex10.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
-        self.pb_opt_tcolors_hex11.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
-        self.pb_opt_tcolors_hex12.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
-        self.pb_opt_tcolors_hex13.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
-        self.pb_opt_tcolors_hex14.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
-        self.pb_opt_tcolors_hex15.clicked.connect(lambda: pyperclip.copy('The text to be copied to the clipboard.'))
+        self.pb_opt_tcolors_hex1.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex1.text()))
+        self.pb_opt_tcolors_hex2.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex2.text()))
+        self.pb_opt_tcolors_hex3.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex3.text()))
+        self.pb_opt_tcolors_hex4.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex4.text()))
+        self.pb_opt_tcolors_hex5.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex5.text()))
+        self.pb_opt_tcolors_hex6.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex6.text()))
+        self.pb_opt_tcolors_hex7.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex7.text()))
+        self.pb_opt_tcolors_hex8.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex8.text()))
+        self.pb_opt_tcolors_hex9.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex9.text()))
+        self.pb_opt_tcolors_hex10.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex10.text()))
+        self.pb_opt_tcolors_hex11.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex11.text()))
+        self.pb_opt_tcolors_hex12.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex12.text()))
+        self.pb_opt_tcolors_hex13.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex13.text()))
+        self.pb_opt_tcolors_hex14.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex14.text()))
+        self.pb_opt_tcolors_hex15.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex15.text()))
+
+        self.pb_opt_tcolors_th1_cophex.clicked.connect(lambda: self._tm_frame(fr=self.fr_opt_tcolors_th1))
+        self.pb_opt_tcolors_th2_cophex.clicked.connect(lambda: self._tm_frame(fr=self.fr_opt_tcolors_th2))
+        self.pb_opt_tcolors_th3_cophex.clicked.connect(lambda: self._tm_frame(fr=self.fr_opt_tcolors_th3))
+        self.pb_opt_tcolors_bn1_cophex.clicked.connect(lambda: self._tm_frame(fr=self.fr_opt_tcolors_bn1))
+        self.pb_opt_tcolors_bn2_cophex.clicked.connect(lambda: self._tm_frame(fr=self.fr_opt_tcolors_bn2))
 
         # pb ok
         self.pb_opt_ok.clicked.connect(lambda: self.FCT_OK())
@@ -346,8 +352,11 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         __rgb_random(self.pb_opt_tcolors_hex1, self.pb_opt_tcolors_hex2, self.pb_opt_tcolors_hex3, self.pb_opt_tcolors_hex4, self.pb_opt_tcolors_hex5,
                      self.pb_opt_tcolors_hex6, self.pb_opt_tcolors_hex7, self.pb_opt_tcolors_hex8, self.pb_opt_tcolors_hex9, self.pb_opt_tcolors_hex10,
                      self.pb_opt_tcolors_hex11, self.pb_opt_tcolors_hex12, self.pb_opt_tcolors_hex13, self.pb_opt_tcolors_hex14, self.pb_opt_tcolors_hex15)
-
-        # if not self.pb_opt_tcolors_th1_lock.isChecked(): Frame.base(self.fr_opt_tcolors_th1, colors={"c1": __rgb_random()}).th()
+    def _tm_frame(self, fr):
+        try:
+            rgb = (int(pyperclip.paste()[1:-1].split(", ")[0]), int(pyperclip.paste()[1:-1].split(", ")[1]), int(pyperclip.paste()[1:-1].split(", ")[2]))
+            Frame.base(fr, colors={"c1": rgb}).th()
+        except: return
 
 
     ### FONCTIONS

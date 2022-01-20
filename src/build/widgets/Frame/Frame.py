@@ -56,9 +56,10 @@ class rtn:
 
 
 class base(rtn):
-    def __init__(self, *wgs, colors=P_rgb().p_th3()):
+    def __init__(self, *wgs, colors=P_rgb().p_th3(), dim=p_base.DIM):
         super().__init__(*wgs,
                          colors=colors,
+                         dim=dim
         )
 class menu_top(rtn):
     def __init__(self, *wgs):
