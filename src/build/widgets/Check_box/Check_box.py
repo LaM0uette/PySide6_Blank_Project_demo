@@ -65,5 +65,5 @@ class base(rtn):
                          dim = P_dim().aw().h9(),
                          tm="th2",
                          tm_check="th3",
-                         font = P_font().h4(),
+                         font = P_font().h4()
         )
