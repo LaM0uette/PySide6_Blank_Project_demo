@@ -96,10 +96,10 @@ class rtn:
         self.tm = "bn2"
         self.tr()
 
-    def copier(self, tm="bn1"):
+    def copier(self):
         self.pb_type="zoom"
         self.img = P_img().copier()
-        self.tm = tm
+        self.tm = "bn1"
         self.zoom()
     def lock(self):
         self.img = P_img().lock()
