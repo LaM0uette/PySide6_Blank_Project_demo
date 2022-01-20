@@ -94,8 +94,8 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
             Push_button.base(self.pb_opt_tm_bn1).plein_bn1()
             Push_button.base(self.pb_opt_tm_bn2).plein_bn2()
 
-            Push_button.menu_top(self.pb_opt_tcolors_th1_cophex, self.pb_opt_tcolors_th2_cophex, self.pb_opt_tcolors_th3_cophex,
-                                 self.pb_opt_tcolors_bn1_cophex, self.pb_opt_tcolors_bn2_cophex).copier()
+            Push_button.rgb(self.pb_opt_tcolors_th1_cophex, self.pb_opt_tcolors_th2_cophex, self.pb_opt_tcolors_th3_cophex,
+                                 self.pb_opt_tcolors_bn1_cophex, self.pb_opt_tcolors_bn2_cophex, dim=P_dim().carr().h8()).copier()
         def SPIN_BOX():
             Spin_box.plus_minus(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity).bd_th3()
             Spin_box.plus_minus_infini(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height).bd_th3()
@@ -357,6 +357,9 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         try:
             rgb = (int(pyperclip.paste()[1:-1].split(", ")[0]), int(pyperclip.paste()[1:-1].split(", ")[1]), int(pyperclip.paste()[1:-1].split(", ")[2]))
             Frame.base(fr, colors={"c1": rgb}, dim=P_dim().aw().h5()).th()
+
+            Push_button.rgb(self.pb_opt_tcolors_th1_cophex, self.pb_opt_tcolors_th2_cophex, self.pb_opt_tcolors_th3_cophex,
+                            self.pb_opt_tcolors_bn1_cophex, self.pb_opt_tcolors_bn2_cophex, dim=P_dim().carr().h8()).copier()
         except: return
 
 

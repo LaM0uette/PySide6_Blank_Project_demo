@@ -432,26 +432,6 @@ class Ui_Option(object):
         self.glay_opt_tcolors = QGridLayout()
         self.glay_opt_tcolors.setSpacing(0)
         self.glay_opt_tcolors.setObjectName(u"glay_opt_tcolors")
-        self.pb_opt_tcolors_th3_cophex = QPushButton(self.pg_opt_tcolors)
-        self.pb_opt_tcolors_th3_cophex.setObjectName(u"pb_opt_tcolors_th3_cophex")
-
-        self.glay_opt_tcolors.addWidget(self.pb_opt_tcolors_th3_cophex, 1, 2, 1, 1)
-
-        self.pb_opt_tcolors_bn1_cophex = QPushButton(self.pg_opt_tcolors)
-        self.pb_opt_tcolors_bn1_cophex.setObjectName(u"pb_opt_tcolors_bn1_cophex")
-
-        self.glay_opt_tcolors.addWidget(self.pb_opt_tcolors_bn1_cophex, 1, 3, 1, 1)
-
-        self.pb_opt_tcolors_th2_cophex = QPushButton(self.pg_opt_tcolors)
-        self.pb_opt_tcolors_th2_cophex.setObjectName(u"pb_opt_tcolors_th2_cophex")
-
-        self.glay_opt_tcolors.addWidget(self.pb_opt_tcolors_th2_cophex, 1, 1, 1, 1)
-
-        self.pb_opt_tcolors_bn2_cophex = QPushButton(self.pg_opt_tcolors)
-        self.pb_opt_tcolors_bn2_cophex.setObjectName(u"pb_opt_tcolors_bn2_cophex")
-
-        self.glay_opt_tcolors.addWidget(self.pb_opt_tcolors_bn2_cophex, 1, 4, 1, 1)
-
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.glay_opt_tcolors.addItem(self.verticalSpacer, 2, 0, 1, 5)
@@ -460,34 +440,6 @@ class Ui_Option(object):
         self.pb_opt_tcolors_hex1.setObjectName(u"pb_opt_tcolors_hex1")
 
         self.glay_opt_tcolors.addWidget(self.pb_opt_tcolors_hex1, 3, 0, 1, 1)
-
-        self.fr_opt_tcolors_bn2 = QFrame(self.pg_opt_tcolors)
-        self.fr_opt_tcolors_bn2.setObjectName(u"fr_opt_tcolors_bn2")
-        self.fr_opt_tcolors_bn2.setFrameShape(QFrame.StyledPanel)
-        self.fr_opt_tcolors_bn2.setFrameShadow(QFrame.Raised)
-
-        self.glay_opt_tcolors.addWidget(self.fr_opt_tcolors_bn2, 0, 4, 1, 1)
-
-        self.fr_opt_tcolors_bn1 = QFrame(self.pg_opt_tcolors)
-        self.fr_opt_tcolors_bn1.setObjectName(u"fr_opt_tcolors_bn1")
-        self.fr_opt_tcolors_bn1.setFrameShape(QFrame.StyledPanel)
-        self.fr_opt_tcolors_bn1.setFrameShadow(QFrame.Raised)
-
-        self.glay_opt_tcolors.addWidget(self.fr_opt_tcolors_bn1, 0, 3, 1, 1)
-
-        self.fr_opt_tcolors_th3 = QFrame(self.pg_opt_tcolors)
-        self.fr_opt_tcolors_th3.setObjectName(u"fr_opt_tcolors_th3")
-        self.fr_opt_tcolors_th3.setFrameShape(QFrame.StyledPanel)
-        self.fr_opt_tcolors_th3.setFrameShadow(QFrame.Raised)
-
-        self.glay_opt_tcolors.addWidget(self.fr_opt_tcolors_th3, 0, 2, 1, 1)
-
-        self.fr_opt_tcolors_th2 = QFrame(self.pg_opt_tcolors)
-        self.fr_opt_tcolors_th2.setObjectName(u"fr_opt_tcolors_th2")
-        self.fr_opt_tcolors_th2.setFrameShape(QFrame.StyledPanel)
-        self.fr_opt_tcolors_th2.setFrameShadow(QFrame.Raised)
-
-        self.glay_opt_tcolors.addWidget(self.fr_opt_tcolors_th2, 0, 1, 1, 1)
 
         self.pb_opt_tcolors_hex12 = QPushButton(self.pg_opt_tcolors)
         self.pb_opt_tcolors_hex12.setObjectName(u"pb_opt_tcolors_hex12")
@@ -563,15 +515,81 @@ class Ui_Option(object):
         self.fr_opt_tcolors_th1.setObjectName(u"fr_opt_tcolors_th1")
         self.fr_opt_tcolors_th1.setFrameShape(QFrame.StyledPanel)
         self.fr_opt_tcolors_th1.setFrameShadow(QFrame.Raised)
-        self.verticalLayout = QVBoxLayout(self.fr_opt_tcolors_th1)
-        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.vlay_fr_opt_tcolors_th1 = QVBoxLayout(self.fr_opt_tcolors_th1)
+        self.vlay_fr_opt_tcolors_th1.setSpacing(0)
+        self.vlay_fr_opt_tcolors_th1.setObjectName(u"vlay_fr_opt_tcolors_th1")
+        self.vlay_fr_opt_tcolors_th1.setContentsMargins(0, 0, 0, 0)
         self.pb_opt_tcolors_th1_cophex = QPushButton(self.fr_opt_tcolors_th1)
         self.pb_opt_tcolors_th1_cophex.setObjectName(u"pb_opt_tcolors_th1_cophex")
 
-        self.verticalLayout.addWidget(self.pb_opt_tcolors_th1_cophex)
+        self.vlay_fr_opt_tcolors_th1.addWidget(self.pb_opt_tcolors_th1_cophex, 0, Qt.AlignHCenter)
 
 
         self.glay_opt_tcolors.addWidget(self.fr_opt_tcolors_th1, 0, 0, 2, 1)
+
+        self.fr_opt_tcolors_th2 = QFrame(self.pg_opt_tcolors)
+        self.fr_opt_tcolors_th2.setObjectName(u"fr_opt_tcolors_th2")
+        self.fr_opt_tcolors_th2.setFrameShape(QFrame.StyledPanel)
+        self.fr_opt_tcolors_th2.setFrameShadow(QFrame.Raised)
+        self.vlay_fr_opt_tcolors_th2 = QVBoxLayout(self.fr_opt_tcolors_th2)
+        self.vlay_fr_opt_tcolors_th2.setSpacing(0)
+        self.vlay_fr_opt_tcolors_th2.setObjectName(u"vlay_fr_opt_tcolors_th2")
+        self.vlay_fr_opt_tcolors_th2.setContentsMargins(0, 0, 0, 0)
+        self.pb_opt_tcolors_th2_cophex = QPushButton(self.fr_opt_tcolors_th2)
+        self.pb_opt_tcolors_th2_cophex.setObjectName(u"pb_opt_tcolors_th2_cophex")
+
+        self.vlay_fr_opt_tcolors_th2.addWidget(self.pb_opt_tcolors_th2_cophex, 0, Qt.AlignHCenter)
+
+
+        self.glay_opt_tcolors.addWidget(self.fr_opt_tcolors_th2, 0, 1, 2, 1)
+
+        self.fr_opt_tcolors_th3 = QFrame(self.pg_opt_tcolors)
+        self.fr_opt_tcolors_th3.setObjectName(u"fr_opt_tcolors_th3")
+        self.fr_opt_tcolors_th3.setFrameShape(QFrame.StyledPanel)
+        self.fr_opt_tcolors_th3.setFrameShadow(QFrame.Raised)
+        self.vlay_fr_opt_tcolors_th3 = QVBoxLayout(self.fr_opt_tcolors_th3)
+        self.vlay_fr_opt_tcolors_th3.setSpacing(0)
+        self.vlay_fr_opt_tcolors_th3.setObjectName(u"vlay_fr_opt_tcolors_th3")
+        self.vlay_fr_opt_tcolors_th3.setContentsMargins(0, 0, 0, 0)
+        self.pb_opt_tcolors_th3_cophex = QPushButton(self.fr_opt_tcolors_th3)
+        self.pb_opt_tcolors_th3_cophex.setObjectName(u"pb_opt_tcolors_th3_cophex")
+
+        self.vlay_fr_opt_tcolors_th3.addWidget(self.pb_opt_tcolors_th3_cophex, 0, Qt.AlignHCenter)
+
+
+        self.glay_opt_tcolors.addWidget(self.fr_opt_tcolors_th3, 0, 2, 2, 1)
+
+        self.fr_opt_tcolors_bn1 = QFrame(self.pg_opt_tcolors)
+        self.fr_opt_tcolors_bn1.setObjectName(u"fr_opt_tcolors_bn1")
+        self.fr_opt_tcolors_bn1.setFrameShape(QFrame.StyledPanel)
+        self.fr_opt_tcolors_bn1.setFrameShadow(QFrame.Raised)
+        self.vlay_fr_opt_tcolors_bn1 = QVBoxLayout(self.fr_opt_tcolors_bn1)
+        self.vlay_fr_opt_tcolors_bn1.setSpacing(0)
+        self.vlay_fr_opt_tcolors_bn1.setObjectName(u"vlay_fr_opt_tcolors_bn1")
+        self.vlay_fr_opt_tcolors_bn1.setContentsMargins(0, 0, 0, 0)
+        self.pb_opt_tcolors_bn1_cophex = QPushButton(self.fr_opt_tcolors_bn1)
+        self.pb_opt_tcolors_bn1_cophex.setObjectName(u"pb_opt_tcolors_bn1_cophex")
+
+        self.vlay_fr_opt_tcolors_bn1.addWidget(self.pb_opt_tcolors_bn1_cophex, 0, Qt.AlignHCenter)
+
+
+        self.glay_opt_tcolors.addWidget(self.fr_opt_tcolors_bn1, 0, 3, 2, 1)
+
+        self.fr_opt_tcolors_bn2 = QFrame(self.pg_opt_tcolors)
+        self.fr_opt_tcolors_bn2.setObjectName(u"fr_opt_tcolors_bn2")
+        self.fr_opt_tcolors_bn2.setFrameShape(QFrame.StyledPanel)
+        self.fr_opt_tcolors_bn2.setFrameShadow(QFrame.Raised)
+        self.vlay_fr_opt_tcolors_bn2 = QVBoxLayout(self.fr_opt_tcolors_bn2)
+        self.vlay_fr_opt_tcolors_bn2.setSpacing(0)
+        self.vlay_fr_opt_tcolors_bn2.setObjectName(u"vlay_fr_opt_tcolors_bn2")
+        self.vlay_fr_opt_tcolors_bn2.setContentsMargins(0, 0, 0, 0)
+        self.pb_opt_tcolors_bn2_cophex = QPushButton(self.fr_opt_tcolors_bn2)
+        self.pb_opt_tcolors_bn2_cophex.setObjectName(u"pb_opt_tcolors_bn2_cophex")
+
+        self.vlay_fr_opt_tcolors_bn2.addWidget(self.pb_opt_tcolors_bn2_cophex, 0, Qt.AlignHCenter)
+
+
+        self.glay_opt_tcolors.addWidget(self.fr_opt_tcolors_bn2, 0, 4, 2, 1)
 
 
         self.vlay_pg_opt_tcolors.addLayout(self.glay_opt_tcolors)
