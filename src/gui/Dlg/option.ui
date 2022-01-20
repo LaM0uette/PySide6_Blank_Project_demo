@@ -765,21 +765,6 @@
               <property name="spacing">
                <number>0</number>
               </property>
-              <item row="1" column="2">
-               <widget class="QPushButton" name="pb_opt_tcolors_th3_cophex"/>
-              </item>
-              <item row="1" column="3">
-               <widget class="QPushButton" name="pb_opt_tcolors_bn1_cophex"/>
-              </item>
-              <item row="1" column="1">
-               <widget class="QPushButton" name="pb_opt_tcolors_th2_cophex"/>
-              </item>
-              <item row="1" column="0">
-               <widget class="QPushButton" name="pb_opt_tcolors_th1_cophex"/>
-              </item>
-              <item row="1" column="4">
-               <widget class="QPushButton" name="pb_opt_tcolors_bn2_cophex"/>
-              </item>
               <item row="2" column="0" colspan="5">
                <spacer name="verticalSpacer">
                 <property name="orientation">
@@ -795,56 +780,6 @@
               </item>
               <item row="3" column="0">
                <widget class="QPushButton" name="pb_opt_tcolors_hex1"/>
-              </item>
-              <item row="0" column="4">
-               <widget class="QFrame" name="fr_opt_tcolors_bn2">
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="3">
-               <widget class="QFrame" name="fr_opt_tcolors_bn1">
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="2">
-               <widget class="QFrame" name="fr_opt_tcolors_th3">
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="0">
-               <widget class="QFrame" name="fr_opt_tcolors_th1">
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-               </widget>
-              </item>
-              <item row="0" column="1">
-               <widget class="QFrame" name="fr_opt_tcolors_th2">
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-               </widget>
               </item>
               <item row="5" column="1">
                <widget class="QPushButton" name="pb_opt_tcolors_hex12"/>
@@ -887,6 +822,156 @@
               </item>
               <item row="5" column="4">
                <widget class="QPushButton" name="pb_opt_tcolors_hex15"/>
+              </item>
+              <item row="0" column="0" rowspan="2">
+               <widget class="QFrame" name="fr_opt_tcolors_th1">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="vlay_fr_opt_tcolors_th1">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QPushButton" name="pb_opt_tcolors_th1_cophex"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="1" rowspan="2">
+               <widget class="QFrame" name="fr_opt_tcolors_th2">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="vlay_fr_opt_tcolors_th2">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QPushButton" name="pb_opt_tcolors_th2_cophex"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="2" rowspan="2">
+               <widget class="QFrame" name="fr_opt_tcolors_th3">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="vlay_fr_opt_tcolors_th3">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QPushButton" name="pb_opt_tcolors_th3_cophex"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="3" rowspan="2">
+               <widget class="QFrame" name="fr_opt_tcolors_bn1">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="vlay_fr_opt_tcolors_bn1">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QPushButton" name="pb_opt_tcolors_bn1_cophex"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="0" column="4" rowspan="2">
+               <widget class="QFrame" name="fr_opt_tcolors_bn2">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="vlay_fr_opt_tcolors_bn2">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item alignment="Qt::AlignHCenter">
+                  <widget class="QPushButton" name="pb_opt_tcolors_bn2_cophex"/>
+                 </item>
+                </layout>
+               </widget>
               </item>
              </layout>
             </item>

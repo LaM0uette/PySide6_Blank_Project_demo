@@ -447,11 +447,6 @@ class Ui_Option(object):
 
         self.glay_opt_tcolors.addWidget(self.pb_opt_tcolors_th2_cophex, 1, 1, 1, 1)
 
-        self.pb_opt_tcolors_th1_cophex = QPushButton(self.pg_opt_tcolors)
-        self.pb_opt_tcolors_th1_cophex.setObjectName(u"pb_opt_tcolors_th1_cophex")
-
-        self.glay_opt_tcolors.addWidget(self.pb_opt_tcolors_th1_cophex, 1, 0, 1, 1)
-
         self.pb_opt_tcolors_bn2_cophex = QPushButton(self.pg_opt_tcolors)
         self.pb_opt_tcolors_bn2_cophex.setObjectName(u"pb_opt_tcolors_bn2_cophex")
 
@@ -486,13 +481,6 @@ class Ui_Option(object):
         self.fr_opt_tcolors_th3.setFrameShadow(QFrame.Raised)
 
         self.glay_opt_tcolors.addWidget(self.fr_opt_tcolors_th3, 0, 2, 1, 1)
-
-        self.fr_opt_tcolors_th1 = QFrame(self.pg_opt_tcolors)
-        self.fr_opt_tcolors_th1.setObjectName(u"fr_opt_tcolors_th1")
-        self.fr_opt_tcolors_th1.setFrameShape(QFrame.StyledPanel)
-        self.fr_opt_tcolors_th1.setFrameShadow(QFrame.Raised)
-
-        self.glay_opt_tcolors.addWidget(self.fr_opt_tcolors_th1, 0, 0, 1, 1)
 
         self.fr_opt_tcolors_th2 = QFrame(self.pg_opt_tcolors)
         self.fr_opt_tcolors_th2.setObjectName(u"fr_opt_tcolors_th2")
@@ -570,6 +558,20 @@ class Ui_Option(object):
         self.pb_opt_tcolors_hex15.setObjectName(u"pb_opt_tcolors_hex15")
 
         self.glay_opt_tcolors.addWidget(self.pb_opt_tcolors_hex15, 5, 4, 1, 1)
+
+        self.fr_opt_tcolors_th1 = QFrame(self.pg_opt_tcolors)
+        self.fr_opt_tcolors_th1.setObjectName(u"fr_opt_tcolors_th1")
+        self.fr_opt_tcolors_th1.setFrameShape(QFrame.StyledPanel)
+        self.fr_opt_tcolors_th1.setFrameShadow(QFrame.Raised)
+        self.verticalLayout = QVBoxLayout(self.fr_opt_tcolors_th1)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.pb_opt_tcolors_th1_cophex = QPushButton(self.fr_opt_tcolors_th1)
+        self.pb_opt_tcolors_th1_cophex.setObjectName(u"pb_opt_tcolors_th1_cophex")
+
+        self.verticalLayout.addWidget(self.pb_opt_tcolors_th1_cophex)
+
+
+        self.glay_opt_tcolors.addWidget(self.fr_opt_tcolors_th1, 0, 0, 2, 1)
 
 
         self.vlay_pg_opt_tcolors.addLayout(self.glay_opt_tcolors)
