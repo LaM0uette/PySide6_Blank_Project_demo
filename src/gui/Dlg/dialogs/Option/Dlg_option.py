@@ -228,6 +228,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.pb_opt_appliquer.setVisible(False)
     def IN_ACT(self):
         self._maj_cb_theme()
+        self._tm_random()
     def INIT(self):
         self.IN_BASE()
         self.IN_CLASSE()
@@ -327,8 +328,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         __rgb_random(self.pb_opt_tcolors_hex1, self.pb_opt_tcolors_hex2, self.pb_opt_tcolors_hex3, self.pb_opt_tcolors_hex4, self.pb_opt_tcolors_hex5,
                      self.pb_opt_tcolors_hex6, self.pb_opt_tcolors_hex7, self.pb_opt_tcolors_hex8, self.pb_opt_tcolors_hex9, self.pb_opt_tcolors_hex10,
                      self.pb_opt_tcolors_hex11, self.pb_opt_tcolors_hex12, self.pb_opt_tcolors_hex13, self.pb_opt_tcolors_hex14, self.pb_opt_tcolors_hex15)
-
-
 
         # if not self.pb_opt_tcolors_th1_lock.isChecked(): Frame.base(self.fr_opt_tcolors_th1, colors={"c1": __rgb_random()}).th()
 
