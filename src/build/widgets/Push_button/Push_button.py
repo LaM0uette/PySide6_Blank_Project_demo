@@ -207,3 +207,14 @@ class dlg_nok(rtn):
                          font=P_font().h4(),
                          cur=P_cur().souris_main(),
         )
+
+class rgb(rtn):
+    def __init__(self, *wgs,
+                 colors=P_rgb().p_th3(),
+                 dim=P_dim().aw().h9()):
+        super().__init__(*wgs,
+                         colors=colors,
+                         dim=dim,
+                         font=P_font().h4(),
+                         cur=P_cur().main(),
+        )

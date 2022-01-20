@@ -94,12 +94,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
 
             Push_button.menu_top(self.pb_opt_tcolors_th1_cophex, self.pb_opt_tcolors_th2_cophex, self.pb_opt_tcolors_th3_cophex,
                                  self.pb_opt_tcolors_bn1_cophex, self.pb_opt_tcolors_bn2_cophex).copier()
-            Push_button.ck_ico(self.pb_opt_tcolors_th1_lock, self.pb_opt_tcolors_th2_lock, self.pb_opt_tcolors_th3_lock,
-                                 self.pb_opt_tcolors_bn1_lock, self.pb_opt_tcolors_bn2_lock,
-                               img=P_img().unlock(),
-                               img_check=P_img().lock(),
-                               tm="th3",
-                               tm_check="bn1",).tr()
         def SPIN_BOX():
             Spin_box.plus_minus(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity).bd_th3()
             Spin_box.plus_minus_infini(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height).bd_th3()
@@ -328,11 +322,34 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         def __rgb_random():
             return random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)
 
-        if not self.pb_opt_tcolors_th1_lock.isChecked(): Frame.base(self.fr_opt_tcolors_th1, colors={"c1": __rgb_random()}).th()
-        if not self.pb_opt_tcolors_th2_lock.isChecked(): Frame.base(self.fr_opt_tcolors_th2, colors={"c1": __rgb_random()}).th()
-        if not self.pb_opt_tcolors_th3_lock.isChecked(): Frame.base(self.fr_opt_tcolors_th3, colors={"c1": __rgb_random()}).th()
-        if not self.pb_opt_tcolors_bn1_lock.isChecked(): Frame.base(self.fr_opt_tcolors_bn1, colors={"c1": __rgb_random()}).th()
-        if not self.pb_opt_tcolors_bn2_lock.isChecked(): Frame.base(self.fr_opt_tcolors_bn2, colors={"c1": __rgb_random()}).th()
+        Push_button.rgb(self.pb_opt_tcolors_hex1, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex2, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex3, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex4, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex5, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex6, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex7, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex8, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex9, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex10, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex11, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex12, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex13, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex14, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex15, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex16, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex17, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex18, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex19, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex20, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex21, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex22, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex23, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex24, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+        Push_button.rgb(self.pb_opt_tcolors_hex25, colors={"c1": __rgb_random(), "bn1":P_rgb().p_u_bn1()}).uni()
+
+
+        # if not self.pb_opt_tcolors_th1_lock.isChecked(): Frame.base(self.fr_opt_tcolors_th1, colors={"c1": __rgb_random()}).th()
 
 
     ### FONCTIONS

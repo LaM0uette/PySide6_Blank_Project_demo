@@ -779,14 +779,7 @@
                 <item row="1" column="0">
                  <widget class="QPushButton" name="pb_opt_tcolors_th1_cophex"/>
                 </item>
-                <item row="1" column="1">
-                 <widget class="QPushButton" name="pb_opt_tcolors_th1_lock">
-                  <property name="checkable">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="0" colspan="2">
+                <item row="0" column="0">
                  <widget class="QFrame" name="fr_opt_tcolors_th1">
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
@@ -809,14 +802,7 @@
                 <item row="2" column="0">
                  <widget class="QPushButton" name="pb_opt_tcolors_th2_cophex"/>
                 </item>
-                <item row="2" column="1">
-                 <widget class="QPushButton" name="pb_opt_tcolors_th2_lock">
-                  <property name="checkable">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="0" colspan="2">
+                <item row="0" column="0">
                  <widget class="QFrame" name="fr_opt_tcolors_th2">
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
@@ -839,14 +825,7 @@
                 <item row="1" column="0">
                  <widget class="QPushButton" name="pb_opt_tcolors_th3_cophex"/>
                 </item>
-                <item row="1" column="1">
-                 <widget class="QPushButton" name="pb_opt_tcolors_th3_lock">
-                  <property name="checkable">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="0" colspan="2">
+                <item row="0" column="0">
                  <widget class="QFrame" name="fr_opt_tcolors_th3">
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
@@ -869,14 +848,7 @@
                 <item row="1" column="0">
                  <widget class="QPushButton" name="pb_opt_tcolors_bn1_cophex"/>
                 </item>
-                <item row="1" column="1">
-                 <widget class="QPushButton" name="pb_opt_tcolors_bn1_lock">
-                  <property name="checkable">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="0" colspan="2">
+                <item row="0" column="0">
                  <widget class="QFrame" name="fr_opt_tcolors_bn1">
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
@@ -899,14 +871,7 @@
                 <item row="1" column="0">
                  <widget class="QPushButton" name="pb_opt_tcolors_bn2_cophex"/>
                 </item>
-                <item row="1" column="1">
-                 <widget class="QPushButton" name="pb_opt_tcolors_bn2_lock">
-                  <property name="checkable">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item row="0" column="0" colspan="2">
+                <item row="0" column="0">
                  <widget class="QFrame" name="fr_opt_tcolors_bn2">
                   <property name="frameShape">
                    <enum>QFrame::StyledPanel</enum>
@@ -917,6 +882,88 @@
                  </widget>
                 </item>
                </layout>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QGridLayout" name="gridLayout">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <item row="0" column="0">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex1"/>
+              </item>
+              <item row="0" column="1">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex2"/>
+              </item>
+              <item row="0" column="3">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex4"/>
+              </item>
+              <item row="0" column="2">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex3"/>
+              </item>
+              <item row="0" column="4">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex5"/>
+              </item>
+              <item row="2" column="0">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex11"/>
+              </item>
+              <item row="1" column="0">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex6"/>
+              </item>
+              <item row="3" column="0">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex16"/>
+              </item>
+              <item row="4" column="0">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex21"/>
+              </item>
+              <item row="1" column="1">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex7"/>
+              </item>
+              <item row="1" column="2">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex8"/>
+              </item>
+              <item row="1" column="3">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex9"/>
+              </item>
+              <item row="1" column="4">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex10"/>
+              </item>
+              <item row="2" column="4">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex15"/>
+              </item>
+              <item row="3" column="4">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex20"/>
+              </item>
+              <item row="4" column="4">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex25"/>
+              </item>
+              <item row="4" column="3">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex24"/>
+              </item>
+              <item row="4" column="2">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex23"/>
+              </item>
+              <item row="4" column="1">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex22"/>
+              </item>
+              <item row="3" column="1">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex17"/>
+              </item>
+              <item row="2" column="1">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex12"/>
+              </item>
+              <item row="2" column="2">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex13"/>
+              </item>
+              <item row="2" column="3">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex14"/>
+              </item>
+              <item row="3" column="3">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex19"/>
+              </item>
+              <item row="3" column="2">
+               <widget class="QPushButton" name="pb_opt_tcolors_hex18"/>
               </item>
              </layout>
             </item>
