@@ -162,7 +162,9 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     ############################
 
 
-    ### ACTIONS
+    #####################
+    ##     ACTIONS     ##
+    #####################
     def _set_sb_val(self):
         self.sb_rgb_red.setValue(self.sd_rgb_red.value())
         self.sb_rgb_green.setValue(self.sd_rgb_green.value())
@@ -210,6 +212,9 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         Slider.rgb(self.sd_rgb_red, gradient_colors=rgb_r).rgb()
         Slider.rgb(self.sd_rgb_green, gradient_colors=rgb_g).rgb()
         Slider.rgb(self.sd_rgb_blue, gradient_colors=rgb_b).rgb()
+    #####################
+    ##    /ACTIONS     ##
+    #####################
 
 
     #######################

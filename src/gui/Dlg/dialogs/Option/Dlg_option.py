@@ -227,7 +227,9 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
     ############################
 
 
-    ### ACTIONS
+    #####################
+    ##     ACTIONS     ##
+    #####################
     def _reload(self):
         QtWidgets.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
 
@@ -310,6 +312,9 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
             rgb = (int(pyperclip.paste()[1:-1].split(", ")[0]), int(pyperclip.paste()[1:-1].split(", ")[1]), int(pyperclip.paste()[1:-1].split(", ")[2]))
             Frame.base(fr, colors={"c1": rgb}, dim=P_dim().aw().h5()).th()
         except: return
+    #####################
+    ##    /ACTIONS     ##
+    #####################
 
 
     #######################
