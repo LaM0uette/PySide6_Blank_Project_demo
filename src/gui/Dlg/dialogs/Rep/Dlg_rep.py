@@ -42,7 +42,7 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
     ##     INITIALISATION     ##
     ############################
     def IN_BASE(self):
-        ## Fenetre
+        # Fenetre
         self.setWindowTitle(self.titre)
         self.setFixedWidth(self.width)
         self.setFixedHeight(self.height)
@@ -57,6 +57,7 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
             Push_button.dlg_ok(self.pb_rep_ok).txt()
             Push_button.dlg_nok(self.pb_rep_annuler).txt_inv()
 
+        # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
 

@@ -43,7 +43,7 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     ##     INITIALISATION     ##
     ############################
     def IN_BASE(self):
-        ## Fenetre
+        # Fenetre
         self.setWindowTitle(self.titre)
         self.setFixedWidth(self.width)
         self.setFixedHeight(self.height)
@@ -65,7 +65,7 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         def TEXT_EDIT():
             Text_edit.h3(self.le_rgb_hex).tr()
 
-
+        # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
 

@@ -61,7 +61,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
     ##     INITIALISATION     ##
     ############################
     def IN_BASE(self):
-        ## Fenetre
+        # Fenetre
         self.setWindowTitle(self.titre)
         self.setFixedWidth(self.width)
         self.setFixedHeight(self.height)
@@ -102,6 +102,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         def TREE_WIDGET():
             Tree_widget.base(self.trw_option).option()
 
+        # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
 

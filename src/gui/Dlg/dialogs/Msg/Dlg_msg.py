@@ -39,7 +39,7 @@ class Dlg_msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
     ##     INITIALISATION     ##
     ############################
     def IN_BASE(self):
-        ## Fenetre
+        # Fenetre
         self.setWindowTitle(self.titre)
         self.setFixedWidth(self.width)
         self.setFixedHeight(self.height)
@@ -53,6 +53,7 @@ class Dlg_msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
         def PUSH_BUTTON():
             Push_button.dlg_ok(self.pb_msg_ok).txt()
 
+        # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
 

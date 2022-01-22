@@ -43,7 +43,7 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
     ##     INITIALISATION     ##
     ############################
     def IN_BASE(self):
-        ## Fenetre
+        # Fenetre
         self.setWindowTitle(self.titre)
         self.setFixedWidth(self.width)
         self.setFixedHeight(self.height)
@@ -60,7 +60,7 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
         def TEXT_EDIT():
             Text_edit.base(self.le_input_text).bottom_th2()
 
-
+        # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
 
