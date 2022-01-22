@@ -108,6 +108,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Tree_widget.base(self.trw_demo_th).th()
             Tree_widget.base(self.trw_demo_tr).tr()
 
+        # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
 
