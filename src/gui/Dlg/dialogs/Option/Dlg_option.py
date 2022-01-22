@@ -83,7 +83,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         def PUSH_BUTTON():
             Push_button.dlg_ok(self.pb_opt_appliquer).txt()
             Push_button.dlg_ok(self.pb_opt_ok).txt_inv()
-            Push_button.base_txt(self.pb_opt_tm_colors).txt()
             Push_button.base(self.pb_opt_tm_th1).plein_th1()
             Push_button.base(self.pb_opt_tm_th2).plein_th2()
             Push_button.base(self.pb_opt_tm_th3).plein_th3()
