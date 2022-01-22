@@ -283,6 +283,12 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         if event.buttons() == QtCore.Qt.LeftButton and verifHeight < P_dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized:
             self.dragPos = event.globalPosition().toPoint()
             event.accept()
+    def mouseDoubleClickEvent(self, event):
+        cur = QtGui.QCursor()
+        height_verif = cur.pos().y() - self.pos().y()
+        if height_verif < P_dim().h9():
+            self.agrandir()
+            event.accept()
     def mouseMoveEvent(self, event):
         def act_move(event):
             self.move(self.pos() + event.globalPosition().toPoint() - self.dragPos)
