@@ -10,6 +10,7 @@ from .In_classe import In_classe
 
 class main(main_ui.Ui_main, QtWidgets.QWidget):
     dragPos: QtCore.QPoint
+
     def __init__(self):
         super(main, self).__init__()
 
@@ -21,8 +22,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.setupUi(self)
         self.INIT()
 
-
-    ### INITIALISATION
+    ############################
+    ##     INITIALISATION     ##
+    ############################
     def IN_BASE(self):
         # Fenetre
         self.setWindowTitle(config.nom)
@@ -207,15 +209,32 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.IN_CONNECTIONS()
         self.IN_ACT()
         self.IN_WG_BASE()
+    ############################
+    ##    /INITIALISATION     ##
+    ############################
 
 
-    ### _ACTIONS
+    #####################
+    ##     ACTIONS     ##
+    #####################
+
+    #####################
+    ##    /ACTIONS     ##
+    #####################
 
 
-    ### FONCTIONS
+    #######################
+    ##     FONCTIONS     ##
+    #######################
+
+    #######################
+    ##    /FONCTIONS     ##
+    #######################
 
 
-    ### EVENT
+    ###################
+    ##     EVENT     ##
+    ###################
     def _resize(self):
         if config.resize:
             self.setMinimumWidth(config.widht)
@@ -295,6 +314,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         else:
             self.setWindowState(self.win_state)
             self._resize()
+    ###################
+    ##    /EVENT     ##
+    ###################
 
 
 ICO_MAIN = f"{P_img().main()}th3.svg"
