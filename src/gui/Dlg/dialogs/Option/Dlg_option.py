@@ -1,6 +1,5 @@
 import glob
 import os
-import random
 import time
 
 from PySide6 import QtCore, QtWidgets, QtGui
@@ -53,7 +52,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
             "Polices": [self.pg_opt_font],
             "Configs": [self.pg_opt_configs],
             "Thèmes": [self.pg_opt_themes],
-            "T-Colors": [self.pg_opt_tcolors],
             "Infos": [self.pg_opt_infos],
         }
 
@@ -69,7 +67,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.setWindowOpacity(self.opacity)
     def IN_CLASSE(self):
         def COMBO_BOX():
-            Combo_box.base(self.fcb_opt_ft_font, self.cb_opt_tm_theme, self.cb_opt_tcolors_mode).tr()
+            Combo_box.base(self.fcb_opt_ft_font, self.cb_opt_tm_theme).tr()
         def CHECK_BOX():
             Check_box.base(self.ck_opt_cfg_autoreload, self.ck_opt_cfg_autoclose, self.ck_opt_cfg_resize).tr()
         def FRAME():
@@ -77,7 +75,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
             Frame.menu_bottom_dlg(self.fr_opt_bottom).th()
             Frame.base(self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5,
                        self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize).cadre_th3()
-            Frame.base(self.fr_opt_tcolors_th1, self.fr_opt_tcolors_th2, self.fr_opt_tcolors_th3, self.fr_opt_tcolors_bn1, self.fr_opt_tcolors_bn2, dim=P_dim().aw().h5()).th()
         def LABEL():
             Label.h1(self.lb_opt_info_nom).tr()
             Label.base(self.lb_opt_info_desc, self.lb_opt_info_auteur, self.lb_opt_info_version, self.lb_opt_ft_h1,
@@ -87,15 +84,12 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         def PUSH_BUTTON():
             Push_button.dlg_ok(self.pb_opt_appliquer).txt()
             Push_button.dlg_ok(self.pb_opt_ok).txt_inv()
-            Push_button.base_txt(self.pb_opt_gen_font, self.pb_opt_gen_config, self.pb_opt_tm_colors, self.pb_opt_tcolors_save).txt()
+            Push_button.base_txt(self.pb_opt_gen_font, self.pb_opt_gen_config, self.pb_opt_tm_colors).txt()
             Push_button.base(self.pb_opt_tm_th1).plein_th1()
             Push_button.base(self.pb_opt_tm_th2).plein_th2()
             Push_button.base(self.pb_opt_tm_th3).plein_th3()
             Push_button.base(self.pb_opt_tm_bn1).plein_bn1()
             Push_button.base(self.pb_opt_tm_bn2).plein_bn2()
-
-            Push_button.rgb(self.pb_opt_tcolors_th1_cophex, self.pb_opt_tcolors_th2_cophex, self.pb_opt_tcolors_th3_cophex,
-                                 self.pb_opt_tcolors_bn1_cophex, self.pb_opt_tcolors_bn2_cophex, dim=P_dim().carr().h8()).copier()
         def SPIN_BOX():
             Spin_box.plus_minus(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity).bd_th3()
             Spin_box.plus_minus_infini(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height).bd_th3()
@@ -216,31 +210,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.pb_opt_tm_bn1.clicked.connect(lambda: self._pb_tm_maj(tm="bn1"))
         self.pb_opt_tm_bn2.clicked.connect(lambda: self._pb_tm_maj(tm="bn2"))
 
-        self._space = QtGui.QShortcut(QtGui.QKeySequence(QtCore.Qt.Key_Space), self)
-        self._space.activated.connect(self._tm_random)
-
-        self.pb_opt_tcolors_hex1.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex1.text()))
-        self.pb_opt_tcolors_hex2.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex2.text()))
-        self.pb_opt_tcolors_hex3.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex3.text()))
-        self.pb_opt_tcolors_hex4.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex4.text()))
-        self.pb_opt_tcolors_hex5.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex5.text()))
-        self.pb_opt_tcolors_hex6.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex6.text()))
-        self.pb_opt_tcolors_hex7.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex7.text()))
-        self.pb_opt_tcolors_hex8.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex8.text()))
-        self.pb_opt_tcolors_hex9.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex9.text()))
-        self.pb_opt_tcolors_hex10.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex10.text()))
-        self.pb_opt_tcolors_hex11.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex11.text()))
-        self.pb_opt_tcolors_hex12.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex12.text()))
-        self.pb_opt_tcolors_hex13.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex13.text()))
-        self.pb_opt_tcolors_hex14.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex14.text()))
-        self.pb_opt_tcolors_hex15.clicked.connect(lambda: pyperclip.copy(self.pb_opt_tcolors_hex15.text()))
-
-        self.pb_opt_tcolors_th1_cophex.clicked.connect(lambda: self._tm_frame(fr=self.fr_opt_tcolors_th1))
-        self.pb_opt_tcolors_th2_cophex.clicked.connect(lambda: self._tm_frame(fr=self.fr_opt_tcolors_th2))
-        self.pb_opt_tcolors_th3_cophex.clicked.connect(lambda: self._tm_frame(fr=self.fr_opt_tcolors_th3))
-        self.pb_opt_tcolors_bn1_cophex.clicked.connect(lambda: self._tm_frame(fr=self.fr_opt_tcolors_bn1))
-        self.pb_opt_tcolors_bn2_cophex.clicked.connect(lambda: self._tm_frame(fr=self.fr_opt_tcolors_bn2))
-
         # pb ok
         self.pb_opt_ok.clicked.connect(lambda: self.FCT_OK())
         self.pb_opt_appliquer.clicked.connect(self._appliquer)
@@ -252,7 +221,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.pb_opt_appliquer.setVisible(False)
     def IN_ACT(self):
         self._maj_cb_theme()
-        self._tm_random()
     def INIT(self):
         self.IN_BASE()
         self.IN_CLASSE()
@@ -343,23 +311,10 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
             Json(lien_json=f"{vrb.DO_THEME}{config.theme}.json").UPDATE(dct)
 
             self._reload()
-    def _tm_random(self):
-        def __rgb_random(*args):
-            for pb in args:
-                colors = random.randint(0, 255), random.randint(0, 255), random.randint(0, 255)
-                Push_button.rgb(pb, colors={"c1": colors, "bn1": P_rgb().p_u_bn1()}, dim=P_dim().aw().h7()).uni()
-                pb.setText(str(colors))
-
-        __rgb_random(self.pb_opt_tcolors_hex1, self.pb_opt_tcolors_hex2, self.pb_opt_tcolors_hex3, self.pb_opt_tcolors_hex4, self.pb_opt_tcolors_hex5,
-                     self.pb_opt_tcolors_hex6, self.pb_opt_tcolors_hex7, self.pb_opt_tcolors_hex8, self.pb_opt_tcolors_hex9, self.pb_opt_tcolors_hex10,
-                     self.pb_opt_tcolors_hex11, self.pb_opt_tcolors_hex12, self.pb_opt_tcolors_hex13, self.pb_opt_tcolors_hex14, self.pb_opt_tcolors_hex15)
     def _tm_frame(self, fr):
         try:
             rgb = (int(pyperclip.paste()[1:-1].split(", ")[0]), int(pyperclip.paste()[1:-1].split(", ")[1]), int(pyperclip.paste()[1:-1].split(", ")[2]))
             Frame.base(fr, colors={"c1": rgb}, dim=P_dim().aw().h5()).th()
-
-            Push_button.rgb(self.pb_opt_tcolors_th1_cophex, self.pb_opt_tcolors_th2_cophex, self.pb_opt_tcolors_th3_cophex,
-                            self.pb_opt_tcolors_bn1_cophex, self.pb_opt_tcolors_bn2_cophex, dim=P_dim().carr().h8()).copier()
         except: return
 
 
