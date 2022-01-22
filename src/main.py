@@ -1,3 +1,5 @@
+import os
+import time
 import sys
 
 from PySide6 import QtCore, QtWidgets, QtGui
@@ -329,6 +331,13 @@ app = QtWidgets.QApplication(sys.argv)
 splash = QtWidgets.QSplashScreen(QtGui.QPixmap(ICO_MAIN).scaledToHeight(500), QtCore.Qt.WindowStaysOnTopHint)
 splash.show()
 app.processEvents()
+
+if config.auto_reload:
+    os.startfile(os.path.abspath(f"{vrb.DO_SCRIPT}convert_ui.bat"))
+    time.sleep(0.8)
+
+    Fct().GEN_SVG()
+    time.sleep(0.3)
 
 fen = main()
 splash.finish(fen)
