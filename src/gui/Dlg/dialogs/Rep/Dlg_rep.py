@@ -38,7 +38,9 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
         self.INIT()
 
 
-    ### INITIALISATION
+    ############################
+    ##     INITIALISATION     ##
+    ############################
     def IN_BASE(self):
         ## Fenetre
         self.setWindowTitle(self.titre)

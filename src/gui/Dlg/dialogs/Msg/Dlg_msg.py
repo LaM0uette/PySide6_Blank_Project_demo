@@ -35,7 +35,9 @@ class Dlg_msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
         self.INIT()
 
 
-    ### INITIALISATION
+    ############################
+    ##     INITIALISATION     ##
+    ############################
     def IN_BASE(self):
         ## Fenetre
         self.setWindowTitle(self.titre)

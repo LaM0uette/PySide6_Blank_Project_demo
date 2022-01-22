@@ -39,7 +39,9 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         self.INIT()
 
 
-    ### INITIALISATION
+    ############################
+    ##     INITIALISATION     ##
+    ############################
     def IN_BASE(self):
         ## Fenetre
         self.setWindowTitle(self.titre)

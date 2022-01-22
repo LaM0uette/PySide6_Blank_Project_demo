@@ -39,7 +39,9 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
         self.INIT()
 
 
-    ### INITIALISATION
+    ############################
+    ##     INITIALISATION     ##
+    ############################
     def IN_BASE(self):
         ## Fenetre
         self.setWindowTitle(self.titre)

@@ -57,7 +57,9 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.INIT()
 
 
-    ### INITIALISATION
+    ############################
+    ##     INITIALISATION     ##
+    ############################
     def IN_BASE(self):
         ## Fenetre
         self.setWindowTitle(self.titre)
