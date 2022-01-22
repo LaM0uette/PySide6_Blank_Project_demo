@@ -210,6 +210,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.pb_opt_ok.clicked.connect(lambda: self.FCT_OK())
         self.pb_opt_appliquer.clicked.connect(self._appliquer)
     def IN_ACT(self):
+        # MAJ de la liste des thèmes
         self._maj_cb_theme()
     def IN_WG_BASE(self):
         # stk

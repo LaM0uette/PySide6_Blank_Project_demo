@@ -109,17 +109,17 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
         # pb ok
         self.pb_input_ok.clicked.connect(lambda: self.FCT_OK())
         self.pb_input_annuler.clicked.connect(lambda: self.close())
-    def IN_WG_BASE(self):
-        pass
     def IN_ACT(self):
+        pass
+    def IN_WG_BASE(self):
         pass
     def INIT(self):
         self.IN_BASE()
         self.IN_CLASSE()
         self.IN_WG()
         self.IN_CONNECTIONS()
-        self.IN_WG_BASE()
         self.IN_ACT()
+        self.IN_WG_BASE()
     ############################
     ##    /INITIALISATION     ##
     ############################

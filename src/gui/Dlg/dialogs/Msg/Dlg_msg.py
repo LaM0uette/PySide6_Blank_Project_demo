@@ -96,17 +96,17 @@ class Dlg_msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
 
         # pb ok
         self.pb_msg_ok.clicked.connect(lambda: self.close())
-    def IN_WG_BASE(self):
-        pass
     def IN_ACT(self):
+        pass
+    def IN_WG_BASE(self):
         pass
     def INIT(self):
         self.IN_BASE()
         self.IN_CLASSE()
         self.IN_WG()
         self.IN_CONNECTIONS()
-        self.IN_WG_BASE()
         self.IN_ACT()
+        self.IN_WG_BASE()
     ############################
     ##    /INITIALISATION     ##
     ############################
