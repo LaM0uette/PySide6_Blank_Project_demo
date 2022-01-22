@@ -74,10 +74,8 @@ class Dlg_msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
         self.setCursor(Fct(cur=P_cur().souris()).CUR())
         self.setStyleSheet(f"background-color: rgb{P_rgb().th1()};")
 
-
         # Frame menu_top
         self.fr_menu_top.setFixedHeight(P_dim().h9())
-
 
         # Menu_top
         dim = P_dim().carr().h9()
@@ -86,12 +84,10 @@ class Dlg_msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
         self.lb_mt_ico.setScaledContents(True)
         self.lb_mt_nom.setText(self.titre)
 
-
         # Message
         self.lb_msg_text.setText(self.msg)
 
-
-        # pb ok
+        # pb dlg
         self.pb_msg_ok.setText(self.txt_pb_ok)
         self.pb_msg_ok.setDefault(True)
     def IN_CONNECTIONS(self):

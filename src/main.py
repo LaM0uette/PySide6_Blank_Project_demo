@@ -191,6 +191,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
                                         "}")
             self.hlay_menu_bottom.addWidget(self.sizegrip)
 
+
         # Demo lw
         for i in range(60):
             self.lw_demo_th.addItem(f"je suis l'item : {i}")

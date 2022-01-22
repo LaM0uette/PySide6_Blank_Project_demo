@@ -95,28 +95,22 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         self.setCursor(Fct(cur=P_cur().souris()).CUR())
         self.setStyleSheet(f"background-color: rgb{P_rgb().th1()};")
 
-
         # Frame menu_top
         self.fr_menu_top.setFixedHeight(P_dim().h9())
-
 
         # Menu_top
         dim = P_dim().carr().h9()
         Fct(wg=self.lb_mt_ico, w=dim.get("w"), h=dim.get("h")).DIM()
-        self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}th3.svg"))
-        self.lb_mt_ico.setScaledContents(True)
-        self.lb_mt_nom.setText(self.titre)
         self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}{self.tm}.svg"))
         self.lb_mt_ico.setScaledContents(True)
-
+        self.lb_mt_nom.setText(self.titre)
 
         # Message
         self.lb_rgb_red.setText("ROUGE")
         self.lb_rgb_green.setText("VERT")
         self.lb_rgb_blue.setText("BLEU")
 
-
-        # pb ok
+        # pb dlg
         self.pb_rgb_ok.setText(self.txt_pb_ok)
         self.pb_rgb_annuler.setText(self.txt_pb_annuler)
         self.pb_rgb_annuler.setDefault(True)

@@ -78,26 +78,20 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
         self.setCursor(Fct(cur=P_cur().souris()).CUR())
         self.setStyleSheet(f"background-color: rgb{P_rgb().th1()};")
 
-
         # Frame menu_top
         self.fr_menu_top.setFixedHeight(P_dim().h9())
-
 
         # Menu_top
         dim = P_dim().carr().h9()
         Fct(wg=self.lb_mt_ico, w=dim.get("w"), h=dim.get("h")).DIM()
-        self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}th3.svg"))
-        self.lb_mt_ico.setScaledContents(True)
-        self.lb_mt_nom.setText(self.titre)
         self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}{self.tm}.svg"))
         self.lb_mt_ico.setScaledContents(True)
-
+        self.lb_mt_nom.setText(self.titre)
 
         # Message
         self.lb_rep_text.setText(self.msg)
 
-
-        # pb ok
+        # pb dlg
         self.pb_rep_ok.setText(self.txt_pb_ok)
         self.pb_rep_annuler.setText(self.txt_pb_annuler)
         self.pb_rep_annuler.setDefault(True)

@@ -172,7 +172,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.lb_opt_info_auteur.setText(f"Auteur : {config.auteur}")
         self.lb_opt_info_version.setText(f"Version : {config.version}")
 
-        # pb ok / appliquer
+        # pb dlg
         self.pb_opt_ok.setText(self.txt_pb_ok)
         self.pb_opt_ok.setDefault(True)
         self.pb_opt_appliquer.setText(self.txt_pb_appliquer)
