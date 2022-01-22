@@ -161,12 +161,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             except: print(f"TREE_WIDGET{err}")
         _func_try()
 
+        # Lancement des fonctions de MEF global
         In_classe(ui=self)
-
-        # Demo
-        for i in range(60):
-            self.lw_demo_th.addItem(f"je suis l'item : {i}")
-            self.lw_demo_tr.addItem(f"je suis l'item : {i}")
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur=P_cur().souris()).CUR())
@@ -194,6 +190,11 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
                                         f"height: {P_dim().h10()}px;"
                                         "}")
             self.hlay_menu_bottom.addWidget(self.sizegrip)
+
+        # Demo lw
+        for i in range(60):
+            self.lw_demo_th.addItem(f"je suis l'item : {i}")
+            self.lw_demo_tr.addItem(f"je suis l'item : {i}")
     def IN_CONNECTIONS(self):
         ## Menu_top
         self.pb_mt_option.clicked.connect(lambda: Option(fen=fen).MAIN())

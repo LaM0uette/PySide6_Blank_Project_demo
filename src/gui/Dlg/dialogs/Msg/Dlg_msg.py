@@ -67,6 +67,7 @@ class Dlg_msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
             except: print(f"PUSH_BUTTON{err}")
         _func_try()
 
+        # Lancement des fonctions de MEF global
         In_classe(ui=self)
     def IN_WG(self):
         # Base

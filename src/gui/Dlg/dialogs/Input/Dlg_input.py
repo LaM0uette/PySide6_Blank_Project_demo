@@ -77,6 +77,7 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
             except: print(f"TEXT_EDIT{err}")
         _func_try()
 
+        # Lancement des fonctions de MEF global
         In_classe(ui=self)
     def IN_WG(self):
         # Base

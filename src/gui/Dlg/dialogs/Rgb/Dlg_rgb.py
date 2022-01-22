@@ -88,6 +88,7 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
             except: print(f"TEXT_EDIT{err}")
         _func_try()
 
+        # Lancement des fonctions de MEF global
         In_classe(ui=self)
     def IN_WG(self):
         # Base

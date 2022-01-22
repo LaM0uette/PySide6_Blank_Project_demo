@@ -131,6 +131,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
             except: print(f"TREE_WIDGET{err}")
         _func_try()
 
+        # Lancement des fonctions de MEF global
         In_classe(ui=self)
     def IN_WG(self):
         # Base
