@@ -246,7 +246,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.fen.IN_BASE()
         self.fen.IN_CLASSE()
 
-        # self.sgn_reload.emit()
         self.setCursor(Fct(cur=P_cur().souris()).CUR())
 
         if self.reload:
