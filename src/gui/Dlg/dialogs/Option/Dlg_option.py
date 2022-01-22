@@ -140,11 +140,9 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         # Menu_top
         dim = P_dim().carr().h9()
         Fct(wg=self.lb_mt_ico, w=dim.get("w"), h=dim.get("h")).DIM()
-        self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}th3.svg"))
-        self.lb_mt_ico.setScaledContents(True)
-        self.lb_mt_nom.setText(self.titre)
         self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}{self.tm}.svg"))
         self.lb_mt_ico.setScaledContents(True)
+        self.lb_mt_nom.setText(self.titre)
 
         # Configs
         try:
@@ -163,7 +161,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
             self.sb_opt_cfg_resize_width.setValue(config.widht)
             self.sb_opt_cfg_resize_height.setValue(config.height)
         except: pass
-        self.pb_opt_ok.setDefault(True)
 
         # infos
         self.lb_opt_info_nom.setText(config.nom)
@@ -173,12 +170,12 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
 
         # pb ok / appliquer
         self.pb_opt_ok.setText(self.txt_pb_ok)
+        self.pb_opt_ok.setDefault(True)
         self.pb_opt_appliquer.setText(self.txt_pb_appliquer)
         self.pb_opt_appliquer.setDefault(True)
     def IN_CONNECTIONS(self):
         # Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
-
         self.trw_option.itemClicked.connect(self._set_opt)
 
         # Connection value change
@@ -208,21 +205,21 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         # pb ok
         self.pb_opt_ok.clicked.connect(lambda: self.FCT_OK())
         self.pb_opt_appliquer.clicked.connect(self._appliquer)
+    def IN_ACT(self):
+        self._maj_cb_theme()
     def IN_WG_BASE(self):
         # stk
         self.stk_option.setCurrentWidget(self.pg_opt_menu)
 
         # pb appliquer
         self.pb_opt_appliquer.setVisible(False)
-    def IN_ACT(self):
-        self._maj_cb_theme()
     def INIT(self):
         self.IN_BASE()
         self.IN_CLASSE()
         self.IN_WG()
         self.IN_CONNECTIONS()
-        self.IN_WG_BASE()
         self.IN_ACT()
+        self.IN_WG_BASE()
 
 
     ### ACTIONS
@@ -241,7 +238,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.fen.IN_BASE()
         self.fen.IN_CLASSE()
 
-        QtWidgets.QApplication.setOverrideCursor(Fct(cur=P_cur().souris()).CUR())
+        QtWidgets.QApplication.restoreOverrideCursor()
 
         if self.reload:
             Msg().INFO(msg="Modifications appliquées !\nCertains paramètres peuvent nécessiter un redémarrage de l'application.")

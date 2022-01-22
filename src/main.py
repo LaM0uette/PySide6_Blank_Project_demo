@@ -196,17 +196,17 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.pb_mt_reduire.clicked.connect(lambda: self.EVT_REDUIRE_GDT())
         self.pb_mt_agrandir.clicked.connect(lambda: self.EVT_AGRANDIR_GDT())
         self.pb_mt_quitter.clicked.connect(lambda: self.EVT_REDUIRE_HIDE_GDT())
-    def IN_WG_BASE(self):
-        pass
     def IN_ACT(self):
+        pass
+    def IN_WG_BASE(self):
         pass
     def INIT(self):
         self.IN_BASE()
         self.IN_CLASSE()
         self.IN_WG()
         self.IN_CONNECTIONS()
-        self.IN_WG_BASE()
         self.IN_ACT()
+        self.IN_WG_BASE()
 
 
     ### _ACTIONS
