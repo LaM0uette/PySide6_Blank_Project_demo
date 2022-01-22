@@ -3,7 +3,6 @@ import os
 import time
 
 from PySide6 import QtCore, QtWidgets, QtGui
-import pyperclip
 
 from ... import option_ui
 from ..Msg import Msg
