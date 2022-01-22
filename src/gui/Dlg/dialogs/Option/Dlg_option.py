@@ -182,21 +182,23 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
         self.trw_option.itemClicked.connect(self._set_opt)
 
-        # Connection value change
+        # Connection value change #
+        ## font combo box
         self.fcb_opt_ft_font.currentTextChanged.connect(self._val_change_appliquer)
+        ## spin box
         self.sb_opt_ft_h1.valueChanged.connect(self._val_change_appliquer)
         self.sb_opt_ft_h2.valueChanged.connect(self._val_change_appliquer)
         self.sb_opt_ft_h3.valueChanged.connect(self._val_change_appliquer)
         self.sb_opt_ft_h4.valueChanged.connect(self._val_change_appliquer)
         self.sb_opt_ft_h5.valueChanged.connect(self._val_change_appliquer)
-
+        ## slider
         self.sb_opt_cfg_opacity.valueChanged.connect(self._val_change_appliquer)
         self.sb_opt_cfg_resize_width.valueChanged.connect(lambda: self._val_change_appliquer(val="true"))
         self.sb_opt_cfg_resize_height.valueChanged.connect(lambda: self._val_change_appliquer(val="true"))
         self.ck_opt_cfg_autoreload.stateChanged.connect(self._val_change_appliquer)
         self.ck_opt_cfg_autoclose.stateChanged.connect(self._val_change_appliquer)
         self.ck_opt_cfg_resize.stateChanged.connect(lambda: self._val_change_appliquer(val="true"))
-
+        ## combo box theme
         self.cb_opt_tm_theme.currentTextChanged.connect(self._val_change_appliquer)
 
         # pb tm
@@ -206,8 +208,8 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.pb_opt_tm_bn1.clicked.connect(lambda: self._pb_tm_maj(tm="bn1"))
         self.pb_opt_tm_bn2.clicked.connect(lambda: self._pb_tm_maj(tm="bn2"))
 
-        # pb ok
-        self.pb_opt_ok.clicked.connect(lambda: self.FCT_OK())
+        # pb dlg
+        self.pb_opt_ok.clicked.connect(lambda: self.OK())
         self.pb_opt_appliquer.clicked.connect(self._appliquer)
     def IN_ACT(self):
         # MAJ de la liste des thèmes
@@ -233,7 +235,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
     #####################
     ##     ACTIONS     ##
     #####################
-    def _reload(self):
+    def __reload(self):
         QtWidgets.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
 
         importlib.reload(config)
@@ -253,6 +255,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         if self.reload:
             Msg().INFO(msg="Modifications appliquées !\nCertains paramètres peuvent nécessiter un redémarrage de l'application.")
             self.reload = False
+    ## configuration
     def _maj_cb_theme(self):
         self.cb_opt_tm_theme.clear()
         for i, js in enumerate(glob.glob(f"{vrb.DO_THEME}*.json")):
@@ -262,6 +265,25 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
                 self.cb_opt_tm_theme.setCurrentIndex(i)
     def _set_opt(self, item):
         self.stk_option.setCurrentWidget(self.dct_pg.get(item.text(0))[0])
+    def _pb_tm_maj(self, tm):
+        dct_colors = {
+            "th1": P_rgb().p_u1().get("c1"),
+            "th2": P_rgb().p_u2().get("c1"),
+            "th3": P_rgb().p_u3().get("c1"),
+            "bn1": P_rgb().p_u_bn1().get("c1"),
+            "bn2": P_rgb().p_u_bn2().get("c1")
+        }
+        rep, colors = Rgb().GET(rgb=dct_colors.get(tm))
+        if rep:
+            self._val_change_appliquer()
+
+            dct = {
+                f"{tm}": list(colors),
+            }
+            Json(lien_json=f"{vrb.DO_THEME}{config.theme}.json").UPDATE(dct)
+
+            self.__reload()
+    # application des modifs
     def _val_change_appliquer(self, val=""):
         if not self.pb_opt_appliquer.isVisible():
             self.pb_opt_appliquer.setVisible(True)
@@ -291,30 +313,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         }
         Json(lien_json=vrb.JS_FONT).UPDATE(dct)
 
-        self._reload()
-    def _pb_tm_maj(self, tm):
-        dct_colors = {
-            "th1": P_rgb().p_u1().get("c1"),
-            "th2": P_rgb().p_u2().get("c1"),
-            "th3": P_rgb().p_u3().get("c1"),
-            "bn1": P_rgb().p_u_bn1().get("c1"),
-            "bn2": P_rgb().p_u_bn2().get("c1")
-        }
-        rep, colors = Rgb().GET(rgb=dct_colors.get(tm))
-        if rep:
-            self._val_change_appliquer()
-
-            dct = {
-                f"{tm}": list(colors),
-            }
-            Json(lien_json=f"{vrb.DO_THEME}{config.theme}.json").UPDATE(dct)
-
-            self._reload()
-    def _tm_frame(self, fr):
-        try:
-            rgb = (int(pyperclip.paste()[1:-1].split(", ")[0]), int(pyperclip.paste()[1:-1].split(", ")[1]), int(pyperclip.paste()[1:-1].split(", ")[2]))
-            Frame.base(fr, colors={"c1": rgb}, dim=P_dim().aw().h5()).th()
-        except: return
+        self.__reload()
     #####################
     ##    /ACTIONS     ##
     #####################
@@ -323,7 +322,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
     #######################
     ##     FONCTIONS     ##
     #######################
-    def FCT_OK(self):
+    def OK(self):
         if self.pb_opt_appliquer.isVisible():
             self._appliquer()
             self.close()

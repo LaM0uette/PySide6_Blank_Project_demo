@@ -94,7 +94,7 @@ class Dlg_msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
         ## Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
 
-        # pb ok
+        # pb dlg
         self.pb_msg_ok.clicked.connect(lambda: self.close())
     def IN_ACT(self):
         pass

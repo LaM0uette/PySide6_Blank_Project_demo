@@ -99,7 +99,7 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
         # Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
 
-        # pb ok
+        # pb dlg
         self.pb_rep_ok.clicked.connect(lambda: self.OK())
         self.pb_rep_annuler.clicked.connect(lambda: self.close())
     def IN_ACT(self):
