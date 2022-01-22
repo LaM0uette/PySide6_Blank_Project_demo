@@ -142,7 +142,9 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
     #######################
 
 
-    ### EVENT
+    ###################
+    ##     EVENT     ##
+    ###################
     def mousePressEvent(self, event):
         cur = QtGui.QCursor()
         verifHeight = cur.pos().y() - self.pos().y()
@@ -165,3 +167,6 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
                 self.setWindowState(QtCore.Qt.WindowNoState)
                 act_move(event)
         except AttributeError: pass
+    ###################
+    ##    /EVENT     ##
+    ###################

@@ -114,7 +114,9 @@ class Dlg_msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
     ############################
 
 
-    ### EVENT
+    ###################
+    ##     EVENT     ##
+    ###################
     def mousePressEvent(self, event):
         cur = QtGui.QCursor()
         verifHeight = cur.pos().y() - self.pos().y()
@@ -137,3 +139,6 @@ class Dlg_msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
                 self.setWindowState(QtCore.Qt.WindowNoState)
                 act_move(event)
         except AttributeError: pass
+    ###################
+    ##    /EVENT     ##
+    ###################

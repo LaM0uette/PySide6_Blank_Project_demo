@@ -229,7 +229,9 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     #######################
 
 
-    ### EVENT
+    ###################
+    ##     EVENT     ##
+    ###################
     def mousePressEvent(self, event):
         cur = QtGui.QCursor()
         verifHeight = cur.pos().y() - self.pos().y()
@@ -252,3 +254,6 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
                 self.setWindowState(QtCore.Qt.WindowNoState)
                 act_move(event)
         except AttributeError: pass
+    ###################
+    ##    /EVENT     ##
+    ###################

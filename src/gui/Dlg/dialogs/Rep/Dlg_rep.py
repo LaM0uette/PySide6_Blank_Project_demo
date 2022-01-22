@@ -133,7 +133,9 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
     #######################
 
 
-    ### EVENT
+    ###################
+    ##     EVENT     ##
+    ###################
     def mousePressEvent(self, event):
         cur = QtGui.QCursor()
         verifHeight = cur.pos().y() - self.pos().y()
@@ -156,3 +158,6 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
                 self.setWindowState(QtCore.Qt.WindowNoState)
                 act_move(event)
         except AttributeError: pass
+    ###################
+    ##    /EVENT     ##
+    ###################
