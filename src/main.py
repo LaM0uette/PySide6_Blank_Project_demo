@@ -199,9 +199,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def IN_CONNECTIONS(self):
         ## Menu_top
         self.pb_mt_option.clicked.connect(lambda: Option(fen=fen).MAIN())
-        self.pb_mt_reduire.clicked.connect(lambda: self.EVT_REDUIRE_GDT())
-        self.pb_mt_agrandir.clicked.connect(lambda: self.EVT_AGRANDIR_GDT())
-        self.pb_mt_quitter.clicked.connect(lambda: self.EVT_REDUIRE_HIDE_GDT())
+        self.pb_mt_reduire.clicked.connect(lambda: self.reduire())
+        self.pb_mt_agrandir.clicked.connect(lambda: self.agrandir())
+        self.pb_mt_quitter.clicked.connect(lambda: self.cacher())
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):
@@ -239,6 +239,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     ###################
     ##     EVENT     ##
     ###################
+    # fenetre
     def _resize(self):
         if config.resize:
             self.setMinimumWidth(config.widht)
@@ -246,34 +247,34 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         else:
             self.setFixedWidth(config.widht)
             self.setFixedHeight(config.height)
-    def _centre_fen(self):
+    def _centreFen(self):
         center = QtGui.QScreen.availableGeometry(QtWidgets.QApplication.primaryScreen()).center()
         geo = self.frameGeometry()
         geo.moveCenter(center)
         self.move(geo.topLeft())
-
-    def EVT_AGRANDIR_GDT(self):
+    # intéraction des boutons
+    def agrandir(self):
         if self.windowState() == QtCore.Qt.WindowMaximized:
             self.win_state = QtCore.Qt.WindowNoState
-            self._centre_fen()
+            self._centreFen()
             self._resize()
         else:
             self.win_state = QtCore.Qt.WindowMaximized
 
         self.setWindowState(self.win_state)
-    def EVT_REDUIRE_GDT(self):
+    def reduire(self):
         self.setWindowState(QtCore.Qt.WindowMinimized)
-    def EVT_REDUIRE_HIDE_GDT(self):
-        if config.auto_close: return self.EVT_QUITTER()
+    def cacher(self):
+        if config.auto_close: return self.quitter()
         self.hide()
-        self._centre_fen()
-    def EVT_QUITTER(self):
+        self._centreFen()
+    def quitter(self):
         rep = Rep().QUITTER()
 
         if rep:
             app.quit()
             quit()
-
+    # event
     def mousePressEvent(self, event):
         cur = QtGui.QCursor()
         verifHeight = cur.pos().y() - self.pos().y()
@@ -307,7 +308,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         height_verif = cur.pos().y() - self.pos().y()
         if height_verif < P_dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
             self.setCursor(Fct(cur=P_cur().souris()).CUR())
-            self.EVT_AGRANDIR_GDT()
+            self.agrandir()
             event.accept()
     def closeEvent(self, event):
         event.accept()
