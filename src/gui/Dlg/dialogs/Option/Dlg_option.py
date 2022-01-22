@@ -252,7 +252,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         if self.reload:
             Msg().INFO(msg="Modifications appliquées !\nCertains paramètres peuvent nécessiter un redémarrage de l'application.")
             self.reload = False
-
     def _maj_cb_theme(self):
         self.cb_opt_tm_theme.clear()
         for i, js in enumerate(glob.glob(f"{vrb.DO_THEME}*.json")):
@@ -292,7 +291,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         Json(lien_json=vrb.JS_FONT).UPDATE(dct)
 
         self._reload()
-
     def _pb_tm_maj(self, tm):
         dct_colors = {
             "th1": P_rgb().p_u1().get("c1"),
