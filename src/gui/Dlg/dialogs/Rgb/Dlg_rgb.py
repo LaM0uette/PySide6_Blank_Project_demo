@@ -130,7 +130,7 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         self.le_rgb_hex.textEdited.connect(lambda: self._set_rgb_val_hex())
 
         # pb dlg
-        self.pb_rgb_ok.clicked.connect(lambda: self.FCT_OK())
+        self.pb_rgb_ok.clicked.connect(lambda: self.OK())
         self.pb_rgb_annuler.clicked.connect(lambda: self.close())
     def IN_ACT(self):
         pass
@@ -160,18 +160,35 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     #####################
     ##     ACTIONS     ##
     #####################
+    def __set_fr_color(self):
+        rgb = self.sd_rgb_red.value(), self.sd_rgb_green.value(), self.sd_rgb_blue.value()
+
+        rgb_r = {"c1": (0, self.sd_rgb_green.value(), self.sd_rgb_blue.value()) + (255,),
+                 "c2": (255, self.sd_rgb_green.value(), self.sd_rgb_blue.value()) + (255,)}
+
+        rgb_g = {"c1": (self.sd_rgb_red.value(), 0, self.sd_rgb_blue.value()) + (255,),
+                 "c2": (self.sd_rgb_red.value(), 255, self.sd_rgb_blue.value()) + (255,)}
+
+        rgb_b = {"c1": (self.sd_rgb_red.value(), self.sd_rgb_green.value(), 0) + (255,),
+                 "c2": (self.sd_rgb_red.value(), self.sd_rgb_green.value(), 255) + (255,)}
+
+        self.le_rgb_hex.setText(Fct().RGB_HEX(rgb=rgb))
+        Frame.base(self.fr_rgb_colors, colors={"c1": rgb}).radius()
+        Slider.rgb(self.sd_rgb_red, gradient_colors=rgb_r).rgb()
+        Slider.rgb(self.sd_rgb_green, gradient_colors=rgb_g).rgb()
+        Slider.rgb(self.sd_rgb_blue, gradient_colors=rgb_b).rgb()
     def _set_sb_val(self):
         self.sb_rgb_red.setValue(self.sd_rgb_red.value())
         self.sb_rgb_green.setValue(self.sd_rgb_green.value())
         self.sb_rgb_blue.setValue(self.sd_rgb_blue.value())
 
-        self._set_fr_color()
+        self.__set_fr_color()
     def _set_sd_val(self):
         self.sd_rgb_red.setValue(self.sb_rgb_red.value())
         self.sd_rgb_green.setValue(self.sb_rgb_green.value())
         self.sd_rgb_blue.setValue(self.sb_rgb_blue.value())
 
-        self._set_fr_color()
+        self.__set_fr_color()
     def _set_rgb_val_hex(self):
         hex_colors = self.le_rgb_hex.text()
 
@@ -190,23 +207,6 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
             self.sd_rgb_red.setValue(r)
             self.sd_rgb_green.setValue(g)
             self.sd_rgb_blue.setValue(b)
-    def _set_fr_color(self):
-        rgb = self.sd_rgb_red.value(), self.sd_rgb_green.value(), self.sd_rgb_blue.value()
-
-        rgb_r = {"c1": (0, self.sd_rgb_green.value(), self.sd_rgb_blue.value()) + (255,),
-                 "c2": (255, self.sd_rgb_green.value(), self.sd_rgb_blue.value()) + (255,)}
-
-        rgb_g = {"c1": (self.sd_rgb_red.value(), 0, self.sd_rgb_blue.value()) + (255,),
-                 "c2": (self.sd_rgb_red.value(), 255, self.sd_rgb_blue.value()) + (255,)}
-
-        rgb_b = {"c1": (self.sd_rgb_red.value(), self.sd_rgb_green.value(), 0) + (255,),
-                 "c2": (self.sd_rgb_red.value(), self.sd_rgb_green.value(), 255) + (255,)}
-
-        self.le_rgb_hex.setText(Fct().RGB_HEX(rgb=rgb))
-        Frame.base(self.fr_rgb_colors, colors={"c1": rgb}).radius()
-        Slider.rgb(self.sd_rgb_red, gradient_colors=rgb_r).rgb()
-        Slider.rgb(self.sd_rgb_green, gradient_colors=rgb_g).rgb()
-        Slider.rgb(self.sd_rgb_blue, gradient_colors=rgb_b).rgb()
     #####################
     ##    /ACTIONS     ##
     #####################
@@ -215,7 +215,7 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     #######################
     ##     FONCTIONS     ##
     #######################
-    def FCT_OK(self):
+    def OK(self):
         self.rep = True
         self.rgb_rtn = (self.sd_rgb_red.value(), self.sd_rgb_green.value(), self.sd_rgb_blue.value())
         self.close()
