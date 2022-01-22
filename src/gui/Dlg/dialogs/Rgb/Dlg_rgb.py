@@ -157,6 +157,9 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         self.IN_CONNECTIONS()
         self.IN_WG_BASE()
         self.IN_ACT()
+    ############################
+    ##    /INITIALISATION     ##
+    ############################
 
 
     ### ACTIONS
@@ -209,11 +212,16 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         Slider.rgb(self.sd_rgb_blue, gradient_colors=rgb_b).rgb()
 
 
-    ### FONCTIONS
+    #######################
+    ##     FONCTIONS     ##
+    #######################
     def FCT_OK(self):
         self.rep = True
         self.rgb_rtn = (self.sd_rgb_red.value(), self.sd_rgb_green.value(), self.sd_rgb_blue.value())
         self.close()
+    #######################
+    ##    /FONCTIONS     ##
+    #######################
 
 
     ### EVENT

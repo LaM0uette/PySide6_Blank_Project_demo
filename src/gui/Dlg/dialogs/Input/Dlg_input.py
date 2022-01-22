@@ -125,13 +125,21 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
         self.IN_CONNECTIONS()
         self.IN_WG_BASE()
         self.IN_ACT()
+    ############################
+    ##    /INITIALISATION     ##
+    ############################
 
 
-    ### FONCTIONS
+    #######################
+    ##     FONCTIONS     ##
+    #######################
     def FCT_OK(self):
         self.rep = True
         self.input = self.le_input_text.text()
         self.close()
+    #######################
+    ##    /FONCTIONS     ##
+    #######################
 
 
     ### EVENT

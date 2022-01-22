@@ -117,12 +117,20 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
         self.IN_CONNECTIONS()
         self.IN_WG_BASE()
         self.IN_ACT()
+    ############################
+    ##    /INITIALISATION     ##
+    ############################
 
 
-    ### FONCTIONS
+    #######################
+    ##     FONCTIONS     ##
+    #######################
     def FCT_OK(self):
         self.rep = True
         self.close()
+    #######################
+    ##    /FONCTIONS     ##
+    #######################
 
 
     ### EVENT

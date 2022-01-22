@@ -222,6 +222,9 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.IN_CONNECTIONS()
         self.IN_ACT()
         self.IN_WG_BASE()
+    ############################
+    ##    /INITIALISATION     ##
+    ############################
 
 
     ### ACTIONS
@@ -309,12 +312,17 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         except: return
 
 
-    ### FONCTIONS
+    #######################
+    ##     FONCTIONS     ##
+    #######################
     def FCT_OK(self):
         if self.pb_opt_appliquer.isVisible():
             self._appliquer()
             self.close()
         else: self.close()
+    #######################
+    ##    /FONCTIONS     ##
+    #######################
 
 
     ### EVENT

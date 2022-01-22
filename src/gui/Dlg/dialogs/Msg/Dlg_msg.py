@@ -109,6 +109,9 @@ class Dlg_msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
         self.IN_CONNECTIONS()
         self.IN_WG_BASE()
         self.IN_ACT()
+    ############################
+    ##    /INITIALISATION     ##
+    ############################
 
 
     ### EVENT
