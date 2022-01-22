@@ -129,7 +129,7 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         # hex
         self.le_rgb_hex.textEdited.connect(lambda: self._set_rgb_val_hex())
 
-        # pb ok
+        # pb dlg
         self.pb_rgb_ok.clicked.connect(lambda: self.FCT_OK())
         self.pb_rgb_annuler.clicked.connect(lambda: self.close())
     def IN_ACT(self):

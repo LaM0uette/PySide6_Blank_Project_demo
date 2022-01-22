@@ -100,7 +100,7 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
 
         # pb ok
-        self.pb_rep_ok.clicked.connect(lambda: self.FCT_OK())
+        self.pb_rep_ok.clicked.connect(lambda: self.OK())
         self.pb_rep_annuler.clicked.connect(lambda: self.close())
     def IN_ACT(self):
         pass
@@ -121,7 +121,7 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
     #######################
     ##     FONCTIONS     ##
     #######################
-    def FCT_OK(self):
+    def OK(self):
         self.rep = True
         self.close()
     #######################
