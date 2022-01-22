@@ -126,18 +126,13 @@
           </column>
           <item>
            <property name="text">
-            <string>Général</string>
+            <string>Polices</string>
            </property>
-           <item>
-            <property name="text">
-             <string>Polices</string>
-            </property>
-           </item>
-           <item>
-            <property name="text">
-             <string>Configs</string>
-            </property>
-           </item>
+          </item>
+          <item>
+           <property name="text">
+            <string>Configs</string>
+           </property>
           </item>
           <item>
            <property name="text">
@@ -154,55 +149,9 @@
         <item>
          <widget class="QStackedWidget" name="stk_option">
           <property name="currentIndex">
-           <number>5</number>
+           <number>3</number>
           </property>
           <widget class="QWidget" name="pg_opt_menu"/>
-          <widget class="QWidget" name="pg_opt_gen">
-           <layout class="QVBoxLayout" name="vlay_pg_opt_gen">
-            <property name="spacing">
-             <number>10</number>
-            </property>
-            <property name="leftMargin">
-             <number>10</number>
-            </property>
-            <property name="topMargin">
-             <number>20</number>
-            </property>
-            <property name="rightMargin">
-             <number>10</number>
-            </property>
-            <property name="bottomMargin">
-             <number>10</number>
-            </property>
-            <item>
-             <widget class="QPushButton" name="pb_opt_gen_font">
-              <property name="text">
-               <string>Police</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="pb_opt_gen_config">
-              <property name="text">
-               <string>Configs</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <spacer name="verticalSpacer_11">
-              <property name="orientation">
-               <enum>Qt::Vertical</enum>
-              </property>
-              <property name="sizeHint" stdset="0">
-               <size>
-                <width>20</width>
-                <height>40</height>
-               </size>
-              </property>
-             </spacer>
-            </item>
-           </layout>
-          </widget>
           <widget class="QWidget" name="pg_opt_font">
            <layout class="QVBoxLayout" name="vlay_pg_opt_font">
             <property name="spacing">
@@ -725,13 +674,6 @@
                </size>
               </property>
              </spacer>
-            </item>
-            <item>
-             <widget class="QPushButton" name="pb_opt_tm_colors">
-              <property name="text">
-               <string>Couleurs</string>
-              </property>
-             </widget>
             </item>
            </layout>
           </widget>

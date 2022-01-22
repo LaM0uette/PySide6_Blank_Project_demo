@@ -48,7 +48,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         # Global
         self.reload = False
         self.dct_pg = {
-            "Général": [self.pg_opt_gen],
             "Polices": [self.pg_opt_font],
             "Configs": [self.pg_opt_configs],
             "Thèmes": [self.pg_opt_themes],
@@ -84,7 +83,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         def PUSH_BUTTON():
             Push_button.dlg_ok(self.pb_opt_appliquer).txt()
             Push_button.dlg_ok(self.pb_opt_ok).txt_inv()
-            Push_button.base_txt(self.pb_opt_gen_font, self.pb_opt_gen_config, self.pb_opt_tm_colors).txt()
+            Push_button.base_txt(self.pb_opt_tm_colors).txt()
             Push_button.base(self.pb_opt_tm_th1).plein_th1()
             Push_button.base(self.pb_opt_tm_th2).plein_th2()
             Push_button.base(self.pb_opt_tm_th3).plein_th3()
@@ -182,9 +181,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
 
         self.trw_option.itemClicked.connect(self._set_opt)
-        self.pb_opt_gen_font.clicked.connect(lambda: self.stk_option.setCurrentWidget(self.dct_pg.get("Polices")[0]))
-        self.pb_opt_gen_config.clicked.connect(lambda: self.stk_option.setCurrentWidget(self.dct_pg.get("Configs")[0]))
-        self.pb_opt_tm_colors.clicked.connect(lambda: self.stk_option.setCurrentWidget(self.dct_pg.get("T-Colors")[0]))
 
         # Connection value change
         self.fcb_opt_ft_font.currentTextChanged.connect(self._val_change_appliquer)
@@ -232,7 +228,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
 
     ### ACTIONS
     def _reload(self):
-        self.setCursor(QtCore.Qt.WaitCursor)
+        QtWidgets.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
 
         importlib.reload(config)
         importlib.reload(rld)
@@ -246,7 +242,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.fen.IN_BASE()
         self.fen.IN_CLASSE()
 
-        self.setCursor(Fct(cur=P_cur().souris()).CUR())
+        QtWidgets.QApplication.setOverrideCursor(Fct(cur=P_cur().souris()).CUR())
 
         if self.reload:
             Msg().INFO(msg="Modifications appliquées !\nCertains paramètres peuvent nécessiter un redémarrage de l'application.")

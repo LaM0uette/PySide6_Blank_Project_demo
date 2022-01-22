@@ -76,9 +76,8 @@ class Ui_Option(object):
         self.hlay_opt_body.setContentsMargins(0, -1, 0, -1)
         self.trw_option = QTreeWidget(self.fr_main)
         self.trw_option.headerItem().setText(0, "")
-        __qtreewidgetitem = QTreeWidgetItem(self.trw_option)
-        QTreeWidgetItem(__qtreewidgetitem)
-        QTreeWidgetItem(__qtreewidgetitem)
+        QTreeWidgetItem(self.trw_option)
+        QTreeWidgetItem(self.trw_option)
         QTreeWidgetItem(self.trw_option)
         QTreeWidgetItem(self.trw_option)
         self.trw_option.setObjectName(u"trw_option")
@@ -90,27 +89,6 @@ class Ui_Option(object):
         self.pg_opt_menu = QWidget()
         self.pg_opt_menu.setObjectName(u"pg_opt_menu")
         self.stk_option.addWidget(self.pg_opt_menu)
-        self.pg_opt_gen = QWidget()
-        self.pg_opt_gen.setObjectName(u"pg_opt_gen")
-        self.vlay_pg_opt_gen = QVBoxLayout(self.pg_opt_gen)
-        self.vlay_pg_opt_gen.setSpacing(10)
-        self.vlay_pg_opt_gen.setObjectName(u"vlay_pg_opt_gen")
-        self.vlay_pg_opt_gen.setContentsMargins(10, 20, 10, 10)
-        self.pb_opt_gen_font = QPushButton(self.pg_opt_gen)
-        self.pb_opt_gen_font.setObjectName(u"pb_opt_gen_font")
-
-        self.vlay_pg_opt_gen.addWidget(self.pb_opt_gen_font)
-
-        self.pb_opt_gen_config = QPushButton(self.pg_opt_gen)
-        self.pb_opt_gen_config.setObjectName(u"pb_opt_gen_config")
-
-        self.vlay_pg_opt_gen.addWidget(self.pb_opt_gen_config)
-
-        self.verticalSpacer_11 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.vlay_pg_opt_gen.addItem(self.verticalSpacer_11)
-
-        self.stk_option.addWidget(self.pg_opt_gen)
         self.pg_opt_font = QWidget()
         self.pg_opt_font.setObjectName(u"pg_opt_font")
         self.vlay_pg_opt_font = QVBoxLayout(self.pg_opt_font)
@@ -411,11 +389,6 @@ class Ui_Option(object):
 
         self.vlay_pg_opt_themes.addItem(self.verticalSpacer_16)
 
-        self.pb_opt_tm_colors = QPushButton(self.pg_opt_themes)
-        self.pb_opt_tm_colors.setObjectName(u"pb_opt_tm_colors")
-
-        self.vlay_pg_opt_themes.addWidget(self.pb_opt_tm_colors)
-
         self.stk_option.addWidget(self.pg_opt_themes)
         self.pg_opt_infos = QWidget()
         self.pg_opt_infos.setObjectName(u"pg_opt_infos")
@@ -487,7 +460,7 @@ class Ui_Option(object):
 
         self.retranslateUi(Option)
 
-        self.stk_option.setCurrentIndex(5)
+        self.stk_option.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(Option)
@@ -498,19 +471,15 @@ class Ui_Option(object):
         __sortingEnabled = self.trw_option.isSortingEnabled()
         self.trw_option.setSortingEnabled(False)
         ___qtreewidgetitem = self.trw_option.topLevelItem(0)
-        ___qtreewidgetitem.setText(0, QCoreApplication.translate("Option", u"G\u00e9n\u00e9ral", None));
-        ___qtreewidgetitem1 = ___qtreewidgetitem.child(0)
-        ___qtreewidgetitem1.setText(0, QCoreApplication.translate("Option", u"Polices", None));
-        ___qtreewidgetitem2 = ___qtreewidgetitem.child(1)
-        ___qtreewidgetitem2.setText(0, QCoreApplication.translate("Option", u"Configs", None));
-        ___qtreewidgetitem3 = self.trw_option.topLevelItem(1)
-        ___qtreewidgetitem3.setText(0, QCoreApplication.translate("Option", u"Th\u00e8mes", None));
-        ___qtreewidgetitem4 = self.trw_option.topLevelItem(2)
-        ___qtreewidgetitem4.setText(0, QCoreApplication.translate("Option", u"Infos", None));
+        ___qtreewidgetitem.setText(0, QCoreApplication.translate("Option", u"Polices", None));
+        ___qtreewidgetitem1 = self.trw_option.topLevelItem(1)
+        ___qtreewidgetitem1.setText(0, QCoreApplication.translate("Option", u"Configs", None));
+        ___qtreewidgetitem2 = self.trw_option.topLevelItem(2)
+        ___qtreewidgetitem2.setText(0, QCoreApplication.translate("Option", u"Th\u00e8mes", None));
+        ___qtreewidgetitem3 = self.trw_option.topLevelItem(3)
+        ___qtreewidgetitem3.setText(0, QCoreApplication.translate("Option", u"Infos", None));
         self.trw_option.setSortingEnabled(__sortingEnabled)
 
-        self.pb_opt_gen_font.setText(QCoreApplication.translate("Option", u"Police", None))
-        self.pb_opt_gen_config.setText(QCoreApplication.translate("Option", u"Configs", None))
         self.lb_opt_ft_h1.setText(QCoreApplication.translate("Option", u"Taille H1: ", None))
         self.le_opt_ft_texte_h1.setText(QCoreApplication.translate("Option", u"TEST De la Police", None))
         self.lb_opt_ft_h2.setText(QCoreApplication.translate("Option", u"Taille H2: ", None))
@@ -532,7 +501,6 @@ class Ui_Option(object):
         self.pb_opt_tm_th3.setText(QCoreApplication.translate("Option", u"TH3", None))
         self.pb_opt_tm_bn1.setText(QCoreApplication.translate("Option", u"BN1", None))
         self.pb_opt_tm_bn2.setText(QCoreApplication.translate("Option", u"BN2", None))
-        self.pb_opt_tm_colors.setText(QCoreApplication.translate("Option", u"Couleurs", None))
         pass
     # retranslateUi
 
