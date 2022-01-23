@@ -339,9 +339,7 @@ splash.show()
 app.processEvents()
 
 if config.auto_reload:
-    os.startfile(os.path.abspath(f"{vrb.DO_SCRIPT}convert_ui.bat"))
     time.sleep(0.8)
-
     Fct().GEN_SVG()
     time.sleep(0.3)
 
