@@ -234,7 +234,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     ##     FONCTIONS     ##
     #######################
     def test(self):
-        pg = Progress().PG()
+        pass
 
     #######################
     ##    /FONCTIONS     ##
