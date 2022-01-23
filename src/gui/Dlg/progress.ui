@@ -180,9 +180,6 @@
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="pb_pg_ok"/>
-         </item>
-         <item>
           <widget class="QPushButton" name="pb_pg_annuler"/>
          </item>
         </layout>

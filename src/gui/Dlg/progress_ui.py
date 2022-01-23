@@ -98,11 +98,6 @@ class Ui_Progress(object):
 
         self.hlay_pg_bottom.addItem(self.horizontalSpacer)
 
-        self.pb_pg_ok = QPushButton(self.fr_pg_bottom)
-        self.pb_pg_ok.setObjectName(u"pb_pg_ok")
-
-        self.hlay_pg_bottom.addWidget(self.pb_pg_ok)
-
         self.pb_pg_annuler = QPushButton(self.fr_pg_bottom)
         self.pb_pg_annuler.setObjectName(u"pb_pg_annuler")
 

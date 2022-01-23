@@ -7,15 +7,11 @@ from .....In_classe import In_classe
 
 class Dlg_progress(progress_ui.Ui_Progress, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
-    rep = False
-    input = ""
 
     def __init__(self,
                  titre,
-                 msg,
                  ico,
                  tm,
-                 txt_pb_ok,
                  txt_pb_annuler,
                  width,
                  height,
@@ -24,10 +20,8 @@ class Dlg_progress(progress_ui.Ui_Progress, QtWidgets.QDialog):
         super(Dlg_progress, self).__init__()
 
         self.titre = titre
-        self.msg = msg
         self.ico = ico
         self.tm = tm
-        self.txt_pb_ok = txt_pb_ok
         self.txt_pb_annuler = txt_pb_annuler
         self.width = width
         self.height = height
@@ -51,14 +45,11 @@ class Dlg_progress(progress_ui.Ui_Progress, QtWidgets.QDialog):
     def IN_CLASSE(self):
         def FRAME():
             Frame.base(self.fr_main).cadre_th3()
-            Frame.menu_bottom_dlg(self.fr_input_bottom).th()
-        def LABEL():
-            Label.base(self.lb_input_text).tr()
+            Frame.menu_bottom_dlg(self.fr_pg_bottom).th()
         def PUSH_BUTTON():
-            Push_button.dlg_ok(self.pb_input_ok).txt()
-            Push_button.dlg_nok(self.pb_input_annuler).txt_inv()
-        def TEXT_EDIT():
-            Text_edit.base(self.le_input_text).bottom_th2()
+            Push_button.dlg_nok(self.pb_pg_annuler).txt_inv()
+        def PROGRESS_BAR():
+            Progress_bar.base(self.pg_pg_progress).th()
 
         # Lancement des fonctions de MEF
         def _func_try():
@@ -67,14 +58,11 @@ class Dlg_progress(progress_ui.Ui_Progress, QtWidgets.QDialog):
             try: FRAME()
             except: print(f"FRAME{err}")
 
-            try: LABEL()
-            except: print(f"LABEL{err}")
-
             try: PUSH_BUTTON()
             except: print(f"PUSH_BUTTON{err}")
 
-            try: TEXT_EDIT()
-            except: print(f"TEXT_EDIT{err}")
+            try: PROGRESS_BAR()
+            except: print(f"PROGRESS_BAR{err}")
         _func_try()
 
         # Lancement des fonctions de MEF global
@@ -94,21 +82,15 @@ class Dlg_progress(progress_ui.Ui_Progress, QtWidgets.QDialog):
         self.lb_mt_ico.setScaledContents(True)
         self.lb_mt_nom.setText(self.titre)
 
-        # Message
-        self.lb_input_text.setText(f"{self.msg}: ")
-        self.le_input_text.setPlaceholderText(f"{self.msg}...")
-
         # pb dlg
-        self.pb_input_ok.setText(self.txt_pb_ok)
-        self.pb_input_annuler.setText(self.txt_pb_annuler)
-        self.pb_input_annuler.setDefault(True)
+        self.pb_pg_annuler.setText(self.txt_pb_annuler)
+        self.pb_pg_annuler.setDefault(True)
     def IN_CONNECTIONS(self):
         # Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
 
         # pb dlg
-        self.pb_input_ok.clicked.connect(lambda: self.OK())
-        self.pb_input_annuler.clicked.connect(lambda: self.close())
+        self.pb_pg_annuler.clicked.connect(lambda: self.ANNULER())
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):
@@ -128,9 +110,8 @@ class Dlg_progress(progress_ui.Ui_Progress, QtWidgets.QDialog):
     #######################
     ##     FONCTIONS     ##
     #######################
-    def OK(self):
-        self.rep = True
-        self.input = self.le_input_text.text()
+    def ANNULER(self):
+
         self.close()
     #######################
     ##    /FONCTIONS     ##

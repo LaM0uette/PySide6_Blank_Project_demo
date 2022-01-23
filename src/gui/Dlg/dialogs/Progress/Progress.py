@@ -12,13 +12,11 @@ class Progress:
         self.height = height
         self.opacity = opacity
 
-    def _rtn(self, titre, msg, ico, tm, txt_pb_ok, txt_pb_annuler):
+    def _rtn(self, titre, ico, tm, txt_pb_annuler):
         msg = Dlg_progress(
             titre=titre,
-            msg=msg,
             ico=ico,
             tm=tm,
-            txt_pb_ok=txt_pb_ok,
             txt_pb_annuler=txt_pb_annuler,
             width=self.width,
             height=self.height,
@@ -26,15 +24,11 @@ class Progress:
         )
         msg.exec()
 
-        return msg.rep, msg.input
 
-
-    def TXT(self, titre="INPUT", msg="", ico=P_img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
+    def PG(self, titre="CHARGEMENT", ico=P_img().info(), tm="th3", txt_pb_annuler="Annuler"):
         return self._rtn(
             titre=titre,
-            msg=msg,
             ico=ico,
             tm=tm,
-            txt_pb_ok=txt_pb_ok,
             txt_pb_annuler=txt_pb_annuler
         )
