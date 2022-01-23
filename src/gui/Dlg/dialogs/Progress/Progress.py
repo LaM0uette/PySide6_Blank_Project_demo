@@ -25,7 +25,6 @@ class Progress:
         pg.exec()
 
 
-
     def PG(self, titre="CHARGEMENT", ico=P_img().info(), tm="th3", txt_pb_annuler="Annuler"):
         return self._rtn(
             titre=titre,
