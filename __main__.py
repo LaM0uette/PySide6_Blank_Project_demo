@@ -9,4 +9,5 @@ if __name__ == "__main__":
         if pi["name"] == f"{config.nom}.exe":
             quit()
 
+
     from src.main import app
