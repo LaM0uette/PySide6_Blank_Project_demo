@@ -15,7 +15,7 @@ class Option:
         self.opacity = opacity
 
     def _rtn(self, titre, msg, ico, tm, txt_pb_appliquer, txt_pb_ok):
-        msg = Dlg_option(
+        opt = Dlg_option(
             fen=self.fen,
             titre=titre,
             msg=msg,
@@ -27,7 +27,7 @@ class Option:
             height=self.height,
             opacity=self.opacity
         )
-        msg.exec()
+        opt.exec()
 
 
     def MAIN(self, titre="OPTION", msg="", ico=P_img().info(), tm="th3", txt_pb_appliquer="Appliquer", txt_pb_ok="Ok"):

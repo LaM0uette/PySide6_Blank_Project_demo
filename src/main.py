@@ -201,7 +201,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def IN_CONNECTIONS(self):
         ## Menu_top
         self.pb_mt_option.clicked.connect(lambda: Option(fen=fen).MAIN())
-        self.pb_mt_option.clicked.connect(lambda: Progress().PG())
+        self.pb_mt_option.clicked.connect(lambda: self.test())
         self.pb_mt_reduire.clicked.connect(lambda: self.reduire())
         self.pb_mt_agrandir.clicked.connect(lambda: self.agrandir())
         self.pb_mt_quitter.clicked.connect(lambda: self.cacher())
@@ -233,6 +233,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     #######################
     ##     FONCTIONS     ##
     #######################
+    def test(self):
+        pg = Progress().PG()
 
     #######################
     ##    /FONCTIONS     ##

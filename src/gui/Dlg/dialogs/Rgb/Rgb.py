@@ -13,7 +13,7 @@ class Rgb:
         self.opacity = opacity
 
     def _rtn(self, titre, rgb, ico, tm, txt_pb_ok, txt_pb_annuler):
-        msg = Dlg_rgb(
+        rgb = Dlg_rgb(
             titre=titre,
             rgb=rgb,
             ico=ico,
@@ -24,9 +24,9 @@ class Rgb:
             height=self.height,
             opacity=self.opacity
         )
-        msg.exec()
+        rgb.exec()
 
-        return msg.rep, msg.rgb_rtn
+        return rgb.rep, rgb.rgb_rtn
 
 
     def GET(self, titre="RGB", rgb=None, ico=P_img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):

@@ -13,7 +13,7 @@ class Rep:
         self.opacity = opacity
 
     def _rtn(self, titre, msg, ico, tm, txt_pb_ok, txt_pb_annuler):
-        msg = Dlg_rep(
+        rep = Dlg_rep(
             titre=titre,
             msg=msg,
             ico=ico,
@@ -24,9 +24,9 @@ class Rep:
             height=self.height,
             opacity=self.opacity
         )
-        msg.exec()
+        rep.exec()
 
-        return msg.rep
+        return rep.rep
 
 
     def INFO(self, titre="INFO", msg="", ico=P_img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):

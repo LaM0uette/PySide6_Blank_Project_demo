@@ -13,7 +13,7 @@ class Progress:
         self.opacity = opacity
 
     def _rtn(self, titre, ico, tm, txt_pb_annuler):
-        msg = Dlg_progress(
+        pg = Dlg_progress(
             titre=titre,
             ico=ico,
             tm=tm,
@@ -22,7 +22,7 @@ class Progress:
             height=self.height,
             opacity=self.opacity
         )
-        msg.exec()
+        pg.exec()
 
 
     def PG(self, titre="CHARGEMENT", ico=P_img().info(), tm="th3", txt_pb_annuler="Annuler"):
