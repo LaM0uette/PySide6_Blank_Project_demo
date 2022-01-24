@@ -14,5 +14,4 @@ if __name__ == "__main__":
     if config.auto_reload:
         os.startfile(os.path.abspath(f"{vrb.DO_SCRIPT}convert_ui.bat"))
 
-
     from src.main import app
