@@ -338,11 +338,6 @@ splash = QtWidgets.QSplashScreen(QtGui.QPixmap(ICO_MAIN).scaledToHeight(500), Qt
 splash.show()
 app.processEvents()
 
-if config.auto_reload:
-    time.sleep(0.8)
-    Fct().GEN_SVG()
-    time.sleep(0.3)
-
 fen = main()
 splash.finish(fen)
 fen.show()
