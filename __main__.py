@@ -20,4 +20,4 @@ if __name__ == "__main__":
         Fct().GEN_SVG()
         time.sleep(0.3)
 
-    from src.app import app
+        from src.app import app
