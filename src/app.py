@@ -34,21 +34,10 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def IN_CLASSE(self):
         lst_wg = {
             "QComboBox": {
-                "base_th": {
-                    "args": "Test",
-                    "wg": [
-                        self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3
-                    ]
-                },
-                "base_tr": {
-                    "args": "Test",
-                    "wg": [
-                        self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3
-                    ]
+                "base_th": Check_box.Base_th(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3),
+                "base_tr": Check_box.Base_tr(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3)
                 }
             }
-        }
-
 
 
         def DATE_EDIT():

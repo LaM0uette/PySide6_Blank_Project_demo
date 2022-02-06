@@ -1,11 +1,19 @@
 from .wg import wg
-from .. import p_base
 from ....build import *
 
 
 class Base_th:
-    pass
+    def __init__(self, *wgs):
+        wg(*wgs,
+           couleur_bg_hover=P_rgb().bn1()
+        )
 
+
+class Base_tr:
+    def __init__(self, *wgs):
+        wg(*wgs,
+           couleur_bg_hover=P_rgb().bn2()
+        )
 
 """
 colors = P_rgb().p_th3()

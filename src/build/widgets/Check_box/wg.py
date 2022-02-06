@@ -8,8 +8,6 @@ class wg:
     def __init__(
             self,
             *wgs,
-            arguments=None,
-
             couleur_bg=p_base.COLORS.get("c1"),
             couleur_fg=p_base.COLORS.get("c3"),
             couleur_bg_hover=p_base.COLORS.get("c3"),
@@ -18,35 +16,26 @@ class wg:
             couleur_fg_checked=p_base.COLORS.get("c1"),
             couleur_bg_checked_hover=p_base.COLORS.get("c3"),
             couleur_fg_checked_hover=p_base.COLORS.get("bn1"),
-
-            wg_width=None,
-            wg_height=None,
-
-            img_margin_top=0,
-            img_margin_bottom=0,
-            img_margin_right=0,
-            img_margin_left=0,
-            img_width=0,
-            img_height=0,
-
+            wg_dim_width=None,
+            wg_dim_height=None,
             img_uncheck=P_img().check(),
             tm_uncheck=p_base.TM_UNCHECK,
             img_disable=P_img().check(),
             tm_disable=p_base.TM_DISABLE,
             img_check=P_img().valider(),
             tm_check=p_base.TM_CHECK,
-
+            img_margin_top=0,
+            img_margin_bottom=0,
+            img_margin_right=0,
+            img_margin_left=0,
+            img_width=0,
+            img_height=0,
             bordure_width=P_style().bd(),
             bordure_style="solid",
-
             police=config.font,
             taille_police=p_base.FONT,
-
             curseur=p_base.CUR
     ):
-        # bds = Attrs(bd=bd).GET_BD()
-        # rds = Attrs(rd=rd).GET_RD()
-
         style = f"""
                     /* CHECKBOX */
                     QCheckBox {{
@@ -93,7 +82,7 @@ class wg:
             wg.setStyleSheet(style)
 
             try:
-                Fct(wg=wg, w=wg_width, h=wg_height).DIM()
+                Fct(wg=wg, w=wg_dim_width, h=wg_dim_height).DIM()
                 wg.setFont(Fct(font=police, font_size=taille_police).FONT())
 
                 wg.setCursor(Fct(cur=curseur).CUR())
@@ -101,6 +90,9 @@ class wg:
 
 
 """
+        # bds = Attrs(bd=bd).GET_BD()
+        # rds = Attrs(rd=rd).GET_RD()
+        
 /* BORDURES */
 .QCheckBox {{
 border-width: {bordure_width}px;
