@@ -18,8 +18,10 @@ DIM = {"w": None, "h": None}
 
 ### IMAGES
 TM = ""
-TM_HOVER = "bn1"
-TM_CHECK = "bn2"
+TM_UNCHECK = "th2"
+TM_DISABLE = "th2"
+TM_HOVER = "th3"
+TM_CHECK = "th3"
 
 
 ### FONT
