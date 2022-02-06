@@ -1,6 +1,6 @@
 import importlib
 
-from .Check_box import Check_box, wg
+from .Check_box import Check_box
 from .Combo_box import Combo_box
 from .Date_edit import Date_edit
 from .Frame import Frame
