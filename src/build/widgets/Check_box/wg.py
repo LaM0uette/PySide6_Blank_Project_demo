@@ -16,6 +16,12 @@ class wg:
             couleur_fg_checked=p_base.COLORS.get("c1"),
             couleur_bg_checked_hover=p_base.COLORS.get("c3"),
             couleur_fg_checked_hover=p_base.COLORS.get("bn1"),
+            img_margin_top=0,
+            img_margin_bottom=0,
+            img_margin_right=0,
+            img_margin_left=0,
+            img_width=0,
+            img_height=0,
             dim,
             img,
             img_check,
@@ -55,9 +61,12 @@ class wg:
 
             /* IMG */
             QCheckBox::indicator {{
-            margin-left: {(dim.get('h') - (dim.get('h') * P_style().x_ico())) / 2}px;
-            width: {dim.get('h') * P_style().x_ico()}px;
-            height: {dim.get('h') * P_style().x_ico()}px
+            margin-top: {img_margin_top}px;
+            margin-bottom: {img_margin_bottom}px;
+            margin-right: {img_margin_right}px;
+            margin-left: {img_margin_left}px;
+            width: {img_width}px;
+            height: {img_height}px
             }}
             QCheckBox::indicator:unchecked {{
             image: url({img + tm + '.svg'});
