@@ -22,6 +22,12 @@ class wg:
             img_margin_left=0,
             img_width=0,
             img_height=0,
+            img_uncheck=,
+            tm_uncheck=,
+            img_disable=,
+            tm_disable=,
+            img_check=,
+            tm_check=,
             dim,
             img,
             img_check,
@@ -69,13 +75,13 @@ class wg:
             height: {img_height}px
             }}
             QCheckBox::indicator:unchecked {{
-            image: url({img + tm + ".svg"});
+            image: url({f"{img_uncheck}{tm_uncheck}.svg"});
             }}
             QCheckBox::indicator:disabled {{
-            image: url({img + tm + ".svg"});
+            image: url({f"{img_disable}{tm_disable}.svg"});
             }}
             QCheckBox::indicator:checked {{
-            image: url({img_check + tm_check + ".svg"});
+            image: url({f"{img_check}{tm_check}.svg"});
             }}
 
 
