@@ -69,13 +69,13 @@ class wg:
             height: {img_height}px
             }}
             QCheckBox::indicator:unchecked {{
-            image: url({img + tm + '.svg'});
+            image: url({img + tm + ".svg"});
             }}
             QCheckBox::indicator:disabled {{
-            image: url({img + tm + '.svg'});
+            image: url({img + tm + ".svg"});
             }}
             QCheckBox::indicator:checked {{
-            image: url({img_check + tm_check + '.svg'});
+            image: url({img_check + tm_check + ".svg"});
             }}
 
 
