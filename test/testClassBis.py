@@ -1,10 +1,12 @@
 class Demo:
     def __init__(self,
+                 *args,
                  valeur=None,
                  couleurs = "bleu",
-                 dimensions = 70,
+                 dimensions = 80,
                  police = 10
     ):
+        self.args = args
         self.couleurs = couleurs
         self.dimensions = dimensions
         self.police = police
@@ -17,11 +19,14 @@ class Demo:
         except: pass
 
 
-        print(self.couleurs, self.dimensions, self.police)
+        print(self.args, self.couleurs, self.dimensions, self.police)
+        print(len(self.args))
 
 
 class Test:
-    couleurs = "rouge"
+    couleurs = "orange"
     police = 20
 
-d = Demo(Test())
+
+lst = "f", "f", "r", "r", "r"
+d = Demo(*lst, valeur=Test)
