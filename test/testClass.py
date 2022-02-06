@@ -14,5 +14,4 @@ class Test:
 
 
 arguments = Test()
-
 d = Demo(valeur=arguments)
