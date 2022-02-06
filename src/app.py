@@ -32,16 +32,23 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.setWindowOpacity(config.opacity)
         self._resize()
     def IN_CLASSE(self):
+        lst_wg = {
+            "QComboBox": {
+                "base_th": {
+                    "args": "Test",
+                    "wg": [
+                        self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3
+                    ]
+                },
+                "base_tr": {
+                    "args": "Test",
+                    "wg": [
+                        self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3
+                    ]
+                }
+            }
+        }
 
-
-        with Check_box as cb:
-            cb.base(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3).th()
-            cb.base(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3).tr()
-
-
-        def COMBO_BOX():
-            Combo_box.base(self.cb_demo_th).th()
-            Combo_box.base(self.cb_demo_tr).tr()
         def DATE_EDIT():
             Date_edit.base(self.de_demo_th).th()
             Date_edit.base(self.de_demo_tr).tr()
@@ -115,11 +122,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-
-
-            try: COMBO_BOX()
-            except: print(f"COMBO_BOX{err}")
 
             try: DATE_EDIT()
             except: print(f"DATE_EDIT{err}")
