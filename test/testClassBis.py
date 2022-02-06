@@ -33,3 +33,57 @@ class Test:
 
 lst = "f", "f", "r", "r", "r"
 d = Demo(*lst, valeur=Test)
+
+
+lst = {
+    "args": Test,
+    "list": [
+        "f", "f", "r", "r", "r"
+    ]
+}
+
+
+tttt = {
+    "pushbutton": {
+        "lst": {
+            "args": Test,
+            "list": [
+                "f", "f", "r", "r", "r"
+            ]
+        },
+        "lst1": {
+            "args": Test,
+            "list": [
+                "f", "f", "r", "r", "r"
+            ]
+        },
+        "lst2": {
+            "args": Test,
+            "list": [
+                "f", "f", "r", "r", "r"
+            ]
+        }
+    },
+    "combobox": {
+        "lst": {
+            "args": Test,
+            "list": [
+                "f", "f", "r", "r", "r"
+            ]
+        },
+        "lst1": {
+            "args": Test,
+            "list": [
+                "f", "f", "r", "r", "r"
+            ]
+        },
+        "lst2": {
+            "args": Test,
+            "list": [
+                "f", "f", "r", "r", "r"
+            ]
+        }
+    }
+}
+
+c = Demo(*lst.get("list"), valeur=lst.get("args"))
