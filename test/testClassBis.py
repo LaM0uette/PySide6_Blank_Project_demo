@@ -23,7 +23,10 @@ class Demo:
         print(len(self.args))
 
 
+
+
 class Test:
+
     couleurs = "orange"
     police = 20
 
