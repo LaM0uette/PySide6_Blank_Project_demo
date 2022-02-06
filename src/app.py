@@ -49,6 +49,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             }
         }
 
+
+
         def DATE_EDIT():
             Date_edit.base(self.de_demo_th).th()
             Date_edit.base(self.de_demo_tr).tr()
