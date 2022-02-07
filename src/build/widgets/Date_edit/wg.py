@@ -24,8 +24,8 @@ class wg:
 
                  img=P_img().calendrier(),
                  tm="",
-                 img_hover=P_img().main(),
-                 tm_hover="bn1",
+                 img_hover=P_img().calendrier(),
+                 tm_hover="",
                  img_width=p_base.IMG_WIDTH,
                  img_height=p_base.IMG_HEIGHT,
                  img_margin_top=0,
