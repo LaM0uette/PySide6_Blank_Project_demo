@@ -84,15 +84,14 @@ class wg:
                 margin-right: {img_margin_right}px;
                 margin-left: {img_margin_left}px;
                 }}
-                /* IMG CALENDRIER */
                 QDateEdit::drop-down:hover {{
                 image: url({f"{img_hover}{tm_hover}.svg"});
                 }}
 
                 /* WIDGETS */
                 QCalendarWidget QWidget {{
-                alternate-background-color: rgb{couleur_fg};
-                color: rgb{couleur_bg};
+                alternate-background-color: rgb{couleur_bg};
+                alternate-color: rgb{couleur_fg};
                 }}
                 
                 /* TOOL BUTTON */
