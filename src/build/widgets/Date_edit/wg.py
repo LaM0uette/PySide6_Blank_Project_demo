@@ -52,6 +52,8 @@ class wg:
                  bordure_couleur_bottom=p_base.BD_COULEUR,
                  bordure_couleur_right=p_base.BD_COULEUR,
                  bordure_couleur_left=p_base.BD_COULEUR,
+                 bordure_jours_taille=P_style().bd(),
+                 bordure_jours_style="solid",
                  rayon_top_left=p_base.RD_WG,
                  rayon_top_right=p_base.RD_WG,
                  rayon_bottom_right=p_base.RD_WG,
@@ -126,31 +128,31 @@ class wg:
                 
                 /* SPIN BOX */
                 QCalendarWidget QSpinBox {{
-                width: 50px;
+                width: 60px;
                 font-size: {police_taille}px;
                 font-family: {police};
-                background-color: rgb{50, 50, 50};
-                color: rgb{50, 50, 50};
-                selection-background-color: rgb{50, 50, 50};
-                selection-color: rgb{50, 50, 50};
+                background-color: rgb{couleur_bg};
+                color: rgb{couleur_fg};
+                selection-background-color: rgb{couleur_bg_selection};
+                selection-color: rgb{couleur_fg_selection};
                 }}
                 
-                /*  */
+                /* JOURS */
                 QCalendarWidget QAbstractItemView {{
                 font-size: {police_taille}px;
                 font-family: {police};
                 font-weight: 30;
                 outline: 0px;
                 }}
-                
-                /* JOURS */
                 QCalendarWidget QMenu::item:selected {{
                 padding: 30px;
                 background-color: rgb{couleur_bg_item};
                 color: rgb{couleur_fg_item};
                 }}
                 QCalendarWidget QWidget:item:hover {{
-                border: {P_style().bd()}px solid rgb{50, 50, 50};
+                background-color: rgb{couleur_bg_item_hover};
+                color: rgb{couleur_fg_item_hover};
+                border: {bordure_jours_taille}px {bordure_jours_style} rgb{couleur_fg_item_hover};
                 }}
                 
                 /*  */
