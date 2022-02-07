@@ -4,29 +4,25 @@ from ...config import *
 ######################
 ##     COULEURS     ##
 ######################
-COLORS = P_rgb().p_th3()
+COULEURS = P_rgb().p_th3()
 
 # BG
-COULEUR_BG=COLORS.get("c1")+(255, )
-COULEUR_BG_HOVER=COLORS.get("c1")+(255, )
-COULEUR_BG_CHECKED=COLORS.get("c3")+(255, )
-COULEUR_BG_CHECKED_HOVER=COLORS.get("c3")+(255, )
-
-COULEUR_BG_SELECTION=COLORS.get("c3")
-
-COULEUR_BG_ITEM=COLORS.get("c1")+(255, )
-COULEUR_BG_ITEM_HOVER=COLORS.get("c1")+(255, )
+COULEUR_BG= COULEURS.get("c1") + (255,)
+COULEUR_BG_HOVER= COULEURS.get("c1") + (255,)
+COULEUR_BG_CHECKED= COULEURS.get("c3") + (255,)
+COULEUR_BG_CHECKED_HOVER= COULEURS.get("c3") + (255,)
+COULEUR_BG_SELECTION=COULEURS.get("c3")
+COULEUR_BG_ITEM= COULEURS.get("c1") + (255,)
+COULEUR_BG_ITEM_HOVER= COULEURS.get("c1") + (255,)
 
 # FG
-COULEUR_FG=COLORS.get("c3")
-COULEUR_FG_HOVER=COLORS.get("bn1")
-COULEUR_FG_CHECKED=COLORS.get("c2")
-COULEUR_FG_CHECKED_HOVER=COLORS.get("bn1")
-
-COULEUR_FG_SELECTION=COLORS.get("c1")
-
-COULEUR_FG_ITEM=COLORS.get("c3")
-COULEUR_FG_ITEM_HOVER=COLORS.get("bn1")
+COULEUR_FG=COULEURS.get("c3")
+COULEUR_FG_HOVER=COULEURS.get("bn1")
+COULEUR_FG_CHECKED=COULEURS.get("c2")
+COULEUR_FG_CHECKED_HOVER=COULEURS.get("bn1")
+COULEUR_FG_SELECTION=COULEURS.get("c1")
+COULEUR_FG_ITEM=COULEURS.get("c3")
+COULEUR_FG_ITEM_HOVER=COULEURS.get("bn1")
 
 
 ########################
@@ -54,8 +50,8 @@ TM_UNCHECK = "th2"
 TM_HOVER = "bn1"
 TM_CHECK = "th2"
 TM_CHECK_HOVER = "th2"
-TM_DROITE = "th2"
-TM_GAUCHE = "th2"
+TM_DROITE = "th3"
+TM_GAUCHE = "th3"
 
 IMG_WIDTH = P_dim().h9() * P_style().x_ico()
 IMG_HEIGHT = P_dim().h9() * P_style().x_ico()
@@ -66,7 +62,7 @@ IMG_HEIGHT = P_dim().h9() * P_style().x_ico()
 #####################
 BD_WIDTH = 0
 BD_STYLE = "solid"
-BD_COULEUR = COLORS.get("bn1") + (0, )
+BD_COULEUR = COULEURS.get("bn1") + (0,)
 
 
 ###################
@@ -78,9 +74,9 @@ RD_WG = 0
 ####################
 ##     SCROLL     ##
 ####################
-SCROLL_BG = COLORS.get("c1")
-SCROLL_HANDLE_BG = COLORS.get("c1")
-SCROLL_HANDLE_FG = COLORS.get("c3")
+SCROLL_BG = COULEURS.get("c1")
+SCROLL_HANDLE_BG = COULEURS.get("c1")
+SCROLL_HANDLE_FG = COULEURS.get("c3")
 SCROLL_WIDTH = 20
 SCROLL_HEIGHT = 20
 SCROLL_HANDLE_MIN_WIDTH = 30

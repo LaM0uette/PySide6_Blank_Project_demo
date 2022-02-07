@@ -11,13 +11,19 @@ class wg:
                  couleur_bg=p_base.COULEUR_BG,
                  couleur_bg_hover=p_base.COULEUR_BG_HOVER,
                  couleur_bg_selection=p_base.COULEUR_BG_SELECTION,
+                 couleur_bg_item=p_base.COULEUR_BG_ITEM,
+                 couleur_bg_item_hover=p_base.COULEUR_BG_ITEM_HOVER,
+                 couleur_bg_entete=p_base.COULEURS.get("c2")+(255, ),
+                 couleur_bg_entete_hover=p_base.COULEURS.get("c2")+(255, ),
+                 couleur_bg_mois=p_base.COULEURS.get("c2")+(255, ),
                  couleur_fg=p_base.COULEUR_FG,
                  couleur_fg_hover=p_base.COULEUR_FG_HOVER,
                  couleur_fg_selection=p_base.COULEUR_FG_SELECTION,
-                 couleur_bg_item=p_base.COULEUR_BG_ITEM,
-                 couleur_bg_item_hover=p_base.COULEUR_BG_ITEM_HOVER,
                  couleur_fg_item=p_base.COULEUR_FG_ITEM,
                  couleur_fg_item_hover=p_base.COULEUR_FG_ITEM_HOVER,
+                 couleur_fg_entete=p_base.COULEURS.get("c1"),
+                 couleur_fg_entete_hover=p_base.COULEURS.get("bn1"),
+                 couleur_fg_mois=p_base.COULEURS.get("c1"),
 
                  wg_dim_width=p_base.DIM_WIDTH,
                  wg_dim_height=p_base.DIM_HEIGHT,
@@ -91,19 +97,19 @@ class wg:
 
                 /* WIDGETS */
                 QCalendarWidget QWidget {{
-                alternate-background-color: rgb{couleur_bg};
-                color: rgb{couleur_fg};
+                alternate-background-color: rgba{couleur_bg_mois};
+                color: rgb{couleur_fg_mois};
                 }}
                 
                 /* TOOL BUTTON */
                 QCalendarWidget QToolButton {{
                 font-size: {police_taille}px;
-                background-color: rgb{couleur_bg};
-                color: rgb{couleur_fg};
+                background-color: rgba{couleur_bg_entete};
+                color: rgb{couleur_fg_entete};
                 }}
                 QCalendarWidget QToolButton:hover {{
-                background-color: rgba{couleur_bg_hover};
-                color: rgb{couleur_fg_hover};
+                background-color: rgba{couleur_bg_entete_hover};
+                color: rgb{couleur_fg_entete_hover};
                 }}
                 
                 /* FLECHE GAUCHE DROITE */
@@ -121,8 +127,8 @@ class wg:
                 width: 150px;
                 font-size: {police_taille}px;
                 font-family: {police};
-                background-color: rgb{couleur_bg};
-                color: rgb{couleur_fg};
+                background-color: rgba{couleur_bg_entete};
+                color: rgb{couleur_fg_entete};
                 }}
                 
                 /* SPIN BOX */
@@ -130,8 +136,8 @@ class wg:
                 width: 60px;
                 font-size: {police_taille}px;
                 font-family: {police};
-                background-color: rgb{couleur_bg};
-                color: rgb{couleur_fg};
+                background-color: rgba{couleur_bg_entete};
+                color: rgb{couleur_fg_entete};
                 selection-background-color: rgb{couleur_bg_selection};
                 selection-color: rgb{couleur_fg_selection};
                 }}
@@ -144,19 +150,20 @@ class wg:
                 outline: 0px;
                 }}
                 QCalendarWidget QAbstractItemView:enabled {{
-                background-color: rgb{couleur_bg_item};
+                background-color: rgba{couleur_bg_item};
                 color: rgb{couleur_fg_item};
                 selection-background-color: rgb{couleur_fg_item};
                 selection-color: rgb{couleur_bg_item};
                 }}
                 QCalendarWidget QWidget:item:hover, QCalendarWidget QWidget:item:selected {{
-                background-color: rgb{couleur_bg_item_hover};
+                background-color: rgba{couleur_bg_item_hover};
                 color: rgb{couleur_fg_item_hover};
                 border: {bordure_jours_taille}px {bordure_jours_style} rgb{couleur_fg_item_hover};
                 }}
+                
+                /* BARRE HAUT */
                 QCalendarWidget QWidget#qt_calendar_navigationbar {{
-                background-color: rgb{couleur_bg};
-                border: none;
+                background-color: rgba{couleur_bg_entete};
                 }}
                 
                 /* BORDURES */

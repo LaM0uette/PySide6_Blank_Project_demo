@@ -6,7 +6,7 @@ from ....build import *
 class rtn:
     def __init__(self, *wgs,
                  colors_type=p_base.COLORS_TYPE,
-                 colors=p_base.COLORS,
+                 colors=p_base.COULEURS,
                  gradient_colors=p_base.GRADIENT_COLORS,
                  dim=p_base.DIM,
                  bd=p_base.BD,

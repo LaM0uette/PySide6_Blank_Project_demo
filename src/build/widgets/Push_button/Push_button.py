@@ -8,7 +8,7 @@ class rtn:
                  *wgs,
                  pb_type=p_base.PB_TYPE,
                  colors_type=p_base.COLORS_TYPE,
-                 colors=p_base.COLORS,
+                 colors=p_base.COULEURS,
                  x_ico=P_style().x_ico(),
                  X_ICO=P_style().X_ICO(),
                  dim=p_base.DIM,
