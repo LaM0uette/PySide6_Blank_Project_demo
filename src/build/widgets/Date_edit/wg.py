@@ -28,6 +28,10 @@ class wg:
                  tm_hover=p_base.TM_HOVER,
                  img_width=p_base.IMG_WIDTH,
                  img_height=p_base.IMG_HEIGHT,
+                 img_margin_top=0,
+                 img_margin_bottom=0,
+                 img_margin_right=0,
+                 img_margin_left=0,
 
                  police=p_base.FONT,
                  police_taille=p_base.FONT_SIZE,
@@ -70,8 +74,8 @@ class wg:
                 /* IMG CALENDRIER */
                 QDateEdit::drop-down {{
                 image: url({P_img().calendrier() + '.svg'});
-                width: {dim.get("h") * P_style().x_ico()}px;
-                height: {dim.get("h") * P_style().x_ico()}px;
+                width: {img_width}px;
+                height: {img_height}px;
                 margin-top: {(dim.get('h') - dim.get("h") * P_style().x_ico()) / 2.5}px;
                 margin-right: {(dim.get('h') - dim.get("h") * P_style().x_ico()) / 2.5}px;
                 }}
