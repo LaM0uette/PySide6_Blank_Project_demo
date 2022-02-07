@@ -44,6 +44,10 @@ class wg:
             bordure_couleur_bottom=p_base.BD_COULEUR,
             bordure_couleur_right=p_base.BD_COULEUR,
             bordure_couleur_left=p_base.BD_COULEUR,
+            rayon_top_left=p_base.RD,
+            rayon_top_right=p_base.RD,
+            rayon_bottom_right=p_base.RD,
+            rayon_bottom_left=p_base.RD,
             police=config.font,
             taille_police=p_base.FONT,
             curseur=p_base.CUR
@@ -102,10 +106,10 @@ class wg:
                     
                     /* RAYONS */
                     .QCheckBox {{
-                    border-top-left-radius: {rds.get("r1")}px;
-                    border-top-right-radius: {rds.get("r2")}px;
-                    border-bottom-right-radius: {rds.get("r4")}px;
-                    border-bottom-left-radius: {rds.get("r3")}px;
+                    border-top-left-radius: {rayon_top_left}px;
+                    border-top-right-radius: {rayon_top_right}px;
+                    border-bottom-right-radius: {rayon_bottom_right}px;
+                    border-bottom-left-radius: {rayon_bottom_left}px;
                     }}"""
 
         for wg in wgs:
