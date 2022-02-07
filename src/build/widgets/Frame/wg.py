@@ -27,31 +27,29 @@ class wg:
                  rayon_bottom_right=p_base.RD_WG,
                  rayon_bottom_left=p_base.RD_WG,
     ):
+        style = f"""
+        /* FRAME */
+        .QFrame {{
+        background-color: rgba{couleur_bg};
+        }}
 
+        /* BORDURES */
+        .QFrame {{
+        border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
+        border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
+        border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
+        border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
+        }}
+
+        /* RAYONS */
+        .QFrame {{
+        border-top-left-radius: {rayon_top_left}px;
+        border-top-right-radius: {rayon_top_right}px;
+        border-bottom-right-radius: {rayon_bottom_right}px;
+        border-bottom-left-radius: {rayon_bottom_left}px;
+        }}"""
 
         for wg in wgs:
-            style = f"""
-                    /* FRAME */
-                    .QFrame#{wg.objectName()} {{
-                    background-color: rgba{couleur_bg};
-                    }}
-
-                    /* BORDURES */
-                    .QFrame#{wg.objectName()} {{
-                    border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
-                    border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
-                    border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
-                    border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
-                    }}
-
-                    /* RAYONS */
-                    .QFrame#{wg.objectName()} {{
-                    border-top-left-radius: {rayon_top_left}px;
-                    border-top-right-radius: {rayon_top_right}px;
-                    border-bottom-right-radius: {rayon_bottom_right}px;
-                    border-bottom-left-radius: {rayon_bottom_left}px;
-                    }}"""
-
             wg.setStyleSheet(style)
 
             try:
