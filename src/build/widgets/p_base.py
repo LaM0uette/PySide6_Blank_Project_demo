@@ -37,13 +37,13 @@ IMG_HEIGHT = P_dim().h9() * P_style().x_ico()
 #####################
 BD_WIDTH = P_style().bd()
 BD_STYLE = "solid"
-BD_COULEUR = COLORS.get("bn1") + (0, )
+BD_COULEUR = COLORS.get("bn1") + (255, )
 
 
 ###################
 ##     RAYON     ##
 ###################
-RD = 10
+RD_DIM = 5
 
 
 ####################

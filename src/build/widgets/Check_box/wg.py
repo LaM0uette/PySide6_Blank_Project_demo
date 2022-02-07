@@ -44,10 +44,10 @@ class wg:
             bordure_couleur_bottom=p_base.BD_COULEUR,
             bordure_couleur_right=p_base.BD_COULEUR,
             bordure_couleur_left=p_base.BD_COULEUR,
-            rayon_top_left=p_base.RD,
-            rayon_top_right=p_base.RD,
-            rayon_bottom_right=p_base.RD,
-            rayon_bottom_left=p_base.RD,
+            rayon_top_left=p_base.RD_DIM,
+            rayon_top_right=p_base.RD_DIM,
+            rayon_bottom_right=p_base.RD_DIM,
+            rayon_bottom_left=p_base.RD_DIM,
             police=config.font,
             taille_police=p_base.FONT,
             curseur=p_base.CUR
@@ -70,9 +70,6 @@ class wg:
                     QCheckBox:checked:hover {{
                     background-color: rgb{couleur_bg_checked_hover};
                     color: rgb{couleur_fg_checked_hover};
-                    }}
-                    QCheckBox:flat {{
-                    border: none;
                     }}
 
                     /* IMG */
@@ -103,6 +100,7 @@ class wg:
                     border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
                     border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
                     border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
+                    }}
                     
                     /* RAYONS */
                     .QCheckBox {{
