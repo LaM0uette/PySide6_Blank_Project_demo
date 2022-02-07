@@ -1,6 +1,7 @@
 from PySide6 import QtWidgets
 
 from ....build import *
+from .. import p_base
 
 
 class wg:
@@ -29,7 +30,7 @@ class wg:
         style = f"""
         /* FRAME */
         .QFrame {{
-        background-color: rgb{couleur_bg};
+        background-color: rgba{couleur_bg};
         }}
 
         /* BORDURES */
