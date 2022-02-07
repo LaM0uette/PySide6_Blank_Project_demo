@@ -125,7 +125,7 @@ class wg:
                 color: rgb{couleur_fg};
                 }}
                 
-                /*  */
+                /* SPIN BOX */
                 QCalendarWidget QSpinBox {{
                 width: 50px;
                 font-size: {police_taille}px;
@@ -152,6 +152,24 @@ class wg:
                 }}
                 QCalendarWidget QWidget:item:hover {{
                 border: {P_style().bd()}px solid rgb{50, 50, 50};
+                }}
+                
+                /*  */
+                QCalendarWidget QAbstractItemView:enabled {{
+                background-color: rgb{30, 30, 30};
+                color: rgb{30, 30, 30};
+                selection-background-color: rgb{30, 30, 30};
+                selection-color: rgb{30, 30, 30};
+                }}
+                
+                /*  */
+                QCalendarWidget QWidget#qt_calendar_navigationbar {{
+                background-color: rgb{30, 30, 30};
+                }}
+                
+                /*  */
+                QCalendarWidget QAbstractItemView:disabled {{
+                color: rgb{30, 30, 30};
                 }}
                 
                 /* BORDURES */
@@ -190,32 +208,3 @@ class wg:
                 wg.lineEdit().setCursor(Fct(cur=P_cur().IBeam()).CUR())
                 wg.calendarWidget().setCursor(Fct(cur=P_cur().souris_main()).CUR())
             except: pass
-"""
-
-
-
-
-
-
-
-
-
-
-/*  */
-QCalendarWidget QAbstractItemView:enabled {{
-background-color: rgb{colors.get("c2")};
-color: rgb{colors.get("c3")};
-selection-background-color: rgb{colors.get("c3")};
-selection-color: rgb{colors.get("bn2")};
-}}
-
-/*  */
-QCalendarWidget QWidget#qt_calendar_navigationbar {{
-background-color: rgb{colors.get("c3")};
-}}
-
-/*  */
-QCalendarWidget QAbstractItemView:disabled {{
-color: rgb{colors.get("c1")};
-}}
-"""
