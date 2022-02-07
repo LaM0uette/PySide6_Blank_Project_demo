@@ -62,8 +62,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
 
-        def FRAME():
-            Frame.base().cadre_bn1()
         def LABEL():
             Label.base(self.lb_mb_version).tr()
             Label.base(self.lb_lb_demo_th).th()

@@ -27,7 +27,15 @@ class Menu_bottom:
 class Cadre_bn1:
     def __init__(self, *wgs):
         wg.wg(*wgs,
-              couleur_bg=P_rgb().th2()+(255, ),
+              couleur_bg=(0, 0, 0, 0),
+              bordure_width_top=P_style().bd(),
+              bordure_width_bottom=P_style().bd(),
+              bordure_width_right=P_style().bd(),
+              bordure_width_left=P_style().bd(),
+              bordure_couleur_top=P_rgb().bn1(),
+              bordure_couleur_bottom=P_rgb().bn1(),
+              bordure_couleur_right=P_rgb().bn1(),
+              bordure_couleur_left=P_rgb().bn1(),
               )
 
 
