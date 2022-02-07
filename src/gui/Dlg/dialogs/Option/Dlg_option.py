@@ -72,7 +72,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
 
 
         ### QComboBox ###
-        Combo_box.Base_tr(self.fcb_opt_ft_font, self.cb_opt_tm_theme)
+        Combo_box.Base_th(self.fcb_opt_ft_font, self.cb_opt_tm_theme)
         ### /QComboBox ###
 
         def FRAME():
