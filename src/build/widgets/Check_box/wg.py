@@ -1,4 +1,3 @@
-from ..Attrs import Attrs
 from ....build import *
 from ....config import *
 from .. import p_base
@@ -16,22 +15,35 @@ class wg:
             couleur_fg_checked=p_base.COLORS.get("c1"),
             couleur_bg_checked_hover=p_base.COLORS.get("c3"),
             couleur_fg_checked_hover=p_base.COLORS.get("bn1"),
-            wg_dim_width=None,
-            wg_dim_height=None,
-            img_uncheck=P_img().check(),
+            wg_dim_width=p_base.DIM_WIDTH,
+            wg_dim_height=p_base.DIM_HEIGHT,
+            spacing=p_base.SPACING,
+            img_uncheck=p_base.IMG_UNCHECK,
             tm_uncheck=p_base.TM_UNCHECK,
-            img_disable=P_img().check(),
-            tm_disable=p_base.TM_DISABLE,
-            img_check=P_img().valider(),
+            img_hover=p_base.IMG_HOVER,
+            tm_hover=p_base.TM_HOVER,
+            img_check=p_base.IMG_CHECK,
             tm_check=p_base.TM_CHECK,
+            img_check_hover=p_base.IMG_CHECK_HOVER,
+            tm_check_hover=p_base.TM_CHECK_HOVER,
             img_margin_top=0,
             img_margin_bottom=0,
             img_margin_right=0,
-            img_margin_left=0,
-            img_width=0,
-            img_height=0,
-            bordure_width=P_style().bd(),
-            bordure_style="solid",
+            img_margin_left=(P_dim().h9()-(P_dim().h9() * P_style().x_ico()))/2,
+            img_width=p_base.IMG_WIDTH,
+            img_height=p_base.IMG_HEIGHT,
+            bordure_width_top=p_base.BD_WIDTH,
+            bordure_width_bottom=p_base.BD_WIDTH,
+            bordure_width_right=p_base.BD_WIDTH,
+            bordure_width_left=p_base.BD_WIDTH,
+            bordure_style_top=p_base.BD_STYLE,
+            bordure_style_bottom=p_base.BD_STYLE,
+            bordure_style_right=p_base.BD_STYLE,
+            bordure_style_left=p_base.BD_STYLE,
+            bordure_couleur_top=p_base.BD_COULEUR,
+            bordure_couleur_bottom=p_base.BD_COULEUR,
+            bordure_couleur_right=p_base.BD_COULEUR,
+            bordure_couleur_left=p_base.BD_COULEUR,
             police=config.font,
             taille_police=p_base.FONT,
             curseur=p_base.CUR
@@ -41,7 +53,7 @@ class wg:
                     QCheckBox {{
                     background-color: rgb{couleur_bg};
                     color: rgb{couleur_fg};
-                    spacing: 10px;
+                    spacing: {spacing}px;
                     }}
                     QCheckBox:hover {{
                     background-color: rgb{couleur_bg_hover};
@@ -66,16 +78,34 @@ class wg:
                     margin-right: {img_margin_right}px;
                     margin-left: {img_margin_left}px;
                     width: {img_width}px;
-                    height: {img_height}px
+                    height: {img_height}px;
                     }}
                     QCheckBox::indicator:unchecked {{
                     image: url({f"{img_uncheck}{tm_uncheck}.svg"});
                     }}
-                    QCheckBox::indicator:disabled {{
-                    image: url({f"{img_disable}{tm_disable}.svg"});
+                    QCheckBox::indicator:hover {{
+                    image: url({f"{img_hover}{tm_hover}.svg"});
                     }}
                     QCheckBox::indicator:checked {{
                     image: url({f"{img_check}{tm_check}.svg"});
+                    }}
+                    QCheckBox::indicator:checked:hover {{
+                    image: url({f"{img_check_hover}{tm_check_hover}.svg"});
+                    }}
+                    
+                    /* BORDURES */
+                    .QCheckBox {{
+                    border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
+                    border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
+                    border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
+                    border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
+                    
+                    /* RAYONS */
+                    .QCheckBox {{
+                    border-top-left-radius: {rds.get("r1")}px;
+                    border-top-right-radius: {rds.get("r2")}px;
+                    border-bottom-right-radius: {rds.get("r4")}px;
+                    border-bottom-left-radius: {rds.get("r3")}px;
                     }}"""
 
         for wg in wgs:
@@ -87,24 +117,3 @@ class wg:
 
                 wg.setCursor(Fct(cur=curseur).CUR())
             except: pass
-
-
-"""
-        # bds = Attrs(bd=bd).GET_BD()
-        # rds = Attrs(rd=rd).GET_RD()
-        
-/* BORDURES */
-.QCheckBox {{
-border-width: {bordure_width}px;
-border-style: {bordure_style};
-border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
-padding: {P_style().bd()}px;
-}}
-
-/* RAYONS */
-.QCheckBox {{
-border-top-left-radius: {rds.get("r1")}px;
-border-top-right-radius: {rds.get("r2")}px;
-border-bottom-right-radius: {rds.get("r4")}px;
-border-bottom-left-radius: {rds.get("r3")}px;
-"""

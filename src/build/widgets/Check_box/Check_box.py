@@ -4,8 +4,7 @@ from ....build import *
 
 class Base_th:
     def __init__(self, *wgs):
-        wg(*wgs,
-        )
+        wg(*wgs)
 
 
 class Base_tr:
