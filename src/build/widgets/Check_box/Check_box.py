@@ -1,6 +1,6 @@
-from .wg import wg
-from .. import p_base
 from ....build import *
+from .. import p_base
+from .wg import wg
 
 
 class Base_th:
