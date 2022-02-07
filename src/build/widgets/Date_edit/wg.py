@@ -23,7 +23,7 @@ class wg:
                  wg_dim_height=p_base.DIM_HEIGHT,
 
                  img=p_base.IMG_DEROULANT,
-                 tm=p_base.TM,
+                 tm="",
                  img_hover=p_base.IMG_DEROULANT_HOVER,
                  tm_hover=p_base.TM_HOVER,
                  img_width=p_base.IMG_WIDTH,
@@ -73,7 +73,7 @@ class wg:
                 
                 /* IMG CALENDRIER */
                 QDateEdit::drop-down {{
-                image: url({P_img().calendrier() + '.svg'});
+                image: url({f"{img}{tm}.svg"});
                 width: {img_width}px;
                 height: {img_height}px;
                 margin-top: {img_margin_top}px;
