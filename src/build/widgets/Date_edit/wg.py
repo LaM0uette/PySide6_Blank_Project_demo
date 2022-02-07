@@ -14,7 +14,6 @@ class wg:
                  couleur_fg=p_base.COULEUR_FG,
                  couleur_fg_hover=p_base.COULEUR_FG_HOVER,
                  couleur_fg_selection=p_base.COULEUR_FG_SELECTION,
-
                  couleur_bg_item=p_base.COULEUR_BG_ITEM,
                  couleur_bg_item_hover=p_base.COULEUR_BG_ITEM_HOVER,
                  couleur_fg_item=p_base.COULEUR_FG_ITEM,
@@ -22,8 +21,10 @@ class wg:
 
                  wg_dim_width=p_base.DIM_WIDTH,
                  wg_dim_height=p_base.DIM_HEIGHT,
+
                  police=p_base.FONT,
                  police_taille=p_base.FONT_SIZE,
+
                  bordure_width_top=p_base.BD_WIDTH,
                  bordure_width_bottom=p_base.BD_WIDTH,
                  bordure_width_right=p_base.BD_WIDTH,
@@ -40,6 +41,7 @@ class wg:
                  rayon_top_right=p_base.RD_WG,
                  rayon_bottom_right=p_base.RD_WG,
                  rayon_bottom_left=p_base.RD_WG,
+
                  align=p_base.ALIGN,
                  curseur=p_base.CUR
     ):
