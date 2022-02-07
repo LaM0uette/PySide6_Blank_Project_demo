@@ -1,6 +1,6 @@
 from PySide6 import QtCore
 
-from ..Attrs import Attrs
+from .. import p_base
 from ....build import *
 from ....config import vrb
 
@@ -8,164 +8,179 @@ from ....config import vrb
 class wg:
     def __init__(self,
                  *wgs,
-                 colors_type,
-                 colors,
-                 dim,
-                 font,
-                 bd,
-                 rd,
-                 align,
-                 cur
+                 couleur_bg=p_base.COULEUR_BG,
+                 couleur_bg_hover=p_base.COULEUR_BG_HOVER,
+                 couleur_bg_selection=p_base.COULEUR_BG_SELECTION,
+                 couleur_fg=p_base.COULEUR_FG,
+                 couleur_fg_hover=p_base.COULEUR_FG_HOVER,
+                 couleur_fg_selection=p_base.COULEUR_FG_SELECTION,
+
+                 couleur_bg_item=p_base.COULEUR_BG_ITEM,
+                 couleur_bg_item_hover=p_base.COULEUR_BG_ITEM_HOVER,
+                 couleur_fg_item=p_base.COULEUR_FG_ITEM,
+                 couleur_fg_item_hover=p_base.COULEUR_FG_ITEM_HOVER,
+
+                 wg_dim_width=p_base.DIM_WIDTH,
+                 wg_dim_height=p_base.DIM_HEIGHT,
+
+                 police=p_base.FONT,
+                 police_taille=p_base.FONT_SIZE,
+                 bordure_width_top=p_base.BD_WIDTH,
+                 bordure_width_bottom=p_base.BD_WIDTH,
+                 bordure_width_right=p_base.BD_WIDTH,
+                 bordure_width_left=p_base.BD_WIDTH,
+                 bordure_style_top=p_base.BD_STYLE,
+                 bordure_style_bottom=p_base.BD_STYLE,
+                 bordure_style_right=p_base.BD_STYLE,
+                 bordure_style_left=p_base.BD_STYLE,
+                 bordure_couleur_top=p_base.BD_COULEUR,
+                 bordure_couleur_bottom=p_base.BD_COULEUR,
+                 bordure_couleur_right=p_base.BD_COULEUR,
+                 bordure_couleur_left=p_base.BD_COULEUR,
+                 rayon_top_left=p_base.RD_WG,
+                 rayon_top_right=p_base.RD_WG,
+                 rayon_bottom_right=p_base.RD_WG,
+                 rayon_bottom_left=p_base.RD_WG,
+                 align=p_base.ALIGN,
+                 curseur=p_base.CUR
     ):
-        bds = Attrs(bd=bd).GET_BD()
-        rds = Attrs(rd=rd).GET_RD()
+        ft = P_font().h4()
+        style = f"""
+                /* DATEEDIT */
+                QDateEdit {{
+                background-color: rgba{couleur_bg};
+                color: rgb{couleur_fg};
+                selection-background-color: rgb{couleur_bg_selection};
+                selection-color: rgb{couleur_fg_selection};
+                border: none;
+                }}
+                QDateEdit:hover {{
+                background-color: rgba{couleur_bg_hover};
+                color: rgb{couleur_fg_hover};
+                }}
+                
+                /* IMG CALENDRIER */
+                QDateEdit::drop-down {{
+                image: url({P_img().calendrier() + '.svg'});
+                width: {dim.get("h") * P_style().x_ico()}px;
+                height: {dim.get("h") * P_style().x_ico()}px;
+                margin-top: {(dim.get('h') - dim.get("h") * P_style().x_ico()) / 2.5}px;
+                margin-right: {(dim.get('h') - dim.get("h") * P_style().x_ico()) / 2.5}px;
+                }}
+        
+                /*  */
+                QCalendarWidget QWidget {{
+                alternate-background-color: rgb{colors.get("c2")};
+                color: rgb{colors.get("c3")};
+                }}
+        
+                /*  */
+                QCalendarWidget QToolButton {{
+                font-size: {ft}px;
+                background-color: rgb{colors.get("c3")};
+                color: rgb{colors.get("c1")};
+                }}
+                QCalendarWidget QToolButton:hover {{
+                background-color: rgb{colors.get("c3")};
+                color: rgb{colors.get("bn1")};
+                }}
+        
+                /*  */
+                QToolButton#qt_calendar_prevmonth {{
+                qproperty-icon: url({P_img().fleche_gauche() + 'bn1' + '.svg'});
+                icon-size: {ft}px, {ft}px;
+                }}
+                QToolButton#qt_calendar_nextmonth  {{
+                qproperty-icon: url({P_img().fleche_droite() + 'bn1' + '.svg'});
+                icon-size: {ft}px, {ft}px;
+                }}
+        
+                /*  */
+                QCalendarWidget QMenu {{
+                width: 150px;
+                font-size: {ft}px;
+                font-family: Berlin Sans FB Demi;
+                background-color: rgb{colors.get("c3")};
+                color: rgb{colors.get("c1")};
+                }}
+        
+                /*  */
+                QCalendarWidget QMenu::item:selected {{
+                padding-left: 30px;
+                background-color: rgb{colors.get("c3")};
+                color: rgb{colors.get("c1")};
+                }}
+        
+                /*  */
+                QCalendarWidget QSpinBox {{
+                width: 50px;
+                font-size: {ft}px;
+                font-family: Berlin Sans FB Demi;
+                background-color: rgb{colors.get("c3")};
+                color: rgb{colors.get("c1")};
+                selection-background-color: rgb{colors.get("c1")};
+                selection-color: rgb{colors.get("c3")};
+                }}
+        
+                /*  */
+                QCalendarWidget QAbstractItemView {{
+                font-size: {ft}px;
+                font-family: Berlin Sans FB Demi;
+                font-weight: 30;
+                outline: 0px;
+                }}
+        
+                /*  */
+                QCalendarWidget QWidget:item:hover {{
+                border: {P_style().bd()}px solid rgb{colors.get("c3")};
+                }}
+        
+                /*  */
+                QCalendarWidget QAbstractItemView:enabled {{
+                background-color: rgb{colors.get("c2")};
+                color: rgb{colors.get("c3")};
+                selection-background-color: rgb{colors.get("c3")};
+                selection-color: rgb{colors.get("bn2")};
+                }}
+        
+                /*  */
+                QCalendarWidget QWidget#qt_calendar_navigationbar {{
+                background-color: rgb{colors.get("c3")};
+                }}
+        
+                /*  */
+                QCalendarWidget QAbstractItemView:disabled {{
+                color: rgb{colors.get("c1")};
+                }}
+        
+        
+                /* BORDURES */
+                .QDateEdit#{wg.objectName()} {{
+                border-width: {bd.get("px")}px;
+                border-style: solid;
+                border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
+                }}
+                .QCalendarWidget#{wg.objectName()} {{
+                border-width: {bd.get("px")}px;
+                border-style: solid;
+                border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
+                }}
+        
+                /* RAYONS */
+                .QDateEdit#{wg.objectName()} {{
+                border-top-left-radius: {rds.get("r1")}px;
+                border-top-right-radius: {rds.get("r2")}px;
+                border-bottom-right-radius: {rds.get("r4")}px;
+                border-bottom-left-radius: {rds.get("r3")}px;
+                }}
+                .QCalendarWidget#{wg.objectName()} {{
+                border-top-left-radius: {rds.get("r1")}px;
+                border-top-right-radius: {rds.get("r2")}px;
+                border-bottom-right-radius: {rds.get("r4")}px;
+                border-bottom-left-radius: {rds.get("r3")}px;
+                }}"""
 
         for wg in wgs:
-            ft = P_font().h4()
-            style_gen = f"""
-                    /* IMG CALENDRIER */
-                    QDateEdit::drop-down {{
-                    image: url({P_img().calendrier() + '.svg'});
-                    width: {dim.get("h") * P_style().x_ico()}px;
-                    height: {dim.get("h") * P_style().x_ico()}px;
-                    margin-top: {(dim.get('h') - dim.get("h") * P_style().x_ico()) / 2.5}px;
-                    margin-right: {(dim.get('h') - dim.get("h") * P_style().x_ico()) / 2.5}px;
-                    }}
-
-                    /* DATEEDIT */
-                    QDateEdit {{
-                    color: rgb{colors.get("c3")};
-                    selection-background-color: rgb{colors.get("c3")};
-                    selection-color: rgb{colors.get("c1")};
-                    border: none;
-                    }}
-
-                    /*  */
-                    QCalendarWidget QWidget {{
-                    alternate-background-color: rgb{colors.get("c2")};
-                    color: rgb{colors.get("c3")};
-                    }}
-
-                    /*  */
-                    QCalendarWidget QToolButton {{
-                    font-size: {ft}px;
-                    background-color: rgb{colors.get("c3")};
-                    color: rgb{colors.get("c1")};
-                    }}
-                    QCalendarWidget QToolButton:hover {{
-                    background-color: rgb{colors.get("c3")};
-                    color: rgb{colors.get("bn1")};
-                    }}
-
-                    /*  */
-                    QToolButton#qt_calendar_prevmonth {{
-                    qproperty-icon: url({P_img().fleche_gauche() + 'bn1' + '.svg'});
-                    icon-size: {ft}px, {ft}px;
-                    }}
-                    QToolButton#qt_calendar_nextmonth  {{
-                    qproperty-icon: url({P_img().fleche_droite() + 'bn1' + '.svg'});
-                    icon-size: {ft}px, {ft}px;
-                    }}
-
-                    /*  */
-                    QCalendarWidget QMenu {{
-                    width: 150px;
-                    font-size: {ft}px;
-                    font-family: Berlin Sans FB Demi;
-                    background-color: rgb{colors.get("c3")};
-                    color: rgb{colors.get("c1")};
-                    }}
-
-                    /*  */
-                    QCalendarWidget QMenu::item:selected {{
-                    padding-left: 30px;
-                    background-color: rgb{colors.get("c3")};
-                    color: rgb{colors.get("c1")};
-                    }}
-
-                    /*  */
-                    QCalendarWidget QSpinBox {{
-                    width: 50px;
-                    font-size: {ft}px;
-                    font-family: Berlin Sans FB Demi;
-                    background-color: rgb{colors.get("c3")};
-                    color: rgb{colors.get("c1")};
-                    selection-background-color: rgb{colors.get("c1")};
-                    selection-color: rgb{colors.get("c3")};
-                    }}
-
-                    /*  */
-                    QCalendarWidget QAbstractItemView {{
-                    font-size: {ft}px;
-                    font-family: Berlin Sans FB Demi;
-                    font-weight: 30;
-                    outline: 0px;
-                    }}
-
-                    /*  */
-                    QCalendarWidget QWidget:item:hover {{
-                    border: {P_style().bd()}px solid rgb{colors.get("c3")};
-                    }}
-
-                    /*  */
-                    QCalendarWidget QAbstractItemView:enabled {{
-                    background-color: rgb{colors.get("c2")};
-                    color: rgb{colors.get("c3")};
-                    selection-background-color: rgb{colors.get("c3")};
-                    selection-color: rgb{colors.get("bn2")};
-                    }}
-
-                    /*  */
-                    QCalendarWidget QWidget#qt_calendar_navigationbar {{
-                    background-color: rgb{colors.get("c3")};
-                    }}
-
-                    /*  */
-                    QCalendarWidget QAbstractItemView:disabled {{
-                    color: rgb{colors.get("c1")};
-                    }}
-
-
-                    /* BORDURES */
-                    .QDateEdit#{wg.objectName()} {{
-                    border-width: {bd.get("px")}px;
-                    border-style: solid;
-                    border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
-                    }}
-                    .QCalendarWidget#{wg.objectName()} {{
-                    border-width: {bd.get("px")}px;
-                    border-style: solid;
-                    border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
-                    }}
-
-                    /* RAYONS */
-                    .QDateEdit#{wg.objectName()} {{
-                    border-top-left-radius: {rds.get("r1")}px;
-                    border-top-right-radius: {rds.get("r2")}px;
-                    border-bottom-right-radius: {rds.get("r4")}px;
-                    border-bottom-left-radius: {rds.get("r3")}px;
-                    }}
-                    .QCalendarWidget#{wg.objectName()} {{
-                    border-top-left-radius: {rds.get("r1")}px;
-                    border-top-right-radius: {rds.get("r2")}px;
-                    border-bottom-right-radius: {rds.get("r4")}px;
-                    border-bottom-left-radius: {rds.get("r3")}px;
-                    }}
-            """
-            style_type = {
-                "th": f"""
-                        /* DATEEDIT */
-                        QDateEdit {{
-                        background-color: rgb{colors.get("c1")};
-                        }}""",
-                "tr": """
-                        /* DATEEDIT */
-                        QDateEdit {
-                        background-color: rgba(0, 0, 0, 0);
-                        }"""
-            }
-            style = style_gen + style_type.get(colors_type)
-
             wg.setStyleSheet(style)
 
             try:
@@ -176,12 +191,12 @@ class wg:
                 wg.setDate(QdateDuJour)
                 wg.setFocusPolicy(QtCore.Qt.NoFocus)
 
-                Fct(wg=wg, w=dim.get("w"), h=dim.get("h")).DIM()
-                wg.setFont(Fct(font_size=font).FONT())
+                Fct(wg=wg, w=wg_dim_width, h=wg_dim_height).DIM()
+                wg.setFont(Fct(font=police, font_size=police_taille).FONT())
 
                 wg.setAlignment(align)
 
-                wg.setCursor(Fct(cur=cur).CUR())
+                wg.setCursor(Fct(cur=curseur).CUR())
                 wg.lineEdit().setCursor(Fct(cur=P_cur().IBeam()).CUR())
                 wg.calendarWidget().setCursor(Fct(cur=P_cur().souris_main()).CUR())
             except: pass

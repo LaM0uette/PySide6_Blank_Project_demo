@@ -44,10 +44,13 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         ### /QComboBox ###
 
 
+        ### QDateEdit ###
+        Date_edit.Base_th(self.de_demo_th)
+        Date_edit.Base_tr(self.de_demo_tr)
+        ### /QDateEdit ###
 
-        def DATE_EDIT():
-            Date_edit.base(self.de_demo_th).th()
-            Date_edit.base(self.de_demo_tr).tr()
+
+
         def FRAME():
             Frame.base(self.fr_cb, self.fr_de, self.fr_lw, self.fr_pb, self.fr_ck,
                        self.fr_rb, self.fr_pg, self.fr_sb, self.fr_tw, self.fr_le,
@@ -118,9 +121,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: DATE_EDIT()
-            except: print(f"DATE_EDIT{err}")
 
             try: FRAME()
             except: print(f"FRAME{err}")
