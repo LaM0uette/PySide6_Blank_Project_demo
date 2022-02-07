@@ -70,8 +70,11 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         Check_box.Base_tr(self.ck_opt_cfg_autoreload, self.ck_opt_cfg_autoclose, self.ck_opt_cfg_resize)
         ### /QCheckBox ###
 
-        def COMBO_BOX():
-            Combo_box.base(self.fcb_opt_ft_font, self.cb_opt_tm_theme).tr()
+
+        ### QComboBox ###
+        Combo_box.Base_tr(self.fcb_opt_ft_font, self.cb_opt_tm_theme)
+        ### /QComboBox ###
+
         def FRAME():
             Frame.base(self.fr_main).cadre_th3()
             Frame.menu_bottom_dlg(self.fr_opt_bottom).th()
@@ -106,9 +109,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: COMBO_BOX()
-            except: print(f"COMBO_BOX{err}")
 
             try: FRAME()
             except: print(f"FRAME{err}")

@@ -72,6 +72,18 @@ RD_WG = 0
 
 
 ####################
+##     SCROLL     ##
+####################
+SCROLL_BG = COLORS.get("c1")
+SCROLL_HANDLE_BG = COLORS.get("c1")
+SCROLL_HANDLE_FG = COLORS.get("c3")
+SCROLL_WIDTH = 20
+SCROLL_HEIGHT = 20
+SCROLL_HANDLE_MIN_WIDTH = 50
+SCROLL_HANDLE_MIN_HEIGHT = 50
+
+
+####################
 ##     POLICE     ##
 ####################
 FONT = config.font

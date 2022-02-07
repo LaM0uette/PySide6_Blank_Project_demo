@@ -40,6 +40,13 @@ class wg:
             rayon_top_right=p_base.RD_WG,
             rayon_bottom_right=p_base.RD_WG,
             rayon_bottom_left=p_base.RD_WG,
+            scroll_bg=p_base.SCROLL_BG,
+            scroll_handle_bg=p_base.SCROLL_HANDLE_BG,
+            scroll_handle_fg=p_base.SCROLL_HANDLE_FG,
+            scroll_width=p_base.SCROLL_WIDTH,
+            scroll_height=p_base.SCROLL_HEIGHT,
+            scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
+            scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
             police=p_base.FONT,
             police_taille=p_base.FONT_SIZE,
             edit=p_base.EDIT,
@@ -105,9 +112,27 @@ class wg:
                 border-bottom-right-radius: {rayon_bottom_right}px;
                 border-bottom-left-radius: {rayon_bottom_left}px;
                 }}
-
                 
-        """
+                /* SCROLL */
+                QComboBox QScrollBar, QFontComboBox QScrollBar {{
+                background-color: rgb{scroll_bg};
+                width: {scroll_width}px;
+                height: {scroll_height}px;
+                }}
+                QComboBox::handle:horizontal, QFontComboBox::handle:horizontal {{
+                min-width: {scroll_handle_min_width}px;
+                }}
+                QComboBox::handle:vertical, QFontComboBox::handle:vertical {{
+                min-height: {scroll_handle_min_height}px;
+                }}
+                QComboBox QScrollBar::handle, QFontComboBox QScrollBar::handle {{
+                background-color: rgb{scroll_handle_fg};
+                }}
+                
+                QComboBox QScrollBar::add-page, QComboBox QScrollBar::sub-page, QFontComboBox QScrollBar::add-page, QFontComboBox QScrollBar::sub-page {{
+                background-color: rgb{scroll_handle_bg};
+                border: none;
+                }}"""
 
         for wg in wgs:
             wg.setStyleSheet(style)
@@ -124,28 +149,3 @@ class wg:
                     wg.lineEdit().setFont(Fct(font_size=police_taille).FONT())
                     wg.lineEdit().setCursor(Fct(cur=P_cur().IBeam()).CUR())
             except: pass
-"""
-/* SCROLL */
-                QComboBox QScrollBar, QFontComboBox QScrollBar {{
-                background-color: rgb{colors.get("c1")};
-                width: 20px;
-                height: 20px;
-                }}
-                QComboBox::handle:vertical, QFontComboBox::handle:vertical {{
-                min-height: 100px;
-                }}
-                QComboBox::handle:vertical, QFontComboBox::handle:vertical {{
-                min-height: 100px;
-                }}
-                QComboBox::handle:horizontal, QFontComboBox::handle:horizontal {{
-                min-width: 100px;
-                }}
-                QComboBox QScrollBar::handle, QFontComboBox QScrollBar::handle {{
-                background-color: rgb{colors.get("c3")};
-                }}
-                QComboBox QScrollBar::add-page, QComboBox QScrollBar::sub-page, QFontComboBox QScrollBar::add-page, QFontComboBox QScrollBar::sub-page {{
-                background-color: rgb{colors.get("c1")};
-                border: rgb{colors.get("c1")};
-                }}
-
-"""
