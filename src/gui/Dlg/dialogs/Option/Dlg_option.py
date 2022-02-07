@@ -75,11 +75,14 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         Combo_box.Base_th(self.fcb_opt_ft_font, self.cb_opt_tm_theme)
         ### /QComboBox ###
 
-        def FRAME():
-            Frame.base(self.fr_main).cadre_th3()
-            Frame.menu_bottom_dlg(self.fr_opt_bottom).th()
-            Frame.base(self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5,
-                       self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize).cadre_th3()
+
+        ### QFrame ###
+        Frame.Cadre_th3(self.fr_main,
+                        self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5,
+                        self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize)
+        Frame.Menu_bottom_dlg(self.fr_opt_bottom)
+        ### /QFrame ###
+
         def LABEL():
             Label.h1(self.lb_opt_info_nom).tr()
             Label.base(self.lb_opt_info_desc, self.lb_opt_info_auteur, self.lb_opt_info_version, self.lb_opt_ft_h1,
@@ -109,9 +112,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: FRAME()
-            except: print(f"FRAME{err}")
 
             try: LABEL()
             except: print(f"LABEL{err}")
