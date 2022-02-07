@@ -56,7 +56,6 @@ class wg:
                  align=p_base.ALIGN,
                  curseur=p_base.CUR
     ):
-        ft = P_font().h4()
         style = f"""
                 /* DATEEDIT */
                 QDateEdit {{
@@ -94,7 +93,7 @@ class wg:
                 
                 /* TOOL BUTTON */
                 QCalendarWidget QToolButton {{
-                font-size: {ft}px;
+                font-size: {police_taille}px;
                 background-color: rgb{colors.get("c3")};
                 color: rgb{colors.get("c1")};
                 }}
@@ -147,17 +146,17 @@ class wg:
 /*  */
 QToolButton#qt_calendar_prevmonth {{
 qproperty-icon: url({P_img().fleche_gauche() + 'bn1' + '.svg'});
-icon-size: {ft}px, {ft}px;
+icon-size: {police_taille}px, {police_taille}px;
 }}
 QToolButton#qt_calendar_nextmonth  {{
 qproperty-icon: url({P_img().fleche_droite() + 'bn1' + '.svg'});
-icon-size: {ft}px, {ft}px;
+icon-size: {police_taille}px, {police_taille}px;
 }}
 
 /*  */
 QCalendarWidget QMenu {{
 width: 150px;
-font-size: {ft}px;
+font-size: {police_taille}px;
 font-family: Berlin Sans FB Demi;
 background-color: rgb{colors.get("c3")};
 color: rgb{colors.get("c1")};
@@ -173,7 +172,7 @@ color: rgb{colors.get("c1")};
 /*  */
 QCalendarWidget QSpinBox {{
 width: 50px;
-font-size: {ft}px;
+font-size: {police_taille}px;
 font-family: Berlin Sans FB Demi;
 background-color: rgb{colors.get("c3")};
 color: rgb{colors.get("c1")};
@@ -183,7 +182,7 @@ selection-color: rgb{colors.get("c3")};
 
 /*  */
 QCalendarWidget QAbstractItemView {{
-font-size: {ft}px;
+font-size: {police_taille}px;
 font-family: Berlin Sans FB Demi;
 font-weight: 30;
 outline: 0px;
