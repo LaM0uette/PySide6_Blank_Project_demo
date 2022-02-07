@@ -6,6 +6,7 @@ class wg:
     def __init__(
             self,
             *wgs,
+
             couleur_bg=p_base.COULEUR_BG,
             couleur_bg_hover=p_base.COULEUR_BG_HOVER,
             couleur_bg_checked=p_base.COULEUR_BG_CHECKED,
@@ -14,9 +15,14 @@ class wg:
             couleur_fg_hover=p_base.COULEUR_FG_HOVER,
             couleur_fg_checked=p_base.COULEUR_FG_CHECKED,
             couleur_fg_checked_hover=p_base.COULEUR_FG_CHECKED_HOVER,
+
             wg_dim_width=p_base.DIM_WIDTH,
             wg_dim_height=p_base.DIM_HEIGHT,
             spacing=p_base.SPACING,
+
+            police=p_base.FONT,
+            police_taille=p_base.FONT_SIZE,
+
             img_uncheck=p_base.IMG_UNCHECK,
             tm_uncheck=p_base.TM_UNCHECK,
             img_hover=p_base.IMG_HOVER,
@@ -31,6 +37,7 @@ class wg:
             img_margin_left=(P_dim().h9()-(P_dim().h9() * P_style().x_ico()))/2,
             img_width=p_base.IMG_WIDTH,
             img_height=p_base.IMG_HEIGHT,
+
             bordure_width_top=p_base.BD_WIDTH,
             bordure_width_bottom=p_base.BD_WIDTH,
             bordure_width_right=p_base.BD_WIDTH,
@@ -47,8 +54,7 @@ class wg:
             rayon_top_right=p_base.RD_WG,
             rayon_bottom_right=p_base.RD_WG,
             rayon_bottom_left=p_base.RD_WG,
-            police=p_base.FONT,
-            police_taille=p_base.FONT_SIZE,
+
             curseur=p_base.CUR
     ):
         style = f"""
