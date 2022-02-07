@@ -115,7 +115,7 @@ class wg:
                 icon-size: {police_taille}px, {police_taille}px;
                 }}
                                 
-                /*  */
+                /* MENU DEROULANT */
                 QCalendarWidget QMenu {{
                 width: 150px;
                 font-size: {police_taille}px;
