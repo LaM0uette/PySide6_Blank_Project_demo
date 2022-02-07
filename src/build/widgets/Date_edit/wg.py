@@ -101,6 +101,16 @@ class wg:
                 background-color: rgb{couleur_bg_hover};
                 color: rgb{couleur_fg_hover};
                 }}
+                
+                /*  */
+                QToolButton#qt_calendar_prevmonth {{
+                qproperty-icon: url({P_img().fleche_gauche() + 'bn1' + '.svg'});
+                icon-size: {police_taille}px, {police_taille}px;
+                }}
+                QToolButton#qt_calendar_nextmonth  {{
+                qproperty-icon: url({P_img().fleche_droite() + 'bn1' + '.svg'});
+                icon-size: {police_taille}px, {police_taille}px;
+                }}
                                 
                 
 
@@ -143,15 +153,7 @@ class wg:
 """
 
 
-/*  */
-QToolButton#qt_calendar_prevmonth {{
-qproperty-icon: url({P_img().fleche_gauche() + 'bn1' + '.svg'});
-icon-size: {police_taille}px, {police_taille}px;
-}}
-QToolButton#qt_calendar_nextmonth  {{
-qproperty-icon: url({P_img().fleche_droite() + 'bn1' + '.svg'});
-icon-size: {police_taille}px, {police_taille}px;
-}}
+
 
 /*  */
 QCalendarWidget QMenu {{
