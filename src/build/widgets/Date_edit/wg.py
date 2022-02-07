@@ -144,33 +144,22 @@ class wg:
                 font-weight: 30;
                 outline: 0px;
                 }}
-                QCalendarWidget QMenu::item:selected {{
-                padding: 30px;
+                QCalendarWidget QAbstractItemView:enabled {{
                 background-color: rgb{couleur_bg_item};
                 color: rgb{couleur_fg_item};
+                selection-background-color: rgb{couleur_fg_item};
+                selection-color: rgb{couleur_bg_item};
                 }}
-                QCalendarWidget QWidget:item:hover {{
+                QCalendarWidget QWidget:item:hover, QCalendarWidget QWidget:item:selected {{
                 background-color: rgb{couleur_bg_item_hover};
                 color: rgb{couleur_fg_item_hover};
                 border: {bordure_jours_taille}px {bordure_jours_style} rgb{couleur_fg_item_hover};
                 }}
-                
-                /*  */
-                QCalendarWidget QAbstractItemView:enabled {{
-                background-color: rgb{30, 30, 30};
-                color: rgb{30, 30, 30};
-                selection-background-color: rgb{30, 30, 30};
-                selection-color: rgb{30, 30, 30};
-                }}
-                
-                /*  */
                 QCalendarWidget QWidget#qt_calendar_navigationbar {{
-                background-color: rgb{30, 30, 30};
+                background-color: rgb{couleur_bg};
+                border: none;
                 }}
-                
-                /*  */
                 QCalendarWidget QAbstractItemView:disabled {{
-                color: rgb{30, 30, 30};
                 }}
                 
                 /* BORDURES */
