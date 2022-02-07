@@ -8,8 +8,8 @@ class wg:
     def __init__(self,
                  *wgs,
                  couleur_bg=p_base.COULEUR_BG,
-                 wg_dim_width=p_base.DIM_WIDTH,
-                 wg_dim_height=p_base.DIM_HEIGHT,
+                 dim_width=p_base.DIM_WIDTH,
+                 dim_height=p_base.DIM_HEIGHT,
                  bordure_width_top=p_base.BD_WIDTH,
                  bordure_width_bottom=p_base.BD_WIDTH,
                  bordure_width_right=p_base.BD_WIDTH,
@@ -26,7 +26,7 @@ class wg:
                  rayon_top_right=p_base.RD_WG,
                  rayon_bottom_right=p_base.RD_WG,
                  rayon_bottom_left=p_base.RD_WG,
-    ):
+                 ):
         style = f"""
         /* FRAME */
         .QFrame {{
@@ -53,7 +53,7 @@ class wg:
             wg.setStyleSheet(style)
 
             try:
-                Fct(wg=wg, w=wg_dim_width, h=wg_dim_height).DIM()
+                Fct(wg=wg, w=dim_width, h=dim_height).DIM()
 
                 wg.setFrameShape(QtWidgets.QFrame.NoFrame)
             except: pass

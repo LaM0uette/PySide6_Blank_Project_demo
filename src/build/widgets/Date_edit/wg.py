@@ -25,8 +25,8 @@ class wg:
                  couleur_fg_entete_hover=p_base.COULEURS.get("bn1"),
                  couleur_fg_mois=p_base.COULEURS.get("c1"),
 
-                 dim_wg_width=p_base.DIM_WG_WIDTH,
-                 dim_wg_height=p_base.DIM_WG_HEIGHT,
+                 dim_width=p_base.DIM_WG_WIDTH,
+                 dim_height=p_base.DIM_WG_HEIGHT,
 
                  img=P_img().calendrier(),
                  tm="",
@@ -193,7 +193,7 @@ class wg:
                 wg.setDate(QdateDuJour)
                 wg.setFocusPolicy(QtCore.Qt.NoFocus)
 
-                Fct(wg=wg, w=dim_wg_width, h=dim_wg_height).DIM()
+                Fct(wg=wg, w=dim_width, h=dim_height).DIM()
                 wg.setFont(Fct(font=police, font_size=police_taille).FONT())
 
                 wg.setAlignment(align)

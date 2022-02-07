@@ -18,19 +18,19 @@ class Menu_top:
     def __init__(self, *wgs):
         wg.wg(*wgs,
               couleur_bg=P_rgb().th1()+(255, ),
-              wg_dim_height=P_dim().h9(),
+              dim_height=P_dim().h9(),
               )
 class Menu_bottom:
     def __init__(self, *wgs):
         wg.wg(*wgs,
               couleur_bg=P_rgb().th2()+(255, ),
-              wg_dim_height=P_dim().h10()
+              dim_height=P_dim().h10()
               )
 class Menu_bottom_dlg:
     def __init__(self, *wgs):
         wg.wg(*wgs,
               couleur_bg=P_rgb().th2()+(255, ),
-              wg_dim_height=P_dim().h9()
+              dim_height=P_dim().h9()
               )
 
 

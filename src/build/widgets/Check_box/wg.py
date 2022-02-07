@@ -16,8 +16,8 @@ class wg:
             couleur_fg_checked=p_base.COULEUR_FG_CHECKED,
             couleur_fg_checked_hover=p_base.COULEUR_FG_CHECKED_HOVER,
 
-            dim_wg_width=p_base.DIM_WG_WIDTH,
-            dim_wg_height=p_base.DIM_WG_HEIGHT,
+            dim_width=p_base.DIM_WG_WIDTH,
+            dim_height=p_base.DIM_WG_HEIGHT,
             spacing=p_base.SPACING,
 
             police=p_base.FONT,
@@ -119,7 +119,7 @@ class wg:
             wg.setStyleSheet(style)
 
             try:
-                Fct(wg=wg, w=dim_wg_width, h=dim_wg_height).DIM()
+                Fct(wg=wg, w=dim_width, h=dim_height).DIM()
                 wg.setFont(Fct(font=police, font_size=police_taille).FONT())
 
                 wg.setCursor(Fct(cur=curseur).CUR())
