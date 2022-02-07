@@ -11,11 +11,15 @@ COULEUR_BG_HOVER=COLORS.get("c1")+(255, )
 COULEUR_BG_CHECKED=COLORS.get("c3")+(255, )
 COULEUR_BG_CHECKED_HOVER=COLORS.get("c3")+(255, )
 COULEUR_BG_SELECTION=COLORS.get("c3")
+COULEUR_BG_ITEM=COLORS.get("c1")+(255, )
+COULEUR_BG_ITEM_HOVER=COLORS.get("c1")+(255, )
 COULEUR_FG=COLORS.get("c3")
 COULEUR_FG_HOVER=COLORS.get("bn1")
 COULEUR_FG_CHECKED=COLORS.get("c2")
 COULEUR_FG_CHECKED_HOVER=COLORS.get("bn1")
 COULEUR_FG_SELECTION=COLORS.get("c1")
+COULEUR_FG_ITEM=COLORS.get("c3")
+COULEUR_FG_ITEM_HOVER=COLORS.get("bn1")
 
 
 ########################
@@ -29,13 +33,15 @@ SPACING = 10
 ####################
 ##     IMAGES     ##
 ####################
-TM = "th3"
+TM = "th2"
 IMG_UNCHECK = P_img().check()
 IMG_HOVER = P_img().check()
 IMG_CHECK = P_img().valider()
 IMG_CHECK_HOVER = P_img().valider()
+IMG_DEROULANT = P_img().fleche_bottom()
+IMG_DEROULANT_HOVER = P_img().fleche_bottom()
 TM_UNCHECK = "th2"
-TM_HOVER = "th2"
+TM_HOVER = "bn1"
 TM_CHECK = "th2"
 TM_CHECK_HOVER = "th2"
 
