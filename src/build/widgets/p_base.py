@@ -48,10 +48,15 @@ IMG_CHECK = P_img().valider()
 IMG_CHECK_HOVER = P_img().valider()
 IMG_DEROULANT = P_img().fleche_bottom()
 IMG_DEROULANT_HOVER = P_img().fleche_bottom()
+IMG_DROITE = P_img().fleche_droite()
+IMG_GAUCHE = P_img().fleche_gauche()
+
 TM_UNCHECK = "th2"
 TM_HOVER = "bn1"
 TM_CHECK = "th2"
 TM_CHECK_HOVER = "th2"
+TM_DROITE = "th2"
+TM_GAUCHE = "th2"
 
 IMG_WIDTH = P_dim().h9() * P_style().x_ico()
 IMG_HEIGHT = P_dim().h9() * P_style().x_ico()

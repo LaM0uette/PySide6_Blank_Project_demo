@@ -26,6 +26,10 @@ class wg:
                  tm="",
                  img_hover=P_img().calendrier(),
                  tm_hover="",
+                 img_fleche_droite=p_base.IMG_DROITE,
+                 tm_fleche_droite=p_base.TM_DROITE,
+                 img_fleche_gauche=p_base.IMG_GAUCHE,
+                 tm_fleche_gauche=p_base.TM_GAUCHE,
                  img_width=p_base.DIM_HEIGHT,
                  img_height=p_base.DIM_HEIGHT,
                  img_margin_top=0,
@@ -103,12 +107,12 @@ class wg:
                 }}
                 
                 /* FLECHE GAUCHE DROITE */
-                QToolButton#qt_calendar_prevmonth {{
-                qproperty-icon: url({P_img().fleche_gauche() + 'bn1' + '.svg'});
+                QToolButton#qt_calendar_nextmonth  {{
+                qproperty-icon: url({f"{img_fleche_droite}{tm_fleche_droite}.svg"});
                 icon-size: {police_taille}px, {police_taille}px;
                 }}
-                QToolButton#qt_calendar_nextmonth  {{
-                qproperty-icon: url({P_img().fleche_droite() + 'bn1' + '.svg'});
+                QToolButton#qt_calendar_prevmonth {{
+                qproperty-icon: url({f"{img_fleche_gauche}{tm_fleche_gauche}.svg"});
                 icon-size: {police_taille}px, {police_taille}px;
                 }}
                                 
