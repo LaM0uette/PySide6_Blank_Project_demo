@@ -29,7 +29,7 @@ COULEUR_FG_ITEM_HOVER=COULEURS.get("bn1")
 ##     DIMENSIONS     ##
 ########################
 DIM_WIDTH = None
-DIM_HEIGHT = P_dim().h9()
+DIM_HEIGHT = None
 SPACING = 10
 
 

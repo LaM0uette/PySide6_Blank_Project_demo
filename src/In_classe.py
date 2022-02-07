@@ -3,9 +3,11 @@ from .build import *
 
 class In_classe:
     def __init__(self, ui):
-        def FRAME():
-            Frame.base(ui.fr_main).cadre_th2()
-            Frame.menu_top(ui.fr_menu_top).th()
+        ### QFrame ###
+        Frame.Menu_top(ui.fr_menu_top)
+        # Frame.Cadre_th2(ui.fr_main)
+        ### /QFrame ###
+
         def LABEL():
             Label.h3(ui.lb_mt_nom).tr()
         def PUSH_BUTTON():
@@ -14,9 +16,6 @@ class In_classe:
 
         def _func_try():
             err = "[ In_classe ] ne fonctionne pas !"
-
-            try: FRAME()
-            except: print(f"FRAME{err}")
 
             try: LABEL()
             except: print(f"LABEL{err}")
