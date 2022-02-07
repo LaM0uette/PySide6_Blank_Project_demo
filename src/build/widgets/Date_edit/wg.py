@@ -22,7 +22,6 @@ class wg:
 
                  wg_dim_width=p_base.DIM_WIDTH,
                  wg_dim_height=p_base.DIM_HEIGHT,
-
                  police=p_base.FONT,
                  police_taille=p_base.FONT_SIZE,
                  bordure_width_top=p_base.BD_WIDTH,
