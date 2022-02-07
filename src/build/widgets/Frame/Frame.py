@@ -16,6 +16,12 @@ class Base_tr:
         wg.wg(*wgs,
               couleur_bg=(0, 0, 0, 0)
               )
+class Menu_bottom:
+    def __init__(self, *wgs):
+        wg.wg(*wgs,
+              couleur_bg=P_rgb().th2()+(255, ),
+              wg_dim_height=P_dim().h9()
+              )
 
 
 

@@ -52,7 +52,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         ### QFrame ###
         Frame.Base_th(self.fr_body, self.fr_tb_demo_th_1, self.fr_tb_demo_th_2, self.fr_demo_th)
-        Frame.Base_tr(self.fr_body, self.fr_tb_demo_tr_1, self.fr_tb_demo_tr_2)
+        Frame.Base_tr(self.fr_tb_demo_tr_1, self.fr_tb_demo_tr_2)
+        Frame.Menu_bottom(self.fr_menu_bottom)
         ### /QFrame ###
 
 
