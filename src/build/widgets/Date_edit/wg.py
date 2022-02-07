@@ -69,7 +69,6 @@ class wg:
                 color: rgb{couleur_fg};
                 selection-background-color: rgb{couleur_bg_selection};
                 selection-color: rgb{couleur_fg_selection};
-                border: none;
                 }}
                 QDateEdit:hover {{
                 background-color: rgba{couleur_bg_hover};
@@ -93,7 +92,7 @@ class wg:
                 /* WIDGETS */
                 QCalendarWidget QWidget {{
                 alternate-background-color: rgb{couleur_bg};
-                alternate-color: rgb{couleur_fg};
+                color: rgb{couleur_fg};
                 }}
                 
                 /* TOOL BUTTON */
@@ -158,8 +157,6 @@ class wg:
                 QCalendarWidget QWidget#qt_calendar_navigationbar {{
                 background-color: rgb{couleur_bg};
                 border: none;
-                }}
-                QCalendarWidget QAbstractItemView:disabled {{
                 }}
                 
                 /* BORDURES */
