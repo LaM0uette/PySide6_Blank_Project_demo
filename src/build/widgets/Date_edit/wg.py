@@ -91,6 +91,19 @@ class wg:
                 alternate-background-color: rgb{couleur_bg};
                 color: rgb{couleur_fg};
                 }}
+                
+                /* TOOL BUTTON */
+                QCalendarWidget QToolButton {{
+                font-size: {ft}px;
+                background-color: rgb{colors.get("c3")};
+                color: rgb{colors.get("c1")};
+                }}
+                QCalendarWidget QToolButton:hover {{
+                background-color: rgb{colors.get("c3")};
+                color: rgb{colors.get("bn1")};
+                }}
+                                
+                
 
                 /* BORDURES */
                 .QDateEdit {{
@@ -129,16 +142,7 @@ class wg:
                 wg.calendarWidget().setCursor(Fct(cur=P_cur().souris_main()).CUR())
             except: pass
 """
-                /* TOOL BUTTON */
-                QCalendarWidget QToolButton {{
-                font-size: {ft}px;
-                background-color: rgb{colors.get("c3")};
-                color: rgb{colors.get("c1")};
-                }}
-                QCalendarWidget QToolButton:hover {{
-                background-color: rgb{colors.get("c3")};
-                color: rgb{colors.get("bn1")};
-                }}
+
 
 /*  */
 QToolButton#qt_calendar_prevmonth {{
