@@ -155,29 +155,19 @@ class wg:
         
         
                 /* BORDURES */
-                .QDateEdit#{wg.objectName()} {{
-                border-width: {bd.get("px")}px;
-                border-style: solid;
-                border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
+                .QDateEdit {{
+                border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
+                border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
+                border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
+                border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
                 }}
-                .QCalendarWidget#{wg.objectName()} {{
-                border-width: {bd.get("px")}px;
-                border-style: solid;
-                border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
-                }}
-        
+                
                 /* RAYONS */
-                .QDateEdit#{wg.objectName()} {{
-                border-top-left-radius: {rds.get("r1")}px;
-                border-top-right-radius: {rds.get("r2")}px;
-                border-bottom-right-radius: {rds.get("r4")}px;
-                border-bottom-left-radius: {rds.get("r3")}px;
-                }}
-                .QCalendarWidget#{wg.objectName()} {{
-                border-top-left-radius: {rds.get("r1")}px;
-                border-top-right-radius: {rds.get("r2")}px;
-                border-bottom-right-radius: {rds.get("r4")}px;
-                border-bottom-left-radius: {rds.get("r3")}px;
+                .QDateEdit {{
+                border-top-left-radius: {rayon_top_left}px;
+                border-top-right-radius: {rayon_top_right}px;
+                border-bottom-right-radius: {rayon_bottom_right}px;
+                border-bottom-left-radius: {rayon_bottom_left}px;
                 }}"""
 
         for wg in wgs:
