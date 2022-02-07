@@ -38,7 +38,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         ### /QCheckBox ###
 
 
-
         ### QComboBox ###
         Combo_box.Base_th(self.cb_demo_th)
         Combo_box.Base_tr(self.cb_demo_tr)
