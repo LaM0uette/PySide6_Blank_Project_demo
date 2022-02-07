@@ -5,6 +5,14 @@ from ...build import *
 ##     COULEURS     ##
 ######################
 COLORS = P_rgb().p_th1()
+COULEUR_BG=COLORS.get("c1")+(255, )
+COULEUR_BG_HOVER=COLORS.get("c1")+(255, )
+COULEUR_BG_CHECKED=COLORS.get("c3")+(255, )
+COULEUR_BG_CHECKED_HOVER=COLORS.get("c3")+(255, )
+COULEUR_FG=COLORS.get("c3")
+COULEUR_FG_HOVER=COLORS.get("bn1")
+COULEUR_FG_CHECKED=COLORS.get("c1")
+COULEUR_FG_CHECKED_HOVER=COLORS.get("bn1")
 
 
 ########################
