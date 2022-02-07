@@ -91,7 +91,7 @@ class wg:
                 alternate-background-color: rgb{couleur_bg};
                 color: rgb{couleur_fg};
                 }}
-        
+
                 /* BORDURES */
                 .QDateEdit {{
                 border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
