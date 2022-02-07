@@ -102,7 +102,7 @@ class wg:
                 color: rgb{couleur_fg_hover};
                 }}
                 
-                /*  */
+                /* FLECHE GAUCHE DROITE */
                 QToolButton#qt_calendar_prevmonth {{
                 qproperty-icon: url({P_img().fleche_gauche() + 'bn1' + '.svg'});
                 icon-size: {police_taille}px, {police_taille}px;
