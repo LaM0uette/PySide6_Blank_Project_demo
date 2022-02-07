@@ -50,15 +50,18 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         ### /QDateEdit ###
 
 
+        ### QFrame ###
+        Frame.Base_th(self.fr_body, self.fr_tb_demo_th_1, self.fr_tb_demo_th_2, self.fr_demo_th)
+        Frame.Base_tr(self.fr_body, self.fr_tb_demo_tr_1, self.fr_tb_demo_tr_2)
+        ### /QFrame ###
+
+
 
         def FRAME():
             Frame.base(self.fr_cb, self.fr_de, self.fr_lw, self.fr_pb, self.fr_ck,
                        self.fr_rb, self.fr_pg, self.fr_sb, self.fr_tw, self.fr_le,
                        self.fr_te, self.fr_pte, self.fr_tb, self.fr_trw, self.fr_sd,
                        self.fr_demo_cadre, self.fr_fr, self.fr_lb).cadre_bn1()
-            Frame.base(self.fr_body, self.fr_tb_demo_th_1, self.fr_tb_demo_th_2).th()
-            Frame.base(self.fr_body, self.fr_tb_demo_tr_1, self.fr_tb_demo_tr_2).tr()
-            Frame.base(self.fr_demo_th).th()
             Frame.menu_bottom(self.fr_menu_bottom).th()
         def LABEL():
             Label.base(self.lb_mb_version).tr()
