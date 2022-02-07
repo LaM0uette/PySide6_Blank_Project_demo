@@ -66,7 +66,6 @@ class wg:
                 color: rgb{couleur_fg_hover};
                 selection-background-color: rgb{couleur_bg_selection};
                 selection-color: rgb{couleur_fg_selection};
-                border: none;
                 }}
 
                 /* BOUTON DE DEROULEMENT */

@@ -5,7 +5,9 @@ from ....build import *
 class Base_th:
     def __init__(self, *wgs):
         wg(*wgs,
-           curseur=P_cur().main()
+           curseur=P_cur().main(),
+           bordure_couleur_bottom=P_rgb().th2()+(255, ),
+           bordure_width_bottom=P_style().bd()
         )
 
 
