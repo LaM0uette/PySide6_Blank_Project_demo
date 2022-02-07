@@ -63,7 +63,7 @@ class wg:
             }}
 
             /* RAYONS */
-            .QRadioButton#{wg.objectName()} {{
+            .QRadioButton {{
             border-top-left-radius: {rds.get("r1")}px;
             border-top-right-radius: {rds.get("r2")}px;
             border-bottom-right-radius: {rds.get("r4")}px;
