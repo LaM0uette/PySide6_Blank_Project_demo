@@ -12,12 +12,10 @@ class wg:
             couleur_fg=p_base.COULEUR_FG,
             couleur_fg_hover=p_base.COULEUR_FG_HOVER,
             couleur_fg_selection=p_base.COULEUR_FG_SELECTION,
-
             couleur_bg_item=p_base.COULEUR_BG_ITEM,
             couleur_bg_item_hover=p_base.COULEUR_BG_ITEM_HOVER,
             couleur_fg_item=p_base.COULEUR_FG_ITEM,
             couleur_fg_item_hover=p_base.COULEUR_FG_ITEM_HOVER,
-
             wg_dim_width=p_base.DIM_WIDTH,
             wg_dim_height=p_base.DIM_HEIGHT,
             img=p_base.IMG_DEROULANT,
