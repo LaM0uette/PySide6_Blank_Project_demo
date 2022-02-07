@@ -5,7 +5,7 @@ from ...config import *
 ######################
 ##     COULEURS     ##
 ######################
-COLORS = P_rgb().p_th1()
+COLORS = P_rgb().p_th3()
 
 # BG
 COULEUR_BG=COLORS.get("c1")+(255, )

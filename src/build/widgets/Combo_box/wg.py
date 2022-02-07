@@ -82,11 +82,11 @@ class wg:
 
                 /* ELEMENTS DEROULEMENT */
                 QComboBox QAbstractItemView::item, QFontComboBox QAbstractItemView::item {{
-                background-color: rgb{couleur_bg_item};
+                background-color: rgba{couleur_bg_item};
                 color: rgb{couleur_fg_item};
                 }}
                 QComboBox QAbstractItemView::item:hover, QFontComboBox QAbstractItemView::item:hover {{
-                background-color: rgb{couleur_bg_item_hover};
+                background-color: rgba{couleur_bg_item_hover};
                 color: rgb{couleur_fg_item_hover};
                 }}
                     
