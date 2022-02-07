@@ -85,7 +85,7 @@ class wg:
                 QDateEdit::drop-down:hover {{
                 image: url({f"{img_hover}{tm_hover}.svg"});
                 }}
-        
+
                 /* WIDGETS */
                 QCalendarWidget QWidget {{
                 alternate-background-color: rgb{couleur_bg};
