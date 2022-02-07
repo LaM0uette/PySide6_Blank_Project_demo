@@ -101,7 +101,7 @@ class wg:
                 color: rgb{couleur_fg};
                 }}
                 QCalendarWidget QToolButton:hover {{
-                background-color: rgb{couleur_bg_hover};
+                background-color: rgba{couleur_bg_hover};
                 color: rgb{couleur_fg_hover};
                 }}
                 
