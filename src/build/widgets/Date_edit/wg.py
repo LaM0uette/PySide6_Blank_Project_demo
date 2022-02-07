@@ -22,10 +22,10 @@ class wg:
                  wg_dim_width=p_base.DIM_WIDTH,
                  wg_dim_height=p_base.DIM_HEIGHT,
 
-                 img=p_base.IMG_DEROULANT,
+                 img=P_img().calendrier(),
                  tm="",
-                 img_hover=p_base.IMG_DEROULANT_HOVER,
-                 tm_hover=p_base.TM_HOVER,
+                 img_hover=P_img().main(),
+                 tm_hover="bn1",
                  img_width=p_base.IMG_WIDTH,
                  img_height=p_base.IMG_HEIGHT,
                  img_margin_top=0,
@@ -81,91 +81,12 @@ class wg:
                 margin-right: {img_margin_right}px;
                 margin-left: {img_margin_left}px;
                 }}
-        
-                /*  */
-                QCalendarWidget QWidget {{
-                alternate-background-color: rgb{colors.get("c2")};
-                color: rgb{colors.get("c3")};
+                /* IMG CALENDRIER */
+                QDateEdit::drop-down:hover {{
+                image: url({f"{img_hover}{tm_hover}.svg"});
                 }}
         
-                /*  */
-                QCalendarWidget QToolButton {{
-                font-size: {ft}px;
-                background-color: rgb{colors.get("c3")};
-                color: rgb{colors.get("c1")};
-                }}
-                QCalendarWidget QToolButton:hover {{
-                background-color: rgb{colors.get("c3")};
-                color: rgb{colors.get("bn1")};
-                }}
-        
-                /*  */
-                QToolButton#qt_calendar_prevmonth {{
-                qproperty-icon: url({P_img().fleche_gauche() + 'bn1' + '.svg'});
-                icon-size: {ft}px, {ft}px;
-                }}
-                QToolButton#qt_calendar_nextmonth  {{
-                qproperty-icon: url({P_img().fleche_droite() + 'bn1' + '.svg'});
-                icon-size: {ft}px, {ft}px;
-                }}
-        
-                /*  */
-                QCalendarWidget QMenu {{
-                width: 150px;
-                font-size: {ft}px;
-                font-family: Berlin Sans FB Demi;
-                background-color: rgb{colors.get("c3")};
-                color: rgb{colors.get("c1")};
-                }}
-        
-                /*  */
-                QCalendarWidget QMenu::item:selected {{
-                padding-left: 30px;
-                background-color: rgb{colors.get("c3")};
-                color: rgb{colors.get("c1")};
-                }}
-        
-                /*  */
-                QCalendarWidget QSpinBox {{
-                width: 50px;
-                font-size: {ft}px;
-                font-family: Berlin Sans FB Demi;
-                background-color: rgb{colors.get("c3")};
-                color: rgb{colors.get("c1")};
-                selection-background-color: rgb{colors.get("c1")};
-                selection-color: rgb{colors.get("c3")};
-                }}
-        
-                /*  */
-                QCalendarWidget QAbstractItemView {{
-                font-size: {ft}px;
-                font-family: Berlin Sans FB Demi;
-                font-weight: 30;
-                outline: 0px;
-                }}
-        
-                /*  */
-                QCalendarWidget QWidget:item:hover {{
-                border: {P_style().bd()}px solid rgb{colors.get("c3")};
-                }}
-        
-                /*  */
-                QCalendarWidget QAbstractItemView:enabled {{
-                background-color: rgb{colors.get("c2")};
-                color: rgb{colors.get("c3")};
-                selection-background-color: rgb{colors.get("c3")};
-                selection-color: rgb{colors.get("bn2")};
-                }}
-        
-                /*  */
-                QCalendarWidget QWidget#qt_calendar_navigationbar {{
-                background-color: rgb{colors.get("c3")};
-                }}
-        
-                /*  */
-                QCalendarWidget QAbstractItemView:disabled {{
-                color: rgb{colors.get("c1")};
-                }}
+                
         
         
                 /* BORDURES */
@@ -204,3 +125,89 @@ class wg:
                 wg.lineEdit().setCursor(Fct(cur=P_cur().IBeam()).CUR())
                 wg.calendarWidget().setCursor(Fct(cur=P_cur().souris_main()).CUR())
             except: pass
+"""
+/*  */
+QCalendarWidget QWidget {{
+alternate-background-color: rgb{colors.get("c2")};
+color: rgb{colors.get("c3")};
+}}
+
+/*  */
+QCalendarWidget QToolButton {{
+font-size: {ft}px;
+background-color: rgb{colors.get("c3")};
+color: rgb{colors.get("c1")};
+}}
+QCalendarWidget QToolButton:hover {{
+background-color: rgb{colors.get("c3")};
+color: rgb{colors.get("bn1")};
+}}
+
+/*  */
+QToolButton#qt_calendar_prevmonth {{
+qproperty-icon: url({P_img().fleche_gauche() + 'bn1' + '.svg'});
+icon-size: {ft}px, {ft}px;
+}}
+QToolButton#qt_calendar_nextmonth  {{
+qproperty-icon: url({P_img().fleche_droite() + 'bn1' + '.svg'});
+icon-size: {ft}px, {ft}px;
+}}
+
+/*  */
+QCalendarWidget QMenu {{
+width: 150px;
+font-size: {ft}px;
+font-family: Berlin Sans FB Demi;
+background-color: rgb{colors.get("c3")};
+color: rgb{colors.get("c1")};
+}}
+
+/*  */
+QCalendarWidget QMenu::item:selected {{
+padding-left: 30px;
+background-color: rgb{colors.get("c3")};
+color: rgb{colors.get("c1")};
+}}
+
+/*  */
+QCalendarWidget QSpinBox {{
+width: 50px;
+font-size: {ft}px;
+font-family: Berlin Sans FB Demi;
+background-color: rgb{colors.get("c3")};
+color: rgb{colors.get("c1")};
+selection-background-color: rgb{colors.get("c1")};
+selection-color: rgb{colors.get("c3")};
+}}
+
+/*  */
+QCalendarWidget QAbstractItemView {{
+font-size: {ft}px;
+font-family: Berlin Sans FB Demi;
+font-weight: 30;
+outline: 0px;
+}}
+
+/*  */
+QCalendarWidget QWidget:item:hover {{
+border: {P_style().bd()}px solid rgb{colors.get("c3")};
+}}
+
+/*  */
+QCalendarWidget QAbstractItemView:enabled {{
+background-color: rgb{colors.get("c2")};
+color: rgb{colors.get("c3")};
+selection-background-color: rgb{colors.get("c3")};
+selection-color: rgb{colors.get("bn2")};
+}}
+
+/*  */
+QCalendarWidget QWidget#qt_calendar_navigationbar {{
+background-color: rgb{colors.get("c3")};
+}}
+
+/*  */
+QCalendarWidget QAbstractItemView:disabled {{
+color: rgb{colors.get("c1")};
+}}
+"""
