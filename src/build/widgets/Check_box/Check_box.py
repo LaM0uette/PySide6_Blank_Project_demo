@@ -17,11 +17,3 @@ class Base_tr:
            couleur_bg_checked_hover=(0, 0, 0, 0),
            couleur_fg_checked=p_base.COLORS.get("c3"),
         )
-
-"""
-colors = P_rgb().p_th3()
-dim = P_dim().aw().h9()
-tm="th2"
-tm_check="th3"
-font = P_font().h4()
-"""
