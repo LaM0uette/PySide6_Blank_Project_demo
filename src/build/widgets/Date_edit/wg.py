@@ -22,6 +22,13 @@ class wg:
                  wg_dim_width=p_base.DIM_WIDTH,
                  wg_dim_height=p_base.DIM_HEIGHT,
 
+                 img=p_base.IMG_DEROULANT,
+                 tm=p_base.TM,
+                 img_hover=p_base.IMG_DEROULANT_HOVER,
+                 tm_hover=p_base.TM_HOVER,
+                 img_width=p_base.IMG_WIDTH,
+                 img_height=p_base.IMG_HEIGHT,
+
                  police=p_base.FONT,
                  police_taille=p_base.FONT_SIZE,
 
