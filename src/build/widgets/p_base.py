@@ -35,7 +35,7 @@ IMG_HEIGHT = P_dim().h9() * P_style().x_ico()
 #####################
 ##     BORDURE     ##
 #####################
-BD_WIDTH = P_style().bd()
+BD_WIDTH = 0
 BD_STYLE = "solid"
 BD_COULEUR = COLORS.get("bn1") + (0, )
 
