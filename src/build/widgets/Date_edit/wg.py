@@ -92,7 +92,6 @@ class wg:
                 color: rgb{couleur_fg};
                 }}
 
-
         
                 /* BORDURES */
                 .QDateEdit {{
