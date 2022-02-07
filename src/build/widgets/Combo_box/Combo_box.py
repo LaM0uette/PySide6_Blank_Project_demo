@@ -13,7 +13,4 @@ class Base_tr:
         wg(*wgs,
            couleur_bg=(0, 0, 0, 0),
            couleur_bg_hover=(0, 0, 0, 0),
-           couleur_bg_checked=(0, 0, 0, 0),
-           couleur_bg_checked_hover=(0, 0, 0, 0),
-           couleur_fg_checked=p_base.COLORS.get("c3"),
         )
