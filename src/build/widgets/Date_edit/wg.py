@@ -87,19 +87,19 @@ class wg:
 
                 /* WIDGETS */
                 QCalendarWidget QWidget {{
-                alternate-background-color: rgb{couleur_bg};
-                color: rgb{couleur_fg};
+                alternate-background-color: rgb{couleur_fg};
+                color: rgb{couleur_bg};
                 }}
                 
                 /* TOOL BUTTON */
                 QCalendarWidget QToolButton {{
                 font-size: {police_taille}px;
-                background-color: rgb{colors.get("c3")};
-                color: rgb{colors.get("c1")};
+                background-color: rgb{couleur_bg};
+                color: rgb{couleur_fg};
                 }}
                 QCalendarWidget QToolButton:hover {{
-                background-color: rgb{colors.get("c3")};
-                color: rgb{colors.get("bn1")};
+                background-color: rgb{couleur_bg_hover};
+                color: rgb{couleur_fg_hover};
                 }}
                                 
                 
