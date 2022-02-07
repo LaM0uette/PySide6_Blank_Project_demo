@@ -91,7 +91,7 @@ class wg:
                 }}
                     
                 /* BORDURES */
-                .QCheckBox {{
+                .QComboBox, .QFontComboBox {{
                 border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
                 border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
                 border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
@@ -99,7 +99,7 @@ class wg:
                 }}
                 
                 /* RAYONS */
-                .QCheckBox {{
+                .QComboBox, .QFontComboBox {{
                 border-top-left-radius: {rayon_top_left}px;
                 border-top-right-radius: {rayon_top_right}px;
                 border-bottom-right-radius: {rayon_bottom_right}px;
