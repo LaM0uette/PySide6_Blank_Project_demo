@@ -116,8 +116,44 @@ class wg:
                 icon-size: {police_taille}px, {police_taille}px;
                 }}
                                 
+                /*  */
+                QCalendarWidget QMenu {{
+                width: 150px;
+                font-size: {police_taille}px;
+                font-family: {police};
+                background-color: rgb{couleur_bg};
+                color: rgb{couleur_fg};
+                }}
                 
-
+                /*  */
+                QCalendarWidget QSpinBox {{
+                width: 50px;
+                font-size: {police_taille}px;
+                font-family: {police};
+                background-color: rgb{50, 50, 50};
+                color: rgb{50, 50, 50};
+                selection-background-color: rgb{50, 50, 50};
+                selection-color: rgb{50, 50, 50};
+                }}
+                
+                /*  */
+                QCalendarWidget QAbstractItemView {{
+                font-size: {police_taille}px;
+                font-family: {police};
+                font-weight: 30;
+                outline: 0px;
+                }}
+                
+                /* JOURS */
+                QCalendarWidget QMenu::item:selected {{
+                padding: 30px;
+                background-color: rgb{couleur_bg_item};
+                color: rgb{couleur_fg_item};
+                }}
+                QCalendarWidget QWidget:item:hover {{
+                border: {P_style().bd()}px solid rgb{50, 50, 50};
+                }}
+                
                 /* BORDURES */
                 .QDateEdit {{
                 border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
@@ -159,45 +195,11 @@ class wg:
 
 
 
-/*  */
-QCalendarWidget QMenu {{
-width: 150px;
-font-size: {police_taille}px;
-font-family: Berlin Sans FB Demi;
-background-color: rgb{colors.get("c3")};
-color: rgb{colors.get("c1")};
-}}
 
-/*  */
-QCalendarWidget QMenu::item:selected {{
-padding-left: 30px;
-background-color: rgb{colors.get("c3")};
-color: rgb{colors.get("c1")};
-}}
 
-/*  */
-QCalendarWidget QSpinBox {{
-width: 50px;
-font-size: {police_taille}px;
-font-family: Berlin Sans FB Demi;
-background-color: rgb{colors.get("c3")};
-color: rgb{colors.get("c1")};
-selection-background-color: rgb{colors.get("c1")};
-selection-color: rgb{colors.get("c3")};
-}}
 
-/*  */
-QCalendarWidget QAbstractItemView {{
-font-size: {police_taille}px;
-font-family: Berlin Sans FB Demi;
-font-weight: 30;
-outline: 0px;
-}}
 
-/*  */
-QCalendarWidget QWidget:item:hover {{
-border: {P_style().bd()}px solid rgb{colors.get("c3")};
-}}
+
 
 /*  */
 QCalendarWidget QAbstractItemView:enabled {{
