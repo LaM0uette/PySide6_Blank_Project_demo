@@ -53,17 +53,17 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         ### QFrame ###
         Frame.Base_th(self.fr_body, self.fr_tb_demo_th_1, self.fr_tb_demo_th_2, self.fr_demo_th)
         Frame.Base_tr(self.fr_tb_demo_tr_1, self.fr_tb_demo_tr_2)
+        Frame.Cadre_bn1(self.fr_cb, self.fr_de, self.fr_lw, self.fr_pb, self.fr_ck,
+                       self.fr_rb, self.fr_pg, self.fr_sb, self.fr_tw, self.fr_le,
+                       self.fr_te, self.fr_pte, self.fr_tb, self.fr_trw, self.fr_sd,
+                       self.fr_demo_cadre, self.fr_fr, self.fr_lb)
         Frame.Menu_bottom(self.fr_menu_bottom)
         ### /QFrame ###
 
 
 
         def FRAME():
-            Frame.base(self.fr_cb, self.fr_de, self.fr_lw, self.fr_pb, self.fr_ck,
-                       self.fr_rb, self.fr_pg, self.fr_sb, self.fr_tw, self.fr_le,
-                       self.fr_te, self.fr_pte, self.fr_tb, self.fr_trw, self.fr_sd,
-                       self.fr_demo_cadre, self.fr_fr, self.fr_lb).cadre_bn1()
-            Frame.menu_bottom(self.fr_menu_bottom).th()
+            Frame.base().cadre_bn1()
         def LABEL():
             Label.base(self.lb_mb_version).tr()
             Label.base(self.lb_lb_demo_th).th()
@@ -125,9 +125,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: FRAME()
-            except: print(f"FRAME{err}")
 
             try: LABEL()
             except: print(f"LABEL{err}")

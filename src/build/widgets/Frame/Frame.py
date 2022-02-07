@@ -24,6 +24,13 @@ class Menu_bottom:
               )
 
 
+class Cadre_bn1:
+    def __init__(self, *wgs):
+        wg.wg(*wgs,
+              couleur_bg=P_rgb().th2()+(255, ),
+              )
+
+
 
 """
 
