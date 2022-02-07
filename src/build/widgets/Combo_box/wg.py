@@ -6,6 +6,7 @@ class wg:
     def __init__(
             self,
             *wgs,
+
             couleur_bg=p_base.COULEUR_BG,
             couleur_bg_hover=p_base.COULEUR_BG_HOVER,
             couleur_bg_selection=p_base.COULEUR_BG_SELECTION,
@@ -16,14 +17,20 @@ class wg:
             couleur_bg_item_hover=p_base.COULEUR_BG_ITEM_HOVER,
             couleur_fg_item=p_base.COULEUR_FG_ITEM,
             couleur_fg_item_hover=p_base.COULEUR_FG_ITEM_HOVER,
+
             wg_dim_width=p_base.DIM_WIDTH,
             wg_dim_height=p_base.DIM_HEIGHT,
+
             img=p_base.IMG_DEROULANT,
             tm=p_base.TM,
             img_hover=p_base.IMG_DEROULANT_HOVER,
             tm_hover=p_base.TM_HOVER,
             img_width=p_base.IMG_WIDTH,
             img_height=p_base.IMG_HEIGHT,
+
+            police=p_base.FONT,
+            police_taille=p_base.FONT_SIZE,
+
             bordure_width_top=p_base.BD_WIDTH,
             bordure_width_bottom=p_base.BD_WIDTH,
             bordure_width_right=p_base.BD_WIDTH,
@@ -47,8 +54,7 @@ class wg:
             scroll_height=p_base.SCROLL_HEIGHT,
             scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
             scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
-            police=p_base.FONT,
-            police_taille=p_base.FONT_SIZE,
+
             edit=p_base.EDIT,
             curseur=p_base.CUR
     ):
