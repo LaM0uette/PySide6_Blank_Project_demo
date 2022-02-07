@@ -60,15 +60,15 @@ class wg:
                     spacing: {spacing}px;
                     }}
                     QCheckBox:hover {{
-                    background-color: rgb{couleur_bg_hover};
+                    background-color: rgba{couleur_bg_hover};
                     color: rgb{couleur_fg_hover};
                     }}
                     QCheckBox:checked {{
-                    background-color: rgb{couleur_bg_checked};
+                    background-color: rgba{couleur_bg_checked};
                     color: rgb{couleur_fg_checked};
                     }}
                     QCheckBox:checked:hover {{
-                    background-color: rgb{couleur_bg_checked_hover};
+                    background-color: rgba{couleur_bg_checked_hover};
                     color: rgb{couleur_fg_checked_hover};
                     }}
 
