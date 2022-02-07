@@ -76,8 +76,10 @@ class wg:
                 image: url({P_img().calendrier() + '.svg'});
                 width: {img_width}px;
                 height: {img_height}px;
-                margin-top: {(dim.get('h') - dim.get("h") * P_style().x_ico()) / 2.5}px;
-                margin-right: {(dim.get('h') - dim.get("h") * P_style().x_ico()) / 2.5}px;
+                margin-top: {img_margin_top}px;
+                margin-bottom: {img_margin_bottom}px;
+                margin-right: {img_margin_right}px;
+                margin-left: {img_margin_left}px;
                 }}
         
                 /*  */
