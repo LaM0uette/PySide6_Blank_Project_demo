@@ -8,7 +8,7 @@ class rtn:
                  colors_type=p_base.COLORS_TYPE,
                  colors=p_base.COLORS,
                  dim=p_base.DIM,
-                 font=p_base.FONT,
+                 font=p_base.FONT_SIZE,
                  bd=p_base.BD,
                  rd=p_base.RD,
                  cur=p_base.CUR,

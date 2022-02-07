@@ -9,7 +9,7 @@ class rtn:
                  colors=p_base.COLORS,
                  dim=p_base.DIM,
                  tm=p_base.TM,
-                 font=p_base.FONT,
+                 font=p_base.FONT_SIZE,
                  bd=p_base.BD,
                  rd=p_base.RD,
                  align=p_base.ALIGN,

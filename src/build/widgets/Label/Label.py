@@ -10,7 +10,7 @@ class rtn:
                  dim=p_base.DIM,
                  align=p_base.ALIGN,
                  word_wrap=p_base.WORD_WRAP,
-                 font=p_base.FONT,
+                 font=p_base.FONT_SIZE,
                  bd=p_base.BD,
                  rd=p_base.RD
                  ):

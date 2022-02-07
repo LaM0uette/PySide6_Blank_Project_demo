@@ -12,7 +12,7 @@ class rtn:
                  img_check=P_img().valider(),
                  tm=p_base.TM,
                  tm_check=p_base.TM_CHECK,
-                 font=p_base.FONT,
+                 font=p_base.FONT_SIZE,
                  bd=p_base.BD,
                  rd=p_base.RD,
                  cur=p_base.CUR

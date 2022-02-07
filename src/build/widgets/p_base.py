@@ -1,4 +1,5 @@
 from ...build import *
+from ...config import *
 
 
 ######################
@@ -9,10 +10,12 @@ COULEUR_BG=COLORS.get("c1")+(255, )
 COULEUR_BG_HOVER=COLORS.get("c1")+(255, )
 COULEUR_BG_CHECKED=COLORS.get("c3")+(255, )
 COULEUR_BG_CHECKED_HOVER=COLORS.get("c3")+(255, )
+COULEUR_BG_SELECTION=COLORS.get("c3")
 COULEUR_FG=COLORS.get("c3")
 COULEUR_FG_HOVER=COLORS.get("bn1")
 COULEUR_FG_CHECKED=COLORS.get("c2")
 COULEUR_FG_CHECKED_HOVER=COLORS.get("bn1")
+COULEUR_FG_SELECTION=COLORS.get("c1")
 
 
 ########################
@@ -57,8 +60,9 @@ RD_WG = 0
 ####################
 ##     POLICE     ##
 ####################
-FONT = P_font().h4()
-HD_FONT = P_font().h3()
+FONT = config.font
+FONT_SIZE = P_font().h4()
+HD_FONT_SIZE = P_font().h3()
 
 
 #####################

@@ -1,5 +1,4 @@
 from ....build import *
-from ....config import *
 from .. import p_base
 
 
@@ -48,8 +47,8 @@ class wg:
             rayon_top_right=p_base.RD_WG,
             rayon_bottom_right=p_base.RD_WG,
             rayon_bottom_left=p_base.RD_WG,
-            police=config.font,
-            taille_police=p_base.FONT,
+            police=p_base.FONT,
+            police_taille=p_base.FONT_SIZE,
             curseur=p_base.CUR
     ):
         style = f"""
@@ -115,7 +114,7 @@ class wg:
 
             try:
                 Fct(wg=wg, w=wg_dim_width, h=wg_dim_height).DIM()
-                wg.setFont(Fct(font=police, font_size=taille_police).FONT())
+                wg.setFont(Fct(font=police, font_size=police_taille).FONT())
 
                 wg.setCursor(Fct(cur=curseur).CUR())
             except: pass

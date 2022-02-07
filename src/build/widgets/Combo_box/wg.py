@@ -1,126 +1,131 @@
-from ..Attrs import Attrs
+from .. import p_base
 from ....build import *
 
 
 class wg:
-    def __init__(self,
-                 *wgs,
-                 colors_type,
-                 colors,
-                 dim,
-                 font,
-                 bd,
-                 rd,
-                 edit,
-                 cur
+    def __init__(
+            self,
+            *wgs,
+            couleur_bg=p_base.COULEUR_BG,
+            couleur_bg_hover=p_base.COULEUR_BG_HOVER,
+            couleur_bg_selection=p_base.COULEUR_BG_SELECTION,
+            couleur_fg=p_base.COULEUR_FG,
+            couleur_fg_hover=p_base.COULEUR_FG_HOVER,
+            couleur_fg_selection=p_base.COULEUR_FG_SELECTION,
+            wg_dim_width=p_base.DIM_WIDTH,
+            wg_dim_height=p_base.DIM_HEIGHT,
+            bordure_width_top=p_base.BD_WIDTH,
+            bordure_width_bottom=p_base.BD_WIDTH,
+            bordure_width_right=p_base.BD_WIDTH,
+            bordure_width_left=p_base.BD_WIDTH,
+            bordure_style_top=p_base.BD_STYLE,
+            bordure_style_bottom=p_base.BD_STYLE,
+            bordure_style_right=p_base.BD_STYLE,
+            bordure_style_left=p_base.BD_STYLE,
+            bordure_couleur_top=p_base.BD_COULEUR,
+            bordure_couleur_bottom=p_base.BD_COULEUR,
+            bordure_couleur_right=p_base.BD_COULEUR,
+            bordure_couleur_left=p_base.BD_COULEUR,
+            rayon_top_left=p_base.RD_WG,
+            rayon_top_right=p_base.RD_WG,
+            rayon_bottom_right=p_base.RD_WG,
+            rayon_bottom_left=p_base.RD_WG,
+            police=p_base.FONT,
+            police_taille=p_base.FONT_SIZE,
+            edit=p_base.EDIT,
+            curseur=p_base.CUR
     ):
-        bds = Attrs(bd=bd).GET_BD()
-        rds = Attrs(rd=rd).GET_RD()
+        style = f"""
+                /* COMBOBOX */
+                QComboBox, QFontComboBox {{
+                background-color: rgba{couleur_bg};
+                color: rgb{couleur_fg};
+                selection-background-color: rgb{couleur_bg_selection};
+                selection-color: rgb{couleur_fg_selection};
+                }}
+
+                /* BOUTON DE DEROULEMENT */
+                QComboBox::drop-down, QFontComboBox::drop-down {{
+                width: {wg_dim_height}px;
+                border: none;
+                }}
+
+                /* IMAGE DU BOUTON DE DEROULEMENT */
+                QComboBox::down-arrow, QFontComboBox::down-arrow {{
+                image: url({P_img().fleche_bottom() + "bn1" + ".svg"});
+                width: {dim.get("h") * P_style().x_ico()}px;
+                height: {dim.get("h") * P_style().x_ico()}px;
+                }}
+                QComboBox::down-arrow:hover, QFontComboBox::down-arrow:hover {{
+                image: url({P_img().fleche_bottom() + "bn2" + ".svg"});
+                width: {dim.get("h") * P_style().x_ico()}px;
+                height: {dim.get("h") * P_style().x_ico()}px;
+                }}
+
+                /* ELEMENTS DEROULEMENT */
+                QComboBox QAbstractItemView::item, QFontComboBox QAbstractItemView::item {{
+                background-color: rgb{colors.get("c1")};
+                color: rgb{colors.get("c3")};
+                border: none;
+                }}
+                QComboBox QAbstractItemView::item:hover, QFontComboBox QAbstractItemView::item:hover {{
+                background-color: rgb{colors.get("c3")};
+                color: rgb{colors.get("c1")};
+                border: none;
+                }}
+                    
+                /* BORDURES */
+                .QCheckBox {{
+                border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
+                border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
+                border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
+                border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
+                }}
+                
+                /* RAYONS */
+                .QCheckBox {{
+                border-top-left-radius: {rayon_top_left}px;
+                border-top-right-radius: {rayon_top_right}px;
+                border-bottom-right-radius: {rayon_bottom_right}px;
+                border-bottom-left-radius: {rayon_bottom_left}px;
+                }}
+
+                /* SCROLL */
+                QComboBox QScrollBar, QFontComboBox QScrollBar {{
+                background-color: rgb{colors.get("c1")};
+                width: 20px;
+                height: 20px;
+                }}
+                QComboBox::handle:vertical, QFontComboBox::handle:vertical {{
+                min-height: 100px;
+                }}
+                QComboBox::handle:vertical, QFontComboBox::handle:vertical {{
+                min-height: 100px;
+                }}
+                QComboBox::handle:horizontal, QFontComboBox::handle:horizontal {{
+                min-width: 100px;
+                }}
+                QComboBox QScrollBar::handle, QFontComboBox QScrollBar::handle {{
+                background-color: rgb{colors.get("c3")};
+                }}
+                QComboBox QScrollBar::add-page, QComboBox QScrollBar::sub-page, QFontComboBox QScrollBar::add-page, QFontComboBox QScrollBar::sub-page {{
+                background-color: rgb{colors.get("c1")};
+                border: rgb{colors.get("c1")};
+                }}
+        """
 
         for wg in wgs:
-            style_gen = f"""
-                    /* COMBOBOX */
-                    QComboBox, QFontComboBox {{
-                    color: rgb{colors.get("c3")};
-                    selection-background-color: rgb{colors.get("c3")};
-                    selection-color: rgb{colors.get("c1")};
-                    padding: 1px 0px 1px 3px;
-                    }}
-
-                    /* BOUTON DE DEROULEMENT */
-                    QComboBox::drop-down, QFontComboBox::drop-down {{
-                    width: {dim.get("h")}px;
-                    border: none;
-                    }}
-
-                    /* IMAGE DU BOUTON DE DEROULEMENT */
-                    QComboBox::down-arrow, QFontComboBox::down-arrow {{
-                    image: url({P_img().fleche_bottom() + "bn1" + ".svg"});
-                    width: {dim.get("h") * P_style().x_ico()}px;
-                    height: {dim.get("h") * P_style().x_ico()}px;
-                    }}
-                    QComboBox::down-arrow:hover, QFontComboBox::down-arrow:hover {{
-                    image: url({P_img().fleche_bottom() + "bn2" + ".svg"});
-                    width: {dim.get("h") * P_style().x_ico()}px;
-                    height: {dim.get("h") * P_style().x_ico()}px;
-                    }}
-
-                    /* ELEMENTS DEROULEMENT */
-                    QComboBox QAbstractItemView::item, QFontComboBox QAbstractItemView::item {{
-                    background-color: rgb{colors.get("c1")};
-                    color: rgb{colors.get("c3")};
-                    border: none;
-                    }}
-                    QComboBox QAbstractItemView::item:hover, QFontComboBox QAbstractItemView::item:hover {{
-                    background-color: rgb{colors.get("c3")};
-                    color: rgb{colors.get("c1")};
-                    border: none;
-                    }}
-
-
-                    /* BORDURES */
-                    .QComboBox#{wg.objectName()}, .QFontComboBox#{wg.objectName()} {{
-                    border-width: {bd.get("px")}px;
-                    border-style: solid;
-                    border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
-                    }}
-
-                    /* RAYONS */
-                    .QComboBox#{wg.objectName()}, .QFontComboBox#{wg.objectName()} {{
-                    border-top-left-radius: {rds.get("r1")}px;
-                    border-top-right-radius: {rds.get("r2")}px;
-                    border-bottom-right-radius: {rds.get("r4")}px;
-                    border-bottom-left-radius: {rds.get("r3")}px;
-                    }}
-
-                    /* SCROLL */
-                    QComboBox QScrollBar, QFontComboBox QScrollBar {{
-                    background-color: rgb{colors.get("c1")};
-                    width: 20px;
-                    height: 20px;
-                    }}
-                    QComboBox::handle:vertical, QFontComboBox::handle:vertical {{
-                    min-height: 100px;
-                    }}
-                    QComboBox::handle:vertical, QFontComboBox::handle:vertical {{
-                    min-height: 100px;
-                    }}
-                    QComboBox::handle:horizontal, QFontComboBox::handle:horizontal {{
-                    min-width: 100px;
-                    }}
-                    QComboBox QScrollBar::handle, QFontComboBox QScrollBar::handle {{
-                    background-color: rgb{colors.get("c3")};
-                    }}
-                    QComboBox QScrollBar::add-page, QComboBox QScrollBar::sub-page, QFontComboBox QScrollBar::add-page, QFontComboBox QScrollBar::sub-page {{
-                    background-color: rgb{colors.get("c1")};
-                    border: rgb{colors.get("c1")};
-                    }}
-            """
-            style_type = {
-                "th": f"""
-                        /* COMBOBOX */
-                        QComboBox, QFontComboBox {{
-                        background-color: rgb{colors.get("c1")};
-                        }}""",
-                "tr": """
-                        /* COMBOBOX */
-                        QComboBox, QFontComboBox {
-                        background-color: rgba(0, 0, 0, 0);
-                        }"""
-            }
-            style = style_gen + style_type.get(colors_type)
-
             wg.setStyleSheet(style)
 
             try:
-                Fct(wg=wg, w=dim.get("w"), h=dim.get("h")).DIM()
-                wg.setFont(Fct(font_size=font).FONT())
+                Fct(wg=wg, w=wg_dim_width, h=wg_dim_height).DIM()
+                wg.setFont(Fct(font=police, font_size=police_taille).FONT())
 
                 wg.setEditable(edit)
 
-                wg.setCursor(Fct(cur=cur).CUR())
+                wg.setCursor(Fct(cur=curseur).CUR())
                 wg.view().setCursor(Fct(cur=P_cur().souris_main()).CUR())
                 if edit:
-                    wg.lineEdit().setFont(Fct(font_size=font).FONT())
+                    wg.lineEdit().setFont(Fct(font_size=police_taille).FONT())
                     wg.lineEdit().setCursor(Fct(cur=P_cur().IBeam()).CUR())
             except: pass
