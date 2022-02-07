@@ -48,9 +48,11 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
         self.setFixedHeight(self.height)
         self.setWindowOpacity(self.opacity)
     def IN_CLASSE(self):
-        def FRAME():
-            Frame.base(self.fr_main).cadre_th3()
-            Frame.menu_bottom_dlg(self.fr_rep_bottom).th()
+        ### QFrame ###
+        Frame.Cadre_th3(self.fr_main)
+        Frame.Menu_bottom_dlg(self.fr_rep_bottom)
+        ### /QFrame ###
+
         def LABEL():
             Label.base(self.lb_rep_text).tr()
         def PUSH_BUTTON():
@@ -60,9 +62,6 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: FRAME()
-            except: print(f"FRAME{err}")
 
             try: LABEL()
             except: print(f"LABEL{err}")
