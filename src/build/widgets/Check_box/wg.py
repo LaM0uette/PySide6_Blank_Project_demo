@@ -55,7 +55,7 @@ class wg:
         style = f"""
                     /* CHECKBOX */
                     QCheckBox {{
-                    background-color: rgb{couleur_bg};
+                    background-color: rgba{couleur_bg};
                     color: rgb{couleur_fg};
                     spacing: {spacing}px;
                     }}
