@@ -1,6 +1,5 @@
 from PySide6 import QtCore
 
-from .. import p_base
 from ....build import *
 from ....config import vrb
 

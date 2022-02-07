@@ -1,5 +1,4 @@
 from .wg import wg
-from .. import p_base
 from ....build import *
 
 

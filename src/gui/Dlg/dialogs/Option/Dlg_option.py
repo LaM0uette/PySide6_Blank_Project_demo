@@ -237,10 +237,11 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         QtWidgets.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
 
         importlib.reload(config)
-        importlib.reload(rld)
 
         Fct().GEN_SVG()
         time.sleep(0.5)
+
+        importlib.reload(rld)
 
         self.IN_WG()
         self.IN_CLASSE()

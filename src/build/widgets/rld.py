@@ -1,5 +1,7 @@
 import importlib
 
+from . import p_base
+
 from .Check_box import Check_box
 from .Combo_box import Combo_box
 from .Date_edit import Date_edit
@@ -17,6 +19,8 @@ from .Text_edit import Text_edit
 from .Tool_box import Tool_box
 from .Tree_widget import Tree_widget
 
+
+importlib.reload(p_base)
 
 importlib.reload(Check_box)
 importlib.reload(Combo_box)
