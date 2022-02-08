@@ -54,8 +54,12 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
         Frame.Menu_bottom_dlg(self.fr_input_bottom)
         ### /QFrame ###
 
-        def LABEL():
-            Label.base(self.lb_input_text).tr()
+
+        ### QLabel ###
+        Label.Base_tr(self.lb_input_text)
+        ### /QLabel ###
+
+
         def PUSH_BUTTON():
             Push_button.dlg_ok(self.pb_input_ok).txt()
             Push_button.dlg_nok(self.pb_input_annuler).txt_inv()
@@ -65,9 +69,6 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: LABEL()
-            except: print(f"LABEL{err}")
 
             try: PUSH_BUTTON()
             except: print(f"PUSH_BUTTON{err}")

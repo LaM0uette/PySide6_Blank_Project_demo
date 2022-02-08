@@ -50,17 +50,17 @@ class Dlg_msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
         Frame.Menu_bottom_dlg(self.fr_msg_bottom)
         ### /QFrame ###
 
-        def LABEL():
-            Label.base(self.lb_msg_text).tr()
+
+        ### QLabel ###
+        Label.Base_tr(self.lb_msg_text)
+        ### /QLabel ###
+
         def PUSH_BUTTON():
             Push_button.dlg_ok(self.pb_msg_ok).txt()
 
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: LABEL()
-            except: print(f"LABEL{err}")
 
             try: PUSH_BUTTON()
             except: print(f"PUSH_BUTTON{err}")

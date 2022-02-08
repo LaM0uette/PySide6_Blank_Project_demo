@@ -83,12 +83,15 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         Frame.Menu_bottom_dlg(self.fr_opt_bottom)
         ### /QFrame ###
 
-        def LABEL():
-            Label.h1(self.lb_opt_info_nom).tr()
-            Label.base(self.lb_opt_info_desc, self.lb_opt_info_auteur, self.lb_opt_info_version, self.lb_opt_ft_h1,
-                       self.lb_opt_ft_h2, self.lb_opt_ft_h3, self.lb_opt_ft_h4, self.lb_opt_ft_h5, self.lb_opt_cfg_opacity,
-                       self.lb_opt_cfg_autoreload, self.lb_opt_cfg_autoclose, self.lb_opt_cfg_resize, self.lb_opt_cfg_resize_width,
-                       self.lb_opt_cfg_resize_height).tr()
+
+        ### QLabel ###
+        Label.H1(self.lb_opt_info_nom)
+        Label.Base_tr(self.lb_opt_info_desc, self.lb_opt_info_auteur, self.lb_opt_info_version, self.lb_opt_ft_h1,
+                      self.lb_opt_ft_h2, self.lb_opt_ft_h3, self.lb_opt_ft_h4, self.lb_opt_ft_h5, self.lb_opt_cfg_opacity,
+                      self.lb_opt_cfg_autoreload, self.lb_opt_cfg_autoclose, self.lb_opt_cfg_resize, self.lb_opt_cfg_resize_width,
+                      self.lb_opt_cfg_resize_height)
+        ### /QLabel ###
+
         def PUSH_BUTTON():
             Push_button.dlg_ok(self.pb_opt_appliquer).txt()
             Push_button.dlg_ok(self.pb_opt_ok).txt_inv()
@@ -112,9 +115,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: LABEL()
-            except: print(f"LABEL{err}")
 
             try: PUSH_BUTTON()
             except: print(f"PUSH_BUTTON{err}")

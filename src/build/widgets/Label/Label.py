@@ -15,7 +15,18 @@ class Base_tr:
               couleur_bg=(0, 0, 0, 0)
               )
 
-
+class H1:
+    def __init__(self, *wgs):
+        wg.wg(*wgs,
+              couleur_bg=(0, 0, 0, 0),
+              police_taille=P_font().h1()
+              )
+class H2:
+    def __init__(self, *wgs):
+        wg.wg(*wgs,
+              couleur_bg=(0, 0, 0, 0),
+              police_taille=P_font().h2()
+              )
 class H3:
     def __init__(self, *wgs):
         wg.wg(*wgs,
