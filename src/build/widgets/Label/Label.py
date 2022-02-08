@@ -16,6 +16,12 @@ class Base_tr:
               )
 
 
+class H3:
+    def __init__(self, *wgs):
+        wg.wg(*wgs,
+              couleur_bg=(0, 0, 0, 0),
+              police_taille=P_font().h3()
+              )
 class DemoCat:
     def __init__(self, *wgs):
         wg.wg(*wgs,

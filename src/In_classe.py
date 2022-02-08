@@ -8,19 +8,10 @@ class In_classe:
         Frame.Cadre_th2(ui.fr_main)
         ### /QFrame ###
 
-        def LABEL():
-            Label.h3(ui.lb_mt_nom).tr()
-        def PUSH_BUTTON():
-            Push_button.menu_top(ui.pb_mt_quitter).quitter()
 
+        ### QLabel ###
+        Label.H3(ui.lb_mt_nom)
+        ### /QLabel ###
 
-        def _func_try():
-            err = "[ In_classe ] ne fonctionne pas !"
+        Push_button.menu_top(ui.pb_mt_quitter).quitter()
 
-            try: LABEL()
-            except: print(f"LABEL{err}")
-
-            try: PUSH_BUTTON()
-            except: print(f"PUSH_BUTTON{err}")
-
-        _func_try()
