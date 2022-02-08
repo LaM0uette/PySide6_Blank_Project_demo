@@ -1,3 +1,5 @@
+from PySide6 import QtCore
+
 from ...build import *
 from ...config import *
 
@@ -83,6 +85,8 @@ SCROLL_WIDTH = 20
 SCROLL_HEIGHT = 20
 SCROLL_HANDLE_MIN_WIDTH = 30
 SCROLL_HANDLE_MIN_HEIGHT = 30
+SCROLL_H = QtCore.Qt.ScrollBarAsNeeded
+SCROLL_V = QtCore.Qt.ScrollBarAsNeeded
 
 
 ####################

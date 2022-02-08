@@ -1,5 +1,5 @@
-from ..Attrs import Attrs
 from ....build import *
+from .. import p_base
 
 
 class wg:
@@ -9,116 +9,103 @@ class wg:
                  colors,
                  dim,
                  font,
-                 bd,
-                 rd,
-                 scroll,
-                 cur
+                 bordure_width_top=p_base.BD_WIDTH,
+                 bordure_width_bottom=p_base.BD_WIDTH,
+                 bordure_width_right=p_base.BD_WIDTH,
+                 bordure_width_left=p_base.BD_WIDTH,
+                 bordure_style_top=p_base.BD_STYLE,
+                 bordure_style_bottom=p_base.BD_STYLE,
+                 bordure_style_right=p_base.BD_STYLE,
+                 bordure_style_left=p_base.BD_STYLE,
+                 bordure_couleur_top=p_base.BD_COULEUR,
+                 bordure_couleur_bottom=p_base.BD_COULEUR,
+                 bordure_couleur_right=p_base.BD_COULEUR,
+                 bordure_couleur_left=p_base.BD_COULEUR,
+                 rayon_top_left=p_base.RD_WG,
+                 rayon_top_right=p_base.RD_WG,
+                 rayon_bottom_right=p_base.RD_WG,
+                 rayon_bottom_left=p_base.RD_WG,
+                 scroll_bg=p_base.SCROLL_BG,
+                 scroll_handle_bg=p_base.SCROLL_HANDLE_BG,
+                 scroll_handle_fg=p_base.SCROLL_HANDLE_FG,
+                 scroll_width=p_base.SCROLL_WIDTH,
+                 scroll_height=p_base.SCROLL_HEIGHT,
+                 scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
+                 scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
+                 scroll_h=p_base.SCROLL_H,
+                 scroll_v=p_base.SCROLL_V,
+                 curseur=p_base.CUR
     ):
-        bds = Attrs(bd=bd).GET_BD()
-        rds = Attrs(rd=rd).GET_RD()
+        style = f"""
+        /* LIST_WIDGET */
+        QListWidget {{
+        background-color: rgb{colors.get("c1")};
+        color: rgb{colors.get("c3")};
+        border: {bd.get("px")}px solid rgb{colors.get("c3")};
+        }}
+
+        /* ITEM */
+        QListWidget::item {{
+        background-color: rgb{colors.get("c1")};
+        color: rgb{colors.get("c3")};
+        }}
+        QListWidget::item:selected {{
+        background-color: rgb{colors.get("c2")};
+        color: rgb{colors.get("bn1")};
+        }}
+        QListWidget::item:hover {{
+        color: rgb{colors.get("bn1")};
+        }}
+        QListWidget::item:selected:hover {{
+        color: rgb{colors.get("bn2")};
+        }}
+
+        /* BORDURES */
+        .QComboBox, .QFontComboBox {{
+        border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
+        border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
+        border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
+        border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
+        }}
+        
+        /* RAYONS */
+        .QComboBox, .QFontComboBox {{
+        border-top-left-radius: {rayon_top_left}px;
+        border-top-right-radius: {rayon_top_right}px;
+        border-bottom-right-radius: {rayon_bottom_right}px;
+        border-bottom-left-radius: {rayon_bottom_left}px;
+        }}
+        
+        /* SCROLL */
+        QComboBox QScrollBar, QFontComboBox QScrollBar {{
+        background-color: rgb{scroll_bg};
+        width: {scroll_width}px;
+        height: {scroll_height}px;
+        }}
+        QComboBox::handle:horizontal, QFontComboBox::handle:horizontal {{
+        min-width: {scroll_handle_min_width}px;
+        }}
+        QComboBox::handle:vertical, QFontComboBox::handle:vertical {{
+        min-height: {scroll_handle_min_height}px;
+        }}
+        QComboBox QScrollBar::handle, QFontComboBox QScrollBar::handle {{
+        background-color: rgb{scroll_handle_fg};
+        }}
+        QComboBox QScrollBar::add-page, QComboBox QScrollBar::sub-page, QFontComboBox QScrollBar::add-page, QFontComboBox QScrollBar::sub-page {{
+        background-color: rgb{scroll_handle_bg};
+        border: none;
+        }}"""
 
         for wg in wgs:
-            style_gen = f"""
-            /* LIST_WIDGET */
-            QListWidget {{
-            color: rgb{colors.get("c3")};
-            border: {bd.get("px")}px solid rgb{colors.get("c3")};
-            }}
-            
-            /* ITEM */
-            QListWidget::item {{
-            color: rgb{colors.get("c3")};
-            }}
-            QListWidget::item:selected {{
-            color: rgb{colors.get("bn1")};
-            }}
-            QListWidget::item:hover {{
-            color: rgb{colors.get("bn1")};
-            }}
-            QListWidget::item:selected:hover {{
-            color: rgb{colors.get("bn2")};
-            }}
-
-
-
-            /* BORDURES */
-            .QListWidget#{wg.objectName()} {{
-            border-width: {bd.get("px")}px;
-            border-style: solid;
-            border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
-            }}
-
-            /* RAYONS */
-            .QListWidget#{wg.objectName()} {{
-            border-top-left-radius: {rds.get("r1")}px;
-            border-top-right-radius: {rds.get("r2")}px;
-            border-bottom-right-radius: {rds.get("r4")}px;
-            border-bottom-left-radius: {rds.get("r3")}px;
-            }}
-            
-            /* SCROLL */
-            QListWidget QScrollBar {{
-            background-color: rgb{colors.get("c1")};
-            width: 20px;
-            height: 20px;
-            }}
-            QListWidget ::handle:vertical {{
-            min-height: 100px;
-            }}
-            QListWidget ::handle:vertical {{
-            min-height: 100px;
-            }}
-            QListWidget ::handle:horizontal {{
-            min-width: 100px;
-            }}
-            QListWidget QScrollBar::handle {{
-            background-color: rgb{colors.get("c3")};
-            }}
-            QListWidget QScrollBar::add-page, QListWidget QScrollBar::sub-page {{
-            background-color: rgb{colors.get("c1")};
-            border: rgb{colors.get("c1")};
-            }}
-            """
-            style_type = {
-                "th": f"""
-                /* LIST_WIDGET */
-                QListWidget {{
-                background-color: rgb{colors.get("c1")};
-                }}
-                
-                /* ITEM */
-                QListWidget::item {{
-                background-color: rgb{colors.get("c1")};
-                }}
-                QListWidget::item:selected {{
-                background-color: rgb{colors.get("c2")};
-                }}""",
-
-                "tr": """
-                /* LIST_WIDGET */
-                QListWidget {
-                background-color: rgba(0, 0, 0, 0);
-                }
-                
-                /* ITEM */
-                QListWidget::item {
-                background-color: rgba(0, 0, 0, 0);
-                }
-                QListWidget::item:selected {
-                background-color: rgba(0, 0, 0, 0);
-                }"""
-            }
-            style = style_gen + style_type.get(colors_type)
-
             wg.setStyleSheet(style)
 
             try:
                 Fct(wg=wg, w=dim.get("w"), h=dim.get("h")).DIM()
                 wg.setFont(Fct(font_size=font).FONT())
 
-                wg.setHorizontalScrollBarPolicy(scroll.get("h"))
-                wg.setVerticalScrollBarPolicy(scroll.get("v"))
+                wg.setHorizontalScrollBarPolicy(scroll_h)
+                wg.setVerticalScrollBarPolicy(scroll_v)
 
-                wg.setCursor(Fct(cur=cur).CUR())
+                wg.setCursor(Fct(cur=curseur).CUR())
                 wg.view().setCursor(Fct(cur=P_cur().souris_main()).CUR())
             except: pass
