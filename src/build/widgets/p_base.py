@@ -133,7 +133,7 @@ BD_RGBA = (0, 0, 0, 0)
 
 
 ### PARAMETRES
-ALIGN = P_align().c().c()
+ALIGN = P_align().l().c()
 EDIT = False
 WORD_WRAP = True
 SCROLL = P_scroll().nd().nd()
