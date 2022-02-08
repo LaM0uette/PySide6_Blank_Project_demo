@@ -33,6 +33,18 @@ class H3:
               couleur_bg=(0, 0, 0, 0),
               police_taille=P_font().h3()
               )
+class H4:
+    def __init__(self, *wgs):
+        wg.wg(*wgs,
+              couleur_bg=(0, 0, 0, 0),
+              police_taille=P_font().h4()
+              )
+class H5:
+    def __init__(self, *wgs):
+        wg.wg(*wgs,
+              couleur_bg=(0, 0, 0, 0),
+              police_taille=P_font().h5()
+              )
 class DemoCat:
     def __init__(self, *wgs):
         wg.wg(*wgs,

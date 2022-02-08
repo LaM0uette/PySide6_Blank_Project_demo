@@ -55,8 +55,11 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         Frame.Base_th(self.fr_rgb_colors)
         ### /QFrame ###
 
-        def LABEL():
-            Label.h4(self.lb_rgb_red, self.lb_rgb_green, self.lb_rgb_blue).tr()
+
+        ### QLabel ###
+        Label.H4(self.lb_rgb_red, self.lb_rgb_green, self.lb_rgb_blue)
+        ### /QLabel ###
+
         def PUSH_BUTTON():
             Push_button.dlg_ok(self.pb_rgb_ok).txt()
             Push_button.dlg_nok(self.pb_rgb_annuler).txt_inv()
@@ -70,9 +73,6 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: LABEL()
-            except: print(f"LABEL{err}")
 
             try: PUSH_BUTTON()
             except: print(f"PUSH_BUTTON{err}")
