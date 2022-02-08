@@ -73,8 +73,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         ### QListWidget ###
-        Date_edit.Base_th(self.lw_demo_th)
-        Date_edit.Base_tr(self.lw_demo_tr)
+        List_widget.Demo_th(self.lw_demo_th)
+        List_widget.Demo_tr(self.lw_demo_tr)
         ### /QListWidget ###
 
 
