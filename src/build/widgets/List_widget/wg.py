@@ -5,10 +5,23 @@ from .. import p_base
 class wg:
     def __init__(self,
                  *wgs,
-                 colors_type,
-                 colors,
-                 dim,
-                 font,
+                 couleur_bg=p_base.COULEUR_BG,
+                 couleur_bg_checked=p_base.COULEUR_BG_CHECKED,
+                 couleur_bg_checked_hover=p_base.COULEUR_BG_CHECKED_HOVER,
+                 couleur_bg_item=p_base.COULEUR_BG_ITEM,
+                 couleur_bg_item_hover=p_base.COULEUR_BG_ITEM_HOVER,
+                 couleur_fg=p_base.COULEUR_FG,
+                 couleur_fg_checked=p_base.COULEUR_FG_CHECKED,
+                 couleur_fg_checked_hover=p_base.COULEUR_FG_CHECKED_HOVER,
+                 couleur_fg_item=p_base.COULEUR_FG_ITEM,
+                 couleur_fg_item_hover=p_base.COULEUR_FG_ITEM_HOVER,
+
+                 dim_width=p_base.DIM_WG_WIDTH,
+                 dim_height=p_base.DIM_WG_HEIGHT,
+
+                 police=p_base.FONT,
+                 police_taille=p_base.FONT_SIZE,
+
                  bordure_width_top=p_base.BD_WIDTH,
                  bordure_width_bottom=p_base.BD_WIDTH,
                  bordure_width_right=p_base.BD_WIDTH,
@@ -34,30 +47,32 @@ class wg:
                  scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
                  scroll_h=p_base.SCROLL_H,
                  scroll_v=p_base.SCROLL_V,
+
                  curseur=p_base.CUR
     ):
         style = f"""
         /* LIST_WIDGET */
         QListWidget {{
-        background-color: rgb{colors.get("c1")};
-        color: rgb{colors.get("c3")};
-        border: {bd.get("px")}px solid rgb{colors.get("c3")};
+        background-color: rgba{couleur_bg};
+        color: rgb{couleur_fg};
         }}
 
         /* ITEM */
         QListWidget::item {{
-        background-color: rgb{colors.get("c1")};
-        color: rgb{colors.get("c3")};
+        background-color: rgba{couleur_bg_item};
+        color: rgb{couleur_fg_item};
         }}
         QListWidget::item:selected {{
-        background-color: rgb{colors.get("c2")};
-        color: rgb{colors.get("bn1")};
+        background-color: rgba{couleur_bg_checked};
+        color: rgb{couleur_fg_checked};
         }}
         QListWidget::item:hover {{
-        color: rgb{colors.get("bn1")};
+        background-color: rgba{couleur_bg_item_hover};
+        color: rgb{couleur_fg_item_hover};
         }}
         QListWidget::item:selected:hover {{
-        color: rgb{colors.get("bn2")};
+        background-color: rgba{couleur_bg_checked_hover};
+        color: rgb{couleur_fg_checked_hover};
         }}
 
         /* BORDURES */
@@ -100,8 +115,8 @@ class wg:
             wg.setStyleSheet(style)
 
             try:
-                Fct(wg=wg, w=dim.get("w"), h=dim.get("h")).DIM()
-                wg.setFont(Fct(font_size=font).FONT())
+                Fct(wg=wg, w=dim_width, h=dim_height).DIM()
+                wg.setFont(Fct(font=police, font_size=police_taille).FONT())
 
                 wg.setHorizontalScrollBarPolicy(scroll_h)
                 wg.setVerticalScrollBarPolicy(scroll_v)
