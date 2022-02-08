@@ -61,7 +61,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         Frame.Menu_bottom(self.fr_menu_bottom)
         ### /QFrame ###
 
-
         def LABEL():
             Label.base(self.lb_mb_version).tr()
             Label.base(self.lb_lb_demo_th).th()
