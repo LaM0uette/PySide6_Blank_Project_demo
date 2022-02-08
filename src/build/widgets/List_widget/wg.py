@@ -76,7 +76,7 @@ class wg:
         }}
 
         /* BORDURES */
-        .QComboBox, .QFontComboBox {{
+        .QListWidget {{
         border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
         border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
         border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
@@ -84,7 +84,7 @@ class wg:
         }}
         
         /* RAYONS */
-        .QComboBox, .QFontComboBox {{
+        .QListWidget {{
         border-top-left-radius: {rayon_top_left}px;
         border-top-right-radius: {rayon_top_right}px;
         border-bottom-right-radius: {rayon_bottom_right}px;
@@ -92,21 +92,21 @@ class wg:
         }}
         
         /* SCROLL */
-        QComboBox QScrollBar, QFontComboBox QScrollBar {{
+        QListWidget QScrollBar {{
         background-color: rgb{scroll_bg};
         width: {scroll_width}px;
         height: {scroll_height}px;
         }}
-        QComboBox::handle:horizontal, QFontComboBox::handle:horizontal {{
+        QListWidget::handle:horizontal {{
         min-width: {scroll_handle_min_width}px;
         }}
-        QComboBox::handle:vertical, QFontComboBox::handle:vertical {{
+        QListWidget::handle:vertical {{
         min-height: {scroll_handle_min_height}px;
         }}
-        QComboBox QScrollBar::handle, QFontComboBox QScrollBar::handle {{
+        QListWidget QScrollBar::handle {{
         background-color: rgb{scroll_handle_fg};
         }}
-        QComboBox QScrollBar::add-page, QComboBox QScrollBar::sub-page, QFontComboBox QScrollBar::add-page, QFontComboBox QScrollBar::sub-page {{
+        QListWidget QScrollBar::add-page, QListWidget QScrollBar::sub-page {{
         background-color: rgb{scroll_handle_bg};
         border: none;
         }}"""

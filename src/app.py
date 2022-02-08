@@ -72,9 +72,12 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         ### /QLabel ###
 
 
-        def LIST_WIDGET():
-            List_widget.base(self.lw_demo_th).th()
-            List_widget.base(self.lw_demo_tr).tr()
+        ### QListWidget ###
+        Date_edit.Base_th(self.lw_demo_th)
+        Date_edit.Base_tr(self.lw_demo_tr)
+        ### /QListWidget ###
+
+
         def PROGRESS_BAR():
             Progress_bar.base(self.pg_demo_th).th()
             Progress_bar.base(self.pg_demo_tr).tr()
@@ -125,9 +128,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: LIST_WIDGET()
-            except: print(f"LIST_WIDGET{err}")
 
             try: PROGRESS_BAR()
             except: print(f"PROGRESS_BAR{err}")
