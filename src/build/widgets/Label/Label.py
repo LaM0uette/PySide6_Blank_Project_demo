@@ -9,9 +9,14 @@ importlib.reload(wg)
 class Base_th:
     def __init__(self, *wgs):
         wg.wg(*wgs)
-
-
 class Base_tr:
+    def __init__(self, *wgs):
+        wg.wg(*wgs,
+              couleur_bg=(0, 0, 0, 0)
+              )
+
+
+class DemoCat:
     def __init__(self, *wgs):
         wg.wg(*wgs,
               couleur_bg=(0, 0, 0, 0)

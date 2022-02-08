@@ -61,14 +61,17 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         Frame.Menu_bottom(self.fr_menu_bottom)
         ### /QFrame ###
 
-        def LABEL():
-            Label.base(self.lb_mb_version).tr()
-            Label.base(self.lb_lb_demo_th).th()
-            Label.base(self.lb_lb_demo_tr).tr()
-            Label.h1(self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
+
+        ### QLabel ###
+        Label.Base_th(self.lb_lb_demo_th)
+        Label.Base_tr(self.lb_mb_version, self.lb_lb_demo_tr)
+        Label.DemoCat(self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
                      self.lb_rb_demo, self.lb_pg_demo, self.lb_sb_demo, self.lb_tw_demo, self.lb_le_demo,
                      self.lb_te_demo, self.lb_pte_demo, self.lb_tb_demo, self.lb_trw_demo, self.lb_sd_demo,
-                     self.lb_fr_demo, self.lb_lb_demo).bottom_bn1()
+                     self.lb_fr_demo, self.lb_lb_demo)
+        ### /QLabel ###
+
+
         def LIST_WIDGET():
             List_widget.base(self.lw_demo_th).th()
             List_widget.base(self.lw_demo_tr).tr()
@@ -122,9 +125,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: LABEL()
-            except: print(f"LABEL{err}")
 
             try: LIST_WIDGET()
             except: print(f"LIST_WIDGET{err}")

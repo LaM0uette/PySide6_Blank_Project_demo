@@ -13,8 +13,6 @@ class Base_th:
            bordure_couleur_bottom=P_rgb().th2()+(255, ),
            bordure_width_bottom=P_style().bd()
         )
-
-
 class Base_tr:
     def __init__(self, *wgs):
         wg.wg(*wgs,

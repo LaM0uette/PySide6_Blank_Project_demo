@@ -9,8 +9,6 @@ importlib.reload(wg)
 class Base_th:
     def __init__(self, *wgs):
         wg.wg(*wgs)
-
-
 class Base_tr:
     def __init__(self, *wgs):
         wg.wg(*wgs,
