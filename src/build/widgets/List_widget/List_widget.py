@@ -27,7 +27,7 @@ class Demo_th:
         wg.wg(*wgs,
               couleur_fg_checked=p_base.COULEURS.get("bn1"),
               couleur_fg_checked_hover=p_base.COULEURS.get("bn2"),
-              dim_height=P_dim().h5()
+              dim_height=P_dim().h5(),
               )
 class Demo_tr:
     def __init__(self, *wgs):
