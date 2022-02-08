@@ -8,8 +8,8 @@ class wg:
                  couleur_bg=p_base.COULEUR_BG,
                  couleur_fg=p_base.COULEUR_FG,
 
-                 dim_width=p_base.DIM_WG_WIDTH,
-                 dim_height=p_base.DIM_WG_HEIGHT,
+                 dim_width=p_base.DIM_WIDTH,
+                 dim_height=p_base.DIM_HEIGHT,
 
                  police=p_base.FONT,
                  police_taille=p_base.FONT_SIZE,
