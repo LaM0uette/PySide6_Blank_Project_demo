@@ -17,7 +17,8 @@ class Base_tr:
               couleur_bg_checked=(0, 0, 0, 0),
               couleur_bg_item_hover=(0, 0, 0, 0),
               couleur_bg_checked_hover=(0, 0, 0, 0),
-              couleur_fg_checked=p_base.COULEURS.get("c3"),
+              couleur_fg_checked=p_base.COULEURS.get("bn1"),
+              couleur_fg_checked_hover=p_base.COULEURS.get("bn2"),
               )
 
 
