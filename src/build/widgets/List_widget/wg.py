@@ -52,25 +52,25 @@ class wg:
     ):
         style = f"""
         /* LIST_WIDGET */
-        QListWidget {{
+        .QListWidget {{
         background-color: rgba{couleur_bg};
         color: rgb{couleur_fg};
         }}
 
         /* ITEM */
-        QListWidget::item {{
+        .QListWidget::item {{
         background-color: rgba{couleur_bg_item};
         color: rgb{couleur_fg_item};
         }}
-        QListWidget::item:selected {{
+        .QListWidget::item:selected {{
         background-color: rgba{couleur_bg_checked};
         color: rgb{couleur_fg_checked};
         }}
-        QListWidget::item:hover {{
+        .QListWidget::item:hover {{
         background-color: rgba{couleur_bg_item_hover};
         color: rgb{couleur_fg_item_hover};
         }}
-        QListWidget::item:selected:hover {{
+        .QListWidget::item:selected:hover {{
         background-color: rgba{couleur_bg_checked_hover};
         color: rgb{couleur_fg_checked_hover};
         }}
@@ -92,21 +92,21 @@ class wg:
         }}
         
         /* SCROLL */
-        QListWidget QScrollBar {{
+        .QListWidget QScrollBar {{
         background-color: rgb{scroll_bg};
         width: {scroll_width}px;
         height: {scroll_height}px;
         }}
-        QListWidget::handle:horizontal {{
+        .QListWidget::handle:horizontal {{
         min-width: {scroll_handle_min_width}px;
         }}
-        QListWidget::handle:vertical {{
+        .QListWidget::handle:vertical {{
         min-height: {scroll_handle_min_height}px;
         }}
-        QListWidget QScrollBar::handle {{
+        .QListWidget QScrollBar::handle {{
         background-color: rgb{scroll_handle_fg};
         }}
-        QListWidget QScrollBar::add-page, QListWidget QScrollBar::sub-page {{
+        .QListWidget QScrollBar::add-page, .QListWidget QScrollBar::sub-page {{
         background-color: rgb{scroll_handle_bg};
         border: none;
         }}"""
