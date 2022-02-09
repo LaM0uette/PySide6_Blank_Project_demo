@@ -93,6 +93,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         Radio_button.Base_tr(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3)
         ### /QRadioButton ###
 
+
         def PUSH_BUTTON():
             Push_button.menu_top(self.pb_mt_option).option()
             Push_button.menu_top(self.pb_mt_reduire).reduire()
