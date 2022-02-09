@@ -83,6 +83,16 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         Progress_bar.Base_tr(self.pg_demo_tr)
         ### /QListWidget ###
 
+
+        ### QPushButton ###
+        ### /QPushButton ###
+
+
+        ### QRadioButton ###
+        Radio_button.Base_th(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3)
+        Radio_button.Base_tr(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3)
+        ### /QRadioButton ###
+
         def PUSH_BUTTON():
             Push_button.menu_top(self.pb_mt_option).option()
             Push_button.menu_top(self.pb_mt_reduire).reduire()
@@ -99,9 +109,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Push_button.ck_ico(self.pb_demo_ck_ico, self.pb_demo_ico_ck).tr()
 
             Push_button.zoom(self.pb_demo_zoom).zoom_calendrier()
-        def RADIO_BUTTON():
-            Radio_button.base(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3).th()
-            Radio_button.base(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3).tr()
         def SCROLL_BOX_AREA():
             Scroll_box_area.base(self.sca_main).th()
         def SLIDER():
@@ -133,9 +140,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
             try: PUSH_BUTTON()
             except: print(f"PUSH_BUTTON{err}")
-
-            try: RADIO_BUTTON()
-            except: print(f"RADIO_BUTTON{err}")
 
             try: SCROLL_BOX_AREA()
             except: print(f"SCROLL_BOX_AREA{err}")
