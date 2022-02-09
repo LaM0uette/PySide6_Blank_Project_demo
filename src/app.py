@@ -78,9 +78,11 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         ### /QListWidget ###
 
 
-        def PROGRESS_BAR():
-            Progress_bar.base(self.pg_demo_th).th()
-            Progress_bar.base(self.pg_demo_tr).tr()
+        ### QListWidget ###
+        Progress_bar.Demo_th(self.pg_demo_th)
+        Progress_bar.Demo_tr(self.pg_demo_tr)
+        ### /QListWidget ###
+
         def PUSH_BUTTON():
             Push_button.menu_top(self.pb_mt_option).option()
             Push_button.menu_top(self.pb_mt_reduire).reduire()
@@ -128,9 +130,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: PROGRESS_BAR()
-            except: print(f"PROGRESS_BAR{err}")
 
             try: PUSH_BUTTON()
             except: print(f"PUSH_BUTTON{err}")
