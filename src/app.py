@@ -79,8 +79,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         ### QListWidget ###
-        Progress_bar.Demo_th(self.pg_demo_th)
-        Progress_bar.Demo_tr(self.pg_demo_tr)
+        Progress_bar.Base_th(self.pg_demo_th)
+        Progress_bar.Base_tr(self.pg_demo_tr)
         ### /QListWidget ###
 
         def PUSH_BUTTON():
