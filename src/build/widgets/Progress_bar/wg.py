@@ -6,7 +6,8 @@ class wg:
     def __init__(self,
                  *wgs,
                  couleur_bg=p_base.COULEUR_BG,
-                 couleur_barre=p_base.COULEUR_BG_BARRE,
+                 couleur_bg_barre=p_base.COULEUR_BG_BARRE,
+                 couleur_fg=p_base.COULEUR_FG,
 
                  dim_width=p_base.DIM_WG_WIDTH,
                  dim_height=p_base.DIM_WG_HEIGHT,
@@ -31,18 +32,21 @@ class wg:
                  rayon_bottom_right=p_base.RD_WG,
                  rayon_bottom_left=p_base.RD_WG,
 
-                 pad
+                 padding_top=0,
+                 padding_bottom=0,
+                 padding_right=0,
+                 padding_left=0
     ):
         style = f"""
         /* FOND */
         QProgressBar {{
-        background-color: rgba{colors.get("c1")};
-        color: rgb{colors.get("c3")};
+        background-color: rgba{couleur_bg};
+        color: rgb{couleur_fg};
         }}
 
         /* PROGRESS */
         QProgressBar::chunk {{
-        background-color: rgba{colors.get("bn1")};
+        background-color: rgba{couleur_bg_barre};
         }}
 
         /* BORDURES */
@@ -51,6 +55,10 @@ class wg:
         border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
         border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
         border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
+        padding-top={padding_top}px;
+        padding-bottom={padding_bottom}px;
+        padding-right={padding_right}px;
+        padding-left={padding_left}px;
         }}
         
         /* RAYONS */
