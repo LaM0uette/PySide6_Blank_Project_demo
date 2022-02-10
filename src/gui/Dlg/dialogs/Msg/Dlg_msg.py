@@ -55,16 +55,10 @@ class Dlg_msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
         Label.Base_tr(self.lb_msg_text)
         ### /QLabel ###
 
-        def PUSH_BUTTON():
-            Push_button.dlg_ok(self.pb_msg_ok).txt()
 
-        # Lancement des fonctions de MEF
-        def _func_try():
-            err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: PUSH_BUTTON()
-            except: print(f"PUSH_BUTTON{err}")
-        _func_try()
+        ### QPushButton ###
+        Push_button.dlg_ok(self.pb_msg_ok)
+        ### /QPushButton ###
 
         # Lancement des fonctions de MEF global
         In_classe(ui=self)
