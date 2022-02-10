@@ -61,6 +61,20 @@ class wg:
                  curseur=p_base.CUR
     ):
         style = f"""
+        QPushButton {{
+        background-color: rgb{couleur_bg};
+        color: rgb{couleur_fg};
+        }}
+
+        QPushButton:hover {{
+        background-color: rgb{couleur_bg_hover};
+        color: rgb{couleur_fg_hover};
+        }}
+
+        QPushButton:pressed {{
+        color: rgb{colors.get("bn1")};
+        }}
+                        
         /* BORDURES */
         .QPushButton {{
         border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
@@ -115,21 +129,7 @@ class wg:
 """
 style_type = {
             "txt": 
-                        QPushButton {{
-                        background-color: rgb{colors.get("c1")};
-                        color: rgb{colors.get("c3")};
-                        border: {P_style().bd()}px solid rgb{colors.get("c3")};
-                        }}
-
-                        QPushButton:hover {{
-                        background-color: rgb{colors.get("c3")};
-                        color: rgb{colors.get("c1")};
-                        border: {P_style().bd()}px solid rgb{colors.get("c3")};
-                        }}
-
-                        QPushButton:pressed {{
-                        color: rgb{colors.get("bn1")};
-                        }},
+                        ,
             "txt_inv": 
                         QPushButton {{
                         background-color: rgb{colors.get("c3")};
