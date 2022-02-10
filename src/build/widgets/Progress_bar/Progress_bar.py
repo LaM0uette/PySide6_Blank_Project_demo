@@ -13,4 +13,5 @@ class Base_tr:
     def __init__(self, *wgs):
         wg.wg(*wgs,
               couleur_bg=(0, 0, 0, 0),
+              text_visible=False
               )
