@@ -87,10 +87,14 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         ### QPushButton ###
         Push_button.Base_th(self.pb_demo_th, self.pb_demo_ck)
         Push_button.Base_tr(self.pb_demo_tr)
+
         Push_button.txt(self.pb_demo_txt)
         Push_button.txt_inv(self.pb_demo_txt_inv)
+
         Push_button.Demo_bd(self.pb_demo_rd)
         Push_button.Demo_rd(self.pb_demo_bd)
+
+        Push_button.ck_ico(self.pb_demo_ck_ico, self.pb_demo_ico_ck)
         ### /QPushButton ###
 
 
@@ -104,8 +108,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Push_button.menu_top(self.pb_mt_option).option()
             Push_button.menu_top(self.pb_mt_reduire).reduire()
             Push_button.menu_top(self.pb_mt_agrandir).agrandir()
-
-            Push_button.ck_ico(self.pb_demo_ck_ico, self.pb_demo_ico_ck).tr()
 
             Push_button.zoom(self.pb_demo_zoom).zoom_calendrier()
         def SCROLL_BOX_AREA():

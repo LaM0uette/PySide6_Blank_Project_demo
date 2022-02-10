@@ -77,3 +77,15 @@ class Demo_rd:
               rayon_bottom_left=10,
               rayon_bottom_right=10,
         )
+
+class ck_ico:
+    def __init__(self, *wgs):
+        wg.wg(*wgs,
+              couleur_bg=(0, 0, 0, 0),
+              couleur_bg_hover=(0, 0, 0, 0),
+              couleur_bg_checked=(0, 0, 0, 0),
+              couleur_bg_checked_hover=(0, 0, 0, 0),
+              couleur_fg_checked=p_base.COULEURS.get("c3"),
+              couleur_bg_pressed=(0, 0, 0, 0),
+              couleur_bg_checked_pressed=(0, 0, 0, 0),
+              )
