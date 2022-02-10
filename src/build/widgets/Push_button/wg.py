@@ -8,9 +8,16 @@ from .. import p_base
 class wg:
     def __init__(self,
                  *wgs,
-                 pb_type,
+                 pb_type=None,
 
-                 colors,
+                 couleur_bg=p_base.COULEUR_BG,
+                 couleur_bg_hover=p_base.COULEUR_BG_HOVER,
+                 couleur_bg_checked=p_base.COULEUR_BG_CHECKED,
+                 couleur_bg_checked_hover=p_base.COULEUR_BG_CHECKED_HOVER,
+                 couleur_fg=p_base.COULEUR_FG,
+                 couleur_fg_hover=p_base.COULEUR_FG_HOVER,
+                 couleur_fg_checked=p_base.COULEUR_FG_CHECKED,
+                 couleur_fg_checked_hover=p_base.COULEUR_FG_CHECKED_HOVER,
 
                  img_uncheck=p_base.IMG_UNCHECK,
                  tm_uncheck=p_base.TM_UNCHECK,
