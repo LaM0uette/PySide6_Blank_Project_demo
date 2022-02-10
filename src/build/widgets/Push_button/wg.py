@@ -1,8 +1,8 @@
 from PySide6 import QtWidgets
 
-from ..Attrs import Attrs
 from . import Classe_wg
 from ....build import *
+from .. import p_base
 
 
 class wg:
@@ -23,156 +23,144 @@ class wg:
                  bd,
                  rd,
                  cur
-    ):  # sourcery no-metrics
-        bds = Attrs(bd=bd).GET_BD()
-        rds = Attrs(rd=rd).GET_RD()
+    ):
+        style = f"""
+                    /* BORDURES */
+                    .QPushButton#{wg.objectName()} {{
+                    border-width: {bd.get("px")}px;
+                    border-style: solid;
+                    border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
+                    }}
 
+                    /* RAYONS */
+                    .QPushButton#{wg.objectName()} {{
+                    border-top-left-radius: {rds.get("r1")}px;
+                    border-top-right-radius: {rds.get("r2")}px;
+                    border-bottom-right-radius: {rds.get("r4")}px;
+                    border-bottom-left-radius: {rds.get("r3")}px;
+                    }}
+        """
+        style_type = {
+            "txt": f"""
+                        QPushButton {{
+                        background-color: rgb{colors.get("c1")};
+                        color: rgb{colors.get("c3")};
+                        border: {P_style().bd()}px solid rgb{colors.get("c3")};
+                        }}
+
+                        QPushButton:hover {{
+                        background-color: rgb{colors.get("c3")};
+                        color: rgb{colors.get("c1")};
+                        border: {P_style().bd()}px solid rgb{colors.get("c3")};
+                        }}
+
+                        QPushButton:pressed {{
+                        color: rgb{colors.get("bn1")};
+                        }}""",
+            "txt_inv": f"""
+                        QPushButton {{
+                        background-color: rgb{colors.get("c3")};
+                        color: rgb{colors.get("c1")};
+                        border: {P_style().bd()}px solid rgb{colors.get("c3")};
+                        }}
+
+                        QPushButton:hover {{
+                        background-color: rgb{colors.get("c1")};
+                        color: rgb{colors.get("c3")};
+                        border: {P_style().bd()}px solid rgb{colors.get("c3")};
+                        }}
+
+                        QPushButton:pressed {{
+                        color: rgb{colors.get("bn1")};
+                        }}""",
+            "th": f"""
+                        QPushButton {{
+                        background-color: rgb{colors.get("c1")};
+                        color: rgb{colors.get("c3")};
+                        }}
+
+                        QPushButton:hover {{
+                        background-color: rgb{colors.get("c1")};
+                        color: rgb{colors.get("bn1")};
+                        }}
+
+                        QPushButton:checked {{
+                        background-color: rgb{colors.get("c3")};
+                        color: rgb{colors.get("c1")};
+                        }}
+
+                        QPushButton:checked:hover {{
+                        background-color: rgb{colors.get("c3")};
+                        color: rgb{colors.get("bn1")};
+                        }}
+
+                        QPushButton:pressed {{
+                        color: rgb{colors.get("bn2")};
+                        }}
+
+                        QPushButton:checked:pressed {{
+                        color: rgb{colors.get("bn2")};
+                        }}
+
+                        QPushButton:flat {{
+                        border: none;
+                        }}""",
+            "tr": f"""
+                        QPushButton {{
+                        color: rgb{colors.get("c3")};
+                        }}
+
+                        QPushButton:hover {{
+                        color: rgb{colors.get("bn1")};
+                        }}
+
+                        QPushButton:checked:hover {{
+                        color: rgb{colors.get("bn1")};
+                        }}
+
+                        QPushButton:pressed {{
+                        color: rgb{colors.get("bn2")};
+                        }}
+
+                        QPushButton:checked:pressed {{
+                        color: rgb{colors.get("bn2")};
+                        }}
+
+                        QPushButton:flat {{
+                        border: none;
+                        }}""",
+            "zoom": f"""
+                        QPushButton {{
+                        background-color: rgba(0, 0, 0, 0);
+                        color: rgb{colors.get("c3")};
+                        }}
+
+                        QPushButton:pressed {{
+                        color: rgb{colors.get("bn1")};
+                        }}
+
+                        QPushButton:checked:pressed {{
+                        color: rgb{colors.get("bn1")};
+                        }}
+
+                        QPushButton:flat {{
+                        border: none;
+                        }}""",
+            "uni": f"""
+                        QPushButton {{
+                        background-color: rgb{colors.get("c1")};
+                        color: rgb{colors.get("c1")};
+                        }}
+
+                        QPushButton:pressed {{
+                        color: rgb{colors.get("bn1")};
+                        }}
+
+                        QPushButton:flat {{
+                        border: none;
+                        }}"""
+        }
         for wg in wgs:
-            style_gen = f"""
-            /* BORDURES */
-            .QPushButton#{wg.objectName()} {{
-            border-width: {bd.get("px")}px;
-            border-style: solid;
-            border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
-            }}
-
-            /* RAYONS */
-            .QPushButton#{wg.objectName()} {{
-            border-top-left-radius: {rds.get("r1")}px;
-            border-top-right-radius: {rds.get("r2")}px;
-            border-bottom-right-radius: {rds.get("r4")}px;
-            border-bottom-left-radius: {rds.get("r3")}px;
-            }}
-"""
-            style_type = {
-                "txt": f"""
-                QPushButton {{
-                background-color: rgb{colors.get("c1")};
-                color: rgb{colors.get("c3")};
-                border: {P_style().bd()}px solid rgb{colors.get("c3")};
-                }}
-                
-                QPushButton:hover {{
-                background-color: rgb{colors.get("c3")};
-                color: rgb{colors.get("c1")};
-                border: {P_style().bd()}px solid rgb{colors.get("c3")};
-                }}
-
-                QPushButton:pressed {{
-                color: rgb{colors.get("bn1")};
-                }}""",
-
-                "txt_inv": f"""
-                QPushButton {{
-                background-color: rgb{colors.get("c3")};
-                color: rgb{colors.get("c1")};
-                border: {P_style().bd()}px solid rgb{colors.get("c3")};
-                }}
-                
-                QPushButton:hover {{
-                background-color: rgb{colors.get("c1")};
-                color: rgb{colors.get("c3")};
-                border: {P_style().bd()}px solid rgb{colors.get("c3")};
-                }}
-
-                QPushButton:pressed {{
-                color: rgb{colors.get("bn1")};
-                }}""",
-
-                "th": f"""
-                QPushButton {{
-                background-color: rgb{colors.get("c1")};
-                color: rgb{colors.get("c3")};
-                }}
-                
-                QPushButton:hover {{
-                background-color: rgb{colors.get("c1")};
-                color: rgb{colors.get("bn1")};
-                }}
-                
-                QPushButton:checked {{
-                background-color: rgb{colors.get("c3")};
-                color: rgb{colors.get("c1")};
-                }}
-                
-                QPushButton:checked:hover {{
-                background-color: rgb{colors.get("c3")};
-                color: rgb{colors.get("bn1")};
-                }}
-
-                QPushButton:pressed {{
-                color: rgb{colors.get("bn2")};
-                }}
-                
-                QPushButton:checked:pressed {{
-                color: rgb{colors.get("bn2")};
-                }}
-                
-                QPushButton:flat {{
-                border: none;
-                }}""",
-
-                "tr": f"""
-                QPushButton {{
-                color: rgb{colors.get("c3")};
-                }}
-                
-                QPushButton:hover {{
-                color: rgb{colors.get("bn1")};
-                }}
-                
-                QPushButton:checked:hover {{
-                color: rgb{colors.get("bn1")};
-                }}
-
-                QPushButton:pressed {{
-                color: rgb{colors.get("bn2")};
-                }}
-                
-                QPushButton:checked:pressed {{
-                color: rgb{colors.get("bn2")};
-                }}
-                
-                QPushButton:flat {{
-                border: none;
-                }}""",
-
-                "zoom": f"""
-                QPushButton {{
-                background-color: rgba(0, 0, 0, 0);
-                color: rgb{colors.get("c3")};
-                }}
-
-                QPushButton:pressed {{
-                color: rgb{colors.get("bn1")};
-                }}
-                
-                QPushButton:checked:pressed {{
-                color: rgb{colors.get("bn1")};
-                }}
-                
-                QPushButton:flat {{
-                border: none;
-                }}""",
-
-                "uni": f"""
-                QPushButton {{
-                background-color: rgb{colors.get("c1")};
-                color: rgb{colors.get("c1")};
-                }}
-
-                QPushButton:pressed {{
-                color: rgb{colors.get("bn1")};
-                }}
-                
-                QPushButton:flat {{
-                border: none;
-                }}"""
-            }
-
-            if colors_type not in("txt", "txt_inv"): style = style_gen + style_type.get(colors_type)
-            else: style = style_type.get(colors_type)
-
             wg.setStyleSheet(style)
 
             try:
