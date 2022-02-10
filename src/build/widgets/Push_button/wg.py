@@ -64,12 +64,12 @@ class wg:
     ):
         style = f"""
         QPushButton {{
-        background-color: rgb{couleur_bg};
+        background-color: rgba{couleur_bg};
         color: rgb{couleur_fg};
         }}
 
         QPushButton:hover {{
-        background-color: rgb{couleur_bg_hover};
+        background-color: rgba{couleur_bg_hover};
         color: rgb{couleur_fg_hover};
         }}
 
