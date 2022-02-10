@@ -85,8 +85,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         ### QPushButton ###
-        Push_button.Base_th(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3)
-        Push_button.Base_tr(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3)
+        Push_button.Base_th(self.pb_demo_th, self.pb_demo_ck)
+        Push_button.Base_tr(self.pb_demo_tr)
         ### /QPushButton ###
 
 
@@ -104,8 +104,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Push_button.base_txt(self.pb_demo_txt).txt()
             Push_button.base_txt(self.pb_demo_txt_inv).txt_inv()
 
-            Push_button.base(self.pb_demo_th, self.pb_demo_ck).th()
-            Push_button.base(self.pb_demo_tr).tr()
             Push_button.base(self.pb_demo_rd).demo_rd()
             Push_button.base(self.pb_demo_bd).demo_bd()
 
@@ -140,9 +138,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: PUSH_BUTTON()
-            except: print(f"PUSH_BUTTON{err}")
 
             try: SCROLL_BOX_AREA()
             except: print(f"SCROLL_BOX_AREA{err}")
