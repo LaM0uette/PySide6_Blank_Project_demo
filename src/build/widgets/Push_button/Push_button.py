@@ -91,3 +91,18 @@ class ck_ico:
               couleur_bg_pressed=(0, 0, 0, 0),
               couleur_bg_checked_pressed=(0, 0, 0, 0),
               )
+class zoom:
+    def __init__(self, *wgs):
+        wg.wg(*wgs,
+              type_bouton="zoom",
+
+              couleur_bg=(0, 0, 0, 0),
+              couleur_bg_hover=(0, 0, 0, 0),
+              couleur_bg_checked=(0, 0, 0, 0),
+              couleur_bg_checked_hover=(0, 0, 0, 0),
+              couleur_fg_checked=p_base.COULEURS.get("c3"),
+              couleur_bg_pressed=(0, 0, 0, 0),
+              couleur_bg_checked_pressed=(0, 0, 0, 0),
+              img_uncheck=P_img().calendrier(),
+              tm_uncheck=""
+              )

@@ -95,6 +95,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         Push_button.Demo_rd(self.pb_demo_bd)
 
         Push_button.ck_ico(self.pb_demo_ck_ico, self.pb_demo_ico_ck)
+        Push_button.zoom(self.pb_demo_zoom)
         ### /QPushButton ###
 
 
@@ -108,8 +109,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             Push_button.menu_top(self.pb_mt_option).option()
             Push_button.menu_top(self.pb_mt_reduire).reduire()
             Push_button.menu_top(self.pb_mt_agrandir).agrandir()
-
-            Push_button.zoom(self.pb_demo_zoom).zoom_calendrier()
         def SCROLL_BOX_AREA():
             Scroll_box_area.base(self.sca_main).th()
         def SLIDER():
