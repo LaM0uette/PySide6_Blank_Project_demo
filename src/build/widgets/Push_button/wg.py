@@ -62,7 +62,7 @@ class wg:
     ):
         style = f"""
         /* BORDURES */
-        .QCheckBox {{
+        .QPushButton {{
         border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
         border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
         border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
@@ -70,132 +70,13 @@ class wg:
         }}
         
         /* RAYONS */
-        .QCheckBox {{
+        .QPushButton {{
         border-top-left-radius: {rayon_top_left}px;
         border-top-right-radius: {rayon_top_right}px;
         border-bottom-right-radius: {rayon_bottom_right}px;
         border-bottom-left-radius: {rayon_bottom_left}px;
         }}"""
-        style_type = {
-            "txt": f"""
-                        QPushButton {{
-                        background-color: rgb{colors.get("c1")};
-                        color: rgb{colors.get("c3")};
-                        border: {P_style().bd()}px solid rgb{colors.get("c3")};
-                        }}
 
-                        QPushButton:hover {{
-                        background-color: rgb{colors.get("c3")};
-                        color: rgb{colors.get("c1")};
-                        border: {P_style().bd()}px solid rgb{colors.get("c3")};
-                        }}
-
-                        QPushButton:pressed {{
-                        color: rgb{colors.get("bn1")};
-                        }}""",
-            "txt_inv": f"""
-                        QPushButton {{
-                        background-color: rgb{colors.get("c3")};
-                        color: rgb{colors.get("c1")};
-                        border: {P_style().bd()}px solid rgb{colors.get("c3")};
-                        }}
-
-                        QPushButton:hover {{
-                        background-color: rgb{colors.get("c1")};
-                        color: rgb{colors.get("c3")};
-                        border: {P_style().bd()}px solid rgb{colors.get("c3")};
-                        }}
-
-                        QPushButton:pressed {{
-                        color: rgb{colors.get("bn1")};
-                        }}""",
-            "th": f"""
-                        QPushButton {{
-                        background-color: rgb{colors.get("c1")};
-                        color: rgb{colors.get("c3")};
-                        }}
-
-                        QPushButton:hover {{
-                        background-color: rgb{colors.get("c1")};
-                        color: rgb{colors.get("bn1")};
-                        }}
-
-                        QPushButton:checked {{
-                        background-color: rgb{colors.get("c3")};
-                        color: rgb{colors.get("c1")};
-                        }}
-
-                        QPushButton:checked:hover {{
-                        background-color: rgb{colors.get("c3")};
-                        color: rgb{colors.get("bn1")};
-                        }}
-
-                        QPushButton:pressed {{
-                        color: rgb{colors.get("bn2")};
-                        }}
-
-                        QPushButton:checked:pressed {{
-                        color: rgb{colors.get("bn2")};
-                        }}
-
-                        QPushButton:flat {{
-                        border: none;
-                        }}""",
-            "tr": f"""
-                        QPushButton {{
-                        color: rgb{colors.get("c3")};
-                        }}
-
-                        QPushButton:hover {{
-                        color: rgb{colors.get("bn1")};
-                        }}
-
-                        QPushButton:checked:hover {{
-                        color: rgb{colors.get("bn1")};
-                        }}
-
-                        QPushButton:pressed {{
-                        color: rgb{colors.get("bn2")};
-                        }}
-
-                        QPushButton:checked:pressed {{
-                        color: rgb{colors.get("bn2")};
-                        }}
-
-                        QPushButton:flat {{
-                        border: none;
-                        }}""",
-            "zoom": f"""
-                        QPushButton {{
-                        background-color: rgba(0, 0, 0, 0);
-                        color: rgb{colors.get("c3")};
-                        }}
-
-                        QPushButton:pressed {{
-                        color: rgb{colors.get("bn1")};
-                        }}
-
-                        QPushButton:checked:pressed {{
-                        color: rgb{colors.get("bn1")};
-                        }}
-
-                        QPushButton:flat {{
-                        border: none;
-                        }}""",
-            "uni": f"""
-                        QPushButton {{
-                        background-color: rgb{colors.get("c1")};
-                        color: rgb{colors.get("c1")};
-                        }}
-
-                        QPushButton:pressed {{
-                        color: rgb{colors.get("bn1")};
-                        }}
-
-                        QPushButton:flat {{
-                        border: none;
-                        }}"""
-        }
         for wg in wgs:
             wg.setStyleSheet(style)
 
@@ -230,3 +111,124 @@ class wg:
                         wg.enterEvent = cls.ENT_ZOOM
                         wg.leaveEvent = cls.LVE_ZOOM
             except: pass
+
+"""
+style_type = {
+            "txt": 
+                        QPushButton {{
+                        background-color: rgb{colors.get("c1")};
+                        color: rgb{colors.get("c3")};
+                        border: {P_style().bd()}px solid rgb{colors.get("c3")};
+                        }}
+
+                        QPushButton:hover {{
+                        background-color: rgb{colors.get("c3")};
+                        color: rgb{colors.get("c1")};
+                        border: {P_style().bd()}px solid rgb{colors.get("c3")};
+                        }}
+
+                        QPushButton:pressed {{
+                        color: rgb{colors.get("bn1")};
+                        }},
+            "txt_inv": 
+                        QPushButton {{
+                        background-color: rgb{colors.get("c3")};
+                        color: rgb{colors.get("c1")};
+                        border: {P_style().bd()}px solid rgb{colors.get("c3")};
+                        }}
+
+                        QPushButton:hover {{
+                        background-color: rgb{colors.get("c1")};
+                        color: rgb{colors.get("c3")};
+                        border: {P_style().bd()}px solid rgb{colors.get("c3")};
+                        }}
+
+                        QPushButton:pressed {{
+                        color: rgb{colors.get("bn1")};
+                        }},
+            "th": 
+                        QPushButton {{
+                        background-color: rgb{colors.get("c1")};
+                        color: rgb{colors.get("c3")};
+                        }}
+
+                        QPushButton:hover {{
+                        background-color: rgb{colors.get("c1")};
+                        color: rgb{colors.get("bn1")};
+                        }}
+
+                        QPushButton:checked {{
+                        background-color: rgb{colors.get("c3")};
+                        color: rgb{colors.get("c1")};
+                        }}
+
+                        QPushButton:checked:hover {{
+                        background-color: rgb{colors.get("c3")};
+                        color: rgb{colors.get("bn1")};
+                        }}
+
+                        QPushButton:pressed {{
+                        color: rgb{colors.get("bn2")};
+                        }}
+
+                        QPushButton:checked:pressed {{
+                        color: rgb{colors.get("bn2")};
+                        }}
+
+                        QPushButton:flat {{
+                        border: none;
+                        }},
+            "tr": 
+                        QPushButton {{
+                        color: rgb{colors.get("c3")};
+                        }}
+
+                        QPushButton:hover {{
+                        color: rgb{colors.get("bn1")};
+                        }}
+
+                        QPushButton:checked:hover {{
+                        color: rgb{colors.get("bn1")};
+                        }}
+
+                        QPushButton:pressed {{
+                        color: rgb{colors.get("bn2")};
+                        }}
+
+                        QPushButton:checked:pressed {{
+                        color: rgb{colors.get("bn2")};
+                        }}
+
+                        QPushButton:flat {{
+                        border: none;
+                        }},
+            "zoom": 
+                        QPushButton {{
+                        background-color: rgba(0, 0, 0, 0);
+                        color: rgb{colors.get("c3")};
+                        }}
+
+                        QPushButton:pressed {{
+                        color: rgb{colors.get("bn1")};
+                        }}
+
+                        QPushButton:checked:pressed {{
+                        color: rgb{colors.get("bn1")};
+                        }}
+
+                        QPushButton:flat {{
+                        border: none;
+                        }},
+            "uni": 
+                        QPushButton {{
+                        background-color: rgb{colors.get("c1")};
+                        color: rgb{colors.get("c1")};
+                        }}
+
+                        QPushButton:pressed {{
+                        color: rgb{colors.get("bn1")};
+                        }}
+
+                        QPushButton:flat {{
+                        border: none;
+"""
