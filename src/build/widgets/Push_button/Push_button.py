@@ -53,3 +53,7 @@ class txt_inv:
               bordure_couleur_right=P_rgb().th3()+(255, ),
               bordure_couleur_left=P_rgb().th3()+(255, ),
         )
+
+class Demo_bd:
+    def __init__(self, *wgs):
+        wg.wg(*wgs)
