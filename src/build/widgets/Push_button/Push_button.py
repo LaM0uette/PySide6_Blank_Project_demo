@@ -19,6 +19,56 @@ class Base_tr:
               couleur_fg_checked=p_base.COULEURS.get("c3"),
               )
 
+class menu_top:
+    def __init__(self, *wgs):
+        self.wgs = wgs
+
+    def rtn(self,
+            type_bouton="zoom",
+            couleur_bg=(0, 0, 0, 0),
+            couleur_bg_hover=(0, 0, 0, 0),
+            couleur_bg_checked=(0, 0, 0, 0),
+            couleur_bg_checked_hover=(0, 0, 0, 0),
+            couleur_fg_checked=p_base.COULEURS.get("c3"),
+            couleur_bg_pressed=(0, 0, 0, 0),
+            img_uncheck=P_img().main(),
+            tm_uncheck="th2",
+            dim_width=P_dim().h9()*1.4,
+    ):
+        wg.wg(*self.wgs,
+              type_bouton=type_bouton,
+              couleur_bg=couleur_bg,
+              couleur_bg_hover=couleur_bg_hover,
+              couleur_bg_checked=couleur_bg_checked,
+              couleur_bg_checked_hover=couleur_bg_checked_hover,
+              couleur_fg_checked=couleur_fg_checked,
+              couleur_bg_pressed=couleur_bg_pressed,
+              img_uncheck=img_uncheck,
+              tm_uncheck=tm_uncheck,
+              dim_width=dim_width,
+              )
+
+
+    def option(self):
+        self.rtn(
+            img_uncheck=P_img().option()
+        )
+    def reduire(self):
+        self.rtn(
+            img_uncheck=P_img().reduire(),
+            tm_uncheck="bn1"
+        )
+    def agrandir(self):
+        self.rtn(
+            img_uncheck=P_img().agrandir(),
+            tm_uncheck="th3"
+        )
+    def quitter(self):
+        self.rtn(
+            img_uncheck=P_img().quitter(),
+            tm_uncheck="bn2"
+        )
+
 
 class txt:
     def __init__(self, *wgs):
