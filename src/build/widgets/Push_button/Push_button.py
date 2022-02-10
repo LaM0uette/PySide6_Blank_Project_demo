@@ -18,3 +18,11 @@ class Base_tr:
               couleur_bg_checked_hover=(0, 0, 0, 0),
               couleur_fg_checked=p_base.COULEURS.get("c3"),
               )
+
+
+class txt:
+    def __init__(self, *wgs):
+        wg.wg(*wgs)
+class txt_inv:
+    def __init__(self, *wgs):
+        wg.wg(*wgs)
