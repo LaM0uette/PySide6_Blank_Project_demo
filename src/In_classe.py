@@ -13,5 +13,5 @@ class In_classe:
         Label.H3(ui.lb_mt_nom)
         ### /QLabel ###
 
-        Push_button.menu_top(ui.pb_mt_quitter).quitter()
+        # Push_button.menu_top(ui.pb_mt_quitter).quitter()
 
