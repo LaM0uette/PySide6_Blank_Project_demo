@@ -131,24 +131,6 @@ class wg:
 
 """
 style_type = {
-            "txt": 
-                        ,
-            "txt_inv": 
-                        QPushButton {{
-                        background-color: rgb{colors.get("c3")};
-                        color: rgb{colors.get("c1")};
-                        border: {P_style().bd()}px solid rgb{colors.get("c3")};
-                        }}
-
-                        QPushButton:hover {{
-                        background-color: rgb{colors.get("c1")};
-                        color: rgb{colors.get("c3")};
-                        border: {P_style().bd()}px solid rgb{colors.get("c3")};
-                        }}
-
-                        QPushButton:pressed {{
-                        color: rgb{colors.get("bn1")};
-                        }},
             "th": 
                         QPushButton {{
                         background-color: rgb{colors.get("c1")};
