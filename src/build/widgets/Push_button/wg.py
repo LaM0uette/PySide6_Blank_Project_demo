@@ -15,11 +15,12 @@ class wg:
                  couleur_bg_checked=p_base.COULEUR_BG_CHECKED,
                  couleur_bg_checked_hover=p_base.COULEUR_BG_CHECKED_HOVER,
                  couleur_bg_pressed=p_base.COULEUR_BG_PRESSED,
+                 couleur_bg_checked_pressed=p_base.COULEUR_BG_CHECKED_PRESSED,
                  couleur_fg=p_base.COULEUR_FG,
                  couleur_fg_hover=p_base.COULEUR_FG_HOVER,
                  couleur_fg_checked=p_base.COULEUR_FG_CHECKED,
                  couleur_fg_checked_hover=p_base.COULEUR_FG_CHECKED_HOVER,
-                 couleur_fg_pressed=p_base.COULEUR_FG_PRESSED,
+                 couleur_fg_checked_pressed=p_base.COULEUR_FG_CHECKED_PRESSED,
 
                  img_uncheck=p_base.IMG_UNCHECK,
                  tm_uncheck=p_base.TM_UNCHECK,
@@ -72,10 +73,25 @@ class wg:
         background-color: rgba{couleur_bg_hover};
         color: rgb{couleur_fg_hover};
         }}
+        
+        QPushButton:checked {{
+        background-color: rgb{couleur_bg_checked};
+        color: rgb{couleur_fg_checked};
+        }}
+
+        QPushButton:checked:hover {{
+        background-color: rgb{couleur_bg_checked_hover};
+        color: rgb{couleur_fg_checked_hover};
+        }}
 
         QPushButton:pressed {{
         background-color: rgba{couleur_bg_pressed};
         color: rgb{couleur_fg_pressed};
+        }}
+        
+        QPushButton:checked:pressed {{
+        background-color: rgba{couleur_bg_pressed};
+        color: rgb{colors.get("bn2")};
         }}
                         
         /* BORDURES */
@@ -132,34 +148,6 @@ class wg:
 """
 style_type = {
             "th": 
-                        QPushButton {{
-                        background-color: rgb{colors.get("c1")};
-                        color: rgb{colors.get("c3")};
-                        }}
-
-                        QPushButton:hover {{
-                        background-color: rgb{colors.get("c1")};
-                        color: rgb{colors.get("bn1")};
-                        }}
-
-                        QPushButton:checked {{
-                        background-color: rgb{colors.get("c3")};
-                        color: rgb{colors.get("c1")};
-                        }}
-
-                        QPushButton:checked:hover {{
-                        background-color: rgb{colors.get("c3")};
-                        color: rgb{colors.get("bn1")};
-                        }}
-
-                        QPushButton:pressed {{
-                        color: rgb{colors.get("bn2")};
-                        }}
-
-                        QPushButton:checked:pressed {{
-                        color: rgb{colors.get("bn2")};
-                        }}
-
                         QPushButton:flat {{
                         border: none;
                         }},
