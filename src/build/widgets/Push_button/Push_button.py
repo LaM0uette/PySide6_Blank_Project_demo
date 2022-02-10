@@ -34,6 +34,7 @@ class menu_top:
             img_uncheck=P_img().main(),
             tm_uncheck="th2",
             dim_width=P_dim().h9()*1.2,
+            curseur=P_cur().souris_main()
     ):
         wg.wg(*self.wgs,
               type_bouton=type_bouton,
@@ -46,6 +47,7 @@ class menu_top:
               img_uncheck=img_uncheck,
               tm_uncheck=tm_uncheck,
               dim_width=dim_width,
+              curseur=curseur
               )
 
 
