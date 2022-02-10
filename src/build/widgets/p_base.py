@@ -10,7 +10,7 @@ COULEURS = P_rgb().p_th3()
 
 # BG
 COULEUR_BG= COULEURS.get("c1") + (255,)
-COULEUR_BG_BARRE= COULEURS.get("c2") + (255,)
+COULEUR_BG_BARRE= COULEURS.get("c3") + (255,)
 COULEUR_BG_HOVER= COULEURS.get("c1") + (255,)
 COULEUR_BG_CHECKED= COULEURS.get("c3") + (255,)
 COULEUR_BG_CHECKED_HOVER= COULEURS.get("c3") + (255,)
@@ -96,6 +96,12 @@ SCROLL_V = QtCore.Qt.ScrollBarAsNeeded
 FONT = config.font
 FONT_SIZE = P_font().h4()
 HD_FONT_SIZE = P_font().h3()
+
+
+########################
+##     PARAMETRES     ##
+########################
+TEXT_VISIBLE = True
 
 
 #####################

@@ -35,7 +35,9 @@ class wg:
                  padding_top=0,
                  padding_bottom=0,
                  padding_right=0,
-                 padding_left=0
+                 padding_left=0,
+
+                 text_visible=p_base.TEXT_VISIBLE
     ):
         style = f"""
         /* FOND */
@@ -77,4 +79,5 @@ class wg:
                 wg.setFont(Fct(font=police, font_size=police_taille).FONT())
 
                 wg.setAlignment(P_align().c().c())
+                wg.setTextVisible(text_visible)
             except: pass
