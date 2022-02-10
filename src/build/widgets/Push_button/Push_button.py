@@ -164,7 +164,7 @@ class dlg_ok:
               couleur_fg=P_rgb().vert(),
               couleur_bg_hover=P_rgb().vert() + (255,),
               couleur_fg_hover=P_rgb().th1(),
-              couleur_bg_pressed=P_rgb().th3() + (255,),
+              couleur_bg_pressed=P_rgb().vert() + (255,),
               bordure_width_top=P_style().bd(),
               bordure_width_bottom=P_style().bd(),
               bordure_width_right=P_style().bd(),
@@ -173,6 +173,7 @@ class dlg_ok:
               bordure_couleur_bottom=P_rgb().vert() + (255,),
               bordure_couleur_right=P_rgb().vert() + (255,),
               bordure_couleur_left=P_rgb().vert() + (255,),
+              dim_height=None
               )
 class dlg_ok_inv:
     def __init__(self, *wgs):
@@ -190,6 +191,7 @@ class dlg_ok_inv:
               bordure_couleur_bottom=P_rgb().vert() + (255,),
               bordure_couleur_right=P_rgb().vert() + (255,),
               bordure_couleur_left=P_rgb().vert() + (255,),
+              dim_height=None
               )
 class dlg_nok:
     def __init__(self, *wgs):
@@ -198,7 +200,7 @@ class dlg_nok:
               couleur_fg=P_rgb().rouge(),
               couleur_bg_hover=P_rgb().rouge() + (255,),
               couleur_fg_hover=P_rgb().th1(),
-              couleur_bg_pressed=P_rgb().th3() + (255,),
+              couleur_bg_pressed=P_rgb().rouge() + (255,),
               bordure_width_top=P_style().bd(),
               bordure_width_bottom=P_style().bd(),
               bordure_width_right=P_style().bd(),
@@ -207,6 +209,7 @@ class dlg_nok:
               bordure_couleur_bottom=P_rgb().rouge() + (255,),
               bordure_couleur_right=P_rgb().rouge() + (255,),
               bordure_couleur_left=P_rgb().rouge() + (255,),
+              dim_height=None
         )
 class dlg_nok_inv:
     def __init__(self, *wgs):
@@ -215,7 +218,7 @@ class dlg_nok_inv:
               couleur_fg=P_rgb().th1(),
               couleur_bg_hover=P_rgb().th1()+(255, ),
               couleur_fg_hover=P_rgb().rouge(),
-              couleur_bg_pressed=P_rgb().th1() + (255,),
+              couleur_bg_pressed=P_rgb().th1()+(255, ),
               bordure_width_top=P_style().bd(),
               bordure_width_bottom=P_style().bd(),
               bordure_width_right=P_style().bd(),
@@ -224,4 +227,5 @@ class dlg_nok_inv:
               bordure_couleur_bottom=P_rgb().rouge()+(255, ),
               bordure_couleur_right=P_rgb().rouge()+(255, ),
               bordure_couleur_left=P_rgb().rouge()+(255, ),
+              dim_height=None
         )

@@ -124,11 +124,11 @@ class wg:
                 wg.setCursor(Fct(cur=curseur).CUR())
             except: pass
 
-            if img_uncheck is not None:
+            if img_uncheck is not None and type_bouton is not None:
                 Fct(wg=wg, img=f"{img_uncheck}{tm_uncheck}", dim=dim_height * x_ico).ICON()
 
             try:
-                if type_bouton is not None:
+                if type_bouton is not None and type_bouton is not None:
                     cls = Classe_wg.Classe_wg(wg=wg,
                                               dim_ico=dim_height * x_ico,
                                               DIM_ICO=dim_height * X_ICO,
