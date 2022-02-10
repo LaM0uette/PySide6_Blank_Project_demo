@@ -172,7 +172,7 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
                  "c2": (self.sd_rgb_red.value(), self.sd_rgb_green.value(), 255) + (255,)}
 
         self.le_rgb_hex.setText(Fct().RGB_HEX(rgb=rgb))
-        Frame.base(self.fr_rgb_colors, colors={"c1": rgb}).radius()
+        Frame.palette_rgb(self.fr_rgb_colors, rgb=rgb)
         Slider.rgb(self.sd_rgb_red, gradient_colors=rgb_r).rgb()
         Slider.rgb(self.sd_rgb_green, gradient_colors=rgb_g).rgb()
         Slider.rgb(self.sd_rgb_blue, gradient_colors=rgb_b).rgb()

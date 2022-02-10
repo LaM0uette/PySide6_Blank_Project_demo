@@ -73,3 +73,13 @@ class Cadre_bn1:
               bordure_couleur_right=P_rgb().bn1()+(255, ),
               bordure_couleur_left=P_rgb().bn1()+(255, ),
               )
+
+class palette_rgb:
+    def __init__(self, *wgs, rgb):
+        wg.wg(*wgs,
+              couleur_bg=rgb+(255, ),
+              rayon_top_left=40,
+              rayon_top_right=40,
+              rayon_bottom_left=40,
+              rayon_bottom_right=40,
+    )
