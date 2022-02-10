@@ -156,3 +156,40 @@ class zoom:
               img_uncheck=P_img().calendrier(),
               tm_uncheck=""
               )
+
+class dlg_ok:
+    def __init__(self, *wgs):
+        wg.wg(*wgs,
+              couleur_bg=P_rgb().th1() + (255,),
+              couleur_fg=P_rgb().th3(),
+              couleur_bg_hover=P_rgb().th3() + (255,),
+              couleur_fg_hover=P_rgb().th1(),
+              couleur_bg_pressed=P_rgb().th3() + (255,),
+
+              bordure_width_top=P_style().bd(),
+              bordure_width_bottom=P_style().bd(),
+              bordure_width_right=P_style().bd(),
+              bordure_width_left=P_style().bd(),
+              bordure_couleur_top=P_rgb().vert() + (255,),
+              bordure_couleur_bottom=P_rgb().vert() + (255,),
+              bordure_couleur_right=P_rgb().vert() + (255,),
+              bordure_couleur_left=P_rgb().vert() + (255,),
+              )
+class dlg_nok:
+    def __init__(self, *wgs):
+        wg.wg(*wgs,
+              couleur_bg=P_rgb().th3()+(255, ),
+              couleur_fg=P_rgb().th1(),
+              couleur_bg_hover=P_rgb().th1()+(255, ),
+              couleur_fg_hover=P_rgb().th3(),
+              couleur_bg_pressed=P_rgb().th1() + (255,),
+
+              bordure_width_top=P_style().bd(),
+              bordure_width_bottom=P_style().bd(),
+              bordure_width_right=P_style().bd(),
+              bordure_width_left=P_style().bd(),
+              bordure_couleur_top=P_rgb().rouge()+(255, ),
+              bordure_couleur_bottom=P_rgb().rouge()+(255, ),
+              bordure_couleur_right=P_rgb().rouge()+(255, ),
+              bordure_couleur_left=P_rgb().rouge()+(255, ),
+        )
