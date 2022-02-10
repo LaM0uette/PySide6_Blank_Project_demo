@@ -33,7 +33,7 @@ class menu_top:
             couleur_bg_pressed=(0, 0, 0, 0),
             img_uncheck=P_img().main(),
             tm_uncheck="th2",
-            dim_width=P_dim().h9()*1.4,
+            dim_width=P_dim().h9()*1.2,
     ):
         wg.wg(*self.wgs,
               type_bouton=type_bouton,
