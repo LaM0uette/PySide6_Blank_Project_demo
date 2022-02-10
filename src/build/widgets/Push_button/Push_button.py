@@ -27,6 +27,7 @@ class txt:
               couleur_fg=P_rgb().th3(),
               couleur_bg_hover=P_rgb().th3() + (255,),
               couleur_fg_hover=P_rgb().th1(),
+              couleur_bg_pressed=P_rgb().th3() + (255,),
               bordure_width_top=P_style().bd(),
               bordure_width_bottom=P_style().bd(),
               bordure_width_right=P_style().bd(),
