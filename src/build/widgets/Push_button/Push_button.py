@@ -256,6 +256,7 @@ class plein:
             bordure_couleur_bottom=(0, 0, 0, 0),
             bordure_couleur_right=(0, 0, 0, 0),
             bordure_couleur_left=(0, 0, 0, 0),
+            curseur=P_cur().main()
             ):
         wg.wg(*self.wgs,
               couleur_bg=couleur_bg,
@@ -272,6 +273,7 @@ class plein:
               bordure_couleur_bottom=bordure_couleur_bottom,
               bordure_couleur_right=bordure_couleur_right,
               bordure_couleur_left=bordure_couleur_left,
+              curseur=curseur
               )
 
     def th1(self):
