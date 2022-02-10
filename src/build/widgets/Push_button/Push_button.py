@@ -56,4 +56,21 @@ class txt_inv:
 
 class Demo_bd:
     def __init__(self, *wgs):
-        wg.wg(*wgs)
+        wg.wg(*wgs,
+              bordure_width_top=P_style().bd(),
+              bordure_width_bottom=P_style().bd(),
+              bordure_width_right=P_style().bd(),
+              bordure_width_left=P_style().bd(),
+              bordure_couleur_top=P_rgb().bn1() + (255,),
+              bordure_couleur_bottom=P_rgb().bn1() + (255,),
+              bordure_couleur_right=P_rgb().bn1() + (255,),
+              bordure_couleur_left=P_rgb().bn1() + (255,),
+              )
+class Demo_rd:
+    def __init__(self, *wgs):
+        wg.wg(*wgs,
+              rayon_top_left=10,
+              rayon_top_right=10,
+              rayon_bottom_left=10,
+              rayon_bottom_right=10,
+        )
