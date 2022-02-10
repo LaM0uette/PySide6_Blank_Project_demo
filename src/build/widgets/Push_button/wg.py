@@ -20,6 +20,7 @@ class wg:
                  couleur_fg_hover=p_base.COULEUR_FG_HOVER,
                  couleur_fg_checked=p_base.COULEUR_FG_CHECKED,
                  couleur_fg_checked_hover=p_base.COULEUR_FG_CHECKED_HOVER,
+                 couleur_fg_pressed=p_base.COULEUR_FG_PRESSED,
                  couleur_fg_checked_pressed=p_base.COULEUR_FG_CHECKED_PRESSED,
 
                  img_uncheck=p_base.IMG_UNCHECK,
@@ -90,8 +91,8 @@ class wg:
         }}
         
         QPushButton:checked:pressed {{
-        background-color: rgba{couleur_bg_pressed};
-        color: rgb{colors.get("bn2")};
+        background-color: rgba{couleur_bg_checked_pressed};
+        color: rgb{couleur_fg_checked_pressed};
         }}
                         
         /* BORDURES */
