@@ -60,7 +60,7 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
 
         def PUSH_BUTTON():
             Push_button.dlg_ok(self.pb_rep_ok).txt()
-            Push_button.dlg_nok(self.pb_rep_annuler).txt_inv()
+            Push_button.dlg_nok_inv(self.pb_rep_annuler).txt_inv()
 
         # Lancement des fonctions de MEF
         def _func_try():

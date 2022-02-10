@@ -62,7 +62,7 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
 
         def PUSH_BUTTON():
             Push_button.dlg_ok(self.pb_rgb_ok).txt()
-            Push_button.dlg_nok(self.pb_rgb_annuler).txt_inv()
+            Push_button.dlg_nok_inv(self.pb_rgb_annuler).txt_inv()
         def SLIDER():
             Slider.rgb(self.sd_rgb_red, self.sd_rgb_green, self.sd_rgb_blue).rond()
         def SPIN_BOX():
