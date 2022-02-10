@@ -109,8 +109,11 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         ### /QRadioButton ###
 
 
-        def SCROLL_BOX_AREA():
-            Scroll_box_area.base(self.sca_main).th()
+        ### QScrollBoxArea ###
+        Scroll_box_area.Base_th(self.sca_main)
+        ### /QScrollBoxArea ###
+
+
         def SLIDER():
             Slider.base(self.hsd_demo).th()
             Slider.base(self.vsd_demo).rond()
@@ -137,9 +140,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: SCROLL_BOX_AREA()
-            except: print(f"SCROLL_BOX_AREA{err}")
 
             try: SLIDER()
             except: print(f"SLIDER{err}")
