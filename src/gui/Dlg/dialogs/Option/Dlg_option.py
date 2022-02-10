@@ -92,14 +92,18 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
                       self.lb_opt_cfg_resize_height)
         ### /QLabel ###
 
-        def PUSH_BUTTON():
-            Push_button.dlg_ok(self.pb_opt_appliquer).txt()
-            Push_button.dlg_ok(self.pb_opt_ok).txt_inv()
-            Push_button.base(self.pb_opt_tm_th1).plein_th1()
-            Push_button.base(self.pb_opt_tm_th2).plein_th2()
-            Push_button.base(self.pb_opt_tm_th3).plein_th3()
-            Push_button.base(self.pb_opt_tm_bn1).plein_bn1()
-            Push_button.base(self.pb_opt_tm_bn2).plein_bn2()
+
+        ### QPushButton ###
+        Push_button.dlg_ok(self.pb_opt_appliquer)
+        Push_button.dlg_ok_inv(self.pb_opt_ok)
+
+        Push_button.plein(self.pb_opt_tm_th1).th1()
+        Push_button.plein(self.pb_opt_tm_th2).th2()
+        Push_button.plein(self.pb_opt_tm_th3).th3()
+        Push_button.plein(self.pb_opt_tm_bn1).bn1()
+        Push_button.plein(self.pb_opt_tm_bn2).bn2()
+        ### /QPushButton ###
+
         def SPIN_BOX():
             Spin_box.plus_minus(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity).bd_th3()
             Spin_box.plus_minus_infini(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height).bd_th3()
@@ -115,9 +119,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: PUSH_BUTTON()
-            except: print(f"PUSH_BUTTON{err}")
 
             try: SPIN_BOX()
             except: print(f"SPIN_BOX{err}")

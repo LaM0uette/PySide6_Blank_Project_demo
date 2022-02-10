@@ -60,9 +60,12 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         Label.H4(self.lb_rgb_red, self.lb_rgb_green, self.lb_rgb_blue)
         ### /QLabel ###
 
-        def PUSH_BUTTON():
-            Push_button.dlg_ok(self.pb_rgb_ok).txt()
-            Push_button.dlg_nok_inv(self.pb_rgb_annuler).txt_inv()
+
+        ### QPushButton ###
+        Push_button.dlg_ok(self.pb_rgb_ok)
+        Push_button.dlg_nok_inv(self.pb_rgb_annuler)
+        ### /QPushButton ###
+
         def SLIDER():
             Slider.rgb(self.sd_rgb_red, self.sd_rgb_green, self.sd_rgb_blue).rond()
         def SPIN_BOX():
@@ -73,9 +76,6 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: PUSH_BUTTON()
-            except: print(f"PUSH_BUTTON{err}")
 
             try: SLIDER()
             except: print(f"SLIDER{err}")
