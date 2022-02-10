@@ -81,6 +81,8 @@ class Demo_rd:
 class ck_ico:
     def __init__(self, *wgs):
         wg.wg(*wgs,
+              type_bouton="ico",
+
               couleur_bg=(0, 0, 0, 0),
               couleur_bg_hover=(0, 0, 0, 0),
               couleur_bg_checked=(0, 0, 0, 0),

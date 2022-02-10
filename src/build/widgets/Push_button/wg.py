@@ -8,7 +8,7 @@ from .. import p_base
 class wg:
     def __init__(self,
                  *wgs,
-                 pb_type=None,
+                 type_bouton=None,
 
                  couleur_bg=p_base.COULEUR_BG,
                  couleur_bg_hover=p_base.COULEUR_BG_HOVER,
@@ -63,7 +63,7 @@ class wg:
                  rayon_bottom_left=p_base.RD_WG,
 
                  curseur=p_base.CUR
-    ):
+                 ):
         style = f"""
         QPushButton {{
         background-color: rgba{couleur_bg};
@@ -124,8 +124,11 @@ class wg:
                 wg.setCursor(Fct(cur=curseur).CUR())
             except: pass
 
+            if img_uncheck is not None:
+                Fct(wg=wg, img=f"{img_uncheck}{tm_uncheck}", dim=dim_height * x_ico).ICON()
+
             try:
-                if pb_type is not None:
+                if type_bouton is not None:
                     cls = Classe_wg.Classe_wg(wg=wg,
                                               dim_ico=dim_height * x_ico,
                                               DIM_ICO=dim_height * X_ICO,
@@ -135,13 +138,13 @@ class wg:
                                               tm_hover=tm_hover,
                                               tm_check=tm_check)
 
-                    if pb_type == "check":
+                    if type_bouton == "check":
                         wg.mousePressEvent = cls.MP_CHECK
-                    elif pb_type == "ico":
+                    elif type_bouton == "ico":
                         wg.enterEvent = cls.ENT_ICO
                         wg.leaveEvent = cls.LVE_ICO
                         wg.mousePressEvent = cls.MP_ICO
-                    elif pb_type == "zoom":
+                    elif type_bouton == "zoom":
                         wg.enterEvent = cls.ENT_ZOOM
                         wg.leaveEvent = cls.LVE_ZOOM
             except: pass
