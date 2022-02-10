@@ -110,7 +110,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         ### QScrollBoxArea ###
-        Scroll_box_area.Base_th(self.sca_main)
+        Scroll_box_area.Demo(self.sca_main)
         ### /QScrollBoxArea ###
 
 

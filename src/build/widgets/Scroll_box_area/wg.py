@@ -10,8 +10,8 @@ class wg:
 
                  couleur_bg=p_base.COULEUR_BG,
 
-                 dim_width=p_base.DIM_WG_WIDTH,
-                 dim_height=p_base.DIM_WG_HEIGHT,
+                 dim_width=p_base.DIM_WIDTH,
+                 dim_height=p_base.DIM_HEIGHT,
 
                  bordure_width_top=p_base.BD_WIDTH,
                  bordure_width_bottom=p_base.BD_WIDTH,
@@ -41,7 +41,7 @@ class wg:
     ):
         style = f"""
         .QScrollArea .QWidget {{
-        background-color: rgb{couleur_bg};
+        background-color: rgba{couleur_bg};
         }}
 
         /* BORDURES */

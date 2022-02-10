@@ -14,3 +14,10 @@ class Base_tr:
         wg.wg(*wgs,
               couleur_bg=(0, 0, 0, 0),
               )
+
+
+class Demo:
+    def __init__(self, *wgs):
+        wg.wg(*wgs,
+              couleur_bg=P_rgb().th1()+(255, ),
+              )
