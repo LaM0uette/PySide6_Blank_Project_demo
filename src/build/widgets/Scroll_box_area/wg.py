@@ -1,7 +1,7 @@
 from PySide6 import QtWidgets
 
-from ..Attrs import Attrs
 from ....build import *
+from .. import p_base
 
 
 class wg:
@@ -9,15 +9,6 @@ class wg:
                  *wgs,
 
                  couleur_bg=p_base.COULEUR_BG,
-                 couleur_bg_hover=p_base.COULEUR_BG_HOVER,
-                 couleur_bg_selection=p_base.COULEUR_BG_SELECTION,
-                 couleur_bg_item=p_base.COULEUR_BG_ITEM,
-                 couleur_bg_item_hover=p_base.COULEUR_BG_ITEM_HOVER,
-                 couleur_fg=p_base.COULEUR_FG,
-                 couleur_fg_hover=p_base.COULEUR_FG_HOVER,
-                 couleur_fg_selection=p_base.COULEUR_FG_SELECTION,
-                 couleur_fg_item=p_base.COULEUR_FG_ITEM,
-                 couleur_fg_item_hover=p_base.COULEUR_FG_ITEM_HOVER,
 
                  dim_width=p_base.DIM_WG_WIDTH,
                  dim_height=p_base.DIM_WG_HEIGHT,
@@ -45,10 +36,12 @@ class wg:
                  scroll_height=p_base.SCROLL_HEIGHT,
                  scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
                  scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
+                 scroll_h=p_base.SCROLL_H,
+                 scroll_v=p_base.SCROLL_V,
     ):
         style = f"""
         .QScrollArea .QWidget {{
-        background-color: rgb{colors.get("c1")};
+        background-color: rgb{couleur_bg};
         }}
 
         /* BORDURES */
@@ -92,10 +85,10 @@ class wg:
             wg.setStyleSheet(style)
 
             try:
-                Fct(wg=wg, w=dim.get("w"), h=dim.get("h")).DIM()
+                Fct(wg=wg, w=dim_width, h=dim_height).DIM()
 
-                wg.setHorizontalScrollBarPolicy(scroll.get("h"))
-                wg.setVerticalScrollBarPolicy(scroll.get("v"))
+                wg.setHorizontalScrollBarPolicy(scroll_h)
+                wg.setVerticalScrollBarPolicy(scroll_v)
 
                 wg.setFrameShape(QtWidgets.QFrame.NoFrame)
             except: pass
