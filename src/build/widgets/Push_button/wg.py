@@ -9,37 +9,66 @@ class wg:
     def __init__(self,
                  *wgs,
                  pb_type,
-                 colors_type,
+
                  colors,
-                 x_ico,
-                 X_ICO,
-                 dim,
-                 img,
-                 img_check,
-                 tm,
-                 tm_hover,
-                 tm_check,
-                 font,
-                 bd,
-                 rd,
-                 cur
+
+                 img_uncheck=p_base.IMG_UNCHECK,
+                 tm_uncheck=p_base.TM_UNCHECK,
+                 img_hover=p_base.IMG_HOVER,
+                 tm_hover=p_base.TM_HOVER,
+                 img_check=p_base.IMG_CHECK,
+                 tm_check=p_base.TM_CHECK,
+                 img_check_hover=p_base.IMG_CHECK_HOVER,
+                 tm_check_hover=p_base.TM_CHECK_HOVER,
+                 img_width=p_base.IMG_WIDTH,
+                 img_height=p_base.IMG_HEIGHT,
+                 img_margin_top=0,
+                 img_margin_bottom=0,
+                 img_margin_right=0,
+                 img_margin_left=0,
+
+                 dim_width=p_base.DIM_WG_WIDTH,
+                 dim_height=p_base.DIM_WG_HEIGHT,
+                 x_ico=p_base.P_style().x_ico(),
+                 X_ICO=p_base.P_style().X_ICO(),
+
+                 police=p_base.FONT,
+                 police_taille=p_base.FONT_SIZE,
+                 bordure_width_top=p_base.BD_WIDTH,
+                 bordure_width_bottom=p_base.BD_WIDTH,
+                 bordure_width_right=p_base.BD_WIDTH,
+                 bordure_width_left=p_base.BD_WIDTH,
+                 bordure_style_top=p_base.BD_STYLE,
+                 bordure_style_bottom=p_base.BD_STYLE,
+                 bordure_style_right=p_base.BD_STYLE,
+                 bordure_style_left=p_base.BD_STYLE,
+                 bordure_couleur_top=p_base.BD_COULEUR,
+                 bordure_couleur_bottom=p_base.BD_COULEUR,
+                 bordure_couleur_right=p_base.BD_COULEUR,
+                 bordure_couleur_left=p_base.BD_COULEUR,
+                 rayon_top_left=p_base.RD_WG,
+                 rayon_top_right=p_base.RD_WG,
+                 rayon_bottom_right=p_base.RD_WG,
+                 rayon_bottom_left=p_base.RD_WG,
+
+                 curseur=p_base.CUR
     ):
         style = f"""
-                    /* BORDURES */
-                    .QPushButton#{wg.objectName()} {{
-                    border-width: {bd.get("px")}px;
-                    border-style: solid;
-                    border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
-                    }}
-
-                    /* RAYONS */
-                    .QPushButton#{wg.objectName()} {{
-                    border-top-left-radius: {rds.get("r1")}px;
-                    border-top-right-radius: {rds.get("r2")}px;
-                    border-bottom-right-radius: {rds.get("r4")}px;
-                    border-bottom-left-radius: {rds.get("r3")}px;
-                    }}
-        """
+        /* BORDURES */
+        .QCheckBox {{
+        border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
+        border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
+        border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
+        border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
+        }}
+        
+        /* RAYONS */
+        .QCheckBox {{
+        border-top-left-radius: {rayon_top_left}px;
+        border-top-right-radius: {rayon_top_right}px;
+        border-bottom-right-radius: {rayon_bottom_right}px;
+        border-bottom-left-radius: {rayon_bottom_left}px;
+        }}"""
         style_type = {
             "txt": f"""
                         QPushButton {{
@@ -164,26 +193,23 @@ class wg:
             wg.setStyleSheet(style)
 
             try:
-                Fct(wg=wg, w=dim.get("w"), h=dim.get("h")).DIM()
-                wg.setFont(Fct(font_size=font).FONT())
-
-                if img is not None:
-                    Fct(wg=wg, img=f"{img}{tm}", dim=dim.get("h") * x_ico).ICON()
+                Fct(wg=wg, w=dim_width, h=dim_height).DIM()
+                wg.setFont(Fct(font=police, font_size=police_taille).FONT())
 
                 wg.setFlat(True)
                 wg.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
 
-                wg.setCursor(Fct(cur=cur).CUR())
+                wg.setCursor(Fct(cur=curseur).CUR())
             except: pass
 
             try:
                 if pb_type is not None:
                     cls = Classe_wg.Classe_wg(wg=wg,
-                                              dim_ico=dim.get("h") * x_ico,
-                                              DIM_ICO=dim.get("h") * X_ICO,
-                                              img=img,
+                                              dim_ico=dim_height * x_ico,
+                                              DIM_ICO=dim_height * X_ICO,
+                                              img=img_uncheck,
                                               img_check=img_check,
-                                              tm=tm,
+                                              tm=tm_uncheck,
                                               tm_hover=tm_hover,
                                               tm_check=tm_check)
 
