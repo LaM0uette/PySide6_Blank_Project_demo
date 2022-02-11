@@ -128,9 +128,12 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         ### /QSpinBox ###
 
 
-        def TABLE_WIDGET():
-            Table_widget.base(self.tw_demo_th).th()
-            Table_widget.base(self.tw_demo_tr).tr()
+        ### QTableWidget ###
+        Table_widget.Demo_th(self.tw_demo_th)
+        Table_widget.Demo_tr(self.tw_demo_tr)
+        ### /QTableWidget ###
+
+
         def TEXT_EDIT():
             Text_edit.base(self.le_demo_th).th()
             Text_edit.base(self.le_demo_tr).bottom_tr2()
@@ -146,9 +149,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: TABLE_WIDGET()
-            except: print(f"TABLE_WIDGET{err}")
 
             try: TEXT_EDIT()
             except: print(f"TEXT_EDIT{err}")
