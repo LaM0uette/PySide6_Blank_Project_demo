@@ -104,9 +104,13 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         Push_button.plein(self.pb_opt_tm_bn2).bn2()
         ### /QPushButton ###
 
-        def SPIN_BOX():
-            Spin_box.plus_minus(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity).bd_th3()
-            Spin_box.plus_minus_infini(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height).bd_th3()
+
+        ### QSpinBox ###
+        Spin_box.Plus_moins_bd_th3(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity)
+        Spin_box.Plus_moins_inf_bd_th3(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height)
+        ### /QSpinBox ###
+
+
         def TEXT_EDIT():
             Text_edit.h1(self.le_opt_ft_texte_h1).tr()
             Text_edit.h2(self.le_opt_ft_texte_h2).tr()
@@ -119,9 +123,6 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: SPIN_BOX()
-            except: print(f"SPIN_BOX{err}")
 
             try: TEXT_EDIT()
             except: print(f"TEXT_EDIT{err}")

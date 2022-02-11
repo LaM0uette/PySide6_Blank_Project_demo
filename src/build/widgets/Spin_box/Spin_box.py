@@ -32,3 +32,30 @@ class Up_down_tr:
               img_down=P_img().fleche_bottom(),
               no_focus=True
               )
+
+
+class Plus_moins_bd_th3:
+    def __init__(self, *wgs):
+        wg.wg(*wgs,
+              bordure_width_top=P_style().bd(),
+              bordure_width_bottom=P_style().bd(),
+              bordure_width_right=P_style().bd(),
+              bordure_width_left=P_style().bd(),
+              bordure_couleur_top=P_rgb().th3(),
+              bordure_couleur_bottom=P_rgb().th3(),
+              bordure_couleur_right=P_rgb().th3(),
+              bordure_couleur_left=P_rgb().th3(),
+              )
+class Plus_moins_inf_bd_th3:
+    def __init__(self, *wgs):
+        wg.wg(*wgs,
+              bordure_width_top=P_style().bd(),
+              bordure_width_bottom=P_style().bd(),
+              bordure_width_right=P_style().bd(),
+              bordure_width_left=P_style().bd(),
+              bordure_couleur_top=P_rgb().th3(),
+              bordure_couleur_bottom=P_rgb().th3(),
+              bordure_couleur_right=P_rgb().th3(),
+              bordure_couleur_left=P_rgb().th3(),
+              valeur_max=999999
+              )
