@@ -55,7 +55,7 @@ class wg:
         QSpinBox, QDoubleSpinBox {{
         background-color: rgba{couleur_bg};
         color: rgb{couleur_fg};
-        selection-background-color: rgba{couleur_bg_selection};
+        selection-background-color: rgb{couleur_bg_selection};
         selection-color: rgb{couleur_fg_selection}
         }}
 
