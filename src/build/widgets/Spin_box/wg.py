@@ -16,7 +16,6 @@ class wg:
                  police_taille=p_base.FONT_SIZE,
 
                  tm,
-                 font,
 
                  bordure_width_top=p_base.BD_WIDTH,
                  bordure_width_bottom=p_base.BD_WIDTH,
