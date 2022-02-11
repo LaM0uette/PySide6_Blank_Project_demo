@@ -58,9 +58,8 @@ class wg:
         
         /* BARRE_H */
         QSlider::groove:horizontal {{
-        border-radius: 0px;
-        height: 20px;
         background-color: rgba{couleur_bg_barre};
+        height: 20px;
         }}
         QSlider::groove:horizontal:hover {{
         background-color: rgba{couleur_bg_barre_hover};
@@ -72,7 +71,6 @@ class wg:
         /* CURSEUR_H */
         QSlider::handle:horizontal {{
         background-color: rgba{couleur_bg_cur};
-        border-radius: 0px;
         height: 20px;
         width: 20px;
         }}
@@ -86,7 +84,6 @@ class wg:
         /* BARRE_V */
         QSlider::groove:vertical {{
         background-color: rgba{couleur_bg_barre};
-        border-radius: 0px;
         width: 20px;
         }}
         QSlider::groove:vertical:hover {{
@@ -99,7 +96,6 @@ class wg:
         /* CURSEUR_V */
         QSlider::handle:vertical {{
         background-color: rgba{couleur_bg_cur};
-        border-radius: 0px;
         height: 20px;
         width: 20px;
         }}
