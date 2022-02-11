@@ -1,7 +1,7 @@
 from PySide6 import QtWidgets, QtCore
 
-from ..Attrs import Attrs
 from ....build import *
+from .. import p_base
 
 
 class wg:
@@ -18,6 +18,7 @@ class wg:
                  couleur_fg_checked_hover=p_base.COULEUR_FG_CHECKED_HOVER,
                  couleur_fg_item=p_base.COULEUR_FG_ITEM,
                  couleur_fg_item_hover=p_base.COULEUR_FG_ITEM_HOVER,
+                 couleur_grid=p_base.COULEUR_GRID,
 
                  dim_width=p_base.DIM_WG_WIDTH,
                  dim_height=p_base.DIM_WG_HEIGHT,
@@ -57,111 +58,73 @@ class wg:
 
                  curseur=p_base.CUR
     ):
-        bds = Attrs(bd=bd).GET_BD()
-        rds = Attrs(rd=rd).GET_RD()
+        style_main = f"""
+        /* CORNER */
+        QTableCornerButton::section {{
+        background-color: rgb{couleur_bg};
+        }}
+        
+        /* TABLE_WIDGET */
+        QTableWidget {{
+        background-color: rgb{couleur_bg};
+        gridline-color: rgb{couleur_grid};
+        color: rgb{couleur_fg};
+        }}
+        
+        /* ITEM */
+        QTableWidget::item {{
+        background-color: rgb{colors.get("c1")};
+        color: rgb{colors.get("c3")};
+        }}
+        QTableWidget::item:hover {{
+        color: rgb{colors.get("bn1")};
+        }}
+        QTableWidget::item:selected {{
+        background-color: rgb{colors.get("c2")};
+        color: rgb{colors.get("bn1")};
+        }}
+        QTableWidget::item:selected:hover {{
+        color: rgb{colors.get("bn2")};
+        }}
+                
+        /* BORDURES */
+        .QListWidget {{
+        border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
+        border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
+        border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
+        border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
+        }}
+        
+        /* RAYONS */
+        .QListWidget {{
+        border-top-left-radius: {rayon_top_left}px;
+        border-top-right-radius: {rayon_top_right}px;
+        border-bottom-right-radius: {rayon_bottom_right}px;
+        border-bottom-left-radius: {rayon_bottom_left}px;
+        }}
+        
+        /* SCROLL */
+        .QListWidget QScrollBar {{
+        background-color: rgb{scroll_bg};
+        width: {scroll_width}px;
+        height: {scroll_height}px;
+        }}
+        .QListWidget::handle:horizontal {{
+        min-width: {scroll_handle_min_width}px;
+        }}
+        .QListWidget::handle:vertical {{
+        min-height: {scroll_handle_min_height}px;
+        }}
+        .QListWidget QScrollBar::handle {{
+        background-color: rgb{scroll_handle_fg};
+        }}
+        .QListWidget QScrollBar::add-page, .QListWidget QScrollBar::sub-page {{
+        background-color: rgb{scroll_handle_bg};
+        border: none;
+        }}"""
 
         for wg in wgs:
-            style_gen = f"""
-            /* BORDURES */
-            .QTableWidget#{wg.objectName()} {{
-            border-width: {bd.get("px")}px;
-            border-style: solid;
-            border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
-            }}
-
-            /* RAYONS */
-            .QTableWidget#{wg.objectName()} {{
-            border-top-left-radius: {rds.get("r1")}px;
-            border-top-right-radius: {rds.get("r2")}px;
-            border-bottom-right-radius: {rds.get("r4")}px;
-            border-bottom-left-radius: {rds.get("r3")}px;
-            }}
-            
-            /* SCROLL */
-            QTableWidget QScrollBar {{
-            background-color: rgb{colors.get("c1")};
-            width: 20px;
-            height: 20px;
-            }}
-            QTableWidget ::handle:vertical {{
-            min-height: 100px;
-            }}
-            QTableWidget ::handle:vertical {{
-            min-height: 100px;
-            }}
-            QTableWidget ::handle:horizontal {{
-            min-width: 100px;
-            }}
-            QTableWidget QScrollBar::handle {{
-            background-color: rgb{colors.get("c3")};
-            }}
-            QTableWidget QScrollBar::add-page, QTableWidget QScrollBar::sub-page {{
-            background-color: rgb{colors.get("c1")};
-            border: rgb{colors.get("c1")};
-            }}
-            """
-            style_type = {
-                "th": f"""
-                /* CORNER */
-                QTableCornerButton::section {{
-                background-color: rgb{colors.get("c1")};
-                }}
-                
-                /* TABLE_WIDGET */
-                QTableWidget {{
-                background-color: rgb{colors.get("c1")};
-                gridline-color: rgb{colors.get("c3")};
-                color: rgb{colors.get("c3")};
-                }}
-                
-                /* ITEM */
-                QTableWidget::item {{
-                background-color: rgb{colors.get("c1")};
-                color: rgb{colors.get("c3")};
-                }}
-                QTableWidget::item:hover {{
-                color: rgb{colors.get("bn1")};
-                }}
-                QTableWidget::item:selected {{
-                background-color: rgb{colors.get("c2")};
-                color: rgb{colors.get("bn1")};
-                }}
-                QTableWidget::item:selected:hover {{
-                color: rgb{colors.get("bn2")};
-                }}
-                """,
-
-                "tr": f"""
-                /* CORNER */
-                QTableCornerButton::section {{
-                background-color: rgb{colors.get("c1")};
-                }}
-                
-                /* TABLE_WIDGET */
-                QTableWidget {{
-                background-color: rgba(0, 0, 0, 0);
-                gridline-color: rgb{colors.get("c1")};
-                color: rgb{colors.get("c1")};
-                }}
-                
-                /* ITEM */
-                QTableWidget::item {{
-                background-color: rgba(0, 0, 0, 0);
-                color: rgb{colors.get("c1")};
-                }}
-                QTableWidget::item:hover {{
-                color: rgb{colors.get("bn1")};
-                }}
-                QTableWidget::item:selected {{
-                background-color: rgb{colors.get("c3")};
-                color: rgb{colors.get("bn1")};
-                }}
-                QTableWidget::item:selected:hover {{
-                color: rgb{colors.get("bn2")};
-                }}
-                """
-            }
-            style_type_header = {
+            style_header = {
                 "th": f"""
                 QHeaderView::section {{
                 background-color: rgb{colors.get("c1")};
@@ -186,9 +149,6 @@ class wg:
                 }}
                 """
             }
-
-            style_main = style_gen + style_type.get(colors_type)
-            style_header = style_type_header.get(colors_type)
 
             wg.setStyleSheet(style_main)
             wg.horizontalHeader().setStyleSheet(style_header)
@@ -202,8 +162,8 @@ class wg:
 
                 wg.setHorizontalScrollBarPolicy(scroll_h)
                 wg.setVerticalScrollBarPolicy(scroll_v)
-                wg.horizontalHeader().setVisible(header.get("h"))
-                wg.verticalHeader().setVisible(header.get("v"))
+                wg.horizontalHeader().setVisible(header_h)
+                wg.verticalHeader().setVisible(header_v)
 
                 wg.setCursor(Fct(cur=curseur).CUR())
                 wg.viewport().setCursor(Fct(cur=curseur).CUR())
