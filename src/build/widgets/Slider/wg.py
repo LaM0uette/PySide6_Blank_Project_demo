@@ -1,5 +1,5 @@
-from ..Attrs import Attrs
 from ....build import *
+from .. import p_base
 
 
 class wg:
@@ -16,28 +16,39 @@ class wg:
                  step,
                  cur
     ):
-        bds = Attrs(bd=bd).GET_BD()
-        rds = Attrs(rd=rd).GET_RD()
+        style = f"""
+                            /* BORDURES */
+                            .QSlider#{wg.objectName()} {{
+                            border-width: {bd.get("px")}px;
+                            border-style: solid;
+                            border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
+                            }}
 
+                            /* RAYONS */
+                            .QSlider#{wg.objectName()} {{
+                            border-top-left-radius: {rds.get("r1")}px;
+                            border-top-right-radius: {rds.get("r2")}px;
+                            border-bottom-right-radius: {rds.get("r4")}px;
+                            border-bottom-left-radius: {rds.get("r3")}px;
+                            }}
+                    """
         for wg in wgs:
-            style_gen = f"""
-                    /* BORDURES */
-                    .QSlider#{wg.objectName()} {{
-                    border-width: {bd.get("px")}px;
-                    border-style: solid;
-                    border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
-                    }}
 
-                    /* RAYONS */
-                    .QSlider#{wg.objectName()} {{
-                    border-top-left-radius: {rds.get("r1")}px;
-                    border-top-right-radius: {rds.get("r2")}px;
-                    border-bottom-right-radius: {rds.get("r4")}px;
-                    border-bottom-left-radius: {rds.get("r3")}px;
-                    }}
-            """
-            style_type = {
-                "th": f"""
+            wg.setStyleSheet(style)
+
+            try:
+                Fct(wg=wg, w=dim.get("w"), h=dim.get("h")).DIM()
+
+                wg.setMinimum(val_min)
+                wg.setMaximum(val_max)
+                wg.setSingleStep(step)
+
+                wg.setCursor(Fct(cur=cur).CUR())
+            except: pass
+
+
+"""
+"th":
                 /* SLIDER  */
                 QSlider {{
                 background-color: rgba(0, 0, 0, 0);
@@ -97,9 +108,8 @@ class wg:
                 QSlider::handle:vertical:pressed {{
                 background-color: rgb{colors.get("bn2")};
                 }}
-                """,
                 
-                "rond": f"""
+"rond": 
                 /* SLIDER  */
                 QSlider {{
                 background-color: rgba(0, 0, 0, 0);
@@ -159,9 +169,8 @@ class wg:
                 QSlider::handle:vertical:pressed {{
                 border: 8px solid rgb{colors.get("bn2")};
                 }}
-                """,
 
-                "rgb": f"""
+"rgb": 
                 /* SLIDER  */
                 QSlider {{
                 background-color: rgba(0, 0, 0, 0);
@@ -206,18 +215,5 @@ class wg:
                 margin: 0px -5px;
                 border-radius: 15px;
                 border: 8px solid rgb{colors.get("c1")};
-                }}"""
-            }
-            style = style_gen + style_type.get(colors_type)
-
-            wg.setStyleSheet(style)
-
-            try:
-                Fct(wg=wg, w=dim.get("w"), h=dim.get("h")).DIM()
-
-                wg.setMinimum(val_min)
-                wg.setMaximum(val_max)
-                wg.setSingleStep(step)
-
-                wg.setCursor(Fct(cur=cur).CUR())
-            except: pass
+                }}
+"""
