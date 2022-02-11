@@ -9,8 +9,8 @@ importlib.reload(wg)
 class Base_th:
     def __init__(self, *wgs):
         wg.wg(*wgs,
-              tm_up=P_rgb().th1(),
-              tm_down=P_rgb().th1()
+              tm_up="th2",
+              tm_down="th2"
               )
 class Base_tr:
     def __init__(self, *wgs):
