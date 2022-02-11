@@ -61,36 +61,36 @@ class wg:
         style_main = f"""
         /* CORNER */
         QTableCornerButton::section {{
-        background-color: rgb{couleur_bg};
+        background-color: rgba{couleur_bg};
         }}
         
         /* TABLE_WIDGET */
         QTableWidget {{
-        background-color: rgb{couleur_bg};
+        background-color: rgba{couleur_bg};
         gridline-color: rgb{couleur_grid};
         color: rgb{couleur_fg};
         }}
         
         /* ITEM */
         QTableWidget::item {{
-        background-color: rgb{couleur_bg_item};
+        background-color: rgba{couleur_bg_item};
         color: rgb{couleur_fg_item};
         }}
         QTableWidget::item:hover {{
-        background-color: rgb{couleur_bg_item_hover};
+        background-color: rgba{couleur_bg_item_hover};
         color: rgb{couleur_fg_item_hover};
         }}
         QTableWidget::item:selected {{
-        background-color: rgb{couleur_bg_checked};
+        background-color: rgba{couleur_bg_checked};
         color: rgb{couleur_fg_checked};
         }}
         QTableWidget::item:selected:hover {{
-        background-color: rgb{couleur_bg_checked_hover};
+        background-color: rgba{couleur_bg_checked_hover};
         color: rgb{couleur_fg_checked_hover};
         }}
                 
         /* BORDURES */
-        .QListWidget {{
+        .QTableWidget {{
         border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
         border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
         border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
@@ -98,7 +98,7 @@ class wg:
         }}
         
         /* RAYONS */
-        .QListWidget {{
+        .QTableWidget {{
         border-top-left-radius: {rayon_top_left}px;
         border-top-right-radius: {rayon_top_right}px;
         border-bottom-right-radius: {rayon_bottom_right}px;
@@ -106,33 +106,33 @@ class wg:
         }}
         
         /* SCROLL */
-        .QListWidget QScrollBar {{
+        .QTableWidget QScrollBar {{
         background-color: rgb{scroll_bg};
         width: {scroll_width}px;
         height: {scroll_height}px;
         }}
-        .QListWidget::handle:horizontal {{
+        .QTableWidget::handle:horizontal {{
         min-width: {scroll_handle_min_width}px;
         }}
-        .QListWidget::handle:vertical {{
+        .QTableWidget::handle:vertical {{
         min-height: {scroll_handle_min_height}px;
         }}
-        .QListWidget QScrollBar::handle {{
+        .QTableWidget QScrollBar::handle {{
         background-color: rgb{scroll_handle_fg};
         }}
-        .QListWidget QScrollBar::add-page, .QListWidget QScrollBar::sub-page {{
+        .QTableWidget QScrollBar::add-page, .QTableWidget QScrollBar::sub-page {{
         background-color: rgb{scroll_handle_bg};
         border: none;
         }}"""
 
         style_header = f"""
         QHeaderView::section {{
-        background-color: rgb{couleur_bg};
+        background-color: rgba{couleur_bg};
         color: rgb{couleur_fg};
         border-style: none;
         }}
         QHeaderView::section:checked {{
-        background-color: rgb{couleur_bg_checked};
+        background-color: rgba{couleur_bg_checked};
         color: rgb{couleur_fg_checked};
         }}"""
 
