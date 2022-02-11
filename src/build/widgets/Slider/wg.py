@@ -18,6 +18,13 @@ class wg:
 
                  dim_width=p_base.DIM_WIDTH,
                  dim_height=p_base.DIM_HEIGHT,
+                 hauteur_barre_h=20,
+                 hauteur_main_h=20,
+                 largeur_main_h=20,
+                 largeur_barre_v=20,
+                 hauteur_main_v=20,
+                 largeur_main_v=20,
+
                  margin_top=0,
                  margin_bottom=0,
                  margin_right=0,
@@ -59,7 +66,7 @@ class wg:
         /* BARRE_H */
         QSlider::groove:horizontal {{
         background-color: rgba{couleur_bg_barre};
-        height: 20px;
+        height: {hauteur_barre_h}px;
         }}
         QSlider::groove:horizontal:hover {{
         background-color: rgba{couleur_bg_barre_hover};
@@ -71,8 +78,8 @@ class wg:
         /* CURSEUR_H */
         QSlider::handle:horizontal {{
         background-color: rgba{couleur_bg_cur};
-        height: 20px;
-        width: 20px;
+        height: {hauteur_main_h}px;
+        width: {largeur_main_h}px;
         }}
         QSlider::handle:horizontal:hover {{
         background-color: rgba{couleur_bg_cur_hover};
@@ -84,7 +91,7 @@ class wg:
         /* BARRE_V */
         QSlider::groove:vertical {{
         background-color: rgba{couleur_bg_barre};
-        width: 20px;
+        width: {largeur_barre_v}px;
         }}
         QSlider::groove:vertical:hover {{
         background-color: rgba{couleur_bg_barre_hover};
@@ -96,8 +103,8 @@ class wg:
         /* CURSEUR_V */
         QSlider::handle:vertical {{
         background-color: rgba{couleur_bg_cur};
-        height: 20px;
-        width: 20px;
+        height: {hauteur_main_v}px;
+        width: {largeur_main_v}px;
         }}
         QSlider::handle:vertical:hover {{
         background-color: rgba{couleur_bg_cur_hover};
@@ -136,114 +143,50 @@ class wg:
 
 
 """
-"th":
-                
-                
-"rond": 
-                /* SLIDER  */
-                QSlider {{
-                background-color: rgba(0, 0, 0, 0);
-                margin: 0px
-                }}
-                
-                /* BARRE_H */
-                QSlider::groove:horizontal {{
-                border-radius: 10px;
-                height: 20px;
-                margin: 0px;
-                background-color: rgb{colors.get("c3")};
-                }}
-                QSlider::groove:horizontal:hover {{
-                background-color: rgb{colors.get("c3")};
-                }}
-                
-                /* CURSEUR_H */
-                QSlider::handle:horizontal {{
-                border: none;
-                height: 5px;
-                width: 14px;
-                margin: -5px 0px;
-                border-radius: 15px;
-                border: 8px solid rgb{colors.get("c1")};
-                }}
-                QSlider::handle:horizontal:hover {{
-                border: 8px solid rgb{colors.get("bn1")};
-                }}
-                QSlider::handle:horizontal:pressed {{
-                border: 8px solid rgb{colors.get("bn2")};
-                }}
-                
-                /* BARRE_V */
-                QSlider::groove:vertical {{
-                border-radius: 10px;
-                width: 20px;
-                margin: 0px;
-                background-color: rgb{colors.get("c3")};
-                }}
-                QSlider::groove:vertical:hover {{
-                background-color: rgb{colors.get("c3")};
-                }}
-                
-                /* CURSEUR_V */
-                QSlider::handle:vertical {{
-                border: none;
-                height: 14px;
-                width: 5px;
-                margin: 0px -5px;
-                border-radius: 15px;
-                border: 8px solid rgb{colors.get("c1")};
-                }}
-                QSlider::handle:vertical:hover {{
-                border: 8px solid rgb{colors.get("bn1")};
-                }}
-                QSlider::handle:vertical:pressed {{
-                border: 8px solid rgb{colors.get("bn2")};
-                }}
-
 "rgb": 
-                /* SLIDER  */
-                QSlider {{
-                background-color: rgba(0, 0, 0, 0);
-                margin: 0px
-                }}
+/* SLIDER  */
+QSlider {{
+background-color: rgba(0, 0, 0, 0);
+margin: 0px
+}}
 
-                /* BARRE_H */
-                QSlider::groove:horizontal {{
-                border-radius: 10px;
-                height: 20px;
-                margin: 0px;
-                background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{gradient_colors.get("c1")}, stop:1 rgba{gradient_colors.get("c2")});
-                }}
+/* BARRE_H */
+QSlider::groove:horizontal {{
+border-radius: 10px;
+height: 20px;
+margin: 0px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{gradient_colors.get("c1")}, stop:1 rgba{gradient_colors.get("c2")});
+}}
 
-                /* CURSEUR_H */
-                QSlider::handle:horizontal {{
-                border: none;
-                height: 5px;
-                width: 14px;
-                margin: -5px 0px;
-                border-radius: 15px;
-                border: 8px solid rgb{colors.get("c1")};
-                }}
+/* CURSEUR_H */
+QSlider::handle:horizontal {{
+border: none;
+height: 5px;
+width: 14px;
+margin: -5px 0px;
+border-radius: 15px;
+border: 8px solid rgb{colors.get("c1")};
+}}
 
-                /* BARRE_V */
-                QSlider::groove:vertical {{
-                border-radius: 10px;
-                width: 20px;
-                margin: 0px;
-                background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{gradient_colors.get("c1")}, stop:1 rgba{gradient_colors.get("c2")});
-                }}
-                
-                QSlider::groove:vertical:hover {{
-                background-color: rgb{colors.get("c3")};
-                }}
+/* BARRE_V */
+QSlider::groove:vertical {{
+border-radius: 10px;
+width: 20px;
+margin: 0px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{gradient_colors.get("c1")}, stop:1 rgba{gradient_colors.get("c2")});
+}}
 
-                /* CURSEUR_V */
-                QSlider::handle:vertical {{
-                border: none;
-                height: 14px;
-                width: 5px;
-                margin: 0px -5px;
-                border-radius: 15px;
-                border: 8px solid rgb{colors.get("c1")};
-                }}
+QSlider::groove:vertical:hover {{
+background-color: rgb{colors.get("c3")};
+}}
+
+/* CURSEUR_V */
+QSlider::handle:vertical {{
+border: none;
+height: 14px;
+width: 5px;
+margin: 0px -5px;
+border-radius: 15px;
+border: 8px solid rgb{colors.get("c1")};
+}}
 """
