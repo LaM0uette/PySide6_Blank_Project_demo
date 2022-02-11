@@ -73,18 +73,20 @@ class wg:
         
         /* ITEM */
         QTableWidget::item {{
-        background-color: rgb{colors.get("c1")};
-        color: rgb{colors.get("c3")};
+        background-color: rgb{couleur_bg_item};
+        color: rgb{couleur_fg_item};
         }}
         QTableWidget::item:hover {{
-        color: rgb{colors.get("bn1")};
+        background-color: rgb{couleur_bg_item_hover};
+        color: rgb{couleur_fg_item_hover};
         }}
         QTableWidget::item:selected {{
-        background-color: rgb{colors.get("c2")};
-        color: rgb{colors.get("bn1")};
+        background-color: rgb{couleur_bg_checked};
+        color: rgb{couleur_fg_checked};
         }}
         QTableWidget::item:selected:hover {{
-        color: rgb{colors.get("bn2")};
+        background-color: rgb{couleur_bg_checked_hover};
+        color: rgb{couleur_fg_checked_hover};
         }}
                 
         /* BORDURES */
@@ -123,33 +125,18 @@ class wg:
         border: none;
         }}"""
 
+        style_header = f"""
+        QHeaderView::section {{
+        background-color: rgb{couleur_bg};
+        color: rgb{couleur_fg};
+        border-style: none;
+        }}
+        QHeaderView::section:checked {{
+        background-color: rgb{couleur_bg_checked};
+        color: rgb{couleur_fg_checked};
+        }}"""
+
         for wg in wgs:
-            style_header = {
-                "th": f"""
-                QHeaderView::section {{
-                background-color: rgb{colors.get("c1")};
-                color: rgb{colors.get("c3")};
-                border-style: none;
-                }}
-                QHeaderView::section:checked {{
-                background-color: rgb{colors.get("c1")};
-                color: rgb{colors.get("c3")};
-                }}
-                """,
-
-                "tr": f"""
-                QHeaderView::section {{
-                background-color: rgb{colors.get("c1")};
-                color: rgb{colors.get("c3")};
-                border-style: none;
-                }}
-                QHeaderView::section:checked {{
-                background-color: rgb{colors.get("c1")};
-                color: rgb{colors.get("c3")};
-                }}
-                """
-            }
-
             wg.setStyleSheet(style_main)
             wg.horizontalHeader().setStyleSheet(style_header)
             wg.verticalHeader().setStyleSheet(style_header)
