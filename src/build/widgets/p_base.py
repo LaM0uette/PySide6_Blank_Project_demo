@@ -110,8 +110,15 @@ HD_FONT_SIZE = P_font().h3()
 ########################
 ##     PARAMETRES     ##
 ########################
-TEXT_VISIBLE = True
+ALIGN = P_align().l().c()
+EDIT = False
 SB_BUTTONS_TYPE = P_pb_sb().no()
+TEXT_VISIBLE = True
+WORD_WRAP = True
+NO_FOCUS = False
+VAL_MIN = 0
+VAL_MAX = 100
+VAL_PAS = 1
 
 
 #####################
@@ -155,15 +162,9 @@ BD_RGBA = (0, 0, 0, 0)
 
 
 ### PARAMETRES
-ALIGN = P_align().l().c()
-EDIT = False
-WORD_WRAP = True
 SCROLL = P_scroll().nd().nd()
 HEADER = P_header().tt()
 PB_SB = P_pb_sb().no()
 PAD = 0
 PB_SIDE = "tb"
-NO_FOCUS = False
-VAL_MIN = 0
-VAL_MAX = 100
-VAL_PAS = 1
+

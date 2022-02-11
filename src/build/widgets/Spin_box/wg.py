@@ -38,7 +38,7 @@ class wg:
 
                  buttons_type=p_base.SB_BUTTONS_TYPE,
                  pb_side,
-                 no_focus,
+                 no_focus=p_base.NO_FOCUS,
 
                  valeur_min=p_base.VAL_MIN,
                  valeur_max=p_base.VAL_MAX,
