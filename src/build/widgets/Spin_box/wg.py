@@ -1,7 +1,7 @@
 from PySide6 import QtWidgets, QtCore
 
-from ..Attrs import Attrs
 from ....build import *
+from .. import p_base
 
 
 class wg:
@@ -12,8 +12,24 @@ class wg:
                  dim,
                  tm,
                  font,
-                 bd,
-                 rd,
+
+                 bordure_width_top=p_base.BD_WIDTH,
+                 bordure_width_bottom=p_base.BD_WIDTH,
+                 bordure_width_right=p_base.BD_WIDTH,
+                 bordure_width_left=p_base.BD_WIDTH,
+                 bordure_style_top=p_base.BD_STYLE,
+                 bordure_style_bottom=p_base.BD_STYLE,
+                 bordure_style_right=p_base.BD_STYLE,
+                 bordure_style_left=p_base.BD_STYLE,
+                 bordure_couleur_top=p_base.BD_COULEUR,
+                 bordure_couleur_bottom=p_base.BD_COULEUR,
+                 bordure_couleur_right=p_base.BD_COULEUR,
+                 bordure_couleur_left=p_base.BD_COULEUR,
+                 rayon_top_left=p_base.RD_WG,
+                 rayon_top_right=p_base.RD_WG,
+                 rayon_bottom_right=p_base.RD_WG,
+                 rayon_bottom_left=p_base.RD_WG,
+
                  align,
                  pb_sb,
                  pb_side,
@@ -21,112 +37,36 @@ class wg:
                  val_min,
                  val_max,
                  step,
-                 cur
+
+                 curseur=p_base.CUR,
+                 curseur_le=p_base.CUR_LE
     ):
-        bds = Attrs(bd=bd).GET_BD()
-        rds = Attrs(rd=rd).GET_RD()
+        style = f"""
+        /* SPIN_BOX */
+        QSpinBox, QDoubleSpinBox {{
+        background-color: rgb{colors.get("c1")};
+        color: rgb{colors.get("c3")};
+        selection-background-color: rgba(0, 0, 0, 0);
+        selection-color: rgb{colors.get("c3")}
+        }}
 
-        dim_h = 0 if dim["h"] is None else dim["h"]
-
-        if no_focus and colors_type != "tr":
-            select_bg = f"""
-            selection-background-color: rgba(0, 0, 0, 0);
-            selection-color: rgb{colors.get("c3")};"""
-        elif no_focus:
-            select_bg = f"""
-            selection-background-color: rgba(0, 0, 0, 0);
-            selection-color: rgb{colors.get("c1")};"""
-        else:
-            select_bg = f"""
-            selection-background-color: rgb{colors.get("c3")};
-            selection-color: rgb{colors.get("c1")};"""
-
-        if pb_sb == QtWidgets.QAbstractSpinBox.ButtonSymbols.PlusMinus:
-            pb_up = P_img().plus()
-            pb_down = P_img().moins()
-        elif pb_sb == QtWidgets.QAbstractSpinBox.ButtonSymbols.UpDownArrows:
-            pb_up = P_img().fleche_top()
-            pb_down = P_img().fleche_bottom()
-        else:
-            pb_up = ""
-            pb_down = ""
+        /* BORDURES */
+        .QSpinBox, .QDoubleSpinBox {{
+        border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
+        border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
+        border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
+        border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
+        }}
+        
+        /* RAYONS */
+        .QSpinBox, .QDoubleSpinBox {{
+        border-top-left-radius: {rayon_top_left}px;
+        border-top-right-radius: {rayon_top_right}px;
+        border-bottom-right-radius: {rayon_bottom_right}px;
+        border-bottom-left-radius: {rayon_bottom_left}px;
+        }}"""
 
         for wg in wgs:
-            style_gen = f"""
-            /* BORDURES */
-            .QSpinBox#{wg.objectName()}, .QDoubleSpinBox#{wg.objectName()} {{
-            border-width: {bd.get("px")}px;
-            border-style: solid;
-            border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
-            }}
-
-            /* RAYONS */
-            .QSpinBox#{wg.objectName()}, .QDoubleSpinBox#{wg.objectName()} {{
-            border-top-left-radius: {rds.get("r1")}px;
-            border-top-right-radius: {rds.get("r2")}px;
-            border-bottom-right-radius: {rds.get("r4")}px;
-            border-bottom-left-radius: {rds.get("r3")}px;
-            }}
-            """
-            style_type = {
-                "th": f"""
-                /* SPIN_BOX */
-                QSpinBox, QDoubleSpinBox {{
-                background-color: rgb{colors.get("c1")};
-                color: rgb{colors.get("c3")};
-                {select_bg}
-                }}""",
-
-                "tr": f"""
-                /* SPIN_BOX */
-                QSpinBox, QDoubleSpinBox {{
-                background-color: rgba(0, 0, 0, 0);
-                color: rgb{colors.get("c1")};
-                {select_bg}
-                }}
-                """
-            }
-            style_pb = {
-                "lr": f"""
-                    QSpinBox::up-button, QDoubleSpinBox::up-button  {{
-                    subcontrol-origin: margin;
-                    subcontrol-position: center right;
-                    right: {(dim_h - (dim_h  * P_style().x_ico())) / 2}px;
-                    image: url({pb_up + tm + ".svg"});
-                    height: {dim_h * P_style().x_ico() / 1.6}px;
-                    width: {dim_h * P_style().x_ico() / 1.6}px;
-                    }}
-
-                    QSpinBox::down-button, QDoubleSpinBox::down-button  {{
-                    subcontrol-origin: margin;
-                    subcontrol-position: center left;
-                    left: {(dim_h - (dim_h  * P_style().x_ico())) / 2}px;
-                    image: url({pb_down + tm + ".svg"});
-                    height: {dim_h * P_style().x_ico() / 1.6}px;
-                    width: {dim_h * P_style().x_ico() / 1.6}px;
-                    }}""",
-
-                "tb": f"""
-                    QSpinBox::up-button, QDoubleSpinBox::up-button  {{
-                    subcontrol-position: top right;
-                    top: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
-                    right: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
-                    image: url({pb_up + tm + ".svg"});
-                    height: {dim_h  * P_style().x_ico() / 2}px;
-                    width: {dim_h  * P_style().x_ico() / 2}px;
-                    }}
-
-                    QSpinBox::down-button, QDoubleSpinBox::down-button  {{
-                    subcontrol-position: bottom right;
-                    bottom: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
-                    right: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
-                    image: url({pb_down + tm + ".svg"});
-                    height: {dim_h  * P_style().x_ico() / 2}px;
-                    width: {dim_h  * P_style().x_ico() / 2}px;
-                    }}"""
-            }
-            style = style_gen + style_type.get(colors_type) + style_pb.get(pb_side)
-
             wg.setStyleSheet(style)
 
             try: Fct(wg=wg, w=dim.get("w"), h=dim.get("h")).DIM()
@@ -146,9 +86,47 @@ class wg:
                 wg.setButtonSymbols(pb_sb)
                 if no_focus: wg.setFocusPolicy(QtCore.Qt.NoFocus)
 
-                wg.setCursor(Fct(cur=cur).CUR())
-                if colors_type != "tr":
-                    wg.lineEdit().setCursor(Fct(cur=P_cur().IBeam()).CUR())
-                else:
-                    wg.lineEdit().setCursor(Fct(cur=P_cur().souris_main()).CUR())
+                wg.setCursor(Fct(cur=curseur).CUR())
+                wg.lineEdit().setCursor(Fct(cur=curseur_le).CUR())
             except: pass
+
+
+"""
+"lr":
+                    QSpinBox::up-button, QDoubleSpinBox::up-button  {{
+                    subcontrol-origin: margin;
+                    subcontrol-position: center right;
+                    right: {(dim_h - (dim_h  * P_style().x_ico())) / 2}px;
+                    image: url({pb_up + tm + ".svg"});
+                    height: {dim_h * P_style().x_ico() / 1.6}px;
+                    width: {dim_h * P_style().x_ico() / 1.6}px;
+                    }}
+
+                    QSpinBox::down-button, QDoubleSpinBox::down-button  {{
+                    subcontrol-origin: margin;
+                    subcontrol-position: center left;
+                    left: {(dim_h - (dim_h  * P_style().x_ico())) / 2}px;
+                    image: url({pb_down + tm + ".svg"});
+                    height: {dim_h * P_style().x_ico() / 1.6}px;
+                    width: {dim_h * P_style().x_ico() / 1.6}px;
+                    }}
+
+                "tb": 
+                    QSpinBox::up-button, QDoubleSpinBox::up-button  {{
+                    subcontrol-position: top right;
+                    top: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
+                    right: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
+                    image: url({pb_up + tm + ".svg"});
+                    height: {dim_h  * P_style().x_ico() / 2}px;
+                    width: {dim_h  * P_style().x_ico() / 2}px;
+                    }}
+
+                    QSpinBox::down-button, QDoubleSpinBox::down-button  {{
+                    subcontrol-position: bottom right;
+                    bottom: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
+                    right: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
+                    image: url({pb_down + tm + ".svg"});
+                    height: {dim_h  * P_style().x_ico() / 2}px;
+                    width: {dim_h  * P_style().x_ico() / 2}px;
+                    }}
+"""

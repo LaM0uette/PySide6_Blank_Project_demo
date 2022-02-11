@@ -117,6 +117,7 @@ TEXT_VISIBLE = True
 ##     CURSEUR     ##
 #####################
 CUR = P_cur().souris()
+CUR_LE = P_cur().IBeam()
 
 
 

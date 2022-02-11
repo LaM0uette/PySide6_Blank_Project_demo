@@ -119,11 +119,17 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         Slider.Base_rond(self.vsd_demo)
         ### /QSlider ###
 
-        def SPIN_BOX():
-            Spin_box.plus_minus(self.sb_demo).th()
-            Spin_box.up_down(self.sb_demo_2).th()
-            Spin_box.plus_minus(self.sb_demo_3).th_lr()
-            Spin_box.base(self.dsb_demo).tr()
+
+        ### QSpinBox ###
+        Spin_box.Base_th(self.hsd_demo)
+        Spin_box.Base_rond(self.vsd_demo)
+        ### /QSpinBox ###
+        # Spin_box.plus_minus(self.sb_demo).th()
+        # Spin_box.up_down(self.sb_demo_2).th()
+        # Spin_box.plus_minus(self.sb_demo_3).th_lr()
+        # Spin_box.base(self.dsb_demo).tr()
+
+
         def TABLE_WIDGET():
             Table_widget.base(self.tw_demo_th).th()
             Table_widget.base(self.tw_demo_tr).tr()
@@ -142,9 +148,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: SPIN_BOX()
-            except: print(f"SPIN_BOX{err}")
 
             try: TABLE_WIDGET()
             except: print(f"TABLE_WIDGET{err}")
