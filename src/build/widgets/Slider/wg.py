@@ -99,7 +99,7 @@ class wg:
         /* CURSEUR_V */
         QSlider::handle:vertical {{
         background-color: rgba{couleur_bg_cur};
-        border-radius: 5px;
+        border-radius: 0px;
         height: 20px;
         width: 20px;
         }}
