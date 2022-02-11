@@ -38,7 +38,7 @@ class wg:
                  rayon_bottom_right=p_base.RD_WG,
                  rayon_bottom_left=p_base.RD_WG,
 
-                 align=p_base.ALIGN,
+                 align=P_align().c().c(),
 
                  buttons_type=p_base.SB_BUTTONS_TYPE,
                  no_focus=p_base.NO_FOCUS,
