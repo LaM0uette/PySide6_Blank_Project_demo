@@ -6,7 +6,7 @@ class wg:
     def __init__(self,
                  *wgs,
 
-                 couleur_bg=p_base.COULEUR_BG,
+                 couleur_bg=(0, 0, 0, 0),
                  couleur_bg_barre=p_base.COULEUR_BG_BARRE,
                  couleur_bg_barre_hover=p_base.COULEUR_BG_BARRE_HOVER,
                  couleur_bg_barre_pressed=p_base.COULEUR_BG_BARRE_PRESSED,
