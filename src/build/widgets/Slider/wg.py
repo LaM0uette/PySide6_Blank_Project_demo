@@ -11,7 +11,7 @@ class wg:
                  couleur_bg_pressed=p_base.COULEUR_BG_PRESSED,
                  couleur_bg_barre=p_base.COULEUR_BG_BARRE,
                  couleur_bg_barre_hover=p_base.COULEUR_BG_BARRE_HOVER,
-                 couleur_bg_barre_pressed=p_base.COULEUR_BG_BARRE_PRESED,
+                 couleur_bg_barre_pressed=p_base.COULEUR_BG_BARRE_PRESSED,
                  couleur_bg_cur=p_base.COULEUR_BG_CUR,
                  couleur_bg_cur_hover=p_base.COULEUR_BG_CUR_HOVER,
                  couleur_bg_cur_pressed=p_base.COULEUR_BG_CUR_PRESSED,
@@ -72,6 +72,9 @@ class wg:
         QSlider::groove:horizontal:hover {{
         background-color: rgb{couleur_bg_barre_hover};
         }}
+        QSlider::groove:horizontal:pressed {{
+        background-color: rgb{couleur_bg_barre_pressed};
+        }}
         
         /* CURSEUR_H */
         QSlider::handle:horizontal {{
@@ -94,10 +97,13 @@ class wg:
         border-radius: 5px;
         width: 20px;
         margin: 0px;
-        background-color: rgb{colors.get("c3")};
+        background-color: rgb{couleur_bg_barre};
         }}
         QSlider::groove:vertical:hover {{
-        background-color: rgb{colors.get("c3")};
+        background-color: rgb{couleur_bg_barre_hover};
+        }}
+        QSlider::groove:vertical:pressed {{
+        background-color: rgb{couleur_bg_barre_pressed};
         }}
         
         /* CURSEUR_V */
@@ -107,13 +113,13 @@ class wg:
         width: 20px;
         margin: 0px -10px;
         border-radius: 5px;
-        background-color: rgb{colors.get("c1")};
+        background-color: rgb{couleur_bg_cur};
         }}
         QSlider::handle:vertical:hover {{
-        background-color: rgb{colors.get("bn1")};
+        background-color: rgb{couleur_bg_cur_hover};
         }}
         QSlider::handle:vertical:pressed {{
-        background-color: rgb{colors.get("bn2")};
+        background-color: rgb{couleur_bg_cur_pressed};
         }}
                 
          /* BORDURES */
