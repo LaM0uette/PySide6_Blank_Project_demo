@@ -7,15 +7,19 @@ from .. import p_base
 class wg:
     def __init__(self,
                  *wgs,
-                 colors,
+
+                 couleur_bg=p_base.COULEUR_BG,
+                 couleur_bg_hover=p_base.COULEUR_BG_HOVER,
+                 couleur_bg_selection=p_base.COULEUR_BG_SELECTION,
+                 couleur_fg=p_base.COULEUR_FG,
+                 couleur_fg_hover=p_base.COULEUR_FG_HOVER,
+                 couleur_fg_selection=p_base.COULEUR_FG_SELECTION,
 
                  dim_width=p_base.DIM_WG_WIDTH,
                  dim_height=p_base.DIM_WG_HEIGHT,
 
                  police=p_base.FONT,
                  police_taille=p_base.FONT_SIZE,
-
-                 tm,
 
                  bordure_width_top=p_base.BD_WIDTH,
                  bordure_width_bottom=p_base.BD_WIDTH,
@@ -37,7 +41,6 @@ class wg:
                  align=p_base.ALIGN,
 
                  buttons_type=p_base.SB_BUTTONS_TYPE,
-                 pb_side,
                  no_focus=p_base.NO_FOCUS,
 
                  valeur_min=p_base.VAL_MIN,
@@ -50,10 +53,10 @@ class wg:
         style = f"""
         /* SPIN_BOX */
         QSpinBox, QDoubleSpinBox {{
-        background-color: rgb{colors.get("c1")};
-        color: rgb{colors.get("c3")};
-        selection-background-color: rgba(0, 0, 0, 0);
-        selection-color: rgb{colors.get("c3")}
+        background-color: rgba{couleur_bg};
+        color: rgb{couleur_fg};
+        selection-background-color: rgba{couleur_bg_selection};
+        selection-color: rgb{couleur_fg_selection}
         }}
 
         /* BORDURES */
