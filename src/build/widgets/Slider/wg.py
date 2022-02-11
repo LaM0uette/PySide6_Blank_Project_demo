@@ -21,8 +21,8 @@ class wg:
                  couleur_degrade_1=p_base.COULEUR_BG,
                  couleur_degrade_2=p_base.COULEUR_BG,
 
-                 dim_width=p_base.DIM_WG_WIDTH,
-                 dim_height=p_base.DIM_WG_HEIGHT,
+                 dim_width=p_base.DIM_WIDTH,
+                 dim_height=p_base.DIM_HEIGHT,
                  margin_top=0,
                  margin_bottom=0,
                  margin_right=0,
