@@ -159,4 +159,4 @@ PB_SIDE = "tb"
 NO_FOCUS = False
 VAL_MIN = 0
 VAL_MAX = 100
-STEP = 1
+VAL_PAS = 1

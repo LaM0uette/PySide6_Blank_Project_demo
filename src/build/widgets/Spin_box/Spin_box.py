@@ -18,7 +18,7 @@ class rtn:
                  no_focus=p_base.NO_FOCUS,
                  val_min=p_base.VAL_MIN,
                  val_max=p_base.VAL_MAX,
-                 step=p_base.STEP,
+                 step=p_base.VAL_PAS,
                  cur=p_base.CUR,
                  ):
         self.wgs = wgs

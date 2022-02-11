@@ -5,12 +5,23 @@ from .. import p_base
 class wg:
     def __init__(self,
                  *wgs,
-                 colors_type,
-                 colors,
-                 gradient_colors,
+
+                 couleur_bg=p_base.COULEUR_BG,
+                 couleur_bg_hover=p_base.COULEUR_BG_HOVER,
+                 couleur_bg_pressed=p_base.COULEUR_BG_PRESSED,
+                 couleur_fg=p_base.COULEUR_FG,
+                 couleur_fg_hover=p_base.COULEUR_FG_HOVER,
+                 couleur_fg_pressed=p_base.COULEUR_FG_PRESSED,
+
+                 couleur_degrade_1=p_base.COULEUR_BG,
+                 couleur_degrade_2=p_base.COULEUR_BG,
 
                  dim_width=p_base.DIM_WG_WIDTH,
                  dim_height=p_base.DIM_WG_HEIGHT,
+
+                 valeur_min=p_base.VAL_MINL,
+                 valeur_max=p_base.VAL_MAX,
+                 valeur_pas=p_base.VAL_PAS,
 
                  bordure_width_top=p_base.BD_WIDTH,
                  bordure_width_bottom=p_base.BD_WIDTH,
@@ -29,12 +40,8 @@ class wg:
                  rayon_bottom_right=p_base.RD_WG,
                  rayon_bottom_left=p_base.RD_WG,
 
-                 val_min,
-                 val_max,
-                 step,
-
                  curseur=p_base.CUR
-    ):
+                 ):
         style = f"""
          /* BORDURES */
          .QSlider {{
@@ -58,9 +65,9 @@ class wg:
             try:
                 Fct(wg=wg, w=dim_width, h=dim_height).DIM()
 
-                wg.setMinimum(val_min)
-                wg.setMaximum(val_max)
-                wg.setSingleStep(step)
+                wg.setMinimum(valeur_min)
+                wg.setMaximum(valeur_max)
+                wg.setSingleStep(valeur_pas)
 
                 wg.setCursor(Fct(cur=curseur).CUR())
             except: pass
