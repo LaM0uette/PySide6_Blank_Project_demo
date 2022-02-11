@@ -18,17 +18,17 @@ class wg:
 
                  dim_width=p_base.DIM_WIDTH,
                  dim_height=p_base.DIM_HEIGHT,
-                 hauteur_barre_h=20,
+                 hauteur_barre_h=10,
                  hauteur_main_h=20,
                  largeur_main_h=20,
-                 largeur_barre_v=20,
+                 largeur_barre_v=10,
                  hauteur_main_v=20,
                  largeur_main_v=20,
 
-                 margin_top=0,
-                 margin_bottom=0,
-                 margin_right=0,
-                 margin_left=0,
+                 margin_top=-10,
+                 margin_bottom=-10,
+                 margin_right=-10,
+                 margin_left=-10,
 
                  valeur_min=p_base.VAL_MIN,
                  valeur_max=p_base.VAL_MAX,
@@ -57,10 +57,6 @@ class wg:
         /* SLIDER  */
         QSlider {{
         background-color: rgba{couleur_bg};
-        margin-top: {margin_top}px;
-        margin-bottom: {margin_bottom}px;
-        margin_right: {margin_right}px;
-        margin_left: {margin_left}px;
         }}
         
         /* BARRE_H */
@@ -80,6 +76,10 @@ class wg:
         background-color: rgba{couleur_bg_cur};
         height: {hauteur_main_h}px;
         width: {largeur_main_h}px;
+        margin-top: {margin_top}px;
+        margin-bottom: {margin_bottom}px;
+        margin_right: {margin_right}px;
+        margin_left: {margin_left}px;
         }}
         QSlider::handle:horizontal:hover {{
         background-color: rgba{couleur_bg_cur_hover};
@@ -105,6 +105,10 @@ class wg:
         background-color: rgba{couleur_bg_cur};
         height: {hauteur_main_v}px;
         width: {largeur_main_v}px;
+        margin-top: {margin_top}px;
+        margin-bottom: {margin_bottom}px;
+        margin_right: {margin_right}px;
+        margin_left: {margin_left}px;
         }}
         QSlider::handle:vertical:hover {{
         background-color: rgba{couleur_bg_cur_hover};
