@@ -28,7 +28,7 @@ class wg:
                  margin_right=0,
                  margin_left=0,
 
-                 valeur_min=p_base.VAL_MINL,
+                 valeur_min=p_base.VAL_MIN,
                  valeur_max=p_base.VAL_MAX,
                  valeur_pas=p_base.VAL_PAS,
 
