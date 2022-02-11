@@ -66,10 +66,13 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         Push_button.dlg_nok_inv(self.pb_rgb_annuler)
         ### /QPushButton ###
 
+
+        ### QSpinBox ###
+        Spin_box.rgb_bd_th3(self.sb_rgb_red, self.sb_rgb_green, self.sb_rgb_blue)
+        ### /QSpinBox ###
+
         def SLIDER():
             Slider.rgb(self.sd_rgb_red, self.sd_rgb_green, self.sd_rgb_blue).rond()
-        def SPIN_BOX():
-            Spin_box.rgb(self.sb_rgb_red, self.sb_rgb_green, self.sb_rgb_blue).bd_th3()
         def TEXT_EDIT():
             Text_edit.h3(self.le_rgb_hex).tr()
 
@@ -79,9 +82,6 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
 
             try: SLIDER()
             except: print(f"SLIDER{err}")
-
-            try: SPIN_BOX()
-            except: print(f"SPIN_BOX{err}")
 
             try: TEXT_EDIT()
             except: print(f"TEXT_EDIT{err}")
