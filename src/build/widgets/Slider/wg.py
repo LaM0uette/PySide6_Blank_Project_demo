@@ -8,42 +8,61 @@ class wg:
                  colors_type,
                  colors,
                  gradient_colors,
-                 dim,
-                 bd,
-                 rd,
+
+                 dim_width=p_base.DIM_WG_WIDTH,
+                 dim_height=p_base.DIM_WG_HEIGHT,
+
+                 bordure_width_top=p_base.BD_WIDTH,
+                 bordure_width_bottom=p_base.BD_WIDTH,
+                 bordure_width_right=p_base.BD_WIDTH,
+                 bordure_width_left=p_base.BD_WIDTH,
+                 bordure_style_top=p_base.BD_STYLE,
+                 bordure_style_bottom=p_base.BD_STYLE,
+                 bordure_style_right=p_base.BD_STYLE,
+                 bordure_style_left=p_base.BD_STYLE,
+                 bordure_couleur_top=p_base.BD_COULEUR,
+                 bordure_couleur_bottom=p_base.BD_COULEUR,
+                 bordure_couleur_right=p_base.BD_COULEUR,
+                 bordure_couleur_left=p_base.BD_COULEUR,
+                 rayon_top_left=p_base.RD_WG,
+                 rayon_top_right=p_base.RD_WG,
+                 rayon_bottom_right=p_base.RD_WG,
+                 rayon_bottom_left=p_base.RD_WG,
+
                  val_min,
                  val_max,
                  step,
-                 cur
+
+                 curseur=p_base.CUR
     ):
         style = f"""
-                            /* BORDURES */
-                            .QSlider#{wg.objectName()} {{
-                            border-width: {bd.get("px")}px;
-                            border-style: solid;
-                            border-color: rgba{bds.get("o1")} rgba{bds.get("o2")} rgba{bds.get("o3")} rgba{bds.get("o4")};
-                            }}
-
-                            /* RAYONS */
-                            .QSlider#{wg.objectName()} {{
-                            border-top-left-radius: {rds.get("r1")}px;
-                            border-top-right-radius: {rds.get("r2")}px;
-                            border-bottom-right-radius: {rds.get("r4")}px;
-                            border-bottom-left-radius: {rds.get("r3")}px;
-                            }}
-                    """
+         /* BORDURES */
+         .QSlider {{
+         border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
+         border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
+         border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
+         border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
+         }}
+         
+         /* RAYONS */
+         .QSlider {{
+         border-top-left-radius: {rayon_top_left}px;
+         border-top-right-radius: {rayon_top_right}px;
+         border-bottom-right-radius: {rayon_bottom_right}px;
+         border-bottom-left-radius: {rayon_bottom_left}px;
+         }}"""
         for wg in wgs:
 
             wg.setStyleSheet(style)
 
             try:
-                Fct(wg=wg, w=dim.get("w"), h=dim.get("h")).DIM()
+                Fct(wg=wg, w=dim_width, h=dim_height).DIM()
 
                 wg.setMinimum(val_min)
                 wg.setMaximum(val_max)
                 wg.setSingleStep(step)
 
-                wg.setCursor(Fct(cur=cur).CUR())
+                wg.setCursor(Fct(cur=curseur).CUR())
             except: pass
 
 
