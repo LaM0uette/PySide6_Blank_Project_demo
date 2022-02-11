@@ -122,7 +122,6 @@ class wg:
         border-bottom-left-radius: {rayon_bottom_left}px;
         }}"""
         for wg in wgs:
-
             wg.setStyleSheet(style)
 
             try:
