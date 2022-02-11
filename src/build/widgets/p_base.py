@@ -111,6 +111,7 @@ HD_FONT_SIZE = P_font().h3()
 ##     PARAMETRES     ##
 ########################
 TEXT_VISIBLE = True
+SB_BUTTONS_TYPE = P_pb_sb().no()
 
 
 #####################

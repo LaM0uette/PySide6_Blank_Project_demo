@@ -34,17 +34,19 @@ class wg:
                  rayon_bottom_right=p_base.RD_WG,
                  rayon_bottom_left=p_base.RD_WG,
 
-                 align,
-                 pb_sb,
+                 align=p_base.ALIGN,
+
+                 buttons_type=p_base.SB_BUTTONS_TYPE,
                  pb_side,
                  no_focus,
-                 val_min,
-                 val_max,
-                 step,
+
+                 valeur_min=p_base.VAL_MIN,
+                 valeur_max=p_base.VAL_MAX,
+                 valeur_pas=p_base.VAL_PAS,
 
                  curseur=p_base.CUR,
                  curseur_le=p_base.CUR_LE
-    ):
+                 ):
         style = f"""
         /* SPIN_BOX */
         QSpinBox, QDoubleSpinBox {{
@@ -80,14 +82,13 @@ class wg:
                 wg.setFont(Fct(font=police, font_size=police_taille).FONT())
 
                 wg.setAlignment(align)
-                wg.setButtonSymbols(pb_sb)
 
-                wg.setMinimum(val_min)
-                wg.setMaximum(val_max)
-                wg.setSingleStep(step)
+                wg.setMinimum(valeur_min)
+                wg.setMaximum(valeur_max)
+                wg.setSingleStep(valeur_pas)
 
                 wg.setFrame(QtWidgets.QFrame.NoFrame)
-                wg.setButtonSymbols(pb_sb)
+                wg.setButtonSymbols(buttons_type)
                 if no_focus: wg.setFocusPolicy(QtCore.Qt.NoFocus)
 
                 wg.setCursor(Fct(cur=curseur).CUR())
