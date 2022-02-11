@@ -39,32 +39,6 @@ class wg:
                  bordure_couleur_bottom=p_base.BD_COULEUR,
                  bordure_couleur_right=p_base.BD_COULEUR,
                  bordure_couleur_left=p_base.BD_COULEUR,
-
-                 bordure_barre_width_top=p_base.BD_WIDTH,
-                 bordure_barre_width_bottom=p_base.BD_WIDTH,
-                 bordure_barre_width_right=p_base.BD_WIDTH,
-                 bordure_barre_width_left=p_base.BD_WIDTH,
-                 bordure_barre_style_top=p_base.BD_STYLE,
-                 bordure_barre_style_bottom=p_base.BD_STYLE,
-                 bordure_barre_style_right=p_base.BD_STYLE,
-                 bordure_barre_style_left=p_base.BD_STYLE,
-                 bordure_barre_couleur_top=p_base.BD_COULEUR,
-                 bordure_barre_couleur_bottom=p_base.BD_COULEUR,
-                 bordure_barre_couleur_right=p_base.BD_COULEUR,
-                 bordure_barre_couleur_left=p_base.BD_COULEUR,
-
-                 bordure_cur_width_top=p_base.BD_WIDTH,
-                 bordure_cur_width_bottom=p_base.BD_WIDTH,
-                 bordure_cur_width_right=p_base.BD_WIDTH,
-                 bordure_cur_width_left=p_base.BD_WIDTH,
-                 bordure_cur_style_top=p_base.BD_STYLE,
-                 bordure_cur_style_bottom=p_base.BD_STYLE,
-                 bordure_cur_style_right=p_base.BD_STYLE,
-                 bordure_cur_style_left=p_base.BD_STYLE,
-                 bordure_cur_couleur_top=p_base.BD_COULEUR,
-                 bordure_cur_couleur_bottom=p_base.BD_COULEUR,
-                 bordure_cur_couleur_right=p_base.BD_COULEUR,
-                 bordure_cur_couleur_left=p_base.BD_COULEUR,
                  rayon_top_left=p_base.RD_WG,
                  rayon_top_right=p_base.RD_WG,
                  rayon_bottom_right=p_base.RD_WG,
@@ -86,10 +60,6 @@ class wg:
         QSlider::groove:horizontal {{
         background-color: rgba{couleur_bg_barre};
         height: 20px;
-        border-top: {bordure_barre_width_top}px {bordure_barre_style_top} rgba{bordure_barre_couleur_top};
-        border-bottom: {bordure_barre_width_bottom}px {bordure_barre_style_bottom} rgba{bordure_barre_couleur_bottom};
-        border-right: {bordure_barre_width_right}px {bordure_barre_style_right} rgba{bordure_barre_couleur_right};
-        border-left: {bordure_barre_width_left}px {bordure_barre_style_left} rgba{bordure_barre_couleur_left};
         }}
         QSlider::groove:horizontal:hover {{
         background-color: rgba{couleur_bg_barre_hover};
@@ -103,10 +73,6 @@ class wg:
         background-color: rgba{couleur_bg_cur};
         height: 20px;
         width: 20px;
-        border-top: {bordure_cur_width_top}px {bordure_cur_style_top} rgba{bordure_cur_couleur_top};
-        border-bottom: {bordure_cur_width_bottom}px {bordure_cur_style_bottom} rgba{bordure_cur_couleur_bottom};
-        border-right: {bordure_cur_width_right}px {bordure_cur_style_right} rgba{bordure_cur_couleur_right};
-        border-left: {bordure_cur_width_left}px {bordure_cur_style_left} rgba{bordure_cur_couleur_left};
         }}
         QSlider::handle:horizontal:hover {{
         background-color: rgba{couleur_bg_cur_hover};
@@ -119,10 +85,6 @@ class wg:
         QSlider::groove:vertical {{
         background-color: rgba{couleur_bg_barre};
         width: 20px;
-        border-top: {bordure_barre_width_top}px {bordure_barre_style_top} rgba{bordure_barre_couleur_top};
-        border-bottom: {bordure_barre_width_bottom}px {bordure_barre_style_bottom} rgba{bordure_barre_couleur_bottom};
-        border-right: {bordure_barre_width_right}px {bordure_barre_style_right} rgba{bordure_barre_couleur_right};
-        border-left: {bordure_barre_width_left}px {bordure_barre_style_left} rgba{bordure_barre_couleur_left};
         }}
         QSlider::groove:vertical:hover {{
         background-color: rgba{couleur_bg_barre_hover};
@@ -136,10 +98,6 @@ class wg:
         background-color: rgba{couleur_bg_cur};
         height: 20px;
         width: 20px;
-        border-top: {bordure_cur_width_top}px {bordure_cur_style_top} rgba{bordure_cur_couleur_top};
-        border-bottom: {bordure_cur_width_bottom}px {bordure_cur_style_bottom} rgba{bordure_cur_couleur_bottom};
-        border-right: {bordure_cur_width_right}px {bordure_cur_style_right} rgba{bordure_cur_couleur_right};
-        border-left: {bordure_cur_width_left}px {bordure_cur_style_left} rgba{bordure_cur_couleur_left};
         }}
         QSlider::handle:vertical:hover {{
         background-color: rgba{couleur_bg_cur_hover};
