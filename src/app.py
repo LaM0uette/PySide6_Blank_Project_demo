@@ -121,8 +121,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         ### QSpinBox ###
-        Spin_box.Base_th(self.sb_demo)
-        Spin_box.Base_tr(self.sb_demo_3)
+        Spin_box.Plus_moins_th(self.sb_demo)
+        Spin_box.Plus_moins_tr(self.sb_demo_3)
         ### /QSpinBox ###
         #    Spin_box.plus_minus(self.sb_demo).th()
         # Spin_box.up_down(self.sb_demo_2).th()

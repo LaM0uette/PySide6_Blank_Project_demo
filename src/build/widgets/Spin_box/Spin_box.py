@@ -6,13 +6,10 @@ import importlib
 importlib.reload(wg)
 
 
-class Base_th:
+class Plus_moins_th:
     def __init__(self, *wgs):
-        wg.wg(*wgs,
-              tm_up="th2",
-              tm_down="th2"
-              )
-class Base_tr:
+        wg.wg(*wgs)
+class Plus_moins_tr:
     def __init__(self, *wgs):
         wg.wg(*wgs,
               couleur_bg=(0, 0, 0, 0),

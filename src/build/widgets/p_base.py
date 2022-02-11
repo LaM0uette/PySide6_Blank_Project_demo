@@ -68,8 +68,8 @@ TM_CHECK = "th2"
 TM_CHECK_HOVER = "th2"
 TM_DROITE = "th3"
 TM_GAUCHE = "th3"
-TM_UP = "th3"
-TM_DOWN = "th3"
+TM_UP = "th2"
+TM_DOWN = "th2"
 
 IMG_WIDTH = P_dim().h9() * P_style().x_ico()
 IMG_HEIGHT = P_dim().h9() * P_style().x_ico()
