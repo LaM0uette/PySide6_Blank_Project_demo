@@ -58,6 +58,24 @@ class wg:
         selection-background-color: rgb{couleur_bg_selection};
         selection-color: rgb{couleur_fg_selection}
         }}
+        
+        QSpinBox::up-button, QDoubleSpinBox::up-button  {{
+        subcontrol-position: top right;
+        top: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
+        right: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
+        image: url({pb_up + tm + ".svg"});
+        height: {dim_h  * P_style().x_ico() / 2}px;
+        width: {dim_h  * P_style().x_ico() / 2}px;
+        }}
+
+        QSpinBox::down-button, QDoubleSpinBox::down-button  {{
+        subcontrol-position: bottom right;
+        bottom: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
+        right: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
+        image: url({pb_down + tm + ".svg"});
+        height: {dim_h  * P_style().x_ico() / 2}px;
+        width: {dim_h  * P_style().x_ico() / 2}px;
+        }}
 
         /* BORDURES */
         .QSpinBox, .QDoubleSpinBox {{
@@ -101,7 +119,7 @@ class wg:
 
 """
 "lr":
-                    QSpinBox::up-button, QDoubleSpinBox::up-button  {{
+                   QSpinBox::up-button, QDoubleSpinBox::up-button  {{
                     subcontrol-origin: margin;
                     subcontrol-position: center right;
                     right: {(dim_h - (dim_h  * P_style().x_ico())) / 2}px;
@@ -117,24 +135,8 @@ class wg:
                     image: url({pb_down + tm + ".svg"});
                     height: {dim_h * P_style().x_ico() / 1.6}px;
                     width: {dim_h * P_style().x_ico() / 1.6}px;
-                    }}
+                    }} 
 
                 "tb": 
-                    QSpinBox::up-button, QDoubleSpinBox::up-button  {{
-                    subcontrol-position: top right;
-                    top: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
-                    right: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
-                    image: url({pb_up + tm + ".svg"});
-                    height: {dim_h  * P_style().x_ico() / 2}px;
-                    width: {dim_h  * P_style().x_ico() / 2}px;
-                    }}
-
-                    QSpinBox::down-button, QDoubleSpinBox::down-button  {{
-                    subcontrol-position: bottom right;
-                    bottom: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
-                    right: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
-                    image: url({pb_down + tm + ".svg"});
-                    height: {dim_h  * P_style().x_ico() / 2}px;
-                    width: {dim_h  * P_style().x_ico() / 2}px;
-                    }}
+                    
 """
