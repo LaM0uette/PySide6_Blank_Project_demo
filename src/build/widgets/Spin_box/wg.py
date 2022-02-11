@@ -7,9 +7,14 @@ from .. import p_base
 class wg:
     def __init__(self,
                  *wgs,
-                 colors_type,
                  colors,
-                 dim,
+
+                 dim_width=p_base.DIM_WG_WIDTH,
+                 dim_height=p_base.DIM_WG_HEIGHT,
+
+                 police=p_base.FONT,
+                 police_taille=p_base.FONT_SIZE,
+
                  tm,
                  font,
 
@@ -69,11 +74,11 @@ class wg:
         for wg in wgs:
             wg.setStyleSheet(style)
 
-            try: Fct(wg=wg, w=dim.get("w"), h=dim.get("h")).DIM()
+            try: Fct(wg=wg, w=dim_width, h=dim_height).DIM()
             except: pass
 
             try:
-                wg.setFont(Fct(font_size=font).FONT())
+                wg.setFont(Fct(font=police, font_size=police_taille).FONT())
 
                 wg.setAlignment(align)
                 wg.setButtonSymbols(pb_sb)
