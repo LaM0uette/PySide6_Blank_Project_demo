@@ -123,11 +123,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         ### QSpinBox ###
         Spin_box.Plus_moins_th(self.sb_demo)
         Spin_box.Plus_moins_tr(self.sb_demo_3)
+        Spin_box.Up_down_th(self.sb_demo_2)
+        Spin_box.Up_down_tr(self.dsb_demo)
         ### /QSpinBox ###
-        #    Spin_box.plus_minus(self.sb_demo).th()
-        # Spin_box.up_down(self.sb_demo_2).th()
-        #    Spin_box.plus_minus(self.sb_demo_3).th_lr()
-        # Spin_box.base(self.dsb_demo).tr()
 
 
         def TABLE_WIDGET():
