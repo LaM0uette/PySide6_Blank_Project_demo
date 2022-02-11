@@ -25,6 +25,18 @@ class wg:
                  tm_up=p_base.TM_UP,
                  img_down=p_base.IMG_DOWN,
                  tm_down=p_base.TM_DOWN,
+                 img_up_width=p_base.IMG_WIDTH,
+                 img_up_height=p_base.IMG_HEIGHT,
+                 img_down_width=p_base.IMG_WIDTH,
+                 img_down_height=p_base.IMG_HEIGHT,
+                 img_up_top=0,
+                 img_up_bottom=0,
+                 img_up_right=0,
+                 img_up_left=0,
+                 img_down_top=0,
+                 img_down_bottom=0,
+                 img_down_right=0,
+                 img_down_left=0,
 
                  bordure_width_top=p_base.BD_WIDTH,
                  bordure_width_bottom=p_base.BD_WIDTH,
@@ -66,20 +78,24 @@ class wg:
         
         QSpinBox::up-button, QDoubleSpinBox::up-button  {{
         subcontrol-position: top right;
-        top: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
-        right: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
+        top: {img_up_top}px;
+        bottom: {img_up_bottom}px;
+        right: {img_up_right}px;
+        left: {img_up_left}px;
         image: url({f"{img_up}{tm_up}.svg"});
-        height: {dim_h  * P_style().x_ico() / 2}px;
-        width: {dim_h  * P_style().x_ico() / 2}px;
+        height: {img_up_height}px;
+        width: {img_up_width}px;
         }}
 
         QSpinBox::down-button, QDoubleSpinBox::down-button  {{
         subcontrol-position: bottom right;
-        bottom: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
-        right: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
+        top: {img_down_top}px;
+        bottom: {img_down_bottom}px;
+        right: {img_down_right}px;
+        left: {img_down_left}px;
         image: url({f"{img_down}{tm_down}.svg"});
-        height: {dim_h  * P_style().x_ico() / 2}px;
-        width: {dim_h  * P_style().x_ico() / 2}px;
+        height: {img_down_height}px;
+        width: {img_down_width}px;
         }}
 
         /* BORDURES */
