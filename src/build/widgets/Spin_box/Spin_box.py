@@ -14,4 +14,5 @@ class Base_tr:
         wg.wg(*wgs,
               couleur_bg=(0, 0, 0, 0),
               couleur_bg_hover=(0, 0, 0, 0),
+              no_focus=True
               )
