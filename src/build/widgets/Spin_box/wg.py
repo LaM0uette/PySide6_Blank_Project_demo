@@ -21,6 +21,11 @@ class wg:
                  police=p_base.FONT,
                  police_taille=p_base.FONT_SIZE,
 
+                 img_up=p_base.IMG_UP,
+                 tm_up=p_base.TM_UP,
+                 img_down=p_base.IMG_DOWN,
+                 tm_down=p_base.TM_DOWN,
+
                  bordure_width_top=p_base.BD_WIDTH,
                  bordure_width_bottom=p_base.BD_WIDTH,
                  bordure_width_right=p_base.BD_WIDTH,
@@ -63,7 +68,7 @@ class wg:
         subcontrol-position: top right;
         top: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
         right: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
-        image: url({pb_up + tm + ".svg"});
+        image: url({f"{img_up}{tm_up}.svg"});
         height: {dim_h  * P_style().x_ico() / 2}px;
         width: {dim_h  * P_style().x_ico() / 2}px;
         }}
@@ -72,7 +77,7 @@ class wg:
         subcontrol-position: bottom right;
         bottom: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
         right: {(dim_h - (dim_h  * P_style().x_ico())) / 4}px;
-        image: url({pb_down + tm + ".svg"});
+        image: url({f"{img_down}{tm_down}.svg"});
         height: {dim_h  * P_style().x_ico() / 2}px;
         width: {dim_h  * P_style().x_ico() / 2}px;
         }}

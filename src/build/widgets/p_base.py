@@ -59,6 +59,8 @@ IMG_DEROULANT = P_img().fleche_bottom()
 IMG_DEROULANT_HOVER = P_img().fleche_bottom()
 IMG_DROITE = P_img().fleche_droite()
 IMG_GAUCHE = P_img().fleche_gauche()
+IMG_UP = P_img().plus()
+IMG_DOWN = P_img().moins()
 
 TM_UNCHECK = "th2"
 TM_HOVER = "bn1"
@@ -66,6 +68,8 @@ TM_CHECK = "th2"
 TM_CHECK_HOVER = "th2"
 TM_DROITE = "th3"
 TM_GAUCHE = "th3"
+TM_UP = "th3"
+TM_DOWN = "th3"
 
 IMG_WIDTH = P_dim().h9() * P_style().x_ico()
 IMG_HEIGHT = P_dim().h9() * P_style().x_ico()
