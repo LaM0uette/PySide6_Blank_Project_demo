@@ -114,9 +114,11 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         ### /QScrollBoxArea ###
 
 
-        def SLIDER():
-            Slider.base(self.hsd_demo).th()
-            Slider.base(self.vsd_demo).rond()
+        ### QSlider ###
+        Slider.Base_th(self.hsd_demo)
+        Slider.Base_rond(self.vsd_demo)
+        ### /QSlider ###
+
         def SPIN_BOX():
             Spin_box.plus_minus(self.sb_demo).th()
             Spin_box.up_down(self.sb_demo_2).th()
@@ -140,9 +142,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: SLIDER()
-            except: print(f"SLIDER{err}")
 
             try: SPIN_BOX()
             except: print(f"SPIN_BOX{err}")
