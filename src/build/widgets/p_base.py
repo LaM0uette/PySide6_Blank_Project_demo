@@ -101,6 +101,8 @@ SCROLL_HANDLE_MIN_WIDTH = 30
 SCROLL_HANDLE_MIN_HEIGHT = 30
 SCROLL_H = QtCore.Qt.ScrollBarAsNeeded
 SCROLL_V = QtCore.Qt.ScrollBarAsNeeded
+HEADER_H = True
+HEADER_V = True
 
 
 ####################

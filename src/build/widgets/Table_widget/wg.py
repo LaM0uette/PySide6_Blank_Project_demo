@@ -7,16 +7,55 @@ from ....build import *
 class wg:
     def __init__(self,
                  *wgs,
-                 colors_type,
-                 colors,
-                 dim,
-                 font,
-                 hd_font,
-                 bd,
-                 rd,
-                 scroll,
-                 header,
-                 cur
+
+                 couleur_bg=p_base.COULEUR_BG,
+                 couleur_bg_checked=p_base.COULEUR_BG_CHECKED,
+                 couleur_bg_checked_hover=p_base.COULEUR_BG_CHECKED_HOVER,
+                 couleur_bg_item=p_base.COULEUR_BG_ITEM,
+                 couleur_bg_item_hover=p_base.COULEUR_BG_ITEM_HOVER,
+                 couleur_fg=p_base.COULEUR_FG,
+                 couleur_fg_checked=p_base.COULEUR_FG_CHECKED,
+                 couleur_fg_checked_hover=p_base.COULEUR_FG_CHECKED_HOVER,
+                 couleur_fg_item=p_base.COULEUR_FG_ITEM,
+                 couleur_fg_item_hover=p_base.COULEUR_FG_ITEM_HOVER,
+
+                 dim_width=p_base.DIM_WG_WIDTH,
+                 dim_height=p_base.DIM_WG_HEIGHT,
+
+                 police=p_base.FONT,
+                 police_taille=p_base.FONT_SIZE,
+                 police_hd_taille=p_base.HD_FONT_SIZE,
+
+                 bordure_width_top=p_base.BD_WIDTH,
+                 bordure_width_bottom=p_base.BD_WIDTH,
+                 bordure_width_right=p_base.BD_WIDTH,
+                 bordure_width_left=p_base.BD_WIDTH,
+                 bordure_style_top=p_base.BD_STYLE,
+                 bordure_style_bottom=p_base.BD_STYLE,
+                 bordure_style_right=p_base.BD_STYLE,
+                 bordure_style_left=p_base.BD_STYLE,
+                 bordure_couleur_top=p_base.BD_COULEUR,
+                 bordure_couleur_bottom=p_base.BD_COULEUR,
+                 bordure_couleur_right=p_base.BD_COULEUR,
+                 bordure_couleur_left=p_base.BD_COULEUR,
+                 rayon_top_left=p_base.RD_WG,
+                 rayon_top_right=p_base.RD_WG,
+                 rayon_bottom_right=p_base.RD_WG,
+                 rayon_bottom_left=p_base.RD_WG,
+                 scroll_bg=p_base.SCROLL_BG,
+                 scroll_handle_bg=p_base.SCROLL_HANDLE_BG,
+                 scroll_handle_fg=p_base.SCROLL_HANDLE_FG,
+                 scroll_width=p_base.SCROLL_WIDTH,
+                 scroll_height=p_base.SCROLL_HEIGHT,
+                 scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
+                 scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
+                 scroll_h=p_base.SCROLL_H,
+                 scroll_v=p_base.SCROLL_V,
+
+                 header_h=p_base.HEADER_H,
+                 header_v=p_base.HEADER_V,
+
+                 curseur=p_base.CUR
     ):
         bds = Attrs(bd=bd).GET_BD()
         rds = Attrs(rd=rd).GET_RD()
@@ -156,18 +195,18 @@ class wg:
             wg.verticalHeader().setStyleSheet(style_header)
 
             try:
-                Fct(wg=wg, w=dim.get("w"), h=dim.get("h")).DIM()
-                wg.setFont(Fct(font_size=font).FONT())
-                wg.horizontalHeader().setFont(Fct(font_size=hd_font).FONT())
-                wg.verticalHeader().setFont(Fct(font_size=hd_font).FONT())
+                Fct(wg=wg, w=dim_width, h=dim_height).DIM()
+                wg.setFont(Fct(font=police, font_size=police_taille).FONT())
+                wg.horizontalHeader().setFont(Fct(font_size=police_hd_taille).FONT())
+                wg.verticalHeader().setFont(Fct(font_size=police_hd_taille).FONT())
 
-                wg.setHorizontalScrollBarPolicy(scroll.get("h"))
-                wg.setVerticalScrollBarPolicy(scroll.get("v"))
+                wg.setHorizontalScrollBarPolicy(scroll_h)
+                wg.setVerticalScrollBarPolicy(scroll_v)
                 wg.horizontalHeader().setVisible(header.get("h"))
                 wg.verticalHeader().setVisible(header.get("v"))
 
-                wg.setCursor(Fct(cur=cur).CUR())
-                wg.viewport().setCursor(Fct(cur=cur).CUR())
+                wg.setCursor(Fct(cur=curseur).CUR())
+                wg.viewport().setCursor(Fct(cur=curseur).CUR())
 
                 wg.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
                 wg.horizontalHeader().setDefaultAlignment(QtCore.Qt.AlignCenter)
