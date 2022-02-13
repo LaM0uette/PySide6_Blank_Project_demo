@@ -1,12 +1,10 @@
-from ....build import *
-from .. import p_base
-
+from src.build import *
+from src.build.widgets import p_base
 
 class wg:
     def __init__(
             self,
             *wgs,
-
             couleur_bg=p_base.COULEUR_BG,
             couleur_bg_hover=p_base.COULEUR_BG_HOVER,
             couleur_bg_checked=p_base.COULEUR_BG_CHECKED,
@@ -15,14 +13,11 @@ class wg:
             couleur_fg_hover=p_base.COULEUR_FG_HOVER,
             couleur_fg_checked=p_base.COULEUR_FG_CHECKED,
             couleur_fg_checked_hover=p_base.COULEUR_FG_CHECKED_HOVER,
-
             dim_width=p_base.DIM_WG_WIDTH,
             dim_height=p_base.DIM_WG_HEIGHT,
             spacing=p_base.SPACING,
-
             police=p_base.FONT,
             police_taille=p_base.FONT_SIZE,
-
             img_uncheck=p_base.IMG_UNCHECK,
             tm_uncheck=p_base.TM_UNCHECK,
             img_hover=p_base.IMG_HOVER,
@@ -36,8 +31,7 @@ class wg:
             img_margin_top=0,
             img_margin_bottom=0,
             img_margin_right=0,
-            img_margin_left=(P_dim().h9()-(P_dim().h9() * P_style().x_ico()))/2,
-
+            img_margin_left=(P_dim().h9() - (P_dim().h9() * P_style().x_ico())) / 2,
             bordure_width_top=p_base.BD_WIDTH,
             bordure_width_bottom=p_base.BD_WIDTH,
             bordure_width_right=p_base.BD_WIDTH,
@@ -54,7 +48,6 @@ class wg:
             rayon_top_right=p_base.RD_WG,
             rayon_bottom_right=p_base.RD_WG,
             rayon_bottom_left=p_base.RD_WG,
-
             curseur=p_base.CUR
     ):
         style = f"""
@@ -98,7 +91,7 @@ class wg:
                     QCheckBox::indicator:checked:hover {{
                     image: url({f"{img_check_hover}{tm_check_hover}.svg"});
                     }}
-                    
+
                     /* BORDURES */
                     .QCheckBox {{
                     border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
@@ -106,7 +99,7 @@ class wg:
                     border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
                     border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
                     }}
-                    
+
                     /* RAYONS */
                     .QCheckBox {{
                     border-top-left-radius: {rayon_top_left}px;
@@ -124,3 +117,17 @@ class wg:
 
                 wg.setCursor(Fct(cur=curseur).CUR())
             except: pass
+
+
+class Base_th(wg):
+    def __init__(self, *wgs):
+        super().__init__(*wgs)
+class Base_tr(wg):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+              couleur_bg=(0, 0, 0, 0),
+              couleur_bg_hover=(0, 0, 0, 0),
+              couleur_bg_checked=(0, 0, 0, 0),
+              couleur_bg_checked_hover=(0, 0, 0, 0),
+              couleur_fg_checked=p_base.COULEURS.get("c3"),
+        )
