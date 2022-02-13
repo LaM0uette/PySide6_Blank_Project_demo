@@ -3,8 +3,7 @@ import importlib
 from . import p_base
 importlib.reload(p_base)
 
-from .classes import Check_box, Combo_box, Date_edit
-from .Frame import Frame
+from .classes import Check_box, Combo_box, Date_edit, Frame
 from .Label import Label
 from .List_widget import List_widget
 from .Progress_bar import Progress_bar
