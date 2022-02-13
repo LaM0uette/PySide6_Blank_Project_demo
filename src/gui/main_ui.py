@@ -106,7 +106,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -3744, 818, 5700))
+        self.vlay_wg.setGeometry(QRect(0, -4957, 818, 5700))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -1135,6 +1135,7 @@ class Ui_main(object):
         QTreeWidgetItem(__qtreewidgetitem2)
         QTreeWidgetItem(self.trw_demo_th)
         QTreeWidgetItem(self.trw_demo_th)
+        QTreeWidgetItem(self.trw_demo_th)
         __qtreewidgetitem3 = QTreeWidgetItem(self.trw_demo_th)
         __qtreewidgetitem4 = QTreeWidgetItem(__qtreewidgetitem3)
         QTreeWidgetItem(__qtreewidgetitem4)
@@ -1149,9 +1150,31 @@ class Ui_main(object):
         __qtreewidgetitem9 = QTreeWidgetItem(__qtreewidgetitem8)
         QTreeWidgetItem(__qtreewidgetitem9)
         QTreeWidgetItem(self.trw_demo_th)
+        QTreeWidgetItem(self.trw_demo_th)
+        QTreeWidgetItem(self.trw_demo_th)
         __qtreewidgetitem10 = QTreeWidgetItem(self.trw_demo_th)
         __qtreewidgetitem11 = QTreeWidgetItem(__qtreewidgetitem10)
-        QTreeWidgetItem(__qtreewidgetitem11)
+        __qtreewidgetitem12 = QTreeWidgetItem(__qtreewidgetitem11)
+        __qtreewidgetitem13 = QTreeWidgetItem(__qtreewidgetitem12)
+        __qtreewidgetitem14 = QTreeWidgetItem(__qtreewidgetitem13)
+        QTreeWidgetItem(__qtreewidgetitem14)
+        QTreeWidgetItem(__qtreewidgetitem14)
+        QTreeWidgetItem(__qtreewidgetitem14)
+        __qtreewidgetitem15 = QTreeWidgetItem(self.trw_demo_th)
+        __qtreewidgetitem16 = QTreeWidgetItem(__qtreewidgetitem15)
+        QTreeWidgetItem(__qtreewidgetitem16)
+        QTreeWidgetItem(self.trw_demo_th)
+        QTreeWidgetItem(self.trw_demo_th)
+        QTreeWidgetItem(self.trw_demo_th)
+        QTreeWidgetItem(self.trw_demo_th)
+        QTreeWidgetItem(self.trw_demo_th)
+        __qtreewidgetitem17 = QTreeWidgetItem(self.trw_demo_th)
+        __qtreewidgetitem18 = QTreeWidgetItem(__qtreewidgetitem17)
+        QTreeWidgetItem(__qtreewidgetitem18)
+        QTreeWidgetItem(__qtreewidgetitem18)
+        __qtreewidgetitem19 = QTreeWidgetItem(__qtreewidgetitem18)
+        QTreeWidgetItem(__qtreewidgetitem19)
+        QTreeWidgetItem(__qtreewidgetitem19)
         self.trw_demo_th.setObjectName(u"trw_demo_th")
 
         self.glay_fr_trw.addWidget(self.trw_demo_th, 2, 1, 1, 1)
@@ -1160,52 +1183,74 @@ class Ui_main(object):
 
         self.glay_fr_trw.addItem(self.verticalSpacer_24, 3, 1, 1, 1)
 
-        self.trw_demo_tr = QTreeWidget(self.fr_trw)
-        self.trw_demo_tr.headerItem().setText(0, "")
-        __qtreewidgetitem12 = QTreeWidgetItem(self.trw_demo_tr)
-        __qtreewidgetitem13 = QTreeWidgetItem(__qtreewidgetitem12)
-        __qtreewidgetitem14 = QTreeWidgetItem(__qtreewidgetitem13)
-        QTreeWidgetItem(__qtreewidgetitem14)
-        QTreeWidgetItem(self.trw_demo_tr)
-        QTreeWidgetItem(self.trw_demo_tr)
-        __qtreewidgetitem15 = QTreeWidgetItem(self.trw_demo_tr)
-        __qtreewidgetitem16 = QTreeWidgetItem(__qtreewidgetitem15)
-        QTreeWidgetItem(__qtreewidgetitem16)
-        QTreeWidgetItem(self.trw_demo_tr)
-        QTreeWidgetItem(self.trw_demo_tr)
-        __qtreewidgetitem17 = QTreeWidgetItem(self.trw_demo_tr)
-        __qtreewidgetitem18 = QTreeWidgetItem(__qtreewidgetitem17)
-        __qtreewidgetitem19 = QTreeWidgetItem(__qtreewidgetitem18)
-        QTreeWidgetItem(__qtreewidgetitem19)
-        QTreeWidgetItem(self.trw_demo_tr)
-        __qtreewidgetitem20 = QTreeWidgetItem(self.trw_demo_tr)
-        __qtreewidgetitem21 = QTreeWidgetItem(__qtreewidgetitem20)
-        QTreeWidgetItem(__qtreewidgetitem21)
-        QTreeWidgetItem(self.trw_demo_tr)
-        __qtreewidgetitem22 = QTreeWidgetItem(self.trw_demo_tr)
-        __qtreewidgetitem23 = QTreeWidgetItem(__qtreewidgetitem22)
-        QTreeWidgetItem(__qtreewidgetitem23)
-        self.trw_demo_tr.setObjectName(u"trw_demo_tr")
-        self.trw_demo_tr.setHeaderHidden(True)
-
-        self.glay_fr_trw.addWidget(self.trw_demo_tr, 4, 1, 1, 1)
-
         self.horizontalSpacer_8 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.glay_fr_trw.addItem(self.horizontalSpacer_8, 2, 2, 3, 1)
+        self.glay_fr_trw.addItem(self.horizontalSpacer_8, 2, 2, 4, 1)
 
         self.horizontalSpacer_7 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.glay_fr_trw.addItem(self.horizontalSpacer_7, 2, 0, 3, 1)
+        self.glay_fr_trw.addItem(self.horizontalSpacer_7, 2, 0, 4, 1)
+
+        self.verticalSpacer_23 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.glay_fr_trw.addItem(self.verticalSpacer_23, 1, 0, 1, 3)
 
         self.lb_trw_demo = QLabel(self.fr_trw)
         self.lb_trw_demo.setObjectName(u"lb_trw_demo")
 
         self.glay_fr_trw.addWidget(self.lb_trw_demo, 0, 0, 1, 3)
 
-        self.verticalSpacer_23 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Fixed)
+        self.trw_demo_tr = QTreeWidget(self.fr_trw)
+        self.trw_demo_tr.headerItem().setText(0, "")
+        __qtreewidgetitem20 = QTreeWidgetItem(self.trw_demo_tr)
+        __qtreewidgetitem21 = QTreeWidgetItem(__qtreewidgetitem20)
+        __qtreewidgetitem22 = QTreeWidgetItem(__qtreewidgetitem21)
+        QTreeWidgetItem(__qtreewidgetitem22)
+        QTreeWidgetItem(self.trw_demo_tr)
+        QTreeWidgetItem(self.trw_demo_tr)
+        QTreeWidgetItem(self.trw_demo_tr)
+        __qtreewidgetitem23 = QTreeWidgetItem(self.trw_demo_tr)
+        __qtreewidgetitem24 = QTreeWidgetItem(__qtreewidgetitem23)
+        QTreeWidgetItem(__qtreewidgetitem24)
+        QTreeWidgetItem(self.trw_demo_tr)
+        QTreeWidgetItem(self.trw_demo_tr)
+        __qtreewidgetitem25 = QTreeWidgetItem(self.trw_demo_tr)
+        __qtreewidgetitem26 = QTreeWidgetItem(__qtreewidgetitem25)
+        __qtreewidgetitem27 = QTreeWidgetItem(__qtreewidgetitem26)
+        QTreeWidgetItem(__qtreewidgetitem27)
+        QTreeWidgetItem(self.trw_demo_tr)
+        __qtreewidgetitem28 = QTreeWidgetItem(self.trw_demo_tr)
+        __qtreewidgetitem29 = QTreeWidgetItem(__qtreewidgetitem28)
+        QTreeWidgetItem(__qtreewidgetitem29)
+        QTreeWidgetItem(self.trw_demo_tr)
+        QTreeWidgetItem(self.trw_demo_tr)
+        QTreeWidgetItem(self.trw_demo_tr)
+        __qtreewidgetitem30 = QTreeWidgetItem(self.trw_demo_tr)
+        __qtreewidgetitem31 = QTreeWidgetItem(__qtreewidgetitem30)
+        __qtreewidgetitem32 = QTreeWidgetItem(__qtreewidgetitem31)
+        __qtreewidgetitem33 = QTreeWidgetItem(__qtreewidgetitem32)
+        __qtreewidgetitem34 = QTreeWidgetItem(__qtreewidgetitem33)
+        QTreeWidgetItem(__qtreewidgetitem34)
+        QTreeWidgetItem(__qtreewidgetitem34)
+        QTreeWidgetItem(__qtreewidgetitem34)
+        __qtreewidgetitem35 = QTreeWidgetItem(self.trw_demo_tr)
+        __qtreewidgetitem36 = QTreeWidgetItem(__qtreewidgetitem35)
+        QTreeWidgetItem(__qtreewidgetitem36)
+        QTreeWidgetItem(self.trw_demo_tr)
+        QTreeWidgetItem(self.trw_demo_tr)
+        QTreeWidgetItem(self.trw_demo_tr)
+        QTreeWidgetItem(self.trw_demo_tr)
+        QTreeWidgetItem(self.trw_demo_tr)
+        __qtreewidgetitem37 = QTreeWidgetItem(self.trw_demo_tr)
+        __qtreewidgetitem38 = QTreeWidgetItem(__qtreewidgetitem37)
+        QTreeWidgetItem(__qtreewidgetitem38)
+        QTreeWidgetItem(__qtreewidgetitem38)
+        __qtreewidgetitem39 = QTreeWidgetItem(__qtreewidgetitem38)
+        QTreeWidgetItem(__qtreewidgetitem39)
+        QTreeWidgetItem(__qtreewidgetitem39)
+        self.trw_demo_tr.setObjectName(u"trw_demo_tr")
 
-        self.glay_fr_trw.addItem(self.verticalSpacer_23, 1, 0, 1, 3)
+        self.glay_fr_trw.addWidget(self.trw_demo_tr, 4, 1, 1, 1)
 
 
         self.verticalLayout.addWidget(self.fr_trw)
@@ -1663,44 +1708,39 @@ class Ui_main(object):
         ___qtreewidgetitem5.setText(0, QCoreApplication.translate("main", u"New Item", None));
         ___qtreewidgetitem6 = self.trw_demo_th.topLevelItem(3)
         ___qtreewidgetitem6.setText(0, QCoreApplication.translate("main", u"New Item", None));
-        ___qtreewidgetitem7 = ___qtreewidgetitem6.child(0)
-        ___qtreewidgetitem7.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem7 = self.trw_demo_th.topLevelItem(4)
+        ___qtreewidgetitem7.setText(0, QCoreApplication.translate("main", u"New Item", None));
         ___qtreewidgetitem8 = ___qtreewidgetitem7.child(0)
         ___qtreewidgetitem8.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
-        ___qtreewidgetitem9 = self.trw_demo_th.topLevelItem(4)
-        ___qtreewidgetitem9.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem9 = ___qtreewidgetitem8.child(0)
+        ___qtreewidgetitem9.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
         ___qtreewidgetitem10 = self.trw_demo_th.topLevelItem(5)
         ___qtreewidgetitem10.setText(0, QCoreApplication.translate("main", u"New Item", None));
         ___qtreewidgetitem11 = self.trw_demo_th.topLevelItem(6)
         ___qtreewidgetitem11.setText(0, QCoreApplication.translate("main", u"New Item", None));
-        ___qtreewidgetitem12 = ___qtreewidgetitem11.child(0)
-        ___qtreewidgetitem12.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem12 = self.trw_demo_th.topLevelItem(7)
+        ___qtreewidgetitem12.setText(0, QCoreApplication.translate("main", u"New Item", None));
         ___qtreewidgetitem13 = ___qtreewidgetitem12.child(0)
         ___qtreewidgetitem13.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
         ___qtreewidgetitem14 = ___qtreewidgetitem13.child(0)
         ___qtreewidgetitem14.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
-        ___qtreewidgetitem15 = self.trw_demo_th.topLevelItem(7)
-        ___qtreewidgetitem15.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem15 = ___qtreewidgetitem14.child(0)
+        ___qtreewidgetitem15.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
         ___qtreewidgetitem16 = self.trw_demo_th.topLevelItem(8)
         ___qtreewidgetitem16.setText(0, QCoreApplication.translate("main", u"New Item", None));
-        ___qtreewidgetitem17 = ___qtreewidgetitem16.child(0)
-        ___qtreewidgetitem17.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem17 = self.trw_demo_th.topLevelItem(9)
+        ___qtreewidgetitem17.setText(0, QCoreApplication.translate("main", u"New Item", None));
         ___qtreewidgetitem18 = ___qtreewidgetitem17.child(0)
         ___qtreewidgetitem18.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
-        ___qtreewidgetitem19 = self.trw_demo_th.topLevelItem(9)
-        ___qtreewidgetitem19.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem19 = ___qtreewidgetitem18.child(0)
+        ___qtreewidgetitem19.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
         ___qtreewidgetitem20 = self.trw_demo_th.topLevelItem(10)
         ___qtreewidgetitem20.setText(0, QCoreApplication.translate("main", u"New Item", None));
-        ___qtreewidgetitem21 = ___qtreewidgetitem20.child(0)
-        ___qtreewidgetitem21.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
-        ___qtreewidgetitem22 = ___qtreewidgetitem21.child(0)
-        ___qtreewidgetitem22.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
-        self.trw_demo_th.setSortingEnabled(__sortingEnabled2)
-
-
-        __sortingEnabled3 = self.trw_demo_tr.isSortingEnabled()
-        self.trw_demo_tr.setSortingEnabled(False)
-        ___qtreewidgetitem23 = self.trw_demo_tr.topLevelItem(0)
+        ___qtreewidgetitem21 = self.trw_demo_th.topLevelItem(11)
+        ___qtreewidgetitem21.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem22 = self.trw_demo_th.topLevelItem(12)
+        ___qtreewidgetitem22.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem23 = self.trw_demo_th.topLevelItem(13)
         ___qtreewidgetitem23.setText(0, QCoreApplication.translate("main", u"New Item", None));
         ___qtreewidgetitem24 = ___qtreewidgetitem23.child(0)
         ___qtreewidgetitem24.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
@@ -1708,47 +1748,144 @@ class Ui_main(object):
         ___qtreewidgetitem25.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
         ___qtreewidgetitem26 = ___qtreewidgetitem25.child(0)
         ___qtreewidgetitem26.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
-        ___qtreewidgetitem27 = self.trw_demo_tr.topLevelItem(1)
-        ___qtreewidgetitem27.setText(0, QCoreApplication.translate("main", u"New Item", None));
-        ___qtreewidgetitem28 = self.trw_demo_tr.topLevelItem(2)
-        ___qtreewidgetitem28.setText(0, QCoreApplication.translate("main", u"New Item", None));
-        ___qtreewidgetitem29 = self.trw_demo_tr.topLevelItem(3)
+        ___qtreewidgetitem27 = ___qtreewidgetitem26.child(0)
+        ___qtreewidgetitem27.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem28 = ___qtreewidgetitem27.child(0)
+        ___qtreewidgetitem28.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem29 = ___qtreewidgetitem27.child(1)
         ___qtreewidgetitem29.setText(0, QCoreApplication.translate("main", u"New Item", None));
-        ___qtreewidgetitem30 = ___qtreewidgetitem29.child(0)
-        ___qtreewidgetitem30.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
-        ___qtreewidgetitem31 = ___qtreewidgetitem30.child(0)
-        ___qtreewidgetitem31.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
-        ___qtreewidgetitem32 = self.trw_demo_tr.topLevelItem(4)
-        ___qtreewidgetitem32.setText(0, QCoreApplication.translate("main", u"New Item", None));
-        ___qtreewidgetitem33 = self.trw_demo_tr.topLevelItem(5)
-        ___qtreewidgetitem33.setText(0, QCoreApplication.translate("main", u"New Item", None));
-        ___qtreewidgetitem34 = self.trw_demo_tr.topLevelItem(6)
+        ___qtreewidgetitem30 = ___qtreewidgetitem27.child(2)
+        ___qtreewidgetitem30.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem31 = self.trw_demo_th.topLevelItem(14)
+        ___qtreewidgetitem31.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem32 = ___qtreewidgetitem31.child(0)
+        ___qtreewidgetitem32.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem33 = ___qtreewidgetitem32.child(0)
+        ___qtreewidgetitem33.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem34 = self.trw_demo_th.topLevelItem(15)
         ___qtreewidgetitem34.setText(0, QCoreApplication.translate("main", u"New Item", None));
-        ___qtreewidgetitem35 = ___qtreewidgetitem34.child(0)
-        ___qtreewidgetitem35.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
-        ___qtreewidgetitem36 = ___qtreewidgetitem35.child(0)
-        ___qtreewidgetitem36.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
-        ___qtreewidgetitem37 = ___qtreewidgetitem36.child(0)
-        ___qtreewidgetitem37.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
-        ___qtreewidgetitem38 = self.trw_demo_tr.topLevelItem(7)
+        ___qtreewidgetitem35 = self.trw_demo_th.topLevelItem(16)
+        ___qtreewidgetitem35.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem36 = self.trw_demo_th.topLevelItem(17)
+        ___qtreewidgetitem36.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem37 = self.trw_demo_th.topLevelItem(18)
+        ___qtreewidgetitem37.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem38 = self.trw_demo_th.topLevelItem(19)
         ___qtreewidgetitem38.setText(0, QCoreApplication.translate("main", u"New Item", None));
-        ___qtreewidgetitem39 = self.trw_demo_tr.topLevelItem(8)
+        ___qtreewidgetitem39 = self.trw_demo_th.topLevelItem(20)
         ___qtreewidgetitem39.setText(0, QCoreApplication.translate("main", u"New Item", None));
         ___qtreewidgetitem40 = ___qtreewidgetitem39.child(0)
         ___qtreewidgetitem40.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
         ___qtreewidgetitem41 = ___qtreewidgetitem40.child(0)
         ___qtreewidgetitem41.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
-        ___qtreewidgetitem42 = self.trw_demo_tr.topLevelItem(9)
+        ___qtreewidgetitem42 = ___qtreewidgetitem40.child(1)
         ___qtreewidgetitem42.setText(0, QCoreApplication.translate("main", u"New Item", None));
-        ___qtreewidgetitem43 = self.trw_demo_tr.topLevelItem(10)
+        ___qtreewidgetitem43 = ___qtreewidgetitem40.child(2)
         ___qtreewidgetitem43.setText(0, QCoreApplication.translate("main", u"New Item", None));
         ___qtreewidgetitem44 = ___qtreewidgetitem43.child(0)
         ___qtreewidgetitem44.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
-        ___qtreewidgetitem45 = ___qtreewidgetitem44.child(0)
-        ___qtreewidgetitem45.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
-        self.trw_demo_tr.setSortingEnabled(__sortingEnabled3)
+        ___qtreewidgetitem45 = ___qtreewidgetitem43.child(1)
+        ___qtreewidgetitem45.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        self.trw_demo_th.setSortingEnabled(__sortingEnabled2)
 
         self.lb_trw_demo.setText(QCoreApplication.translate("main", u"QTreeWidget :", None))
+
+        __sortingEnabled3 = self.trw_demo_tr.isSortingEnabled()
+        self.trw_demo_tr.setSortingEnabled(False)
+        ___qtreewidgetitem46 = self.trw_demo_tr.topLevelItem(0)
+        ___qtreewidgetitem46.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem47 = ___qtreewidgetitem46.child(0)
+        ___qtreewidgetitem47.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem48 = ___qtreewidgetitem47.child(0)
+        ___qtreewidgetitem48.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem49 = ___qtreewidgetitem48.child(0)
+        ___qtreewidgetitem49.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem50 = self.trw_demo_tr.topLevelItem(1)
+        ___qtreewidgetitem50.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem51 = self.trw_demo_tr.topLevelItem(2)
+        ___qtreewidgetitem51.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem52 = self.trw_demo_tr.topLevelItem(3)
+        ___qtreewidgetitem52.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem53 = self.trw_demo_tr.topLevelItem(4)
+        ___qtreewidgetitem53.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem54 = ___qtreewidgetitem53.child(0)
+        ___qtreewidgetitem54.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem55 = ___qtreewidgetitem54.child(0)
+        ___qtreewidgetitem55.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem56 = self.trw_demo_tr.topLevelItem(5)
+        ___qtreewidgetitem56.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem57 = self.trw_demo_tr.topLevelItem(6)
+        ___qtreewidgetitem57.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem58 = self.trw_demo_tr.topLevelItem(7)
+        ___qtreewidgetitem58.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem59 = ___qtreewidgetitem58.child(0)
+        ___qtreewidgetitem59.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem60 = ___qtreewidgetitem59.child(0)
+        ___qtreewidgetitem60.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem61 = ___qtreewidgetitem60.child(0)
+        ___qtreewidgetitem61.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem62 = self.trw_demo_tr.topLevelItem(8)
+        ___qtreewidgetitem62.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem63 = self.trw_demo_tr.topLevelItem(9)
+        ___qtreewidgetitem63.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem64 = ___qtreewidgetitem63.child(0)
+        ___qtreewidgetitem64.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem65 = ___qtreewidgetitem64.child(0)
+        ___qtreewidgetitem65.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem66 = self.trw_demo_tr.topLevelItem(10)
+        ___qtreewidgetitem66.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem67 = self.trw_demo_tr.topLevelItem(11)
+        ___qtreewidgetitem67.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem68 = self.trw_demo_tr.topLevelItem(12)
+        ___qtreewidgetitem68.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem69 = self.trw_demo_tr.topLevelItem(13)
+        ___qtreewidgetitem69.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem70 = ___qtreewidgetitem69.child(0)
+        ___qtreewidgetitem70.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem71 = ___qtreewidgetitem70.child(0)
+        ___qtreewidgetitem71.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem72 = ___qtreewidgetitem71.child(0)
+        ___qtreewidgetitem72.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem73 = ___qtreewidgetitem72.child(0)
+        ___qtreewidgetitem73.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem74 = ___qtreewidgetitem73.child(0)
+        ___qtreewidgetitem74.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem75 = ___qtreewidgetitem73.child(1)
+        ___qtreewidgetitem75.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem76 = ___qtreewidgetitem73.child(2)
+        ___qtreewidgetitem76.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem77 = self.trw_demo_tr.topLevelItem(14)
+        ___qtreewidgetitem77.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem78 = ___qtreewidgetitem77.child(0)
+        ___qtreewidgetitem78.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem79 = ___qtreewidgetitem78.child(0)
+        ___qtreewidgetitem79.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem80 = self.trw_demo_tr.topLevelItem(15)
+        ___qtreewidgetitem80.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem81 = self.trw_demo_tr.topLevelItem(16)
+        ___qtreewidgetitem81.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem82 = self.trw_demo_tr.topLevelItem(17)
+        ___qtreewidgetitem82.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem83 = self.trw_demo_tr.topLevelItem(18)
+        ___qtreewidgetitem83.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem84 = self.trw_demo_tr.topLevelItem(19)
+        ___qtreewidgetitem84.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem85 = self.trw_demo_tr.topLevelItem(20)
+        ___qtreewidgetitem85.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem86 = ___qtreewidgetitem85.child(0)
+        ___qtreewidgetitem86.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem87 = ___qtreewidgetitem86.child(0)
+        ___qtreewidgetitem87.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem88 = ___qtreewidgetitem86.child(1)
+        ___qtreewidgetitem88.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem89 = ___qtreewidgetitem86.child(2)
+        ___qtreewidgetitem89.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        ___qtreewidgetitem90 = ___qtreewidgetitem89.child(0)
+        ___qtreewidgetitem90.setText(0, QCoreApplication.translate("main", u"New Subitem", None));
+        ___qtreewidgetitem91 = ___qtreewidgetitem89.child(1)
+        ___qtreewidgetitem91.setText(0, QCoreApplication.translate("main", u"New Item", None));
+        self.trw_demo_tr.setSortingEnabled(__sortingEnabled3)
+
         pass
     # retranslateUi
 

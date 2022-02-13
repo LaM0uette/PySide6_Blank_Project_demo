@@ -57,6 +57,7 @@ class wg:
         QHeaderView::section {{
         background-color: rgba{couleur_bg};
         color: rgb{couleur_fg};
+        border: none;
         }}
 
         QTreeWidget {{
