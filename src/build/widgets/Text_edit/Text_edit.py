@@ -15,6 +15,13 @@ class Base_tr:
               couleur_bg=(0, 0, 0, 0),
               )
 
+class tr_taille:
+    def __init__(self, *wgs, h):
+        wg.wg(*wgs,
+              couleur_bg=(0, 0, 0, 0),
+              police_taille=h
+              )
+
 
 class Demo_th:
     def __init__(self, *wgs):

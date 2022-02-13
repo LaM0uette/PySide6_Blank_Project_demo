@@ -111,21 +111,20 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         ### /QSpinBox ###
 
 
-        def TEXT_EDIT():
-            Text_edit.h1(self.le_opt_ft_texte_h1).tr()
-            Text_edit.h2(self.le_opt_ft_texte_h2).tr()
-            Text_edit.h3(self.le_opt_ft_texte_h3).tr()
-            Text_edit.h4(self.le_opt_ft_texte_h4).tr()
-            Text_edit.h5(self.le_opt_ft_texte_h5).tr()
+        ### QText ###
+        Text_edit.tr_taille(self.le_opt_ft_texte_h1, h=P_font().h1())
+        Text_edit.tr_taille(self.le_opt_ft_texte_h2, h=P_font().h2())
+        Text_edit.tr_taille(self.le_opt_ft_texte_h3, h=P_font().h3())
+        Text_edit.tr_taille(self.le_opt_ft_texte_h4, h=P_font().h4())
+        Text_edit.tr_taille(self.le_opt_ft_texte_h5, h=P_font().h5())
+        ### /QText ###
+
         def TREE_WIDGET():
             Tree_widget.base(self.trw_option).option()
 
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: TEXT_EDIT()
-            except: print(f"TEXT_EDIT{err}")
 
             try: TREE_WIDGET()
             except: print(f"TREE_WIDGET{err}")
