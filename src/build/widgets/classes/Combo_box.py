@@ -1,7 +1,7 @@
-from ....build import *
-from .. import p_base
+from src.build import *
+from src.build.widgets import p_base
 
-class wg:
+class Style:
     def __init__(
             self,
             *wgs,
@@ -149,17 +149,17 @@ class wg:
             except: pass
 
 
-class Base_th:
+class Base_th(Style):
     def __init__(self, *wgs):
-        wg.wg(*wgs,
+        super().__init__(*wgs,
            curseur=P_cur().main(),
            bordure_couleur_bottom=P_rgb().th2()+(255, ),
            bordure_width_bottom=P_style().bd()
-        )
-class Base_tr:
+    )
+class Base_tr(Style):
     def __init__(self, *wgs):
-        wg.wg(*wgs,
+        super().__init__(*wgs,
            couleur_bg=(0, 0, 0, 0),
            couleur_bg_hover=(0, 0, 0, 0),
            edit=True
-        )
+    )
