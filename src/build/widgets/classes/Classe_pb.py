@@ -1,6 +1,6 @@
 from PySide6 import QtCore
 
-from src.build import *
+from ....build import *
 
 
 class Classe_pb:

@@ -1,8 +1,8 @@
 from PySide6 import QtCore
 
-from src.build import *
-from src.build.widgets import p_base
-from src.config import vrb
+from ....build import *
+from ....build.widgets import p_base
+from ....config import vrb
 
 class Style:
     def __init__(self,
