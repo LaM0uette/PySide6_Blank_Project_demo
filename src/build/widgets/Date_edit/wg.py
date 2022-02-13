@@ -5,7 +5,7 @@ from .. import p_base
 from ....config import vrb
 
 
-class wg:
+class Style:
     def __init__(self,
                  *wgs,
                  couleur_bg=p_base.COULEUR_BG,
