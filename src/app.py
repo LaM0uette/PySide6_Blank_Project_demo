@@ -22,7 +22,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.setupUi(self)
         self.INIT()
 
-
     ############################
     ##     INITIALISATION     ##
     ############################
