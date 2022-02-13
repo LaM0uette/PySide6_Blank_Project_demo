@@ -1,18 +1,14 @@
 from PySide6 import QtWidgets
 
-from ....build import *
-from .. import p_base
+from src.build import *
+from src.build.widgets import p_base
 
-
-class wg:
+class Style:
     def __init__(self,
                  *wgs,
-
                  couleur_bg=p_base.COULEUR_BG,
-
                  dim_width=p_base.DIM_WIDTH,
                  dim_height=p_base.DIM_HEIGHT,
-
                  bordure_width_top=p_base.BD_WIDTH,
                  bordure_width_bottom=p_base.BD_WIDTH,
                  bordure_width_right=p_base.BD_WIDTH,
@@ -38,7 +34,7 @@ class wg:
                  scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
                  scroll_h=p_base.SCROLL_H,
                  scroll_v=p_base.SCROLL_V,
-    ):
+                 ):
         style = f"""
         .QScrollArea .QWidget {{
         background-color: rgba{couleur_bg};
@@ -51,7 +47,7 @@ class wg:
         border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
         border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
         }}
-        
+
         /* RAYONS */
         .QScrollArea {{
         border-top-left-radius: {rayon_top_left}px;
@@ -59,7 +55,7 @@ class wg:
         border-bottom-right-radius: {rayon_bottom_right}px;
         border-bottom-left-radius: {rayon_bottom_left}px;
         }}
-        
+
         /* SCROLL */
         QScrollArea QScrollBar {{
         background-color: rgb{scroll_bg};
@@ -75,7 +71,7 @@ class wg:
         QScrollArea QScrollBar::handle {{
         background-color: rgb{scroll_handle_fg};
         }}
-        
+
         QScrollArea QScrollBar::add-page, QScrollArea QScrollBar::sub-page {{
         background-color: rgb{scroll_handle_bg};
         border: none;
@@ -92,3 +88,20 @@ class wg:
 
                 wg.setFrameShape(QtWidgets.QFrame.NoFrame)
             except: pass
+
+
+class Base_th(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs)
+class Base_tr(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+              couleur_bg=(0, 0, 0, 0),
+    )
+
+
+class Demo(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+              couleur_bg=P_rgb().th1()+(255, ),
+    )

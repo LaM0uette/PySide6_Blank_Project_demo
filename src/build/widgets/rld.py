@@ -3,11 +3,8 @@ import importlib
 from . import p_base
 importlib.reload(p_base)
 
-from .classes import Check_box, Combo_box, Date_edit, Frame, Label, List_widget, Progress_bar
+from .classes import Check_box, Combo_box, Date_edit, Frame, Label, List_widget, Progress_bar, Radio_button, Scroll_box_area, Slider
 from .Push_button import Push_button
-from .Radio_button import Radio_button
-from .Scroll_box_area import Scroll_box_area
-from .Slider import Slider
 from .Spin_box import Spin_box
 from .Table_widget import Table_widget
 from .Text_edit import Text_edit

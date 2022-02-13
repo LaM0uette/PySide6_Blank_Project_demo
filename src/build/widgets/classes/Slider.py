@@ -1,11 +1,9 @@
-from ....build import *
-from .. import p_base
+from src.build import *
+from src.build.widgets import p_base
 
-
-class wg:
+class Style:
     def __init__(self,
                  *wgs,
-
                  couleur_bg=(0, 0, 0, 0),
                  couleur_bg_barre=p_base.COULEUR_BG_BARRE,
                  couleur_bg_barre_hover=p_base.COULEUR_BG_BARRE_HOVER,
@@ -15,7 +13,6 @@ class wg:
                  couleur_bg_cur_pressed=p_base.COULEUR_BG_CUR_PRESSED,
                  couleur_degrade_1=p_base.COULEUR_BG,
                  couleur_degrade_2=p_base.COULEUR_BG,
-
                  dim_width=p_base.DIM_WIDTH,
                  dim_height=p_base.DIM_HEIGHT,
                  hauteur_barre_h=10,
@@ -24,16 +21,13 @@ class wg:
                  largeur_barre_v=10,
                  hauteur_main_v=20,
                  largeur_main_v=20,
-
                  margin_top=-10,
                  margin_bottom=-10,
                  margin_right=-10,
                  margin_left=-10,
-
                  valeur_min=p_base.VAL_MIN,
                  valeur_max=p_base.VAL_MAX,
                  valeur_pas=p_base.VAL_PAS,
-
                  bordure_width_top=p_base.BD_WIDTH,
                  bordure_width_bottom=p_base.BD_WIDTH,
                  bordure_width_right=p_base.BD_WIDTH,
@@ -50,7 +44,6 @@ class wg:
                  rayon_top_right=p_base.RD_WG,
                  rayon_bottom_right=p_base.RD_WG,
                  rayon_bottom_left=p_base.RD_WG,
-
                  curseur=p_base.CUR
                  ):
         style = f"""
@@ -58,7 +51,7 @@ class wg:
         QSlider {{
         background-color: rgba{couleur_bg};
         }}
-        
+
         /* BARRE_H */
         QSlider::groove:horizontal {{
         background-color: rgba{couleur_bg_barre};
@@ -70,7 +63,7 @@ class wg:
         QSlider::groove:horizontal:pressed {{
         background-color: rgba{couleur_bg_barre_pressed};
         }}
-        
+
         /* CURSEUR_H */
         QSlider::handle:horizontal {{
         background-color: rgba{couleur_bg_cur};
@@ -87,7 +80,7 @@ class wg:
         QSlider::handle:horizontal:pressed {{
         background-color: rgba{couleur_bg_cur_pressed};
         }}
-        
+
         /* BARRE_V */
         QSlider::groove:vertical {{
         background-color: rgba{couleur_bg_barre};
@@ -99,7 +92,7 @@ class wg:
         QSlider::groove:vertical:pressed {{
         background-color: rgba{couleur_bg_barre_pressed};
         }}
-        
+
         /* CURSEUR_V */
         QSlider::handle:vertical {{
         background-color: rgba{couleur_bg_cur};
@@ -116,7 +109,7 @@ class wg:
         QSlider::handle:vertical:pressed {{
         background-color: rgba{couleur_bg_cur_pressed};
         }}
-                
+
         /* BORDURES */
         .QSlider {{
         border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
@@ -124,7 +117,7 @@ class wg:
         border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
         border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
         }}
-        
+
         /* RAYONS */
         .QSlider {{
         border-top-left-radius: {rayon_top_left}px;
@@ -145,6 +138,18 @@ class wg:
                 wg.setCursor(Fct(cur=curseur).CUR())
             except: pass
 
+
+class Base_th(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs)
+class Base_rond(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs)
+class rgb(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+              valeur_max=255
+    )
 
 """
 "rgb": 
