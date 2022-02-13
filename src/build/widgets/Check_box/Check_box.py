@@ -6,15 +6,15 @@ import importlib
 importlib.reload(wg)
 
 
-class Base_th:
+class Base_th(wg.wg):
     def __init__(self, *wgs):
-        wg.wg(*wgs)
-class Base_tr:
+        super().__init__(*wgs)
+class Base_tr(wg.wg):
     def __init__(self, *wgs):
-        wg.wg(*wgs,
+        super().__init__(*wgs,
               couleur_bg=(0, 0, 0, 0),
               couleur_bg_hover=(0, 0, 0, 0),
               couleur_bg_checked=(0, 0, 0, 0),
               couleur_bg_checked_hover=(0, 0, 0, 0),
               couleur_fg_checked=p_base.COULEURS.get("c3"),
-              )
+        )
