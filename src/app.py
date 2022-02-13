@@ -141,9 +141,12 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         Text_edit.Demo_tr(self.te_demo_tr, self.pte_demo_tr)
         ### /QText ###
 
-        def TOOL_BOX():
-            Tool_box.base(self.tb_demo_th).th()
-            Tool_box.base(self.tb_demo_tr).tr()
+
+        ### QToolBox ###
+        Tool_box.Base_th(self.tb_demo_th)
+        Tool_box.Base_tr(self.tb_demo_tr)
+        ### /QToolBox ###
+
         def TREE_WIDGET():
             Tree_widget.base(self.trw_demo_th).th()
             Tree_widget.base(self.trw_demo_tr).tr()
