@@ -50,7 +50,6 @@ class menu_top:
               curseur=curseur
               )
 
-
     def option(self):
         self.rtn(
             img_uncheck=P_img().option()
