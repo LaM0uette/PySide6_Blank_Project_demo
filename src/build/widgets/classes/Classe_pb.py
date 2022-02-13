@@ -3,7 +3,7 @@ from PySide6 import QtCore
 from src.build import *
 
 
-class Classe_wg:
+class Classe_pb:
     def __init__(self, **kwargs):
 
         self.kwargs = kwargs
