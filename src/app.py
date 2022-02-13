@@ -32,6 +32,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.setWindowOpacity(config.opacity)
         self._resize()
     def IN_CLASSE(self):
+        # Lancement des fonctions de MEF global
+        In_classe(ui=self)
+
         ### QCheckBox ###
         Check_box.Base_th(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3)
         Check_box.Base_tr(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3)
@@ -152,9 +155,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         Tree_widget.Base_th(self.trw_demo_th)
         Tree_widget.Base_tr(self.trw_demo_tr)
         ### /QTreeWidget ###
-
-        # Lancement des fonctions de MEF global
-        In_classe(ui=self)
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur=P_cur().souris()).CUR())
