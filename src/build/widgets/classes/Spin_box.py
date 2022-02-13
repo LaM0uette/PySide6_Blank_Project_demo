@@ -1,7 +1,7 @@
 from PySide6 import QtCore, QtWidgets
 
-from ....build import *
-from .. import p_base
+from src.build import *
+from src.build.widgets import p_base
 
 class Style:
     def __init__(self,
