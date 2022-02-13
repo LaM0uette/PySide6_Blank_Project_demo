@@ -48,7 +48,7 @@ class wg:
                  align=p_base.ALIGN,
     ):
         style = f"""
-        QLineEdit, QPlainTextEdit, QTextEdit {{
+        .QLineEdit, .QPlainTextEdit, .QTextEdit {{
         background-color: rgba{couleur_bg};
         selection-background-color: rgb{couleur_bg_selection};
         selection-color: rgb{couleur_fg_selection};
