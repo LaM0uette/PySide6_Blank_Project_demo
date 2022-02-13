@@ -1,13 +1,11 @@
 from PySide6 import QtWidgets
 
-from ....build import *
-from .. import p_base
+from src.build import *
+from src.build.widgets import p_base
 
-
-class wg:
+class Style:
     def __init__(self,
                  *wgs,
-
                  couleur_bg=p_base.COULEUR_BG,
                  couleur_bg_hover=p_base.COULEUR_BG_HOVER,
                  couleur_bg_checked=p_base.COULEUR_BG_CHECKED,
@@ -16,13 +14,10 @@ class wg:
                  couleur_fg_hover=p_base.COULEUR_FG_HOVER,
                  couleur_fg_checked=p_base.COULEUR_FG_CHECKED,
                  couleur_fg_checked_hover=p_base.COULEUR_FG_CHECKED_HOVER,
-
                  dim_width=p_base.DIM_WIDTH,
                  dim_height=p_base.DIM_HEIGHT,
-
                  police=p_base.FONT,
                  police_taille=p_base.FONT_SIZE,
-
                  bordure_width_top=p_base.BD_WIDTH,
                  bordure_width_bottom=p_base.BD_WIDTH,
                  bordure_width_right=p_base.BD_WIDTH,
@@ -46,9 +41,8 @@ class wg:
                  scroll_height=p_base.SCROLL_HEIGHT,
                  scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
                  scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
-
                  curseur=p_base.CUR
-    ):
+                 ):
         style = f"""
         QToolBox::tab {{
         background-color: rgba{couleur_bg};
@@ -77,7 +71,7 @@ class wg:
         border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
         border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
         }}
-        
+
         /* RAYONS */
         .QToolBox {{
         border-top-left-radius: {rayon_top_left}px;
@@ -101,7 +95,7 @@ class wg:
         .QToolBox QScrollBar::handle {{
         background-color: rgb{scroll_handle_fg};
         }}
-        
+
         .QToolBox QScrollBar::add-page, .QToolBox QScrollBar::sub-page {{
         background-color: rgb{scroll_handle_bg};
         border: none;
@@ -118,3 +112,17 @@ class wg:
 
                 wg.setCursor(Fct(cur=curseur).CUR())
             except: pass
+
+
+class Base_th(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs)
+class Base_tr(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+              couleur_bg=(0, 0, 0, 0),
+              couleur_bg_hover=(0, 0, 0, 0),
+              couleur_bg_checked=(0, 0, 0, 0),
+              couleur_bg_checked_hover=(0, 0, 0, 0),
+              couleur_fg_checked=p_base.COULEURS.get("c3"),
+    )
