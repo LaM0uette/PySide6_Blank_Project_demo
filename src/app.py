@@ -147,20 +147,11 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         Tool_box.Base_tr(self.tb_demo_tr)
         ### /QToolBox ###
 
-        def TREE_WIDGET():
-            Tree_widget.base(self.trw_demo_th).th()
-            Tree_widget.base(self.trw_demo_tr).tr()
 
-        # Lancement des fonctions de MEF
-        def _func_try():
-            err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: TOOL_BOX()
-            except: print(f"TOOL_BOX{err}")
-
-            try: TREE_WIDGET()
-            except: print(f"TREE_WIDGET{err}")
-        _func_try()
+        ### QTreeWidget ###
+        Tree_widget.Base_th(self.trw_demo_th)
+        Tree_widget.Base_tr(self.trw_demo_tr)
+        ### /QTreeWidget ###
 
         # Lancement des fonctions de MEF global
         In_classe(ui=self)

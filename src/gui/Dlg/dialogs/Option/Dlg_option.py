@@ -119,16 +119,10 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         Text_edit.tr_taille(self.le_opt_ft_texte_h5, h=P_font().h5())
         ### /QText ###
 
-        def TREE_WIDGET():
-            Tree_widget.base(self.trw_option).option()
 
-        # Lancement des fonctions de MEF
-        def _func_try():
-            err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: TREE_WIDGET()
-            except: print(f"TREE_WIDGET{err}")
-        _func_try()
+        ### QTreeWidget ###
+        Tree_widget.option(self.trw_option)
+        ### /QTreeWidget ###
 
         # Lancement des fonctions de MEF global
         In_classe(ui=self)
