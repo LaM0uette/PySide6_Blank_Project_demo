@@ -7,10 +7,19 @@ from .. import p_base
 class wg:
     def __init__(self,
                  *wgs,
-                 colors,
-                 dim,
-                 font,
-                 align,
+
+                 couleur_bg=p_base.COULEUR_BG,
+                 couleur_bg_placeholder=p_base.COULEUR_BG_PLACEHOLDER,
+                 couleur_bg_selection=p_base.COULEUR_BG_SELECTION,
+                 couleur_fg=p_base.COULEUR_FG,
+                 couleur_fg_placeholder=p_base.COULEUR_FG_PLACEHOLDER,
+                 couleur_fg_selection=p_base.COULEUR_FG_SELECTION,
+
+                 dim_width=p_base.DIM_WG_WIDTH,
+                 dim_height=p_base.DIM_WG_HEIGHT,
+
+                 police=p_base.FONT,
+                 police_taille=p_base.FONT_SIZE,
 
                  bordure_width_top=p_base.BD_WIDTH,
                  bordure_width_bottom=p_base.BD_WIDTH,
@@ -35,13 +44,15 @@ class wg:
                  scroll_height=p_base.SCROLL_HEIGHT,
                  scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
                  scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
+
+                 align=p_base.ALIGN,
     ):
         style = f"""
         QLineEdit, QPlainTextEdit, QTextEdit {{
-        background-color: rgb{colors.get("c1")};
-        color: rgb{colors.get("bn1")};
-        selection-background-color: rgb{colors.get("c3")};
-        selection-color: rgb{colors.get("c1")};
+        background-color: rgba{couleur_bg};
+        color: rgb{couleur_fg};
+        selection-background-color: rgba{couleur_bg_selection};
+        selection-color: rgb{couleur_fg_selection};
         }}
 
         /* BORDURES */
@@ -85,8 +96,8 @@ class wg:
             wg.setStyleSheet(style)
 
             try:
-                Fct(wg=wg, w=dim.get("w"), h=dim.get("h")).DIM()
-                wg.setFont(Fct(font_size=font).FONT())
+                Fct(wg=wg, w=dim_width, h=dim_height).DIM()
+                wg.setFont(Fct(font=police, font_size=police_taille).FONT())
 
                 wg.setAlignment(align)
 
@@ -96,12 +107,7 @@ class wg:
             try:wg.viewport().setCursor(Fct(cur=P_cur().IBeam()).CUR())
             except: pass
 
-            col1 = colors.get("c1")[0] - 20 if colors.get("c1")[0] > 160 else colors.get("c1")[0] + 20
-            col2 = colors.get("c1")[1] - 20 if colors.get("c1")[1] > 160 else colors.get("c1")[1] + 20
-            col3 = colors.get("c1")[2] - 20 if colors.get("c1")[2] > 160 else colors.get("c1")[2] + 20
-            colors_placeholder = (col1, col2, col3)
-
             pl = QtGui.QPalette()
-            pl.setColor(QtGui.QPalette.PlaceholderText, QtGui.QColor(*colors_placeholder))
-            pl.setColor(QtGui.QPalette.Text, QtGui.QColor(*colors.get("c3")))
+            pl.setColor(QtGui.QPalette.PlaceholderText, QtGui.QColor(*couleur_fg_placeholder))
+            pl.setColor(QtGui.QPalette.Text, QtGui.QColor(*couleur_fg))
             wg.setPalette(pl)
