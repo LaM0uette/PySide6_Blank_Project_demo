@@ -34,7 +34,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def IN_CLASSE(self):
         ### QCheckBox ###
         Check_box.Base_th(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3)
-        Check_box.test(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3)
+        Check_box.Base_tr(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3)
         ### /QCheckBox ###
 
 
