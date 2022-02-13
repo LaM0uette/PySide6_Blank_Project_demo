@@ -123,7 +123,7 @@ class Style:
 
             try:
                 if type_bouton is not None and type_bouton is not None:
-                    cls = Classe_wg.Classe_pb(wg=wg,
+                    cls = Classe_pb.Classe_pb(wg=wg,
                                               dim_ico=dim_height * x_ico,
                                               DIM_ICO=dim_height * X_ICO,
                                               img=img_uncheck,
