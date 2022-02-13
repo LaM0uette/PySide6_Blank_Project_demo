@@ -1,13 +1,11 @@
-from PySide6 import QtWidgets
+from PySide6 import QtCore, QtWidgets
 
-from ....build import *
-from .. import p_base
+from src.build import *
+from src.build.widgets import p_base
 
-
-class wg:
+class Style:
     def __init__(self,
                  *wgs,
-
                  couleur_bg=p_base.COULEUR_BG,
                  couleur_bg_item=p_base.COULEUR_BG_ITEM,
                  couleur_bg_item_hover=p_base.COULEUR_BG_ITEM_HOVER,
@@ -18,13 +16,10 @@ class wg:
                  couleur_fg_item_hover=p_base.COULEUR_FG_ITEM_HOVER,
                  couleur_fg_item_checked=p_base.COULEUR_FG_ITEM_CHECKED,
                  couleur_fg_item_checked_hover=p_base.COULEUR_FG_ITEM_CHECKED_HOVER,
-
                  dim_width=p_base.DIM_WIDTH,
                  dim_height=p_base.DIM_HEIGHT,
-
                  police=p_base.FONT,
                  police_taille=p_base.FONT_SIZE,
-
                  bordure_width_top=p_base.BD_WIDTH,
                  bordure_width_bottom=p_base.BD_WIDTH,
                  bordure_width_right=p_base.BD_WIDTH,
@@ -50,9 +45,8 @@ class wg:
                  scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
                  scroll_h=p_base.SCROLL_H,
                  scroll_v=p_base.SCROLL_V,
-
                  curseur=p_base.CUR
-    ):
+                 ):
         style = f"""
         QHeaderView::section {{
         background-color: rgba{couleur_bg};
@@ -92,7 +86,7 @@ class wg:
         border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
         border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
         }}
-        
+
         /* RAYONS */
         .QTreeWidget {{
         border-top-left-radius: {rayon_top_left}px;
@@ -116,7 +110,7 @@ class wg:
         .QTreeWidget QScrollBar::handle {{
         background-color: rgb{scroll_handle_fg};
         }}
-        
+
         .QTreeWidget QScrollBar::add-page, .QTreeWidget QScrollBar::sub-page {{
         background-color: rgb{scroll_handle_bg};
         border: none;
@@ -136,3 +130,36 @@ class wg:
 
                 wg.setCursor(Fct(cur=curseur).CUR())
             except: pass
+
+
+class Base_th(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs)
+class Base_tr(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+              couleur_bg=(0, 0, 0, 0),
+              couleur_bg_item=(0, 0, 0, 0),
+              couleur_bg_item_hover=(0, 0, 0, 0),
+              couleur_bg_item_checked=(0, 0, 0, 0),
+              couleur_bg_item_checked_hover=(0, 0, 0, 0),
+              couleur_fg_item_checked=P_rgb().bn1(),
+              couleur_fg_item_checked_hover=P_rgb().bn2(),
+    )
+
+class option(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+              couleur_bg=(0, 0, 0, 0),
+              couleur_bg_item=(0, 0, 0, 0),
+              couleur_bg_item_hover=(0, 0, 0, 0),
+              couleur_bg_item_checked=(0, 0, 0, 0),
+              couleur_bg_item_checked_hover=(0, 0, 0, 0),
+              couleur_fg_item_checked=P_rgb().bn1(),
+              couleur_fg_item_checked_hover=P_rgb().bn2(),
+              dim_width=P_dim().h5(),
+              bordure_width_right=P_style().bd(),
+              bordure_couleur_right=P_rgb().th3(),
+              scroll_h=QtCore.Qt.ScrollBarAlwaysOff,
+              scroll_v=QtCore.Qt.ScrollBarAlwaysOff,
+    )
