@@ -17,8 +17,8 @@ class wg:
                  couleur_fg_checked=p_base.COULEUR_FG_CHECKED,
                  couleur_fg_checked_hover=p_base.COULEUR_FG_CHECKED_HOVER,
 
-                 dim_width=p_base.DIM_WG_WIDTH,
-                 dim_height=p_base.DIM_WG_HEIGHT,
+                 dim_width=p_base.DIM_WIDTH,
+                 dim_height=p_base.DIM_HEIGHT,
 
                  police=p_base.FONT,
                  police_taille=p_base.FONT_SIZE,
@@ -51,22 +51,22 @@ class wg:
     ):
         style = f"""
         QToolBox::tab {{
-        background-color: rgb{couleur_bg};
+        background-color: rgba{couleur_bg};
         color: rgb{couleur_fg};
         }}
 
         QToolBox::tab:hover {{
-        background-color: rgb{couleur_bg_hover};
+        background-color: rgba{couleur_bg_hover};
         color: rgb{couleur_fg_hover};
         }}
 
         QToolBox::tab:selected {{
-        background-color: rgb{couleur_bg_checked};
+        background-color: rgba{couleur_bg_checked};
         color: rgb{couleur_fg_checked};
         }}
 
         QToolBox::tab:selected:hover {{
-        background-color: rgb{couleur_bg_checked_hover};
+        background-color: rgba{couleur_bg_checked_hover};
         color: rgb{couleur_fg_checked_hover};
         }}
 
