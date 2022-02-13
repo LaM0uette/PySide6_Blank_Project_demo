@@ -9,16 +9,15 @@ class wg:
                  *wgs,
 
                  couleur_bg=p_base.COULEUR_BG,
-                 couleur_bg_hover=p_base.COULEUR_BG_HOVER,
-                 couleur_bg_selection=p_base.COULEUR_BG_SELECTION,
                  couleur_bg_item=p_base.COULEUR_BG_ITEM,
                  couleur_bg_item_hover=p_base.COULEUR_BG_ITEM_HOVER,
                  couleur_bg_item_checked=p_base.COULEUR_BG_ITEM_CHECKED,
+                 couleur_bg_item_checked_hover=p_base.COULEUR_BG_ITEM_CHECKED_HOVER,
                  couleur_fg=p_base.COULEUR_FG,
-                 couleur_fg_hover=p_base.COULEUR_FG_HOVER,
-                 couleur_fg_selection=p_base.COULEUR_FG_SELECTION,
                  couleur_fg_item=p_base.COULEUR_FG_ITEM,
                  couleur_fg_item_hover=p_base.COULEUR_FG_ITEM_HOVER,
+                 couleur_fg_item_checked=p_base.COULEUR_FG_ITEM_CHECKED,
+                 couleur_fg_item_checked_hover=p_base.COULEUR_FG_ITEM_CHECKED_HOVER,
 
                  dim_width=p_base.DIM_WIDTH,
                  dim_height=p_base.DIM_HEIGHT,
@@ -56,32 +55,33 @@ class wg:
     ):
         style = f"""
         QHeaderView::section {{
-        background-color: rgb{couleur_bg};
+        background-color: rgba{couleur_bg};
         color: rgb{couleur_fg};
         }}
 
         QTreeWidget {{
-        background-color: rgb{couleur_bg};
+        background-color: rgba{couleur_bg};
         color: rgb{couleur_fg};
         }}
 
         QTreeWidget::item {{
-        background-color: rgb{couleur_bg_item};
+        background-color: rgba{couleur_bg_item};
         color: rgb{couleur_fg_item};
         }}
 
         QTreeWidget::item:hover {{
-        background-color: rgb{couleur_bg_item_hover};
+        background-color: rgba{couleur_bg_item_hover};
         color: rgb{couleur_fg_item_hover};
         }}
 
         QTreeWidget::item:selected {{
-        background-color: rgb{couleur_bg_item_selected};
-        color: rgb{colors.get("bn1")};
+        background-color: rgba{couleur_bg_item_checked};
+        color: rgb{couleur_fg_item_checked};
         }}
 
         QTreeWidget::item:selected:hover {{
-        color: rgb{colors.get("bn2")};
+        background-color: rgba{couleur_bg_item_checked_hover};
+        color: rgb{couleur_fg_item_checked_hover};
         }}
 
         /* BORDURES */
