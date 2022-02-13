@@ -12,3 +12,8 @@ class Base_th:
 class Base_rond:
     def __init__(self, *wgs):
         wg.wg(*wgs)
+class rgb:
+    def __init__(self, *wgs):
+        wg.wg(*wgs,
+              valeur_max=255
+              )

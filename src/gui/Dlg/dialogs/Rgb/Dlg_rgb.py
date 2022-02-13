@@ -71,21 +71,15 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         Spin_box.rgb_bd_th3(self.sb_rgb_red, self.sb_rgb_green, self.sb_rgb_blue)
         ### /QSpinBox ###
 
-        def SLIDER():
-            Slider.rgb(self.sd_rgb_red, self.sd_rgb_green, self.sd_rgb_blue).rond()
-        def TEXT_EDIT():
-            Text_edit.h3(self.le_rgb_hex).tr()
 
-        # Lancement des fonctions de MEF
-        def _func_try():
-            err = f"[ {self.objectName()} ] ne fonctionne pas !"
+        ### QSlider ###
+        Slider.rgb(self.sd_rgb_red, self.sd_rgb_green, self.sd_rgb_blue)
+        ### /QSlider ###
 
-            try: SLIDER()
-            except: print(f"SLIDER{err}")
 
-            try: TEXT_EDIT()
-            except: print(f"TEXT_EDIT{err}")
-        _func_try()
+        ### QText ###
+        Text_edit.Base_tr(self.le_rgb_hex)
+        ### /QText ###
 
         # Lancement des fonctions de MEF global
         In_classe(ui=self)
