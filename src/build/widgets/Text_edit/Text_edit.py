@@ -19,6 +19,7 @@ class tr_taille:
     def __init__(self, *wgs, h):
         wg.wg(*wgs,
               couleur_bg=(0, 0, 0, 0),
+              dim_height=None,
               police_taille=h
               )
 
