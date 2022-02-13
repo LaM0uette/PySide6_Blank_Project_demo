@@ -1,26 +1,21 @@
 from PySide6 import QtGui
 
-from ....build import *
-from .. import p_base
+from src.build import *
+from src.build.widgets import p_base
 
-
-class wg:
+class Style:
     def __init__(self,
                  *wgs,
-
                  couleur_bg=p_base.COULEUR_BG,
                  couleur_bg_placeholder=p_base.COULEUR_BG_PLACEHOLDER,
                  couleur_bg_selection=p_base.COULEUR_BG_SELECTION,
                  couleur_fg=p_base.COULEUR_FG,
                  couleur_fg_placeholder=p_base.COULEUR_FG_PLACEHOLDER,
                  couleur_fg_selection=p_base.COULEUR_FG_SELECTION,
-
                  dim_width=p_base.DIM_WG_WIDTH,
                  dim_height=p_base.DIM_WG_HEIGHT,
-
                  police=p_base.FONT,
                  police_taille=p_base.FONT_SIZE,
-
                  bordure_width_top=p_base.BD_WIDTH,
                  bordure_width_bottom=p_base.BD_WIDTH,
                  bordure_width_right=p_base.BD_WIDTH,
@@ -44,9 +39,8 @@ class wg:
                  scroll_height=p_base.SCROLL_HEIGHT,
                  scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
                  scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
-
                  align=p_base.ALIGN,
-    ):
+                 ):
         style = f"""
         .QLineEdit, .QPlainTextEdit, .QTextEdit {{
         background-color: rgba{couleur_bg};
@@ -61,7 +55,7 @@ class wg:
         border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
         border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
         }}
-        
+
         /* RAYONS */
         .QLineEdit, .QPlainTextEdit, .QTextEdit {{
         border-top-left-radius: {rayon_top_left}px;
@@ -69,7 +63,7 @@ class wg:
         border-bottom-right-radius: {rayon_bottom_right}px;
         border-bottom-left-radius: {rayon_bottom_left}px;
         }}
-        
+
         /* SCROLL */
         .QLineEdit QScrollBar, .QPlainTextEdit QScrollBar, .QTextEdit QScrollBar {{
         background-color: rgb{scroll_bg};
@@ -85,7 +79,7 @@ class wg:
         .QLineEdit QScrollBar::handle, .QPlainTextEdit QScrollBar::handle, .QTextEdit QScrollBar::handle {{
         background-color: rgb{scroll_handle_fg};
         }}
-        
+
         .QLineEdit QScrollBar::add-page, .QLineEdit QScrollBar::sub-page, .QPlainTextEdit QScrollBar::add-page, .QPlainTextEdit QScrollBar::sub-page, .QTextEdit QScrollBar::add-page, .QTextEdit QScrollBar::sub-page {{
         background-color: rgb{scroll_handle_bg};
         border: none;
@@ -103,10 +97,41 @@ class wg:
                 wg.setCursor(Fct(cur=P_cur().IBeam()).CUR())
             except: pass
 
-            try:wg.viewport().setCursor(Fct(cur=P_cur().IBeam()).CUR())
+            try: wg.viewport().setCursor(Fct(cur=P_cur().IBeam()).CUR())
             except: pass
 
             pl = QtGui.QPalette()
             pl.setColor(QtGui.QPalette.PlaceholderText, QtGui.QColor(*couleur_fg_placeholder))
             pl.setColor(QtGui.QPalette.Text, QtGui.QColor(*couleur_fg))
             wg.setPalette(pl)
+
+
+class Base_th(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs)
+class Base_tr(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+              couleur_bg=(0, 0, 0, 0),
+    )
+
+class tr_taille(Style):
+    def __init__(self, *wgs, h):
+        super().__init__(*wgs,
+              couleur_bg=(0, 0, 0, 0),
+              dim_height=None,
+              police_taille=h
+    )
+
+
+class Demo_th(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+              dim_height=P_dim().h5()
+    )
+class Demo_tr(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+              couleur_bg=(0, 0, 0, 0),
+              dim_height=P_dim().h5()
+    )

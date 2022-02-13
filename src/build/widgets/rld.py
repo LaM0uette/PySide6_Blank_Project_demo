@@ -3,9 +3,8 @@ import importlib
 from . import p_base
 importlib.reload(p_base)
 
-from .classes import Check_box, Combo_box, Date_edit, Frame, Label, List_widget, Progress_bar, Radio_button, Scroll_box_area, Slider, Spin_box, Table_widget
+from .classes import Check_box, Combo_box, Date_edit, Frame, Label, List_widget, Progress_bar, Radio_button, Scroll_box_area, Slider, Spin_box, Table_widget, Text_edit
 from .Push_button import Push_button
-from .Text_edit import Text_edit
 from .Tool_box import Tool_box
 from .Tree_widget import Tree_widget
 
