@@ -1,8 +1,7 @@
-from ....build import *
-from .. import p_base
+from src.build import *
+from src.build.widgets import p_base
 
-
-class wg:
+class Style:
     def __init__(self,
                  *wgs,
                  couleur_bg=p_base.COULEUR_BG,
@@ -15,13 +14,10 @@ class wg:
                  couleur_fg_checked_hover=p_base.COULEUR_FG_CHECKED_HOVER,
                  couleur_fg_item=p_base.COULEUR_FG_ITEM,
                  couleur_fg_item_hover=p_base.COULEUR_FG_ITEM_HOVER,
-
                  dim_width=p_base.DIM_WG_WIDTH,
                  dim_height=p_base.DIM_WG_HEIGHT,
-
                  police=p_base.FONT,
                  police_taille=p_base.FONT_SIZE,
-
                  bordure_width_top=p_base.BD_WIDTH,
                  bordure_width_bottom=p_base.BD_WIDTH,
                  bordure_width_right=p_base.BD_WIDTH,
@@ -47,9 +43,8 @@ class wg:
                  scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
                  scroll_h=p_base.SCROLL_H,
                  scroll_v=p_base.SCROLL_V,
-
                  curseur=p_base.CUR
-    ):
+                 ):
         style = f"""
         /* LIST_WIDGET */
         .QListWidget {{
@@ -82,7 +77,7 @@ class wg:
         border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
         border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
         }}
-        
+
         /* RAYONS */
         .QListWidget {{
         border-top-left-radius: {rayon_top_left}px;
@@ -90,7 +85,7 @@ class wg:
         border-bottom-right-radius: {rayon_bottom_right}px;
         border-bottom-left-radius: {rayon_bottom_left}px;
         }}
-        
+
         /* SCROLL */
         .QListWidget QScrollBar {{
         background-color: rgb{scroll_bg};
@@ -124,3 +119,40 @@ class wg:
                 wg.setCursor(Fct(cur=curseur).CUR())
                 wg.view().setCursor(Fct(cur=P_cur().souris_main()).CUR())
             except: pass
+
+
+class Base_th(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs)
+class Base_tr(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+              couleur_bg=(0, 0, 0, 0),
+              couleur_bg_item=(0, 0, 0, 0),
+              couleur_bg_checked=(0, 0, 0, 0),
+              couleur_bg_item_hover=(0, 0, 0, 0),
+              couleur_bg_checked_hover=(0, 0, 0, 0),
+              couleur_fg_checked=p_base.COULEURS.get("bn1"),
+              couleur_fg_checked_hover=p_base.COULEURS.get("bn2"),
+    )
+
+
+class Demo_th(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+              couleur_fg_checked=p_base.COULEURS.get("bn1"),
+              couleur_fg_checked_hover=p_base.COULEURS.get("bn2"),
+              dim_height=P_dim().h5(),
+    )
+class Demo_tr(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+              couleur_bg=(0, 0, 0, 0),
+              couleur_bg_item=(0, 0, 0, 0),
+              couleur_bg_checked=(0, 0, 0, 0),
+              couleur_bg_item_hover=(0, 0, 0, 0),
+              couleur_bg_checked_hover=(0, 0, 0, 0),
+              couleur_fg_checked=p_base.COULEURS.get("bn1"),
+              couleur_fg_checked_hover=p_base.COULEURS.get("bn2"),
+              dim_height=P_dim().h5()
+    )

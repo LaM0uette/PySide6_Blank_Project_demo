@@ -1,20 +1,16 @@
-from ....build import *
-from .. import p_base
+from src.build import *
+from src.build.widgets import p_base
 
-
-class wg:
+class Style:
     def __init__(self,
                  *wgs,
                  couleur_bg=p_base.COULEUR_BG,
                  couleur_bg_barre=p_base.COULEUR_BG_BARRE,
                  couleur_fg=p_base.COULEUR_FG,
-
                  dim_width=p_base.DIM_WG_WIDTH,
                  dim_height=p_base.DIM_WG_HEIGHT,
-
                  police=p_base.FONT,
                  police_taille=p_base.FONT_SIZE,
-
                  bordure_width_top=p_base.BD_WIDTH,
                  bordure_width_bottom=p_base.BD_WIDTH,
                  bordure_width_right=p_base.BD_WIDTH,
@@ -31,14 +27,12 @@ class wg:
                  rayon_top_right=p_base.RD_WG,
                  rayon_bottom_right=p_base.RD_WG,
                  rayon_bottom_left=p_base.RD_WG,
-
                  padding_top=0,
                  padding_bottom=0,
                  padding_right=0,
                  padding_left=0,
-
                  text_visible=p_base.TEXT_VISIBLE
-    ):
+                 ):
         style = f"""
         /* FOND */
         QProgressBar {{
@@ -62,7 +56,7 @@ class wg:
         padding-right={padding_right}px;
         padding-left={padding_left}px;
         }}
-        
+
         /* RAYONS */
         .QProgressBar {{
         border-top-left-radius: {rayon_top_left}px;
@@ -81,3 +75,14 @@ class wg:
                 wg.setAlignment(P_align().c().c())
                 wg.setTextVisible(text_visible)
             except: pass
+
+
+class Base_th(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs)
+class Base_tr(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+              couleur_bg=(0, 0, 0, 0),
+              text_visible=False
+    )
