@@ -65,16 +65,10 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
         Push_button.dlg_nok_inv(self.pb_input_annuler)
         ### /QPushButton ###
 
-        def TEXT_EDIT():
-            Text_edit.base(self.le_input_text).bottom_th2()
 
-        # Lancement des fonctions de MEF
-        def _func_try():
-            err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: TEXT_EDIT()
-            except: print(f"TEXT_EDIT{err}")
-        _func_try()
+        ### QText ###
+        Text_edit.Demo_th(self.le_input_text)
+        ### /QText ###
 
         # Lancement des fonctions de MEF global
         In_classe(ui=self)
