@@ -1,99 +1,34 @@
-from .wg import wg
-from .. import p_base
+from . import wg
 from ....build import *
+from .. import p_base
+
+import importlib
+importlib.reload(wg)
 
 
-class rtn:
-    def __init__(self, *wgs,
-                 colors_type=p_base.COLORS_TYPE,
-                 colors=p_base.COULEURS,
-                 dim=p_base.DIM,
-                 align=p_base.ALIGN,
-                 font=p_base.FONT_SIZE,
-                 bd=p_base.BD,
-                 rd=p_base.RD
-                 ):
-        self.wgs = wgs
+class Base_th:
+    def __init__(self, *wgs):
+        wg.wg(*wgs)
+class Base_tr:
+    def __init__(self, *wgs):
+        wg.wg(*wgs,
+              couleur_bg=(0, 0, 0, 0),
+              couleur_bg_hover=(0, 0, 0, 0),
+              couleur_bg_checked=(0, 0, 0, 0),
+              couleur_bg_checked_hover=(0, 0, 0, 0),
+              couleur_fg_checked=p_base.COULEURS.get("c3"),
+              )
 
-        self.colors_type = colors_type
-        self.colors = colors
-        self.dim = dim
-        self.align = align
-        self.font = font
-        self.bd = bd
-        self.rd = rd
 
-    def rtn(self):
-        wg(
-            *self.wgs,
-            colors_type=self.colors_type,
-            colors=self.colors,
-            dim=self.dim,
-            align=self.align,
-            font=self.font,
-            bd=self.bd,
-            rd=self.rd,
-        )
-
-    def th(self):
-        self.colors_type = "th"
-        self.rtn()
-    def tr(self):
-        self.colors_type = "tr"
-        self.rtn()
-
-    def bottom_tr2(self):
-        self.bd = P_bd().bottom().th2()
-        self.tr()
-    def bottom_th2(self):
-        self.bd = P_bd().bottom().th2()
-        self.th()
-
-class base(rtn):
+class Demo_th:
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-                         colors = P_rgb().p_th3(),
-                         dim=P_dim().aw().h9(),
-                         font = P_font().h4(),
-                         align = P_align().l().c()
-        )
-class base_bloc(rtn):
+        wg.wg(*wgs)
+class Demo_tr:
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-                         colors = P_rgb().p_th3(),
-                         dim=P_dim().aw().h5(),
-                         font = P_font().h4(),
-                         align = P_align().l().c(),
-                         bd=P_bd().all().bn1(),
-                         rd=P_rd().all().px_5()
-        )
-class h1(rtn):
-    def __init__(self, *wgs):
-        super().__init__(*wgs,
-                         colors = P_rgb().p_th3(),
-                         font = P_font().h1(),
-        )
-class h2(rtn):
-    def __init__(self, *wgs):
-        super().__init__(*wgs,
-                         colors = P_rgb().p_th3(),
-                         font = P_font().h2(),
-        )
-class h3(rtn):
-    def __init__(self, *wgs):
-        super().__init__(*wgs,
-                         colors = P_rgb().p_th3(),
-                         font = P_font().h3(),
-        )
-class h4(rtn):
-    def __init__(self, *wgs):
-        super().__init__(*wgs,
-                         colors = P_rgb().p_th3(),
-                         font = P_font().h4(),
-        )
-class h5(rtn):
-    def __init__(self, *wgs):
-        super().__init__(*wgs,
-                         colors = P_rgb().p_th3(),
-                         font = P_font().h5(),
-        )
+        wg.wg(*wgs,
+              couleur_bg=(0, 0, 0, 0),
+              couleur_bg_hover=(0, 0, 0, 0),
+              couleur_bg_checked=(0, 0, 0, 0),
+              couleur_bg_checked_hover=(0, 0, 0, 0),
+              couleur_fg_checked=p_base.COULEURS.get("c3"),
+              )

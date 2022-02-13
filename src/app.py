@@ -134,11 +134,13 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         ### /QTableWidget ###
 
 
-        def TEXT_EDIT():
-            Text_edit.base(self.le_demo_th).th()
-            Text_edit.base(self.le_demo_tr).bottom_tr2()
-            Text_edit.base_bloc(self.te_demo_th, self.pte_demo_th).th()
-            Text_edit.base_bloc(self.te_demo_tr, self.pte_demo_tr).tr()
+        ### QText ###
+        Text_edit.Base_th(self.le_demo_th)
+        Text_edit.Base_tr(self.le_demo_tr)
+        Text_edit.Demo_th(self.te_demo_th, self.pte_demo_th)
+        Text_edit.Demo_tr(self.te_demo_tr, self.pte_demo_tr)
+        ### /QText ###
+
         def TOOL_BOX():
             Tool_box.base(self.tb_demo_th).th()
             Tool_box.base(self.tb_demo_tr).tr()
@@ -149,9 +151,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         # Lancement des fonctions de MEF
         def _func_try():
             err = f"[ {self.objectName()} ] ne fonctionne pas !"
-
-            try: TEXT_EDIT()
-            except: print(f"TEXT_EDIT{err}")
 
             try: TOOL_BOX()
             except: print(f"TOOL_BOX{err}")
