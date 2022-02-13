@@ -1,7 +1,7 @@
 from src.build import *
 from src.build.widgets import p_base
 
-class wg:
+class Style:
     def __init__(
             self,
             *wgs,
@@ -119,10 +119,10 @@ class wg:
             except: pass
 
 
-class Base_th(wg):
+class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs)
-class Base_tr(wg):
+class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
               couleur_bg=(0, 0, 0, 0),
