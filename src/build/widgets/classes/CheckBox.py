@@ -120,6 +120,12 @@ class Style:
                     border-right: {border_right}px {border_style} rgba{border_rgb};
                     border-left: {border_left}px {border_style} rgba{border_rgb};
                     }}
+                    .QCheckBox:hover {{
+                    border-top: {border_top}px {border_style} rgba{border_rgb};
+                    border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
+                    border-right: {border_right}px {border_style} rgba{border_rgb};
+                    border-left: {border_left}px {border_style} rgba{border_rgb};
+                    }}
 
                     /* RAYONS */
                     .QCheckBox {{
