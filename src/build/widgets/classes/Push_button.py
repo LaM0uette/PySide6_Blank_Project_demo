@@ -52,10 +52,10 @@ class Style:
                  bordure_couleur_bottom=p_base.BD_COULEUR,
                  bordure_couleur_right=p_base.BD_COULEUR,
                  bordure_couleur_left=p_base.BD_COULEUR,
-                 rayon_top_left=p_base.RD_WG,
-                 rayon_top_right=p_base.RD_WG,
-                 rayon_bottom_right=p_base.RD_WG,
-                 rayon_bottom_left=p_base.RD_WG,
+                 rayon_top_left=p_base.WG_RADIUS,
+                 rayon_top_right=p_base.WG_RADIUS,
+                 rayon_bottom_right=p_base.WG_RADIUS,
+                 rayon_bottom_left=p_base.WG_RADIUS,
                  curseur=p_base.CUR
                  ):
         style = f"""

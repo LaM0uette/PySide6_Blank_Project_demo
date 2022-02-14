@@ -55,10 +55,10 @@ class Style:
                  bordure_couleur_left=p_base.BD_COULEUR,
                  bordure_jours_taille=P_style().bd(),
                  bordure_jours_style="solid",
-                 rayon_top_left=p_base.RD_WG,
-                 rayon_top_right=p_base.RD_WG,
-                 rayon_bottom_right=p_base.RD_WG,
-                 rayon_bottom_left=p_base.RD_WG,
+                 rayon_top_left=p_base.WG_RADIUS,
+                 rayon_top_right=p_base.WG_RADIUS,
+                 rayon_bottom_right=p_base.WG_RADIUS,
+                 rayon_bottom_left=p_base.WG_RADIUS,
                  align=p_base.ALIGN,
                  curseur=p_base.CUR
                  ):

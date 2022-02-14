@@ -117,7 +117,8 @@ BD_COULEUR = COULEURS.get("bn1") + (0,)
 ###################
 ##     RAYON     ##
 ###################
-RD_WG = 0
+RADIUS = 0
+WG_RADIUS = 0
 
 
 ####################

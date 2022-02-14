@@ -41,10 +41,13 @@ class Style:
             # Images DIM
             img_width=p_base.IMG_WIDTH,
             img_height=p_base.IMG_HEIGHT,
+            # Images margin
             img_margin_top=0,
             img_margin_bottom=0,
             img_margin_right=0,
             img_margin_left=(P_dim().h9() - (P_dim().h9() * P_style().x_ico())) / 2,
+
+            # Bordures
             bordure_width_top=p_base.BD_WIDTH,
             bordure_width_bottom=p_base.BD_WIDTH,
             bordure_width_right=p_base.BD_WIDTH,
@@ -57,10 +60,13 @@ class Style:
             bordure_colors_bottom=p_base.BD_COULEUR,
             bordure_colors_right=p_base.BD_COULEUR,
             bordure_colors_left=p_base.BD_COULEUR,
-            rayon_top_left=p_base.RD_WG,
-            rayon_top_right=p_base.RD_WG,
-            rayon_bottom_right=p_base.RD_WG,
-            rayon_bottom_left=p_base.RD_WG,
+
+            # Rayons
+            rayon_top_right=p_base.WG_RADIUS,
+            rayon_top_left=p_base.WG_RADIUS,
+            rayon_bottom_right=p_base.WG_RADIUS,
+            rayon_bottom_left=p_base.WG_RADIUS,
+
             curseur=P_cur().souris_main()
     ):
         style = f"""
