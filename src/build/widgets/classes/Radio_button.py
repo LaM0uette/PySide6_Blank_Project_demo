@@ -14,7 +14,7 @@ class Style:
                  couleur_fg_checked_hover=p_base._COLORS_FG_CHECKED_HOVER,
                  img_uncheck=p_base.IMG_UNCHECK,
                  tm_uncheck=p_base.TM_UNCHECK,
-                 img_hover=p_base.IMG_HOVER,
+                 img_hover=p_base.IMG_UNCHECK_HOVER,
                  tm_hover=p_base.TM_HOVER,
                  img_check=p_base.IMG_CHECK,
                  tm_check=p_base.TM_CHECK,
