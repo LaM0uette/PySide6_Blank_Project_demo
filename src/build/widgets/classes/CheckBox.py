@@ -4,24 +4,26 @@ from ....build.widgets import p_base
 class Style:
     def __init__(
             self,
+
+            # Widgets
             *wgs,
 
-            ##  Couleur BG  ##
+            # Couleur BG
             bg=p_base.BG,
             bg_hover=p_base.BG_HOVER,
             bg_checked=p_base.BG_CHECKED,
             bg_checked_hover=p_base.BG_CHECKED_HOVER,
-            ## /Couleur BG  ##
 
-            ##  Couleur FG  ##
+            # Couleur FG
             fg=p_base.FG,
             fg_hover=p_base.FG_HOVER,
             fg_checked=p_base.FG_CHECKED,
             fg_checked_hover=p_base.FG_CHECKED_HOVER,
-            ## /Couleur FG  ##
 
-            dim_width=p_base.DIM_WG_WIDTH,
-            dim_height=p_base.DIM_WG_HEIGHT,
+            # Dimensions WG
+            width=p_base.DIM_WG_WIDTH,
+            height=p_base.DIM_WG_HEIGHT,
+
             spacing=p_base.SPACING,
             police=p_base.FONT,
             police_taille=p_base.FONT_SIZE,
@@ -119,7 +121,7 @@ class Style:
             wg.setStyleSheet(style)
 
             try:
-                Fct(wg=wg, w=dim_width, h=dim_height).DIM()
+                Fct(wg=wg, w=width, h=height).DIM()
                 wg.setFont(Fct(font=police, font_size=police_taille).FONT())
 
                 wg.setCursor(Fct(cur=curseur).CUR())
