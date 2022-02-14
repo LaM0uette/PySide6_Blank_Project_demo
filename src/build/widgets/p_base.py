@@ -88,7 +88,6 @@ IMG_CHECK_RGB = "th2"
 IMG_CHECK_HOVER_RGB = "bn1"
 
 
-
 IMG_DEROULANT = P_img().fleche_bottom()
 IMG_DEROULANT_HOVER = P_img().fleche_bottom()
 IMG_DROITE = P_img().fleche_droite()
