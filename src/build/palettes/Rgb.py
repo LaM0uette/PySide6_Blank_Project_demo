@@ -9,6 +9,7 @@ class Rgb(Data):
     def th3(self): return self.TH("th3")+(255, )
     def bn1(self): return self.TH("bn1")+(255, )
     def bn2(self): return self.TH("bn2")+(255, )
+    def tr(self): return 0, 0, 0, 0
 
     def hx_th1(self): return self.TH_HEX(self.TH("th1"))
     def hx_th2(self): return self.TH_HEX(self.TH("th2"))

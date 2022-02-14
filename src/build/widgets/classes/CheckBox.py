@@ -134,10 +134,10 @@ class Base_th(Style):
 class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-                         bg=(0, 0, 0, 0),
-                         bg_hover=(0, 0, 0, 0),
-                         bg_checked=(0, 0, 0, 0),
-                         bg_checked_hover=(0, 0, 0, 0),
+                         bg=Rgb().tr(),
+                         bg_hover=Rgb().tr(),
+                         bg_checked=Rgb().tr(),
+                         bg_checked_hover=Rgb().tr(),
                          fg=Rgb().th3(),
                          fg_checked=Rgb().th3(),
-                         )
+        )
