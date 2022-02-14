@@ -48,13 +48,11 @@ class Style:
             img_margin_left=(P_dim().h9() - (P_dim().h9() * P_style().x_ico())) / 2,
 
             # Bordures
-            border_width_all=None,
-            border_width_top=p_base.WG_BORDER_WIDTH,
-            border_width_bottom=p_base.WG_BORDER_WIDTH,
-            border_width_right=p_base.WG_BORDER_WIDTH,
-            border_width_left=p_base.WG_BORDER_WIDTH,
-
-            border_width=p_base.WG_BORDER_WIDTH,
+            border_all=None,
+            border_top=p_base.WG_BORDER_WIDTH,
+            border_bottom=p_base.WG_BORDER_WIDTH,
+            border_right=p_base.WG_BORDER_WIDTH,
+            border_left=p_base.WG_BORDER_WIDTH,
             border_style=p_base.WG_BORDER_STYLE,
             border_rgb=p_base.WG_BORDER_RGB,
 
@@ -67,11 +65,11 @@ class Style:
             # Curseur
             curseur=P_cur().souris_main()
     ):
-        if not border_width_all is None:
-            border_width_top = border_width_all
-            border_width_bottom = border_width_all
-            border_width_right = border_width_all
-            border_width_left = border_width_all
+        if not border_all is None:
+            border_top = border_all
+            border_bottom = border_all
+            border_right = border_all
+            border_left = border_all
 
         style = f"""
                     /* CHECKBOX */
@@ -117,10 +115,10 @@ class Style:
 
                     /* BORDURES */
                     .QCheckBox {{
-                    border-top: {border_width_top}px {border_style} rgba{border_rgb};
-                    border-bottom: {border_width_bottom}px {border_style} rgba{border_rgb};
-                    border-right: {border_width_right}px {border_style} rgba{border_rgb};
-                    border-left: {border_width_left}px {border_style} rgba{border_rgb};
+                    border-top: {border_top}px {border_style} rgba{border_rgb};
+                    border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
+                    border-right: {border_right}px {border_style} rgba{border_rgb};
+                    border-left: {border_left}px {border_style} rgba{border_rgb};
                     }}
 
                     /* RAYONS */
@@ -143,7 +141,7 @@ class Style:
 class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-                         border_width_bottom=2,
+                         border_bottom=2,
                          border_rgb=Rgb().bn1()
                          )
 class Base_tr(Style):
