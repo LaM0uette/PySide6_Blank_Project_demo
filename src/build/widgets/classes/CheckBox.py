@@ -63,6 +63,22 @@ class Style:
             border_left_hover=p_base.WG_BORDER_WIDTH,
             border_style_hover=p_base.WG_BORDER_STYLE,
             border_rgb_hover=p_base.WG_BORDER_RGB,
+            # Bordures checked
+            border_all_checked=None,
+            border_top_checked=p_base.WG_BORDER_WIDTH,
+            border_bottom_checked=p_base.WG_BORDER_WIDTH,
+            border_right_checked=p_base.WG_BORDER_WIDTH,
+            border_left_checked=p_base.WG_BORDER_WIDTH,
+            border_style_checked=p_base.WG_BORDER_STYLE,
+            border_rgb_checked=p_base.WG_BORDER_RGB,
+            # Bordures checked hover
+            border_all_checked_hover=None,
+            border_top_checked_hover=p_base.WG_BORDER_WIDTH,
+            border_bottom_checked_hover=p_base.WG_BORDER_WIDTH,
+            border_right_checked_hover=p_base.WG_BORDER_WIDTH,
+            border_left_checked_hover=p_base.WG_BORDER_WIDTH,
+            border_style_checked_hover=p_base.WG_BORDER_STYLE,
+            border_rgb_checked_hover=p_base.WG_BORDER_RGB,
 
             # Rayons
             rayon_top_right=p_base.WG_RADIUS,
@@ -78,6 +94,11 @@ class Style:
             border_bottom = border_all
             border_right = border_all
             border_left = border_all
+        if not border_all_hover is None:
+            border_top_hover = border_all_hover
+            border_bottom_hover = border_all_hover
+            border_right_hover = border_all_hover
+            border_left_hover = border_all_hover
 
         style = f"""
                     /* CHECKBOX */
@@ -133,6 +154,18 @@ class Style:
                     border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
                     border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
                     border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
+                    }}
+                    .QCheckBox:checked {{
+                    border-top: {border_top_checked}px {border_style_checked} rgba{border_rgb_checked};
+                    border-bottom: {border_bottom_checked}px {border_style_checked} rgba{border_rgb_checked};
+                    border-right: {border_right_checked}px {border_style_checked} rgba{border_rgb_checked};
+                    border-left: {border_left_checked}px {border_style_checked} rgba{border_rgb_checked};
+                    }}
+                    .QCheckBox:checked:hover {{
+                    border-top: {border_top_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
+                    border-bottom: {border_bottom_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
+                    border-right: {border_right_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
+                    border-left: {border_left_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
                     }}
 
                     /* RAYONS */
