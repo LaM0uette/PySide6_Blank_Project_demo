@@ -23,8 +23,9 @@ class Style:
             # Dimensions WG
             width=p_base.WG_WIDTH,
             height=p_base.WG_HEIGHT,
-
             spacing=10,
+
+
             police=p_base.FONT,
             police_taille=p_base.FONT_SIZE,
             img_uncheck=p_base.IMG_UNCHECK,
