@@ -5,14 +5,14 @@ class Style:
     def __init__(
             self,
             *wgs,
-            colors_bg=p_base.COLORS_BG,
-            colors_bg_hover=p_base.COLORS_BG_HOVER,
-            colors_bg_checked=p_base.COLORS_BG_CHECKED,
-            colors_bg_checked_hover=p_base.COLORS_BG_CHECKED_HOVER,
-            colors_fg=p_base.COLORS_FG,
-            colors_fg_hover=p_base.COLORS_FG_HOVER,
-            colors_fg_checked=p_base.COLORS_FG_CHECKED,
-            colors_fg_checked_hover=p_base.COLORS_FG_CHECKED_HOVER,
+            bg=p_base.BG,
+            bg_hover=p_base.BG_HOVER,
+            bg_checked=p_base.BG_CHECKED,
+            bg_checked_hover=p_base.BG_CHECKED_HOVER,
+            fg=p_base.COLORS_FG,
+            fg_hover=p_base.COLORS_FG_HOVER,
+            fg_checked=p_base.COLORS_FG_CHECKED,
+            fg_checked_hover=p_base.COLORS_FG_CHECKED_HOVER,
             dim_width=p_base.DIM_WG_WIDTH,
             dim_height=p_base.DIM_WG_HEIGHT,
             spacing=p_base.SPACING,
@@ -53,21 +53,21 @@ class Style:
         style = f"""
                     /* CHECKBOX */
                     QCheckBox {{
-                    background-color: rgba{colors_bg};
-                    color: rgba{colors_fg};
+                    background-color: rgba{bg};
+                    color: rgba{fg};
                     spacing: {spacing}px;
                     }}
                     QCheckBox:hover {{
-                    background-color: rgba{colors_bg_hover};
-                    color: rgba{colors_fg_hover};
+                    background-color: rgba{bg_hover};
+                    color: rgba{fg_hover};
                     }}
                     QCheckBox:checked {{
-                    background-color: rgba{colors_bg_checked};
-                    color: rgba{colors_fg_checked};
+                    background-color: rgba{bg_checked};
+                    color: rgba{fg_checked};
                     }}
                     QCheckBox:checked:hover {{
-                    background-color: rgba{colors_bg_checked_hover};
-                    color: rgba{colors_fg_checked_hover};
+                    background-color: rgba{bg_checked_hover};
+                    color: rgba{fg_checked_hover};
                     }}
 
                     /* IMG */
@@ -125,10 +125,10 @@ class Base_th(Style):
 class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-              colors_bg=(0, 0, 0, 0),
-              colors_bg_hover=(0, 0, 0, 0),
-              colors_bg_checked=(0, 0, 0, 0),
-              colors_bg_checked_hover=(0, 0, 0, 0),
-              colors_fg=Rgb().th3(),
-              colors_fg_checked=Rgb().th3(),
-        )
+                         bg=(0, 0, 0, 0),
+                         bg_hover=(0, 0, 0, 0),
+                         bg_checked=(0, 0, 0, 0),
+                         bg_checked_hover=(0, 0, 0, 0),
+                         fg=Rgb().th3(),
+                         fg_checked=Rgb().th3(),
+                         )

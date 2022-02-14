@@ -10,10 +10,10 @@ from ...config import *
 COULEURS = P_rgb().p_th3()
 
 # BG
-COLORS_BG= Rgb().th3()
-COLORS_BG_HOVER= Rgb().th3()
-COLORS_BG_CHECKED= Rgb().th1()
-COLORS_BG_CHECKED_HOVER= Rgb().th1()
+BG= Rgb().th3()
+BG_HOVER= Rgb().th3()
+BG_CHECKED= Rgb().th1()
+BG_CHECKED_HOVER= Rgb().th1()
 
 
 
