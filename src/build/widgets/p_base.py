@@ -38,10 +38,10 @@ COLORS_BG_ITEM_CHECKED= COULEURS.get("c3") + (255,)
 COLORS_BG_ITEM_CHECKED_HOVER= COULEURS.get("c3") + (255,)
 
 # FG
-COLORS_FG=Rgb().th1()
-COLORS_FG_HOVER= Rgb().bn1()
-COLORS_FG_CHECKED= Rgb().th3()
-COLORS_FG_CHECKED_HOVER= Rgb().bn1()
+FG=Rgb().th1()
+FG_HOVER= Rgb().bn1()
+FG_CHECKED= Rgb().th3()
+FG_CHECKED_HOVER= Rgb().bn1()
 
 
 
