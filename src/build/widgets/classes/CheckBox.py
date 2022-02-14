@@ -54,20 +54,20 @@ class Style:
                     /* CHECKBOX */
                     QCheckBox {{
                     background-color: rgba{colors_bg};
-                    color: rgb{colors_fg};
+                    color: rgba{colors_fg};
                     spacing: {spacing}px;
                     }}
                     QCheckBox:hover {{
                     background-color: rgba{colors_bg_hover};
-                    color: rgb{colors_fg_hover};
+                    color: rgba{colors_fg_hover};
                     }}
                     QCheckBox:checked {{
                     background-color: rgba{colors_bg_checked};
-                    color: rgb{colors_fg_checked};
+                    color: rgba{colors_fg_checked};
                     }}
                     QCheckBox:checked:hover {{
                     background-color: rgba{colors_bg_checked_hover};
-                    color: rgb{colors_fg_checked_hover};
+                    color: rgba{colors_fg_checked_hover};
                     }}
 
                     /* IMG */
@@ -129,5 +129,6 @@ class Base_tr(Style):
               colors_bg_hover=(0, 0, 0, 0),
               colors_bg_checked=(0, 0, 0, 0),
               colors_bg_checked_hover=(0, 0, 0, 0),
-              colors_fg_checked=p_base.COULEURS.get("c3"),
+              colors_fg=Rgb().th3(),
+              colors_fg_checked=Rgb().th3(),
         )
