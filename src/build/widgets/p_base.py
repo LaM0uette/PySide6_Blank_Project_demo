@@ -68,7 +68,6 @@ WIDTH = None
 WG_WIDTH = None
 HEIGHT = None
 WG_HEIGHT = P_dim().h9()
-SPACING = 10
 
 
 ####################
