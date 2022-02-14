@@ -202,6 +202,10 @@ class Base_th(Style):
                          border_rgb=Rgb().bn1(),
                          border_bottom_hover=2,
                          border_rgb_hover=Rgb().bn2(),
+                         border_bottom_checked=4,
+                         border_rgb_checked=Rgb().th2(),
+                         border_bottom_checked_hover=4,
+                         border_rgb_checked_hover=Rgb().bn1(),
                          )
 class Base_tr(Style):
     def __init__(self, *wgs):
