@@ -64,10 +64,10 @@ COLORS_GRID=COULEURS.get("c3")
 ########################
 ##     DIMENSIONS     ##
 ########################
-DIM_WIDTH = None
-DIM_WG_WIDTH = None
-DIM_HEIGHT = None
-DIM_WG_HEIGHT = P_dim().h9()
+WIDTH = None
+WG_WIDTH = None
+HEIGHT = None
+WG_HEIGHT = P_dim().h9()
 SPACING = 10
 
 

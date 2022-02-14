@@ -21,8 +21,8 @@ class Style:
             fg_checked_hover=p_base.FG_CHECKED_HOVER,
 
             # Dimensions WG
-            width=p_base.DIM_WG_WIDTH,
-            height=p_base.DIM_WG_HEIGHT,
+            width=p_base.WG_WIDTH,
+            height=p_base.WG_HEIGHT,
 
             spacing=p_base.SPACING,
             police=p_base.FONT,
