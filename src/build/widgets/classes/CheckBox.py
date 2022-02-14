@@ -48,18 +48,21 @@ class Style:
             img_margin_left=(P_dim().h9() - (P_dim().h9() * P_style().x_ico())) / 2,
 
             # Bordures
-            bordure_width_top=p_base.WG_BORDER_WIDTH,
-            bordure_width_bottom=p_base.WG_BORDER_WIDTH,
-            bordure_width_right=p_base.WG_BORDER_WIDTH,
-            bordure_width_left=p_base.WG_BORDER_WIDTH,
-            bordure_style_top=p_base.WG_BORDER_STYLE,
-            bordure_style_bottom=p_base.WG_BORDER_STYLE,
-            bordure_style_right=p_base.WG_BORDER_STYLE,
-            bordure_style_left=p_base.WG_BORDER_STYLE,
-            bordure_colors_top=p_base.WG_BORDER_RGB,
-            bordure_colors_bottom=p_base.WG_BORDER_RGB,
-            bordure_colors_right=p_base.WG_BORDER_RGB,
-            bordure_colors_left=p_base.WG_BORDER_RGB,
+            border_width_all=None,
+            border_width_top=p_base.WG_BORDER_WIDTH,
+            border_width_bottom=p_base.WG_BORDER_WIDTH,
+            border_width_right=p_base.WG_BORDER_WIDTH,
+            border_width_left=p_base.WG_BORDER_WIDTH,
+            border_style_all=None,
+            border_style_top=p_base.WG_BORDER_STYLE,
+            border_style_bottom=p_base.WG_BORDER_STYLE,
+            border_style_right=p_base.WG_BORDER_STYLE,
+            border_style_left=p_base.WG_BORDER_STYLE,
+            border_rgb_all=None,
+            border_rgb_top=p_base.WG_BORDER_RGB,
+            border_rgb_bottom=p_base.WG_BORDER_RGB,
+            border_rgb_right=p_base.WG_BORDER_RGB,
+            border_rgb_left=p_base.WG_BORDER_RGB,
 
             # Rayons
             rayon_top_right=p_base.WG_RADIUS,
@@ -113,10 +116,10 @@ class Style:
 
                     /* BORDURES */
                     .QCheckBox {{
-                    border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_colors_top};
-                    border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_colors_bottom};
-                    border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_colors_right};
-                    border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_colors_left};
+                    border-top: {border_width_top}px {border_style_top} rgba{border_rgb_top};
+                    border-bottom: {border_width_bottom}px {border_style_bottom} rgba{border_rgb_bottom};
+                    border-right: {border_width_right}px {border_style_right} rgba{border_rgb_right};
+                    border-left: {border_width_left}px {border_style_left} rgba{border_rgb_left};
                     }}
 
                     /* RAYONS */
