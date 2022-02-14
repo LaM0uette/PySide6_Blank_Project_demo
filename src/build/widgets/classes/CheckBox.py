@@ -48,7 +48,7 @@ class Style:
             rayon_top_right=p_base.RD_WG,
             rayon_bottom_right=p_base.RD_WG,
             rayon_bottom_left=p_base.RD_WG,
-            curseur=p_base.CUR
+            curseur=P_cur().souris_main()
     ):
         style = f"""
                     /* CHECKBOX */
