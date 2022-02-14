@@ -99,6 +99,16 @@ class Style:
             border_bottom_hover = border_all_hover
             border_right_hover = border_all_hover
             border_left_hover = border_all_hover
+        if not border_all_checked is None:
+            border_top_checked = border_all_checked
+            border_bottom_checked = border_all_checked
+            border_right_checked = border_all_checked
+            border_left_checked = border_all_checked
+        if not border_all_checked_hover is None:
+            border_top_checked_hover = border_all_checked_hover
+            border_bottom_checked_hover = border_all_checked_hover
+            border_right_checked_hover = border_all_checked_hover
+            border_left_checked_hover = border_all_checked_hover
 
         style = f"""
                     /* CHECKBOX */
