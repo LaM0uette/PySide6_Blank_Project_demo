@@ -72,6 +72,22 @@ class Style:
 
             curseur=P_cur().souris_main()
     ):
+        if not border_width_all is None:
+            border_width_top = border_width_all
+            border_width_bottom = border_width_all
+            border_width_right = border_width_all
+            border_width_left = border_width_all
+        if not border_style_all is None:
+            border_style_top = border_style_all
+            border_style_bottom = border_style_all
+            border_style_right = border_style_all
+            border_style_left = border_style_all
+        if not border_rgb_all is None:
+            border_rgb_top = border_rgb_all
+            border_rgb_bottom = border_rgb_all
+            border_rgb_right = border_rgb_all
+            border_rgb_left = border_rgb_all
+
         style = f"""
                     /* CHECKBOX */
                     QCheckBox {{
