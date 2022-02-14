@@ -6,7 +6,7 @@ from ....build.widgets import p_base
 class Style:
     def __init__(self,
                  *wgs,
-                 couleur_bg=p_base.COULEUR_BG,
+                 couleur_bg=p_base.COLORS_BG,
                  dim_width=p_base.DIM_WIDTH,
                  dim_height=p_base.DIM_HEIGHT,
                  bordure_width_top=p_base.BD_WIDTH,

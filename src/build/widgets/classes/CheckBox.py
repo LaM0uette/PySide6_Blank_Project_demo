@@ -5,14 +5,14 @@ class Style:
     def __init__(
             self,
             *wgs,
-            couleur_bg=p_base.COULEUR_BG,
-            couleur_bg_hover=p_base.COULEUR_BG_HOVER,
-            couleur_bg_checked=p_base.COULEUR_BG_CHECKED,
-            couleur_bg_checked_hover=p_base.COULEUR_BG_CHECKED_HOVER,
-            couleur_fg=p_base.COULEUR_FG,
-            couleur_fg_hover=p_base.COULEUR_FG_HOVER,
-            couleur_fg_checked=p_base.COULEUR_FG_CHECKED,
-            couleur_fg_checked_hover=p_base.COULEUR_FG_CHECKED_HOVER,
+            colors_bg=p_base.COLORS_BG,
+            colors_bg_hover=p_base.COLORS_BG_HOVER,
+            colors_bg_checked=p_base.COLORS_BG_CHECKED,
+            colors_bg_checked_hover=p_base.COLORS_BG_CHECKED_HOVER,
+            colors_fg=p_base.COLORS_FG,
+            colors_fg_hover=p_base.COLORS_FG_HOVER,
+            colors_fg_checked=p_base.COLORS_FG_CHECKED,
+            colors_fg_checked_hover=p_base.COLORS_FG_CHECKED_HOVER,
             dim_width=p_base.DIM_WG_WIDTH,
             dim_height=p_base.DIM_WG_HEIGHT,
             spacing=p_base.SPACING,
@@ -40,10 +40,10 @@ class Style:
             bordure_style_bottom=p_base.BD_STYLE,
             bordure_style_right=p_base.BD_STYLE,
             bordure_style_left=p_base.BD_STYLE,
-            bordure_couleur_top=p_base.BD_COULEUR,
-            bordure_couleur_bottom=p_base.BD_COULEUR,
-            bordure_couleur_right=p_base.BD_COULEUR,
-            bordure_couleur_left=p_base.BD_COULEUR,
+            bordure_colors_top=p_base.BD_COULEUR,
+            bordure_colors_bottom=p_base.BD_COULEUR,
+            bordure_colors_right=p_base.BD_COULEUR,
+            bordure_colors_left=p_base.BD_COULEUR,
             rayon_top_left=p_base.RD_WG,
             rayon_top_right=p_base.RD_WG,
             rayon_bottom_right=p_base.RD_WG,
@@ -53,21 +53,21 @@ class Style:
         style = f"""
                     /* CHECKBOX */
                     QCheckBox {{
-                    background-color: rgba{couleur_bg};
-                    color: rgb{couleur_fg};
+                    background-color: rgba{colors_bg};
+                    color: rgb{colors_fg};
                     spacing: {spacing}px;
                     }}
                     QCheckBox:hover {{
-                    background-color: rgba{couleur_bg_hover};
-                    color: rgb{couleur_fg_hover};
+                    background-color: rgba{colors_bg_hover};
+                    color: rgb{colors_fg_hover};
                     }}
                     QCheckBox:checked {{
-                    background-color: rgba{couleur_bg_checked};
-                    color: rgb{couleur_fg_checked};
+                    background-color: rgba{colors_bg_checked};
+                    color: rgb{colors_fg_checked};
                     }}
                     QCheckBox:checked:hover {{
-                    background-color: rgba{couleur_bg_checked_hover};
-                    color: rgb{couleur_fg_checked_hover};
+                    background-color: rgba{colors_bg_checked_hover};
+                    color: rgb{colors_fg_checked_hover};
                     }}
 
                     /* IMG */
@@ -94,10 +94,10 @@ class Style:
 
                     /* BORDURES */
                     .QCheckBox {{
-                    border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
-                    border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
-                    border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
-                    border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
+                    border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_colors_top};
+                    border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_colors_bottom};
+                    border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_colors_right};
+                    border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_colors_left};
                     }}
 
                     /* RAYONS */
@@ -125,9 +125,9 @@ class Base_th(Style):
 class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-              couleur_bg=(0, 0, 0, 0),
-              couleur_bg_hover=(0, 0, 0, 0),
-              couleur_bg_checked=(0, 0, 0, 0),
-              couleur_bg_checked_hover=(0, 0, 0, 0),
-              couleur_fg_checked=p_base.COULEURS.get("c3"),
+              colors_bg=(0, 0, 0, 0),
+              colors_bg_hover=(0, 0, 0, 0),
+              colors_bg_checked=(0, 0, 0, 0),
+              colors_bg_checked_hover=(0, 0, 0, 0),
+              colors_fg_checked=p_base.COULEURS.get("c3"),
         )
