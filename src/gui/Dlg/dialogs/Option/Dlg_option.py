@@ -67,7 +67,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.setWindowOpacity(self.opacity)
     def IN_CLASSE(self):
         ### QCheckBox ###
-        Check_box.Base_tr(self.ck_opt_cfg_autoreload, self.ck_opt_cfg_autoclose, self.ck_opt_cfg_resize)
+        CheckBox.Base_tr(self.ck_opt_cfg_autoreload, self.ck_opt_cfg_autoclose, self.ck_opt_cfg_resize)
         ### /QCheckBox ###
 
 
