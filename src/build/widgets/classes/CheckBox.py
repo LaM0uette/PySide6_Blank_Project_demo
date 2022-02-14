@@ -159,7 +159,10 @@ class Style:
 
 class Base_th(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs)
+        super().__init__(*wgs,
+                         border_width_top=
+
+                         )
 class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
