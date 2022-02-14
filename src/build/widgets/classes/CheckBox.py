@@ -53,6 +53,8 @@ class Style:
             border_width_bottom=p_base.WG_BORDER_WIDTH,
             border_width_right=p_base.WG_BORDER_WIDTH,
             border_width_left=p_base.WG_BORDER_WIDTH,
+
+            border_width=p_base.WG_BORDER_WIDTH,
             border_style=p_base.WG_BORDER_STYLE,
             border_rgb=p_base.WG_BORDER_RGB,
 
@@ -140,7 +142,10 @@ class Style:
 
 class Base_th(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs)
+        super().__init__(*wgs,
+                         border_width_bottom=2,
+                         border_rgb=Rgb().bn1()
+                         )
 class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
