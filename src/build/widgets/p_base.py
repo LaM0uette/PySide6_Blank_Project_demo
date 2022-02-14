@@ -65,8 +65,8 @@ COLORS_GRID=COULEURS.get("c3")
 ##     DIMENSIONS     ##
 ########################
 WIDTH = None
-WG_WIDTH = None
 HEIGHT = None
+WG_WIDTH = None
 WG_HEIGHT = P_dim().h9()
 
 
@@ -109,9 +109,12 @@ IMG_HEIGHT = WG_HEIGHT * P_style().x_ico()
 #####################
 ##     BORDURE     ##
 #####################
-BD_WIDTH = 0
-BD_STYLE = "solid"
-BD_COULEUR = COULEURS.get("bn1") + (0,)
+BORDER_WIDTH = 0
+BORDER_STYLE = "solid"
+BORDER_RGB = Rgb().tr()
+WG_BORDER_WIDTH = 0
+WG_BORDER_STYLE = "solid"
+WG_BORDER_RGB = Rgb().tr()
 
 
 ###################
