@@ -15,20 +15,5 @@ class P_rgb(Rgb):
     def p_u_bn1(self): return {"c1": Rgb().bn1()}
     def p_u_bn2(self): return {"c1": Rgb().bn2()}
 
-    def p_vert_th1(self):
-        p = self.p_th1()
-        p["c3"] = Rgb().vert()
-        return p
-    def p_vert_th2(self):
-        p = self.p_th2()
-        p["c3"] = Rgb().vert()
-        return p
 
-    def p_rouge_th1(self):
-        p = self.p_th1()
-        p["c3"] = Rgb().rouge()
-        return p
-    def p_rouge_th2(self):
-        p = self.p_th2()
-        p["c3"] = Rgb().rouge()
-        return p
+

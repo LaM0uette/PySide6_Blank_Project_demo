@@ -4,11 +4,11 @@ class Rgb(Data):
     def __init__(self):
         super().__init__()
 
-    def th1(self): return self.TH("th1")
-    def th2(self): return self.TH("th2")
-    def th3(self): return self.TH("th3")
-    def bn1(self): return self.TH("bn1")
-    def bn2(self): return self.TH("bn2")
+    def th1(self): return self.TH("th1")+(255, )
+    def th2(self): return self.TH("th2")+(255, )
+    def th3(self): return self.TH("th3")+(255, )
+    def bn1(self): return self.TH("bn1")+(255, )
+    def bn2(self): return self.TH("bn2")+(255, )
 
     def hx_th1(self): return self.TH_HEX(self.TH("th1"))
     def hx_th2(self): return self.TH_HEX(self.TH("th2"))
