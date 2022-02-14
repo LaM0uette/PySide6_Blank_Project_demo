@@ -75,7 +75,7 @@ WG_HEIGHT = P_dim().h9()
 ####################
 TM = "th2"
 IMG_UNCHECK = P_img().check()
-IMG_HOVER = P_img().check()
+IMG_UNCHECK_HOVER = P_img().check()
 IMG_CHECK = P_img().valider()
 IMG_CHECK_HOVER = P_img().valider()
 IMG_DEROULANT = P_img().fleche_bottom()

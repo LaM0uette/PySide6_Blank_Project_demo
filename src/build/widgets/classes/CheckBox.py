@@ -25,16 +25,21 @@ class Style:
             height=p_base.WG_HEIGHT,
             spacing=10,
 
+            # Police
+            font=p_base.FONT,
+            font_size=p_base.FONT_SIZE,
 
-            police=p_base.FONT,
-            police_taille=p_base.FONT_SIZE,
+            # Images
             img_uncheck=p_base.IMG_UNCHECK,
-            tm_uncheck=p_base.TM_UNCHECK,
-            img_hover=p_base.IMG_HOVER,
-            tm_hover=p_base.TM_HOVER,
+            img_uncheck_hover=p_base.IMG_UNCHECK_HOVER,
             img_check=p_base.IMG_CHECK,
-            tm_check=p_base.TM_CHECK,
             img_check_hover=p_base.IMG_CHECK_HOVER,
+
+
+
+            tm_uncheck=p_base.TM_UNCHECK,
+            tm_hover=p_base.TM_HOVER,
+            tm_check=p_base.TM_CHECK,
             tm_check_hover=p_base.TM_CHECK_HOVER,
             img_width=p_base.IMG_WIDTH,
             img_height=p_base.IMG_HEIGHT,
@@ -93,7 +98,7 @@ class Style:
                     image: url({f"{img_uncheck}{tm_uncheck}.svg"});
                     }}
                     QCheckBox::indicator:hover {{
-                    image: url({f"{img_hover}{tm_hover}.svg"});
+                    image: url({f"{img_uncheck_hover}{tm_hover}.svg"});
                     }}
                     QCheckBox::indicator:checked {{
                     image: url({f"{img_check}{tm_check}.svg"});
@@ -123,7 +128,7 @@ class Style:
 
             try:
                 Fct(wg=wg, w=width, h=height).DIM()
-                wg.setFont(Fct(font=police, font_size=police_taille).FONT())
+                wg.setFont(Fct(font=font, font_size=font_size).FONT())
 
                 wg.setCursor(Fct(cur=curseur).CUR())
             except: pass
