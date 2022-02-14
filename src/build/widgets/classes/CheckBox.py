@@ -55,6 +55,14 @@ class Style:
             border_left=p_base.WG_BORDER_WIDTH,
             border_style=p_base.WG_BORDER_STYLE,
             border_rgb=p_base.WG_BORDER_RGB,
+            # Bordures hover
+            border_all_hover=None,
+            border_top_hover=p_base.WG_BORDER_WIDTH,
+            border_bottom_hover=p_base.WG_BORDER_WIDTH,
+            border_right_hover=p_base.WG_BORDER_WIDTH,
+            border_left_hover=p_base.WG_BORDER_WIDTH,
+            border_style_hover=p_base.WG_BORDER_STYLE,
+            border_rgb_hover=p_base.WG_BORDER_RGB,
 
             # Rayons
             rayon_top_right=p_base.WG_RADIUS,
@@ -121,10 +129,10 @@ class Style:
                     border-left: {border_left}px {border_style} rgba{border_rgb};
                     }}
                     .QCheckBox:hover {{
-                    border-top: {border_top}px {border_style} rgba{border_rgb};
-                    border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
-                    border-right: {border_right}px {border_style} rgba{border_rgb};
-                    border-left: {border_left}px {border_style} rgba{border_rgb};
+                    border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
+                    border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
+                    border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
+                    border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
                     }}
 
                     /* RAYONS */
@@ -148,7 +156,9 @@ class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
                          border_bottom=2,
-                         border_rgb=Rgb().bn1()
+                         border_rgb=Rgb().bn1(),
+                         border_bottom_hover=2,
+                         border_rgb_hover=Rgb().bn2(),
                          )
 class Base_tr(Style):
     def __init__(self, *wgs):
