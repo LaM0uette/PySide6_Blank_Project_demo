@@ -28,7 +28,7 @@ class Style:
                  img_margin_left=(P_dim().h9() - (P_dim().h9() * P_style().x_ico())) / 2,
                  dim_width=p_base.WG_WIDTH,
                  dim_height=p_base.WG_HEIGHT,
-                 spacing=p_base.SPACING,
+                 spacing=10,
                  police=p_base.FONT,
                  police_taille=p_base.FONT_SIZE,
                  bordure_width_top=p_base.BD_WIDTH,
