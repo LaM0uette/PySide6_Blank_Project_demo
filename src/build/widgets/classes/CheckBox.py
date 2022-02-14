@@ -33,11 +33,12 @@ class Style:
             img_uncheck_hover=p_base.IMG_UNCHECK_HOVER,
             img_check=p_base.IMG_CHECK,
             img_check_hover=p_base.IMG_CHECK_HOVER,
-            # Images TM
+            # Images RGB
             img_uncheck_rgb=p_base.IMG_UNCHECK_RGB,
             img_uncheck_hover_rgb=p_base.IMG_UNCHECK_HOVER_RGB,
             img_check_rgb=p_base.IMG_CHECK_RGB,
             img_check_hover_rgb=p_base.IMG_CHECK_HOVER_RGB,
+            # Images DIM
             img_width=p_base.IMG_WIDTH,
             img_height=p_base.IMG_HEIGHT,
             img_margin_top=0,

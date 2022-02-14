@@ -102,8 +102,8 @@ TM_GAUCHE = "th3"
 TM_UP = "th2"
 TM_DOWN = "th2"
 
-IMG_WIDTH = P_dim().h9() * P_style().x_ico()
-IMG_HEIGHT = P_dim().h9() * P_style().x_ico()
+IMG_WIDTH = WG_HEIGHT * P_style().x_ico()
+IMG_HEIGHT = WG_HEIGHT * P_style().x_ico()
 
 
 #####################
