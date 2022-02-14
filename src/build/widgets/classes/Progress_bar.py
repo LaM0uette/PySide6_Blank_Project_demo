@@ -6,7 +6,7 @@ class Style:
                  *wgs,
                  couleur_bg=p_base._COLORS_BG,
                  couleur_bg_barre=p_base.COLORS_BG_BARRE,
-                 couleur_fg=p_base.COLORS_FG,
+                 couleur_fg=p_base._COLORS_FG,
                  dim_width=p_base.DIM_WG_WIDTH,
                  dim_height=p_base.DIM_WG_HEIGHT,
                  police=p_base.FONT,

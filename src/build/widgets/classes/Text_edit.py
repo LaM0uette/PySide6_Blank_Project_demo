@@ -9,7 +9,7 @@ class Style:
                  couleur_bg=p_base._COLORS_BG,
                  couleur_bg_placeholder=p_base.COLORS_BG_PLACEHOLDER,
                  couleur_bg_selection=p_base.COLORS_BG_SELECTION,
-                 couleur_fg=p_base.COLORS_FG,
+                 couleur_fg=p_base._COLORS_FG,
                  couleur_fg_placeholder=p_base.COLORS_FG_PLACEHOLDER,
                  couleur_fg_selection=p_base.COLORS_FG_SELECTION,
                  dim_width=p_base.DIM_WG_WIDTH,

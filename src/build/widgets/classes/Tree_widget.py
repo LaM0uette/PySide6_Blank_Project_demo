@@ -11,7 +11,7 @@ class Style:
                  couleur_bg_item_hover=p_base.COLORS_BG_ITEM_HOVER,
                  couleur_bg_item_checked=p_base.COLORS_BG_ITEM_CHECKED,
                  couleur_bg_item_checked_hover=p_base.COLORS_BG_ITEM_CHECKED_HOVER,
-                 couleur_fg=p_base.COLORS_FG,
+                 couleur_fg=p_base._COLORS_FG,
                  couleur_fg_item=p_base.COLORS_FG_ITEM,
                  couleur_fg_item_hover=p_base.COLORS_FG_ITEM_HOVER,
                  couleur_fg_item_checked=p_base.COLORS_FG_ITEM_CHECKED,
