@@ -13,7 +13,6 @@ class Style:
             bg_hover=p_base.BG_HOVER,
             bg_checked=p_base.BG_CHECKED,
             bg_checked_hover=p_base.BG_CHECKED_HOVER,
-
             # Couleurs FG
             fg=p_base.FG,
             fg_hover=p_base.FG_HOVER,
@@ -34,13 +33,11 @@ class Style:
             img_uncheck_hover=p_base.IMG_UNCHECK_HOVER,
             img_check=p_base.IMG_CHECK,
             img_check_hover=p_base.IMG_CHECK_HOVER,
-
-
-
-            tm_uncheck=p_base.TM_UNCHECK,
-            tm_hover=p_base.TM_HOVER,
-            tm_check=p_base.TM_CHECK,
-            tm_check_hover=p_base.TM_CHECK_HOVER,
+            # Images TM
+            img_uncheck_rgb=p_base.IMG_UNCHECK_RGB,
+            img_uncheck_hover_rgb=p_base.IMG_UNCHECK_HOVER_RGB,
+            img_check_rgb=p_base.IMG_CHECK_RGB,
+            img_check_hover_rgb=p_base.IMG_CHECK_HOVER_RGB,
             img_width=p_base.IMG_WIDTH,
             img_height=p_base.IMG_HEIGHT,
             img_margin_top=0,
@@ -95,16 +92,16 @@ class Style:
                     height: {img_height}px;
                     }}
                     QCheckBox::indicator:unchecked {{
-                    image: url({f"{img_uncheck}{tm_uncheck}.svg"});
+                    image: url({f"{img_uncheck}{img_uncheck_rgb}.svg"});
                     }}
                     QCheckBox::indicator:hover {{
-                    image: url({f"{img_uncheck_hover}{tm_hover}.svg"});
+                    image: url({f"{img_uncheck_hover}{img_uncheck_hover_rgb}.svg"});
                     }}
                     QCheckBox::indicator:checked {{
-                    image: url({f"{img_check}{tm_check}.svg"});
+                    image: url({f"{img_check}{img_check_rgb}.svg"});
                     }}
                     QCheckBox::indicator:checked:hover {{
-                    image: url({f"{img_check_hover}{tm_check_hover}.svg"});
+                    image: url({f"{img_check_hover}{img_check_hover_rgb}.svg"});
                     }}
 
                     /* BORDURES */

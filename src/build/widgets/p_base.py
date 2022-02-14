@@ -74,11 +74,20 @@ WG_HEIGHT = P_dim().h9()
 ##     IMAGES     ##
 ####################
 
+IMG_RGB = "th2"
+
 # Check
 IMG_UNCHECK = P_img().check()
 IMG_UNCHECK_HOVER = P_img().check()
 IMG_CHECK = P_img().valider()
 IMG_CHECK_HOVER = P_img().valider()
+# Check RGB
+IMG_UNCHECK_RGB = "th2"
+IMG_UNCHECK_HOVER_RGB = "bn1"
+IMG_CHECK_RGB = "th2"
+IMG_CHECK_HOVER_RGB = "bn1"
+
+
 
 IMG_DEROULANT = P_img().fleche_bottom()
 IMG_DEROULANT_HOVER = P_img().fleche_bottom()
@@ -87,11 +96,8 @@ IMG_GAUCHE = P_img().fleche_gauche()
 IMG_UP = P_img().plus()
 IMG_DOWN = P_img().moins()
 
-TM = "th2"
-TM_UNCHECK = "th2"
-TM_HOVER = "bn1"
-TM_CHECK = "th2"
-TM_CHECK_HOVER = "bn1"
+
+
 TM_DROITE = "th3"
 TM_GAUCHE = "th3"
 TM_UP = "th2"
