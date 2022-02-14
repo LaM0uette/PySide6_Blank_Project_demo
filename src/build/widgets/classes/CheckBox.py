@@ -5,14 +5,21 @@ class Style:
     def __init__(
             self,
             *wgs,
+
+            ##  Couleur BG  ##
             bg=p_base.BG,
             bg_hover=p_base.BG_HOVER,
             bg_checked=p_base.BG_CHECKED,
             bg_checked_hover=p_base.BG_CHECKED_HOVER,
+            ## /Couleur BG  ##
+
+            ##  Couleur FG  ##
             fg=p_base.FG,
             fg_hover=p_base.FG_HOVER,
             fg_checked=p_base.FG_CHECKED,
             fg_checked_hover=p_base.FG_CHECKED_HOVER,
+            ## /Couleur FG  ##
+
             dim_width=p_base.DIM_WG_WIDTH,
             dim_height=p_base.DIM_WG_HEIGHT,
             spacing=p_base.SPACING,
