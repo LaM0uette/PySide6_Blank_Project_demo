@@ -4,7 +4,7 @@ from ....build.widgets import p_base
 class Style:
     def __init__(self,
                  *wgs,
-                 couleur_bg=p_base.COLORS_BG,
+                 couleur_bg=p_base._COLORS_BG,
                  couleur_fg=p_base.COLORS_FG,
                  dim_width=p_base.DIM_WIDTH,
                  dim_height=p_base.DIM_HEIGHT,
