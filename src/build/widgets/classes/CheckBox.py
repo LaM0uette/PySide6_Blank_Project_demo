@@ -8,13 +8,13 @@ class Style:
             # Widgets
             *wgs,
 
-            # Couleur BG
+            # Couleurs BG
             bg=p_base.BG,
             bg_hover=p_base.BG_HOVER,
             bg_checked=p_base.BG_CHECKED,
             bg_checked_hover=p_base.BG_CHECKED_HOVER,
 
-            # Couleur FG
+            # Couleurs FG
             fg=p_base.FG,
             fg_hover=p_base.FG_HOVER,
             fg_checked=p_base.FG_CHECKED,
