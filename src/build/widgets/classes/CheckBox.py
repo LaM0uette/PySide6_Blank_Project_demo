@@ -49,12 +49,12 @@ class Style:
 
             # Bordures GEN
             border_gen_all=None,
-            border_gen_top=p_base.WG_BORDER_WIDTH,
-            border_gen_bottom=p_base.WG_BORDER_WIDTH,
-            border_gen_right=p_base.WG_BORDER_WIDTH,
-            border_gen_left=p_base.WG_BORDER_WIDTH,
-            border_gen_style=p_base.WG_BORDER_STYLE,
-            border_gen_rgb=p_base.WG_BORDER_RGB,
+            border_gen_top=None,
+            border_gen_bottom=None,
+            border_gen_right=None,
+            border_gen_left=None,
+            border_gen_style=None,
+            border_gen_rgb=None,
             # Bordures
             border_all=None,
             border_top=p_base.WG_BORDER_WIDTH,
@@ -253,7 +253,7 @@ class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
                          border_gen_top=2,
-                         border_all_hover=5,
+                         border_all_hover=4,
                          )
 class Base_tr(Style):
     def __init__(self, *wgs):
