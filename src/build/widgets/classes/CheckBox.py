@@ -115,11 +115,27 @@ class Style:
             border_bottom_checked_hover = border_gen_all
             border_right_checked_hover = border_gen_all
             border_left_checked_hover = border_gen_all
-        if not border_gen_top is None:
-            border_top = border_gen_top
-            border_top_hover = border_gen_top
-            border_top_checked = border_gen_top
-            border_top_checked_hover = border_gen_top
+        else:
+            if not border_gen_top is None:
+                border_top = border_gen_top
+                border_top_hover = border_gen_top
+                border_top_checked = border_gen_top
+                border_top_checked_hover = border_gen_top
+            if not border_gen_bottom is None:
+                border_bottom = border_gen_bottom
+                border_bottom_hover = border_gen_bottom
+                border_bottom_checked = border_gen_bottom
+                border_bottom_checked_hover = border_gen_bottom
+            if not border_gen_right is None:
+                border_right = border_gen_right
+                border_right_hover = border_gen_right
+                border_right_checked = border_gen_right
+                border_right_checked_hover = border_gen_right
+            if not border_gen_left is None:
+                border_left = border_gen_left
+                border_left_hover = border_gen_left
+                border_left_checked = border_gen_left
+                border_left_checked_hover = border_gen_left
 
         if not border_all is None:
             border_top = border_all
@@ -236,7 +252,7 @@ class Style:
 class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-                         border_all=2,
+                         border_gen_all=2,
                          border_rgb=Rgb().bn1(),
                          border_bottom_hover=2,
                          border_rgb_hover=Rgb().bn2(),
