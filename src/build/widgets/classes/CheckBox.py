@@ -158,6 +158,17 @@ class Style:
                 border_left_checked = border_gen_left
                 border_left_checked_hover = border_gen_left
 
+        if not border_gen_style is None:
+            border_style = border_gen_style
+            border_style_hover = border_gen_style
+            border_style_checked = border_gen_style
+            border_style_checked_hover = border_gen_style
+        if not border_gen_rgb is None:
+            border_rgb = border_gen_rgb
+            border_rgb_hover = border_gen_rgb
+            border_rgb_checked = border_gen_rgb
+            border_rgb_checked_hover = border_gen_rgb
+
         if not radius_all is None:
             radius_top_right = radius_all
             radius_top_left = radius_all
