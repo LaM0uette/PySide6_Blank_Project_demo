@@ -17,6 +17,11 @@ class Act:
 
         self.kwargs = kwargs
 
+    def bd_rd_all(self, _all, lst):
+        if not _all is None:
+            for arg in lst:
+                print(arg)
+
 
 ### FONCTIONS
 class Fct:

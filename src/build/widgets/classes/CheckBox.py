@@ -98,6 +98,7 @@ class Style:
             # Curseur
             curseur=P_cur().souris_main()
     ):
+        Act().bd_rd_all(_all=border_all, lst=[border_top, border_bottom, border_right, border_left])
         if not border_gen_all is None:
             border_top = border_gen_all
             border_bottom = border_gen_all
@@ -115,6 +116,7 @@ class Style:
             border_bottom_checked_hover = border_gen_all
             border_right_checked_hover = border_gen_all
             border_left_checked_hover = border_gen_all
+
         if not border_all is None:
             border_top = border_all
             border_bottom = border_all
@@ -135,6 +137,7 @@ class Style:
             border_bottom_checked_hover = border_all_checked_hover
             border_right_checked_hover = border_all_checked_hover
             border_left_checked_hover = border_all_checked_hover
+
         if not radius_all is None:
             radius_top_right = radius_all
             radius_top_left = radius_all
