@@ -81,10 +81,11 @@ class Style:
             border_rgb_checked_hover=p_base.WG_BORDER_RGB,
 
             # Rayons
-            rayon_top_right=p_base.WG_RADIUS,
-            rayon_top_left=p_base.WG_RADIUS,
-            rayon_bottom_right=p_base.WG_RADIUS,
-            rayon_bottom_left=p_base.WG_RADIUS,
+            radius_all=None,
+            radius_top_right=p_base.WG_RADIUS,
+            radius_top_left=p_base.WG_RADIUS,
+            radius_bottom_right=p_base.WG_RADIUS,
+            radius_bottom_left=p_base.WG_RADIUS,
 
             # Curseur
             curseur=P_cur().souris_main()
@@ -109,6 +110,11 @@ class Style:
             border_bottom_checked_hover = border_all_checked_hover
             border_right_checked_hover = border_all_checked_hover
             border_left_checked_hover = border_all_checked_hover
+        if not radius_all is None:
+            radius_top_right = radius_all
+            radius_top_left = radius_all
+            radius_bottom_right = radius_all
+            radius_bottom_left = radius_all
 
         style = f"""
                     /* CHECKBOX */
@@ -180,10 +186,10 @@ class Style:
 
                     /* RAYONS */
                     .QCheckBox {{
-                    border-top-left-radius: {rayon_top_left}px;
-                    border-top-right-radius: {rayon_top_right}px;
-                    border-bottom-right-radius: {rayon_bottom_right}px;
-                    border-bottom-left-radius: {rayon_bottom_left}px;
+                    border-top-left-radius: {radius_top_left}px;
+                    border-top-right-radius: {radius_top_right}px;
+                    border-bottom-right-radius: {radius_bottom_right}px;
+                    border-bottom-left-radius: {radius_bottom_left}px;
                     }}"""
 
         for wg in wgs:
