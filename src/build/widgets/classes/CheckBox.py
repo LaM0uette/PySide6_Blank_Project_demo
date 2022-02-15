@@ -115,6 +115,27 @@ class Style:
             border_bottom_checked_hover = border_gen_all
             border_right_checked_hover = border_gen_all
             border_left_checked_hover = border_gen_all
+        elif border_gen_all is None:
+            if not border_all is None:
+                border_top = border_all
+                border_bottom = border_all
+                border_right = border_all
+                border_left = border_all
+            if not border_all_hover is None:
+                border_top_hover = border_all_hover
+                border_bottom_hover = border_all_hover
+                border_right_hover = border_all_hover
+                border_left_hover = border_all_hover
+            if not border_all_checked is None:
+                border_top_checked = border_all_checked
+                border_bottom_checked = border_all_checked
+                border_right_checked = border_all_checked
+                border_left_checked = border_all_checked
+            if not border_all_checked_hover is None:
+                border_top_checked_hover = border_all_checked_hover
+                border_bottom_checked_hover = border_all_checked_hover
+                border_right_checked_hover = border_all_checked_hover
+                border_left_checked_hover = border_all_checked_hover
         else:
             if not border_gen_top is None:
                 border_top = border_gen_top
@@ -136,27 +157,6 @@ class Style:
                 border_left_hover = border_gen_left
                 border_left_checked = border_gen_left
                 border_left_checked_hover = border_gen_left
-
-        if not border_all is None:
-            border_top = border_all
-            border_bottom = border_all
-            border_right = border_all
-            border_left = border_all
-        if not border_all_hover is None:
-            border_top_hover = border_all_hover
-            border_bottom_hover = border_all_hover
-            border_right_hover = border_all_hover
-            border_left_hover = border_all_hover
-        if not border_all_checked is None:
-            border_top_checked = border_all_checked
-            border_bottom_checked = border_all_checked
-            border_right_checked = border_all_checked
-            border_left_checked = border_all_checked
-        if not border_all_checked_hover is None:
-            border_top_checked_hover = border_all_checked_hover
-            border_bottom_checked_hover = border_all_checked_hover
-            border_right_checked_hover = border_all_checked_hover
-            border_left_checked_hover = border_all_checked_hover
 
         if not radius_all is None:
             radius_top_right = radius_all
