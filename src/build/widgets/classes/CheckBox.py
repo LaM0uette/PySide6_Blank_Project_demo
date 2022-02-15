@@ -45,7 +45,7 @@ class Style:
             img_margin_top=0,
             img_margin_bottom=0,
             img_margin_right=0,
-            img_margin_left=(P_dim().h9() - (P_dim().h9() * P_style().x_ico())) / 2,
+            img_margin_left=(p_base.WG_HEIGHT - (p_base.WG_HEIGHT * P_style().x_ico())) / 2,
 
             # Bordures GEN
             border_gen_all=None,
@@ -176,6 +176,7 @@ class Style:
             radius_top_left = radius_all
             radius_bottom_right = radius_all
             radius_bottom_left = radius_all
+
 
         style = f"""
                     /* CHECKBOX */
