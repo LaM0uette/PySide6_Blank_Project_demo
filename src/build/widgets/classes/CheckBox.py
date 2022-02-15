@@ -262,10 +262,7 @@ class Style:
 
 class Base_th(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-                         border_gen_top=2,
-                         border_all_hover=4,
-                         )
+        super().__init__(*wgs)
 class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
