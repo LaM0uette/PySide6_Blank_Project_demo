@@ -136,7 +136,7 @@ class Style:
                 border_bottom_checked_hover = border_all_checked_hover
                 border_right_checked_hover = border_all_checked_hover
                 border_left_checked_hover = border_all_checked_hover
-        else:
+
             if not border_gen_top is None:
                 border_top = border_gen_top
                 border_top_hover = border_gen_top
