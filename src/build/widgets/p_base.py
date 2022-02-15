@@ -114,7 +114,7 @@ BORDER_STYLE = "solid"
 BORDER_RGB = Rgb().tr()
 WG_BORDER_WIDTH = 0
 WG_BORDER_STYLE = "solid"
-WG_BORDER_RGB = Rgb().tr()
+WG_BORDER_RGB = Rgb().bn2()
 
 
 ###################
