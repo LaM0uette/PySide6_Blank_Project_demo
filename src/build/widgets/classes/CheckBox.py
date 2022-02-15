@@ -98,7 +98,6 @@ class Style:
             # Curseur
             curseur=P_cur().souris_main()
     ):
-        Act().bd_rd_all(border_all, border_top, border_bottom, border_right, border_left)
         if not border_gen_all is None:
             border_top = border_gen_all
             border_bottom = border_gen_all
