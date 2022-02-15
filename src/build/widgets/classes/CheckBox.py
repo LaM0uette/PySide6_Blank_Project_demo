@@ -98,7 +98,6 @@ class Style:
             # Curseur
             curseur=P_cur().souris_main()
     ):
-        Act().bd_rd_all(_all=border_all, lst=[border_top, border_bottom, border_right, border_left])
         if not border_gen_all is None:
             border_top = border_gen_all
             border_bottom = border_gen_all
@@ -232,7 +231,7 @@ class Style:
 class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-                         border_bottom=2,
+                         border_all=2,
                          border_rgb=Rgb().bn1(),
                          border_bottom_hover=2,
                          border_rgb_hover=Rgb().bn2(),
