@@ -47,6 +47,14 @@ class Style:
             img_margin_right=0,
             img_margin_left=(P_dim().h9() - (P_dim().h9() * P_style().x_ico())) / 2,
 
+            # Bordures GEN
+            border_gen_all=None,
+            border_gen_top=p_base.WG_BORDER_WIDTH,
+            border_gen_bottom=p_base.WG_BORDER_WIDTH,
+            border_gen_right=p_base.WG_BORDER_WIDTH,
+            border_gen_left=p_base.WG_BORDER_WIDTH,
+            border_gen_style=p_base.WG_BORDER_STYLE,
+            border_gen_rgb=p_base.WG_BORDER_RGB,
             # Bordures
             border_all=None,
             border_top=p_base.WG_BORDER_WIDTH,
@@ -91,6 +99,23 @@ class Style:
             curseur=P_cur().souris_main()
     ):
         Act().bd_rd_all(border_all, border_top, border_bottom, border_right, border_left)
+        if not border_gen_all is None:
+            border_top = border_gen_all
+            border_bottom = border_gen_all
+            border_right = border_gen_all
+            border_left = border_gen_all
+            border_top_hover = border_gen_all
+            border_bottom_hover = border_gen_all
+            border_right_hover = border_gen_all
+            border_left_hover = border_gen_all
+            border_top_checked = border_gen_all
+            border_bottom_checked = border_gen_all
+            border_right_checked = border_gen_all
+            border_left_checked = border_gen_all
+            border_top_checked_hover = border_gen_all
+            border_bottom_checked_hover = border_gen_all
+            border_right_checked_hover = border_gen_all
+            border_left_checked_hover = border_gen_all
         if not border_all is None:
             border_top = border_all
             border_bottom = border_all
