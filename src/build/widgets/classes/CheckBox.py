@@ -115,6 +115,11 @@ class Style:
             border_bottom_checked_hover = border_gen_all
             border_right_checked_hover = border_gen_all
             border_left_checked_hover = border_gen_all
+        if not border_gen_top is None:
+            border_top = border_gen_top
+            border_top_hover = border_gen_top
+            border_top_checked = border_gen_top
+            border_top_checked_hover = border_gen_top
 
         if not border_all is None:
             border_top = border_all
