@@ -9,11 +9,13 @@ class Style:
             *wgs,
 
             # Couleurs BG
+            bg_gen=None,
             bg=p_base.BG,
             bg_hover=p_base.BG_HOVER,
             bg_checked=p_base.BG_CHECKED,
             bg_checked_hover=p_base.BG_CHECKED_HOVER,
             # Couleurs FG
+            fg_gen=None,
             fg=p_base.FG,
             fg_hover=p_base.FG_HOVER,
             fg_checked=p_base.FG_CHECKED,
@@ -83,6 +85,18 @@ class Style:
             # Curseur
             curseur=P_cur().souris_main()
     ):
+        # BG
+        if not bg_gen is None:
+            bg = bg_gen
+            bg_hover = bg_gen
+            bg_checked = bg_gen
+            bg_checked_hover = bg_gen
+        # FG
+        if not fg_gen is None:
+            fg = fg_gen
+            fg_hover = fg_gen
+            fg_checked = fg_gen
+            fg_checked_hover = fg_gen
         # Bordure
         if not border_gen_all is None:
             border_top = border_gen_all
