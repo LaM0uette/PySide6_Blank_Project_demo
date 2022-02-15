@@ -11,6 +11,13 @@ from . import *
 from ..config import *
 
 
+### ACTIONS
+class Act:
+    def __init__(self, **kwargs):
+
+        self.kwargs = kwargs
+
+
 ### FONCTIONS
 class Fct:
     def __init__(self, **kwargs):
