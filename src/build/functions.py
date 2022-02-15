@@ -17,7 +17,7 @@ class Act:
 
         self.kwargs = kwargs
 
-    def _bd_rd_all(self, _all, *args):
+    def bd_rd_all(self, _all, *args):
         if not _all is None:
             for arg in args:
                 print(arg)
