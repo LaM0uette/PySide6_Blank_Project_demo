@@ -18,10 +18,14 @@ class Style:
             fg=p_base.FG,
             fg_hover=p_base.FG_HOVER,
 
-            dim_width=p_base.WIDTH,
-            dim_height=p_base.HEIGHT,
-            police=p_base.FONT,
-            police_taille=p_base.FONT_SIZE,
+            # Dimensions WG
+            width=p_base.WG_WIDTH,
+            height=p_base.WG_HEIGHT,
+
+            # Police
+            font=p_base.FONT,
+            font_size=p_base.FONT_SIZE,
+
             bordure_width_top=p_base.WG_BORDER_WIDTH,
             bordure_width_bottom=p_base.WG_BORDER_WIDTH,
             bordure_width_right=p_base.WG_BORDER_WIDTH,
@@ -38,8 +42,14 @@ class Style:
             rayon_top_right=p_base.WG_RADIUS,
             rayon_bottom_right=p_base.WG_RADIUS,
             rayon_bottom_left=p_base.WG_RADIUS,
-            align=p_base.ALIGN,
+
+            # Paramètres
+            align_horizontal=Align().h_center(),
+            align_vertical=Align().v_center(),
             word_wrap=p_base.WORD_WRAP,
+
+            # Curseur
+            curseur=p_base.CUR
     ):
         # BG
         if not bg_gen is None:
@@ -81,10 +91,10 @@ class Style:
         for wg in wgs:
             wg.setStyleSheet(style)
 
-            Fct(wg=wg, w=dim_width, h=dim_height).DIM()
-            wg.setFont(Fct(font=police, font_size=police_taille).FONT())
+            Fct(wg=wg, w=width, h=height).DIM()
+            wg.setFont(Fct(font=font, font_size=font_size).FONT())
 
-            wg.setAlignment(align)
+            wg.setAlignment(align_horizontal | align_vertical)
             wg.setWordWrap(word_wrap)
 
 
@@ -93,40 +103,41 @@ class Base_th(Style):
         super().__init__(*wgs)
 class Base_tr(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-                         bg_gen=Rgb().tr(),
-                         fg_gen=Rgb().th3(),
+        super().__init__(
+            *wgs,
+            bg_gen=Rgb().tr(),
+            fg_gen=Rgb().th3(),
     )
 
 class H1(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
               bg=Rgb().tr(),
-              police_taille=P_font().h1()
+              font_size=P_font().h1()
     )
 class H2(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
               bg=Rgb().tr(),
-              police_taille=P_font().h2()
+              font_size=P_font().h2()
     )
 class H3(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
               bg=Rgb().tr(),
-              police_taille=P_font().h3()
+              font_size=P_font().h3()
     )
 class H4(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
               bg=Rgb().tr(),
-              police_taille=P_font().h4()
+              font_size=P_font().h4()
     )
 class H5(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
               bg=Rgb().tr(),
-              police_taille=P_font().h5()
+              font_size=P_font().h5()
     )
 
 
@@ -136,6 +147,7 @@ class DemoCat(Style):
             *wgs,
             bg_gen=Rgb().tr(),
             fg_gen=Rgb().th3(),
+            font_size=P_font().h2(),
             bordure_width_bottom=P_style().bd(),
             bordure_couleur_bottom=P_rgb().bn1()+(255, ),
     )

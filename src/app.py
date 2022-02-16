@@ -67,10 +67,12 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         ### QLabel ###
         Label.Base_th(self.lb_lb_demo_th)
         Label.Base_tr(self.lb_mb_version, self.lb_lb_demo_tr)
-        Label.DemoCat(self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
-                      self.lb_rb_demo, self.lb_pg_demo, self.lb_sb_demo, self.lb_tw_demo, self.lb_le_demo,
-                      self.lb_te_demo, self.lb_pte_demo, self.lb_tb_demo, self.lb_trw_demo, self.lb_sd_demo,
-                      self.lb_fr_demo, self.lb_lb_demo)
+        Label.DemoCat(
+            self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
+            self.lb_rb_demo, self.lb_pg_demo, self.lb_sb_demo, self.lb_tw_demo, self.lb_le_demo,
+            self.lb_te_demo, self.lb_pte_demo, self.lb_tb_demo, self.lb_trw_demo, self.lb_sd_demo,
+            self.lb_fr_demo, self.lb_lb_demo
+        )
         ### /QLabel ###
 
 
