@@ -175,8 +175,6 @@ class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
            curseur=P_cur().main(),
-           bordure_couleur_bottom=P_rgb().th2()+(255, ),
-           bordure_width_bottom=P_style().bd()
     )
 class Base_tr(Style):
     def __init__(self, *wgs):
