@@ -21,8 +21,8 @@ class Style:
             fg=p_base.FG,
             fg_hover=p_base.FG_HOVER,
             fg_selection=p_base.FG_SELECTION,
-            fg_item=p_base.BG_ITEM,
-            fg_item_hover=p_base.BG_ITEM_HOVER,
+            fg_item=p_base.FG_ITEM,
+            fg_item_hover=p_base.FG_ITEM_HOVER,
 
             # Dimensions WG
             width=p_base.WG_WIDTH,
