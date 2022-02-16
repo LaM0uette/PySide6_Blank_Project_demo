@@ -161,15 +161,18 @@ class Style:
 
 
 class Base_th(Style):
-    def __init__(self, *wgs):
-        super().__init__(*wgs)
+    def __init__(self, *wgs, font_size=p_base.FONT_SIZE):
+        super().__init__(
+            *wgs,
+            font_size=font_size,
+    )
 class Base_tr(Style):
     def __init__(self, *wgs, font_size=p_base.FONT_SIZE):
         super().__init__(
             *wgs,
             bg_gen=Rgb().tr(),
             fg_gen=Rgb().th3(),
-            font_size=font_size
+            font_size=font_size,
     )
 
 
