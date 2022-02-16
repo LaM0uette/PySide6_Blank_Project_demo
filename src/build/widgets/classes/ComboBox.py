@@ -80,6 +80,64 @@ class Style:
             # Curseur
             curseur=p_base.CUR
     ):
+        # BG
+        if not bg_gen is None:
+            bg = bg_gen
+            bg_hover = bg_gen
+        # FG
+        if not fg_gen is None:
+            fg = fg_gen
+            fg_hover = fg_gen
+        # Bordure
+        if not border_gen_all is None:
+            border_top = border_gen_all
+            border_bottom = border_gen_all
+            border_right = border_gen_all
+            border_left = border_gen_all
+            border_top_hover = border_gen_all
+            border_bottom_hover = border_gen_all
+            border_right_hover = border_gen_all
+            border_left_hover = border_gen_all
+        elif border_gen_all is None:
+            if not border_all is None:
+                border_top = border_all
+                border_bottom = border_all
+                border_right = border_all
+                border_left = border_all
+            if not border_all_hover is None:
+                border_top_hover = border_all_hover
+                border_bottom_hover = border_all_hover
+                border_right_hover = border_all_hover
+                border_left_hover = border_all_hover
+
+            if not border_gen_top is None:
+                border_top = border_gen_top
+                border_top_hover = border_gen_top
+            if not border_gen_bottom is None:
+                border_bottom = border_gen_bottom
+                border_bottom_hover = border_gen_bottom
+            if not border_gen_right is None:
+                border_right = border_gen_right
+                border_right_hover = border_gen_right
+            if not border_gen_left is None:
+                border_left = border_gen_left
+                border_left_hover = border_gen_left
+        # Bordure style
+        if not border_gen_style is None:
+            border_style = border_gen_style
+            border_style_hover = border_gen_style
+        # Bordure RGB
+        if not border_gen_rgb is None:
+            border_rgb = border_gen_rgb
+            border_rgb_hover = border_gen_rgb
+        # Radius
+        if not radius_all is None:
+            radius_top_right = radius_all
+            radius_top_left = radius_all
+            radius_bottom_right = radius_all
+            radius_bottom_left = radius_all
+
+
         style = f"""
                 /* COMBOBOX */
                 QComboBox, QFontComboBox {{
@@ -133,6 +191,14 @@ class Style:
                 border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
                 border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
                 border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
+                }}
+                
+                /* RAYONS */
+                .QComboBox, .QFontComboBox {{
+                border-top-right-radius: {radius_top_right}px;
+                border-top-left-radius: {radius_top_left}px;
+                border-bottom-right-radius: {radius_bottom_right}px;
+                border-bottom-left-radius: {radius_bottom_left}px;
                 }}
 
                 /* SCROLL */
