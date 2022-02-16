@@ -54,11 +54,9 @@ class Style:
         for wg in wgs:
             wg.setStyleSheet(style)
 
-            try:
-                Fct(wg=wg, w=dim_width, h=dim_height).DIM()
+            Fct(wg=wg, w=dim_width, h=dim_height).DIM()
 
-                wg.setFrameShape(QtWidgets.QFrame.NoFrame)
-            except: pass
+            wg.setFrameShape(QtWidgets.QFrame.NoFrame)
 
 
 class Base_th(Style):
