@@ -253,12 +253,10 @@ class Style:
         for wg in wgs:
             wg.setStyleSheet(style)
 
-            try:
-                Fct(wg=wg, w=width, h=height).DIM()
-                wg.setFont(Fct(font=font, font_size=font_size).FONT())
+            Fct(wg=wg, w=width, h=height).DIM()
+            wg.setFont(Fct(font=font, font_size=font_size).FONT())
 
-                wg.setCursor(Fct(cur=curseur).CUR())
-            except: pass
+            wg.setCursor(Fct(cur=curseur).CUR())
 
 
 class Base_th(Style):
