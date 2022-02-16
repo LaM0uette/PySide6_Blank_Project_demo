@@ -127,13 +127,13 @@ class Style:
         }}
 
         /* BORDURES */
-        .QComboBox, .QFontComboBox {{
+        .QLabel {{
         border-top: {border_top}px {border_style} rgba{border_rgb};
         border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
         border-right: {border_right}px {border_style} rgba{border_rgb};
         border-left: {border_left}px {border_style} rgba{border_rgb};
         }}
-        .QComboBox:hover, .QFontComboBox:hover {{
+        .QLabel:hover {{
         border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
         border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
         border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
@@ -141,7 +141,7 @@ class Style:
         }}
         
         /* RAYONS */
-        .QComboBox, .QFontComboBox {{
+        .QLabel {{
         border-top-right-radius: {radius_top_right}px;
         border-top-left-radius: {radius_top_left}px;
         border-bottom-right-radius: {radius_bottom_right}px;
