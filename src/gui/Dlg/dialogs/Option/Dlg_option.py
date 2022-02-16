@@ -77,9 +77,11 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
 
 
         ### QFrame ###
-        Frame.Cadre_th3(self.fr_main,
-                        self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5,
-                        self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize)
+        Frame.Cadre(
+            self.fr_main,
+            self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5,
+            self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize
+        ).th3()
         Frame.Menu_bottom_dlg(self.fr_opt_bottom)
         ### /QFrame ###
 

@@ -46,7 +46,7 @@ class Dlg_msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
         self.setWindowOpacity(self.opacity)
     def IN_CLASSE(self):
         ### QFrame ###
-        Frame.Cadre_th3(self.fr_main)
+        Frame.Cadre(self.fr_main).th3()
         Frame.Menu_bottom_dlg(self.fr_msg_bottom)
         ### /QFrame ###
 
