@@ -23,12 +23,8 @@ class Style:
             fg_item_hover=p_base.BG_ITEM_HOVER,
 
             couleur_bg_selection=p_base.COLORS_BG_SELECTION,
-            couleur_bg_item=p_base.COLORS_BG_ITEM,
-            couleur_bg_item_hover=p_base.COLORS_BG_ITEM_HOVER,
 
             couleur_fg_selection=p_base.COLORS_FG_SELECTION,
-            couleur_fg_item=p_base.COLORS_FG_ITEM,
-            couleur_fg_item_hover=p_base.COLORS_FG_ITEM_HOVER,
 
             dim_width=p_base.WG_WIDTH,
             dim_height=p_base.WG_HEIGHT,
@@ -102,12 +98,12 @@ class Style:
 
                 /* ELEMENTS DEROULEMENT */
                 QComboBox QAbstractItemView::item, QFontComboBox QAbstractItemView::item {{
-                background-color: rgba{couleur_bg_item};
-                color: rgb{couleur_fg_item};
+                background-color: rgba{bg_item};
+                color: rgb{fg_item};
                 }}
                 QComboBox QAbstractItemView::item:hover, QFontComboBox QAbstractItemView::item:hover {{
-                background-color: rgba{couleur_bg_item_hover};
-                color: rgb{couleur_fg_item_hover};
+                background-color: rgba{bg_item_hover};
+                color: rgb{fg_item_hover};
                 }}
 
                 /* BORDURES */
@@ -174,7 +170,7 @@ class Base_th(Style):
 class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-           couleur_bg=(0, 0, 0, 0),
-           couleur_bg_hover=(0, 0, 0, 0),
+           bg=Rgb().tr(),
+           bg_hover=Rgb().tr(),
            edit=True
     )
