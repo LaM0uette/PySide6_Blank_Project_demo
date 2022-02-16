@@ -17,11 +17,21 @@ class Style:
             width=p_base.WIDTH,
             height=p_base.HEIGHT,
 
+            # Bordures GEN
+            border_gen_all=None,
+            border_gen_style=None,
+            border_gen_rgb=None,
+            border_gen_top=None, border_gen_bottom=None, border_gen_right=None, border_gen_left=None,
             # Bordures
             border_all=None,
             border_style=p_base.WG_BORDER_STYLE,
             border_rgb=p_base.WG_BORDER_RGB,
             border_top=p_base.WG_BORDER_WIDTH, border_bottom=p_base.WG_BORDER_WIDTH, border_right=p_base.WG_BORDER_WIDTH, border_left=p_base.WG_BORDER_WIDTH,
+            # Bordures hover
+            border_all_hover=None,
+            border_style_hover=p_base.WG_BORDER_STYLE,
+            border_rgb_hover=p_base.WG_BORDER_RGB,
+            border_top_hover=p_base.WG_BORDER_WIDTH, border_bottom_hover=p_base.WG_BORDER_WIDTH, border_right_hover=p_base.WG_BORDER_WIDTH, border_left_hover=p_base.WG_BORDER_WIDTH,
 
             # Rayons
             radius_all=None,
@@ -31,11 +41,47 @@ class Style:
             radius_bottom_left=p_base.WG_RADIUS,
     ):
         # Bordure
-        if not border_all is None:
-            border_top = border_all
-            border_bottom = border_all
-            border_right = border_all
-            border_left = border_all
+        if not border_gen_all is None:
+            border_top = border_gen_all
+            border_bottom = border_gen_all
+            border_right = border_gen_all
+            border_left = border_gen_all
+            border_top_hover = border_gen_all
+            border_bottom_hover = border_gen_all
+            border_right_hover = border_gen_all
+            border_left_hover = border_gen_all
+        elif border_gen_all is None:
+            if not border_all is None:
+                border_top = border_all
+                border_bottom = border_all
+                border_right = border_all
+                border_left = border_all
+            if not border_all_hover is None:
+                border_top_hover = border_all_hover
+                border_bottom_hover = border_all_hover
+                border_right_hover = border_all_hover
+                border_left_hover = border_all_hover
+
+            if not border_gen_top is None:
+                border_top = border_gen_top
+                border_top_hover = border_gen_top
+            if not border_gen_bottom is None:
+                border_bottom = border_gen_bottom
+                border_bottom_hover = border_gen_bottom
+            if not border_gen_right is None:
+                border_right = border_gen_right
+                border_right_hover = border_gen_right
+            if not border_gen_left is None:
+                border_left = border_gen_left
+                border_left_hover = border_gen_left
+        # Bordure style
+        if not border_gen_style is None:
+            border_style = border_gen_style
+            border_style_hover = border_gen_style
+        # Bordure RGB
+        if not border_gen_rgb is None:
+            border_rgb = border_gen_rgb
+            border_rgb_hover = border_gen_rgb
         # Radius
         if not radius_all is None:
             radius_top_right = radius_all
@@ -56,6 +102,12 @@ class Style:
         border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
         border-right: {border_right}px {border_style} rgba{border_rgb};
         border-left: {border_left}px {border_style} rgba{border_rgb};
+        }}
+        .QFrame:hover {{
+        border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
+        border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
+        border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
+        border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
         }}
 
         /* RAYONS */
@@ -106,18 +158,18 @@ class Cadre:
     def __init__(self, *wgs):
         self.wgs = wgs
 
-    def rtn(self, border_rgb):
+    def rtn(self, rgb):
         Style(*self.wgs,
             bg=Rgb().tr(),
-            border_all=P_style().bd(),
-            border_rgb=border_rgb,
+            border_gen_all=P_style().bd(),
+            border_gen_rgb=rgb,
         )
 
-    def th1(self): self.rtn(border_rgb=Rgb().th1())
-    def th2(self): self.rtn(border_rgb=Rgb().th2())
-    def th3(self): self.rtn(border_rgb=Rgb().th3())
-    def bn1(self): self.rtn(border_rgb=Rgb().bn1())
-    def bn2(self): self.rtn(border_rgb=Rgb().bn2())
+    def th1(self): self.rtn(rgb=Rgb().th1())
+    def th2(self): self.rtn(rgb=Rgb().th2())
+    def th3(self): self.rtn(rgb=Rgb().th3())
+    def bn1(self): self.rtn(rgb=Rgb().bn1())
+    def bn2(self): self.rtn(rgb=Rgb().bn2())
 
 class palette_rgb(Style):
     def __init__(self, *wgs, rgb):
