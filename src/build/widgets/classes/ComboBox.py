@@ -27,23 +27,18 @@ class Style:
             # Dimensions WG
             width=p_base.WG_WIDTH,
             height=p_base.WG_HEIGHT,
-            spacing=10,
 
             # Police
             font=p_base.FONT,
             font_size=p_base.FONT_SIZE,
 
-
-            dim_width=p_base.WG_WIDTH,
-            dim_height=p_base.WG_HEIGHT,
             img=p_base.IMG_DEROULANT,
             tm=p_base.IMG_RGB,
             img_hover=p_base.IMG_DEROULANT_HOVER,
             tm_hover=p_base.IMG_UNCHECK_HOVER_RGB,
             img_width=p_base.IMG_WIDTH,
             img_height=p_base.IMG_HEIGHT,
-            police=p_base.FONT,
-            police_taille=p_base.FONT_SIZE,
+
             bordure_width_top=p_base.WG_BORDER_WIDTH,
             bordure_width_bottom=p_base.WG_BORDER_WIDTH,
             bordure_width_right=p_base.WG_BORDER_WIDTH,
@@ -75,15 +70,13 @@ class Style:
                 QComboBox, QFontComboBox {{
                 background-color: rgba{bg};
                 color: rgb{fg};
-                selection-background-color: rgb{couleur_bg_selection};
-                selection-color: rgb{couleur_fg_selection};
+                selection-background-color: rgb{bg_selection};
+                selection-color: rgb{fg_selection};
                 border: none;
                 }}
                 QComboBox:hover, QFontComboBox:hover {{
                 background-color: rgba{bg_hover};
                 color: rgb{fg_hover};
-                selection-background-color: rgb{couleur_bg_selection};
-                selection-color: rgb{couleur_fg_selection};
                 }}
 
                 /* BOUTON DE DEROULEMENT */
@@ -154,18 +147,16 @@ class Style:
         for wg in wgs:
             wg.setStyleSheet(style)
 
-            try:
-                Fct(wg=wg, w=dim_width, h=dim_height).DIM()
-                wg.setFont(Fct(font=police, font_size=police_taille).FONT())
+            Fct(wg=wg, w=width, h=height).DIM()
+            wg.setFont(Fct(font=font, font_size=font_size).FONT())
 
-                wg.setEditable(edit)
+            wg.setEditable(edit)
 
-                wg.setCursor(Fct(cur=curseur).CUR())
-                wg.view().setCursor(Fct(cur=P_cur().souris_main()).CUR())
-                if edit:
-                    wg.lineEdit().setFont(Fct(font_size=police_taille).FONT())
+            wg.setCursor(Fct(cur=curseur).CUR())
+            wg.view().setCursor(Fct(cur=P_cur().souris_main()).CUR())
+            if edit:
+                    wg.lineEdit().setFont(Fct(font_size=font_size).FONT())
                     wg.lineEdit().setCursor(Fct(cur=P_cur().IBeam()).CUR())
-            except: pass
 
 
 class Base_th(Style):
