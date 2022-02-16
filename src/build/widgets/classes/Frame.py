@@ -177,3 +177,15 @@ class palette_rgb(Style):
               bg=rgb,
               radius_all=40,
     )
+
+
+class Demo_hover(Style):
+    def __init__(self, *wgs):
+        super().__init__(*wgs,
+              bg=Rgb().tr(),
+              border_all=P_style().bd(),
+              border_rgb=Rgb().bn1(),
+              border_all_hover=P_style().bd()*2,
+              border_style_hover="dashed",
+              border_rgb_hover=Rgb().vert(),
+    )

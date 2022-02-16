@@ -60,6 +60,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             self.fr_demo_cadre, self.fr_fr, self.fr_lb
         ).bn1()
         Frame.Menu_bottom(self.fr_menu_bottom)
+        Frame.Demo_hover(self.fr_demo_cadre_hover)
         ### /QFrame ###
 
 

@@ -106,7 +106,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -4957, 818, 5700))
+        self.vlay_wg.setGeometry(QRect(0, -828, 818, 5830))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -277,6 +277,14 @@ class Ui_main(object):
         self.fr_demo_cadre.setFrameShadow(QFrame.Raised)
 
         self.vlay_fr.addWidget(self.fr_demo_cadre)
+
+        self.fr_demo_cadre_hover = QFrame(self.fr_fr)
+        self.fr_demo_cadre_hover.setObjectName(u"fr_demo_cadre_hover")
+        self.fr_demo_cadre_hover.setMinimumSize(QSize(0, 120))
+        self.fr_demo_cadre_hover.setFrameShape(QFrame.StyledPanel)
+        self.fr_demo_cadre_hover.setFrameShadow(QFrame.Raised)
+
+        self.vlay_fr.addWidget(self.fr_demo_cadre_hover)
 
 
         self.verticalLayout.addWidget(self.fr_fr)

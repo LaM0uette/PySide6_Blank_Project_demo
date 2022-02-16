@@ -151,9 +151,9 @@
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>-4957</y>
+              <y>-828</y>
               <width>818</width>
-              <height>5700</height>
+              <height>5830</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout">
@@ -579,6 +579,22 @@
                 </item>
                 <item>
                  <widget class="QFrame" name="fr_demo_cadre">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>120</height>
+                   </size>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QFrame" name="fr_demo_cadre_hover">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
