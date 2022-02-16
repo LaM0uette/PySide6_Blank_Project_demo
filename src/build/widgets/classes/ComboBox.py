@@ -69,19 +69,18 @@ class Style:
                 /* COMBOBOX */
                 QComboBox, QFontComboBox {{
                 background-color: rgba{bg};
-                color: rgb{fg};
-                selection-background-color: rgb{bg_selection};
-                selection-color: rgb{fg_selection};
-                border: none;
+                color: rgba{fg};
+                selection-background-color: rgba{bg_selection};
+                selection-color: rgba{fg_selection};
                 }}
                 QComboBox:hover, QFontComboBox:hover {{
                 background-color: rgba{bg_hover};
-                color: rgb{fg_hover};
+                color: rgba{fg_hover};
                 }}
 
                 /* BOUTON DE DEROULEMENT */
                 QComboBox::drop-down, QFontComboBox::drop-down {{
-                width: {dim_height}px;
+                width: {height}px;
                 border: none;
                 }}
 
@@ -100,11 +99,11 @@ class Style:
                 /* ELEMENTS DEROULEMENT */
                 QComboBox QAbstractItemView::item, QFontComboBox QAbstractItemView::item {{
                 background-color: rgba{bg_item};
-                color: rgb{fg_item};
+                color: rgba{fg_item};
                 }}
                 QComboBox QAbstractItemView::item:hover, QFontComboBox QAbstractItemView::item:hover {{
                 background-color: rgba{bg_item_hover};
-                color: rgb{fg_item_hover};
+                color: rgba{fg_item_hover};
                 }}
 
                 /* BORDURES */
