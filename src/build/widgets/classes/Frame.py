@@ -4,30 +4,31 @@ from ....build import *
 from ....build.widgets import p_base
 
 class Style:
-    def __init__(self,
+    def __init__(
+            self,
 
-                 # Widgets
-                 *wgs,
-                 couleur_bg=p_base._COLORS_BG,
-                 dim_width=p_base.WIDTH,
-                 dim_height=p_base.HEIGHT,
-                 bordure_width_top=p_base.WG_BORDER_WIDTH,
-                 bordure_width_bottom=p_base.WG_BORDER_WIDTH,
-                 bordure_width_right=p_base.WG_BORDER_WIDTH,
-                 bordure_width_left=p_base.WG_BORDER_WIDTH,
-                 bordure_style_top=p_base.WG_BORDER_STYLE,
-                 bordure_style_bottom=p_base.WG_BORDER_STYLE,
-                 bordure_style_right=p_base.WG_BORDER_STYLE,
-                 bordure_style_left=p_base.WG_BORDER_STYLE,
-                 bordure_couleur_top=p_base.WG_BORDER_RGB,
-                 bordure_couleur_bottom=p_base.WG_BORDER_RGB,
-                 bordure_couleur_right=p_base.WG_BORDER_RGB,
-                 bordure_couleur_left=p_base.WG_BORDER_RGB,
-                 rayon_top_left=p_base.WG_RADIUS,
-                 rayon_top_right=p_base.WG_RADIUS,
-                 rayon_bottom_right=p_base.WG_RADIUS,
-                 rayon_bottom_left=p_base.WG_RADIUS,
-                 ):
+            # Widgets
+            *wgs,
+            couleur_bg=p_base._COLORS_BG,
+            dim_width=p_base.WIDTH,
+            dim_height=p_base.HEIGHT,
+            bordure_width_top=p_base.WG_BORDER_WIDTH,
+            bordure_width_bottom=p_base.WG_BORDER_WIDTH,
+            bordure_width_right=p_base.WG_BORDER_WIDTH,
+            bordure_width_left=p_base.WG_BORDER_WIDTH,
+            bordure_style_top=p_base.WG_BORDER_STYLE,
+            bordure_style_bottom=p_base.WG_BORDER_STYLE,
+            bordure_style_right=p_base.WG_BORDER_STYLE,
+            bordure_style_left=p_base.WG_BORDER_STYLE,
+            bordure_couleur_top=p_base.WG_BORDER_RGB,
+            bordure_couleur_bottom=p_base.WG_BORDER_RGB,
+            bordure_couleur_right=p_base.WG_BORDER_RGB,
+            bordure_couleur_left=p_base.WG_BORDER_RGB,
+            rayon_top_left=p_base.WG_RADIUS,
+            rayon_top_right=p_base.WG_RADIUS,
+            rayon_bottom_right=p_base.WG_RADIUS,
+            rayon_bottom_left=p_base.WG_RADIUS,
+    ):
         style = f"""
         /* FRAME */
         .QFrame {{
