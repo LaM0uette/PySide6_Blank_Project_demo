@@ -41,6 +41,16 @@ class Style:
             align=p_base.ALIGN,
             word_wrap=p_base.WORD_WRAP,
     ):
+        # BG
+        if not bg_gen is None:
+            bg = bg_gen
+            bg_hover = bg_gen
+        # FG
+        if not fg_gen is None:
+            fg = fg_gen
+            fg_hover = fg_gen
+
+
         style = f"""
         /* LABEL */
         .QLabel {{
@@ -84,7 +94,8 @@ class Base_th(Style):
 class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-              bg=Rgb().tr()
+                         bg_gen=Rgb().tr(),
+                         fg_gen=Rgb().th3(),
     )
 
 class H1(Style):
@@ -121,8 +132,10 @@ class H5(Style):
 
 class DemoCat(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-              bg=Rgb().tr(),
-              bordure_width_bottom=P_style().bd(),
-              bordure_couleur_bottom=P_rgb().bn1()+(255, ),
+        super().__init__(
+            *wgs,
+            bg_gen=Rgb().tr(),
+            fg_gen=Rgb().th3(),
+            bordure_width_bottom=P_style().bd(),
+            bordure_couleur_bottom=P_rgb().bn1()+(255, ),
     )
