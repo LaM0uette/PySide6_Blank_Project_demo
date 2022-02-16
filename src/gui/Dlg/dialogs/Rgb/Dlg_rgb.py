@@ -57,7 +57,7 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
 
 
         ### QLabel ###
-        Label.H4(self.lb_rgb_red, self.lb_rgb_green, self.lb_rgb_blue)
+        Label.Base_tr(self.lb_rgb_red, self.lb_rgb_green, self.lb_rgb_blue, font_size=P_font().h4())
         ### /QLabel ###
 
 
