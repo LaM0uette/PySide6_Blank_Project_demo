@@ -141,13 +141,15 @@ WG_RADIUS = 0
 ####################
 ##     SCROLL     ##
 ####################
-SCROLL_BG = COULEURS.get("c1")
-SCROLL_HANDLE_BG = COULEURS.get("c1")
-SCROLL_HANDLE_FG = COULEURS.get("c3")
+SCROLL_BG = Rgb().th1()
 SCROLL_WIDTH = 20
 SCROLL_HEIGHT = 20
+
+SCROLL_HANDLE_BG = Rgb().th1()
+SCROLL_HANDLE_FG = Rgb().th3()
 SCROLL_HANDLE_MIN_WIDTH = 30
 SCROLL_HANDLE_MIN_HEIGHT = 30
+
 SCROLL_H = QtCore.Qt.ScrollBarAsNeeded
 SCROLL_V = QtCore.Qt.ScrollBarAsNeeded
 HEADER_H = True

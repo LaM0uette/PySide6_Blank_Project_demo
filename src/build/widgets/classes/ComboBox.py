@@ -66,6 +66,7 @@ class Style:
             radius_bottom_right=p_base.WG_RADIUS,
             radius_bottom_left=p_base.WG_RADIUS,
 
+            # Scroll
             scroll_bg=p_base.SCROLL_BG,
             scroll_handle_bg=p_base.SCROLL_HANDLE_BG,
             scroll_handle_fg=p_base.SCROLL_HANDLE_FG,
@@ -84,10 +85,14 @@ class Style:
         if not bg_gen is None:
             bg = bg_gen
             bg_hover = bg_gen
+            bg_item = bg_gen
+            bg_item_hover = bg_gen
         # FG
         if not fg_gen is None:
             fg = fg_gen
             fg_hover = fg_gen
+            fg_item = bg_gen
+            fg_item_hover = bg_gen
         # Bordure
         if not border_gen_all is None:
             border_top = border_gen_all
