@@ -85,13 +85,13 @@ class Style:
                 /* DATEEDIT */
                 QDateEdit {{
                 background-color: rgba{bg};
-                color: rgb{fg};
-                selection-background-color: rgb{bg_selection};
-                selection-color: rgb{fg_selection};
+                color: rgba{fg};
+                selection-background-color: rgba{bg_selection};
+                selection-color: rgba{fg_selection};
                 }}
                 QDateEdit:hover {{
                 background-color: rgba{bg_hover};
-                color: rgb{fg_hover};
+                color: rgba{fg_hover};
                 }}
 
                 /* IMG CALENDRIER */
@@ -118,11 +118,11 @@ class Style:
                 QCalendarWidget QToolButton {{
                 font-size: {font_size}px;
                 background-color: rgba{bg_header};
-                color: rgb{fg_header};
+                color: rgba{fg_header};
                 }}
                 QCalendarWidget QToolButton:hover {{
                 background-color: rgba{bg_header_hover};
-                color: rgb{fg_header_hover};
+                color: rgba{fg_header_hover};
                 }}
 
                 /* FLECHE GAUCHE DROITE */
@@ -141,7 +141,7 @@ class Style:
                 font-size: {font_size}px;
                 font-family: {font};
                 background-color: rgba{bg_header};
-                color: rgb{fg_header};
+                color: rgba{fg_header};
                 }}
 
                 /* SPIN BOX */
@@ -150,9 +150,9 @@ class Style:
                 font-size: {font_size}px;
                 font-family: {font};
                 background-color: rgba{bg_header};
-                color: rgb{fg_header};
-                selection-background-color: rgb{bg_selection};
-                selection-color: rgb{fg_selection};
+                color: rgba{fg_header};
+                selection-background-color: rgba{bg_selection};
+                selection-color: rgba{fg_selection};
                 }}
 
                 /* JOURS */
@@ -164,13 +164,13 @@ class Style:
                 }}
                 QCalendarWidget QAbstractItemView:enabled {{
                 background-color: rgba{bg_item};
-                color: rgb{fg_item};
-                selection-background-color: rgb{fg_item};
-                selection-color: rgb{bg_item};
+                color: rgba{fg_item};
+                selection-background-color: rgba{fg_item};
+                selection-color: rgba{bg_item};
                 }}
                 QCalendarWidget QWidget:item:hover, QCalendarWidget QWidget:item:selected {{
                 background-color: rgba{bg_item_hover};
-                color: rgb{fg_item_hover};
+                color: rgba{fg_item_hover};
                 border: {bordure_jours_taille}px {bordure_jours_style} rgb{fg_item_hover};
                 }}
 
