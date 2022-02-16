@@ -44,8 +44,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         ### QDateEdit ###
-        Date_edit.Base_th(self.de_demo_th)
-        Date_edit.Base_tr(self.de_demo_tr)
+        DateEdit.Base_th(self.de_demo_th)
+        DateEdit.Base_tr(self.de_demo_tr)
         ### /QDateEdit ###
 
 
