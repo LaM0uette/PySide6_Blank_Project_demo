@@ -6,7 +6,10 @@ from ....config import vrb
 
 class Style:
     def __init__(self,
+
+                 # Widgets
                  *wgs,
+
                  couleur_bg=p_base._COLORS_BG,
                  couleur_bg_hover=p_base._COLORS_BG_HOVER,
                  couleur_bg_selection=p_base.COLORS_BG_SELECTION,
@@ -23,8 +26,15 @@ class Style:
                  couleur_fg_entete=p_base.COULEURS.get("c1"),
                  couleur_fg_entete_hover=p_base.COULEURS.get("bn1"),
                  couleur_fg_mois=p_base.COULEURS.get("c1"),
-                 dim_width=p_base.WG_WIDTH,
-                 dim_height=p_base.WG_HEIGHT,
+
+                 # Dimensions WG
+                 width=p_base.WG_WIDTH,
+                 height=p_base.WG_HEIGHT,
+
+                 # Police
+                 font=p_base.FONT,
+                 font_size=p_base.FONT_SIZE,
+
                  img=P_img().calendrier(),
                  tm="",
                  img_hover=P_img().calendrier(),
@@ -39,8 +49,7 @@ class Style:
                  img_margin_bottom=0,
                  img_margin_right=0,
                  img_margin_left=0,
-                 police=p_base.FONT,
-                 police_taille=p_base.FONT_SIZE,
+
                  bordure_width_top=p_base.WG_BORDER_WIDTH,
                  bordure_width_bottom=p_base.WG_BORDER_WIDTH,
                  bordure_width_right=p_base.WG_BORDER_WIDTH,
@@ -97,7 +106,7 @@ class Style:
 
                 /* TOOL BUTTON */
                 QCalendarWidget QToolButton {{
-                font-size: {police_taille}px;
+                font-size: {font_size}px;
                 background-color: rgba{couleur_bg_entete};
                 color: rgb{couleur_fg_entete};
                 }}
@@ -109,18 +118,18 @@ class Style:
                 /* FLECHE GAUCHE DROITE */
                 QToolButton#qt_calendar_nextmonth  {{
                 qproperty-icon: url({f"{img_fleche_droite}{tm_fleche_droite}.svg"});
-                icon-size: {police_taille}px, {police_taille}px;
+                icon-size: {font_size}px, {font_size}px;
                 }}
                 QToolButton#qt_calendar_prevmonth {{
                 qproperty-icon: url({f"{img_fleche_gauche}{tm_fleche_gauche}.svg"});
-                icon-size: {police_taille}px, {police_taille}px;
+                icon-size: {font_size}px, {font_size}px;
                 }}
 
                 /* MENU DEROULANT */
                 QCalendarWidget QMenu {{
                 width: 150px;
-                font-size: {police_taille}px;
-                font-family: {police};
+                font-size: {font_size}px;
+                font-family: {font};
                 background-color: rgba{couleur_bg_entete};
                 color: rgb{couleur_fg_entete};
                 }}
@@ -128,8 +137,8 @@ class Style:
                 /* SPIN BOX */
                 QCalendarWidget QSpinBox {{
                 width: 60px;
-                font-size: {police_taille}px;
-                font-family: {police};
+                font-size: {font_size}px;
+                font-family: {font};
                 background-color: rgba{couleur_bg_entete};
                 color: rgb{couleur_fg_entete};
                 selection-background-color: rgb{couleur_bg_selection};
@@ -138,8 +147,8 @@ class Style:
 
                 /* JOURS */
                 QCalendarWidget QAbstractItemView {{
-                font-size: {police_taille}px;
-                font-family: {police};
+                font-size: {font_size}px;
+                font-family: {font};
                 font-weight: 30;
                 outline: 0px;
                 }}
@@ -187,8 +196,8 @@ class Style:
                 wg.setDate(QdateDuJour)
                 wg.setFocusPolicy(QtCore.Qt.NoFocus)
 
-                Fct(wg=wg, w=dim_width, h=dim_height).DIM()
-                wg.setFont(Fct(font=police, font_size=police_taille).FONT())
+                Fct(wg=wg, w=width, h=height).DIM()
+                wg.setFont(Fct(font=font, font_size=font_size).FONT())
 
                 wg.setAlignment(align)
 
