@@ -169,7 +169,7 @@ HD_FONT_SIZE = P_font().h3()
 ########################
 ##     PARAMETRES     ##
 ########################
-ALIGN = P_align().l().c()
+ALIGN = P_align().l().c() ##
 EDIT = False
 SB_BUTTONS_TYPE = P_pb_sb().pl_mi()
 TEXT_VISIBLE = True
