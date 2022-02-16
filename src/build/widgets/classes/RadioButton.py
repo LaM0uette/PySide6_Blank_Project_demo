@@ -178,20 +178,20 @@ class Style:
         /* RADIOBUTTON */
         QRadioButton {{
         background-color: rgba{bg};
-        color: rgb{fg};
+        color: rgba{fg};
         spacing: {spacing}px;
         }}   
         QRadioButton:hover {{
         background-color: rgba{bg_hover};
-        color: rgb{fg_hover};
+        color: rgba{fg_hover};
         }}
         QRadioButton:checked {{
         background-color: rgba{bg_checked};
-        color: rgb{fg_checked};
+        color: rgba{fg_checked};
         }}
         QRadioButton:checked:hover {{
         background-color: rgba{bg_checked_hover};
-        color: rgb{fg_checked_hover};
+        color: rgba{fg_checked_hover};
         }}
 
         /* IMG */
