@@ -74,6 +74,10 @@ class Style:
                  border_style_hover=p_base.WG_BORDER_STYLE,
                  border_rgb_hover=p_base.WG_BORDER_RGB,
                  border_top_hover=p_base.WG_BORDER_WIDTH, border_bottom_hover=p_base.WG_BORDER_WIDTH, border_right_hover=p_base.WG_BORDER_WIDTH, border_left_hover=p_base.WG_BORDER_WIDTH,
+                 # Bordures jours
+                 border_day_size=p_base.WG_BORDER_WIDTH,
+                 border_day_style=p_base.WG_BORDER_STYLE,
+                 border_day_rgb=p_base.FG_ITEM_HOVER,
 
                  # Rayons
                  radius_all=None,
@@ -237,7 +241,7 @@ class Style:
                 QCalendarWidget QWidget:item:hover, QCalendarWidget QWidget:item:selected {{
                 background-color: rgba{bg_item_hover};
                 color: rgba{fg_item_hover};
-                border: {bordure_jours_taille}px {bordure_jours_style} rgb{fg_item_hover};
+                border: {border_day_size}px {border_day_style} rgb{border_day_rgb};
                 }}
 
                 /* BARRE HAUT */
