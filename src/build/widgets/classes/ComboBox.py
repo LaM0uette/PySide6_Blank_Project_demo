@@ -12,6 +12,7 @@ class Style:
             bg_gen=None,
             bg=p_base.BG,
             bg_hover=p_base.BG_HOVER,
+            bg_selection=p_base.BG_SELECTION,
             bg_item=p_base.BG_ITEM,
             bg_item_hover=p_base.BG_ITEM_HOVER,
 
@@ -19,12 +20,19 @@ class Style:
             fg_gen=None,
             fg=p_base.FG,
             fg_hover=p_base.FG_HOVER,
+            fg_selection=p_base.FG_SELECTION,
             fg_item=p_base.BG_ITEM,
             fg_item_hover=p_base.BG_ITEM_HOVER,
 
-            couleur_bg_selection=p_base.COLORS_BG_SELECTION,
+            # Dimensions WG
+            width=p_base.WG_WIDTH,
+            height=p_base.WG_HEIGHT,
+            spacing=10,
 
-            couleur_fg_selection=p_base.COLORS_FG_SELECTION,
+            # Police
+            font=p_base.FONT,
+            font_size=p_base.FONT_SIZE,
+
 
             dim_width=p_base.WG_WIDTH,
             dim_height=p_base.WG_HEIGHT,
