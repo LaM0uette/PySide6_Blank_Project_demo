@@ -19,8 +19,8 @@ class Style:
             fg_hover=p_base.FG_HOVER,
 
             # Dimensions WG
-            width=p_base.WG_WIDTH,
-            height=p_base.WG_HEIGHT,
+            width=None,
+            height=None,
 
             # Police
             font=p_base.FONT,
@@ -96,6 +96,8 @@ class Style:
 
             wg.setAlignment(align_horizontal | align_vertical)
             wg.setWordWrap(word_wrap)
+
+            wg.setCursor(Fct(cur=curseur).CUR())
 
 
 class Base_th(Style):
