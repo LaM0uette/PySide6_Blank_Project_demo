@@ -70,7 +70,8 @@ class Style:
                  rayon_bottom_left=p_base.WG_RADIUS,
 
                  # Paramètres
-                 align=p_base.ALIGN,
+                 align_horizontal=Align().h_center(),
+                 align_vertical=Align().v_center(),
 
                  # Curseur
                  curseur=p_base.CUR
@@ -203,7 +204,7 @@ class Style:
                 Fct(wg=wg, w=width, h=height).DIM()
                 wg.setFont(Fct(font=font, font_size=font_size).FONT())
 
-                wg.setAlignment(align)
+                wg.setAlignment(align_horizontal | align_vertical)
 
                 wg.setCursor(Fct(cur=curseur).CUR())
                 wg.lineEdit().setCursor(Fct(cur=P_cur().IBeam()).CUR())
