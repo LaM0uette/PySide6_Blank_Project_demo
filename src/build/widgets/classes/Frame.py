@@ -106,39 +106,22 @@ class Cadre:
     def __init__(self, *wgs):
         self.wgs = wgs
 
-    def rtn(self):
-        pass
+    def rtn(self, border_rgb):
+        Style(*self.wgs,
+            bg=Rgb().tr(),
+            border_all=P_style().bd(),
+            border_rgb=border_rgb,
+        )
 
-
-
-class Cadre_th2(Style):
-    def __init__(self, *wgs):
-        super().__init__(*wgs,
-              bg=Rgb().tr(),
-              border_all=P_style().bd(),
-              border_rgb=P_rgb().th2(),
-    )
-class Cadre_th3(Style):
-    def __init__(self, *wgs):
-        super().__init__(*wgs,
-              bg=Rgb().tr(),
-              border_all=P_style().bd(),
-              border_rgb=P_rgb().th3(),
-    )
-class Cadre_bn1(Style):
-    def __init__(self, *wgs):
-        super().__init__(*wgs,
-              bg=Rgb().tr(),
-              border_all=P_style().bd(),
-              border_rgb=P_rgb().bn1(),
-    )
+    def th1(self): self.rtn(border_rgb=P_rgb().th1())
+    def th2(self): self.rtn(border_rgb=P_rgb().th2())
+    def th3(self): self.rtn(border_rgb=P_rgb().th3())
+    def bn1(self): self.rtn(border_rgb=P_rgb().bn1())
+    def bn2(self): self.rtn(border_rgb=P_rgb().bn2())
 
 class palette_rgb(Style):
     def __init__(self, *wgs, rgb):
         super().__init__(*wgs,
               bg=rgb,
-              radius_top_left=40,
-              radius_top_right=40,
-              radius_bottom_left=40,
-              radius_bottom_right=40
+              radius_all=40,
     )
