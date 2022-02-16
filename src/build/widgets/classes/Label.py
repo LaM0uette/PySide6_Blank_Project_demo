@@ -173,32 +173,6 @@ class Base_tr(Style):
     )
 
 
-class H2(Style):
-    def __init__(self, *wgs):
-        super().__init__(*wgs,
-              bg=Rgb().tr(),
-              font_size=P_font().h2()
-    )
-class H3(Style):
-    def __init__(self, *wgs):
-        super().__init__(*wgs,
-              bg=Rgb().tr(),
-              font_size=P_font().h3()
-    )
-class H4(Style):
-    def __init__(self, *wgs):
-        super().__init__(*wgs,
-              bg=Rgb().tr(),
-              font_size=P_font().h4()
-    )
-class H5(Style):
-    def __init__(self, *wgs):
-        super().__init__(*wgs,
-              bg=Rgb().tr(),
-              font_size=P_font().h5()
-    )
-
-
 class DemoCat(Style):
     def __init__(self, *wgs):
         super().__init__(
