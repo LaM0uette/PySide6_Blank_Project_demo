@@ -54,9 +54,9 @@ class Style:
                  img_width=p_base.IMG_WIDTH,
                  img_height=p_base.IMG_HEIGHT,
                  # Images margin
-                 img_margin_top=0,
+                 img_margin_top=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT)/2,
                  img_margin_bottom=0,
-                 img_margin_right=0,
+                 img_margin_right=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT)/2,
                  img_margin_left=0,
 
                  # Bordures GEN
