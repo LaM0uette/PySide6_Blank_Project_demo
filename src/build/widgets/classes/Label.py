@@ -48,8 +48,8 @@ class Style:
         color: rgba{fg};
         }}
         .QLabel:hover {{
-        background-color: rgba{fg};
-        color: rgba{bg};
+        background-color: rgba{bg_hover};
+        color: rgba{fg_hover};
         }}
 
         /* BORDURES */
