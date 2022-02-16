@@ -43,18 +43,21 @@ class Style:
             img_width=p_base.IMG_WIDTH,
             img_height=p_base.IMG_HEIGHT,
 
-            bordure_width_top=p_base.WG_BORDER_WIDTH,
-            bordure_width_bottom=p_base.WG_BORDER_WIDTH,
-            bordure_width_right=p_base.WG_BORDER_WIDTH,
-            bordure_width_left=p_base.WG_BORDER_WIDTH,
-            bordure_style_top=p_base.WG_BORDER_STYLE,
-            bordure_style_bottom=p_base.WG_BORDER_STYLE,
-            bordure_style_right=p_base.WG_BORDER_STYLE,
-            bordure_style_left=p_base.WG_BORDER_STYLE,
-            bordure_couleur_top=p_base.WG_BORDER_RGB,
-            bordure_couleur_bottom=p_base.WG_BORDER_RGB,
-            bordure_couleur_right=p_base.WG_BORDER_RGB,
-            bordure_couleur_left=p_base.WG_BORDER_RGB,
+            # Bordures GEN
+            border_gen_all=None,
+            border_gen_style=None,
+            border_gen_rgb=None,
+            border_gen_top=None, border_gen_bottom=None, border_gen_right=None, border_gen_left=None,
+            # Bordures
+            border_all=None,
+            border_style=p_base.WG_BORDER_STYLE,
+            border_rgb=p_base.WG_BORDER_RGB,
+            border_top=p_base.WG_BORDER_WIDTH, border_bottom=p_base.WG_BORDER_WIDTH, border_right=p_base.WG_BORDER_WIDTH, border_left=p_base.WG_BORDER_WIDTH,
+            # Bordures hover
+            border_all_hover=None,
+            border_style_hover=p_base.WG_BORDER_STYLE,
+            border_rgb_hover=p_base.WG_BORDER_RGB,
+            border_top_hover=p_base.WG_BORDER_WIDTH, border_bottom_hover=p_base.WG_BORDER_WIDTH, border_right_hover=p_base.WG_BORDER_WIDTH, border_left_hover=p_base.WG_BORDER_WIDTH,
 
             # Rayons
             radius_all=None,
@@ -120,18 +123,16 @@ class Style:
 
                 /* BORDURES */
                 .QComboBox, .QFontComboBox {{
-                border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
-                border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
-                border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
-                border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
+                border-top: {border_top}px {border_style} rgba{border_rgb};
+                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
+                border-right: {border_right}px {border_style} rgba{border_rgb};
+                border-left: {border_left}px {border_style} rgba{border_rgb};
                 }}
-
-                /* RAYONS */
-                .QComboBox, .QFontComboBox {{
-                border-top-right-radius: {radius_top_right}px;
-                border-top-left-radius: {radius_top_left}px;
-                border-bottom-right-radius: {radius_bottom_right}px;
-                border-bottom-left-radius: {radius_bottom_left}px;
+                .QComboBox:hover, .QFontComboBox:hover {{
+                border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
                 }}
 
                 /* SCROLL */
