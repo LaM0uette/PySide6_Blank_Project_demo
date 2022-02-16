@@ -68,7 +68,11 @@ class Style:
                  rayon_top_right=p_base.WG_RADIUS,
                  rayon_bottom_right=p_base.WG_RADIUS,
                  rayon_bottom_left=p_base.WG_RADIUS,
+
+                 # Paramètres
                  align=p_base.ALIGN,
+
+                 # Curseur
                  curseur=p_base.CUR
                  ):
         style = f"""

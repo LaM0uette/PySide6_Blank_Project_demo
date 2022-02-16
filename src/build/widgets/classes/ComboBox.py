@@ -77,7 +77,7 @@ class Style:
             scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
             scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
 
-            # Paramètre
+            # Paramètres
             edit=p_base.EDIT,
 
             # Curseur
