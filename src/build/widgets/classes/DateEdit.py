@@ -297,6 +297,8 @@ class Base_th(Style):
 class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-           bg=(0, 0, 0, 0),
-           bg_hover=(0, 0, 0, 0)
+                         bg_gen=Rgb().tr(),
+                         fg=Rgb().th3(),
+                         bg_selection=Rgb().th3(),
+                         fg_selection=Rgb().th1(),
     )

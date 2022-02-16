@@ -113,6 +113,14 @@ IMG_RIGHT_RGB = "th3"
 IMG_LEFT_RGB = "th3"
 
 
+
+TM_DROITE = "th3"  ##
+TM_GAUCHE = "th3"  ##
+TM_UP = "th2"  ##
+TM_DOWN = "th2"  ##
+
+
+
 IMG_WIDTH = WG_HEIGHT * P_style().x_ico()
 IMG_HEIGHT = WG_HEIGHT * P_style().x_ico()
 
