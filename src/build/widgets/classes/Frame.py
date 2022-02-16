@@ -80,75 +80,65 @@ class Base_th(Style):
 class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-              couleur_bg=(0, 0, 0, 0)
+              bg=Rgb().tr()
     )
 
 class Menu_top(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-              couleur_bg=P_rgb().th1()+(255, ),
-              dim_height=P_dim().h9()
+              bg=P_rgb().th1(),
+              height=P_dim().h9()
     )
 class Menu_bottom(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-              couleur_bg=P_rgb().th2()+(255, ),
-              dim_height=P_dim().h10()
+              bg=P_rgb().th2(),
+              height=P_dim().h10()
     )
 class Menu_bottom_dlg(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-              couleur_bg=P_rgb().th2()+(255, ),
-              dim_height=P_dim().h9()
+              bg=P_rgb().th2(),
+              height=P_dim().h9()
     )
+
+class Cadre:
+    def __init__(self, *wgs):
+        self.wgs = wgs
+
+    def rtn(self):
+        pass
+
 
 
 class Cadre_th2(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-              couleur_bg=(0, 0, 0, 0),
-              bordure_width_top=P_style().bd(),
-              bordure_width_bottom=P_style().bd(),
-              bordure_width_right=P_style().bd(),
-              bordure_width_left=P_style().bd(),
-              bordure_couleur_top=P_rgb().th2()+(255, ),
-              bordure_couleur_bottom=P_rgb().th2()+(255, ),
-              bordure_couleur_right=P_rgb().th2()+(255, ),
-              bordure_couleur_left=P_rgb().th2()+(255, )
+              bg=Rgb().tr(),
+              border_all=P_style().bd(),
+              border_rgb=P_rgb().th2(),
     )
 class Cadre_th3(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-              couleur_bg=(0, 0, 0, 0),
-              bordure_width_top=P_style().bd(),
-              bordure_width_bottom=P_style().bd(),
-              bordure_width_right=P_style().bd(),
-              bordure_width_left=P_style().bd(),
-              bordure_couleur_top=P_rgb().th3()+(255, ),
-              bordure_couleur_bottom=P_rgb().th3()+(255, ),
-              bordure_couleur_right=P_rgb().th3()+(255, ),
-              bordure_couleur_left=P_rgb().th3()+(255, )
+              bg=Rgb().tr(),
+              border_all=P_style().bd(),
+              border_rgb=P_rgb().th3(),
     )
 class Cadre_bn1(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-              couleur_bg=(0, 0, 0, 0),
-              bordure_width_top=P_style().bd(),
-              bordure_width_bottom=P_style().bd(),
-              bordure_width_right=P_style().bd(),
-              bordure_width_left=P_style().bd(),
-              bordure_couleur_top=P_rgb().bn1()+(255, ),
-              bordure_couleur_bottom=P_rgb().bn1()+(255, ),
-              bordure_couleur_right=P_rgb().bn1()+(255, ),
-              bordure_couleur_left=P_rgb().bn1()+(255, )
+              bg=Rgb().tr(),
+              border_all=P_style().bd(),
+              border_rgb=P_rgb().bn1(),
     )
 
 class palette_rgb(Style):
     def __init__(self, *wgs, rgb):
         super().__init__(*wgs,
-              couleur_bg=rgb+(255, ),
-              rayon_top_left=40,
-              rayon_top_right=40,
-              rayon_bottom_left=40,
-              rayon_bottom_right=40
+              bg=rgb,
+              radius_top_left=40,
+              radius_top_right=40,
+              radius_bottom_left=40,
+              radius_bottom_right=40
     )
