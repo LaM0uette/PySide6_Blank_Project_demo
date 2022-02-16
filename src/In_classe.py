@@ -5,7 +5,7 @@ class In_classe:
     def __init__(self, ui):
         ### QFrame ###
         Frame.Menu_top(ui.fr_menu_top)
-        Frame.Cadre_th2(ui.fr_main)
+        Frame.Cadre(ui.fr_main).th2()
         ### /QFrame ###
 
 
