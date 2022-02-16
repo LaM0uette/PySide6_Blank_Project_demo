@@ -5,93 +5,94 @@ from ....build.widgets import p_base
 from ....config import vrb
 
 class Style:
-    def __init__(self,
+    def __init__(
+            self,
 
-                 # Widgets
-                 *wgs,
+            # Widgets
+            *wgs,
 
-                 # Couleurs BG
-                 bg_gen=None,
-                 bg=p_base.BG,
-                 bg_hover=p_base.BG_HOVER,
-                 bg_selection=p_base.BG_SELECTION,
-                 bg_item=p_base.BG_ITEM,
-                 bg_item_hover=p_base.BG_ITEM_HOVER,
-                 bg_header=Rgb().th2(),
-                 bg_header_hover=Rgb().th2(),
-                 bg_mois=Rgb().th2(),
+            # Couleurs BG
+            bg_gen=None,
+            bg=p_base.BG,
+            bg_hover=p_base.BG_HOVER,
+            bg_selection=p_base.BG_SELECTION,
+            bg_item=p_base.BG_ITEM,
+            bg_item_hover=p_base.BG_ITEM_HOVER,
+            bg_header=Rgb().th2(),
+            bg_header_hover=Rgb().th2(),
+            bg_mois=Rgb().th2(),
 
-                 # Couleurs FG
-                 fg_gen=None,
-                 fg=p_base.FG,
-                 fg_hover=p_base.FG_HOVER,
-                 fg_selection=p_base.FG_SELECTION,
-                 fg_item=p_base.FG_ITEM,
-                 fg_item_hover=p_base.FG_ITEM_HOVER,
-                 fg_header=Rgb().th1(),
-                 fg_header_hover=Rgb().bn1(),
-                 fg_mois=Rgb().th1(),
+            # Couleurs FG
+            fg_gen=None,
+            fg=p_base.FG,
+            fg_hover=p_base.FG_HOVER,
+            fg_selection=p_base.FG_SELECTION,
+            fg_item=p_base.FG_ITEM,
+            fg_item_hover=p_base.FG_ITEM_HOVER,
+            fg_header=Rgb().th1(),
+            fg_header_hover=Rgb().bn1(),
+            fg_mois=Rgb().th1(),
 
-                 # Dimensions WG
-                 width=p_base.WG_WIDTH,
-                 height=p_base.WG_HEIGHT,
+            # Dimensions WG
+            width=p_base.WG_WIDTH,
+            height=p_base.WG_HEIGHT,
 
-                 # Police
-                 font=p_base.FONT,
-                 font_size=p_base.FONT_SIZE,
+            # Police
+            font=p_base.FONT,
+            font_size=p_base.FONT_SIZE,
 
-                 # Images
-                 img=P_img().calendrier(),
-                 img_hover=P_img().calendrier(),
-                 img_right=p_base.IMG_RIGHT,
-                 img_left=p_base.IMG_LEFT,
-                 # Images RGB
-                 img_rgb="",
-                 img_hover_rgb="",
-                 img_right_rgb=p_base.IMG_RIGHT_RGB,
-                 img_left_rgb=p_base.IMG_LEFT_RGB,
-                 # Images DIM
-                 img_width=p_base.IMG_WIDTH,
-                 img_height=p_base.IMG_HEIGHT,
-                 # Images margin
-                 img_margin_top=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT)/2,
-                 img_margin_bottom=0,
-                 img_margin_right=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT)/2,
-                 img_margin_left=0,
+            # Images
+            img=P_img().calendrier(),
+            img_hover=P_img().calendrier(),
+            img_right=p_base.IMG_RIGHT,
+            img_left=p_base.IMG_LEFT,
+            # Images RGB
+            img_rgb="",
+            img_hover_rgb="",
+            img_right_rgb=p_base.IMG_RIGHT_RGB,
+            img_left_rgb=p_base.IMG_LEFT_RGB,
+            # Images DIM
+            img_width=p_base.IMG_WIDTH,
+            img_height=p_base.IMG_HEIGHT,
+            # Images margin
+            img_margin_top=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT)/2,
+            img_margin_bottom=0,
+            img_margin_right=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT)/2,
+            img_margin_left=0,
 
-                 # Bordures GEN
-                 border_gen_all=None,
-                 border_gen_style=None,
-                 border_gen_rgb=None,
-                 border_gen_top=None, border_gen_bottom=None, border_gen_right=None, border_gen_left=None,
-                 # Bordures
-                 border_all=None,
-                 border_style=p_base.WG_BORDER_STYLE,
-                 border_rgb=p_base.WG_BORDER_RGB,
-                 border_top=p_base.WG_BORDER_WIDTH, border_bottom=p_base.WG_BORDER_WIDTH, border_right=p_base.WG_BORDER_WIDTH, border_left=p_base.WG_BORDER_WIDTH,
-                 # Bordures hover
-                 border_all_hover=None,
-                 border_style_hover=p_base.WG_BORDER_STYLE,
-                 border_rgb_hover=p_base.WG_BORDER_RGB,
-                 border_top_hover=p_base.WG_BORDER_WIDTH, border_bottom_hover=p_base.WG_BORDER_WIDTH, border_right_hover=p_base.WG_BORDER_WIDTH, border_left_hover=p_base.WG_BORDER_WIDTH,
-                 # Bordures jours
-                 border_day_size=P_style().bd(),
-                 border_day_style=p_base.WG_BORDER_STYLE,
-                 border_day_rgb=p_base.FG_ITEM_HOVER,
+            # Bordures GEN
+            border_gen_all=None,
+            border_gen_style=None,
+            border_gen_rgb=None,
+            border_gen_top=None, border_gen_bottom=None, border_gen_right=None, border_gen_left=None,
+            # Bordures
+            border_all=None,
+            border_style=p_base.WG_BORDER_STYLE,
+            border_rgb=p_base.WG_BORDER_RGB,
+            border_top=p_base.WG_BORDER_WIDTH, border_bottom=p_base.WG_BORDER_WIDTH, border_right=p_base.WG_BORDER_WIDTH, border_left=p_base.WG_BORDER_WIDTH,
+            # Bordures hover
+            border_all_hover=None,
+            border_style_hover=p_base.WG_BORDER_STYLE,
+            border_rgb_hover=p_base.WG_BORDER_RGB,
+            border_top_hover=p_base.WG_BORDER_WIDTH, border_bottom_hover=p_base.WG_BORDER_WIDTH, border_right_hover=p_base.WG_BORDER_WIDTH, border_left_hover=p_base.WG_BORDER_WIDTH,
+            # Bordures jours
+            border_day_size=P_style().bd(),
+            border_day_style=p_base.WG_BORDER_STYLE,
+            border_day_rgb=p_base.FG_ITEM_HOVER,
 
-                 # Rayons
-                 radius_all=None,
-                 radius_top_right=p_base.WG_RADIUS,
-                 radius_top_left=p_base.WG_RADIUS,
-                 radius_bottom_right=p_base.WG_RADIUS,
-                 radius_bottom_left=p_base.WG_RADIUS,
+            # Rayons
+            radius_all=None,
+            radius_top_right=p_base.WG_RADIUS,
+            radius_top_left=p_base.WG_RADIUS,
+            radius_bottom_right=p_base.WG_RADIUS,
+            radius_bottom_left=p_base.WG_RADIUS,
 
-                 # Paramètres
-                 align_horizontal=Align().h_center(),
-                 align_vertical=Align().v_center(),
+            # Paramètres
+            align_horizontal=Align().h_center(),
+            align_vertical=Align().v_center(),
 
-                 # Curseur
-                 curseur=p_base.CUR
+            # Curseur
+            curseur=p_base.CUR
     ):
         # BG
         if not bg_gen is None:
