@@ -3,34 +3,49 @@ from ....build.widgets import p_base
 
 class Style:
     def __init__(self,
+
+                 # Widgets
                  *wgs,
-                 couleur_bg=p_base._COLORS_BG,
-                 couleur_bg_hover=p_base._COLORS_BG_HOVER,
-                 couleur_bg_checked=p_base._COLORS_BG_CHECKED,
-                 couleur_bg_checked_hover=p_base._COLORS_BG_CHECKED_HOVER,
-                 couleur_fg=p_base._COLORS_FG,
-                 couleur_fg_hover=p_base._COLORS_FG_HOVER,
-                 couleur_fg_checked=p_base._COLORS_FG_CHECKED,
-                 couleur_fg_checked_hover=p_base._COLORS_FG_CHECKED_HOVER,
+
+                 # Couleurs BG
+                 bg_gen=None,
+                 bg=p_base.BG,
+                 bg_hover=p_base.BG_HOVER,
+                 bg_checked=p_base.BG_CHECKED,
+                 bg_checked_hover=p_base.BG_CHECKED_HOVER,
+                 # Couleurs FG
+                 fg_gen=None,
+                 fg=p_base.FG,
+                 fg_hover=p_base.FG_HOVER,
+                 fg_checked=p_base.FG_CHECKED,
+                 fg_checked_hover=p_base.FG_CHECKED_HOVER,
+
+                 # Dimensions WG
+                 width=p_base.WG_WIDTH,
+                 height=p_base.WG_HEIGHT,
+                 spacing=10,
+                 # Police
+                 font=p_base.FONT,
+                 font_size=p_base.FONT_SIZE,
+                 # Images
                  img_uncheck=p_base.IMG_UNCHECK,
-                 tm_uncheck=p_base.IMG_UNCHECK_RGB,
-                 img_hover=p_base.IMG_UNCHECK_HOVER,
-                 tm_hover=p_base.IMG_UNCHECK_HOVER_RGB,
+                 img_uncheck_hover=p_base.IMG_UNCHECK_HOVER,
                  img_check=p_base.IMG_CHECK,
-                 tm_check=p_base.IMG_CHECK_RGB,
                  img_check_hover=p_base.IMG_CHECK_HOVER,
-                 tm_check_hover=p_base.IMG_CHECK_HOVER_RGB,
+                 # Images RGB
+                 img_uncheck_rgb=p_base.IMG_UNCHECK_RGB,
+                 img_uncheck_hover_rgb=p_base.IMG_UNCHECK_HOVER_RGB,
+                 img_check_rgb=p_base.IMG_CHECK_RGB,
+                 img_check_hover_rgb=p_base.IMG_CHECK_HOVER_RGB,
+                 # Images DIM
                  img_width=p_base.IMG_WIDTH,
                  img_height=p_base.IMG_HEIGHT,
+                 # Images margin
                  img_margin_top=0,
                  img_margin_bottom=0,
                  img_margin_right=0,
-                 img_margin_left=(P_dim().h9() - (P_dim().h9() * P_style().x_ico())) / 2,
-                 dim_width=p_base.WG_WIDTH,
-                 dim_height=p_base.WG_HEIGHT,
-                 spacing=10,
-                 police=p_base.FONT,
-                 police_taille=p_base.FONT_SIZE,
+                 img_margin_left=(p_base.WG_HEIGHT - (p_base.WG_HEIGHT * P_style().x_ico())) / 2,
+
                  bordure_width_top=p_base.WG_BORDER_WIDTH,
                  bordure_width_bottom=p_base.WG_BORDER_WIDTH,
                  bordure_width_right=p_base.WG_BORDER_WIDTH,
@@ -52,21 +67,21 @@ class Style:
         style = f"""
         /* RADIOBUTTON */
         QRadioButton {{
-        background-color: rgba{couleur_bg};
-        color: rgb{couleur_fg};
+        background-color: rgba{bg};
+        color: rgb{fg};
         spacing: {spacing}px;
         }}   
         QRadioButton:hover {{
-        background-color: rgba{couleur_bg_hover};
-        color: rgb{couleur_fg_hover};
+        background-color: rgba{bg_hover};
+        color: rgb{fg_hover};
         }}
         QRadioButton:checked {{
-        background-color: rgba{couleur_bg_checked};
-        color: rgb{couleur_fg_checked};
+        background-color: rgba{bg_checked};
+        color: rgb{fg_checked};
         }}
         QRadioButton:checked:hover {{
-        background-color: rgba{couleur_bg_checked_hover};
-        color: rgb{couleur_fg_checked_hover};
+        background-color: rgba{bg_checked_hover};
+        color: rgb{fg_checked_hover};
         }}
 
         /* IMG */
@@ -79,16 +94,16 @@ class Style:
         height: {img_height}px;
         }}
         QRadioButton::indicator:unchecked {{
-        image: url({f"{img_uncheck}{tm_uncheck}.svg"});
+        image: url({f"{img_uncheck}{img_uncheck_rgb}.svg"});
         }}
         QRadioButton::indicator:hover {{
-        image: url({f"{img_hover}{tm_hover}.svg"});
+        image: url({f"{img_uncheck_hover}{img_uncheck_hover_rgb}.svg"});
         }}
         QRadioButton::indicator:checked {{
-        image: url({f"{img_check}{tm_check}.svg"});
+        image: url({f"{img_check}{img_check_rgb}.svg"});
         }}
         QRadioButton::indicator:checked:hover {{
-        image: url({f"{img_check_hover}{tm_check_hover}.svg"});
+        image: url({f"{img_check_hover}{img_check_hover_rgb}.svg"});
         }}
 
         /* BORDURES */
@@ -111,8 +126,8 @@ class Style:
             wg.setStyleSheet(style)
 
             try:
-                Fct(wg=wg, w=dim_width, h=dim_height).DIM()
-                wg.setFont(Fct(font=police, font_size=police_taille).FONT())
+                Fct(wg=wg, w=width, h=height).DIM()
+                wg.setFont(Fct(font=font, font_size=font_size).FONT())
 
                 wg.setCursor(Fct(cur=curseur).CUR())
             except: pass
@@ -124,9 +139,7 @@ class Base_th(Style):
 class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-              couleur_bg=(0, 0, 0, 0),
-              couleur_bg_hover=(0, 0, 0, 0),
-              couleur_bg_checked=(0, 0, 0, 0),
-              couleur_bg_checked_hover=(0, 0, 0, 0),
-              couleur_fg_checked=p_base.COULEURS.get("c3"),
-    )
+                         bg_gen=Rgb().tr(),
+                         fg=Rgb().th3(),
+                         fg_checked=Rgb().th3(),
+        )
