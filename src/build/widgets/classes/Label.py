@@ -55,13 +55,11 @@ class Style:
         for wg in wgs:
             wg.setStyleSheet(style)
 
-            try:
-                Fct(wg=wg, w=dim_width, h=dim_height).DIM()
-                wg.setFont(Fct(font=police, font_size=police_taille).FONT())
+            Fct(wg=wg, w=dim_width, h=dim_height).DIM()
+            wg.setFont(Fct(font=police, font_size=police_taille).FONT())
 
-                wg.setAlignment(align)
-                wg.setWordWrap(word_wrap)
-            except: pass
+            wg.setAlignment(align)
+            wg.setWordWrap(word_wrap)
 
 
 class Base_th(Style):
@@ -103,6 +101,8 @@ class H5(Style):
               couleur_bg=(0, 0, 0, 0),
               police_taille=P_font().h5()
     )
+
+
 class DemoCat(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
