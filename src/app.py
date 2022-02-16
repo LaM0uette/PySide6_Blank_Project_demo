@@ -38,8 +38,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         ### QComboBox ###
-        Combo_box.Base_th(self.cb_demo_th)
-        Combo_box.Base_tr(self.cb_demo_tr)
+        ComboBox.Base_th(self.cb_demo_th)
+        ComboBox.Base_tr(self.cb_demo_tr)
         ### /QComboBox ###
 
 

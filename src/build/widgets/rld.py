@@ -3,12 +3,12 @@ import importlib
 from . import p_base
 importlib.reload(p_base)
 
-from .classes import CheckBox, Combo_box, Date_edit, Frame, Label, \
+from .classes import CheckBox, ComboBox, Date_edit, Frame, Label, \
     List_widget, Progress_bar, RadioButton, Scroll_box_area, Slider, \
     Spin_box, Table_widget, Text_edit, Tool_box, Tree_widget, Push_button
 
 importlib.reload(CheckBox)
-importlib.reload(Combo_box)
+importlib.reload(ComboBox)
 importlib.reload(Date_edit)
 importlib.reload(Frame)
 importlib.reload(Label)
