@@ -50,7 +50,7 @@ class Style:
             radius_bottom_left=p_base.WG_RADIUS,
 
             # Paramètres
-            align_horizontal=Align().h_center(),
+            align_horizontal=Align().left(),
             align_vertical=Align().v_center(),
             word_wrap=p_base.WORD_WRAP,
 
@@ -175,6 +175,16 @@ class Base_tr(Style):
             font_size=font_size,
     )
 
+class Titre(Style):
+    def __init__(self, *wgs):
+        super().__init__(
+            *wgs,
+            bg_gen=Rgb().tr(),
+            fg_gen=Rgb().th3(),
+            font_size=P_font().h1(),
+            align_horizontal=Align().h_center(),
+    )
+
 
 class DemoCat(Style):
     def __init__(self, *wgs):
@@ -185,4 +195,5 @@ class DemoCat(Style):
             font_size=P_font().h2(),
             border_gen_bottom=P_style().bd(),
             border_gen_rgb=Rgb().bn1(),
+            align_horizontal=Align().h_center(),
     )
