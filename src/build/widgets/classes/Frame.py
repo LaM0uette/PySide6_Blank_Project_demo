@@ -131,27 +131,31 @@ class Base_th(Style):
         super().__init__(*wgs)
 class Base_tr(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-              bg=Rgb().tr()
+        super().__init__(
+            *wgs,
+            bg=Rgb().tr()
     )
 
 class Menu_top(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-              bg=Rgb().th1(),
-              height=P_dim().h9()
+        super().__init__(
+            *wgs,
+            bg=Rgb().th1(),
+            height=P_dim().h9()
     )
 class Menu_bottom(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-              bg=Rgb().th2(),
-              height=P_dim().h10()
+        super().__init__(
+            *wgs,
+            bg=Rgb().th2(),
+            height=P_dim().h10()
     )
 class Menu_bottom_dlg(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-              bg=Rgb().th2(),
-              height=P_dim().h9()
+        super().__init__(
+            *wgs,
+            bg=Rgb().th2(),
+            height=P_dim().h9()
     )
 
 class Cadre:
@@ -159,7 +163,8 @@ class Cadre:
         self.wgs = wgs
 
     def rtn(self, rgb):
-        Style(*self.wgs,
+        Style(
+            *self.wgs,
             bg=Rgb().tr(),
             border_gen_all=P_style().bd(),
             border_gen_rgb=rgb,
@@ -173,19 +178,21 @@ class Cadre:
 
 class palette_rgb(Style):
     def __init__(self, *wgs, rgb):
-        super().__init__(*wgs,
-              bg=rgb,
-              radius_all=40,
+        super().__init__(
+            *wgs,
+            bg=rgb,
+            radius_all=40,
     )
 
 
 class Demo_hover(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-              bg=Rgb().tr(),
-              border_all=P_style().bd(),
-              border_rgb=Rgb().bn1(),
-              border_all_hover=P_style().bd()*2,
-              border_style_hover="dashed",
-              border_rgb_hover=Rgb().vert(),
+        super().__init__(
+            *wgs,
+            bg=Rgb().tr(),
+            border_all=P_style().bd(),
+            border_rgb=Rgb().bn1(),
+            border_all_hover=P_style().bd()*2,
+            border_style_hover="dashed",
+            border_rgb_hover=Rgb().vert(),
     )

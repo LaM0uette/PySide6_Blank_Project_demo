@@ -248,15 +248,17 @@ class Style:
 
 class Base_th(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-           curseur=P_cur().main(),
+        super().__init__(
+            *wgs,
+            curseur=P_cur().main(),
     )
 class Base_tr(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-                         bg_gen=Rgb().tr(),
-                         fg=Rgb().th3(),
-                         bg_selection=Rgb().th3(),
-                         fg_selection=Rgb().th1(),
-                         edit=True
+        super().__init__(
+            *wgs,
+            bg_gen=Rgb().tr(),
+            fg=Rgb().th3(),
+            bg_selection=Rgb().th3(),
+            fg_selection=Rgb().th1(),
+            edit=True
     )

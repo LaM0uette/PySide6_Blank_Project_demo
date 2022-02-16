@@ -265,8 +265,9 @@ class Base_th(Style):
         super().__init__(*wgs)
 class Base_tr(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-                         bg_gen=Rgb().tr(),
-                         fg=Rgb().th3(),
-                         fg_checked=Rgb().th3(),
+        super().__init__(
+            *wgs,
+            bg_gen=Rgb().tr(),
+            fg=Rgb().th3(),
+            fg_checked=Rgb().th3(),
         )
