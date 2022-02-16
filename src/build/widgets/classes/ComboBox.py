@@ -68,10 +68,12 @@ class Style:
 
             # Scroll
             scroll_bg=p_base.SCROLL_BG,
-            scroll_handle_bg=p_base.SCROLL_HANDLE_BG,
-            scroll_handle_fg=p_base.SCROLL_HANDLE_FG,
             scroll_width=p_base.SCROLL_WIDTH,
             scroll_height=p_base.SCROLL_HEIGHT,
+            scroll_handle_bg=p_base.SCROLL_HANDLE_BG,
+            scroll_handle_bg_hover=p_base.SCROLL_HANDLE_BG_HOVER,
+            scroll_handle_fg=p_base.SCROLL_HANDLE_FG,
+            scroll_handle_fg_hover=p_base.SCROLL_HANDLE_FG_HOVER,
             scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
             scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
 
@@ -208,7 +210,7 @@ class Style:
 
                 /* SCROLL */
                 QComboBox QScrollBar, QFontComboBox QScrollBar {{
-                background-color: rgb{scroll_bg};
+                background-color: rgba{scroll_bg};
                 width: {scroll_width}px;
                 height: {scroll_height}px;
                 }}
@@ -219,11 +221,18 @@ class Style:
                 min-height: {scroll_handle_min_height}px;
                 }}
                 QComboBox QScrollBar::handle, QFontComboBox QScrollBar::handle {{
-                background-color: rgb{scroll_handle_fg};
+                background-color: rgba{scroll_handle_fg};
                 }}
-
+                QComboBox QScrollBar::handle:hover, QFontComboBox QScrollBar::handle:hover {{
+                background-color: rgba{scroll_handle_fg_hover};
+                }}
+                
                 QComboBox QScrollBar::add-page, QComboBox QScrollBar::sub-page, QFontComboBox QScrollBar::add-page, QFontComboBox QScrollBar::sub-page {{
-                background-color: rgb{scroll_handle_bg};
+                background-color: rgba{scroll_handle_bg};
+                border: none;
+                }}                
+                QComboBox QScrollBar::add-page:hover, QComboBox QScrollBar::sub-page:hover, QFontComboBox QScrollBar::add-page:hover, QFontComboBox QScrollBar::sub-page:hover {{
+                background-color: rgba{scroll_handle_bg_hover};
                 border: none;
                 }}"""
 
