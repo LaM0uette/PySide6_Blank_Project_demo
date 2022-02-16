@@ -185,6 +185,4 @@ class DemoCat(Style):
             font_size=P_font().h2(),
             border_gen_bottom=P_style().bd(),
             border_gen_rgb=Rgb().bn1(),
-            align_horizontal=Align().h_center(),
-            align_vertical=Align().v_center(),
     )
