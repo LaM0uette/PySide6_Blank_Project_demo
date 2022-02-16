@@ -87,14 +87,10 @@ class Style:
         if not bg_gen is None:
             bg = bg_gen
             bg_hover = bg_gen
-            bg_item = bg_gen
-            bg_item_hover = bg_gen
         # FG
         if not fg_gen is None:
             fg = fg_gen
             fg_hover = fg_gen
-            fg_item = bg_gen
-            fg_item_hover = bg_gen
         # Bordure
         if not border_gen_all is None:
             border_top = border_gen_all
@@ -230,7 +226,7 @@ class Style:
                 QComboBox QScrollBar::add-page, QComboBox QScrollBar::sub-page, QFontComboBox QScrollBar::add-page, QFontComboBox QScrollBar::sub-page {{
                 background-color: rgba{scroll_handle_bg};
                 border: none;
-                }}                
+                }}
                 QComboBox QScrollBar::add-page:hover, QComboBox QScrollBar::sub-page:hover, QFontComboBox QScrollBar::add-page:hover, QFontComboBox QScrollBar::sub-page:hover {{
                 background-color: rgba{scroll_handle_bg_hover};
                 border: none;
