@@ -247,8 +247,8 @@ class Style:
 
                     /* RAYONS */
                     .QCheckBox {{
-                    border-top-left-radius: {radius_top_left}px;
                     border-top-right-radius: {radius_top_right}px;
+                    border-top-left-radius: {radius_top_left}px;
                     border-bottom-right-radius: {radius_bottom_right}px;
                     border-bottom-left-radius: {radius_bottom_left}px;
                     }}"""

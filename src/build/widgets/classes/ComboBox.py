@@ -39,6 +39,7 @@ class Style:
             img_rgb=p_base.IMG_DEROULANT_RGB,
             img_hover_rgb=p_base.IMG_DEROULANT_HOVER_RGB,
 
+            # Images DIM
             img_width=p_base.IMG_WIDTH,
             img_height=p_base.IMG_HEIGHT,
 
@@ -54,10 +55,14 @@ class Style:
             bordure_couleur_bottom=p_base.WG_BORDER_RGB,
             bordure_couleur_right=p_base.WG_BORDER_RGB,
             bordure_couleur_left=p_base.WG_BORDER_RGB,
-            rayon_top_left=p_base.WG_RADIUS,
-            rayon_top_right=p_base.WG_RADIUS,
-            rayon_bottom_right=p_base.WG_RADIUS,
-            rayon_bottom_left=p_base.WG_RADIUS,
+
+            # Rayons
+            radius_all=None,
+            radius_top_right=p_base.WG_RADIUS,
+            radius_top_left=p_base.WG_RADIUS,
+            radius_bottom_right=p_base.WG_RADIUS,
+            radius_bottom_left=p_base.WG_RADIUS,
+
             scroll_bg=p_base.SCROLL_BG,
             scroll_handle_bg=p_base.SCROLL_HANDLE_BG,
             scroll_handle_fg=p_base.SCROLL_HANDLE_FG,
@@ -65,7 +70,11 @@ class Style:
             scroll_height=p_base.SCROLL_HEIGHT,
             scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
             scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
+
+            # Paramètre
             edit=p_base.EDIT,
+
+            # Curseur
             curseur=p_base.CUR
     ):
         style = f"""
@@ -119,10 +128,10 @@ class Style:
 
                 /* RAYONS */
                 .QComboBox, .QFontComboBox {{
-                border-top-left-radius: {rayon_top_left}px;
-                border-top-right-radius: {rayon_top_right}px;
-                border-bottom-right-radius: {rayon_bottom_right}px;
-                border-bottom-left-radius: {rayon_bottom_left}px;
+                border-top-right-radius: {radius_top_right}px;
+                border-top-left-radius: {radius_top_left}px;
+                border-bottom-right-radius: {radius_bottom_right}px;
+                border-bottom-left-radius: {radius_bottom_left}px;
                 }}
 
                 /* SCROLL */
