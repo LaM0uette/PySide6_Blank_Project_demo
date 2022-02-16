@@ -91,15 +91,19 @@ IMG_UNCHECK = P_img().check()
 IMG_UNCHECK_HOVER = P_img().check()
 IMG_CHECK = P_img().valider()
 IMG_CHECK_HOVER = P_img().valider()
+IMG_DEROULANT = P_img().fleche_bottom()
+IMG_DEROULANT_HOVER = P_img().fleche_bottom()
 # Check RGB
 IMG_UNCHECK_RGB = "th2"
 IMG_UNCHECK_HOVER_RGB = "bn1"
 IMG_CHECK_RGB = "th2"
 IMG_CHECK_HOVER_RGB = "bn1"
+IMG_DEROULANT_RGB = "th2"
+IMG_DEROULANT_HOVER_RGB = "bn1"
 
 
-IMG_DEROULANT = P_img().fleche_bottom()
-IMG_DEROULANT_HOVER = P_img().fleche_bottom()
+
+
 IMG_DROITE = P_img().fleche_droite()
 IMG_GAUCHE = P_img().fleche_gauche()
 IMG_UP = P_img().plus()

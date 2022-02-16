@@ -32,10 +32,13 @@ class Style:
             font=p_base.FONT,
             font_size=p_base.FONT_SIZE,
 
+            # Images
             img=p_base.IMG_DEROULANT,
-            tm=p_base.IMG_RGB,
             img_hover=p_base.IMG_DEROULANT_HOVER,
-            tm_hover=p_base.IMG_UNCHECK_HOVER_RGB,
+            # Images RGB
+            img_rgb=p_base.IMG_DEROULANT_RGB,
+            img_hover_rgb=p_base.IMG_DEROULANT_HOVER_RGB,
+
             img_width=p_base.IMG_WIDTH,
             img_height=p_base.IMG_HEIGHT,
 
@@ -86,12 +89,12 @@ class Style:
 
                 /* IMAGE DU BOUTON DE DEROULEMENT */
                 QComboBox::down-arrow, QFontComboBox::down-arrow {{
-                image: url({f"{img}{tm}.svg"});
+                image: url({f"{img}{img_rgb}.svg"});
                 width: {img_width}px;
                 height: {img_height}px;
                 }}
                 QComboBox::down-arrow:hover, QFontComboBox::down-arrow:hover {{
-                image: url({f"{img_hover}{tm_hover}.svg"});
+                image: url({f"{img_hover}{img_hover_rgb}.svg"});
                 width: {img_width}px;
                 height: {img_height}px;
                 }}
