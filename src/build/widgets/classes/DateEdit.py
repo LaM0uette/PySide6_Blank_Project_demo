@@ -48,6 +48,8 @@ class Style:
                  # Images RGB
                  img_rgb="",
                  img_hover_rgb="",
+                 img_right_rgb=p_base.IMG_RIGHT_RGB,
+                 img_left_rgb=p_base.IMG_LEFT_RGB,
                  # Images DIM
                  img_width=p_base.IMG_WIDTH,
                  img_height=p_base.IMG_HEIGHT,
@@ -56,9 +58,6 @@ class Style:
                  img_margin_bottom=0,
                  img_margin_right=0,
                  img_margin_left=0,
-
-                 tm_fleche_droite=p_base.TM_DROITE,
-                 tm_fleche_gauche=p_base.TM_GAUCHE,
 
                  bordure_width_top=p_base.WG_BORDER_WIDTH,
                  bordure_width_bottom=p_base.WG_BORDER_WIDTH,
@@ -101,7 +100,7 @@ class Style:
 
                 /* IMG CALENDRIER */
                 QDateEdit::drop-down {{
-                image: url({f"{img}{tm}.svg"});
+                image: url({f"{img}{img_rgb}.svg"});
                 width: {img_width}px;
                 height: {img_height}px;
                 margin-top: {img_margin_top}px;
@@ -110,7 +109,7 @@ class Style:
                 margin-left: {img_margin_left}px;
                 }}
                 QDateEdit::drop-down:hover {{
-                image: url({f"{img_hover}{tm_hover}.svg"});
+                image: url({f"{img_hover}{img_hover_rgb}.svg"});
                 }}
 
                 /* WIDGETS */
@@ -132,11 +131,11 @@ class Style:
 
                 /* FLECHE GAUCHE DROITE */
                 QToolButton#qt_calendar_nextmonth  {{
-                qproperty-icon: url({f"{img_right}{tm_fleche_droite}.svg"});
+                qproperty-icon: url({f"{img_right}{img_right_rgb}.svg"});
                 icon-size: {font_size}px, {font_size}px;
                 }}
                 QToolButton#qt_calendar_prevmonth {{
-                qproperty-icon: url({f"{img_left}{tm_fleche_gauche}.svg"});
+                qproperty-icon: url({f"{img_left}{img_left_rgb}.svg"});
                 icon-size: {font_size}px, {font_size}px;
                 }}
 
