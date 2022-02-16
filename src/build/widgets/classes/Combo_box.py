@@ -4,17 +4,28 @@ from ....build.widgets import p_base
 class Style:
     def __init__(
             self,
+
+            # Widgets
             *wgs,
-            couleur_bg=p_base._COLORS_BG,
-            couleur_bg_hover=p_base._COLORS_BG_HOVER,
+
+            # Couleurs BG
+            bg_gen=None,
+            bg=p_base.BG,
+            bg_hover=p_base.BG_HOVER,
+
+            # Couleurs FG
+            fg_gen=None,
+            fg=p_base.FG,
+            fg_hover=p_base.FG_HOVER,
+
             couleur_bg_selection=p_base.COLORS_BG_SELECTION,
             couleur_bg_item=p_base.COLORS_BG_ITEM,
             couleur_bg_item_hover=p_base.COLORS_BG_ITEM_HOVER,
-            couleur_fg=p_base._COLORS_FG,
-            couleur_fg_hover=p_base._COLORS_FG_HOVER,
+
             couleur_fg_selection=p_base.COLORS_FG_SELECTION,
             couleur_fg_item=p_base.COLORS_FG_ITEM,
             couleur_fg_item_hover=p_base.COLORS_FG_ITEM_HOVER,
+
             dim_width=p_base.WG_WIDTH,
             dim_height=p_base.WG_HEIGHT,
             img=p_base.IMG_DEROULANT,
@@ -54,15 +65,15 @@ class Style:
         style = f"""
                 /* COMBOBOX */
                 QComboBox, QFontComboBox {{
-                background-color: rgba{couleur_bg};
-                color: rgb{couleur_fg};
+                background-color: rgba{bg};
+                color: rgb{fg};
                 selection-background-color: rgb{couleur_bg_selection};
                 selection-color: rgb{couleur_fg_selection};
                 border: none;
                 }}
                 QComboBox:hover, QFontComboBox:hover {{
-                background-color: rgba{couleur_bg_hover};
-                color: rgb{couleur_fg_hover};
+                background-color: rgba{bg_hover};
+                color: rgb{fg_hover};
                 selection-background-color: rgb{couleur_bg_selection};
                 selection-color: rgb{couleur_fg_selection};
                 }}
