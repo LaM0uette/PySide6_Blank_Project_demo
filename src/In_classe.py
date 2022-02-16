@@ -10,7 +10,7 @@ class In_classe:
 
 
         ### QLabel ###
-        Label.H3(ui.lb_mt_nom)
+        Label.Base_tr(ui.lb_mt_nom, font_size=P_font().h3())
         ### /QLabel ###
 
 

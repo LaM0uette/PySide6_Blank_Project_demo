@@ -172,12 +172,7 @@ class Base_tr(Style):
             font_size=font_size
     )
 
-class H1(Style):
-    def __init__(self, *wgs):
-        super().__init__(*wgs,
-              bg=Rgb().tr(),
-              font_size=P_font().h1()
-    )
+
 class H2(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
