@@ -103,8 +103,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         ### QRadioButton ###
-        Radio_button.Base_th(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3)
-        Radio_button.Base_tr(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3)
+        RadioButton.Base_th(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3)
+        RadioButton.Base_tr(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3)
         ### /QRadioButton ###
 
 
