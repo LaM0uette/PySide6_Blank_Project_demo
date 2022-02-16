@@ -40,20 +40,25 @@ class Style:
                  font=p_base.FONT,
                  font_size=p_base.FONT_SIZE,
 
+                 # Images
                  img=P_img().calendrier(),
-                 tm="",
                  img_hover=P_img().calendrier(),
-                 tm_hover="",
-                 img_fleche_droite=p_base.IMG_DROITE,
-                 tm_fleche_droite=p_base.TM_DROITE,
-                 img_fleche_gauche=p_base.IMG_GAUCHE,
-                 tm_fleche_gauche=p_base.TM_GAUCHE,
-                 img_width=p_base.WG_HEIGHT,
-                 img_height=p_base.WG_HEIGHT,
+                 img_right=p_base.IMG_RIGHT,
+                 img_left=p_base.IMG_LEFT,
+                 # Images RGB
+                 img_rgb="",
+                 img_hover_rgb="",
+                 # Images DIM
+                 img_width=p_base.IMG_WIDTH,
+                 img_height=p_base.IMG_HEIGHT,
+                 # Images margin
                  img_margin_top=0,
                  img_margin_bottom=0,
                  img_margin_right=0,
                  img_margin_left=0,
+
+                 tm_fleche_droite=p_base.TM_DROITE,
+                 tm_fleche_gauche=p_base.TM_GAUCHE,
 
                  bordure_width_top=p_base.WG_BORDER_WIDTH,
                  bordure_width_bottom=p_base.WG_BORDER_WIDTH,
@@ -127,11 +132,11 @@ class Style:
 
                 /* FLECHE GAUCHE DROITE */
                 QToolButton#qt_calendar_nextmonth  {{
-                qproperty-icon: url({f"{img_fleche_droite}{tm_fleche_droite}.svg"});
+                qproperty-icon: url({f"{img_right}{tm_fleche_droite}.svg"});
                 icon-size: {font_size}px, {font_size}px;
                 }}
                 QToolButton#qt_calendar_prevmonth {{
-                qproperty-icon: url({f"{img_fleche_gauche}{tm_fleche_gauche}.svg"});
+                qproperty-icon: url({f"{img_left}{tm_fleche_gauche}.svg"});
                 icon-size: {font_size}px, {font_size}px;
                 }}
 

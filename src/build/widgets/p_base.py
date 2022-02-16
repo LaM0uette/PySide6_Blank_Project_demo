@@ -101,20 +101,17 @@ IMG_CHECK_HOVER_RGB = "bn1"
 IMG_DEROULANT_RGB = "th2"
 IMG_DEROULANT_HOVER_RGB = "bn1"
 
-
-
-
-IMG_DROITE = P_img().fleche_droite()
-IMG_GAUCHE = P_img().fleche_gauche()
+# Fleches
 IMG_UP = P_img().plus()
 IMG_DOWN = P_img().moins()
+IMG_RIGHT = P_img().fleche_droite()
+IMG_LEFT = P_img().fleche_gauche()
+# Fleches RGB
+IMG_UP_RGB = "th2"
+IMG_DOWN_RGB = "th2"
+IMG_RIGHT_RGB = "th3"
+IMG_LEFT_RGB = "th3"
 
-
-
-TM_DROITE = "th3"
-TM_GAUCHE = "th3"
-TM_UP = "th2"
-TM_DOWN = "th2"
 
 IMG_WIDTH = WG_HEIGHT * P_style().x_ico()
 IMG_HEIGHT = WG_HEIGHT * P_style().x_ico()

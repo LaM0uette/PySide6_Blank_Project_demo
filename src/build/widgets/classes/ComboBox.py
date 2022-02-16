@@ -38,7 +38,6 @@ class Style:
             # Images RGB
             img_rgb=p_base.IMG_DEROULANT_RGB,
             img_hover_rgb=p_base.IMG_DEROULANT_HOVER_RGB,
-
             # Images DIM
             img_width=p_base.IMG_WIDTH,
             img_height=p_base.IMG_HEIGHT,
