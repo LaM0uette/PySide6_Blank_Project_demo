@@ -10,22 +10,27 @@ class Style:
                  # Widgets
                  *wgs,
 
-                 couleur_bg=p_base._COLORS_BG,
-                 couleur_bg_hover=p_base._COLORS_BG_HOVER,
-                 couleur_bg_selection=p_base.COLORS_BG_SELECTION,
-                 couleur_bg_item=p_base.COLORS_BG_ITEM,
-                 couleur_bg_item_hover=p_base.COLORS_BG_ITEM_HOVER,
-                 couleur_bg_entete=p_base.COULEURS.get("c2") + (255,),
-                 couleur_bg_entete_hover=p_base.COULEURS.get("c2") + (255,),
-                 couleur_bg_mois=p_base.COULEURS.get("c2") + (255,),
-                 couleur_fg=p_base._COLORS_FG,
-                 couleur_fg_hover=p_base._COLORS_FG_HOVER,
-                 couleur_fg_selection=p_base.COLORS_FG_SELECTION,
-                 couleur_fg_item=p_base.COLORS_FG_ITEM,
-                 couleur_fg_item_hover=p_base.COLORS_FG_ITEM_HOVER,
-                 couleur_fg_entete=p_base.COULEURS.get("c1"),
-                 couleur_fg_entete_hover=p_base.COULEURS.get("bn1"),
-                 couleur_fg_mois=p_base.COULEURS.get("c1"),
+                 # Couleurs BG
+                 bg_gen=None,
+                 bg=p_base.BG,
+                 bg_hover=p_base.BG_HOVER,
+                 bg_selection=p_base.BG_SELECTION,
+                 bg_item=p_base.BG_ITEM,
+                 bg_item_hover=p_base.BG_ITEM_HOVER,
+                 bg_header=Rgb().th2(),
+                 bg_header_hover=Rgb().th2(),
+                 bg_mois=Rgb().th2(),
+
+                 # Couleurs FG
+                 fg_gen=None,
+                 fg=p_base.FG,
+                 fg_hover=p_base.FG_HOVER,
+                 fg_selection=p_base.FG_SELECTION,
+                 fg_item=p_base.FG_ITEM,
+                 fg_item_hover=p_base.FG_ITEM_HOVER,
+                 fg_header=Rgb().th1(),
+                 fg_header_hover=Rgb().bn1(),
+                 fg_mois=Rgb().th1(),
 
                  # Dimensions WG
                  width=p_base.WG_WIDTH,
@@ -79,14 +84,14 @@ class Style:
         style = f"""
                 /* DATEEDIT */
                 QDateEdit {{
-                background-color: rgba{couleur_bg};
-                color: rgb{couleur_fg};
-                selection-background-color: rgb{couleur_bg_selection};
-                selection-color: rgb{couleur_fg_selection};
+                background-color: rgba{bg};
+                color: rgb{fg};
+                selection-background-color: rgb{bg_selection};
+                selection-color: rgb{fg_selection};
                 }}
                 QDateEdit:hover {{
-                background-color: rgba{couleur_bg_hover};
-                color: rgb{couleur_fg_hover};
+                background-color: rgba{bg_hover};
+                color: rgb{fg_hover};
                 }}
 
                 /* IMG CALENDRIER */
@@ -105,19 +110,19 @@ class Style:
 
                 /* WIDGETS */
                 QCalendarWidget QWidget {{
-                alternate-background-color: rgba{couleur_bg_mois};
-                color: rgb{couleur_fg_mois};
+                alternate-background-color: rgba{bg_mois};
+                color: rgb{fg_mois};
                 }}
 
                 /* TOOL BUTTON */
                 QCalendarWidget QToolButton {{
                 font-size: {font_size}px;
-                background-color: rgba{couleur_bg_entete};
-                color: rgb{couleur_fg_entete};
+                background-color: rgba{bg_header};
+                color: rgb{fg_header};
                 }}
                 QCalendarWidget QToolButton:hover {{
-                background-color: rgba{couleur_bg_entete_hover};
-                color: rgb{couleur_fg_entete_hover};
+                background-color: rgba{bg_header_hover};
+                color: rgb{fg_header_hover};
                 }}
 
                 /* FLECHE GAUCHE DROITE */
@@ -135,8 +140,8 @@ class Style:
                 width: 150px;
                 font-size: {font_size}px;
                 font-family: {font};
-                background-color: rgba{couleur_bg_entete};
-                color: rgb{couleur_fg_entete};
+                background-color: rgba{bg_header};
+                color: rgb{fg_header};
                 }}
 
                 /* SPIN BOX */
@@ -144,10 +149,10 @@ class Style:
                 width: 60px;
                 font-size: {font_size}px;
                 font-family: {font};
-                background-color: rgba{couleur_bg_entete};
-                color: rgb{couleur_fg_entete};
-                selection-background-color: rgb{couleur_bg_selection};
-                selection-color: rgb{couleur_fg_selection};
+                background-color: rgba{bg_header};
+                color: rgb{fg_header};
+                selection-background-color: rgb{bg_selection};
+                selection-color: rgb{fg_selection};
                 }}
 
                 /* JOURS */
@@ -158,20 +163,20 @@ class Style:
                 outline: 0px;
                 }}
                 QCalendarWidget QAbstractItemView:enabled {{
-                background-color: rgba{couleur_bg_item};
-                color: rgb{couleur_fg_item};
-                selection-background-color: rgb{couleur_fg_item};
-                selection-color: rgb{couleur_bg_item};
+                background-color: rgba{bg_item};
+                color: rgb{fg_item};
+                selection-background-color: rgb{fg_item};
+                selection-color: rgb{bg_item};
                 }}
                 QCalendarWidget QWidget:item:hover, QCalendarWidget QWidget:item:selected {{
-                background-color: rgba{couleur_bg_item_hover};
-                color: rgb{couleur_fg_item_hover};
-                border: {bordure_jours_taille}px {bordure_jours_style} rgb{couleur_fg_item_hover};
+                background-color: rgba{bg_item_hover};
+                color: rgb{fg_item_hover};
+                border: {bordure_jours_taille}px {bordure_jours_style} rgb{fg_item_hover};
                 }}
 
                 /* BARRE HAUT */
                 QCalendarWidget QWidget#qt_calendar_navigationbar {{
-                background-color: rgba{couleur_bg_entete};
+                background-color: rgba{bg_header};
                 }}
 
                 /* BORDURES */
@@ -216,6 +221,6 @@ class Base_th(Style):
 class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-           couleur_bg=(0, 0, 0, 0),
-           couleur_bg_hover=(0, 0, 0, 0)
+           bg=(0, 0, 0, 0),
+           bg_hover=(0, 0, 0, 0)
     )
