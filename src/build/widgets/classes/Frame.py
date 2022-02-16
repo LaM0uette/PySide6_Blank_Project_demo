@@ -86,19 +86,19 @@ class Base_tr(Style):
 class Menu_top(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-              bg=P_rgb().th1(),
+              bg=Rgb().th1(),
               height=P_dim().h9()
     )
 class Menu_bottom(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-              bg=P_rgb().th2(),
+              bg=Rgb().th2(),
               height=P_dim().h10()
     )
 class Menu_bottom_dlg(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-              bg=P_rgb().th2(),
+              bg=Rgb().th2(),
               height=P_dim().h9()
     )
 
@@ -113,11 +113,11 @@ class Cadre:
             border_rgb=border_rgb,
         )
 
-    def th1(self): self.rtn(border_rgb=P_rgb().th1())
-    def th2(self): self.rtn(border_rgb=P_rgb().th2())
-    def th3(self): self.rtn(border_rgb=P_rgb().th3())
-    def bn1(self): self.rtn(border_rgb=P_rgb().bn1())
-    def bn2(self): self.rtn(border_rgb=P_rgb().bn2())
+    def th1(self): self.rtn(border_rgb=Rgb().th1())
+    def th2(self): self.rtn(border_rgb=Rgb().th2())
+    def th3(self): self.rtn(border_rgb=Rgb().th3())
+    def bn1(self): self.rtn(border_rgb=Rgb().bn1())
+    def bn2(self): self.rtn(border_rgb=Rgb().bn2())
 
 class palette_rgb(Style):
     def __init__(self, *wgs, rgb):
