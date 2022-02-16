@@ -12,11 +12,15 @@ class Style:
             bg_gen=None,
             bg=p_base.BG,
             bg_hover=p_base.BG_HOVER,
+            bg_item=p_base.BG_ITEM,
+            bg_item_hover=p_base.BG_ITEM_HOVER,
 
             # Couleurs FG
             fg_gen=None,
             fg=p_base.FG,
             fg_hover=p_base.FG_HOVER,
+            fg_item=p_base.BG_ITEM,
+            fg_item_hover=p_base.BG_ITEM_HOVER,
 
             couleur_bg_selection=p_base.COLORS_BG_SELECTION,
             couleur_bg_item=p_base.COLORS_BG_ITEM,

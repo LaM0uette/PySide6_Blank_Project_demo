@@ -14,7 +14,11 @@ BG = Rgb().th3()
 BG_HOVER = Rgb().th3()
 BG_CHECKED = Rgb().th1()
 BG_CHECKED_HOVER = Rgb().th1()
-
+# BG item
+BG_ITEM = Rgb().th3()
+BG_ITEM_HOVER = Rgb().th3()
+BG_ITEM_CHECKED = Rgb().th1()
+BG_ITEM_CHECKED_HOVER = Rgb().th1()
 
 
 _COLORS_BG= COULEURS.get("c1") + (255,)
@@ -42,7 +46,11 @@ FG = Rgb().th1()
 FG_HOVER = Rgb().bn1()
 FG_CHECKED = Rgb().th3()
 FG_CHECKED_HOVER = Rgb().bn1()
-
+# FG item
+FG_ITEM = Rgb().th1()
+FG_ITEM_HOVER = Rgb().bn1()
+FG_ITEM_CHECKED = Rgb().th3()
+FG_ITEM_CHECKED_HOVER = Rgb().bn1()
 
 
 _COLORS_FG=COULEURS.get("c3")
