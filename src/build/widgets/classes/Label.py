@@ -210,6 +210,6 @@ class DemoCat(Style):
             bg_gen=Rgb().tr(),
             fg_gen=Rgb().th3(),
             font_size=P_font().h2(),
-            border_bottom=P_style().bd(),
-            border_rgb=P_rgb().bn1(),
+            border_gen_bottom=P_style().bd(),
+            border_gen_rgb=Rgb().bn1(),
     )
