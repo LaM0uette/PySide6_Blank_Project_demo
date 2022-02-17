@@ -255,4 +255,4 @@ class StyleSheet:
 """
 
 
-    def GET(self): return self.style
+    def get(self): return self.style
