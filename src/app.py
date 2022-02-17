@@ -77,8 +77,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         ### QListWidget ###
-        List_widget.Demo_th(self.lw_demo_th)
-        List_widget.Demo_tr(self.lw_demo_tr)
+        ListWidget.Demo_th(self.lw_demo_th)
+        ListWidget.Demo_tr(self.lw_demo_tr)
         ### /QListWidget ###
 
 
