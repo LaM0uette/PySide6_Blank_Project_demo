@@ -62,9 +62,12 @@ class Base_tr(Style):
             *wgs,
             style=StyleSheet(
                 bg_corner=Rgb().th1(),
-                bg_gen=Rgb().tr(),
-                bg_item_gen=Rgb().tr(),
-                fg_gen=Rgb().th3(),
+                bg=Rgb().tr(),
+                bg_item=Rgb().tr(),
+                bg_item_hover=Rgb().tr(),
+                bg_item_checked=Rgb().th3(),
+                bg_item_checked_hover=Rgb().th3(),
+                fg_item=Rgb().th3(),
                 fg_item_checked=Rgb().th1(),
             ).get()
     )
@@ -92,6 +95,12 @@ class Demo_tr(Style):
 
             style=StyleSheet(
                 bg_corner=Rgb().th1(),
+                bg=Rgb().tr(),
                 bg_item=Rgb().tr(),
+                bg_item_hover=Rgb().tr(),
+                bg_item_checked=Rgb().th3(),
+                bg_item_checked_hover=Rgb().th3(),
+                fg_item=Rgb().th3(),
+                fg_item_checked=Rgb().th1(),
             ).get()
     )
