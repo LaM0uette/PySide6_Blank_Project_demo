@@ -10,7 +10,7 @@ class Style:
             *wgs,
             width=p_base.WIDTH,
             height=p_base.HEIGHT,
-            curseur=P_cur().main(),
+            curseur=P_cur().souris(),
             style=StyleSheet().get()
     ):
         for wg in wgs:
