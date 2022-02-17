@@ -65,8 +65,6 @@ class Base_tr(Style):
                 bg_gen=Rgb().tr(),
                 bg_item_gen=Rgb().tr(),
                 fg_gen=Rgb().th3(),
-                fg_item_gen=Rgb().th3(),
-                bg_item_checked=Rgb().th3(),
                 fg_item_checked=Rgb().th1(),
             ).get()
     )
@@ -94,11 +92,6 @@ class Demo_tr(Style):
 
             style=StyleSheet(
                 bg_corner=Rgb().th1(),
-                bg_gen=Rgb().tr(),
-                bg_item_gen=Rgb().tr(),
-                fg_gen=Rgb().th3(),
-                fg_item_gen=Rgb().th3(),
-                bg_item_checked=Rgb().th3(),
-                fg_item_checked=Rgb().th1(),
+                bg_item=Rgb().tr(),
             ).get()
     )
