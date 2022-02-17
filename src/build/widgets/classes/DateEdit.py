@@ -15,7 +15,7 @@ class Style:
             font_size=p_base.FONT_SIZE,
             align_horizontal=Align().h_center(),
             align_vertical=Align().v_center(),
-            curseur=p_base.CUR,
+            curseur=P_cur().souris_main(),
             style=StyleSheet().get()
     ):
         for wg in wgs:
