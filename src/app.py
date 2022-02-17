@@ -83,8 +83,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         ### QProgressBar ###
-        Progress_bar.Base_th(self.pg_demo_th)
-        Progress_bar.Base_tr(self.pg_demo_tr)
+        ProgressBar.Base_th(self.pg_demo_th)
+        ProgressBar.Base_tr(self.pg_demo_tr)
         ### /QProgressBar ###
 
 
