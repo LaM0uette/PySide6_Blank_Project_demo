@@ -790,6 +790,10 @@ class StyleSheet:
                 border-right: {border_hd_right}px {border_hd_style} rgba{border_hd_rgb};
                 border-left: {border_hd_left}px {border_hd_style} rgba{border_hd_rgb};
                 }}
+                QHeaderView::section:hover {{
+                background-color: rgba{bg_header_hover};
+                color: rgba{fg_header_hover};
+                }}
                 QHeaderView::section:checked {{
                 background-color: rgba{bg_header_checked};
                 color: rgba{fg_header_checked};
@@ -797,6 +801,10 @@ class StyleSheet:
                 border-bottom: {border_hd_bottom_checked}px {border_hd_style_checked} rgba{border_hd_rgb_checked};
                 border-right: {border_hd_right_checked}px {border_hd_style_checked} rgba{border_hd_rgb_checked};
                 border-left: {border_hd_left_checked}px {border_hd_style_checked} rgba{border_hd_rgb_checked};
+                }}
+                QHeaderView::section:checked:hover {{
+                background-color: rgba{bg_header_checked_hover};
+                color: rgba{fg_header_checked_hover};
                 }}
 /*****************************
 **       QTableWidget       **
