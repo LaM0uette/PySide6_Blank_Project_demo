@@ -8,8 +8,8 @@ class Style:
     def __init__(
             self,
             *wgs,
-            width=p_base.WG_WIDTH,
-            height=p_base.WG_HEIGHT,
+            width=p_base.WIDTH,
+            height=p_base.HEIGHT,
             scroll_h=p_base.SCROLL_H,
             scroll_v=p_base.SCROLL_V,
             style=StyleSheet().get()
@@ -46,6 +46,8 @@ class Demo(Style):
         super().__init__(
             *wgs,
             style=StyleSheet(
-                bg=Rgb().th1()
+                bg=Rgb().th1(),
+                border_all_hover=3,
+                border_rgb_hover=Rgb().bn2()
             ).get()
     )
