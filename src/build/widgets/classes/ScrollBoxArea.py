@@ -47,9 +47,5 @@ class Demo(Style):
             *wgs,
             style=StyleSheet(
                 bg=Rgb().th1(),
-                border_all=3,
-                border_rgb=Rgb().bn1(),
-                border_all_hover=6,
-                border_rgb_hover=Rgb().bn2()
             ).get()
     )

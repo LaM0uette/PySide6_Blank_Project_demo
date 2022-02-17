@@ -721,8 +721,5 @@ class StyleSheet:
 ****************************/
 """
 
-        print(f"{border_top}px {border_style} rgba{border_rgb}")
-        print(f"{border_top_hover}px {border_style_hover} rgba{border_rgb_hover}")
-
 
     def get(self): return self.style
