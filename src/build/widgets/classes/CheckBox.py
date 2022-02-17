@@ -23,7 +23,6 @@ class Style:
             # Style
             style=StyleSheet().get()
     ):
-
         for wg in wgs:
             wg.setStyleSheet(style)
 
