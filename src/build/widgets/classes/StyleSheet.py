@@ -701,26 +701,26 @@ class StyleSheet:
                 /* TABLE_WIDGET */
                 QTableWidget {{
                 background-color: rgba{bg};
-                gridline-color: rgb{gridline};
-                color: rgb{fg};
+                gridline-color: rgba{gridline};
+                color: rgba{fg};
                 }}
         
                 /* ITEM */
                 QTableWidget::item {{
                 background-color: rgba{bg_item};
-                color: rgb{fg_item};
+                color: rgba{fg_item};
                 }}
                 QTableWidget::item:hover {{
                 background-color: rgba{bg_item_hover};
-                color: rgb{fg_item_hover};
+                color: rgba{fg_item_hover};
                 }}
                 QTableWidget::item:selected {{
                 background-color: rgba{bg_checked};
-                color: rgb{fg_checked};
+                color: rgba{fg_checked};
                 }}
                 QTableWidget::item:selected:hover {{
                 background-color: rgba{bg_checked_hover};
-                color: rgb{fg_checked_hover};
+                color: rgba{fg_checked_hover};
                 }}
         
                 /* BORDURES */
@@ -739,12 +739,12 @@ class StyleSheet:
                 
                 QHeaderView::section {{
                 background-color: rgba{bg};
-                color: rgb{fg};
+                color: rgba{fg};
                 border-style: none;
                 }}
                 QHeaderView::section:checked {{
                 background-color: rgba{bg_checked};
-                color: rgb{fg_checked};
+                color: rgba{fg_checked};
                 }}
 /*****************************
 **       QTableWidget       **

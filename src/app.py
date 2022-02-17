@@ -133,8 +133,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         ### QTableWidget ###
-        Table_widget.Demo_th(self.tw_demo_th)
-        Table_widget.Demo_tr(self.tw_demo_tr)
+        TableWidget.Demo_th(self.tw_demo_th)
+        TableWidget.Demo_tr(self.tw_demo_tr)
         ### /QTableWidget ###
 
 
