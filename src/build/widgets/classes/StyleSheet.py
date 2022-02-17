@@ -13,6 +13,7 @@ class StyleSheet:
             bg_checked=p_base.BG_CHECKED,
             bg_checked_hover=p_base.BG_CHECKED_HOVER,
             bg_selection=p_base.BG_SELECTION,
+            bg_item_gen=None,
             bg_item=p_base.BG_ITEM,
             bg_item_hover=p_base.BG_ITEM_HOVER,
             bg_item_checked=p_base.BG_ITEM_CHECKED,
@@ -28,6 +29,7 @@ class StyleSheet:
             fg_checked=p_base.FG_CHECKED,
             fg_checked_hover=p_base.FG_CHECKED_HOVER,
             fg_selection=p_base.FG_SELECTION,
+            fg_item_gen=None,
             fg_item=p_base.FG_ITEM,
             fg_item_hover=p_base.FG_ITEM_HOVER,
             fg_item_checked=p_base.FG_ITEM_CHECKED,
@@ -134,6 +136,18 @@ class StyleSheet:
             fg_hover = fg_gen
             fg_checked = fg_gen
             fg_checked_hover = fg_gen
+        # BG Item
+        if not bg_item_gen is None:
+            bg_item = bg_item_gen
+            bg_item_hover = bg_item_gen
+            bg_item_checked = bg_item_gen
+            bg_item_checked_hover = bg_item_gen
+        # FG Item
+        if not fg_item_gen is None:
+            fg_item = fg_item_gen
+            fg_item_hover = fg_item_gen
+            fg_item_checked = fg_item_gen
+            fg_item_checked_hover = fg_item_gen
         # IMG
         if not img_all is None:
             img = img_all
