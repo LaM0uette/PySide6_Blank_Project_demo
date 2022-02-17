@@ -778,16 +778,16 @@ class StyleSheet:
                 }}
                 
                 QHeaderView::section {{
-                background-color: rgba{bg_item};
-                color: rgba{fg_item};
+                background-color: rgba{bg_header};
+                color: rgba{fg_header};
                 border-top: {border_hd_top}px {border_hd_style} rgba{border_hd_rgb};
                 border-bottom: {border_hd_bottom}px {border_hd_style} rgba{border_hd_rgb};
                 border-right: {border_hd_right}px {border_hd_style} rgba{border_hd_rgb};
                 border-left: {border_hd_left}px {border_hd_style} rgba{border_hd_rgb};
                 }}
                 QHeaderView::section:checked {{
-                background-color: rgba{bg_item_checked};
-                color: rgba{fg_item_checked};
+                background-color: rgba{bg_header_hover};
+                color: rgba{fg_header_hover};
                 border-top: {border_hd_top_checked}px {border_hd_style_checked} rgba{border_hd_rgb_checked};
                 border-bottom: {border_hd_bottom_checked}px {border_hd_style_checked} rgba{border_hd_rgb_checked};
                 border-right: {border_hd_right_checked}px {border_hd_style_checked} rgba{border_hd_rgb_checked};
