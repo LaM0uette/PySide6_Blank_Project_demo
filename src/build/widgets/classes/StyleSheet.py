@@ -15,6 +15,9 @@ class StyleSheet:
             bg_selection=p_base.BG_SELECTION,
             bg_item=p_base.BG_ITEM,
             bg_item_hover=p_base.BG_ITEM_HOVER,
+            bg_header=Rgb().th2(),
+            bg_header_hover=Rgb().th2(),
+            bg_mois=Rgb().th2(),
             # Couleurs FG
             fg_gen=None,
             fg=p_base.FG,
@@ -24,6 +27,9 @@ class StyleSheet:
             fg_selection=p_base.FG_SELECTION,
             fg_item=p_base.FG_ITEM,
             fg_item_hover=p_base.FG_ITEM_HOVER,
+            fg_header=Rgb().th1(),
+            fg_header_hover=Rgb().bn1(),
+            fg_mois=Rgb().th1(),
 
             # Dimensions WG
             width=p_base.WG_WIDTH,
@@ -41,6 +47,8 @@ class StyleSheet:
             img_check_hover=p_base.IMG_CHECK_HOVER,
             img=p_base.IMG_UNROLL,
             img_hover=p_base.IMG_UNROLL_HOVER,
+            img_right=p_base.IMG_RIGHT,
+            img_left=p_base.IMG_LEFT,
             # Images RGB
             img_uncheck_rgb=p_base.IMG_UNCHECK_RGB,
             img_uncheck_hover_rgb=p_base.IMG_UNCHECK_HOVER_RGB,
@@ -48,6 +56,8 @@ class StyleSheet:
             img_check_hover_rgb=p_base.IMG_CHECK_HOVER_RGB,
             img_rgb=p_base.IMG_UNROLL_RGB,
             img_hover_rgb=p_base.IMG_UNROLL_HOVER_RGB,
+            img_right_rgb=p_base.IMG_RIGHT_RGB,
+            img_left_rgb=p_base.IMG_LEFT_RGB,
             # Images DIM
             img_width=p_base.IMG_WIDTH,
             img_height=p_base.IMG_HEIGHT,
@@ -346,24 +356,24 @@ class StyleSheet:
                 width: {scroll_width}px;
                 height: {scroll_height}px;
                 }}
-                QComboBox::handle:horizontal, QFontComboBox::handle:horizontal {{
+                QScrollBar::handle:horizontal {{
                 min-width: {scroll_handle_min_width}px;
                 }}
-                QComboBox::handle:vertical, QFontComboBox::handle:vertical {{
+                QScrollBar::handle:vertical {{
                 min-height: {scroll_handle_min_height}px;
                 }}
-                QComboBox QScrollBar::handle, QFontComboBox QScrollBar::handle {{
+                QScrollBar::handle {{
                 background-color: rgba{scroll_handle_fg};
                 }}
-                QComboBox QScrollBar::handle:hover, QFontComboBox QScrollBar::handle:hover {{
+                QScrollBar::handle:hover {{
                 background-color: rgba{scroll_handle_fg_hover};
                 }}
                 
-                QComboBox QScrollBar::add-page, QComboBox QScrollBar::sub-page, QFontComboBox QScrollBar::add-page, QFontComboBox QScrollBar::sub-page {{
+                QScrollBar::add-page, QScrollBar::sub-page {{
                 background-color: rgba{scroll_handle_bg};
                 border: none;
                 }}
-                QComboBox QScrollBar::add-page:hover, QComboBox QScrollBar::sub-page:hover, QFontComboBox QScrollBar::add-page:hover, QFontComboBox QScrollBar::sub-page:hover {{
+                QScrollBar::add-page:hover, QScrollBar::sub-page:hover {{
                 background-color: rgba{scroll_handle_bg_hover};
                 border: none;
                 }}
