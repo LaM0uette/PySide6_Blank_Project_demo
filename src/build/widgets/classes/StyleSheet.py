@@ -625,6 +625,12 @@ class StyleSheet:
                 padding-right={padding_right}px;
                 padding-left={padding_left}px;
                 }}
+                .QProgressBar:hover {{
+                border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
+                }}
 /*****************************
 **      /QProgressBar       **
 ******************************/     
