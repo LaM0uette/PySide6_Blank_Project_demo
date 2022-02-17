@@ -32,8 +32,7 @@ class Base_th(Style):
         super().__init__(
             *wgs,
             style=StyleSheet(
-                fg_checked=p_base.COULEURS.get("bn1"),
-                fg_checked_hover=p_base.COULEURS.get("bn2"),
+                fg_item_checked=Rgb().bn1(),
             ).get()
         )
 class Base_tr(Style):
@@ -42,8 +41,9 @@ class Base_tr(Style):
             *wgs,
             style=StyleSheet(
                 bg_gen=Rgb().tr(),
-                fg_checked=p_base.COULEURS.get("bn1"),
-                fg_checked_hover=p_base.COULEURS.get("bn2"),
+                bg_item_gen=Rgb().tr(),
+                fg_item=Rgb().th3(),
+                fg_item_checked=Rgb().bn1(),
             ).get()
     )
 
@@ -55,8 +55,7 @@ class Demo_th(Style):
             height=P_dim().h5(),
 
             style=StyleSheet(
-                fg_checked=p_base.COULEURS.get("bn1"),
-                fg_checked_hover=p_base.COULEURS.get("bn2"),
+                fg_item_checked=Rgb().bn1(),
             ).get()
     )
 class Demo_tr(Style):
@@ -67,8 +66,9 @@ class Demo_tr(Style):
 
             style=StyleSheet(
                 bg_gen=Rgb().tr(),
-                fg_checked=p_base.COULEURS.get("bn1"),
-                fg_checked_hover=p_base.COULEURS.get("bn2"),
+                bg_item_gen=Rgb().tr(),
+                fg_item=Rgb().th3(),
+                fg_item_checked=Rgb().bn1(),
             ).get()
 
     )
