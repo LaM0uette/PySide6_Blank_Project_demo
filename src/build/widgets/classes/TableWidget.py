@@ -65,6 +65,8 @@ class Base_tr(Style):
                 bg_item_gen=Rgb().tr(),
                 fg_gen=Rgb().th3(),
                 fg_item_gen=Rgb().th3(),
+                bg_selection=Rgb().th1(),
+                fg_selection=Rgb().th3(),
             ).get()
     )
 
@@ -94,5 +96,7 @@ class Demo_tr(Style):
                 bg_item_gen=Rgb().tr(),
                 fg_gen=Rgb().th3(),
                 fg_item_gen=Rgb().th3(),
+                bg_selection=Rgb().th1(),
+                fg_selection=Rgb().th3(),
             ).get()
     )
