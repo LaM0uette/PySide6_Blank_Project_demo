@@ -77,6 +77,8 @@ class Demo_th(Style):
             style=StyleSheet(
                 fg_checked=p_base.COULEURS.get("bn1"),
                 fg_checked_hover=p_base.COULEURS.get("bn2"),
+                border_hd_all=P_style().bd(),
+                border_hd_rgb=P_style().bd(),
             ).get()
     )
 class Demo_tr(Style):
