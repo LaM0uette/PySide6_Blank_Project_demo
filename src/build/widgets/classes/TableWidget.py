@@ -53,6 +53,7 @@ class Base_th(Style):
         super().__init__(
             *wgs,
             style=StyleSheet(
+                bg_corner=Rgb().th1(),
             ).get()
         )
 class Base_tr(Style):
@@ -75,7 +76,7 @@ class Demo_th(Style):
             style=StyleSheet(
                 bg_corner=Rgb().th1(),
                 border_hd_gen_all=1,
-                border_hd_gen_rgb=Rgb().th2(),
+                border_hd_gen_rgb=Rgb().th1(),
                 border_item_gen_all=1,
                 border_item_gen_rgb=Rgb().th2()
             ).get()
