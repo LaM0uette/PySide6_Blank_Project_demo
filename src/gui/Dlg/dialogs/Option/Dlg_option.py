@@ -108,8 +108,8 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
 
 
         ### QSpinBox ###
-        Spin_box.Plus_moins_bd_th3(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity)
-        Spin_box.Plus_moins_inf_bd_th3(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height)
+        SpinBox.Plus_moins_bd_th3(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity)
+        SpinBox.Plus_moins_inf_bd_th3(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height)
         ### /QSpinBox ###
 
 

@@ -68,7 +68,7 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
 
 
         ### QSpinBox ###
-        Spin_box.rgb_bd_th3(self.sb_rgb_red, self.sb_rgb_green, self.sb_rgb_blue)
+        SpinBox.rgb_bd_th3(self.sb_rgb_red, self.sb_rgb_green, self.sb_rgb_blue)
         ### /QSpinBox ###
 
 
