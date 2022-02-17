@@ -6,9 +6,6 @@ class StyleSheet:
     def __init__(
             self,
 
-            # Widgets
-            *wgs,
-
             # Couleurs BG
             bg_gen=None,
             bg=p_base.BG,
@@ -82,9 +79,6 @@ class StyleSheet:
             radius_top_left=p_base.WG_RADIUS,
             radius_bottom_right=p_base.WG_RADIUS,
             radius_bottom_left=p_base.WG_RADIUS,
-
-            # Curseur
-            curseur=P_cur().souris_main()
     ):
         # BG
         if not bg_gen is None:
@@ -179,7 +173,9 @@ class StyleSheet:
 
 
         self.style = f"""
-        /* CHECKBOX */
+        /***************
+        **  CHECKBOX  **
+        ****************/
         QCheckBox {{
         background-color: rgba{bg};
         color: rgba{fg};
@@ -252,7 +248,11 @@ class StyleSheet:
         border-top-left-radius: {radius_top_left}px;
         border-bottom-right-radius: {radius_bottom_right}px;
         border-bottom-left-radius: {radius_bottom_left}px;
-        }}"""
+        }}
+        /***************
+        ** /CHECKBOX  **
+        ****************/
+"""
 
 
     def GET(self): return self.style

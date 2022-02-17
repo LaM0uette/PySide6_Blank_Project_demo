@@ -21,7 +21,7 @@ class Style:
             curseur=P_cur().souris_main(),
 
             # Style
-            style = None
+            style=StyleSheet().GET()
     ):
 
         for wg in wgs:
@@ -38,6 +38,7 @@ class Base_th(Style):
         super().__init__(
             *wgs,
             style=StyleSheet(
+                radius_all=5
             ).GET()
         )
 class Base_tr(Style):
@@ -47,6 +48,6 @@ class Base_tr(Style):
             style=StyleSheet(
                 bg_gen=Rgb().tr(),
                 fg=Rgb().th3(),
-                fg_checked=Rgb().th3(),
+                fg_checked=Rgb().th3()
             ).GET()
         )
