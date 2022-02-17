@@ -1,3 +1,4 @@
+from .StyleSheet import StyleSheet
 from ....build import *
 from ....build.widgets import p_base
 
@@ -12,7 +13,8 @@ class Style:
             align_horizontal=Align().left(),
             align_vertical=Align().v_center(),
             word_wrap=p_base.WORD_WRAP,
-            curseur=p_base.CUR
+            curseur=p_base.CUR,
+            style=StyleSheet().get()
     ):
         for wg in wgs:
             wg.setStyleSheet(style)
@@ -31,6 +33,9 @@ class Base_th(Style):
         super().__init__(
             *wgs,
             font_size=font_size,
+            style=StyleSheet(
+                img_margin_left=(p_base.WG_HEIGHT - (p_base.WG_HEIGHT * P_style().x_ico())) / 2,
+            ).get()
     )
 class Base_tr(Style):
     def __init__(self, *wgs, font_size=p_base.FONT_SIZE):
