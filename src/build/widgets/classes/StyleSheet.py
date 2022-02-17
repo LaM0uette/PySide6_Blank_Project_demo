@@ -18,6 +18,8 @@ class StyleSheet:
             bg_item_hover=p_base.BG_ITEM_HOVER,
             bg_item_checked=p_base.BG_ITEM_CHECKED,
             bg_item_checked_hover=p_base.BG_ITEM_CHECKED_HOVER,
+            bg_chunk=p_base.BG_CHUNK,
+            bg_chunk_hover=p_base.BG_CHUNK_HOVER,
             bg_header=Rgb().th2(),
             bg_header_hover=Rgb().th2(),
             bg_mois=Rgb().th2(),
@@ -596,13 +598,13 @@ class StyleSheet:
 **       QProgressBar       **
 ******************************/      
                 QProgressBar {{
-                background-color: rgba{couleur_bg};
-                color: rgb{couleur_fg};
+                background-color: rgba{bg};
+                color: rgb{fg};
                 }}
         
                 /* PROGRESS */
                 QProgressBar::chunk {{
-                background-color: rgba{couleur_bg_barre};
+                background-color: rgba{bg_chunk};
                 }}
         
                 /* BORDURES */
