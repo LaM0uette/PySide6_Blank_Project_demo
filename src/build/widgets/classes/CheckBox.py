@@ -27,6 +27,7 @@ class Base_th(Style):
         super().__init__(
             *wgs,
             style=StyleSheet(
+                img_margin_left=(p_base.WG_HEIGHT - (p_base.WG_HEIGHT * P_style().x_ico())) / 2
             ).get()
         )
 class Base_tr(Style):
@@ -36,6 +37,7 @@ class Base_tr(Style):
             style=StyleSheet(
                 bg_gen=Rgb().tr(),
                 fg=Rgb().th3(),
-                fg_checked=Rgb().th3()
+                fg_checked=Rgb().th3(),
+                img_margin_left=(p_base.WG_HEIGHT - (p_base.WG_HEIGHT * P_style().x_ico())) / 2
             ).get()
         )
