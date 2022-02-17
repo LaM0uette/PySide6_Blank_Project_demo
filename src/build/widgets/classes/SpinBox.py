@@ -56,27 +56,76 @@ class Style:
                  valeur_pas=p_base.VAL_PAS,
                  curseur=p_base.CUR,
                  curseur_le=p_base.CUR_LE
-    ):
+                 ):
+        style = f"""
+        /* SPIN_BOX */
+        QSpinBox, QDoubleSpinBox {{
+        background-color: rgba{couleur_bg};
+        color: rgb{couleur_fg};
+        selection-background-color: rgb{couleur_bg_selection};
+        selection-color: rgb{couleur_fg_selection}
+        }}
+
+        QSpinBox::up-button, QDoubleSpinBox::up-button  {{
+        subcontrol-position: top right;
+        top: {img_up_top}px;
+        bottom: {img_up_bottom}px;
+        right: {img_up_right}px;
+        left: {img_up_left}px;
+        image: url({f"{img_up}{tm_up}.svg"});
+        height: {img_up_height}px;
+        width: {img_up_width}px;
+        }}
+
+        QSpinBox::down-button, QDoubleSpinBox::down-button  {{
+        subcontrol-position: bottom right;
+        top: {img_down_top}px;
+        bottom: {img_down_bottom}px;
+        right: {img_down_right}px;
+        left: {img_down_left}px;
+        image: url({f"{img_down}{tm_down}.svg"});
+        height: {img_down_height}px;
+        width: {img_down_width}px;
+        }}
+
+        /* BORDURES */
+        .QSpinBox, .QDoubleSpinBox {{
+        border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
+        border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
+        border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
+        border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
+        }}
+
+        /* RAYONS */
+        .QSpinBox, .QDoubleSpinBox {{
+        border-top-left-radius: {rayon_top_left}px;
+        border-top-right-radius: {rayon_top_right}px;
+        border-bottom-right-radius: {rayon_bottom_right}px;
+        border-bottom-left-radius: {rayon_bottom_left}px;
+        }}"""
+
         for wg in wgs:
             wg.setStyleSheet(style)
 
             try: Fct(wg=wg, w=dim_width, h=dim_height).DIM()
             except: pass
 
-            wg.setFont(Fct(font=police, font_size=police_taille).FONT())
+            try:
+                wg.setFont(Fct(font=police, font_size=police_taille).FONT())
 
-            wg.setAlignment(align)
+                wg.setAlignment(align)
 
-            wg.setMinimum(valeur_min)
-            wg.setMaximum(valeur_max)
-            wg.setSingleStep(valeur_pas)
+                wg.setMinimum(valeur_min)
+                wg.setMaximum(valeur_max)
+                wg.setSingleStep(valeur_pas)
 
-            wg.setFrame(QtWidgets.QFrame.NoFrame)
-            wg.setButtonSymbols(buttons_type)
-            if no_focus: wg.setFocusPolicy(QtCore.Qt.NoFocus)
+                wg.setFrame(QtWidgets.QFrame.NoFrame)
+                wg.setButtonSymbols(buttons_type)
+                if no_focus: wg.setFocusPolicy(QtCore.Qt.NoFocus)
 
-            wg.setCursor(Fct(cur=curseur).CUR())
-            wg.lineEdit().setCursor(Fct(cur=curseur_le).CUR())
+                wg.setCursor(Fct(cur=curseur).CUR())
+                wg.lineEdit().setCursor(Fct(cur=curseur_le).CUR())
+            except: pass
 
 
 class Plus_moins_th(Style):
