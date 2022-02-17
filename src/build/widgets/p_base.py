@@ -74,7 +74,7 @@ COLORS_FG_ITEM_CHECKED_HOVER= COULEURS.get("bn1")
 COLORS_GRID=COULEURS.get("c3")
 
 # Autres
-GRIDLINE = Rgb().th3()
+GRIDLINE = Rgb().th2()
 
 ########################
 ##     DIMENSIONS     ##
