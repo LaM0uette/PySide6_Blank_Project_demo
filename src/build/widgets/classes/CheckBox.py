@@ -27,7 +27,8 @@ class Base_th(Style):
         super().__init__(
             *wgs,
             style=StyleSheet(
-                img_margin_left=(p_base.WG_HEIGHT - (p_base.WG_HEIGHT * P_style().x_ico())) / 2
+                img_margin_left=(p_base.WG_HEIGHT - (p_base.WG_HEIGHT * P_style().x_ico())) / 2,
+                radius_all=10
             ).get()
         )
 class Base_tr(Style):
