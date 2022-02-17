@@ -39,15 +39,15 @@ class StyleSheet:
             img_uncheck_hover=p_base.IMG_UNCHECK_HOVER,
             img_check=p_base.IMG_CHECK,
             img_check_hover=p_base.IMG_CHECK_HOVER,
-            img_unroll=p_base.IMG_UNROLL,
-            img_unroll_hover=p_base.IMG_UNROLL_HOVER,
+            img=p_base.IMG_UNROLL,
+            img_hover=p_base.IMG_UNROLL_HOVER,
             # Images RGB
             img_uncheck_rgb=p_base.IMG_UNCHECK_RGB,
             img_uncheck_hover_rgb=p_base.IMG_UNCHECK_HOVER_RGB,
             img_check_rgb=p_base.IMG_CHECK_RGB,
             img_check_hover_rgb=p_base.IMG_CHECK_HOVER_RGB,
-            img_unroll_rgb=p_base.IMG_UNROLL_RGB,
-            img_unroll_hover_rgb=p_base.IMG_UNROLL_HOVER_RGB,
+            img_rgb=p_base.IMG_UNROLL_RGB,
+            img_hover_rgb=p_base.IMG_UNROLL_HOVER_RGB,
             # Images DIM
             img_width=p_base.IMG_WIDTH,
             img_height=p_base.IMG_HEIGHT,
@@ -298,12 +298,12 @@ class StyleSheet:
 
                 /* IMAGE DU BOUTON DE DEROULEMENT */
                 QComboBox::down-arrow, QFontComboBox::down-arrow {{
-                image: url({f"{img_unroll}{img_unroll_rgb}.svg"});
+                image: url({f"{img}{img_rgb}.svg"});
                 width: {img_width}px;
                 height: {img_height}px;
                 }}
                 QComboBox::down-arrow:hover, QFontComboBox::down-arrow:hover {{
-                image: url({f"{img_unroll_hover}{img_unroll_hover_rgb}.svg"});
+                image: url({f"{img_hover}{img_hover_rgb}.svg"});
                 width: {img_width}px;
                 height: {img_height}px;
                 }}
@@ -369,6 +369,132 @@ class StyleSheet:
                 }}
                 /****************
                 ** /QComboBox  **
+                *****************/
+                
+                
+                
+                /****************
+                **  QDateEdit  **
+                *****************/
+                QDateEdit {{
+                background-color: rgba{bg};
+                color: rgba{fg};
+                selection-background-color: rgba{bg_selection};
+                selection-color: rgba{fg_selection};
+                }}
+                QDateEdit:hover {{
+                background-color: rgba{bg_hover};
+                color: rgba{fg_hover};
+                }}
+
+                /* IMG CALENDRIER */
+                QDateEdit::drop-down {{
+                image: url({f"{img}{img_rgb}.svg"});
+                width: {img_width}px;
+                height: {img_height}px;
+                margin-top: {img_margin_top}px;
+                margin-bottom: {img_margin_bottom}px;
+                margin-right: {img_margin_right}px;
+                margin-left: {img_margin_left}px;
+                }}
+                QDateEdit::drop-down:hover {{
+                image: url({f"{img_hover}{img_hover_rgb}.svg"});
+                }}
+
+                /* WIDGETS */
+                QCalendarWidget QWidget {{
+                alternate-background-color: rgba{bg_mois};
+                color: rgb{fg_mois};
+                }}
+
+                /* TOOL BUTTON */
+                QCalendarWidget QToolButton {{
+                font-size: {font_size}px;
+                background-color: rgba{bg_header};
+                color: rgba{fg_header};
+                }}
+                QCalendarWidget QToolButton:hover {{
+                background-color: rgba{bg_header_hover};
+                color: rgba{fg_header_hover};
+                }}
+
+                /* FLECHE GAUCHE DROITE */
+                QToolButton#qt_calendar_nextmonth  {{
+                qproperty-icon: url({f"{img_right}{img_right_rgb}.svg"});
+                icon-size: {font_size}px, {font_size}px;
+                }}
+                QToolButton#qt_calendar_prevmonth {{
+                qproperty-icon: url({f"{img_left}{img_left_rgb}.svg"});
+                icon-size: {font_size}px, {font_size}px;
+                }}
+
+                /* MENU DEROULANT */
+                QCalendarWidget QMenu {{
+                width: 150px;
+                font-size: {font_size}px;
+                font-family: {font};
+                background-color: rgba{bg_header};
+                color: rgba{fg_header};
+                }}
+
+                /* SPIN BOX */
+                QCalendarWidget QSpinBox {{
+                width: 60px;
+                font-size: {font_size}px;
+                font-family: {font};
+                background-color: rgba{bg_header};
+                color: rgba{fg_header};
+                selection-background-color: rgba{bg_selection};
+                selection-color: rgba{fg_selection};
+                }}
+
+                /* JOURS */
+                QCalendarWidget QAbstractItemView {{
+                font-size: {font_size}px;
+                font-family: {font};
+                font-weight: 30;
+                outline: 0px;
+                }}
+                QCalendarWidget QAbstractItemView:enabled {{
+                background-color: rgba{bg_item};
+                color: rgba{fg_item};
+                selection-background-color: rgba{fg_item};
+                selection-color: rgba{bg_item};
+                }}
+                QCalendarWidget QWidget:item:hover, QCalendarWidget QWidget:item:selected {{
+                background-color: rgba{bg_item_hover};
+                color: rgba{fg_item_hover};
+                border: {border_day_size}px {border_day_style} rgba{border_day_rgb};
+                }}
+
+                /* BARRE HAUT */
+                QCalendarWidget QWidget#qt_calendar_navigationbar {{
+                background-color: rgba{bg_header};
+                }}
+
+                /* BORDURES */
+                .QDateEdit {{
+                border-top: {border_top}px {border_style} rgba{border_rgb};
+                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
+                border-right: {border_right}px {border_style} rgba{border_rgb};
+                border-left: {border_left}px {border_style} rgba{border_rgb};
+                }}
+                .QDateEdit:hover {{
+                border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
+                }}
+                
+                /* RAYONS */
+                .QDateEdit {{
+                border-top-right-radius: {radius_top_right}px;
+                border-top-left-radius: {radius_top_left}px;
+                border-bottom-right-radius: {radius_bottom_right}px;
+                border-bottom-left-radius: {radius_bottom_left}px;
+                }}
+                /****************
+                ** /QDateEdit  **
                 *****************/
 """
 
