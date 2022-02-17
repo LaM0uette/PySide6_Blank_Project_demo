@@ -745,6 +745,7 @@ class StyleSheet:
                 QHeaderView::section:checked {{
                 background-color: rgba{bg_checked};
                 color: rgba{fg_checked};
+                border-style: none;
                 }}
 /*****************************
 **       QTableWidget       **
