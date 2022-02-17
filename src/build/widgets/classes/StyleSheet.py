@@ -108,6 +108,16 @@ class StyleSheet:
             border_style_checked_hover=p_base.WG_BORDER_STYLE,
             border_rgb_checked_hover=p_base.WG_BORDER_RGB,
             border_top_checked_hover=p_base.WG_BORDER_WIDTH, border_bottom_checked_hover=p_base.WG_BORDER_WIDTH, border_right_checked_hover=p_base.WG_BORDER_WIDTH, border_left_checked_hover=p_base.WG_BORDER_WIDTH,
+            # Bordures HD
+            border_hd_all=None,
+            border_hd_style=p_base.WG_BORDER_STYLE,
+            border_hd_rgb=p_base.WG_BORDER_RGB,
+            border_hd_top=p_base.WG_BORDER_WIDTH, border_hd_bottom=p_base.WG_BORDER_WIDTH, border_hd_right=p_base.WG_BORDER_WIDTH, border_hd_left=p_base.WG_BORDER_WIDTH,
+            # Bordures HD hover
+            border_hd_all_hover=None,
+            border_hd_style_hover=p_base.WG_BORDER_STYLE,
+            border_hd_rgb_hover=p_base.WG_BORDER_RGB,
+            border_hd_top_hover=p_base.WG_BORDER_WIDTH, border_hd_bottom_hover=p_base.WG_BORDER_WIDTH, border_hd_right_hover=p_base.WG_BORDER_WIDTH, border_hd_left_hover=p_base.WG_BORDER_WIDTH,
             # Bordures jours
             border_day_size=P_style().bd(),
             border_day_style=p_base.WG_BORDER_STYLE,
@@ -181,17 +191,35 @@ class StyleSheet:
             border_bottom_checked_hover = border_gen_all
             border_right_checked_hover = border_gen_all
             border_left_checked_hover = border_gen_all
+            border_hd_top = border_gen_all
+            border_hd_bottom = border_gen_all
+            border_hd_right = border_gen_all
+            border_hd_left = border_gen_all
+            border_hd_top_hover = border_gen_all
+            border_hd_bottom_hover = border_gen_all
+            border_hd_right_hover = border_gen_all
+            border_hd_left_hover = border_gen_all
         elif border_gen_all is None:
             if not border_all is None:
                 border_top = border_all
                 border_bottom = border_all
                 border_right = border_all
                 border_left = border_all
+            if not border_hd_all is None:
+                border_hd_top = border_hd_all
+                border_hd_bottom = border_hd_all
+                border_hd_right = border_hd_all
+                border_hd_left = border_hd_all
             if not border_all_hover is None:
                 border_top_hover = border_all_hover
                 border_bottom_hover = border_all_hover
                 border_right_hover = border_all_hover
                 border_left_hover = border_all_hover
+            if not border_hd_all_hover is None:
+                border_hd_top_hover = border_hd_all_hover
+                border_hd_bottom_hover = border_hd_all_hover
+                border_hd_right_hover = border_hd_all_hover
+                border_hd_left_hover = border_hd_all_hover
             if not border_all_checked is None:
                 border_top_checked = border_all_checked
                 border_bottom_checked = border_all_checked
@@ -205,34 +233,46 @@ class StyleSheet:
 
             if not border_gen_top is None:
                 border_top = border_gen_top
+                border_hd_top = border_gen_top
                 border_top_hover = border_gen_top
+                border_hd_top_hover = border_gen_top
                 border_top_checked = border_gen_top
                 border_top_checked_hover = border_gen_top
             if not border_gen_bottom is None:
                 border_bottom = border_gen_bottom
+                border_hd_bottom = border_gen_bottom
                 border_bottom_hover = border_gen_bottom
+                border_hd_bottom_hover = border_gen_bottom
                 border_bottom_checked = border_gen_bottom
                 border_bottom_checked_hover = border_gen_bottom
             if not border_gen_right is None:
                 border_right = border_gen_right
+                border_hd_right = border_gen_right
                 border_right_hover = border_gen_right
+                border_hd_right_hover = border_gen_right
                 border_right_checked = border_gen_right
                 border_right_checked_hover = border_gen_right
             if not border_gen_left is None:
                 border_left = border_gen_left
+                border_hd_left = border_gen_left
                 border_left_hover = border_gen_left
+                border_hd_left_hover = border_gen_left
                 border_left_checked = border_gen_left
                 border_left_checked_hover = border_gen_left
         # Bordure style
         if not border_gen_style is None:
             border_style = border_gen_style
+            border_hd_style = border_gen_style
             border_style_hover = border_gen_style
+            border_hd_style_hover = border_gen_style
             border_style_checked = border_gen_style
             border_style_checked_hover = border_gen_style
         # Bordure RGB
         if not border_gen_rgb is None:
             border_rgb = border_gen_rgb
+            border_hd_rgb = border_gen_rgb
             border_rgb_hover = border_gen_rgb
+            border_hd_rgb_hover = border_gen_rgb
             border_rgb_checked = border_gen_rgb
             border_rgb_checked_hover = border_gen_rgb
         # Radius
@@ -738,13 +778,20 @@ class StyleSheet:
                 }}
                 
                 QHeaderView::section {{
-                background-color: rgba{bg};
-                color: rgba{fg};
-                border-style: none;
+                background-color: rgba{bg_item};
+                color: rgba{fg_item};
+                border-top: {border_hd_top}px {border_hd_style} rgba{border_hd_rgb};
+                border-bottom: {border_hd_bottom}px {border_hd_style} rgba{border_hd_rgb};
+                border-right: {border_hd_right}px {border_hd_style} rgba{border_hd_rgb};
+                border-left: {border_hd_left}px {border_hd_style} rgba{border_hd_rgb};
                 }}
                 QHeaderView::section:checked {{
-                background-color: rgba{bg_checked};
-                color: rgba{fg_checked};
+                background-color: rgba{bg_item_checked};
+                color: rgba{fg_item_checked};
+                border-top: {border_hd_top_hover}px {border_hd_style_hover} rgba{border_hd_rgb_hover};
+                border-bottom: {border_hd_bottom_hover}px {border_hd_style_hover} rgba{border_hd_rgb_hover};
+                border-right: {border_hd_right_hover}px {border_hd_style_hover} rgba{border_hd_rgb_hover};
+                border-left: {border_hd_left_hover}px {border_hd_style_hover} rgba{border_hd_rgb_hover};
                 }}
 /*****************************
 **       QTableWidget       **
