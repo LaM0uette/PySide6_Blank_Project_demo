@@ -75,10 +75,6 @@ class Demo_th(Style):
             height=P_dim().h5(),
 
             style=StyleSheet(
-                bg_header=Rgb().th1(),
-                bg_header_hover=Rgb().th3(),
-                fg_header=Rgb().th3(),
-                fg_header_hover=Rgb().th1(),
                 fg_checked=p_base.COULEURS.get("bn1"),
                 fg_checked_hover=p_base.COULEURS.get("bn2"),
                 border_hd_bottom=P_style().bd(),
