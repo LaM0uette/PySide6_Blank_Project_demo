@@ -189,39 +189,37 @@ class StyleSheet:
             scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
             scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
     ):
-        # BG
+        # BG / FG
         if not bg_gen is None:
             bg = bg_gen
             bg_hover = bg_gen
             bg_checked = bg_gen
             bg_checked_hover = bg_gen
-        # FG
         if not fg_gen is None:
             fg = fg_gen
             fg_hover = fg_gen
             fg_checked = fg_gen
             fg_checked_hover = fg_gen
-        # BG Item
         if not bg_item_gen is None:
             bg_item = bg_item_gen
             bg_item_hover = bg_item_gen
             bg_item_checked = bg_item_gen
             bg_item_checked_hover = bg_item_gen
-        # FG Item
         if not fg_item_gen is None:
             fg_item = fg_item_gen
             fg_item_hover = fg_item_gen
             fg_item_checked = fg_item_gen
             fg_item_checked_hover = fg_item_gen
+
         # IMG
         if not img_all is None:
             img = img_all
             img_hover = img_all
-        # IMG RGB
         if not img_all_rgb is None:
             img_rgb = img_all_rgb
             img_hover_rgb = img_all_rgb
-        # Bordure
+
+        # Bordure GEN
         if not border_gen_all is None:
             border_top = border_gen_all
             border_bottom = border_gen_all
@@ -281,18 +279,88 @@ class StyleSheet:
                 border_left_hover = border_gen_left
                 border_left_checked = border_gen_left
                 border_left_checked_hover = border_gen_left
-        # Bordure style
         if not border_gen_style is None:
             border_style = border_gen_style
             border_style_hover = border_gen_style
             border_style_checked = border_gen_style
             border_style_checked_hover = border_gen_style
-        # Bordure RGB
         if not border_gen_rgb is None:
             border_rgb = border_gen_rgb
             border_rgb_hover = border_gen_rgb
             border_rgb_checked = border_gen_rgb
             border_rgb_checked_hover = border_gen_rgb
+
+        # Bordure hd GEN
+        if not border_hd_gen_all is None:
+            border_hd_top = border_hd_gen_all
+            border_hd_bottom = border_hd_gen_all
+            border_hd_right = border_hd_gen_all
+            border_hd_left = border_hd_gen_all
+            border_hd_top_hover = border_hd_gen_all
+            border_hd_bottom_hover = border_hd_gen_all
+            border_hd_right_hover = border_hd_gen_all
+            border_hd_left_hover = border_hd_gen_all
+            border_hd_top_checked = border_hd_gen_all
+            border_hd_bottom_checked = border_hd_gen_all
+            border_hd_right_checked = border_hd_gen_all
+            border_hd_left_checked = border_hd_gen_all
+            border_hd_top_checked_hover = border_hd_gen_all
+            border_hd_bottom_checked_hover = border_hd_gen_all
+            border_hd_right_checked_hover = border_hd_gen_all
+            border_hd_left_checked_hover = border_hd_gen_all
+        elif border_hd_gen_all is None:
+            if not border_hd_all is None:
+                border_hd_top = border_hd_all
+                border_hd_bottom = border_hd_all
+                border_hd_right = border_hd_all
+                border_hd_left = border_hd_all
+            if not border_hd_all_hover is None:
+                border_hd_top_hover = border_hd_all_hover
+                border_hd_bottom_hover = border_hd_all_hover
+                border_hd_right_hover = border_hd_all_hover
+                border_hd_left_hover = border_hd_all_hover
+            if not border_hd_all_checked is None:
+                border_hd_top_checked = border_hd_all_checked
+                border_hd_bottom_checked = border_hd_all_checked
+                border_hd_right_checked = border_hd_all_checked
+                border_hd_left_checked = border_hd_all_checked
+            if not border_hd_all_checked_hover is None:
+                border_hd_top_checked_hover = border_hd_all_checked_hover
+                border_hd_bottom_checked_hover = border_hd_all_checked_hover
+                border_hd_right_checked_hover = border_hd_all_checked_hover
+                border_hd_left_checked_hover = border_hd_all_checked_hover
+
+            if not border_hd_gen_top is None:
+                border_hd_top = border_hd_gen_top
+                border_hd_top_hover = border_hd_gen_top
+                border_hd_top_checked = border_hd_gen_top
+                border_hd_top_checked_hover = border_hd_gen_top
+            if not border_hd_gen_bottom is None:
+                border_hd_bottom = border_hd_gen_bottom
+                border_hd_bottom_hover = border_hd_gen_bottom
+                border_hd_bottom_checked = border_hd_gen_bottom
+                border_hd_bottom_checked_hover = border_hd_gen_bottom
+            if not border_hd_gen_right is None:
+                border_hd_right = border_hd_gen_right
+                border_hd_right_hover = border_hd_gen_right
+                border_hd_right_checked = border_hd_gen_right
+                border_hd_right_checked_hover = border_hd_gen_right
+            if not border_hd_gen_left is None:
+                border_hd_left = border_hd_gen_left
+                border_hd_left_hover = border_hd_gen_left
+                border_hd_left_checked = border_hd_gen_left
+                border_hd_left_checked_hover = border_hd_gen_left
+        if not border_hd_gen_style is None:
+            border_hd_style = border_hd_gen_style
+            border_hd_style_hover = border_hd_gen_style
+            border_hd_style_checked = border_hd_gen_style
+            border_hd_style_checked_hover = border_hd_gen_style
+        if not border_hd_gen_rgb is None:
+            border_hd_rgb = border_hd_gen_rgb
+            border_hd_rgb_hover = border_hd_gen_rgb
+            border_hd_rgb_checked = border_hd_gen_rgb
+            border_hd_rgb_checked_hover = border_hd_gen_rgb
+
         # Radius
         if not radius_all is None:
             radius_top_right = radius_all
