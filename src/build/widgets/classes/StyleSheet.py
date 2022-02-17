@@ -534,25 +534,25 @@ class StyleSheet:
 *****************************/
                 .QListWidget {{
                 background-color: rgba{bg};
-                color: rgb{fg};
+                color: rgba{fg};
                 }}
         
                 /* ITEM */
                 .QListWidget::item {{
                 background-color: rgba{bg_item};
-                color: rgb{fg_item};
+                color: rgba{fg_item};
                 }}
                 .QListWidget::item:selected {{
                 background-color: rgba{bg_checked};
-                color: rgb{fg_checked};
+                color: rgba{fg_checked};
                 }}
                 .QListWidget::item:hover {{
                 background-color: rgba{bg_item_hover};
-                color: rgb{fg_item_hover};
+                color: rgba{fg_item_hover};
                 }}
                 .QListWidget::item:selected:hover {{
                 background-color: rgba{bg_checked_hover};
-                color: rgb{fg_checked_hover};
+                color: rgba{fg_checked_hover};
                 }}
         
                 /* BORDURES */
