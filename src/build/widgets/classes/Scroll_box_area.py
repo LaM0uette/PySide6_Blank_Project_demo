@@ -34,49 +34,7 @@ class Style:
                  scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
                  scroll_h=p_base.SCROLL_H,
                  scroll_v=p_base.SCROLL_V,
-                 ):
-        style = f"""
-        .QScrollArea .QWidget {{
-        background-color: rgba{couleur_bg};
-        }}
-
-        /* BORDURES */
-        .QScrollArea {{
-        border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
-        border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
-        border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
-        border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
-        }}
-
-        /* RAYONS */
-        .QScrollArea {{
-        border-top-left-radius: {rayon_top_left}px;
-        border-top-right-radius: {rayon_top_right}px;
-        border-bottom-right-radius: {rayon_bottom_right}px;
-        border-bottom-left-radius: {rayon_bottom_left}px;
-        }}
-
-        /* SCROLL */
-        QScrollArea QScrollBar {{
-        background-color: rgb{scroll_bg};
-        width: {scroll_width}px;
-        height: {scroll_height}px;
-        }}
-        QScrollArea::handle:horizontal {{
-        min-width: {scroll_handle_min_width}px;
-        }}
-        QScrollArea::handle:vertical {{
-        min-height: {scroll_handle_min_height}px;
-        }}
-        QScrollArea QScrollBar::handle {{
-        background-color: rgb{scroll_handle_fg};
-        }}
-
-        QScrollArea QScrollBar::add-page, QScrollArea QScrollBar::sub-page {{
-        background-color: rgb{scroll_handle_bg};
-        border: none;
-        }}"""
-
+    ):
         for wg in wgs:
             wg.setStyleSheet(style)
 
