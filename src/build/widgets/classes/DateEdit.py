@@ -11,49 +11,10 @@ class Style:
             *wgs,
             width=p_base.WG_WIDTH,
             height=p_base.WG_HEIGHT,
-
-            # Police
             font=p_base.FONT,
             font_size=p_base.FONT_SIZE,
-
-            # Images margin
-            img_margin_top=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT)/2,
-            img_margin_bottom=0,
-            img_margin_right=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT)/2,
-            img_margin_left=0,
-
-            # Bordures GEN
-            border_gen_all=None,
-            border_gen_style=None,
-            border_gen_rgb=None,
-            border_gen_top=None, border_gen_bottom=None, border_gen_right=None, border_gen_left=None,
-            # Bordures
-            border_all=None,
-            border_style=p_base.WG_BORDER_STYLE,
-            border_rgb=p_base.WG_BORDER_RGB,
-            border_top=p_base.WG_BORDER_WIDTH, border_bottom=p_base.WG_BORDER_WIDTH, border_right=p_base.WG_BORDER_WIDTH, border_left=p_base.WG_BORDER_WIDTH,
-            # Bordures hover
-            border_all_hover=None,
-            border_style_hover=p_base.WG_BORDER_STYLE,
-            border_rgb_hover=p_base.WG_BORDER_RGB,
-            border_top_hover=p_base.WG_BORDER_WIDTH, border_bottom_hover=p_base.WG_BORDER_WIDTH, border_right_hover=p_base.WG_BORDER_WIDTH, border_left_hover=p_base.WG_BORDER_WIDTH,
-            # Bordures jours
-            border_day_size=P_style().bd(),
-            border_day_style=p_base.WG_BORDER_STYLE,
-            border_day_rgb=p_base.FG_ITEM_HOVER,
-
-            # Rayons
-            radius_all=None,
-            radius_top_right=p_base.WG_RADIUS,
-            radius_top_left=p_base.WG_RADIUS,
-            radius_bottom_right=p_base.WG_RADIUS,
-            radius_bottom_left=p_base.WG_RADIUS,
-
-            # Paramètres
             align_horizontal=Align().h_center(),
             align_vertical=Align().v_center(),
-
-            # Curseur
             curseur=p_base.CUR,
             style=StyleSheet().get()
     ):
@@ -89,3 +50,7 @@ class Base_tr(Style):
             bg_selection=Rgb().th3(),
             fg_selection=Rgb().th1(),
     )
+
+
+img_margin_top=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT)/2,
+img_margin_right=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT)/2,

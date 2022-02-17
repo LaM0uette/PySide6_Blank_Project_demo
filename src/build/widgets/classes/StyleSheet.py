@@ -92,6 +92,10 @@ class StyleSheet:
             border_style_checked_hover=p_base.WG_BORDER_STYLE,
             border_rgb_checked_hover=p_base.WG_BORDER_RGB,
             border_top_checked_hover=p_base.WG_BORDER_WIDTH, border_bottom_checked_hover=p_base.WG_BORDER_WIDTH, border_right_checked_hover=p_base.WG_BORDER_WIDTH, border_left_checked_hover=p_base.WG_BORDER_WIDTH,
+            # Bordures jours
+            border_day_size=P_style().bd(),
+            border_day_style=p_base.WG_BORDER_STYLE,
+            border_day_rgb=p_base.FG_ITEM_HOVER,
 
             # Rayons
             radius_all=None,
