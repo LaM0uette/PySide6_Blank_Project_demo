@@ -6,17 +6,6 @@ from ....build.widgets import p_base
 class Style:
     def __init__(self,
                  *wgs,
-                 couleur_bg=p_base._COLORS_BG,
-                 couleur_bg_checked=p_base._COLORS_BG_CHECKED,
-                 couleur_bg_checked_hover=p_base._COLORS_BG_CHECKED_HOVER,
-                 couleur_bg_item=p_base.COLORS_BG_ITEM,
-                 couleur_bg_item_hover=p_base.COLORS_BG_ITEM_HOVER,
-                 couleur_fg=p_base._COLORS_FG,
-                 couleur_fg_checked=p_base._COLORS_FG_CHECKED,
-                 couleur_fg_checked_hover=p_base._COLORS_FG_CHECKED_HOVER,
-                 couleur_fg_item=p_base.COLORS_FG_ITEM,
-                 couleur_fg_item_hover=p_base.COLORS_FG_ITEM_HOVER,
-                 couleur_grid=p_base.COLORS_GRID,
                  dim_width=p_base.WG_WIDTH,
                  dim_height=p_base.WG_HEIGHT,
                  police=p_base.FONT,
@@ -52,51 +41,7 @@ class Style:
                  curseur=p_base.CUR
                  ):
         style_main = f"""
-        /* CORNER */
-        QTableCornerButton::section {{
-        background-color: rgba{couleur_bg};
-        }}
-
-        /* TABLE_WIDGET */
-        QTableWidget {{
-        background-color: rgba{couleur_bg};
-        gridline-color: rgb{couleur_grid};
-        color: rgb{couleur_fg};
-        }}
-
-        /* ITEM */
-        QTableWidget::item {{
-        background-color: rgba{couleur_bg_item};
-        color: rgb{couleur_fg_item};
-        }}
-        QTableWidget::item:hover {{
-        background-color: rgba{couleur_bg_item_hover};
-        color: rgb{couleur_fg_item_hover};
-        }}
-        QTableWidget::item:selected {{
-        background-color: rgba{couleur_bg_checked};
-        color: rgb{couleur_fg_checked};
-        }}
-        QTableWidget::item:selected:hover {{
-        background-color: rgba{couleur_bg_checked_hover};
-        color: rgb{couleur_fg_checked_hover};
-        }}
-
-        /* BORDURES */
-        .QTableWidget {{
-        border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
-        border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
-        border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
-        border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
-        }}
-
-        /* RAYONS */
-        .QTableWidget {{
-        border-top-left-radius: {rayon_top_left}px;
-        border-top-right-radius: {rayon_top_right}px;
-        border-bottom-right-radius: {rayon_bottom_right}px;
-        border-bottom-left-radius: {rayon_bottom_left}px;
-        }}
+        
 
         /* SCROLL */
         .QTableWidget QScrollBar {{
