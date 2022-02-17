@@ -63,22 +63,20 @@ class Style:
             try: Fct(wg=wg, w=dim_width, h=dim_height).DIM()
             except: pass
 
-            try:
-                wg.setFont(Fct(font=police, font_size=police_taille).FONT())
+            wg.setFont(Fct(font=police, font_size=police_taille).FONT())
 
-                wg.setAlignment(align)
+            wg.setAlignment(align)
 
-                wg.setMinimum(valeur_min)
-                wg.setMaximum(valeur_max)
-                wg.setSingleStep(valeur_pas)
+            wg.setMinimum(valeur_min)
+            wg.setMaximum(valeur_max)
+            wg.setSingleStep(valeur_pas)
 
-                wg.setFrame(QtWidgets.QFrame.NoFrame)
-                wg.setButtonSymbols(buttons_type)
-                if no_focus: wg.setFocusPolicy(QtCore.Qt.NoFocus)
+            wg.setFrame(QtWidgets.QFrame.NoFrame)
+            wg.setButtonSymbols(buttons_type)
+            if no_focus: wg.setFocusPolicy(QtCore.Qt.NoFocus)
 
-                wg.setCursor(Fct(cur=curseur).CUR())
-                wg.lineEdit().setCursor(Fct(cur=curseur_le).CUR())
-            except: pass
+            wg.setCursor(Fct(cur=curseur).CUR())
+            wg.lineEdit().setCursor(Fct(cur=curseur_le).CUR())
 
 
 class Plus_moins_th(Style):
