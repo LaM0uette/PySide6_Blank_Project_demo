@@ -46,6 +46,7 @@ class StyleSheet:
             img_uncheck_hover=p_base.IMG_UNCHECK_HOVER,
             img_check=p_base.IMG_CHECK,
             img_check_hover=p_base.IMG_CHECK_HOVER,
+            img_all=None,
             img=p_base.IMG_UNROLL,
             img_hover=p_base.IMG_UNROLL_HOVER,
             img_right=p_base.IMG_RIGHT,
@@ -55,6 +56,7 @@ class StyleSheet:
             img_uncheck_hover_rgb=p_base.IMG_UNCHECK_HOVER_RGB,
             img_check_rgb=p_base.IMG_CHECK_RGB,
             img_check_hover_rgb=p_base.IMG_CHECK_HOVER_RGB,
+            img_rgb_all=None,
             img_rgb=p_base.IMG_UNROLL_RGB,
             img_hover_rgb=p_base.IMG_UNROLL_HOVER_RGB,
             img_right_rgb=p_base.IMG_RIGHT_RGB,
@@ -128,6 +130,14 @@ class StyleSheet:
             fg_hover = fg_gen
             fg_checked = fg_gen
             fg_checked_hover = fg_gen
+        # IMG
+        if not img_all is None:
+            img = img_all
+            img_hover = img_all
+        # IMG RGB
+        if not img_rgb_all is None:
+            img_rgb = img_rgb_all
+            img_hover_rgb = img_rgb_all
         # Bordure
         if not border_gen_all is None:
             border_top = border_gen_all
