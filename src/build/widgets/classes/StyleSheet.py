@@ -715,12 +715,12 @@ class StyleSheet:
                 color: rgba{fg_item_hover};
                 }}
                 QTableWidget::item:selected {{
-                background-color: rgba{bg_checked};
-                color: rgba{fg_checked};
+                background-color: rgba{bg_item_checked};
+                color: rgba{fg_item_checked};
                 }}
                 QTableWidget::item:selected:hover {{
-                background-color: rgba{bg_checked_hover};
-                color: rgba{fg_checked_hover};
+                background-color: rgba{bg_item_checked_hover};
+                color: rgba{fg_item_checked_hover};
                 }}
         
                 /* BORDURES */
