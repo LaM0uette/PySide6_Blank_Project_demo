@@ -18,6 +18,7 @@ class StyleSheet:
             bg_header=Rgb().th2(),
             bg_header_hover=Rgb().th2(),
             bg_mois=Rgb().th2(),
+
             # Couleurs FG
             fg_gen=None,
             fg=p_base.FG,
