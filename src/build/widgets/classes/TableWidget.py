@@ -60,6 +60,9 @@ class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
+            header_h=False,
+            header_v=False,
+
             style=StyleSheet(
                 bg_corner=Rgb().th1(),
                 bg=Rgb().tr(),
@@ -92,6 +95,8 @@ class Demo_tr(Style):
         super().__init__(
             *wgs,
             height=P_dim().h3(),
+            header_h=False,
+            header_v=False,
 
             style=StyleSheet(
                 bg_corner=Rgb().th1(),
