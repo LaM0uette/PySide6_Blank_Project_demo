@@ -516,15 +516,15 @@ class StyleSheet:
                 border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
                 border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
                 }}
-                /*************
-                ** /QFrame  **
-                **************/
+/***********************
+**      /QFrame       **
+************************/
                 
                 
                 
-                /*************
-                **  QLabel  **
-                **************/
+/***********************
+**       QLabel       **
+************************/
                 .QLabel {{
                 background-color: rgba{bg};
                 color: rgba{fg};
