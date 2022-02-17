@@ -354,34 +354,6 @@ class StyleSheet:
                 border-bottom-right-radius: {radius_bottom_right}px;
                 border-bottom-left-radius: {radius_bottom_left}px;
                 }}
-
-                /* SCROLL */
-                QScrollBar {{
-                background-color: rgba{scroll_bg};
-                width: {scroll_width}px;
-                height: {scroll_height}px;
-                }}
-                QScrollBar::handle:horizontal {{
-                min-width: {scroll_handle_min_width}px;
-                }}
-                QScrollBar::handle:vertical {{
-                min-height: {scroll_handle_min_height}px;
-                }}
-                QScrollBar::handle {{
-                background-color: rgba{scroll_handle_fg};
-                }}
-                QScrollBar::handle:hover {{
-                background-color: rgba{scroll_handle_fg_hover};
-                }}
-                
-                QScrollBar::add-page, QScrollBar::sub-page {{
-                background-color: rgba{scroll_handle_bg};
-                border: none;
-                }}
-                QScrollBar::add-page:hover, QScrollBar::sub-page:hover {{
-                background-color: rgba{scroll_handle_bg_hover};
-                border: none;
-                }}
                 /****************
                 ** /QComboBox  **
                 *****************/
@@ -511,6 +483,51 @@ class StyleSheet:
                 /****************
                 ** /QDateEdit  **
                 *****************/
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                /*****************
+                **  QScrollBar  **
+                ******************/
+                QScrollBar {{
+                background-color: rgba{scroll_bg};
+                width: {scroll_width}px;
+                height: {scroll_height}px;
+                }}
+                QScrollBar::handle:horizontal {{
+                min-width: {scroll_handle_min_width}px;
+                }}
+                QScrollBar::handle:vertical {{
+                min-height: {scroll_handle_min_height}px;
+                }}
+                QScrollBar::handle {{
+                background-color: rgba{scroll_handle_fg};
+                }}
+                QScrollBar::handle:hover {{
+                background-color: rgba{scroll_handle_fg_hover};
+                }}
+                
+                QScrollBar::add-page, QScrollBar::sub-page {{
+                background-color: rgba{scroll_handle_bg};
+                border: none;
+                }}
+                QScrollBar::add-page:hover, QScrollBar::sub-page:hover {{
+                background-color: rgba{scroll_handle_bg_hover};
+                border: none;
+                }}
+                /*****************
+                ** /QScrollBar  **
+                ******************/
 """
 
 
