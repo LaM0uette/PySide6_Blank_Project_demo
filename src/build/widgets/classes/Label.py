@@ -34,26 +34,29 @@ class Base_th(Style):
             *wgs,
             font_size=font_size,
             style=StyleSheet(
-                img_margin_left=(p_base.WG_HEIGHT - (p_base.WG_HEIGHT * P_style().x_ico())) / 2,
             ).get()
     )
 class Base_tr(Style):
     def __init__(self, *wgs, font_size=p_base.FONT_SIZE):
         super().__init__(
             *wgs,
-            bg_gen=Rgb().tr(),
-            fg_gen=Rgb().th3(),
             font_size=font_size,
+            style=StyleSheet(
+                bg_gen=Rgb().tr(),
+                fg_gen=Rgb().th3(),
+            ).get()
     )
 
 class Titre(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            bg_gen=Rgb().tr(),
-            fg_gen=Rgb().th3(),
             font_size=P_font().h1(),
             align_horizontal=Align().h_center(),
+            style=StyleSheet(
+                bg_gen=Rgb().tr(),
+                fg_gen=Rgb().th3(),
+            ).get()
     )
 
 
@@ -61,10 +64,12 @@ class DemoCat(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            bg_gen=Rgb().tr(),
-            fg_gen=Rgb().th3(),
             font_size=P_font().h2(),
-            border_gen_bottom=P_style().bd(),
-            border_gen_rgb=Rgb().bn1(),
             align_horizontal=Align().h_center(),
+            style=StyleSheet(
+                bg_gen=Rgb().tr(),
+                fg_gen=Rgb().th3(),
+                border_gen_bottom=P_style().bd(),
+                border_gen_rgb=Rgb().bn1(),
+            ).get()
     )
