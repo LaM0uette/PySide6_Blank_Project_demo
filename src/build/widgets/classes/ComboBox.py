@@ -11,7 +11,7 @@ class Style:
             font=p_base.FONT,
             font_size=p_base.FONT_SIZE,
             edit=p_base.EDIT,
-            curseur=p_base.CUR,
+            curseur=P_cur().souris_main(),
             style=StyleSheet().get()
     ):
         for wg in wgs:
