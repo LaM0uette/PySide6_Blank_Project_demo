@@ -74,8 +74,8 @@ class Demo_th(Style):
 
             style=StyleSheet(
                 bg_corner=Rgb().th1(),
-                border_item_all=1,
-                border_item_rgb=Rgb().th2()
+                border_item_gen_all=1,
+                border_item_gen_rgb=Rgb().th2()
             ).get()
     )
 class Demo_tr(Style):
