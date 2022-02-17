@@ -15,6 +15,8 @@ class StyleSheet:
             bg_selection=p_base.BG_SELECTION,
             bg_item=p_base.BG_ITEM,
             bg_item_hover=p_base.BG_ITEM_HOVER,
+            bg_item_checked=p_base.BG_ITEM_CHECKED,
+            bg_item_checked_hover=p_base.BG_ITEM_CHECKED_HOVER,
             bg_header=Rgb().th2(),
             bg_header_hover=Rgb().th2(),
             bg_mois=Rgb().th2(),
@@ -28,6 +30,8 @@ class StyleSheet:
             fg_selection=p_base.FG_SELECTION,
             fg_item=p_base.FG_ITEM,
             fg_item_hover=p_base.FG_ITEM_HOVER,
+            fg_item_checked=p_base.FG_ITEM_CHECKED,
+            fg_item_checked_hover=p_base.FG_ITEM_CHECKED_HOVER,
             fg_header=Rgb().th1(),
             fg_header_hover=Rgb().bn1(),
             fg_mois=Rgb().th1(),
@@ -543,16 +547,16 @@ class StyleSheet:
                 color: rgba{fg_item};
                 }}
                 .QListWidget::item:selected {{
-                background-color: rgba{bg_checked};
-                color: rgba{fg_checked};
+                background-color: rgba{bg_item_checked};
+                color: rgba{fg_item_checked};
                 }}
                 .QListWidget::item:hover {{
                 background-color: rgba{bg_item_hover};
                 color: rgba{fg_item_hover};
                 }}
                 .QListWidget::item:selected:hover {{
-                background-color: rgba{bg_checked_hover};
-                color: rgba{fg_checked_hover};
+                background-color: rgba{bg_item_checked_hover};
+                color: rgba{fg_item_checked_hover};
                 }}
         
                 /* BORDURES */
