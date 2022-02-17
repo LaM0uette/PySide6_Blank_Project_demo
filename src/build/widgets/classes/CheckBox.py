@@ -5,22 +5,12 @@ from ....build.widgets import p_base
 class Style:
     def __init__(
             self,
-
-            # Widgets
             *wgs,
-
-            # Dimensions WG
             width=p_base.WG_WIDTH,
             height=p_base.WG_HEIGHT,
-
-            # Police
             font=p_base.FONT,
             font_size=p_base.FONT_SIZE,
-
-            # Curseur
             curseur=P_cur().souris_main(),
-
-            # Style
             style=StyleSheet().get()
     ):
         for wg in wgs:
