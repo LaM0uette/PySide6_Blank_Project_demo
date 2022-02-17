@@ -219,9 +219,9 @@ class StyleSheet:
 
 
         self.style = f"""
-                /*******************************
-                **  QCheckBox  | QRadioButton **
-                ********************************/
+/*****************************************
+**       QCheckBox  | QRadioButton      **
+******************************************/
                 QCheckBox, QRadioButton {{
                 background-color: rgba{bg};
                 color: rgba{fg};
@@ -287,15 +287,15 @@ class StyleSheet:
                 border-right: {border_right_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
                 border-left: {border_left_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
                 }}
-                /********************************
-                ** /QCheckBox | /QRadioButton  **
-                *********************************/
+/******************************************
+**      /QCheckBox | /QRadioButton       **
+*******************************************/
         
         
         
-                /****************
-                **  QComboBox  **
-                *****************/
+/**************************
+**       QComboBox       **
+***************************/
                 QComboBox, QFontComboBox {{
                 background-color: rgba{bg};
                 color: rgba{fg};
@@ -348,15 +348,15 @@ class StyleSheet:
                 border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
                 border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
                 }}
-                /****************
-                ** /QComboBox  **
-                *****************/
+/**************************
+**      /QComboBox       **
+***************************/
                 
                 
                 
-                /****************
-                **  QDateEdit  **
-                *****************/
+/**************************
+**       QDateEdit       **
+***************************/
                 QDateEdit {{
                 background-color: rgba{bg};
                 color: rgba{fg};
@@ -466,15 +466,15 @@ class StyleSheet:
                 border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
                 border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
                 }}
-                /****************
-                ** /QDateEdit  **
-                *****************/
+/**************************
+**      /QDateEdit       **
+***************************/
                 
                 
                 
-                /*************
-                **  QFrame  **
-                **************/
+/***********************
+**       QFrame       **
+************************/
                 .QFrame {{
                 background-color: rgba{bg};
                 }}
@@ -523,15 +523,15 @@ class StyleSheet:
                 border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
                 border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
                 }}
-                /*************
-                ** /QLabel  **
-                **************/
+/***********************
+**      /QLabel       **
+************************/
                 
                 
                 
-                /******************
-                **  QListWidget  **
-                *******************/
+/****************************
+**       QListWidget       **
+*****************************/
                 .QListWidget {{
                 background-color: rgba{bg};
                 color: rgb{fg};
@@ -568,9 +568,9 @@ class StyleSheet:
                 border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
                 border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
                 }}
-                /******************
-                ** /QListWidget  **
-                *******************/
+/****************************
+**      /QListWidget       **
+*****************************/
                 
                 
                 
@@ -579,22 +579,22 @@ class StyleSheet:
                 
                 
                 
-                /*************
-                **  RAYONS  **
-                **************/
+/***********************
+**       RAYONS       **
+************************/
                 QWidget {{
                 border-top-right-radius: {radius_top_right}px;
                 border-top-left-radius: {radius_top_left}px;
                 border-bottom-right-radius: {radius_bottom_right}px;
                 border-bottom-left-radius: {radius_bottom_left}px;
                 }}
-                /*************
-                **  RAYONS  **
-                **************/
+/***********************
+**       RAYONS       **
+************************/
                 
-                /*****************
-                **  QScrollBar  **
-                ******************/
+/***************************
+**       QScrollBar       **
+****************************/
                 QScrollBar {{
                 background-color: rgba{scroll_bg};
                 width: {scroll_width}px;
@@ -621,9 +621,9 @@ class StyleSheet:
                 background-color: rgba{scroll_handle_bg_hover};
                 border: none;
                 }}
-                /*****************
-                ** /QScrollBar  **
-                ******************/
+/***************************
+**      /QScrollBar       **
+****************************/
 """
 
 
