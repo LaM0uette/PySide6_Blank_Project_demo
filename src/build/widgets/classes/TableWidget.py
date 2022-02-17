@@ -75,14 +75,15 @@ class Demo_th(Style):
             height=P_dim().h5(),
 
             style=StyleSheet(
+                bg_corner=Rgb().th1(),
                 fg_checked=p_base.COULEURS.get("bn1"),
                 fg_checked_hover=p_base.COULEURS.get("bn2"),
                 border_hd_bottom=P_style().bd(),
                 border_hd_right=P_style().bd(),
-                border_hd_rgb=Rgb().th3(),
+                border_hd_rgb=Rgb().th1(),
                 border_hd_bottom_checked=P_style().bd(),
                 border_hd_right_checked=P_style().bd(),
-                border_hd_rgb_checked=Rgb().th3(),
+                border_hd_rgb_checked=Rgb().th1(),
             ).get()
     )
 class Demo_tr(Style):
