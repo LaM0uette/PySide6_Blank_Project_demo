@@ -209,9 +209,9 @@ class StyleSheet:
 
 
         self.style = f"""
-                /****************
-                **  QCheckBox  **
-                *****************/
+                /*******************************
+                **  QCheckBox  | QRadioButton **
+                ********************************/
                 QCheckBox, QRadioButton {{
                 background-color: rgba{bg};
                 color: rgba{fg};
@@ -277,9 +277,9 @@ class StyleSheet:
                 border-right: {border_right_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
                 border-left: {border_left_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
                 }}
-                /****************
-                ** /QCheckBox  **
-                *****************/
+                /********************************
+                ** /QCheckBox | /QRadioButton  **
+                *********************************/
         
         
         
