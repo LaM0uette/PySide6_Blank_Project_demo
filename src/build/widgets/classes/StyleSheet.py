@@ -341,7 +341,7 @@ class StyleSheet:
                 }}
 
                 /* SCROLL */
-                QComboBox QScrollBar, QFontComboBox QScrollBar {{
+                QScrollBar {{
                 background-color: rgba{scroll_bg};
                 width: {scroll_width}px;
                 height: {scroll_height}px;
