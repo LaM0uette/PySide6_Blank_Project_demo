@@ -22,6 +22,8 @@ class StyleSheet:
             bg_chunk_hover=p_base.BG_CHUNK_HOVER,
             bg_header=Rgb().th2(),
             bg_header_hover=Rgb().th2(),
+            bg_header_checked=Rgb().th1(),
+            bg_header_checked_hover=Rgb().th1(),
             bg_mois=Rgb().th2(),
             # Couleurs FG
             fg_gen=None,
@@ -37,6 +39,8 @@ class StyleSheet:
             fg_item_checked_hover=p_base.FG_ITEM_CHECKED_HOVER,
             fg_header=Rgb().th1(),
             fg_header_hover=Rgb().bn1(),
+            fg_header_checked=Rgb().bn1(),
+            fg_header_checked_hover=Rgb().bn2(),
             fg_mois=Rgb().th1(),
             # couleurs autres
             gridline=p_base.GRIDLINE,
@@ -786,8 +790,8 @@ class StyleSheet:
                 border-left: {border_hd_left}px {border_hd_style} rgba{border_hd_rgb};
                 }}
                 QHeaderView::section:checked {{
-                background-color: rgba{bg_header_hover};
-                color: rgba{fg_header_hover};
+                background-color: rgba{bg_header_checked};
+                color: rgba{fg_header_checked};
                 border-top: {border_hd_top_checked}px {border_hd_style_checked} rgba{border_hd_rgb_checked};
                 border-bottom: {border_hd_bottom_checked}px {border_hd_style_checked} rgba{border_hd_rgb_checked};
                 border-right: {border_hd_right_checked}px {border_hd_style_checked} rgba{border_hd_rgb_checked};
