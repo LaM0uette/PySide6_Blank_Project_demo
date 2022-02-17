@@ -114,6 +114,58 @@ class StyleSheet:
             border_rgb_checked_hover=p_base.WG_BORDER_RGB,
             border_top_checked_hover=p_base.WG_BORDER_WIDTH, border_bottom_checked_hover=p_base.WG_BORDER_WIDTH, border_right_checked_hover=p_base.WG_BORDER_WIDTH, border_left_checked_hover=p_base.WG_BORDER_WIDTH,
 
+            # Bordures HD GEN
+            border_hd_gen_all=None,
+            border_hd_gen_style=None,
+            border_hd_gen_rgb=None,
+            border_hd_gen_top=None, border_hd_gen_bottom=None, border_hd_gen_right=None, border_hd_gen_left=None,
+            # Bordures HD
+            border_hd_all=None,
+            border_hd_style=p_base.WG_BORDER_STYLE,
+            border_hd_rgb=p_base.WG_BORDER_RGB,
+            border_hd_top=p_base.WG_BORDER_WIDTH, border_hd_bottom=p_base.WG_BORDER_WIDTH, border_hd_right=p_base.WG_BORDER_WIDTH, border_hd_left=p_base.WG_BORDER_WIDTH,
+            # Bordures HD hover
+            border_hd_all_hover=None,
+            border_hd_style_hover=p_base.WG_BORDER_STYLE,
+            border_hd_rgb_hover=p_base.WG_BORDER_RGB,
+            border_hd_top_hover=p_base.WG_BORDER_WIDTH, border_hd_bottom_hover=p_base.WG_BORDER_WIDTH, border_hd_right_hover=p_base.WG_BORDER_WIDTH, border_hd_left_hover=p_base.WG_BORDER_WIDTH,
+            # Bordures HD checked
+            border_hd_all_checked=None,
+            border_hd_style_checked=p_base.WG_BORDER_STYLE,
+            border_hd_rgb_checked=p_base.WG_BORDER_RGB,
+            border_hd_top_checked=p_base.WG_BORDER_WIDTH, border_hd_bottom_checked=p_base.WG_BORDER_WIDTH, border_hd_right_checked=p_base.WG_BORDER_WIDTH, border_hd_left_checked=p_base.WG_BORDER_WIDTH,
+            # Bordures HD checked hover
+            border_hd_all_checked_hover=None,
+            border_hd_style_checked_hover=p_base.WG_BORDER_STYLE,
+            border_hd_rgb_checked_hover=p_base.WG_BORDER_RGB,
+            border_hd_top_checked_hover=p_base.WG_BORDER_WIDTH, border_hd_bottom_checked_hover=p_base.WG_BORDER_WIDTH, border_hd_right_checked_hover=p_base.WG_BORDER_WIDTH, border_hd_left_checked_hover=p_base.WG_BORDER_WIDTH,
+
+            # Bordures item GEN
+            border_item_gen_all=None,
+            border_item_gen_style=None,
+            border_item_gen_rgb=None,
+            border_item_gen_top=None, border_item_gen_bottom=None, border_item_gen_right=None, border_item_gen_left=None,
+            # Bordures item
+            border_item_all=None,
+            border_item_style=p_base.WG_BORDER_STYLE,
+            border_item_rgb=p_base.WG_BORDER_RGB,
+            border_item_top=p_base.WG_BORDER_WIDTH, border_item_bottom=p_base.WG_BORDER_WIDTH, border_item_right=p_base.WG_BORDER_WIDTH, border_item_left=p_base.WG_BORDER_WIDTH,
+            # Bordures item hover
+            border_item_all_hover=None,
+            border_item_style_hover=p_base.WG_BORDER_STYLE,
+            border_item_rgb_hover=p_base.WG_BORDER_RGB,
+            border_item_top_hover=p_base.WG_BORDER_WIDTH, border_item_bottom_hover=p_base.WG_BORDER_WIDTH, border_item_right_hover=p_base.WG_BORDER_WIDTH, border_item_left_hover=p_base.WG_BORDER_WIDTH,
+            # Bordures item checked
+            border_item_all_checked=None,
+            border_item_style_checked=p_base.WG_BORDER_STYLE,
+            border_item_rgb_checked=p_base.WG_BORDER_RGB,
+            border_item_top_checked=p_base.WG_BORDER_WIDTH, border_item_bottom_checked=p_base.WG_BORDER_WIDTH, border_item_right_checked=p_base.WG_BORDER_WIDTH, border_item_left_checked=p_base.WG_BORDER_WIDTH,
+            # Bordures item checked hover
+            border_item_all_checked_hover=None,
+            border_item_style_checked_hover=p_base.WG_BORDER_STYLE,
+            border_item_rgb_checked_hover=p_base.WG_BORDER_RGB,
+            border_item_top_checked_hover=p_base.WG_BORDER_WIDTH, border_item_bottom_checked_hover=p_base.WG_BORDER_WIDTH, border_item_right_checked_hover=p_base.WG_BORDER_WIDTH, border_item_left_checked_hover=p_base.WG_BORDER_WIDTH,
+
             # Bordures jours
             border_day_size=P_style().bd(),
             border_day_style=p_base.WG_BORDER_STYLE,
