@@ -32,6 +32,8 @@ class Base_th(Style):
         super().__init__(
             *wgs,
             style=StyleSheet(
+                fg_checked=p_base.COULEURS.get("bn1"),
+                fg_checked_hover=p_base.COULEURS.get("bn2"),
             ).get()
         )
 class Base_tr(Style):
