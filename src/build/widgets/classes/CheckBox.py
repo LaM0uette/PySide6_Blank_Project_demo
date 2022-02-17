@@ -37,7 +37,6 @@ class Base_th(Style):
         super().__init__(
             *wgs,
             style=StyleSheet(
-                radius_all=5
             ).get()
         )
 class Base_tr(Style):
