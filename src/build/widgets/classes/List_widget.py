@@ -24,7 +24,7 @@ class Style:
             wg.setVerticalScrollBarPolicy(scroll_v)
 
             wg.setCursor(Fct(cur=curseur).CUR())
-            wg.view().setCursor(Fct(cur=P_cur().souris_main()).CUR())
+            wg.viewport().setCursor(Fct(cur=P_cur().souris_main()).CUR())
 
 
 class Base_th(Style):
