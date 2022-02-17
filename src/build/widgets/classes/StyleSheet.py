@@ -12,12 +12,18 @@ class StyleSheet:
             bg_hover=p_base.BG_HOVER,
             bg_checked=p_base.BG_CHECKED,
             bg_checked_hover=p_base.BG_CHECKED_HOVER,
+            bg_selection=p_base.BG_SELECTION,
+            bg_item=p_base.BG_ITEM,
+            bg_item_hover=p_base.BG_ITEM_HOVER,
             # Couleurs FG
             fg_gen=None,
             fg=p_base.FG,
             fg_hover=p_base.FG_HOVER,
             fg_checked=p_base.FG_CHECKED,
             fg_checked_hover=p_base.FG_CHECKED_HOVER,
+            fg_selection=p_base.FG_SELECTION,
+            fg_item=p_base.FG_ITEM,
+            fg_item_hover=p_base.FG_ITEM_HOVER,
 
             # Dimensions WG
             width=p_base.WG_WIDTH,
@@ -33,11 +39,15 @@ class StyleSheet:
             img_uncheck_hover=p_base.IMG_UNCHECK_HOVER,
             img_check=p_base.IMG_CHECK,
             img_check_hover=p_base.IMG_CHECK_HOVER,
+            img_unroll=p_base.IMG_UNROLL,
+            img_unroll_hover=p_base.IMG_UNROLL_HOVER,
             # Images RGB
             img_uncheck_rgb=p_base.IMG_UNCHECK_RGB,
             img_uncheck_hover_rgb=p_base.IMG_UNCHECK_HOVER_RGB,
             img_check_rgb=p_base.IMG_CHECK_RGB,
             img_check_hover_rgb=p_base.IMG_CHECK_HOVER_RGB,
+            img_unroll_rgb=p_base.IMG_UNROLL_RGB,
+            img_unroll_hover_rgb=p_base.IMG_UNROLL_HOVER_RGB,
             # Images DIM
             img_width=p_base.IMG_WIDTH,
             img_height=p_base.IMG_HEIGHT,
@@ -79,6 +89,17 @@ class StyleSheet:
             radius_top_left=p_base.WG_RADIUS,
             radius_bottom_right=p_base.WG_RADIUS,
             radius_bottom_left=p_base.WG_RADIUS,
+
+            # Scroll
+            scroll_bg=p_base.SCROLL_BG,
+            scroll_width=p_base.SCROLL_WIDTH,
+            scroll_height=p_base.SCROLL_HEIGHT,
+            scroll_handle_bg=p_base.SCROLL_HANDLE_BG,
+            scroll_handle_bg_hover=p_base.SCROLL_HANDLE_BG_HOVER,
+            scroll_handle_fg=p_base.SCROLL_HANDLE_FG,
+            scroll_handle_fg_hover=p_base.SCROLL_HANDLE_FG_HOVER,
+            scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
+            scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
     ):
         # BG
         if not bg_gen is None:
@@ -173,85 +194,182 @@ class StyleSheet:
 
 
         self.style = f"""
-        /***************
-        **  CHECKBOX  **
-        ****************/
-        QCheckBox {{
-        background-color: rgba{bg};
-        color: rgba{fg};
-        spacing: {spacing}px;
-        }}
-        QCheckBox:hover {{
-        background-color: rgba{bg_hover};
-        color: rgba{fg_hover};
-        }}
-        QCheckBox:checked {{
-        background-color: rgba{bg_checked};
-        color: rgba{fg_checked};
-        }}
-        QCheckBox:checked:hover {{
-        background-color: rgba{bg_checked_hover};
-        color: rgba{fg_checked_hover};
-        }}
+                /****************
+                **  QCheckBox  **
+                *****************/
+                QCheckBox {{
+                background-color: rgba{bg};
+                color: rgba{fg};
+                spacing: {spacing}px;
+                }}
+                QCheckBox:hover {{
+                background-color: rgba{bg_hover};
+                color: rgba{fg_hover};
+                }}
+                QCheckBox:checked {{
+                background-color: rgba{bg_checked};
+                color: rgba{fg_checked};
+                }}
+                QCheckBox:checked:hover {{
+                background-color: rgba{bg_checked_hover};
+                color: rgba{fg_checked_hover};
+                }}
 
-        /* IMG */
-        QCheckBox::indicator {{
-        margin-top: {img_margin_top}px;
-        margin-bottom: {img_margin_bottom}px;
-        margin-right: {img_margin_right}px;
-        margin-left: {img_margin_left}px;
-        width: {img_width}px;
-        height: {img_height}px;
-        }}
-        QCheckBox::indicator:unchecked {{
-        image: url({f"{img_uncheck}{img_uncheck_rgb}.svg"});
-        }}
-        QCheckBox::indicator:hover {{
-        image: url({f"{img_uncheck_hover}{img_uncheck_hover_rgb}.svg"});
-        }}
-        QCheckBox::indicator:checked {{
-        image: url({f"{img_check}{img_check_rgb}.svg"});
-        }}
-        QCheckBox::indicator:checked:hover {{
-        image: url({f"{img_check_hover}{img_check_hover_rgb}.svg"});
-        }}
+                /* IMG */
+                QCheckBox::indicator {{
+                margin-top: {img_margin_top}px;
+                margin-bottom: {img_margin_bottom}px;
+                margin-right: {img_margin_right}px;
+                margin-left: {img_margin_left}px;
+                width: {img_width}px;
+                height: {img_height}px;
+                }}
+                QCheckBox::indicator:unchecked {{
+                image: url({f"{img_uncheck}{img_uncheck_rgb}.svg"});
+                }}
+                QCheckBox::indicator:hover {{
+                image: url({f"{img_uncheck_hover}{img_uncheck_hover_rgb}.svg"});
+                }}
+                QCheckBox::indicator:checked {{
+                image: url({f"{img_check}{img_check_rgb}.svg"});
+                }}
+                QCheckBox::indicator:checked:hover {{
+                image: url({f"{img_check_hover}{img_check_hover_rgb}.svg"});
+                }}
 
-        /* BORDURES */
-        .QCheckBox {{
-        border-top: {border_top}px {border_style} rgba{border_rgb};
-        border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
-        border-right: {border_right}px {border_style} rgba{border_rgb};
-        border-left: {border_left}px {border_style} rgba{border_rgb};
-        }}
-        .QCheckBox:hover {{
-        border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
-        border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
-        border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
-        border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
-        }}
-        .QCheckBox:checked {{
-        border-top: {border_top_checked}px {border_style_checked} rgba{border_rgb_checked};
-        border-bottom: {border_bottom_checked}px {border_style_checked} rgba{border_rgb_checked};
-        border-right: {border_right_checked}px {border_style_checked} rgba{border_rgb_checked};
-        border-left: {border_left_checked}px {border_style_checked} rgba{border_rgb_checked};
-        }}
-        .QCheckBox:checked:hover {{
-        border-top: {border_top_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
-        border-bottom: {border_bottom_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
-        border-right: {border_right_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
-        border-left: {border_left_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
-        }}
+                /* BORDURES */
+                .QCheckBox {{
+                border-top: {border_top}px {border_style} rgba{border_rgb};
+                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
+                border-right: {border_right}px {border_style} rgba{border_rgb};
+                border-left: {border_left}px {border_style} rgba{border_rgb};
+                }}
+                .QCheckBox:hover {{
+                border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
+                }}
+                .QCheckBox:checked {{
+                border-top: {border_top_checked}px {border_style_checked} rgba{border_rgb_checked};
+                border-bottom: {border_bottom_checked}px {border_style_checked} rgba{border_rgb_checked};
+                border-right: {border_right_checked}px {border_style_checked} rgba{border_rgb_checked};
+                border-left: {border_left_checked}px {border_style_checked} rgba{border_rgb_checked};
+                }}
+                .QCheckBox:checked:hover {{
+                border-top: {border_top_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
+                border-bottom: {border_bottom_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
+                border-right: {border_right_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
+                border-left: {border_left_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
+                }}
 
-        /* RAYONS */
-        .QCheckBox {{
-        border-top-right-radius: {radius_top_right}px;
-        border-top-left-radius: {radius_top_left}px;
-        border-bottom-right-radius: {radius_bottom_right}px;
-        border-bottom-left-radius: {radius_bottom_left}px;
-        }}
-        /***************
-        ** /CHECKBOX  **
-        ****************/
+                /* RAYONS */
+                .QCheckBox {{
+                border-top-right-radius: {radius_top_right}px;
+                border-top-left-radius: {radius_top_left}px;
+                border-bottom-right-radius: {radius_bottom_right}px;
+                border-bottom-left-radius: {radius_bottom_left}px;
+                }}
+                /****************
+                ** /QCheckBox  **
+                *****************/
+        
+        
+        
+                /****************
+                **  QComboBox  **
+                *****************/
+                QComboBox, QFontComboBox {{
+                background-color: rgba{bg};
+                color: rgba{fg};
+                selection-background-color: rgba{bg_selection};
+                selection-color: rgba{fg_selection};
+                }}
+                QComboBox:hover, QFontComboBox:hover {{
+                background-color: rgba{bg_hover};
+                color: rgba{fg_hover};
+                }}
+
+                /* BOUTON DE DEROULEMENT */
+                QComboBox::drop-down, QFontComboBox::drop-down {{
+                width: {height}px;
+                border: none;
+                }}
+
+                /* IMAGE DU BOUTON DE DEROULEMENT */
+                QComboBox::down-arrow, QFontComboBox::down-arrow {{
+                image: url({f"{img_unroll}{img_rgb}.svg"});
+                width: {img_width}px;
+                height: {img_height}px;
+                }}
+                QComboBox::down-arrow:hover, QFontComboBox::down-arrow:hover {{
+                image: url({f"{img_unroll_hover}{img_hover_rgb}.svg"});
+                width: {img_width}px;
+                height: {img_height}px;
+                }}
+
+                /* ELEMENTS DEROULEMENT */
+                QComboBox QAbstractItemView::item, QFontComboBox QAbstractItemView::item {{
+                background-color: rgba{bg_item};
+                color: rgba{fg_item};
+                }}
+                QComboBox QAbstractItemView::item:hover, QFontComboBox QAbstractItemView::item:hover {{
+                background-color: rgba{bg_item_hover};
+                color: rgba{fg_item_hover};
+                }}
+
+                /* BORDURES */
+                .QComboBox, .QFontComboBox {{
+                border-top: {border_top}px {border_style} rgba{border_rgb};
+                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
+                border-right: {border_right}px {border_style} rgba{border_rgb};
+                border-left: {border_left}px {border_style} rgba{border_rgb};
+                }}
+                .QComboBox:hover, .QFontComboBox:hover {{
+                border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
+                }}
+                
+                /* RAYONS */
+                .QComboBox, .QFontComboBox {{
+                border-top-right-radius: {radius_top_right}px;
+                border-top-left-radius: {radius_top_left}px;
+                border-bottom-right-radius: {radius_bottom_right}px;
+                border-bottom-left-radius: {radius_bottom_left}px;
+                }}
+
+                /* SCROLL */
+                QComboBox QScrollBar, QFontComboBox QScrollBar {{
+                background-color: rgba{scroll_bg};
+                width: {scroll_width}px;
+                height: {scroll_height}px;
+                }}
+                QComboBox::handle:horizontal, QFontComboBox::handle:horizontal {{
+                min-width: {scroll_handle_min_width}px;
+                }}
+                QComboBox::handle:vertical, QFontComboBox::handle:vertical {{
+                min-height: {scroll_handle_min_height}px;
+                }}
+                QComboBox QScrollBar::handle, QFontComboBox QScrollBar::handle {{
+                background-color: rgba{scroll_handle_fg};
+                }}
+                QComboBox QScrollBar::handle:hover, QFontComboBox QScrollBar::handle:hover {{
+                background-color: rgba{scroll_handle_fg_hover};
+                }}
+                
+                QComboBox QScrollBar::add-page, QComboBox QScrollBar::sub-page, QFontComboBox QScrollBar::add-page, QFontComboBox QScrollBar::sub-page {{
+                background-color: rgba{scroll_handle_bg};
+                border: none;
+                }}
+                QComboBox QScrollBar::add-page:hover, QComboBox QScrollBar::sub-page:hover, QFontComboBox QScrollBar::add-page:hover, QFontComboBox QScrollBar::sub-page:hover {{
+                background-color: rgba{scroll_handle_bg_hover};
+                border: none;
+                }}
+                /****************
+                ** /QComboBox  **
+                *****************/
 """
 
 
