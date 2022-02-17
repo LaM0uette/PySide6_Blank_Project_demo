@@ -10,7 +10,7 @@ class Style:
                  font=p_base.FONT,
                  font_size=p_base.FONT_SIZE,
                  text_visible=p_base.TEXT_VISIBLE,
-                 curseur=P_cur().main(),
+                 curseur=P_cur().souris(),
                  style=StyleSheet().get()
     ):
         for wg in wgs:

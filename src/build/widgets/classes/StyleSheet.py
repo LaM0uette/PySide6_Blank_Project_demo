@@ -603,7 +603,7 @@ class StyleSheet:
 ******************************/      
                 QProgressBar {{
                 background-color: rgba{bg};
-                color: rgb{fg};
+                color: rgba{fg};
                 }}
         
                 /* PROGRESS */

@@ -21,7 +21,7 @@ BG_ITEM_HOVER = Rgb().th3()
 BG_ITEM_CHECKED = Rgb().th1()
 BG_ITEM_CHECKED_HOVER = Rgb().th1()
 # BG Autres
-BG_CHUNK = Rgb().th3()
+BG_CHUNK = Rgb().th2()
 BG_CHUNK_HOVER = Rgb().bn1()
 
 
