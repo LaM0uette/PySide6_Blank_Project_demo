@@ -736,6 +736,16 @@ class StyleSheet:
                 border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
                 border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
                 }}
+                
+                QHeaderView::section {{
+                background-color: rgba{bg};
+                color: rgb{fg};
+                border-style: none;
+                }}
+                QHeaderView::section:checked {{
+                background-color: rgba{bg_checked};
+                color: rgb{fg_checked};
+                }}
 /*****************************
 **       QTableWidget       **
 ******************************/

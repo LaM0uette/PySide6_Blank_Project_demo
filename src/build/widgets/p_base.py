@@ -173,7 +173,7 @@ HEADER_V = True
 ####################
 FONT = config.font
 FONT_SIZE = P_font().h4()
-HD_FONT_SIZE = P_font().h3()
+FONT_SIZE_HD = P_font().h3()
 
 
 ########################
