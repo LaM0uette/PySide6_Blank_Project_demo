@@ -189,256 +189,258 @@ class StyleSheet:
             scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
             scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
     ):
-        # BG / FG
-        if not bg_gen is None:
-            bg = bg_gen
-            bg_hover = bg_gen
-            bg_checked = bg_gen
-            bg_checked_hover = bg_gen
-        if not fg_gen is None:
-            fg = fg_gen
-            fg_hover = fg_gen
-            fg_checked = fg_gen
-            fg_checked_hover = fg_gen
-        if not bg_item_gen is None:
-            bg_item = bg_item_gen
-            bg_item_hover = bg_item_gen
-            bg_item_checked = bg_item_gen
-            bg_item_checked_hover = bg_item_gen
-        if not fg_item_gen is None:
-            fg_item = fg_item_gen
-            fg_item_hover = fg_item_gen
-            fg_item_checked = fg_item_gen
-            fg_item_checked_hover = fg_item_gen
+        # Style all generation
+        try:
+            # BG / FG
+            if not bg_gen is None:
+                bg = bg_gen
+                bg_hover = bg_gen
+                bg_checked = bg_gen
+                bg_checked_hover = bg_gen
+            if not fg_gen is None:
+                fg = fg_gen
+                fg_hover = fg_gen
+                fg_checked = fg_gen
+                fg_checked_hover = fg_gen
+            if not bg_item_gen is None:
+                bg_item = bg_item_gen
+                bg_item_hover = bg_item_gen
+                bg_item_checked = bg_item_gen
+                bg_item_checked_hover = bg_item_gen
+            if not fg_item_gen is None:
+                fg_item = fg_item_gen
+                fg_item_hover = fg_item_gen
+                fg_item_checked = fg_item_gen
+                fg_item_checked_hover = fg_item_gen
 
-        # IMG
-        if not img_all is None:
-            img = img_all
-            img_hover = img_all
-        if not img_all_rgb is None:
-            img_rgb = img_all_rgb
-            img_hover_rgb = img_all_rgb
+            # IMG
+            if not img_all is None:
+                img = img_all
+                img_hover = img_all
+            if not img_all_rgb is None:
+                img_rgb = img_all_rgb
+                img_hover_rgb = img_all_rgb
 
-        # Bordure GEN
-        if not border_gen_all is None:
-            border_top = border_gen_all
-            border_bottom = border_gen_all
-            border_right = border_gen_all
-            border_left = border_gen_all
-            border_top_hover = border_gen_all
-            border_bottom_hover = border_gen_all
-            border_right_hover = border_gen_all
-            border_left_hover = border_gen_all
-            border_top_checked = border_gen_all
-            border_bottom_checked = border_gen_all
-            border_right_checked = border_gen_all
-            border_left_checked = border_gen_all
-            border_top_checked_hover = border_gen_all
-            border_bottom_checked_hover = border_gen_all
-            border_right_checked_hover = border_gen_all
-            border_left_checked_hover = border_gen_all
-        elif border_gen_all is None:
-            if not border_all is None:
-                border_top = border_all
-                border_bottom = border_all
-                border_right = border_all
-                border_left = border_all
-            if not border_all_hover is None:
-                border_top_hover = border_all_hover
-                border_bottom_hover = border_all_hover
-                border_right_hover = border_all_hover
-                border_left_hover = border_all_hover
-            if not border_all_checked is None:
-                border_top_checked = border_all_checked
-                border_bottom_checked = border_all_checked
-                border_right_checked = border_all_checked
-                border_left_checked = border_all_checked
-            if not border_all_checked_hover is None:
-                border_top_checked_hover = border_all_checked_hover
-                border_bottom_checked_hover = border_all_checked_hover
-                border_right_checked_hover = border_all_checked_hover
-                border_left_checked_hover = border_all_checked_hover
+            # Bordure GEN
+            if not border_gen_all is None:
+                border_top = border_gen_all
+                border_bottom = border_gen_all
+                border_right = border_gen_all
+                border_left = border_gen_all
+                border_top_hover = border_gen_all
+                border_bottom_hover = border_gen_all
+                border_right_hover = border_gen_all
+                border_left_hover = border_gen_all
+                border_top_checked = border_gen_all
+                border_bottom_checked = border_gen_all
+                border_right_checked = border_gen_all
+                border_left_checked = border_gen_all
+                border_top_checked_hover = border_gen_all
+                border_bottom_checked_hover = border_gen_all
+                border_right_checked_hover = border_gen_all
+                border_left_checked_hover = border_gen_all
+            elif border_gen_all is None:
+                if not border_all is None:
+                    border_top = border_all
+                    border_bottom = border_all
+                    border_right = border_all
+                    border_left = border_all
+                if not border_all_hover is None:
+                    border_top_hover = border_all_hover
+                    border_bottom_hover = border_all_hover
+                    border_right_hover = border_all_hover
+                    border_left_hover = border_all_hover
+                if not border_all_checked is None:
+                    border_top_checked = border_all_checked
+                    border_bottom_checked = border_all_checked
+                    border_right_checked = border_all_checked
+                    border_left_checked = border_all_checked
+                if not border_all_checked_hover is None:
+                    border_top_checked_hover = border_all_checked_hover
+                    border_bottom_checked_hover = border_all_checked_hover
+                    border_right_checked_hover = border_all_checked_hover
+                    border_left_checked_hover = border_all_checked_hover
 
-            if not border_gen_top is None:
-                border_top = border_gen_top
-                border_top_hover = border_gen_top
-                border_top_checked = border_gen_top
-                border_top_checked_hover = border_gen_top
-            if not border_gen_bottom is None:
-                border_bottom = border_gen_bottom
-                border_bottom_hover = border_gen_bottom
-                border_bottom_checked = border_gen_bottom
-                border_bottom_checked_hover = border_gen_bottom
-            if not border_gen_right is None:
-                border_right = border_gen_right
-                border_right_hover = border_gen_right
-                border_right_checked = border_gen_right
-                border_right_checked_hover = border_gen_right
-            if not border_gen_left is None:
-                border_left = border_gen_left
-                border_left_hover = border_gen_left
-                border_left_checked = border_gen_left
-                border_left_checked_hover = border_gen_left
-        if not border_gen_style is None:
-            border_style = border_gen_style
-            border_style_hover = border_gen_style
-            border_style_checked = border_gen_style
-            border_style_checked_hover = border_gen_style
-        if not border_gen_rgb is None:
-            border_rgb = border_gen_rgb
-            border_rgb_hover = border_gen_rgb
-            border_rgb_checked = border_gen_rgb
-            border_rgb_checked_hover = border_gen_rgb
+                if not border_gen_top is None:
+                    border_top = border_gen_top
+                    border_top_hover = border_gen_top
+                    border_top_checked = border_gen_top
+                    border_top_checked_hover = border_gen_top
+                if not border_gen_bottom is None:
+                    border_bottom = border_gen_bottom
+                    border_bottom_hover = border_gen_bottom
+                    border_bottom_checked = border_gen_bottom
+                    border_bottom_checked_hover = border_gen_bottom
+                if not border_gen_right is None:
+                    border_right = border_gen_right
+                    border_right_hover = border_gen_right
+                    border_right_checked = border_gen_right
+                    border_right_checked_hover = border_gen_right
+                if not border_gen_left is None:
+                    border_left = border_gen_left
+                    border_left_hover = border_gen_left
+                    border_left_checked = border_gen_left
+                    border_left_checked_hover = border_gen_left
+            if not border_gen_style is None:
+                border_style = border_gen_style
+                border_style_hover = border_gen_style
+                border_style_checked = border_gen_style
+                border_style_checked_hover = border_gen_style
+            if not border_gen_rgb is None:
+                border_rgb = border_gen_rgb
+                border_rgb_hover = border_gen_rgb
+                border_rgb_checked = border_gen_rgb
+                border_rgb_checked_hover = border_gen_rgb
 
-        # Bordure hd GEN
-        if not border_hd_gen_all is None:
-            border_hd_top = border_hd_gen_all
-            border_hd_bottom = border_hd_gen_all
-            border_hd_right = border_hd_gen_all
-            border_hd_left = border_hd_gen_all
-            border_hd_top_hover = border_hd_gen_all
-            border_hd_bottom_hover = border_hd_gen_all
-            border_hd_right_hover = border_hd_gen_all
-            border_hd_left_hover = border_hd_gen_all
-            border_hd_top_checked = border_hd_gen_all
-            border_hd_bottom_checked = border_hd_gen_all
-            border_hd_right_checked = border_hd_gen_all
-            border_hd_left_checked = border_hd_gen_all
-            border_hd_top_checked_hover = border_hd_gen_all
-            border_hd_bottom_checked_hover = border_hd_gen_all
-            border_hd_right_checked_hover = border_hd_gen_all
-            border_hd_left_checked_hover = border_hd_gen_all
-        elif border_hd_gen_all is None:
-            if not border_hd_all is None:
-                border_hd_top = border_hd_all
-                border_hd_bottom = border_hd_all
-                border_hd_right = border_hd_all
-                border_hd_left = border_hd_all
-            if not border_hd_all_hover is None:
-                border_hd_top_hover = border_hd_all_hover
-                border_hd_bottom_hover = border_hd_all_hover
-                border_hd_right_hover = border_hd_all_hover
-                border_hd_left_hover = border_hd_all_hover
-            if not border_hd_all_checked is None:
-                border_hd_top_checked = border_hd_all_checked
-                border_hd_bottom_checked = border_hd_all_checked
-                border_hd_right_checked = border_hd_all_checked
-                border_hd_left_checked = border_hd_all_checked
-            if not border_hd_all_checked_hover is None:
-                border_hd_top_checked_hover = border_hd_all_checked_hover
-                border_hd_bottom_checked_hover = border_hd_all_checked_hover
-                border_hd_right_checked_hover = border_hd_all_checked_hover
-                border_hd_left_checked_hover = border_hd_all_checked_hover
+            # Bordure hd GEN
+            if not border_hd_gen_all is None:
+                border_hd_top = border_hd_gen_all
+                border_hd_bottom = border_hd_gen_all
+                border_hd_right = border_hd_gen_all
+                border_hd_left = border_hd_gen_all
+                border_hd_top_hover = border_hd_gen_all
+                border_hd_bottom_hover = border_hd_gen_all
+                border_hd_right_hover = border_hd_gen_all
+                border_hd_left_hover = border_hd_gen_all
+                border_hd_top_checked = border_hd_gen_all
+                border_hd_bottom_checked = border_hd_gen_all
+                border_hd_right_checked = border_hd_gen_all
+                border_hd_left_checked = border_hd_gen_all
+                border_hd_top_checked_hover = border_hd_gen_all
+                border_hd_bottom_checked_hover = border_hd_gen_all
+                border_hd_right_checked_hover = border_hd_gen_all
+                border_hd_left_checked_hover = border_hd_gen_all
+            elif border_hd_gen_all is None:
+                if not border_hd_all is None:
+                    border_hd_top = border_hd_all
+                    border_hd_bottom = border_hd_all
+                    border_hd_right = border_hd_all
+                    border_hd_left = border_hd_all
+                if not border_hd_all_hover is None:
+                    border_hd_top_hover = border_hd_all_hover
+                    border_hd_bottom_hover = border_hd_all_hover
+                    border_hd_right_hover = border_hd_all_hover
+                    border_hd_left_hover = border_hd_all_hover
+                if not border_hd_all_checked is None:
+                    border_hd_top_checked = border_hd_all_checked
+                    border_hd_bottom_checked = border_hd_all_checked
+                    border_hd_right_checked = border_hd_all_checked
+                    border_hd_left_checked = border_hd_all_checked
+                if not border_hd_all_checked_hover is None:
+                    border_hd_top_checked_hover = border_hd_all_checked_hover
+                    border_hd_bottom_checked_hover = border_hd_all_checked_hover
+                    border_hd_right_checked_hover = border_hd_all_checked_hover
+                    border_hd_left_checked_hover = border_hd_all_checked_hover
 
-            if not border_hd_gen_top is None:
-                border_hd_top = border_hd_gen_top
-                border_hd_top_hover = border_hd_gen_top
-                border_hd_top_checked = border_hd_gen_top
-                border_hd_top_checked_hover = border_hd_gen_top
-            if not border_hd_gen_bottom is None:
-                border_hd_bottom = border_hd_gen_bottom
-                border_hd_bottom_hover = border_hd_gen_bottom
-                border_hd_bottom_checked = border_hd_gen_bottom
-                border_hd_bottom_checked_hover = border_hd_gen_bottom
-            if not border_hd_gen_right is None:
-                border_hd_right = border_hd_gen_right
-                border_hd_right_hover = border_hd_gen_right
-                border_hd_right_checked = border_hd_gen_right
-                border_hd_right_checked_hover = border_hd_gen_right
-            if not border_hd_gen_left is None:
-                border_hd_left = border_hd_gen_left
-                border_hd_left_hover = border_hd_gen_left
-                border_hd_left_checked = border_hd_gen_left
-                border_hd_left_checked_hover = border_hd_gen_left
-        if not border_hd_gen_style is None:
-            border_hd_style = border_hd_gen_style
-            border_hd_style_hover = border_hd_gen_style
-            border_hd_style_checked = border_hd_gen_style
-            border_hd_style_checked_hover = border_hd_gen_style
-        if not border_hd_gen_rgb is None:
-            border_hd_rgb = border_hd_gen_rgb
-            border_hd_rgb_hover = border_hd_gen_rgb
-            border_hd_rgb_checked = border_hd_gen_rgb
-            border_hd_rgb_checked_hover = border_hd_gen_rgb
+                if not border_hd_gen_top is None:
+                    border_hd_top = border_hd_gen_top
+                    border_hd_top_hover = border_hd_gen_top
+                    border_hd_top_checked = border_hd_gen_top
+                    border_hd_top_checked_hover = border_hd_gen_top
+                if not border_hd_gen_bottom is None:
+                    border_hd_bottom = border_hd_gen_bottom
+                    border_hd_bottom_hover = border_hd_gen_bottom
+                    border_hd_bottom_checked = border_hd_gen_bottom
+                    border_hd_bottom_checked_hover = border_hd_gen_bottom
+                if not border_hd_gen_right is None:
+                    border_hd_right = border_hd_gen_right
+                    border_hd_right_hover = border_hd_gen_right
+                    border_hd_right_checked = border_hd_gen_right
+                    border_hd_right_checked_hover = border_hd_gen_right
+                if not border_hd_gen_left is None:
+                    border_hd_left = border_hd_gen_left
+                    border_hd_left_hover = border_hd_gen_left
+                    border_hd_left_checked = border_hd_gen_left
+                    border_hd_left_checked_hover = border_hd_gen_left
+            if not border_hd_gen_style is None:
+                border_hd_style = border_hd_gen_style
+                border_hd_style_hover = border_hd_gen_style
+                border_hd_style_checked = border_hd_gen_style
+                border_hd_style_checked_hover = border_hd_gen_style
+            if not border_hd_gen_rgb is None:
+                border_hd_rgb = border_hd_gen_rgb
+                border_hd_rgb_hover = border_hd_gen_rgb
+                border_hd_rgb_checked = border_hd_gen_rgb
+                border_hd_rgb_checked_hover = border_hd_gen_rgb
 
-        # Bordure item GEN
-        if not border_item_gen_all is None:
-            border_item_top = border_item_gen_all
-            border_item_bottom = border_item_gen_all
-            border_item_right = border_item_gen_all
-            border_item_left = border_item_gen_all
-            border_item_top_hover = border_item_gen_all
-            border_item_bottom_hover = border_item_gen_all
-            border_item_right_hover = border_item_gen_all
-            border_item_left_hover = border_item_gen_all
-            border_item_top_checked = border_item_gen_all
-            border_item_bottom_checked = border_item_gen_all
-            border_item_right_checked = border_item_gen_all
-            border_item_left_checked = border_item_gen_all
-            border_item_top_checked_hover = border_item_gen_all
-            border_item_bottom_checked_hover = border_item_gen_all
-            border_item_right_checked_hover = border_item_gen_all
-            border_item_left_checked_hover = border_item_gen_all
-        elif border_item_gen_all is None:
-            if not border_item_all is None:
-                border_item_top = border_item_all
-                border_item_bottom = border_item_all
-                border_item_right = border_item_all
-                border_item_left = border_item_all
-            if not border_item_all_hover is None:
-                border_item_top_hover = border_item_all_hover
-                border_item_bottom_hover = border_item_all_hover
-                border_item_right_hover = border_item_all_hover
-                border_item_left_hover = border_item_all_hover
-            if not border_item_all_checked is None:
-                border_item_top_checked = border_item_all_checked
-                border_item_bottom_checked = border_item_all_checked
-                border_item_right_checked = border_item_all_checked
-                border_item_left_checked = border_item_all_checked
-            if not border_item_all_checked_hover is None:
-                border_item_top_checked_hover = border_item_all_checked_hover
-                border_item_bottom_checked_hover = border_item_all_checked_hover
-                border_item_right_checked_hover = border_item_all_checked_hover
-                border_item_left_checked_hover = border_item_all_checked_hover
+            # Bordure item GEN
+            if not border_item_gen_all is None:
+                border_item_top = border_item_gen_all
+                border_item_bottom = border_item_gen_all
+                border_item_right = border_item_gen_all
+                border_item_left = border_item_gen_all
+                border_item_top_hover = border_item_gen_all
+                border_item_bottom_hover = border_item_gen_all
+                border_item_right_hover = border_item_gen_all
+                border_item_left_hover = border_item_gen_all
+                border_item_top_checked = border_item_gen_all
+                border_item_bottom_checked = border_item_gen_all
+                border_item_right_checked = border_item_gen_all
+                border_item_left_checked = border_item_gen_all
+                border_item_top_checked_hover = border_item_gen_all
+                border_item_bottom_checked_hover = border_item_gen_all
+                border_item_right_checked_hover = border_item_gen_all
+                border_item_left_checked_hover = border_item_gen_all
+            elif border_item_gen_all is None:
+                if not border_item_all is None:
+                    border_item_top = border_item_all
+                    border_item_bottom = border_item_all
+                    border_item_right = border_item_all
+                    border_item_left = border_item_all
+                if not border_item_all_hover is None:
+                    border_item_top_hover = border_item_all_hover
+                    border_item_bottom_hover = border_item_all_hover
+                    border_item_right_hover = border_item_all_hover
+                    border_item_left_hover = border_item_all_hover
+                if not border_item_all_checked is None:
+                    border_item_top_checked = border_item_all_checked
+                    border_item_bottom_checked = border_item_all_checked
+                    border_item_right_checked = border_item_all_checked
+                    border_item_left_checked = border_item_all_checked
+                if not border_item_all_checked_hover is None:
+                    border_item_top_checked_hover = border_item_all_checked_hover
+                    border_item_bottom_checked_hover = border_item_all_checked_hover
+                    border_item_right_checked_hover = border_item_all_checked_hover
+                    border_item_left_checked_hover = border_item_all_checked_hover
 
-            if not border_item_gen_top is None:
-                border_item_top = border_item_gen_top
-                border_item_top_hover = border_item_gen_top
-                border_item_top_checked = border_item_gen_top
-                border_item_top_checked_hover = border_item_gen_top
-            if not border_item_gen_bottom is None:
-                border_item_bottom = border_item_gen_bottom
-                border_item_bottom_hover = border_item_gen_bottom
-                border_item_bottom_checked = border_item_gen_bottom
-                border_item_bottom_checked_hover = border_item_gen_bottom
-            if not border_item_gen_right is None:
-                border_item_right = border_item_gen_right
-                border_item_right_hover = border_item_gen_right
-                border_item_right_checked = border_item_gen_right
-                border_item_right_checked_hover = border_item_gen_right
-            if not border_item_gen_left is None:
-                border_item_left = border_item_gen_left
-                border_item_left_hover = border_item_gen_left
-                border_item_left_checked = border_item_gen_left
-                border_item_left_checked_hover = border_item_gen_left
-        if not border_item_gen_style is None:
-            border_item_style = border_item_gen_style
-            border_item_style_hover = border_item_gen_style
-            border_item_style_checked = border_item_gen_style
-            border_item_style_checked_hover = border_item_gen_style
-        if not border_item_gen_rgb is None:
-            border_item_rgb = border_item_gen_rgb
-            border_item_rgb_hover = border_item_gen_rgb
-            border_item_rgb_checked = border_item_gen_rgb
-            border_item_rgb_checked_hover = border_item_gen_rgb
+                if not border_item_gen_top is None:
+                    border_item_top = border_item_gen_top
+                    border_item_top_hover = border_item_gen_top
+                    border_item_top_checked = border_item_gen_top
+                    border_item_top_checked_hover = border_item_gen_top
+                if not border_item_gen_bottom is None:
+                    border_item_bottom = border_item_gen_bottom
+                    border_item_bottom_hover = border_item_gen_bottom
+                    border_item_bottom_checked = border_item_gen_bottom
+                    border_item_bottom_checked_hover = border_item_gen_bottom
+                if not border_item_gen_right is None:
+                    border_item_right = border_item_gen_right
+                    border_item_right_hover = border_item_gen_right
+                    border_item_right_checked = border_item_gen_right
+                    border_item_right_checked_hover = border_item_gen_right
+                if not border_item_gen_left is None:
+                    border_item_left = border_item_gen_left
+                    border_item_left_hover = border_item_gen_left
+                    border_item_left_checked = border_item_gen_left
+                    border_item_left_checked_hover = border_item_gen_left
+            if not border_item_gen_style is None:
+                border_item_style = border_item_gen_style
+                border_item_style_hover = border_item_gen_style
+                border_item_style_checked = border_item_gen_style
+                border_item_style_checked_hover = border_item_gen_style
+            if not border_item_gen_rgb is None:
+                border_item_rgb = border_item_gen_rgb
+                border_item_rgb_hover = border_item_gen_rgb
+                border_item_rgb_checked = border_item_gen_rgb
+                border_item_rgb_checked_hover = border_item_gen_rgb
 
-        # Radius
-        if not radius_all is None:
-            radius_top_right = radius_all
-            radius_top_left = radius_all
-            radius_bottom_right = radius_all
-            radius_bottom_left = radius_all
-
+            # Radius
+            if not radius_all is None:
+                radius_top_right = radius_all
+                radius_top_left = radius_all
+                radius_bottom_right = radius_all
+                radius_bottom_left = radius_all
+        except: pass
 
         self.style = f"""
 /*****************************************
