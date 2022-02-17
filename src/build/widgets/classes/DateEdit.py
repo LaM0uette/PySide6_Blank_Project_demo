@@ -40,17 +40,23 @@ class Style:
 
 class Base_th(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs)
+        super().__init__(
+            *wgs,
+            style=StyleSheet(
+                img_margin_top=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
+                img_margin_right=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
+            ).get()
+        )
 class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            bg_gen=Rgb().tr(),
-            fg=Rgb().th3(),
-            bg_selection=Rgb().th3(),
-            fg_selection=Rgb().th1(),
+            style=StyleSheet(
+                bg_gen=Rgb().tr(),
+                fg=Rgb().th3(),
+                bg_selection=Rgb().th3(),
+                fg_selection=Rgb().th1(),
+                img_margin_top=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
+                img_margin_right=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
+            ).get()
     )
-
-
-img_margin_top=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT)/2,
-img_margin_right=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT)/2,
