@@ -23,8 +23,8 @@ class StyleSheet:
             bg_corner=p_base.BG,
             bg_header=Rgb().th2(),
             bg_header_hover=Rgb().th2(),
-            bg_header_checked=Rgb().th1(),
-            bg_header_checked_hover=Rgb().th1(),
+            bg_header_checked=Rgb().th3(),
+            bg_header_checked_hover=Rgb().th3(),
             bg_mois=Rgb().th2(),
             # Couleurs FG
             fg_gen=None,
