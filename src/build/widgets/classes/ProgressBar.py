@@ -8,10 +8,6 @@ class Style:
                  dim_height=p_base.WG_HEIGHT,
                  police=p_base.FONT,
                  police_taille=p_base.FONT_SIZE,
-                 padding_top=0,
-                 padding_bottom=0,
-                 padding_right=0,
-                 padding_left=0,
                  text_visible=p_base.TEXT_VISIBLE
     ):
         for wg in wgs:

@@ -44,6 +44,10 @@ class StyleSheet:
             width=p_base.WG_WIDTH,
             height=p_base.WG_HEIGHT,
             spacing=10,
+            padding_top=0,
+            padding_bottom=0,
+            padding_right=0,
+            padding_left=0,
 
             # Police
             font=p_base.FONT,
@@ -606,13 +610,16 @@ class StyleSheet:
                 QProgressBar::chunk {{
                 background-color: rgba{bg_chunk};
                 }}
+                QProgressBar::chunk:hover {{
+                background-color: rgba{bg_chunk_hover};
+                }}
         
                 /* BORDURES */
                 .QProgressBar {{
-                border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
-                border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
-                border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
-                border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
+                border-top: {border_top}px {border_style} rgba{border_rgb};
+                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
+                border-right: {border_right}px {border_style} rgba{border_rgb};
+                border-left: {border_left}px {border_style} rgba{border_rgb};
                 padding-top={padding_top}px;
                 padding-bottom={padding_bottom}px;
                 padding-right={padding_right}px;
