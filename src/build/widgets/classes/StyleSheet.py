@@ -589,6 +589,42 @@ class StyleSheet:
 /****************************
 **      /QListWidget       **
 *****************************/
+     
+     
+                
+/*****************************
+**       QProgressBar       **
+******************************/      
+                QProgressBar {{
+                background-color: rgba{couleur_bg};
+                color: rgb{couleur_fg};
+                }}
+        
+                /* PROGRESS */
+                QProgressBar::chunk {{
+                background-color: rgba{couleur_bg_barre};
+                }}
+        
+                /* BORDURES */
+                .QProgressBar {{
+                border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
+                border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
+                border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
+                border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
+                padding-top={padding_top}px;
+                padding-bottom={padding_bottom}px;
+                padding-right={padding_right}px;
+                padding-left={padding_left}px;
+                }}
+/*****************************
+**      /QProgressBar       **
+******************************/     
+                
+                
+                
+                
+                
+                
                 
                 
                 
