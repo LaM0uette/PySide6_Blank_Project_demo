@@ -34,8 +34,10 @@ class Base_th(Style):
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-              text_visible=False,
+        super().__init__(
+            *wgs,
+            text_visible=False,
+
             style=StyleSheet(
                 bg_gen=Rgb().tr()
             ).get()
