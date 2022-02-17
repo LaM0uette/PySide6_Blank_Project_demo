@@ -17,7 +17,7 @@ class Style:
             scroll_v=p_base.SCROLL_V,
             header_h=p_base.HEADER_H,
             header_v=p_base.HEADER_V,
-            curseur=p_base.CUR,
+            curseur=P_cur().croix(),
             style=StyleSheet().get()
     ):
         for wg in wgs:
