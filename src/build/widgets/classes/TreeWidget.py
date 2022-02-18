@@ -42,6 +42,9 @@ class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
+            scroll_h=QtCore.Qt.ScrollBarAlwaysOff,
+            scroll_v=QtCore.Qt.ScrollBarAlwaysOff,
+
             style=StyleSheet(
                 bg_gen=Rgb().tr(),
             ).get()
@@ -57,6 +60,5 @@ class option(Style):
 
             style=StyleSheet(
                 bg_gen=Rgb().tr(),
-
             ).get()
     )
