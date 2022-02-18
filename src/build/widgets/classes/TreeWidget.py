@@ -8,8 +8,8 @@ class Style:
     def __init__(
             self,
             *wgs,
-            width=p_base.WG_WIDTH,
-            height=p_base.WG_HEIGHT,
+            width=p_base.WIDTH,
+            height=p_base.HEIGHT,
             font=p_base.FONT,
             font_size=p_base.FONT_SIZE,
             scroll_h=p_base.SCROLL_H,
