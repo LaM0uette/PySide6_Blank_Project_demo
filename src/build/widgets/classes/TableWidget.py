@@ -80,7 +80,7 @@ class Demo_th(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            height=P_dim().h3(),
+            height=P_dim().h4(),
 
             style=StyleSheet(
                 bg_corner=Rgb().th1(),
@@ -94,7 +94,7 @@ class Demo_tr(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            height=P_dim().h3(),
+            height=P_dim().h4(),
             header_h=False,
             header_v=False,
 

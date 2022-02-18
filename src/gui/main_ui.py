@@ -20,9 +20,9 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QDateEdit,
     QHeaderView, QLabel, QLineEdit, QListWidget,
     QListWidgetItem, QPlainTextEdit, QProgressBar, QPushButton,
     QRadioButton, QScrollArea, QSizePolicy, QSlider,
-    QSpacerItem, QSpinBox, QTableWidget, QTableWidgetItem,
-    QTextEdit, QToolBox, QTreeWidget, QTreeWidgetItem,
-    QVBoxLayout, QWidget)
+    QSpacerItem, QSpinBox, QTableView, QTableWidget,
+    QTableWidgetItem, QTextEdit, QToolBox, QTreeWidget,
+    QTreeWidgetItem, QVBoxLayout, QWidget)
 
 class Ui_main(object):
     def setupUi(self, main):
@@ -106,7 +106,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -828, 818, 5830))
+        self.vlay_wg.setGeometry(QRect(0, -3460, 818, 5992))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -635,6 +635,11 @@ class Ui_main(object):
 
         self.vlay_tw.addItem(self.verticalSpacer_19)
 
+        self.tv_demo_th = QTableView(self.fr_tw)
+        self.tv_demo_th.setObjectName(u"tv_demo_th")
+
+        self.vlay_tw.addWidget(self.tv_demo_th)
+
         self.tw_demo_th = QTableWidget(self.fr_tw)
         if (self.tw_demo_th.columnCount() < 12):
             self.tw_demo_th.setColumnCount(12)
@@ -791,6 +796,11 @@ class Ui_main(object):
         self.tw_demo_th.setObjectName(u"tw_demo_th")
 
         self.vlay_tw.addWidget(self.tw_demo_th)
+
+        self.tv_demo_tr = QTableView(self.fr_tw)
+        self.tv_demo_tr.setObjectName(u"tv_demo_tr")
+
+        self.vlay_tw.addWidget(self.tv_demo_tr)
 
         self.tw_demo_tr = QTableWidget(self.fr_tw)
         if (self.tw_demo_tr.columnCount() < 12):
