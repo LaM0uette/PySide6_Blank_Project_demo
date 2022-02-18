@@ -56,6 +56,10 @@ class Demo_th(Style):
 
             style=StyleSheet(
                 fg_item_checked=Rgb().bn1(),
+                border_hd_gen_all=1,
+                border_hd_gen_rgb=Rgb().th1(),
+                border_item_gen_all=1,
+                border_item_gen_rgb=Rgb().th2()
             ).get()
     )
 class Demo_tr(Style):
