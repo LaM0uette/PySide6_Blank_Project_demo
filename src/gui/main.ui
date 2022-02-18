@@ -88,13 +88,6 @@
           </spacer>
          </item>
          <item>
-          <widget class="QLineEdit" name="le_demo_th">
-           <property name="placeholderText">
-            <string>Je suis le text de test...</string>
-           </property>
-          </widget>
-         </item>
-         <item>
           <widget class="QLabel" name="lb_mt_nom"/>
          </item>
          <item>
@@ -160,7 +153,7 @@
               <x>0</x>
               <y>-4054</y>
               <width>818</width>
-              <height>6290</height>
+              <height>6320</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout">
@@ -2164,6 +2157,13 @@
                    </size>
                   </property>
                  </spacer>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="le_demo_th">
+                  <property name="placeholderText">
+                   <string>Je suis le text de test...</string>
+                  </property>
+                 </widget>
                 </item>
                 <item>
                  <widget class="QLineEdit" name="le_demo_tr">
