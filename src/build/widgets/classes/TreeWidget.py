@@ -1,24 +1,27 @@
 from PySide6 import QtCore, QtWidgets
 
+from .StyleSheet import StyleSheet
 from ....build import *
 from ....build.widgets import p_base
 
 class Style:
-    def __init__(self,
-                 *wgs,
-                 dim_width=p_base.WIDTH,
-                 dim_height=p_base.HEIGHT,
-                 police=p_base.FONT,
-                 police_taille=p_base.FONT_SIZE,
-                 scroll_h=p_base.SCROLL_H,
-                 scroll_v=p_base.SCROLL_V,
-                 curseur=p_base.CUR,
+    def __init__(
+            self,
+            *wgs,
+            width=p_base.WG_WIDTH,
+            height=p_base.WG_HEIGHT,
+            font=p_base.FONT,
+            font_size=p_base.FONT_SIZE,
+            scroll_h=p_base.SCROLL_H,
+            scroll_v=p_base.SCROLL_V,
+            curseur=p_base.CUR,
+            style=StyleSheet().get()
     ):
         for wg in wgs:
             wg.setStyleSheet(style)
 
-            Fct(wg=wg, w=dim_width, h=dim_height).DIM()
-            wg.setFont(Fct(font=police, font_size=police_taille).FONT())
+            Fct(wg=wg, w=width, h=height).DIM()
+            wg.setFont(Fct(font=font, font_size=font_size).FONT())
 
             wg.setHorizontalScrollBarPolicy(scroll_h)
             wg.setVerticalScrollBarPolicy(scroll_v)
@@ -30,32 +33,30 @@ class Style:
 
 class Base_th(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs)
+        super().__init__(
+            *wgs,
+            style=StyleSheet(
+            ).get()
+        )
 class Base_tr(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-              couleur_bg=(0, 0, 0, 0),
-              couleur_bg_item=(0, 0, 0, 0),
-              couleur_bg_item_hover=(0, 0, 0, 0),
-              couleur_bg_item_checked=(0, 0, 0, 0),
-              couleur_bg_item_checked_hover=(0, 0, 0, 0),
-              couleur_fg_item_checked=P_rgb().bn1(),
-              couleur_fg_item_checked_hover=P_rgb().bn2(),
+        super().__init__(
+            *wgs,
+            style=StyleSheet(
+                bg_gen=Rgb().tr(),
+            ).get()
     )
 
 class option(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-              couleur_bg=(0, 0, 0, 0),
-              couleur_bg_item=(0, 0, 0, 0),
-              couleur_bg_item_hover=(0, 0, 0, 0),
-              couleur_bg_item_checked=(0, 0, 0, 0),
-              couleur_bg_item_checked_hover=(0, 0, 0, 0),
-              couleur_fg_item_checked=P_rgb().bn1(),
-              couleur_fg_item_checked_hover=P_rgb().bn2(),
-              dim_width=P_dim().h5(),
-              bordure_width_right=P_style().bd(),
-              bordure_couleur_right=P_rgb().th3(),
-              scroll_h=QtCore.Qt.ScrollBarAlwaysOff,
-              scroll_v=QtCore.Qt.ScrollBarAlwaysOff,
+        super().__init__(
+            *wgs,
+            width=P_dim().h5(),
+            scroll_h=QtCore.Qt.ScrollBarAlwaysOff,
+            scroll_v=QtCore.Qt.ScrollBarAlwaysOff,
+
+            style=StyleSheet(
+                bg_gen=Rgb().tr(),
+
+            ).get()
     )
