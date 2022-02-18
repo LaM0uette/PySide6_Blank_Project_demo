@@ -28,7 +28,7 @@ class Style:
             try: wg.viewport().setCursor(Fct(cur=P_cur().IBeam()).CUR())
             except: pass
 
-            wg.setPalette(StyleSheet.get_txt_palette())
+            wg.setPalette(StyleSheet().get_txt_palette())
 
 
 class Base_th(Style):
