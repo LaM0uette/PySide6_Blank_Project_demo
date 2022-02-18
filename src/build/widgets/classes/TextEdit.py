@@ -21,10 +21,10 @@ class Style:
             Fct(wg=wg, w=width, h=height).DIM()
             wg.setFont(Fct(font=font, font_size=font_size).FONT())
 
-            wg.setAlignment(align_horizontal | align_vertical)
+            try: wg.setAlignment(align_horizontal | align_vertical)
+            except: pass
 
             wg.setCursor(Fct(cur=P_cur().IBeam()).CUR())
-
             try: wg.viewport().setCursor(Fct(cur=P_cur().IBeam()).CUR())
             except: pass
 
