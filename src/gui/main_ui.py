@@ -107,7 +107,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -5415, 818, 6320))
+        self.vlay_wg.setGeometry(QRect(0, -5577, 818, 6320))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -1161,6 +1161,10 @@ class Ui_main(object):
 
         self.glay_fr_trw.addWidget(self.trv_demo_th, 2, 1, 1, 1)
 
+        self.verticalSpacer_24 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Fixed)
+
+        self.glay_fr_trw.addItem(self.verticalSpacer_24, 4, 1, 1, 1)
+
         self.trw_demo_th = QTreeWidget(self.fr_trw)
         self.trw_demo_th.headerItem().setText(0, "")
         __qtreewidgetitem = QTreeWidgetItem(self.trw_demo_th)
@@ -1212,18 +1216,6 @@ class Ui_main(object):
         self.trw_demo_th.setObjectName(u"trw_demo_th")
 
         self.glay_fr_trw.addWidget(self.trw_demo_th, 3, 1, 1, 1)
-
-        self.verticalSpacer_24 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Fixed)
-
-        self.glay_fr_trw.addItem(self.verticalSpacer_24, 4, 1, 1, 1)
-
-        self.horizontalSpacer_8 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.glay_fr_trw.addItem(self.horizontalSpacer_8, 3, 2, 5, 1)
-
-        self.horizontalSpacer_7 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.glay_fr_trw.addItem(self.horizontalSpacer_7, 3, 0, 5, 1)
 
         self.verticalSpacer_23 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Fixed)
 
