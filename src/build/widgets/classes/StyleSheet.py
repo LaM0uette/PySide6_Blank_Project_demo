@@ -1014,6 +1014,7 @@ class StyleSheet:
 ************************************************************/
                 .QLineEdit, .QPlainTextEdit, .QTextEdit {{
                 background-color: rgba{bg};
+                color: rgba{fg};
                 selection-background-color: rgb{bg_selection};
                 selection-color: rgb{fg_selection};
                 }}
