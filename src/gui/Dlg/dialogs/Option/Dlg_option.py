@@ -123,7 +123,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
 
 
         ### QTreeWidget ###
-        Tree_widget.option(self.trw_option)
+        TreeWidget.option(self.trw_option)
         ### /QTreeWidget ###
 
         # Lancement des fonctions de MEF global
