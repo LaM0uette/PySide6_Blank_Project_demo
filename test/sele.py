@@ -22,7 +22,7 @@ print("Scroll")
 element = driver.find_element_by_id("js-repo-pjax-container")
 
 driver.execute_script("arguments[0].scrollIntoView(true);", element)
-driver.execute_script("window.scrollBy(0, -150);")
+driver.execute_script("window.scrollBy(0, 150);")
 
 
 """
