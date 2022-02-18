@@ -62,6 +62,11 @@ class Ui_main(object):
 
         self.hlay_menu_top.addItem(self.horizontalSpacer_2)
 
+        self.le_demo_th = QLineEdit(self.fr_menu_top)
+        self.le_demo_th.setObjectName(u"le_demo_th")
+
+        self.hlay_menu_top.addWidget(self.le_demo_th)
+
         self.lb_mt_nom = QLabel(self.fr_menu_top)
         self.lb_mt_nom.setObjectName(u"lb_mt_nom")
 
@@ -107,7 +112,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -4089, 818, 6320))
+        self.vlay_wg.setGeometry(QRect(0, -4054, 818, 6290))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -988,11 +993,6 @@ class Ui_main(object):
 
         self.vlay_le.addItem(self.verticalSpacer_20)
 
-        self.le_demo_th = QLineEdit(self.fr_le)
-        self.le_demo_th.setObjectName(u"le_demo_th")
-
-        self.vlay_le.addWidget(self.le_demo_th)
-
         self.le_demo_tr = QLineEdit(self.fr_le)
         self.le_demo_tr.setObjectName(u"le_demo_tr")
 
@@ -1329,6 +1329,7 @@ class Ui_main(object):
     # setupUi
 
     def retranslateUi(self, main):
+        self.le_demo_th.setPlaceholderText(QCoreApplication.translate("main", u"Je suis le text de test...", None))
         self.lb_ck_demo.setText(QCoreApplication.translate("main", u"QCheckBox :", None))
         self.ck_demo_th_1.setText(QCoreApplication.translate("main", u"CheckBox", None))
         self.ck_demo_th_2.setText(QCoreApplication.translate("main", u"CheckBox", None))
@@ -1704,7 +1705,6 @@ class Ui_main(object):
         self.tw_demo_tr.setSortingEnabled(__sortingEnabled1)
 
         self.lb_le_demo.setText(QCoreApplication.translate("main", u"QLineEdit :", None))
-        self.le_demo_th.setPlaceholderText(QCoreApplication.translate("main", u"Je suis le text de test...", None))
         self.le_demo_tr.setPlaceholderText(QCoreApplication.translate("main", u"Je suis le text de test...", None))
         self.lb_te_demo.setText(QCoreApplication.translate("main", u"QTextEdit :", None))
         self.te_demo_th.setHtml(QCoreApplication.translate("main", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
