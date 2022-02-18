@@ -56,10 +56,6 @@ class Demo_th(Style):
 
             style=StyleSheet(
                 fg_item_checked=Rgb().bn1(),
-                border_hd_gen_all=1,
-                border_hd_gen_rgb=Rgb().th1(),
-                border_item_gen_all=1,
-                border_item_gen_rgb=Rgb().th2()
             ).get()
     )
 class Demo_tr(Style):
@@ -73,6 +69,11 @@ class Demo_tr(Style):
                 bg_item_gen=Rgb().tr(),
                 fg_item=Rgb().th3(),
                 fg_item_checked=Rgb().bn1(),
+                border_item_gen_left=2,
+                border_item_rgb=Rgb().th2(),
+                border_item_rgb_hover=Rgb().th3(),
+                border_item_rgb_checked=Rgb().bn1(),
+                border_item_rgb_checked_hover=Rgb().bn1(),
             ).get()
 
     )
