@@ -31,34 +31,51 @@ class Style:
             wg.setPalette(StyleSheet.get_txt_palette())
 
 
-
-
 class Base_th(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs)
+        super().__init__(
+            *wgs,
+            style=StyleSheet(
+            ).get()
+        )
 class Base_tr(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-              couleur_bg=(0, 0, 0, 0),
+        super().__init__(
+            *wgs,
+            style=StyleSheet(
+                bg=Rgb().tr(),
+            ).get()
     )
 
 class tr_taille(Style):
     def __init__(self, *wgs, h):
-        super().__init__(*wgs,
-              couleur_bg=(0, 0, 0, 0),
-              dim_height=None,
-              police_taille=h
+        super().__init__(
+            *wgs,
+            height=None,
+            font_size=h,
+
+            style=StyleSheet(
+                bg=Rgb().tr(),
+            ).get()
     )
 
 
 class Demo_th(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-              dim_height=P_dim().h5()
+        super().__init__(
+            *wgs,
+            height=P_dim().h5(),
+
+            style=StyleSheet(
+            ).get()
     )
 class Demo_tr(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-              couleur_bg=(0, 0, 0, 0),
-              dim_height=P_dim().h5()
+        super().__init__(
+            *wgs,
+            height=P_dim().h5(),
+
+            style=StyleSheet(
+                bg=Rgb().tr(),
+            ).get()
     )
