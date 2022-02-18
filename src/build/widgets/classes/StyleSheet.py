@@ -443,9 +443,9 @@ class StyleSheet:
         except: pass
 
         self.style = f"""
-/*****************************************
-**       QCheckBox  | QRadioButton      **
-******************************************/
+/******************************************
+**       QCheckBox  |  QRadioButton      **
+*******************************************/
                 QCheckBox, QRadioButton {{
                 background-color: rgba{bg};
                 color: rgba{fg};
@@ -1003,6 +1003,42 @@ class StyleSheet:
 /*****************************
 **       QTableWidget       **
 ******************************/
+
+
+
+/***********************************************************
+**       QLineEdit  |  QPlainTextEdit  |  QTextEdit       **
+************************************************************/
+                .QLineEdit, .QPlainTextEdit, .QTextEdit {{
+                background-color: rgba{bg};
+                selection-background-color: rgb{bg_selection};
+                selection-color: rgb{fg_selection};
+                }}
+        
+                /* BORDURES */
+                .QLineEdit, .QPlainTextEdit, .QTextEdit {{
+                border-top: {border_top}px {border_style} rgba{border_rgb};
+                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
+                border-right: {border_right}px {border_style} rgba{border_rgb};
+                border-left: {border_left}px {border_style} rgba{border_rgb};
+                }}
+                .QLineEdit:hover, .QPlainTextEdit:hover, .QTextEdit:hover {{
+                border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
+                }}
+/*********************************************************
+**      /QLineEdit | /QPlainTextEdit | /QTextEdit       **
+**********************************************************/
+
+
+
+
+
+
+
+
 
 
 

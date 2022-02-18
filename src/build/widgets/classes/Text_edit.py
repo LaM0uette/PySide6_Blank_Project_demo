@@ -40,50 +40,7 @@ class Style:
                  scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
                  scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
                  align=p_base.ALIGN,
-                 ):
-        style = f"""
-        .QLineEdit, .QPlainTextEdit, .QTextEdit {{
-        background-color: rgba{couleur_bg};
-        selection-background-color: rgb{couleur_bg_selection};
-        selection-color: rgb{couleur_fg_selection};
-        }}
-
-        /* BORDURES */
-        .QLineEdit, .QPlainTextEdit, .QTextEdit {{
-        border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
-        border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
-        border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
-        border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
-        }}
-
-        /* RAYONS */
-        .QLineEdit, .QPlainTextEdit, .QTextEdit {{
-        border-top-left-radius: {rayon_top_left}px;
-        border-top-right-radius: {rayon_top_right}px;
-        border-bottom-right-radius: {rayon_bottom_right}px;
-        border-bottom-left-radius: {rayon_bottom_left}px;
-        }}
-
-        /* SCROLL */
-        .QLineEdit QScrollBar, .QPlainTextEdit QScrollBar, .QTextEdit QScrollBar {{
-        background-color: rgb{scroll_bg};
-        width: {scroll_width}px;
-        height: {scroll_height}px;
-        }}
-        .QLineEdit::handle:horizontal, .QPlainTextEdit::handle:horizontal, .QTextEdit::handle:horizontal {{
-        min-width: {scroll_handle_min_width}px;
-        }}
-        .QLineEdit::handle:vertical, .QPlainTextEdit::handle:vertical, .QTextEdit::handle:vertical {{
-        min-height: {scroll_handle_min_height}px;
-        }}
-        .QLineEdit QScrollBar::handle, .QPlainTextEdit QScrollBar::handle, .QTextEdit QScrollBar::handle {{
-        background-color: rgb{scroll_handle_fg};
-        }}
-
-        .QLineEdit QScrollBar::add-page, .QLineEdit QScrollBar::sub-page, .QPlainTextEdit QScrollBar::add-page, .QPlainTextEdit QScrollBar::sub-page, .QTextEdit QScrollBar::add-page, .QTextEdit QScrollBar::sub-page {{
-        background-color: rgb{scroll_handle_bg};
-        border: none;
-        }}"""
+    ):
 
         for wg in wgs:
             wg.setStyleSheet(style)
