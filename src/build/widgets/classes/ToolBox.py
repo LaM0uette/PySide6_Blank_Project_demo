@@ -40,7 +40,5 @@ class Base_tr(Style):
             style=StyleSheet(
                 bg_gen=Rgb().tr(),
                 fg=Rgb().th3(),
-                border_all=2,
-                border_rgb=Rgb().bn2()
             ).get()
     )
