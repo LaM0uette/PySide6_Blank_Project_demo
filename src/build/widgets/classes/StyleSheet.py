@@ -1036,7 +1036,45 @@ class StyleSheet:
 **********************************************************/
 
 
-
+/*************************
+**       QToolBox       **
+**************************/
+                QToolBox::tab {{
+                background-color: rgba{bg};
+                color: rgb{fg};
+                }}
+        
+                QToolBox::tab:hover {{
+                background-color: rgba{bg_hover};
+                color: rgb{fg_hover};
+                }}
+        
+                QToolBox::tab:selected {{
+                background-color: rgba{bg_checked};
+                color: rgb{fg_checked};
+                }}
+        
+                QToolBox::tab:selected:hover {{
+                background-color: rgba{bg_checked_hover};
+                color: rgb{fg_checked_hover};
+                }}
+        
+                /* BORDURES */
+                .QToolBox {{
+                border-top: {border_top}px {border_style} rgba{border_rgb};
+                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
+                border-right: {border_right}px {border_style} rgba{border_rgb};
+                border-left: {border_left}px {border_style} rgba{border_rgb};
+                }}
+                .QToolBox:hover {{
+                border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
+                }}
+/*************************
+**      /QToolBox       **
+**************************/
 
 
 
