@@ -1041,22 +1041,22 @@ class StyleSheet:
 **************************/
                 QToolBox::tab {{
                 background-color: rgba{bg};
-                color: rgb{fg};
+                color: rgba{fg};
                 }}
         
                 QToolBox::tab:hover {{
                 background-color: rgba{bg_hover};
-                color: rgb{fg_hover};
+                color: rgba{fg_hover};
                 }}
         
                 QToolBox::tab:selected {{
                 background-color: rgba{bg_checked};
-                color: rgb{fg_checked};
+                color: rgba{fg_checked};
                 }}
         
                 QToolBox::tab:selected:hover {{
                 background-color: rgba{bg_checked_hover};
-                color: rgb{fg_checked_hover};
+                color: rgba{fg_checked_hover};
                 }}
         
                 /* BORDURES */
