@@ -1051,16 +1051,28 @@ class StyleSheet:
                 QToolBox::tab:hover {{
                 background-color: rgba{bg_hover};
                 color: rgba{fg_hover};
+                border-top: {border_hd_top_hover}px {border_hd_style_hover} rgba{border_hd_rgb_hover};
+                border-bottom: {border_hd_bottom_hover}px {border_hd_style_hover} rgba{border_hd_rgb_hover};
+                border-right: {border_hd_right_hover}px {border_hd_style_hover} rgba{border_hd_rgb_hover};
+                border-left: {border_hd_left_hover}px {border_hd_style_hover} rgba{border_hd_rgb_hover};
                 }}
         
                 QToolBox::tab:selected {{
                 background-color: rgba{bg_checked};
                 color: rgba{fg_checked};
+                border-top: {border_hd_top_checked}px {border_hd_style_checked} rgba{border_hd_rgb_checked};
+                border-bottom: {border_hd_bottom_checked}px {border_hd_style_checked} rgba{border_hd_rgb_checked};
+                border-right: {border_hd_right_checked}px {border_hd_style_checked} rgba{border_hd_rgb_checked};
+                border-left: {border_hd_left_checked}px {border_hd_style_checked} rgba{border_hd_rgb_checked};
                 }}
         
                 QToolBox::tab:selected:hover {{
                 background-color: rgba{bg_checked_hover};
                 color: rgba{fg_checked_hover};
+                border-top: {border_hd_top_checked_hover}px {border_hd_style_checked_hover} rgba{border_hd_rgb_checked_hover};
+                border-bottom: {border_hd_bottom_checked_hover}px {border_hd_style_checked_hover} rgba{border_hd_rgb_checked_hover};
+                border-right: {border_hd_right_checked_hover}px {border_hd_style_checked_hover} rgba{border_hd_rgb_checked_hover};
+                border-left: {border_hd_left_checked_hover}px {border_hd_style_checked_hover} rgba{border_hd_rgb_checked_hover};
                 }}
         
                 /* BORDURES */
