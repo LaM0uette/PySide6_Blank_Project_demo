@@ -1098,8 +1098,8 @@ class StyleSheet:
 """
 
         self.palette_txt = QtGui.QPalette()
-        self.palette_txt.setColor(QtGui.QPalette.PlaceholderText, QtGui.QColor(*fg_placeholder))
         self.palette_txt.setColor(QtGui.QPalette.Text, QtGui.QColor(*fg))
+        self.palette_txt.setColor(QtGui.QPalette.PlaceholderText, QtGui.QColor(*fg_placeholder))
 
 
     def get(self): return self.style
