@@ -204,6 +204,11 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
                 model.setItem(ir, ic, QtGui.QStandardItem(f"item:{ic+ir}"))
         self.tv_demo_th.setModel(model)
         self.tv_demo_tr.setModel(model)
+
+        model = QtWidgets.QFileSystemModel()
+        model.setRootPath('')
+        self.trv_demo_th.setModel(model)
+        self.trv_demo_tr.setModel(model)
     def IN_CONNECTIONS(self):
         ## Menu_top
         self.pb_mt_option.clicked.connect(lambda: Option(fen=fen).MAIN())
