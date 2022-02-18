@@ -2,6 +2,8 @@ import importlib
 
 from . import p_base
 importlib.reload(p_base)
+from .classes import StyleSheet
+importlib.reload(StyleSheet)
 
 from .classes import CheckBox, ComboBox, DateEdit, Frame, Label, \
     ListWidget, ProgressBar, RadioButton, ScrollArea, Slider, \
