@@ -39,5 +39,6 @@ class Base_tr(Style):
             *wgs,
             style=StyleSheet(
                 bg_gen=Rgb().tr(),
+                fg=Rgb().th3()
             ).get()
     )
