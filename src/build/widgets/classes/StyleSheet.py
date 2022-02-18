@@ -898,14 +898,14 @@ class StyleSheet:
                 }}
         
                 /* TABLE_WIDGET */
-                QTableWidget {{
+                QTableWidget, QTableView {{
                 background-color: rgba{bg};
                 gridline-color: rgba{gridline};
                 color: rgba{fg};
                 }}
         
                 /* ITEM */
-                QTableWidget::item {{
+                QTableWidget::item, QTableView::item {{
                 background-color: rgba{bg_item};
                 color: rgba{fg_item};
                 border-top: {border_item_top}px {border_item_style} rgba{border_item_rgb};
@@ -913,7 +913,7 @@ class StyleSheet:
                 border-right: {border_item_right}px {border_item_style} rgba{border_item_rgb};
                 border-left: {border_item_left}px {border_item_style} rgba{border_item_rgb};
                 }}
-                QTableWidget::item:hover {{
+                QTableWidget::item:hover, QTableView::item:hover {{
                 background-color: rgba{bg_item_hover};
                 color: rgba{fg_item_hover};
                 border-top: {border_item_top_hover}px {border_item_style_hover} rgba{border_item_rgb_hover};
@@ -921,7 +921,7 @@ class StyleSheet:
                 border-right: {border_item_right_hover}px {border_item_style_hover} rgba{border_item_rgb_hover};
                 border-left: {border_item_left_hover}px {border_item_style_hover} rgba{border_item_rgb_hover};
                 }}
-                QTableWidget::item:selected {{
+                QTableWidget::item:selected, QTableView::item:selected {{
                 background-color: rgba{bg_item_checked};
                 color: rgba{fg_item_checked};
                 border-top: {border_item_top_checked}px {border_item_style_checked} rgba{border_item_rgb_checked};
@@ -929,7 +929,7 @@ class StyleSheet:
                 border-right: {border_item_right_checked}px {border_item_style_checked} rgba{border_item_rgb_checked};
                 border-left: {border_item_left_checked}px {border_item_style_checked} rgba{border_item_rgb_checked};
                 }}
-                QTableWidget::item:selected:hover {{
+                QTableWidget::item:selected:hover, QTableView::item:selected:hover {{
                 background-color: rgba{bg_item_checked_hover};
                 color: rgba{fg_item_checked_hover};
                 border-top: {border_item_top_checked_hover}px {border_item_style_checked_hover} rgba{border_item_rgb_checked_hover};
@@ -939,13 +939,13 @@ class StyleSheet:
                 }}
         
                 /* BORDURES */
-                .QTableWidget {{
+                .QTableWidget, .QTableView {{
                 border-top: {border_top}px {border_style} rgba{border_rgb};
                 border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
                 border-right: {border_right}px {border_style} rgba{border_rgb};
                 border-left: {border_left}px {border_style} rgba{border_rgb};
                 }}
-                .QTableWidget:hover {{
+                .QTableWidget:hover, .QTableView:hover {{
                 border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
                 border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
                 border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
