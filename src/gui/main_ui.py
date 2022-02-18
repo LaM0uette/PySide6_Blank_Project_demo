@@ -16,14 +16,14 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QDateEdit,
-    QDoubleSpinBox, QFrame, QGridLayout, QGroupBox,
-    QHBoxLayout, QHeaderView, QLabel, QLineEdit,
-    QListView, QListWidget, QListWidgetItem, QPlainTextEdit,
-    QProgressBar, QPushButton, QRadioButton, QScrollArea,
-    QSizePolicy, QSlider, QSpacerItem, QSpinBox,
-    QTableView, QTableWidget, QTableWidgetItem, QTextEdit,
-    QToolBox, QTreeView, QTreeWidget, QTreeWidgetItem,
-    QVBoxLayout, QWidget)
+    QDoubleSpinBox, QFrame, QGridLayout, QHBoxLayout,
+    QHeaderView, QLabel, QLineEdit, QListView,
+    QListWidget, QListWidgetItem, QPlainTextEdit, QProgressBar,
+    QPushButton, QRadioButton, QScrollArea, QSizePolicy,
+    QSlider, QSpacerItem, QSpinBox, QTableView,
+    QTableWidget, QTableWidgetItem, QTextEdit, QToolBox,
+    QTreeView, QTreeWidget, QTreeWidgetItem, QVBoxLayout,
+    QWidget)
 
 class Ui_main(object):
     def setupUi(self, main):
@@ -107,7 +107,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -4054, 818, 6353))
+        self.vlay_wg.setGeometry(QRect(0, -4054, 818, 6320))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -988,17 +988,10 @@ class Ui_main(object):
 
         self.vlay_le.addItem(self.verticalSpacer_20)
 
-        self.groupBox = QGroupBox(self.fr_le)
-        self.groupBox.setObjectName(u"groupBox")
-        self.verticalLayout_6 = QVBoxLayout(self.groupBox)
-        self.verticalLayout_6.setObjectName(u"verticalLayout_6")
-        self.le_demo_th = QLineEdit(self.groupBox)
+        self.le_demo_th = QLineEdit(self.fr_le)
         self.le_demo_th.setObjectName(u"le_demo_th")
 
-        self.verticalLayout_6.addWidget(self.le_demo_th)
-
-
-        self.vlay_le.addWidget(self.groupBox)
+        self.vlay_le.addWidget(self.le_demo_th)
 
         self.le_demo_tr = QLineEdit(self.fr_le)
         self.le_demo_tr.setObjectName(u"le_demo_tr")
@@ -1711,7 +1704,6 @@ class Ui_main(object):
         self.tw_demo_tr.setSortingEnabled(__sortingEnabled1)
 
         self.lb_le_demo.setText(QCoreApplication.translate("main", u"QLineEdit :", None))
-        self.groupBox.setTitle(QCoreApplication.translate("main", u"GroupBox", None))
         self.le_demo_th.setPlaceholderText(QCoreApplication.translate("main", u"Je suis le text de test...", None))
         self.le_demo_tr.setPlaceholderText(QCoreApplication.translate("main", u"Je suis le text de test...", None))
         self.lb_te_demo.setText(QCoreApplication.translate("main", u"QTextEdit :", None))

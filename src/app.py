@@ -6,6 +6,7 @@ from .gui import *
 from .build import *
 from .config import *
 from .In_classe import In_classe
+from .build.widgets.classes.StyleSheet import StyleSheet
 
 
 class main(main_ui.Ui_main, QtWidgets.QWidget):
@@ -21,6 +22,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         self.setupUi(self)
         self.INIT()
+
+
 
     ############################
     ##     INITIALISATION     ##
