@@ -17,12 +17,12 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QDateEdit,
     QDoubleSpinBox, QFrame, QGridLayout, QHBoxLayout,
-    QHeaderView, QLabel, QLineEdit, QListWidget,
-    QListWidgetItem, QPlainTextEdit, QProgressBar, QPushButton,
-    QRadioButton, QScrollArea, QSizePolicy, QSlider,
-    QSpacerItem, QSpinBox, QTableView, QTableWidget,
-    QTableWidgetItem, QTextEdit, QToolBox, QTreeWidget,
-    QTreeWidgetItem, QVBoxLayout, QWidget)
+    QHeaderView, QLabel, QLineEdit, QListView,
+    QListWidget, QListWidgetItem, QPlainTextEdit, QProgressBar,
+    QPushButton, QRadioButton, QScrollArea, QSizePolicy,
+    QSlider, QSpacerItem, QSpinBox, QTableView,
+    QTableWidget, QTableWidgetItem, QTextEdit, QToolBox,
+    QTreeWidget, QTreeWidgetItem, QVBoxLayout, QWidget)
 
 class Ui_main(object):
     def setupUi(self, main):
@@ -106,7 +106,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -3460, 818, 5992))
+        self.vlay_wg.setGeometry(QRect(0, -1418, 818, 6158))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -332,10 +332,20 @@ class Ui_main(object):
 
         self.vlay_lw.addItem(self.verticalSpacer_13)
 
+        self.lv_demo_th = QListView(self.fr_lw)
+        self.lv_demo_th.setObjectName(u"lv_demo_th")
+
+        self.vlay_lw.addWidget(self.lv_demo_th)
+
         self.lw_demo_th = QListWidget(self.fr_lw)
         self.lw_demo_th.setObjectName(u"lw_demo_th")
 
         self.vlay_lw.addWidget(self.lw_demo_th)
+
+        self.lv_demo_tr = QListView(self.fr_lw)
+        self.lv_demo_tr.setObjectName(u"lv_demo_tr")
+
+        self.vlay_lw.addWidget(self.lv_demo_tr)
 
         self.lw_demo_tr = QListWidget(self.fr_lw)
         self.lw_demo_tr.setObjectName(u"lw_demo_tr")

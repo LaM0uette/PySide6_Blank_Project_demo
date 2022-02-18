@@ -756,37 +756,37 @@ class StyleSheet:
 /****************************
 **       QListWidget       **
 *****************************/
-                .QListWidget {{
+                .QListWidget, .QListView {{
                 background-color: rgba{bg};
                 color: rgba{fg};
                 }}
         
                 /* ITEM */
-                .QListWidget::item {{
+                .QListWidget::item, .QListView::item {{
                 background-color: rgba{bg_item};
                 color: rgba{fg_item};
                 }}
-                .QListWidget::item:selected {{
+                .QListWidget::item:selected, .QListView::item:selected {{
                 background-color: rgba{bg_item_checked};
                 color: rgba{fg_item_checked};
                 }}
-                .QListWidget::item:hover {{
+                .QListWidget::item:hover, .QListView::item:hover {{
                 background-color: rgba{bg_item_hover};
                 color: rgba{fg_item_hover};
                 }}
-                .QListWidget::item:selected:hover {{
+                .QListWidget::item:selected:hover, .QListView::item:selected:hover {{
                 background-color: rgba{bg_item_checked_hover};
                 color: rgba{fg_item_checked_hover};
                 }}
         
                 /* BORDURES */
-                .QListWidget {{
+                .QListWidget, .QListView {{
                 border-top: {border_top}px {border_style} rgba{border_rgb};
                 border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
                 border-right: {border_right}px {border_style} rgba{border_rgb};
                 border-left: {border_left}px {border_style} rgba{border_rgb};
                 }}
-                .QListWidget:hover {{
+                .QListWidget:hover, .QListView:hover {{
                 border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
                 border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
                 border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};

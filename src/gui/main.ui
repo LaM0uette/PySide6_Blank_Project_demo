@@ -151,9 +151,9 @@
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>-3460</y>
+              <y>-1418</y>
               <width>818</width>
-              <height>5992</height>
+              <height>6158</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout">
@@ -712,7 +712,13 @@
                  </spacer>
                 </item>
                 <item>
+                 <widget class="QListView" name="lv_demo_th"/>
+                </item>
+                <item>
                  <widget class="QListWidget" name="lw_demo_th"/>
+                </item>
+                <item>
+                 <widget class="QListView" name="lv_demo_tr"/>
                 </item>
                 <item>
                  <widget class="QListWidget" name="lw_demo_tr"/>

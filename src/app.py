@@ -77,8 +77,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         ### QListWidget ###
-        ListWidget.Demo_th(self.lw_demo_th)
-        ListWidget.Demo_tr(self.lw_demo_tr)
+        ListWidget.Demo_th(self.lv_demo_th, self.lw_demo_th)
+        ListWidget.Demo_tr(self.lv_demo_tr, self.lw_demo_tr)
         ### /QListWidget ###
 
 
@@ -189,15 +189,19 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         # Demo lw
+        model = QtGui.QStandardItemModel(60, 1)
         for i in range(60):
             self.lw_demo_th.addItem(f"je suis l'item : {i}")
             self.lw_demo_tr.addItem(f"je suis l'item : {i}")
+            model.setItem(i, 0, QtGui.QStandardItem(f"je suis l'item : {i}"))
+        self.lv_demo_th.setModel(model)
+        self.lv_demo_tr.setModel(model)
 
         # Demo tv
         model = QtGui.QStandardItemModel(20, 100)
         for ic in range(100):
             for ir in range(20):
-                model.setItem(ir, ic, QtGui.QStandardItem("TestDeTxt"))
+                model.setItem(ir, ic, QtGui.QStandardItem(f"item:{ic+ir}"))
         self.tv_demo_th.setModel(model)
         self.tv_demo_tr.setModel(model)
     def IN_CONNECTIONS(self):
