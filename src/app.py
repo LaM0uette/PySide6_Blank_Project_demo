@@ -153,8 +153,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         ### QTreeWidget ###
-        Tree_widget.Base_th(self.trw_demo_th)
-        Tree_widget.Base_tr(self.trw_demo_tr)
+        Tree_widget.Base_th(self.trv_demo_th, self.trw_demo_th)
+        Tree_widget.Base_tr(self.trv_demo_tr, self.trw_demo_tr)
         ### /QTreeWidget ###
 
         # Lancement des fonctions de MEF global

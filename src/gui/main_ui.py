@@ -22,7 +22,8 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QDateEdit,
     QPushButton, QRadioButton, QScrollArea, QSizePolicy,
     QSlider, QSpacerItem, QSpinBox, QTableView,
     QTableWidget, QTableWidgetItem, QTextEdit, QToolBox,
-    QTreeWidget, QTreeWidgetItem, QVBoxLayout, QWidget)
+    QTreeView, QTreeWidget, QTreeWidgetItem, QVBoxLayout,
+    QWidget)
 
 class Ui_main(object):
     def setupUi(self, main):
@@ -106,11 +107,11 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -1418, 818, 6158))
+        self.vlay_wg.setGeometry(QRect(0, -5415, 818, 6320))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.verticalLayout.setContentsMargins(50, 50, 50, 50)
+        self.verticalLayout.setContentsMargins(100, 50, 100, 50)
         self.fr_ck = QFrame(self.vlay_wg)
         self.fr_ck.setObjectName(u"fr_ck")
         self.vlay_ck = QVBoxLayout(self.fr_ck)
@@ -1077,7 +1078,7 @@ class Ui_main(object):
         self.tb_demo_th.setObjectName(u"tb_demo_th")
         self.page = QWidget()
         self.page.setObjectName(u"page")
-        self.page.setGeometry(QRect(0, 0, 696, 69))
+        self.page.setGeometry(QRect(0, 0, 596, 69))
         self.verticalLayout_2 = QVBoxLayout(self.page)
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
@@ -1092,7 +1093,7 @@ class Ui_main(object):
         self.tb_demo_th.addItem(self.page, u"Page 1")
         self.page_2 = QWidget()
         self.page_2.setObjectName(u"page_2")
-        self.page_2.setGeometry(QRect(0, 0, 696, 69))
+        self.page_2.setGeometry(QRect(0, 0, 596, 69))
         self.verticalLayout_3 = QVBoxLayout(self.page_2)
         self.verticalLayout_3.setSpacing(0)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
@@ -1112,7 +1113,7 @@ class Ui_main(object):
         self.tb_demo_tr.setObjectName(u"tb_demo_tr")
         self.page_3 = QWidget()
         self.page_3.setObjectName(u"page_3")
-        self.page_3.setGeometry(QRect(0, 0, 696, 69))
+        self.page_3.setGeometry(QRect(0, 0, 596, 69))
         self.verticalLayout_4 = QVBoxLayout(self.page_3)
         self.verticalLayout_4.setSpacing(0)
         self.verticalLayout_4.setObjectName(u"verticalLayout_4")
@@ -1127,7 +1128,7 @@ class Ui_main(object):
         self.tb_demo_tr.addItem(self.page_3, u"Page 1")
         self.page_4 = QWidget()
         self.page_4.setObjectName(u"page_4")
-        self.page_4.setGeometry(QRect(0, 0, 696, 69))
+        self.page_4.setGeometry(QRect(0, 0, 596, 69))
         self.verticalLayout_5 = QVBoxLayout(self.page_4)
         self.verticalLayout_5.setSpacing(0)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
@@ -1155,6 +1156,11 @@ class Ui_main(object):
         self.glay_fr_trw.setHorizontalSpacing(0)
         self.glay_fr_trw.setVerticalSpacing(10)
         self.glay_fr_trw.setContentsMargins(10, 10, 10, 10)
+        self.trv_demo_th = QTreeView(self.fr_trw)
+        self.trv_demo_th.setObjectName(u"trv_demo_th")
+
+        self.glay_fr_trw.addWidget(self.trv_demo_th, 2, 1, 1, 1)
+
         self.trw_demo_th = QTreeWidget(self.fr_trw)
         self.trw_demo_th.headerItem().setText(0, "")
         __qtreewidgetitem = QTreeWidgetItem(self.trw_demo_th)
@@ -1205,19 +1211,19 @@ class Ui_main(object):
         QTreeWidgetItem(__qtreewidgetitem19)
         self.trw_demo_th.setObjectName(u"trw_demo_th")
 
-        self.glay_fr_trw.addWidget(self.trw_demo_th, 2, 1, 1, 1)
+        self.glay_fr_trw.addWidget(self.trw_demo_th, 3, 1, 1, 1)
 
         self.verticalSpacer_24 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Fixed)
 
-        self.glay_fr_trw.addItem(self.verticalSpacer_24, 3, 1, 1, 1)
+        self.glay_fr_trw.addItem(self.verticalSpacer_24, 4, 1, 1, 1)
 
         self.horizontalSpacer_8 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.glay_fr_trw.addItem(self.horizontalSpacer_8, 2, 2, 4, 1)
+        self.glay_fr_trw.addItem(self.horizontalSpacer_8, 3, 2, 5, 1)
 
         self.horizontalSpacer_7 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.glay_fr_trw.addItem(self.horizontalSpacer_7, 2, 0, 4, 1)
+        self.glay_fr_trw.addItem(self.horizontalSpacer_7, 3, 0, 5, 1)
 
         self.verticalSpacer_23 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Fixed)
 
@@ -1278,7 +1284,12 @@ class Ui_main(object):
         QTreeWidgetItem(__qtreewidgetitem39)
         self.trw_demo_tr.setObjectName(u"trw_demo_tr")
 
-        self.glay_fr_trw.addWidget(self.trw_demo_tr, 4, 1, 1, 1)
+        self.glay_fr_trw.addWidget(self.trw_demo_tr, 6, 1, 1, 1)
+
+        self.trv_demo_tr = QTreeView(self.fr_trw)
+        self.trv_demo_tr.setObjectName(u"trv_demo_tr")
+
+        self.glay_fr_trw.addWidget(self.trv_demo_tr, 5, 1, 1, 1)
 
 
         self.verticalLayout.addWidget(self.fr_trw)
