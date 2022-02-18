@@ -1,66 +1,36 @@
-from PySide6 import QtGui
-
+from .StyleSheet import StyleSheet
 from ....build import *
 from ....build.widgets import p_base
 
 class Style:
-    def __init__(self,
-                 *wgs,
-                 couleur_bg=p_base._COLORS_BG,
-                 couleur_bg_placeholder=p_base.COLORS_BG_PLACEHOLDER,
-                 couleur_bg_selection=p_base.COLORS_BG_SELECTION,
-                 couleur_fg=p_base._COLORS_FG,
-                 couleur_fg_placeholder=p_base.COLORS_FG_PLACEHOLDER,
-                 couleur_fg_selection=p_base.COLORS_FG_SELECTION,
-                 dim_width=p_base.WG_WIDTH,
-                 dim_height=p_base.WG_HEIGHT,
-                 police=p_base.FONT,
-                 police_taille=p_base.FONT_SIZE,
-                 bordure_width_top=p_base.WG_BORDER_WIDTH,
-                 bordure_width_bottom=p_base.WG_BORDER_WIDTH,
-                 bordure_width_right=p_base.WG_BORDER_WIDTH,
-                 bordure_width_left=p_base.WG_BORDER_WIDTH,
-                 bordure_style_top=p_base.WG_BORDER_STYLE,
-                 bordure_style_bottom=p_base.WG_BORDER_STYLE,
-                 bordure_style_right=p_base.WG_BORDER_STYLE,
-                 bordure_style_left=p_base.WG_BORDER_STYLE,
-                 bordure_couleur_top=p_base.WG_BORDER_RGB,
-                 bordure_couleur_bottom=p_base.WG_BORDER_RGB,
-                 bordure_couleur_right=p_base.WG_BORDER_RGB,
-                 bordure_couleur_left=p_base.WG_BORDER_RGB,
-                 rayon_top_left=p_base.WG_RADIUS,
-                 rayon_top_right=p_base.WG_RADIUS,
-                 rayon_bottom_right=p_base.WG_RADIUS,
-                 rayon_bottom_left=p_base.WG_RADIUS,
-                 scroll_bg=p_base.SCROLL_BG,
-                 scroll_handle_bg=p_base.SCROLL_HANDLE_BG,
-                 scroll_handle_fg=p_base.SCROLL_HANDLE_FG,
-                 scroll_width=p_base.SCROLL_WIDTH,
-                 scroll_height=p_base.SCROLL_HEIGHT,
-                 scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
-                 scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
-                 align=p_base.ALIGN,
+    def __init__(
+            self,
+            *wgs,
+            width=p_base.WG_WIDTH,
+            height=p_base.WG_HEIGHT,
+            font=p_base.FONT,
+            font_size=p_base.FONT_SIZE,
+            align_horizontal=Align().left(),
+            align_vertical=Align().v_center(),
+            style=StyleSheet().get()
     ):
 
         for wg in wgs:
             wg.setStyleSheet(style)
 
-            try:
-                Fct(wg=wg, w=dim_width, h=dim_height).DIM()
-                wg.setFont(Fct(font=police, font_size=police_taille).FONT())
+            Fct(wg=wg, w=width, h=height).DIM()
+            wg.setFont(Fct(font=font, font_size=font_size).FONT())
 
-                wg.setAlignment(align)
+            wg.setAlignment(align_horizontal | align_vertical)
 
-                wg.setCursor(Fct(cur=P_cur().IBeam()).CUR())
-            except: pass
+            wg.setCursor(Fct(cur=P_cur().IBeam()).CUR())
 
             try: wg.viewport().setCursor(Fct(cur=P_cur().IBeam()).CUR())
             except: pass
 
-            pl = QtGui.QPalette()
-            pl.setColor(QtGui.QPalette.PlaceholderText, QtGui.QColor(*couleur_fg_placeholder))
-            pl.setColor(QtGui.QPalette.Text, QtGui.QColor(*couleur_fg))
-            wg.setPalette(pl)
+            wg.setPalette(StyleSheet.get_txt_palette())
+
+
 
 
 class Base_th(Style):

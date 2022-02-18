@@ -51,6 +51,7 @@ FG_HOVER = Rgb().bn1()
 FG_CHECKED = Rgb().th3()
 FG_CHECKED_HOVER = Rgb().bn1()
 FG_SELECTION = Rgb().th3()
+FG_PLACEHOLDER = Rgb().th2()
 # FG item
 FG_ITEM = Rgb().th1()
 FG_ITEM_HOVER = Rgb().bn1()

@@ -1,3 +1,5 @@
+from PySide6 import QtGui
+
 from ....build import *
 from ....build.widgets import p_base
 
@@ -33,6 +35,7 @@ class StyleSheet:
             fg_checked=p_base.FG_CHECKED,
             fg_checked_hover=p_base.FG_CHECKED_HOVER,
             fg_selection=p_base.FG_SELECTION,
+            fg_placeholder=p_base.FG_PLACEHOLDER,
             fg_item_gen=None,
             fg_item=p_base.FG_ITEM,
             fg_item_hover=p_base.FG_ITEM_HOVER,
@@ -1094,5 +1097,11 @@ class StyleSheet:
 ****************************/
 """
 
+        self.palette_txt = QtGui.QPalette()
+        self.palette_txt.setColor(QtGui.QPalette.PlaceholderText, QtGui.QColor(*fg_placeholder))
+        self.palette_txt.setColor(QtGui.QPalette.Text, QtGui.QColor(*fg))
+
 
     def get(self): return self.style
+    def get_txt_palette(self): return self.palette_txt
+
