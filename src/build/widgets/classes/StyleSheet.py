@@ -1099,18 +1099,18 @@ class StyleSheet:
 *****************************/
                 QHeaderView::section {{
                 background-color: rgba{bg};
-                color: rgb{fg};
+                color: rgba{fg};
                 border: none;
                 }}
         
                 QTreeWidget {{
                 background-color: rgba{bg};
-                color: rgb{fg};
+                color: rgba{fg};
                 }}
         
                 QTreeWidget::item {{
                 background-color: rgba{bg_item};
-                color: rgb{fg_item};
+                color: rgba{fg_item};
                 border-top: {border_item_top}px {border_item_style} rgba{border_item_rgb};
                 border-bottom: {border_item_bottom}px {border_item_style} rgba{border_item_rgb};
                 border-right: {border_item_right}px {border_item_style} rgba{border_item_rgb};
@@ -1119,7 +1119,7 @@ class StyleSheet:
         
                 QTreeWidget::item:hover {{
                 background-color: rgba{bg_item_hover};
-                color: rgb{fg_item_hover};
+                color: rgba{fg_item_hover};
                 border-top: {border_item_top_hover}px {border_item_style_hover} rgba{border_item_rgb_hover};
                 border-bottom: {border_item_bottom_hover}px {border_item_style_hover} rgba{border_item_rgb_hover};
                 border-right: {border_item_right_hover}px {border_item_style_hover} rgba{border_item_rgb_hover};
@@ -1128,7 +1128,7 @@ class StyleSheet:
         
                 QTreeWidget::item:selected {{
                 background-color: rgba{bg_item_checked};
-                color: rgb{fg_item_checked};
+                color: rgba{fg_item_checked};
                 border-top: {border_item_top_checked}px {border_item_style_checked} rgba{border_item_rgb_checked};
                 border-bottom: {border_item_bottom_checked}px {border_item_style_checked} rgba{border_item_rgb_checked};
                 border-right: {border_item_right_checked}px {border_item_style_checked} rgba{border_item_rgb_checked};
@@ -1137,7 +1137,7 @@ class StyleSheet:
         
                 QTreeWidget::item:selected:hover {{
                 background-color: rgba{bg_item_checked_hover};
-                color: rgb{fg_item_checked_hover};
+                color: rgba{fg_item_checked_hover};
                 border-top: {border_item_top_checked_hover}px {border_item_style_checked_hover} rgba{border_item_rgb_checked_hover};
                 border-bottom: {border_item_bottom_checked_hover}px {border_item_style_checked_hover} rgba{border_item_rgb_checked_hover};
                 border-right: {border_item_right_checked_hover}px {border_item_style_checked_hover} rgba{border_item_rgb_checked_hover};
