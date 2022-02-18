@@ -149,8 +149,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         ### QToolBox ###
-        Tool_box.Base_th(self.tb_demo_th)
-        Tool_box.Base_tr(self.tb_demo_tr)
+        ToolBox.Base_th(self.tb_demo_th)
+        ToolBox.Base_tr(self.tb_demo_tr)
         ### /QToolBox ###
 
 
