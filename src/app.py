@@ -192,6 +192,14 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         for i in range(60):
             self.lw_demo_th.addItem(f"je suis l'item : {i}")
             self.lw_demo_tr.addItem(f"je suis l'item : {i}")
+
+        # Demo tv
+        model = QtGui.QStandardItemModel(20, 100)
+        for ic in range(100):
+            for ir in range(20):
+                model.setItem(ir, ic, QtGui.QStandardItem("TestDeTxt"))
+        self.tv_demo_th.setModel(model)
+        self.tv_demo_tr.setModel(model)
     def IN_CONNECTIONS(self):
         ## Menu_top
         self.pb_mt_option.clicked.connect(lambda: Option(fen=fen).MAIN())
