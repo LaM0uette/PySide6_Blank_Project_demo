@@ -47,6 +47,14 @@ class Base_tr(Style):
 
             style=StyleSheet(
                 bg_gen=Rgb().tr(),
+                bg_item_gen=Rgb().tr(),
+                fg_item=Rgb().th3(),
+                fg_item_checked=Rgb().bn1(),
+                border_item_gen_left=2,
+                border_item_rgb=Rgb().th2(),
+                border_item_rgb_hover=Rgb().th3(),
+                border_item_rgb_checked=Rgb().bn1(),
+                border_item_rgb_checked_hover=Rgb().bn1(),
             ).get()
     )
 
@@ -60,5 +68,13 @@ class option(Style):
 
             style=StyleSheet(
                 bg_gen=Rgb().tr(),
+                bg_item_gen=Rgb().tr(),
+                fg_item=Rgb().th3(),
+                fg_item_checked=Rgb().bn1(),
+                border_item_gen_left=2,
+                border_item_rgb=Rgb().th2(),
+                border_item_rgb_hover=Rgb().th3(),
+                border_item_rgb_checked=Rgb().bn1(),
+                border_item_rgb_checked_hover=Rgb().bn1(),
             ).get()
     )
