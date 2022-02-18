@@ -1094,21 +1094,21 @@ class StyleSheet:
 
 
 
-/****************************
-**       QTreeWidget       **
-*****************************/
+/*******************************************
+**       QTreeWidget  |   QTreeView       **
+********************************************/
                 QHeaderView::section {{
                 background-color: rgba{bg};
                 color: rgba{fg};
                 border: none;
                 }}
         
-                QTreeWidget {{
+                QTreeWidget, QTreeView {{
                 background-color: rgba{bg};
                 color: rgba{fg};
                 }}
         
-                QTreeWidget::item {{
+                QTreeWidget::item, QTreeView::item {{
                 background-color: rgba{bg_item};
                 color: rgba{fg_item};
                 border-top: {border_item_top}px {border_item_style} rgba{border_item_rgb};
@@ -1117,7 +1117,7 @@ class StyleSheet:
                 border-left: {border_item_left}px {border_item_style} rgba{border_item_rgb};
                 }}
         
-                QTreeWidget::item:hover {{
+                QTreeWidget::item:hover, QTreeView::item:hover {{
                 background-color: rgba{bg_item_hover};
                 color: rgba{fg_item_hover};
                 border-top: {border_item_top_hover}px {border_item_style_hover} rgba{border_item_rgb_hover};
@@ -1126,7 +1126,7 @@ class StyleSheet:
                 border-left: {border_item_left_hover}px {border_item_style_hover} rgba{border_item_rgb_hover};
                 }}
         
-                QTreeWidget::item:selected {{
+                QTreeWidget::item:selected, QTreeView::item:selected {{
                 background-color: rgba{bg_item_checked};
                 color: rgba{fg_item_checked};
                 border-top: {border_item_top_checked}px {border_item_style_checked} rgba{border_item_rgb_checked};
@@ -1135,7 +1135,7 @@ class StyleSheet:
                 border-left: {border_item_left_checked}px {border_item_style_checked} rgba{border_item_rgb_checked};
                 }}
         
-                QTreeWidget::item:selected:hover {{
+                QTreeWidget::item:selected:hover, QTreeView::item:selected:hover {{
                 background-color: rgba{bg_item_checked_hover};
                 color: rgba{fg_item_checked_hover};
                 border-top: {border_item_top_checked_hover}px {border_item_style_checked_hover} rgba{border_item_rgb_checked_hover};
@@ -1145,21 +1145,21 @@ class StyleSheet:
                 }}
         
                 /* BORDURES */
-                .QTreeWidget {{
+                .QTreeWidget, .QTreeView {{
                 border-top: {border_top}px {border_style} rgba{border_rgb};
                 border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
                 border-right: {border_right}px {border_style} rgba{border_rgb};
                 border-left: {border_left}px {border_style} rgba{border_rgb};
                 }}
-                .QTreeWidget:hover {{
+                .QTreeWidget:hover, .QTreeView:hover {{
                 border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
                 border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
                 border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
                 border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
                 }}
-/****************************
-**      /QTreeWidget       **
-*****************************/
+/*******************************************
+**      /QTreeWidget  |  /QTreeView       **
+********************************************/
 
 
 
