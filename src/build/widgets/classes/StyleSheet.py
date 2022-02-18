@@ -1098,8 +1098,8 @@ class StyleSheet:
 **       QTreeWidget  |   QTreeView       **
 ********************************************/
                 QHeaderView::section {{
-                background-color: rgba{bg};
-                color: rgba{fg};
+                background-color: rgba{bg_header};
+                color: rgba{fg_header};
                 border: none;
                 }}
         
