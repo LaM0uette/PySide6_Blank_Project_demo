@@ -7,7 +7,7 @@ importlib.reload(stl)
 
 from .classes import CheckBox, ComboBox, DateEdit, Frame, Label, \
     ListWidget, ProgressBar, RadioButton, ScrollArea, Slider, \
-    SpinBox, TableWidget, Text_edit, Tool_box, Tree_widget, Push_button
+    SpinBox, TableWidget, TextEdit, Tool_box, Tree_widget, Push_button
 
 importlib.reload(CheckBox)
 importlib.reload(ComboBox)
@@ -22,6 +22,6 @@ importlib.reload(ScrollArea)
 importlib.reload(Slider)
 importlib.reload(SpinBox)
 importlib.reload(TableWidget)
-importlib.reload(Text_edit)
+importlib.reload(TextEdit)
 importlib.reload(Tool_box)
 importlib.reload(Tree_widget)

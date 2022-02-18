@@ -139,10 +139,10 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         ### QText ###
-        Text_edit.Base_th(self.le_demo_th)
-        Text_edit.Base_tr(self.le_demo_tr)
-        Text_edit.Demo_th(self.te_demo_th, self.pte_demo_th)
-        Text_edit.Demo_tr(self.te_demo_tr, self.pte_demo_tr)
+        TextEdit.Base_th(self.le_demo_th)
+        TextEdit.Base_tr(self.le_demo_tr)
+        TextEdit.Demo_th(self.te_demo_th, self.pte_demo_th)
+        TextEdit.Demo_tr(self.te_demo_tr, self.pte_demo_tr)
         ### /QText ###
 
 

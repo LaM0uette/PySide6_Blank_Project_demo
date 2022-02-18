@@ -67,7 +67,7 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
 
 
         ### QText ###
-        Text_edit.Demo_th(self.le_input_text)
+        TextEdit.Demo_th(self.le_input_text)
         ### /QText ###
 
         # Lancement des fonctions de MEF global

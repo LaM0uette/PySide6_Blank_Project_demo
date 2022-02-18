@@ -78,7 +78,7 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
 
 
         ### QText ###
-        Text_edit.Base_tr(self.le_rgb_hex)
+        TextEdit.Base_tr(self.le_rgb_hex)
         ### /QText ###
 
         # Lancement des fonctions de MEF global

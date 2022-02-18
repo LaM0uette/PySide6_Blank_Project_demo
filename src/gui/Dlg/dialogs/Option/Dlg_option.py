@@ -114,11 +114,11 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
 
 
         ### QText ###
-        Text_edit.tr_taille(self.le_opt_ft_texte_h1, h=P_font().h1())
-        Text_edit.tr_taille(self.le_opt_ft_texte_h2, h=P_font().h2())
-        Text_edit.tr_taille(self.le_opt_ft_texte_h3, h=P_font().h3())
-        Text_edit.tr_taille(self.le_opt_ft_texte_h4, h=P_font().h4())
-        Text_edit.tr_taille(self.le_opt_ft_texte_h5, h=P_font().h5())
+        TextEdit.tr_taille(self.le_opt_ft_texte_h1, h=P_font().h1())
+        TextEdit.tr_taille(self.le_opt_ft_texte_h2, h=P_font().h2())
+        TextEdit.tr_taille(self.le_opt_ft_texte_h3, h=P_font().h3())
+        TextEdit.tr_taille(self.le_opt_ft_texte_h4, h=P_font().h4())
+        TextEdit.tr_taille(self.le_opt_ft_texte_h5, h=P_font().h5())
         ### /QText ###
 
 
