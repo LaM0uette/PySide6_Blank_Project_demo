@@ -1100,7 +1100,10 @@ class StyleSheet:
                 QHeaderView::section {{
                 background-color: rgba{bg_header};
                 color: rgba{fg_header};
-                border: none;
+                border-top: {border_hd_top}px {border_hd_style} rgba{border_hd_rgb};
+                border-bottom: {border_hd_bottom}px {border_hd_style} rgba{border_hd_rgb};
+                border-right: {border_hd_right}px {border_hd_style} rgba{border_hd_rgb};
+                border-left: {border_hd_left}px {border_hd_style} rgba{border_hd_rgb};
                 }}
         
                 QTreeWidget, QTreeView {{
