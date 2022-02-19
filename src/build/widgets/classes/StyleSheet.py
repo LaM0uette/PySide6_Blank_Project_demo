@@ -1,4 +1,4 @@
-from PySide6 import QtGui
+from PySide6 import QtGui, QtCore
 
 from ....build import *
 from ....build.widgets import p_base
@@ -1332,4 +1332,13 @@ class StyleSheet:
                 img_check_hover_rgb=self.img_check_hover_rgb,
             )
             return cls
+
+    def MP_CHECK(self, wg, event):
+        if event.buttons() and QtCore.Qt.LeftButton and wg.isEnabled():
+            if wg.isChecked():
+                wg.setChecked(False)
+                Fct(wg=wg, img=self.img + self.img_rgb, dim=self.img_height * self.x_ico).ICON()
+            elif not wg.isChecked():
+                wg.setChecked(True)
+                Fct(wg=wg, img=self.img_check + self.img_rgb, dim=self.img_height * self.x_ico).ICON()
 
