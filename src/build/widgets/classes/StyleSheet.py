@@ -1313,13 +1313,13 @@ class StyleSheet:
         return palette_txt
     def get_cls_pb(self, wg, wg_type):
         if wg_type is not None and self.img is not None:
-            Fct(wg=wg, img=f"{self.img}{self.img_rgb}", dim=self.img_height * self.x_ico).ICON()
+            Fct(wg=wg, img=f"{self.img}{self.img_rgb}", dim=self.img_height).ICON()
 
         if wg_type is not None:
             cls = Classe_pb.Classe_pb(
                 wg=wg,
-                dim_ico=self.img_height * self.x_ico,
-                DIM_ICO=self.img_height * self.X_ICO,
+                dim_ico=self.img_height,
+                DIM_ICO=self.img_height,
                 img=self.img,
                 img_hover=self.img_hover,
                 img_uncheck=self.img_uncheck,
