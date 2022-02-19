@@ -872,7 +872,6 @@ class StyleSheet:
                 QPushButton {{
                 background-color: rgba{bg};
                 color: rgba{fg};
-                image: url({f"{img_uncheck}{img_uncheck_rgb}.svg"});
                 }}
         
                 QPushButton:hover {{
