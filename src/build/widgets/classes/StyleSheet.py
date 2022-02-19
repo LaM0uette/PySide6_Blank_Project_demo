@@ -56,6 +56,8 @@ class StyleSheet:
             # Dimensions WG
             width=p_base.WG_WIDTH,
             height=p_base.WG_HEIGHT,
+            x_ico=P_style().x_ico(),
+            X_ICO=P_style().X_ICO(),
             spacing=10,
             padding_top=0,
             padding_bottom=0,
@@ -1278,11 +1280,20 @@ class StyleSheet:
 ****************************/
 """
 
-        self.palette_txt = QtGui.QPalette()
-        self.palette_txt.setColor(QtGui.QPalette.Text, QtGui.QColor(*fg))
-        self.palette_txt.setColor(QtGui.QPalette.PlaceholderText, QtGui.QColor(*fg_placeholder))
+        self.fg = fg
+        self.fg_placeholder = fg_placeholder
+        self.img_uncheck = img_uncheck
+        self.img_uncheck_rgb = img_uncheck_rgb
+        self.img_height = img_height
 
 
     def get(self): return self.style
-    def get_txt_palette(self): return self.palette_txt
+    def get_txt_palette(self):
+        palette_txt = QtGui.QPalette()
+        palette_txt.setColor(QtGui.QPalette.Text, QtGui.QColor(*self.fg))
+        palette_txt.setColor(QtGui.QPalette.PlaceholderText, QtGui.QColor(*self.fg_placeholder))
+        return palette_txt
+    def set_ico_base(self, wg):
+        if self.img_uncheck is not None:
+            Fct(wg=wg, img=f"{self.img_uncheck}{self.img_uncheck_rgb}", dim=self.img_height).ICON()
 

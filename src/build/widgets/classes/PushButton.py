@@ -1,29 +1,28 @@
 from PySide6 import QtWidgets
 
+from .StyleSheet import StyleSheet
 from ....build.widgets.classes import Classe_pb
 from ....build import *
 from ....build.widgets import p_base
 
 class Style:
-    def __init__(self,
-                 *wgs,
-                 type_bouton=None,
-                 img_uncheck=p_base.IMG_UNCHECK,
-                 tm_uncheck=p_base.IMG_UNCHECK_RGB,
-                 dim_width=p_base.WG_WIDTH,
-                 dim_height=p_base.WG_HEIGHT,
-                 x_ico=p_base.P_style().x_ico(),
-                 X_ICO=p_base.P_style().X_ICO(),
-                 police=p_base.FONT,
-                 police_taille=p_base.FONT_SIZE,
-                 curseur=p_base.CUR
+    def __init__(
+            self,
+            *wgs,
+            type_bouton=None,
+            width=p_base.WG_WIDTH,
+            height=p_base.WG_HEIGHT,
+            font=p_base.FONT,
+            font_size=p_base.FONT_SIZE,
+            curseur=p_base.CUR,
+            style=StyleSheet().get()
     ):
         for wg in wgs:
             wg.setStyleSheet(style)
 
             try:
-                Fct(wg=wg, w=dim_width, h=dim_height).DIM()
-                wg.setFont(Fct(font=police, font_size=police_taille).FONT())
+                Fct(wg=wg, w=width, h=height).DIM()
+                wg.setFont(Fct(font=font, font_size=font_size).FONT())
 
                 wg.setFlat(True)
                 wg.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
@@ -31,8 +30,7 @@ class Style:
                 wg.setCursor(Fct(cur=curseur).CUR())
             except: pass
 
-            if img_uncheck is not None and type_bouton is not None:
-                Fct(wg=wg, img=f"{img_uncheck}{tm_uncheck}", dim=dim_height * x_ico).ICON()
+            # if type_bouton is not None: StyleSheet().set_ico_base(wg=wg)
 
             # try:
             #     if type_bouton is not None and type_bouton is not None:
