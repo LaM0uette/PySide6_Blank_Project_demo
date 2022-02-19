@@ -22,8 +22,8 @@ class Style:
     ):
         for wg in wgs:
             wg.setStyleSheet(style.get())
-            wg.horizontalHeader().setStyleSheet(style)
-            wg.verticalHeader().setStyleSheet(style)
+            wg.horizontalHeader().setStyleSheet(style.get())
+            wg.verticalHeader().setStyleSheet(style.get())
 
             try:
                 Fct(wg=wg, w=width, h=height).DIM()
