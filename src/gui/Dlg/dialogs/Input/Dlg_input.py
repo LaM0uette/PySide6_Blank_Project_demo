@@ -61,8 +61,8 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
 
 
         ### QPushButton ###
-        Push_button.dlg_ok(self.pb_input_ok)
-        Push_button.dlg_nok_inv(self.pb_input_annuler)
+        PushButton.dlg_ok(self.pb_input_ok)
+        PushButton.dlg_nok_inv(self.pb_input_annuler)
         ### /QPushButton ###
 
 

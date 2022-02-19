@@ -60,8 +60,8 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
 
 
         ### QPushButton ###
-        Push_button.dlg_ok(self.pb_rep_ok)
-        Push_button.dlg_nok_inv(self.pb_rep_annuler)
+        PushButton.dlg_ok(self.pb_rep_ok)
+        PushButton.dlg_nok_inv(self.pb_rep_annuler)
         ### /QPushButton ###
 
 

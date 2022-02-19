@@ -62,8 +62,8 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
 
 
         ### QPushButton ###
-        Push_button.dlg_ok(self.pb_rgb_ok)
-        Push_button.dlg_nok_inv(self.pb_rgb_annuler)
+        PushButton.dlg_ok(self.pb_rgb_ok)
+        PushButton.dlg_nok_inv(self.pb_rgb_annuler)
         ### /QPushButton ###
 
 

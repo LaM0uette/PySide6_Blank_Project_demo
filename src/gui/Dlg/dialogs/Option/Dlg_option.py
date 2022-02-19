@@ -96,14 +96,14 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
 
 
         ### QPushButton ###
-        Push_button.dlg_ok(self.pb_opt_appliquer)
-        Push_button.dlg_ok_inv(self.pb_opt_ok)
+        PushButton.dlg_ok(self.pb_opt_appliquer)
+        PushButton.dlg_ok_inv(self.pb_opt_ok)
 
-        Push_button.plein(self.pb_opt_tm_th1).th1()
-        Push_button.plein(self.pb_opt_tm_th2).th2()
-        Push_button.plein(self.pb_opt_tm_th3).th3()
-        Push_button.plein(self.pb_opt_tm_bn1).bn1()
-        Push_button.plein(self.pb_opt_tm_bn2).bn2()
+        PushButton.plein(self.pb_opt_tm_th1).th1()
+        PushButton.plein(self.pb_opt_tm_th2).th2()
+        PushButton.plein(self.pb_opt_tm_th3).th3()
+        PushButton.plein(self.pb_opt_tm_bn1).bn1()
+        PushButton.plein(self.pb_opt_tm_bn2).bn2()
         ### /QPushButton ###
 
 

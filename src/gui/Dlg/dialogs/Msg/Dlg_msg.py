@@ -57,7 +57,7 @@ class Dlg_msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
 
 
         ### QPushButton ###
-        Push_button.dlg_ok(self.pb_msg_ok)
+        PushButton.dlg_ok(self.pb_msg_ok)
         ### /QPushButton ###
 
         # Lancement des fonctions de MEF global
