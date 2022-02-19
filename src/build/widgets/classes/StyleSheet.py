@@ -1311,10 +1311,12 @@ class StyleSheet:
         palette_txt.setColor(QtGui.QPalette.PlaceholderText, QtGui.QColor(*self.fg_placeholder))
         return palette_txt
     def get_cls_pb(self, wg, wg_type):
-        if wg_type is not None and self.img is not None:
-            Fct(wg=wg, img=f"{self.img_uncheck}{self.img_uncheck_rgb}", dim=self.img_height).ICON()
-
         if wg_type is not None:
+            if wg_type == "check":
+                Fct(wg=wg, img=f"{self.img_uncheck}{self.img_uncheck_rgb}", dim=self.img_height).ICON()
+            else:
+                Fct(wg=wg, img=f"{self.img}{self.img_rgb}", dim=self.img_height).ICON()
+
             cls = Classe_pb.Classe_pb(
                 wg=wg,
                 dim_ico=self.img_height,
