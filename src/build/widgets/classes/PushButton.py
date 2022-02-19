@@ -178,8 +178,8 @@ class dlg_ok(Style):
                 bg_hover=Rgb().vert(),
                 fg_hover=Rgb().th1(),
                 bg_pressed=Rgb().vert(),
-                border_all=P_style().bd(),
-                border_rgb=Rgb().vert(),
+                border_gen_all=P_style().bd(),
+                border_gen_rgb=Rgb().vert(),
             ).get()
     )
 class dlg_ok_inv(Style):
@@ -195,8 +195,8 @@ class dlg_ok_inv(Style):
                 bg_hover=Rgb().th1(),
                 fg_hover=Rgb().vert(),
                 bg_pressed=Rgb().th1(),
-                border_all=P_style().bd(),
-                border_rgb=Rgb().vert(),
+                border_gen_all=P_style().bd(),
+                border_gen_rgb=Rgb().vert(),
             ).get()
     )
 class dlg_nok(Style):
@@ -211,8 +211,8 @@ class dlg_nok(Style):
                 bg_hover=Rgb().rouge(),
                 fg_hover=Rgb().th1(),
                 bg_pressed=Rgb().rouge(),
-                border_all=P_style().bd(),
-                border_rgb=Rgb().rouge(),
+                border_gen_all=P_style().bd(),
+                border_gen_rgb=Rgb().rouge(),
             ).get()
         )
 class dlg_nok_inv(Style):
@@ -227,8 +227,8 @@ class dlg_nok_inv(Style):
                 bg_hover=Rgb().th1(),
                 fg_hover=Rgb().rouge(),
                 bg_pressed=Rgb().th1(),
-                border_all=P_style().bd(),
-                border_rgb=Rgb().rouge(),
+                border_gen_all=P_style().bd(),
+                border_gen_rgb=Rgb().rouge(),
             ).get()
         )
 
