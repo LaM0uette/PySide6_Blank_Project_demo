@@ -63,3 +63,4 @@ class Classe_pb:
     def LVE_ZOOM(self, event):
         if not self.wg.isChecked() and self.wg.isEnabled():
             self.wg.setIconSize(QtCore.QSize(self.dim_ico, self.dim_ico))
+
