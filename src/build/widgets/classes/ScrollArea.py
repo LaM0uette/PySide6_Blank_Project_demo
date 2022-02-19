@@ -12,10 +12,10 @@ class Style:
             height=p_base.HEIGHT,
             scroll_h=p_base.SCROLL_H,
             scroll_v=p_base.SCROLL_V,
-            style=StyleSheet().get()
+            style=StyleSheet()
     ):
         for wg in wgs:
-            wg.setStyleSheet(style)
+            wg.setStyleSheet(style.get())
 
             Fct(wg=wg, w=width, h=height).DIM()
 
@@ -30,14 +30,14 @@ class Base_th(Style):
         super().__init__(
             *wgs,
             style=StyleSheet(
-            ).get()
+            )
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
             style=StyleSheet(
                 bg=Rgb().tr()
-            ).get()
+            )
         )
 
 
@@ -47,5 +47,5 @@ class Demo(Style):
             *wgs,
             style=StyleSheet(
                 bg=Rgb().th1(),
-            ).get()
+            )
     )

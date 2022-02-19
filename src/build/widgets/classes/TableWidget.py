@@ -18,10 +18,10 @@ class Style:
             header_h=p_base.HEADER_H,
             header_v=p_base.HEADER_V,
             curseur=P_cur().croix(),
-            style=StyleSheet().get()
+            style=StyleSheet()
     ):
         for wg in wgs:
-            wg.setStyleSheet(style)
+            wg.setStyleSheet(style.get())
             wg.horizontalHeader().setStyleSheet(style)
             wg.verticalHeader().setStyleSheet(style)
 
@@ -54,7 +54,7 @@ class Base_th(Style):
             *wgs,
             style=StyleSheet(
                 bg_corner=Rgb().th1(),
-            ).get()
+            )
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
@@ -72,7 +72,7 @@ class Base_tr(Style):
                 bg_item_checked_hover=Rgb().th3(),
                 fg_item=Rgb().th3(),
                 fg_item_checked=Rgb().th1(),
-            ).get()
+            )
     )
 
 
@@ -88,7 +88,7 @@ class Demo_th(Style):
                 border_hd_gen_rgb=Rgb().th1(),
                 border_item_gen_all=1,
                 border_item_gen_rgb=Rgb().th2()
-            ).get()
+            )
     )
 class Demo_tr(Style):
     def __init__(self, *wgs):
@@ -107,5 +107,5 @@ class Demo_tr(Style):
                 bg_item_checked_hover=Rgb().th3(),
                 fg_item=Rgb().th3(),
                 fg_item_checked=Rgb().th1(),
-            ).get()
+            )
     )
