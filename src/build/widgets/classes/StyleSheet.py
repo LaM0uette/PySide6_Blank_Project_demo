@@ -1289,6 +1289,7 @@ class StyleSheet:
         self.fg_placeholder = fg_placeholder
 
         self.img_height = img_height
+        self.IMG_HEIGHT = IMG_HEIGHT
         self.img = img
         self.img_hover = img_hover
         self.img_uncheck = img_uncheck
@@ -1301,8 +1302,6 @@ class StyleSheet:
         self.img_uncheck_hover_rgb = img_uncheck_hover_rgb
         self.img_check_rgb = img_check_rgb
         self.img_check_hover_rgb = img_check_hover_rgb
-        self.x_ico = x_ico
-        self.X_ICO = X_ICO
 
 
     def get(self): return self.style
