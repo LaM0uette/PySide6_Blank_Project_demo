@@ -30,7 +30,8 @@ class Style:
                 wg.setCursor(Fct(cur=curseur).CUR())
             except: pass
 
-            if button_type is not None: StyleSheet().set_ico_base(wg=wg)
+            if button_type is not None and img_uncheck is not None:
+                Fct(wg=wg, img=f"{self.img_uncheck}{self.img_uncheck_rgb}", dim=self.img_height).ICON()
 
             # try:
             #     if button_type is not None and button_type is not None:
