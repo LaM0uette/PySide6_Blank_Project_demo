@@ -79,12 +79,12 @@ class menu_top:
             button_type="zoom",
             width=P_dim().h9() * 1.2,
             curseur=P_cur().souris_main(),
-            couleur_bg=Rgb().tr(),
-            couleur_bg_hover=Rgb().tr(),
-            couleur_bg_checked=Rgb().tr(),
-            couleur_bg_checked_hover=Rgb().tr(),
-            couleur_fg_checked=p_base.COULEURS.get("c3"),
-            couleur_bg_pressed=Rgb().tr(),
+            bg=Rgb().tr(),
+            bg_hover=Rgb().tr(),
+            bg_checked=Rgb().tr(),
+            bg_checked_hover=Rgb().tr(),
+            fg_checked=p_base.COULEURS.get("c3"),
+            bg_pressed=Rgb().tr(),
             img_uncheck=P_img().main(),
             img_uncheck_rgb="th2",
     ):
@@ -95,12 +95,12 @@ class menu_top:
             curseur=curseur,
 
             style=StyleSheet(
-                bg=couleur_bg,
-                bg_hover=couleur_bg_hover,
-                bg_checked=couleur_bg_checked,
-                bg_checked_hover=couleur_bg_checked_hover,
-                fg_checked=couleur_fg_checked,
-                bg_pressed=couleur_bg_pressed,
+                bg=bg,
+                bg_hover=bg_hover,
+                bg_checked=bg_checked,
+                bg_checked_hover=bg_checked_hover,
+                fg_checked=fg_checked,
+                bg_pressed=bg_pressed,
                 img_uncheck=img_uncheck,
                 img_uncheck_rgb=img_uncheck_rgb,
             ).get()
@@ -268,83 +268,66 @@ class plein:
     def __init__(self, *wgs):
         self.wgs = wgs
 
-
     def rtn(self,
-            couleur_bg=(0, 0, 0, 0),
-            couleur_fg=(0, 0, 0),
-            couleur_bg_hover=(0, 0, 0, 0),
-            couleur_fg_hover=(0, 0, 0),
-            dim_height=P_dim().h5(),
+            bg=Rgb().tr(),
+            fg=Rgb().tr(),
+            bg_hover=Rgb().tr(),
+            fg_hover=Rgb().tr(),
+            height=P_dim().h5(),
 
-            bordure_width_top=0,
-            bordure_width_bottom=0,
-            bordure_width_right=0,
-            bordure_width_left=0,
-            bordure_couleur_top=(0, 0, 0, 0),
-            bordure_couleur_bottom=(0, 0, 0, 0),
-            bordure_couleur_right=(0, 0, 0, 0),
-            bordure_couleur_left=(0, 0, 0, 0),
+            border_all=0,
+            border_rgb=Rgb().tr(),
             curseur=P_cur().main()
             ):
-        Style(*self.wgs,
-                 couleur_bg=couleur_bg,
-                 couleur_fg=couleur_fg,
-                 couleur_bg_hover=couleur_bg_hover,
-                 couleur_fg_hover=couleur_fg_hover,
-                 dim_height=dim_height,
+        Style(
+            *self.wgs,
+            height=height,
+            curseur=curseur,
 
-                 bordure_width_top=bordure_width_top,
-                 bordure_width_bottom=bordure_width_bottom,
-                 bordure_width_right=bordure_width_right,
-                 bordure_width_left=bordure_width_left,
-                 bordure_couleur_top=bordure_couleur_top,
-                 bordure_couleur_bottom=bordure_couleur_bottom,
-                 bordure_couleur_right=bordure_couleur_right,
-                 bordure_couleur_left=bordure_couleur_left,
-                 curseur=curseur
-                 )
+            style=StyleSheet(
+                bg=bg,
+                fg=fg,
+                bg_hover=bg_hover,
+                fg_hover=fg_hover,
+                border_all=border_all,
+                border_rgb=border_rgb,
+            ).get()
+        )
 
     def th1(self):
         self.rtn(
-            couleur_bg=P_rgb().th1()+(255, ),
-            couleur_fg=P_rgb().th3(),
-            couleur_bg_hover=P_rgb().th1()+(255, ),
-            couleur_fg_hover=P_rgb().th3()+(255, ),
-
-            bordure_width_top=P_style().bd(),
-            bordure_width_bottom=P_style().bd(),
-            bordure_width_right=P_style().bd(),
-            bordure_width_left=P_style().bd(),
-            bordure_couleur_top=P_rgb().th2() + (255,),
-            bordure_couleur_bottom=P_rgb().th2() + (255,),
-            bordure_couleur_right=P_rgb().th2() + (255,),
-            bordure_couleur_left=P_rgb().th2() + (255,),
+            bg=P_rgb().th1(),
+            fg=P_rgb().th3(),
+            bg_hover=P_rgb().th1(),
+            fg_hover=P_rgb().th3(),
+            border_all=P_style().bd(),
+            border_rgb=P_rgb().th2(),
         )
     def th2(self):
         self.rtn(
-            couleur_bg=P_rgb().th2()+(255, ),
-            couleur_fg=P_rgb().th3(),
-            couleur_bg_hover=P_rgb().th2()+(255, ),
-            couleur_fg_hover=P_rgb().th3()+(255, ),
+            bg=P_rgb().th2(),
+            fg=P_rgb().th3(),
+            bg_hover=P_rgb().th2(),
+            fg_hover=P_rgb().th3(),
         )
     def th3(self):
         self.rtn(
-            couleur_bg=P_rgb().th3()+(255, ),
-            couleur_fg=P_rgb().th1(),
-            couleur_bg_hover=P_rgb().th3()+(255, ),
-            couleur_fg_hover=P_rgb().th1()+(255, ),
+            bg=P_rgb().th3(),
+            fg=P_rgb().th1(),
+            bg_hover=P_rgb().th3(),
+            fg_hover=P_rgb().th1(),
         )
     def bn1(self):
         self.rtn(
-            couleur_bg=P_rgb().bn1()+(255, ),
-            couleur_fg=P_rgb().th3(),
-            couleur_bg_hover=P_rgb().bn1()+(255, ),
-            couleur_fg_hover=P_rgb().th3()+(255, ),
+            bg=P_rgb().bn1(),
+            fg=P_rgb().th3(),
+            bg_hover=P_rgb().bn1(),
+            fg_hover=P_rgb().th3(),
         )
     def bn2(self):
         self.rtn(
-            couleur_bg=P_rgb().bn2()+(255, ),
-            couleur_fg=P_rgb().th3(),
-            couleur_bg_hover=P_rgb().bn2()+(255, ),
-            couleur_fg_hover=P_rgb().th3()+(255, ),
+            bg=P_rgb().bn2(),
+            fg=P_rgb().th3(),
+            bg_hover=P_rgb().bn2(),
+            fg_hover=P_rgb().th3(),
         )
