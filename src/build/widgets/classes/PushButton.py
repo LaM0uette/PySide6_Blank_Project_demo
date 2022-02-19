@@ -126,7 +126,6 @@ class menu_top:
             img_uncheck_rgb="bn2"
         )
 
-
 class txt(Style):
     def __init__(self, *wgs):
         super().__init__(
