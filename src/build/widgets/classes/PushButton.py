@@ -137,8 +137,8 @@ class txt(Style):
                 bg_hover=Rgb().th3(),
                 fg_hover=Rgb().th1(),
                 bg_pressed=Rgb().th3(),
-                border_all=P_style().bd(),
-                border_rgb=Rgb().th3(),
+                border_gen_all=P_style().bd(),
+                border_gen_rgb=Rgb().th3(),
             ).get()
     )
 class txt_inv(Style):
