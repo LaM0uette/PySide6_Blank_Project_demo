@@ -15,10 +15,10 @@ class Style:
             scroll_h=p_base.SCROLL_H,
             scroll_v=p_base.SCROLL_V,
             curseur=p_base.CUR,
-            style=StyleSheet().get()
+            style=StyleSheet()
     ):
         for wg in wgs:
-            wg.setStyleSheet(style)
+            wg.setStyleSheet(style.get())
 
             Fct(wg=wg, w=width, h=height).DIM()
             wg.setFont(Fct(font=font, font_size=font_size).FONT())
@@ -36,7 +36,7 @@ class Base_th(Style):
         super().__init__(
             *wgs,
             style=StyleSheet(
-            ).get()
+            )
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
@@ -55,7 +55,7 @@ class Base_tr(Style):
                 border_item_rgb_hover=Rgb().th3(),
                 border_item_rgb_checked=Rgb().bn1(),
                 border_item_rgb_checked_hover=Rgb().bn1(),
-            ).get()
+            )
     )
 
 class option(Style):
@@ -76,5 +76,5 @@ class option(Style):
                 border_item_rgb_hover=Rgb().th3(),
                 border_item_rgb_checked=Rgb().bn1(),
                 border_item_rgb_checked_hover=Rgb().bn1(),
-            ).get()
+            )
     )
