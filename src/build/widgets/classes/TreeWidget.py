@@ -69,8 +69,12 @@ class option(Style):
             style=StyleSheet(
                 bg_gen=Rgb().tr(),
                 bg_item_gen=Rgb().tr(),
+                bg_header=Rgb().tr(),
                 fg_item=Rgb().th3(),
                 fg_item_checked=Rgb().bn1(),
+                fg_header=Rgb().tr(),
+                border_gen_right=2,
+                border_gen_rgb=Rgb().th2(),
                 border_item_gen_left=2,
                 border_item_rgb=Rgb().th2(),
                 border_item_rgb_hover=Rgb().th3(),
