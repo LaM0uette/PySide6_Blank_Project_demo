@@ -830,9 +830,6 @@
                   <property name="text">
                    <string>PushButton text</string>
                   </property>
-                  <property name="checkable">
-                   <bool>true</bool>
-                  </property>
                  </widget>
                 </item>
                 <item>

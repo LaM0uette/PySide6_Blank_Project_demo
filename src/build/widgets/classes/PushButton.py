@@ -137,6 +137,11 @@ class txt(Style):
                 bg_hover=Rgb().th3(),
                 fg_hover=Rgb().th1(),
                 bg_pressed=Rgb().th3(),
+                bg_checked=Rgb().th3(),
+                fg_checked=Rgb().th1(),
+                bg_checked_hover=Rgb().th1(),
+                fg_checked_hover=Rgb().th3(),
+                bg_checked_pressed=Rgb().th1(),
                 border_gen_all=P_style().bd(),
                 border_gen_rgb=Rgb().th3(),
             ).get()
@@ -151,8 +156,13 @@ class txt_inv(Style):
                 bg_hover=Rgb().th1(),
                 fg_hover=Rgb().th3(),
                 bg_pressed=Rgb().th1(),
-                border_all=P_style().bd(),
-                border_rgb=Rgb().th3(),
+                bg_checked=Rgb().th1(),
+                fg_checked=Rgb().th3(),
+                bg_checked_hover=Rgb().th3(),
+                fg_checked_hover=Rgb().th1(),
+                bg_checked_pressed=Rgb().th3(),
+                border_gen_all=P_style().bd(),
+                border_gen_rgb=Rgb().th3(),
             ).get()
     )
 

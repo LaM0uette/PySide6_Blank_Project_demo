@@ -403,7 +403,6 @@ class Ui_main(object):
 
         self.pb_demo_txt = QPushButton(self.fr_pb)
         self.pb_demo_txt.setObjectName(u"pb_demo_txt")
-        self.pb_demo_txt.setCheckable(True)
 
         self.vlay_pb.addWidget(self.pb_demo_txt)
 
@@ -413,6 +412,7 @@ class Ui_main(object):
 
         self.pb_demo_txt_inv = QPushButton(self.fr_pb)
         self.pb_demo_txt_inv.setObjectName(u"pb_demo_txt_inv")
+        self.pb_demo_txt_inv.setCheckable(True)
 
         self.vlay_pb.addWidget(self.pb_demo_txt_inv)
 
