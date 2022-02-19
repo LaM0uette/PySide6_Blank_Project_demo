@@ -15,5 +15,5 @@ class In_classe:
 
 
         ### QPushButton ###
-        Push_button.menu_top(ui.pb_mt_quitter).quitter()
+        PushButton.menu_top(ui.pb_mt_quitter).quitter()
         ### /QPushButton ###
