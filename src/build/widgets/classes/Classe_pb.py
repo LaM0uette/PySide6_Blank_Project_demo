@@ -41,7 +41,7 @@ class Classe_pb:
     def ENT_CHECK(self, event):
         if self.wg.isEnabled():
             if not self.wg.isChecked():
-                Fct(wg=self.wg, img=self.img_uncheck + self.img_uncheck_rgb, dim=self.dim_ico).ICON()
+                Fct(wg=self.wg, img=self.img_uncheck_hover + self.img_uncheck_hover_rgb, dim=self.dim_ico).ICON()
             else:
                 Fct(wg=self.wg, img=self.img_uncheck + self.img_uncheck_rgb, dim=self.dim_ico).ICON()
 
