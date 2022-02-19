@@ -206,11 +206,15 @@ class StyleSheet:
                 bg_hover = bg_gen
                 bg_checked = bg_gen
                 bg_checked_hover = bg_gen
+                bg_pressed = bg_gen
+                bg_checked_pressed = bg_gen
             if not fg_gen is None:
                 fg = fg_gen
                 fg_hover = fg_gen
                 fg_checked = fg_gen
                 fg_checked_hover = fg_gen
+                fg_pressed = fg_gen
+                fg_checked_pressed = fg_gen
             if not bg_item_gen is None:
                 bg_item = bg_item_gen
                 bg_item_hover = bg_item_gen
