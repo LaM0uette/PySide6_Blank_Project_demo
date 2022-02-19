@@ -30,7 +30,7 @@ class Style:
                 wg.setCursor(Fct(cur=curseur).CUR())
             except: pass
 
-            # if button_type is not None: StyleSheet().set_ico_base(wg=wg)
+            if button_type is not None: StyleSheet().set_ico_base(wg=wg)
 
             # try:
             #     if button_type is not None and button_type is not None:
