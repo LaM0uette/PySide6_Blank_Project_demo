@@ -9,7 +9,7 @@ class Style:
     def __init__(
             self,
             *wgs,
-            type_bouton=None,
+            button_type=None,
             width=p_base.WG_WIDTH,
             height=p_base.WG_HEIGHT,
             font=p_base.FONT,
@@ -30,10 +30,10 @@ class Style:
                 wg.setCursor(Fct(cur=curseur).CUR())
             except: pass
 
-            # if type_bouton is not None: StyleSheet().set_ico_base(wg=wg)
+            # if button_type is not None: StyleSheet().set_ico_base(wg=wg)
 
             # try:
-            #     if type_bouton is not None and type_bouton is not None:
+            #     if button_type is not None and button_type is not None:
             #         cls = Classe_pb.Classe_pb(wg=wg,
             #                                   dim_ico=dim_height * x_ico,
             #                                   DIM_ICO=dim_height * X_ICO,
@@ -43,29 +43,32 @@ class Style:
             #                                   tm_hover=tm_hover,
             #                                   tm_check=tm_check)
             #
-            #         if type_bouton == "check":
+            #         if button_type == "check":
             #             wg.mousePressEvent = cls.MP_CHECK
-            #         elif type_bouton == "ico":
+            #         elif button_type == "ico":
             #             wg.enterEvent = cls.ENT_ICO
             #             wg.leaveEvent = cls.LVE_ICO
             #             wg.mousePressEvent = cls.MP_ICO
-            #         elif type_bouton == "zoom":
+            #         elif button_type == "zoom":
             #             wg.enterEvent = cls.ENT_ZOOM
             #             wg.leaveEvent = cls.LVE_ZOOM
             # except: pass
 
-
+#fg_checked=p_base.COULEURS.get("c3"),
 class Base_th(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs)
+        super().__init__(
+            *wgs,
+            style=StyleSheet(
+            ).get()
+        )
 class Base_tr(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-                 couleur_bg=(0, 0, 0, 0),
-                 couleur_bg_hover=(0, 0, 0, 0),
-                 couleur_bg_checked=(0, 0, 0, 0),
-                 couleur_bg_checked_hover=(0, 0, 0, 0),
-                 couleur_fg_checked=p_base.COULEURS.get("c3"),
+        super().__init__(
+            *wgs,
+            style=StyleSheet(
+                bg_gen=Rgb().tr()
+            ).get()
     )
 
 class menu_top:
@@ -73,31 +76,35 @@ class menu_top:
         self.wgs = wgs
 
     def rtn(self,
-            type_bouton="zoom",
-            couleur_bg=(0, 0, 0, 0),
-            couleur_bg_hover=(0, 0, 0, 0),
-            couleur_bg_checked=(0, 0, 0, 0),
-            couleur_bg_checked_hover=(0, 0, 0, 0),
+            button_type="zoom",
+            width=P_dim().h9() * 1.2,
+            curseur=P_cur().souris_main(),
+            couleur_bg=Rgb().tr(),
+            couleur_bg_hover=Rgb().tr(),
+            couleur_bg_checked=Rgb().tr(),
+            couleur_bg_checked_hover=Rgb().tr(),
             couleur_fg_checked=p_base.COULEURS.get("c3"),
-            couleur_bg_pressed=(0, 0, 0, 0),
+            couleur_bg_pressed=Rgb().tr(),
             img_uncheck=P_img().main(),
-            tm_uncheck="th2",
-            dim_width=P_dim().h9()*1.2,
-            curseur=P_cur().souris_main()
+            img_uncheck_rgb="th2",
     ):
-        Style(*self.wgs,
-                 type_bouton=type_bouton,
-                 couleur_bg=couleur_bg,
-                 couleur_bg_hover=couleur_bg_hover,
-                 couleur_bg_checked=couleur_bg_checked,
-                 couleur_bg_checked_hover=couleur_bg_checked_hover,
-                 couleur_fg_checked=couleur_fg_checked,
-                 couleur_bg_pressed=couleur_bg_pressed,
-                 img_uncheck=img_uncheck,
-                 tm_uncheck=tm_uncheck,
-                 dim_width=dim_width,
-                 curseur=curseur
-                 )
+        Style(
+            *self.wgs,
+            button_type=button_type,
+            width=width,
+            curseur=curseur,
+
+            style=StyleSheet(
+                bg=couleur_bg,
+                bg_hover=couleur_bg_hover,
+                bg_checked=couleur_bg_checked,
+                bg_checked_hover=couleur_bg_checked_hover,
+                fg_checked=couleur_fg_checked,
+                bg_pressed=couleur_bg_pressed,
+                img_uncheck=img_uncheck,
+                img_uncheck_rgb=img_uncheck_rgb,
+            ).get()
+        )
 
     def option(self):
         self.rtn(
@@ -106,17 +113,17 @@ class menu_top:
     def reduire(self):
         self.rtn(
             img_uncheck=P_img().reduire(),
-            tm_uncheck="bn1"
+            img_uncheck_rgb="bn1"
         )
     def agrandir(self):
         self.rtn(
             img_uncheck=P_img().agrandir(),
-            tm_uncheck="th3"
+            img_uncheck_rgb="th3"
         )
     def quitter(self):
         self.rtn(
             img_uncheck=P_img().quitter(),
-            tm_uncheck="bn2"
+            img_uncheck_rgb="bn2"
         )
 
 
