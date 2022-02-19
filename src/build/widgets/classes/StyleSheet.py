@@ -1080,8 +1080,8 @@ class StyleSheet:
 ************************************************************/
                 .QLineEdit, .QPlainTextEdit, .QTextEdit {{
                 background-color: rgba{bg};
-                selection-background-color: rgb{bg_selection};
-                selection-color: rgb{fg_selection};
+                selection-background-color: rgba{bg_selection};
+                selection-color: rgba{fg_selection};
                 }}
         
                 /* BORDURES */
