@@ -199,80 +199,70 @@ class zoom(Style):
 
 class dlg_ok(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-                 couleur_bg=P_rgb().th1() + (255,),
-                 couleur_fg=P_rgb().vert(),
-                 couleur_bg_hover=P_rgb().vert() + (255,),
-                 couleur_fg_hover=P_rgb().th1(),
-                 couleur_bg_pressed=P_rgb().vert() + (255,),
-                 bordure_width_top=P_style().bd(),
-                 bordure_width_bottom=P_style().bd(),
-                 bordure_width_right=P_style().bd(),
-                 bordure_width_left=P_style().bd(),
-                 bordure_couleur_top=P_rgb().vert() + (255,),
-                 bordure_couleur_bottom=P_rgb().vert() + (255,),
-                 bordure_couleur_right=P_rgb().vert() + (255,),
-                 bordure_couleur_left=P_rgb().vert() + (255,),
-                 dim_width=P_dim().h6(),
-                 dim_height=None
+        super().__init__(
+            *wgs,
+            width=P_dim().h6(),
+            height=None,
+
+            style=StyleSheet(
+                bg=Rgb().th1(),
+                fg=Rgb().vert(),
+                bg_hover=Rgb().vert(),
+                fg_hover=Rgb().th1(),
+                bg_pressed=Rgb().vert(),
+                border_all=P_style().bd(),
+                border_rgb=Rgb().vert(),
+            ).get()
     )
 class dlg_ok_inv(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-                 couleur_bg=P_rgb().vert() + (255,),
-                 couleur_fg=P_rgb().th1(),
-                 couleur_bg_hover=P_rgb().th1() + (255,),
-                 couleur_fg_hover=P_rgb().vert(),
-                 couleur_bg_pressed=P_rgb().th1() + (255,),
-                 bordure_width_top=P_style().bd(),
-                 bordure_width_bottom=P_style().bd(),
-                 bordure_width_right=P_style().bd(),
-                 bordure_width_left=P_style().bd(),
-                 bordure_couleur_top=P_rgb().vert() + (255,),
-                 bordure_couleur_bottom=P_rgb().vert() + (255,),
-                 bordure_couleur_right=P_rgb().vert() + (255,),
-                 bordure_couleur_left=P_rgb().vert() + (255,),
-                 dim_width=P_dim().h6(),
-                 dim_height=None
+        super().__init__(
+            *wgs,
+            width=P_dim().h6(),
+            height=None,
+
+            style=StyleSheet(
+                bg=Rgb().vert(),
+                fg=Rgb().th1(),
+                bg_hover=Rgb().th1(),
+                fg_hover=Rgb().vert(),
+                bg_pressed=Rgb().th1(),
+                border_all=P_style().bd(),
+                border_rgb=Rgb().vert(),
+            ).get()
     )
 class dlg_nok(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-                 couleur_bg=P_rgb().th1() + (255,),
-                 couleur_fg=P_rgb().rouge(),
-                 couleur_bg_hover=P_rgb().rouge() + (255,),
-                 couleur_fg_hover=P_rgb().th1(),
-                 couleur_bg_pressed=P_rgb().rouge() + (255,),
-                 bordure_width_top=P_style().bd(),
-                 bordure_width_bottom=P_style().bd(),
-                 bordure_width_right=P_style().bd(),
-                 bordure_width_left=P_style().bd(),
-                 bordure_couleur_top=P_rgb().rouge() + (255,),
-                 bordure_couleur_bottom=P_rgb().rouge() + (255,),
-                 bordure_couleur_right=P_rgb().rouge() + (255,),
-                 bordure_couleur_left=P_rgb().rouge() + (255,),
-                 dim_width=P_dim().h6(),
-                 dim_height=None
-    )
+        super().__init__(
+            *wgs,
+            width=P_dim().h6(),
+            height=None,
+            style=StyleSheet(
+                bg=Rgb().th1(),
+                fg=Rgb().rouge(),
+                bg_hover=Rgb().rouge(),
+                fg_hover=Rgb().th1(),
+                bg_pressed=Rgb().rouge(),
+                border_all=P_style().bd(),
+                border_rgb=Rgb().rouge(),
+            ).get()
+        )
 class dlg_nok_inv(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-                 couleur_bg=P_rgb().rouge()+(255, ),
-                 couleur_fg=P_rgb().th1(),
-                 couleur_bg_hover=P_rgb().th1()+(255, ),
-                 couleur_fg_hover=P_rgb().rouge(),
-                 couleur_bg_pressed=P_rgb().th1()+(255, ),
-                 bordure_width_top=P_style().bd(),
-                 bordure_width_bottom=P_style().bd(),
-                 bordure_width_right=P_style().bd(),
-                 bordure_width_left=P_style().bd(),
-                 bordure_couleur_top=P_rgb().rouge()+(255, ),
-                 bordure_couleur_bottom=P_rgb().rouge()+(255, ),
-                 bordure_couleur_right=P_rgb().rouge()+(255, ),
-                 bordure_couleur_left=P_rgb().rouge()+(255, ),
-                 dim_width=P_dim().h6(),
-                 dim_height=None
-    )
+        super().__init__(
+            *wgs,
+            width=P_dim().h6(),
+            height=None,
+            style=StyleSheet(
+                bg=Rgb().rouge(),
+                fg=Rgb().th1(),
+                bg_hover=Rgb().th1(),
+                fg_hover=Rgb().rouge(),
+                bg_pressed=Rgb().th1(),
+                border_all=P_style().bd(),
+                border_rgb=Rgb().rouge(),
+            ).get()
+        )
 
 class plein:
     def __init__(self, *wgs):
