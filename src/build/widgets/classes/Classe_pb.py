@@ -51,12 +51,13 @@ class Classe_pb:
             else:
                 Fct(wg=self.wg, img=self.img_check + self.img_check_rgb, dim=self.dim_ico).ICON()
     def MP_CHECK(self, event):
-        if self.wg.isChecked() and self.wg.isEnabled():
-            self.wg.setChecked(False)
-            Fct(wg=self.wg, img=self.img + self.img_rgb, dim=self.dim_ico).ICON()
-        elif not self.wg.isChecked() and self.wg.isEnabled():
-            self.wg.setChecked(True)
-            Fct(wg=self.wg, img=self.img_check + self.img_rgb, dim=self.dim_ico).ICON()
+        if self.wg.isEnabled():
+            if not self.wg.isChecked():
+                self.wg.setChecked(True)
+                Fct(wg=self.wg, img=self.img_check + self.img_check_rgb, dim=self.dim_ico).ICON()
+            else:
+                self.wg.setChecked(False)
+                Fct(wg=self.wg, img=self.img_uncheck + self.img_uncheck_rgb, dim=self.dim_ico).ICON()
 
 
     def ENT_ICO(self, event):
