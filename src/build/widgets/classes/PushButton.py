@@ -42,14 +42,19 @@ class Style:
                 Fct(wg=wg, img=f"{img}{img_rgb}", dim=height * x_ico).ICON()
 
             if button_type is not None:
-                cls = Classe_pb.Classe_pb(wg=wg,
-                                          dim_ico=height * x_ico,
-                                          DIM_ICO=height * X_ICO,
-                                          img=img,
-                                          img_check=img_check,
-                                          img_rgb=img_rgb,
-                                          tm_hover=tm_hover,
-                                          tm_check=tm_check)
+                cls = Classe_pb.Classe_pb(
+                    wg=wg,
+                    dim_ico=height * x_ico,
+                    DIM_ICO=height * X_ICO,
+                    img=img,
+                    img_hover=img_hover,
+                    img_check=img_check,
+                    img_check_hover=img_check_hover,
+                    img_rgb=img_rgb,
+                    img_hover_rgb=img_hover_rgb,
+                    img_check_rgb=img_check_rgb,
+                    img_check_hover_rgb=img_check_hover_rgb,
+                )
 
                 if button_type == "check":
                     wg.mousePressEvent = cls.MP_CHECK
