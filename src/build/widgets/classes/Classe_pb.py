@@ -46,6 +46,7 @@ class Classe_pb:
             self.wg.setChecked(True)
             Fct(wg=self.wg, img=self.img_check + self.img_rgb, dim=self.dim_ico).ICON()
 
+
     def ENT_ICO(self, event):
         if not self.wg.isChecked() and self.wg.isEnabled():
             Fct(wg=self.wg, img=self.img + self.img_hover_rgb, dim=self.dim_ico).ICON()
