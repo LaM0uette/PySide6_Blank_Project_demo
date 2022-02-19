@@ -35,7 +35,6 @@ class Classe_pb:
         self.img_check_hover_rgb = img_check_hover_rgb
 
 
-
     def MP_CHECK(self, event):
         if self.wg.isChecked() and self.wg.isEnabled():
             self.wg.setChecked(False)
