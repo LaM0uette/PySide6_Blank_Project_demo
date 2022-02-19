@@ -88,6 +88,8 @@ class StyleSheet:
             img_right_rgb=p_base.IMG_RIGHT_RGB,
             img_left_rgb=p_base.IMG_LEFT_RGB,
             # Images DIM
+            img_width=p_base.img_width,
+            IMG_WIDTH=p_base.IMG_WIDTH,
             img_height=p_base.img_height,
             IMG_HEIGHT=p_base.IMG_HEIGHT,
             # Images margin

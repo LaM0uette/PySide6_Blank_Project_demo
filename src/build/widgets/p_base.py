@@ -131,6 +131,8 @@ TM_DOWN = "th2"  ##
 
 
 
+img_width = WG_HEIGHT * P_style().x_ico()
+IMG_WIDTH = WG_HEIGHT * P_style().X_ICO()
 img_height = WG_HEIGHT * P_style().x_ico()
 IMG_HEIGHT = WG_HEIGHT * P_style().X_ICO()
 
