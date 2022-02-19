@@ -151,7 +151,7 @@
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>-4089</y>
+              <y>-2290</y>
               <width>818</width>
               <height>6320</height>
              </rect>
@@ -829,6 +829,9 @@
                  <widget class="QPushButton" name="pb_demo_txt">
                   <property name="text">
                    <string>PushButton text</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>

@@ -107,7 +107,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -4089, 818, 6320))
+        self.vlay_wg.setGeometry(QRect(0, -2290, 818, 6320))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -403,6 +403,7 @@ class Ui_main(object):
 
         self.pb_demo_txt = QPushButton(self.fr_pb)
         self.pb_demo_txt.setObjectName(u"pb_demo_txt")
+        self.pb_demo_txt.setCheckable(True)
 
         self.vlay_pb.addWidget(self.pb_demo_txt)
 
