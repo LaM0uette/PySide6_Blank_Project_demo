@@ -83,8 +83,8 @@ class menu_top:
             bg_hover=Rgb().tr(),
             bg_checked=Rgb().tr(),
             bg_checked_hover=Rgb().tr(),
-            fg_checked=p_base.COULEURS.get("c3"),
             bg_pressed=Rgb().tr(),
+            fg_checked=p_base.COULEURS.get("c3"),
             img_uncheck=P_img().main(),
             img_uncheck_rgb="th2",
     ):
@@ -99,8 +99,8 @@ class menu_top:
                 bg_hover=bg_hover,
                 bg_checked=bg_checked,
                 bg_checked_hover=bg_checked_hover,
-                fg_checked=fg_checked,
                 bg_pressed=bg_pressed,
+                fg_checked=fg_checked,
                 img_uncheck=img_uncheck,
                 img_uncheck_rgb=img_uncheck_rgb,
             ).get()
