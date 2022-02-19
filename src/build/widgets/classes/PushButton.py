@@ -237,10 +237,8 @@ class plein:
         self.wgs = wgs
 
     def rtn(self,
-            bg=Rgb().tr(),
-            fg=Rgb().tr(),
-            bg_hover=Rgb().tr(),
-            fg_hover=Rgb().tr(),
+            bg_gen=Rgb().tr(),
+            fg_gen=Rgb().tr(),
             height=P_dim().h5(),
 
             border_gen_all=0,
@@ -253,10 +251,8 @@ class plein:
             curseur=curseur,
 
             style=StyleSheet(
-                bg=bg,
-                fg=fg,
-                bg_hover=bg_hover,
-                fg_hover=fg_hover,
+                bg_gen=bg_gen,
+                fg_gen=fg_gen,
                 border_gen_all=border_gen_all,
                 border_gen_rgb=border_gen_rgb,
             ).get()
@@ -264,40 +260,30 @@ class plein:
 
     def th1(self):
         self.rtn(
-            bg=P_rgb().th1(),
-            fg=P_rgb().th3(),
-            bg_hover=P_rgb().th1(),
-            fg_hover=P_rgb().th3(),
+            bg_gen=Rgb().th1(),
+            fg_gen=Rgb().th3(),
             border_gen_all=P_style().bd(),
-            border_gen_rgb=P_rgb().th2(),
+            border_gen_rgb=Rgb().th2(),
         )
     def th2(self):
         self.rtn(
-            bg=P_rgb().th2(),
-            fg=P_rgb().th3(),
-            bg_hover=P_rgb().th2(),
-            fg_hover=P_rgb().th3(),
+            bg_gen=Rgb().th2(),
+            fg_gen=Rgb().th3(),
         )
     def th3(self):
         self.rtn(
-            bg=P_rgb().th3(),
-            fg=P_rgb().th1(),
-            bg_hover=P_rgb().th3(),
-            fg_hover=P_rgb().th1(),
+            bg_gen=Rgb().th3(),
+            fg_gen=Rgb().th1(),
         )
     def bn1(self):
         self.rtn(
-            bg=P_rgb().bn1(),
-            fg=P_rgb().th3(),
-            bg_hover=P_rgb().bn1(),
-            fg_hover=P_rgb().th3(),
+            bg_gen=Rgb().bn1(),
+            fg_gen=Rgb().th3(),
         )
     def bn2(self):
         self.rtn(
-            bg=P_rgb().bn2(),
-            fg=P_rgb().th3(),
-            bg_hover=P_rgb().bn2(),
-            fg_hover=P_rgb().th3(),
+            bg_gen=Rgb().bn2(),
+            fg_gen=Rgb().th3(),
         )
 
 
