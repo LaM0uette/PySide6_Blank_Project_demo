@@ -165,47 +165,6 @@ class txt_inv(Style):
             ).get()
     )
 
-class Demo_bd(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            style=StyleSheet(
-                border_all=P_style().bd(),
-                border_rgb=Rgb().bn1(),
-            ).get()
-    )
-class Demo_rd(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            style=StyleSheet(
-                radius_all=10,
-            ).get()
-    )
-
-class ck_ico(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            button_type="check",
-
-            style=StyleSheet(
-                bg_gen=Rgb().tr(),
-            ).get()
-    )
-class zoom(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            button_type="zoom",
-
-            style=StyleSheet(
-                bg_gen=Rgb().tr(),
-                img_uncheck=P_img().calendrier(),
-                img_uncheck_rgb=""
-            ).get()
-    )
-
 class dlg_ok(Style):
     def __init__(self, *wgs):
         super().__init__(
@@ -340,3 +299,45 @@ class plein:
             bg_hover=P_rgb().bn2(),
             fg_hover=P_rgb().th3(),
         )
+
+
+class Demo_bd(Style):
+    def __init__(self, *wgs):
+        super().__init__(
+            *wgs,
+            style=StyleSheet(
+                border_all=P_style().bd(),
+                border_rgb=Rgb().bn1(),
+            ).get()
+    )
+class Demo_rd(Style):
+    def __init__(self, *wgs):
+        super().__init__(
+            *wgs,
+            style=StyleSheet(
+                radius_all=10,
+            ).get()
+    )
+
+class ck_ico(Style):
+    def __init__(self, *wgs):
+        super().__init__(
+            *wgs,
+            button_type="check",
+
+            style=StyleSheet(
+                bg_gen=Rgb().tr(),
+            ).get()
+    )
+class zoom(Style):
+    def __init__(self, *wgs):
+        super().__init__(
+            *wgs,
+            button_type="zoom",
+
+            style=StyleSheet(
+                bg_gen=Rgb().tr(),
+                img_uncheck=P_img().calendrier(),
+                img_uncheck_rgb=""
+            ).get()
+    )
