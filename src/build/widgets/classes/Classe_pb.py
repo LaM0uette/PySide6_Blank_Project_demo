@@ -17,6 +17,8 @@ class Classe_pb:
             img_check_hover,
             img_rgb,
             img_hover_rgb,
+            img_uncheck_rgb,
+            img_uncheck_hover_rgb,
             img_check_rgb,
             img_check_hover_rgb,
     ):
@@ -31,11 +33,20 @@ class Classe_pb:
         self.img_check_hover = img_check_hover
         self.img_rgb = img_rgb
         self.img_hover_rgb = img_hover_rgb
+        self.img_uncheck_rgb = img_uncheck_rgb
+        self.img_uncheck_hover_rgb = img_uncheck_hover_rgb
         self.img_check_rgb = img_check_rgb
         self.img_check_hover_rgb = img_check_hover_rgb
 
     def ENT_CHECK(self, event):
-        pass
+        if self.wg.isEnabled():
+            if not self.wg.isChecked():
+                Fct(wg=self.wg, img=self.img_uncheck + self.img_uncheck_rgb, dim=self.dim_ico).ICON()
+            else:
+                Fct(wg=self.wg, img=self.img_uncheck + self.img_uncheck_rgb, dim=self.dim_ico).ICON()
+
+
+
     def LVE_CHECK(self, event):
         pass
     def MP_CHECK(self, event):
@@ -68,3 +79,10 @@ class Classe_pb:
         if not self.wg.isChecked() and self.wg.isEnabled():
             self.wg.setIconSize(QtCore.QSize(self.dim_ico, self.dim_ico))
 
+"""
+if self.wg.isEnabled():
+    if not self.wg.isChecked():
+        pass
+    else:
+        pass
+"""

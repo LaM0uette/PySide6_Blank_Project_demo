@@ -1327,6 +1327,8 @@ class StyleSheet:
                 img_check_hover=self.img_check_hover,
                 img_rgb=self.img_rgb,
                 img_hover_rgb=self.img_hover_rgb,
+                img_uncheck_rgb=self.img_uncheck_rgb,
+                img_uncheck_hover_rgb=self.img_uncheck_hover_rgb,
                 img_check_rgb=self.img_check_rgb,
                 img_check_hover_rgb=self.img_check_hover_rgb,
             )
