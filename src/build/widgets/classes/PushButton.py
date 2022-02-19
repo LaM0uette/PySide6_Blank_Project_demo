@@ -16,14 +16,10 @@ class Style:
             X_ICO=P_style().X_ICO(),
             font=p_base.FONT,
             font_size=p_base.FONT_SIZE,
-            img_uncheck=p_base.IMG_UNCHECK,
-            img_uncheck_hover=p_base.IMG_UNCHECK_HOVER,
             img_check=p_base.IMG_CHECK,
             img_check_hover=p_base.IMG_CHECK_HOVER,
             img=p_base.IMG_UNROLL,
             img_hover=p_base.IMG_UNROLL_HOVER,
-            img_uncheck_rgb=p_base.IMG_UNCHECK_RGB,
-            img_uncheck_hover_rgb=p_base.IMG_UNCHECK_HOVER_RGB,
             img_check_rgb=p_base.IMG_CHECK_RGB,
             img_check_hover_rgb=p_base.IMG_CHECK_HOVER_RGB,
             img_rgb=p_base.IMG_UNROLL_RGB,
@@ -42,8 +38,8 @@ class Style:
 
             wg.setCursor(Fct(cur=curseur).CUR())
 
-            if button_type is not None and img_uncheck is not None:
-                Fct(wg=wg, img=f"{img_uncheck}{img_uncheck_rgb}", dim=height * x_ico).ICON()
+            if button_type is not None and img is not None:
+                Fct(wg=wg, img=f"{img}{img_rgb}", dim=height * x_ico).ICON()
 
             # try:
             #     if button_type is not None and button_type is not None:
@@ -89,54 +85,45 @@ class menu_top:
         self.wgs = wgs
 
     def rtn(self,
-            button_type="zoom",
-            width=P_dim().h9() * 1.2,
-            curseur=P_cur().souris_main(),
-            bg=Rgb().tr(),
-            bg_hover=Rgb().tr(),
-            bg_checked=Rgb().tr(),
-            bg_checked_hover=Rgb().tr(),
-            bg_pressed=Rgb().tr(),
-            fg_checked=p_base.COULEURS.get("c3"),
-            img_uncheck=P_img().main(),
-            img_uncheck_rgb="th2",
+            img=P_img().main(),
+            img_rgb="th2",
     ):
         Style(
             *self.wgs,
-            button_type=button_type,
-            width=width,
-            curseur=curseur,
+            button_type="zoom",
+            width=P_dim().h9() * 1.2,
+            img=img,
+            img_rgb=img_rgb,
+            curseur=P_cur().souris_main(),
 
             style=StyleSheet(
-                bg=bg,
-                bg_hover=bg_hover,
-                bg_checked=bg_checked,
-                bg_checked_hover=bg_checked_hover,
-                bg_pressed=bg_pressed,
-                fg_checked=fg_checked,
-                img_uncheck=img_uncheck,
-                img_uncheck_rgb=img_uncheck_rgb,
+                bg=Rgb().tr(),
+                bg_hover=Rgb().tr(),
+                bg_checked=Rgb().tr(),
+                bg_checked_hover=Rgb().tr(),
+                bg_pressed=Rgb().tr(),
+                fg_checked=p_base.COULEURS.get("c3"),
             ).get()
         )
 
     def option(self):
         self.rtn(
-            img_uncheck=P_img().option()
+            img=P_img().option()
         )
     def reduire(self):
         self.rtn(
-            img_uncheck=P_img().reduire(),
-            img_uncheck_rgb="bn1"
+            img=P_img().reduire(),
+            img_rgb="bn1"
         )
     def agrandir(self):
         self.rtn(
-            img_uncheck=P_img().agrandir(),
-            img_uncheck_rgb="th3"
+            img=P_img().agrandir(),
+            img_rgb="th3"
         )
     def quitter(self):
         self.rtn(
-            img_uncheck=P_img().quitter(),
-            img_uncheck_rgb="bn2"
+            img=P_img().quitter(),
+            img_rgb="bn2"
         )
 
 class txt(Style):
