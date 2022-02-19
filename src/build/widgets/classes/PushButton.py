@@ -66,7 +66,7 @@ class Style:
                     wg.enterEvent = cls.ENT_ZOOM
                     wg.leaveEvent = cls.LVE_ZOOM
 
-#fg_checked=p_base.COULEURS.get("c3"),
+
 class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(
@@ -79,7 +79,9 @@ class Base_tr(Style):
         super().__init__(
             *wgs,
             style=StyleSheet(
-                bg_gen=Rgb().tr()
+                bg_gen=Rgb().tr(),
+                fg=Rgb().th3(),
+                fg_checked=Rgb().bn1(),
             ).get()
     )
 
@@ -323,10 +325,10 @@ class zoom(Style):
         super().__init__(
             *wgs,
             button_type="zoom",
+            img=P_img().calendrier(),
+            img_rgb="",
 
             style=StyleSheet(
                 bg_gen=Rgb().tr(),
-                img_uncheck=P_img().calendrier(),
-                img_uncheck_rgb=""
             ).get()
     )
