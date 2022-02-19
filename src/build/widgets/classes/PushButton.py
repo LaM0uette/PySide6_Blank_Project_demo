@@ -243,8 +243,8 @@ class plein:
             fg_hover=Rgb().tr(),
             height=P_dim().h5(),
 
-            border_all=0,
-            border_rgb=Rgb().tr(),
+            border_gen_all=0,
+            border_gen_rgb=Rgb().tr(),
             curseur=P_cur().main()
             ):
         Style(
@@ -257,8 +257,8 @@ class plein:
                 fg=fg,
                 bg_hover=bg_hover,
                 fg_hover=fg_hover,
-                border_all=border_all,
-                border_rgb=border_rgb,
+                border_gen_all=border_gen_all,
+                border_gen_rgb=border_gen_rgb,
             ).get()
         )
 
@@ -268,8 +268,8 @@ class plein:
             fg=P_rgb().th3(),
             bg_hover=P_rgb().th1(),
             fg_hover=P_rgb().th3(),
-            border_all=P_style().bd(),
-            border_rgb=P_rgb().th2(),
+            border_gen_all=P_style().bd(),
+            border_gen_rgb=P_rgb().th2(),
         )
     def th2(self):
         self.rtn(
