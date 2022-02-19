@@ -867,32 +867,32 @@ class StyleSheet:
 *****************************/
                 QPushButton {{
                 background-color: rgba{bg};
-                color: rgb{fg};
+                color: rgba{fg};
                 }}
         
                 QPushButton:hover {{
                 background-color: rgba{bg_hover};
-                color: rgb{fg_hover};
+                color: rgba{fg_hover};
                 }}
         
                 QPushButton:checked {{
-                background-color: rgb{bg_checked};
-                color: rgb{fg_checked};
+                background-color: rgba{bg_checked};
+                color: rgba{fg_checked};
                 }}
         
                 QPushButton:checked:hover {{
-                background-color: rgb{bg_checked_hover};
-                color: rgb{fg_checked_hover};
+                background-color: rgba{bg_checked_hover};
+                color: rgba{fg_checked_hover};
                 }}
         
                 QPushButton:pressed {{
                 background-color: rgba{bg_pressed};
-                color: rgb{fg_pressed};
+                color: rgba{fg_pressed};
                 }}
         
                 QPushButton:checked:pressed {{
                 background-color: rgba{bg_checked_pressed};
-                color: rgb{fg_checked_pressed};
+                color: rgba{fg_checked_pressed};
                 }}
         
                 /* BORDURES */
