@@ -292,8 +292,8 @@ class Demo_bd(Style):
         super().__init__(
             *wgs,
             style=StyleSheet(
-                border_all=P_style().bd(),
-                border_rgb=Rgb().bn1(),
+                border_gen_all=P_style().bd(),
+                border_gen_rgb=Rgb().bn1(),
             ).get()
     )
 class Demo_rd(Style):
