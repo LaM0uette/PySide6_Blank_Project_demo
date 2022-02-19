@@ -14,6 +14,8 @@ class StyleSheet:
             bg_hover=p_base.BG_HOVER,
             bg_checked=p_base.BG_CHECKED,
             bg_checked_hover=p_base.BG_CHECKED_HOVER,
+            bg_pressed=p_base.BG_PRESSED,
+            bg_checked_pressed=p_base.BG_CHECKED_PRESSED,
             bg_selection=p_base.BG_SELECTION,
             bg_item_gen=None,
             bg_item=p_base.BG_ITEM,
@@ -34,6 +36,8 @@ class StyleSheet:
             fg_hover=p_base.FG_HOVER,
             fg_checked=p_base.FG_CHECKED,
             fg_checked_hover=p_base.FG_CHECKED_HOVER,
+            fg_pressed=p_base.BG_PRESSED,
+            fg_checked_pressed=p_base.BG_CHECKED_PRESSED,
             fg_selection=p_base.FG_SELECTION,
             fg_placeholder=p_base.FG_PLACEHOLDER,
             fg_item_gen=None,
@@ -859,7 +863,43 @@ class StyleSheet:
 /****************************
 **       QPushButton       **
 *****************************/
-
+                QPushButton {{
+                background-color: rgba{bg};
+                color: rgb{fg};
+                }}
+        
+                QPushButton:hover {{
+                background-color: rgba{bg_hover};
+                color: rgb{fg_hover};
+                }}
+        
+                QPushButton:checked {{
+                background-color: rgb{bg_checked};
+                color: rgb{fg_checked};
+                }}
+        
+                QPushButton:checked:hover {{
+                background-color: rgb{bg_checked_hover};
+                color: rgb{fg_checked_hover};
+                }}
+        
+                QPushButton:pressed {{
+                background-color: rgba{bg_pressed};
+                color: rgb{fg_pressed};
+                }}
+        
+                QPushButton:checked:pressed {{
+                background-color: rgba{bg_checked_pressed};
+                color: rgb{fg_checked_pressed};
+                }}
+        
+                /* BORDURES */
+                .QPushButton {{
+                border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
+                border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
+                border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
+                border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
+                }}
 /****************************
 **      /QPushButton       **
 *****************************/
