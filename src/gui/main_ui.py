@@ -430,7 +430,6 @@ class Ui_main(object):
 
         self.pb_demo_tr = QPushButton(self.fr_pb)
         self.pb_demo_tr.setObjectName(u"pb_demo_tr")
-        self.pb_demo_tr.setCheckable(True)
 
         self.vlay_pb.addWidget(self.pb_demo_tr)
 

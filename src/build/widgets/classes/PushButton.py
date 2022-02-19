@@ -318,6 +318,7 @@ class ck_ico(Style):
 
             style=StyleSheet(
                 bg_gen=Rgb().tr(),
+                fg=Rgb().th3(),
             ).get()
     )
 class zoom(Style):
