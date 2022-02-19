@@ -34,7 +34,10 @@ class Classe_pb:
         self.img_check_rgb = img_check_rgb
         self.img_check_hover_rgb = img_check_hover_rgb
 
-
+    def ENT_CHECK(self, event):
+        pass
+    def LVE_CHECK(self, event):
+        pass
     def MP_CHECK(self, event):
         if self.wg.isChecked() and self.wg.isEnabled():
             self.wg.setChecked(False)
