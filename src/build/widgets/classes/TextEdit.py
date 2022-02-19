@@ -44,6 +44,7 @@ class Base_tr(Style):
             *wgs,
             style=StyleSheet(
                 bg=Rgb().tr(),
+                fg=Rgb().th3()
             )
     )
 
@@ -56,6 +57,7 @@ class tr_taille(Style):
 
             style=StyleSheet(
                 bg=Rgb().tr(),
+                fg=Rgb().th3()
             )
     )
 
