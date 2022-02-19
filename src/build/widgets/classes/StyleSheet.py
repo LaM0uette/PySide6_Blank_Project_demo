@@ -88,10 +88,8 @@ class StyleSheet:
             img_right_rgb=p_base.IMG_RIGHT_RGB,
             img_left_rgb=p_base.IMG_LEFT_RGB,
             # Images DIM
-            img_width=p_base.IMG_WIDTH,
-            img_height=p_base.IMG_HEIGHT,
-            x_ico=P_style().x_ico(),
-            X_ICO=P_style().X_ICO(),
+            img_height=p_base.img_height,
+            IMG_HEIGHT=p_base.IMG_HEIGHT,
             # Images margin
             img_margin_top=0,
             img_margin_bottom=0,
@@ -1319,7 +1317,7 @@ class StyleSheet:
             cls = Classe_pb.Classe_pb(
                 wg=wg,
                 dim_ico=self.img_height,
-                DIM_ICO=self.img_height,
+                DIM_ICO=self.IMG_HEIGHT,
                 img=self.img,
                 img_hover=self.img_hover,
                 img_uncheck=self.img_uncheck,
