@@ -129,89 +129,72 @@ class menu_top:
 
 class txt(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-                 couleur_bg=P_rgb().th1() + (255,),
-                 couleur_fg=P_rgb().th3(),
-                 couleur_bg_hover=P_rgb().th3() + (255,),
-                 couleur_fg_hover=P_rgb().th1(),
-                 couleur_bg_pressed=P_rgb().th3() + (255,),
-
-                 bordure_width_top=P_style().bd(),
-                 bordure_width_bottom=P_style().bd(),
-                 bordure_width_right=P_style().bd(),
-                 bordure_width_left=P_style().bd(),
-                 bordure_couleur_top=P_rgb().th3() + (255,),
-                 bordure_couleur_bottom=P_rgb().th3() + (255,),
-                 bordure_couleur_right=P_rgb().th3() + (255,),
-                 bordure_couleur_left=P_rgb().th3() + (255,),
+        super().__init__(
+            *wgs,
+            style=StyleSheet(
+                bg=Rgb().th1(),
+                fg=Rgb().th3(),
+                bg_hover=Rgb().th3(),
+                fg_hover=Rgb().th1(),
+                bg_pressed=Rgb().th3(),
+                border_all=P_style().bd(),
+                border_rgb=Rgb().th3(),
+            ).get()
     )
 class txt_inv(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-                 couleur_bg=P_rgb().th3()+(255, ),
-                 couleur_fg=P_rgb().th1(),
-                 couleur_bg_hover=P_rgb().th1()+(255, ),
-                 couleur_fg_hover=P_rgb().th3(),
-                 couleur_bg_pressed=P_rgb().th1() + (255,),
-
-                 bordure_width_top=P_style().bd(),
-                 bordure_width_bottom=P_style().bd(),
-                 bordure_width_right=P_style().bd(),
-                 bordure_width_left=P_style().bd(),
-                 bordure_couleur_top=P_rgb().th3()+(255, ),
-                 bordure_couleur_bottom=P_rgb().th3()+(255, ),
-                 bordure_couleur_right=P_rgb().th3()+(255, ),
-                 bordure_couleur_left=P_rgb().th3()+(255, ),
+        super().__init__(
+            *wgs,
+            style=StyleSheet(
+                bg=Rgb().th3(),
+                fg=Rgb().th1(),
+                bg_hover=Rgb().th1(),
+                fg_hover=Rgb().th3(),
+                bg_pressed=Rgb().th1(),
+                border_all=P_style().bd(),
+                border_rgb=Rgb().th3(),
+            ).get()
     )
 
 class Demo_bd(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-                 bordure_width_top=P_style().bd(),
-                 bordure_width_bottom=P_style().bd(),
-                 bordure_width_right=P_style().bd(),
-                 bordure_width_left=P_style().bd(),
-                 bordure_couleur_top=P_rgb().bn1() + (255,),
-                 bordure_couleur_bottom=P_rgb().bn1() + (255,),
-                 bordure_couleur_right=P_rgb().bn1() + (255,),
-                 bordure_couleur_left=P_rgb().bn1() + (255,),
+        super().__init__(
+            *wgs,
+            style=StyleSheet(
+                border_all=P_style().bd(),
+                border_rgb=Rgb().bn1(),
+            ).get()
     )
 class Demo_rd(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-                 rayon_top_left=10,
-                 rayon_top_right=10,
-                 rayon_bottom_left=10,
-                 rayon_bottom_right=10,
+        super().__init__(
+            *wgs,
+            style=StyleSheet(
+                radius_all=10,
+            ).get()
     )
 
 class ck_ico(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-                 type_bouton="check",
+        super().__init__(
+            *wgs,
+            button_type="check",
 
-                 couleur_bg=(0, 0, 0, 0),
-                 couleur_bg_hover=(0, 0, 0, 0),
-                 couleur_bg_checked=(0, 0, 0, 0),
-                 couleur_bg_checked_hover=(0, 0, 0, 0),
-                 couleur_fg_checked=p_base.COULEURS.get("c3"),
-                 couleur_bg_pressed=(0, 0, 0, 0),
-                 couleur_bg_checked_pressed=(0, 0, 0, 0),
+            style=StyleSheet(
+                bg_gen=Rgb().tr(),
+            ).get()
     )
 class zoom(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-                 type_bouton="zoom",
+        super().__init__(
+            *wgs,
+            button_type="zoom",
 
-                 couleur_bg=(0, 0, 0, 0),
-                 couleur_bg_hover=(0, 0, 0, 0),
-                 couleur_bg_checked=(0, 0, 0, 0),
-                 couleur_bg_checked_hover=(0, 0, 0, 0),
-                 couleur_fg_checked=p_base.COULEURS.get("c3"),
-                 couleur_bg_pressed=(0, 0, 0, 0),
-                 couleur_bg_checked_pressed=(0, 0, 0, 0),
-                 img_uncheck=P_img().calendrier(),
-                 tm_uncheck=""
+            style=StyleSheet(
+                bg_gen=Rgb().tr(),
+                img_uncheck=P_img().calendrier(),
+                img_uncheck_rgb=""
+            ).get()
     )
 
 class dlg_ok(Style):
