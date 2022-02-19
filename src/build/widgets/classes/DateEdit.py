@@ -16,10 +16,10 @@ class Style:
             align_horizontal=Align().h_center(),
             align_vertical=Align().v_center(),
             curseur=P_cur().souris_main(),
-            style=StyleSheet().get()
+            style=StyleSheet()
     ):
         for wg in wgs:
-            wg.setStyleSheet(style)
+            wg.setStyleSheet(style.get())
 
             wg.setCalendarPopup(True)
             dateDuJour = vrb.DATE_NOW_FORMAT.split("_")
@@ -47,7 +47,7 @@ class Base_th(Style):
                 img_all_rgb="",
                 img_margin_top=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
                 img_margin_right=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
-            ).get()
+            )
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
@@ -62,5 +62,5 @@ class Base_tr(Style):
                 img_all_rgb="",
                 img_margin_top=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
                 img_margin_right=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
-            ).get()
+            )
     )

@@ -11,10 +11,10 @@ class Style:
             width=p_base.WIDTH,
             height=p_base.HEIGHT,
             curseur=P_cur().souris(),
-            style=StyleSheet().get()
+            style=StyleSheet()
     ):
         for wg in wgs:
-            wg.setStyleSheet(style)
+            wg.setStyleSheet(style.get())
 
             Fct(wg=wg, w=width, h=height).DIM()
 
@@ -28,7 +28,7 @@ class Base_th(Style):
         super().__init__(
             *wgs,
             style=StyleSheet(
-            ).get()
+            )
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
@@ -36,7 +36,7 @@ class Base_tr(Style):
             *wgs,
             style=StyleSheet(
                 bg=Rgb().tr()
-            ).get()
+            )
     )
 
 class Menu_top(Style):
@@ -47,7 +47,7 @@ class Menu_top(Style):
 
             style=StyleSheet(
                 bg=Rgb().th1(),
-            ).get()
+            )
     )
 class Menu_bottom(Style):
     def __init__(self, *wgs):
@@ -57,7 +57,7 @@ class Menu_bottom(Style):
 
             style=StyleSheet(
                 bg=Rgb().th2(),
-            ).get()
+            )
     )
 class Menu_bottom_dlg(Style):
     def __init__(self, *wgs):
@@ -67,7 +67,7 @@ class Menu_bottom_dlg(Style):
 
             style=StyleSheet(
             bg=Rgb().th2(),
-            ).get()
+            )
     )
 
 class Cadre:
@@ -81,7 +81,7 @@ class Cadre:
                 bg=Rgb().tr(),
                 border_gen_all=P_style().bd(),
                 border_gen_rgb=rgb,
-            ).get()
+            )
         )
 
     def th1(self): self.rtn(rgb=Rgb().th1())
@@ -97,7 +97,7 @@ class palette_rgb(Style):
             style=StyleSheet(
                 bg=rgb,
                 radius_all=40,
-            ).get()
+            )
     )
 
 
@@ -112,5 +112,5 @@ class Demo_hover(Style):
                 border_all_hover=P_style().bd() * 2,
                 border_style_hover="dashed",
                 border_rgb_hover=Rgb().vert(),
-            ).get()
+            )
     )
