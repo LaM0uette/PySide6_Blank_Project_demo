@@ -11,10 +11,10 @@ class Style:
             font=p_base.FONT,
             font_size=p_base.FONT_SIZE,
             curseur=P_cur().souris_main(),
-            style=StyleSheet().get()
+            style=StyleSheet()
     ):
         for wg in wgs:
-            wg.setStyleSheet(style)
+            wg.setStyleSheet(style.get())
 
             Fct(wg=wg, w=width, h=height).DIM()
             wg.setFont(Fct(font=font, font_size=font_size).FONT())
@@ -28,7 +28,7 @@ class Base_th(Style):
             *wgs,
             style=StyleSheet(
                 img_margin_left=(p_base.WG_HEIGHT - (p_base.WG_HEIGHT * P_style().x_ico())) / 2,
-            ).get()
+            )
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
@@ -39,5 +39,5 @@ class Base_tr(Style):
                 fg=Rgb().th3(),
                 fg_checked=Rgb().th3(),
                 img_margin_left=(p_base.WG_HEIGHT - (p_base.WG_HEIGHT * P_style().x_ico())) / 2
-            ).get()
+            )
         )
