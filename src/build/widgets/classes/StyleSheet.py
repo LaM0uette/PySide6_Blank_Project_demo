@@ -1297,7 +1297,4 @@ class StyleSheet:
         palette_txt.setColor(QtGui.QPalette.Text, QtGui.QColor(*self.fg))
         palette_txt.setColor(QtGui.QPalette.PlaceholderText, QtGui.QColor(*self.fg_placeholder))
         return palette_txt
-    def set_ico_base(self, wg):
-        if self.img_uncheck is not None:
-            Fct(wg=wg, img=f"{self.img_uncheck}{self.img_uncheck_rgb}", dim=self.img_height).ICON()
 
