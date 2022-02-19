@@ -11,6 +11,8 @@ class Classe_pb:
             DIM_ICO,
             img,
             img_hover,
+            img_uncheck,
+            img_uncheck_hover,
             img_check,
             img_check_hover,
             img_rgb,
@@ -23,6 +25,8 @@ class Classe_pb:
         self.DIM_ICO = DIM_ICO
         self.img = img
         self.img_hover = img_hover
+        self.img_uncheck = img_uncheck
+        self.img_uncheck_hover = img_uncheck_hover
         self.img_check = img_check
         self.img_check_hover = img_check_hover
         self.img_rgb = img_rgb

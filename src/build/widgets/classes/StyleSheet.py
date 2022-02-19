@@ -1289,16 +1289,18 @@ class StyleSheet:
         self.fg_placeholder = fg_placeholder
 
         self.img_height = img_height
-        self.img = img_uncheck
-        self.img_rgb = img_uncheck_rgb
-        self.img_hover = img_uncheck
-        self.img_hover_rgb = img_uncheck_rgb
+        self.img = img
+        self.img_hover = img_hover
         self.img_uncheck = img_uncheck
+        self.img_uncheck_hover = img_uncheck_hover
+        self.img_check = img_check
+        self.img_check_hover = img_check_hover
+        self.img_rgb = img_rgb
+        self.img_hover_rgb = img_hover_rgb
         self.img_uncheck_rgb = img_uncheck_rgb
-        self.img_check = img_uncheck
-        self.img_check_rgb = img_uncheck_rgb
-        self.img_check_hover = img_uncheck
-        self.img_check_hover_rgb = img_uncheck_rgb
+        self.img_uncheck_hover_rgb = img_uncheck_hover_rgb
+        self.img_check_rgb = img_check_rgb
+        self.img_check_hover_rgb = img_check_hover_rgb
         self.x_ico = x_ico
         self.X_ICO = X_ICO
 
@@ -1320,6 +1322,8 @@ class StyleSheet:
                 DIM_ICO=self.img_height * self.X_ICO,
                 img=self.img,
                 img_hover=self.img_hover,
+                img_uncheck=self.img_uncheck,
+                img_uncheck_hover=self.img_uncheck_hover,
                 img_check=self.img_check,
                 img_check_hover=self.img_check_hover,
                 img_rgb=self.img_rgb,
