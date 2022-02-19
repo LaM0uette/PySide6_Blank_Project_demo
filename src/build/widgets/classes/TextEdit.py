@@ -12,11 +12,11 @@ class Style:
             font_size=p_base.FONT_SIZE,
             align_horizontal=Align().left(),
             align_vertical=Align().v_center(),
-            style=StyleSheet().get()
+            style=StyleSheet()
     ):
 
         for wg in wgs:
-            wg.setStyleSheet(style)
+            wg.setStyleSheet(style.get())
 
             Fct(wg=wg, w=width, h=height).DIM()
             wg.setFont(Fct(font=font, font_size=font_size).FONT())
@@ -28,7 +28,7 @@ class Style:
             try: wg.viewport().setCursor(Fct(cur=P_cur().IBeam()).CUR())
             except: pass
 
-            wg.setPalette(StyleSheet().get_txt_palette())
+            wg.setPalette(style.get_txt_palette())
 
 
 class Base_th(Style):
@@ -36,7 +36,7 @@ class Base_th(Style):
         super().__init__(
             *wgs,
             style=StyleSheet(
-            ).get()
+            )
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
@@ -44,7 +44,7 @@ class Base_tr(Style):
             *wgs,
             style=StyleSheet(
                 bg=Rgb().tr(),
-            ).get()
+            )
     )
 
 class tr_taille(Style):
@@ -56,7 +56,7 @@ class tr_taille(Style):
 
             style=StyleSheet(
                 bg=Rgb().tr(),
-            ).get()
+            )
     )
 
 
@@ -67,7 +67,7 @@ class Demo_th(Style):
             height=P_dim().h5(),
 
             style=StyleSheet(
-            ).get()
+            )
     )
 class Demo_tr(Style):
     def __init__(self, *wgs):
@@ -77,5 +77,5 @@ class Demo_tr(Style):
 
             style=StyleSheet(
                 bg=Rgb().tr(),
-            ).get()
+            )
     )
