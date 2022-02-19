@@ -16,14 +16,14 @@ class Style:
             X_ICO=P_style().X_ICO(),
             font=p_base.FONT,
             font_size=p_base.FONT_SIZE,
-            img_check=p_base.IMG_CHECK,
-            img_check_hover=p_base.IMG_CHECK_HOVER,
             img=p_base.IMG_UNROLL,
             img_hover=p_base.IMG_UNROLL_HOVER,
-            img_check_rgb=p_base.IMG_CHECK_RGB,
-            img_check_hover_rgb=p_base.IMG_CHECK_HOVER_RGB,
+            img_check=p_base.IMG_CHECK,
+            img_check_hover=p_base.IMG_CHECK_HOVER,
             img_rgb=p_base.IMG_UNROLL_RGB,
             img_hover_rgb=p_base.IMG_UNROLL_HOVER_RGB,
+            img_check_rgb=p_base.IMG_CHECK_RGB,
+            img_check_hover_rgb=p_base.IMG_CHECK_HOVER_RGB,
             curseur=p_base.CUR,
             style=StyleSheet().get()
     ):
@@ -41,27 +41,25 @@ class Style:
             if button_type is not None and img is not None:
                 Fct(wg=wg, img=f"{img}{img_rgb}", dim=height * x_ico).ICON()
 
-            # try:
-            #     if button_type is not None and button_type is not None:
-            #         cls = Classe_pb.Classe_pb(wg=wg,
-            #                                   dim_ico=dim_height * x_ico,
-            #                                   DIM_ICO=dim_height * X_ICO,
-            #                                   img=img_uncheck,
-            #                                   img_check=img_check,
-            #                                   tm=tm_uncheck,
-            #                                   tm_hover=tm_hover,
-            #                                   tm_check=tm_check)
-            #
-            #         if button_type == "check":
-            #             wg.mousePressEvent = cls.MP_CHECK
-            #         elif button_type == "ico":
-            #             wg.enterEvent = cls.ENT_ICO
-            #             wg.leaveEvent = cls.LVE_ICO
-            #             wg.mousePressEvent = cls.MP_ICO
-            #         elif button_type == "zoom":
-            #             wg.enterEvent = cls.ENT_ZOOM
-            #             wg.leaveEvent = cls.LVE_ZOOM
-            # except: pass
+            if button_type is not None:
+                cls = Classe_pb.Classe_pb(wg=wg,
+                                          dim_ico=height * x_ico,
+                                          DIM_ICO=height * X_ICO,
+                                          img=img,
+                                          img_check=img_check,
+                                          img_rgb=img_rgb,
+                                          tm_hover=tm_hover,
+                                          tm_check=tm_check)
+
+                if button_type == "check":
+                    wg.mousePressEvent = cls.MP_CHECK
+                elif button_type == "ico":
+                    wg.enterEvent = cls.ENT_ICO
+                    wg.leaveEvent = cls.LVE_ICO
+                    wg.mousePressEvent = cls.MP_ICO
+                elif button_type == "zoom":
+                    wg.enterEvent = cls.ENT_ZOOM
+                    wg.leaveEvent = cls.LVE_ZOOM
 
 #fg_checked=p_base.COULEURS.get("c3"),
 class Base_th(Style):

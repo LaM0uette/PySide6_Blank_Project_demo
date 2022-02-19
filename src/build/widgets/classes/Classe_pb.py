@@ -4,43 +4,57 @@ from ....build import *
 
 
 class Classe_pb:
-    def __init__(self, **kwargs):
+    def __init__(
+            self,
+            wg,
+            dim_ico,
+            DIM_ICO,
+            img,
+            img_hover,
+            img_check,
+            img_check_hover,
+            img_rgb,
+            img_hover_rgb,
+            img_check_rgb,
+            img_check_hover_rgb,
+    ):
+        self.wg = wg
+        self.dim_ico = dim_ico
+        self.DIM_ICO = DIM_ICO
+        self.img = img
+        self.img_hover = img_hover
+        self.img_check = img_check
+        self.img_check_hover = img_check_hover
+        self.img_rgb = img_rgb
+        self.img_hover_rgb = img_hover_rgb
+        self.img_check_rgb = img_check_rgb
+        self.img_check_hover_rgb = img_check_hover_rgb
 
-        self.kwargs = kwargs
-
-        self.wg = self.kwargs.get("wg")
-        self.dim_ico = self.kwargs.get("dim_ico")
-        self.DIM_ICO = self.kwargs.get("DIM_ICO")
-        self.img = self.kwargs.get("img")
-        self.img_check = self.kwargs.get("img_check")
-        self.tm = self.kwargs.get("tm")
-        self.tm_hover = self.kwargs.get("tm_hover")
-        self.tm_check = self.kwargs.get("tm_check")
 
 
     def MP_CHECK(self, event):
         if event.buttons() and QtCore.Qt.LeftButton and self.wg.isEnabled():
             if self.wg.isChecked():
                 self.wg.setChecked(False)
-                Fct(wg=self.wg, img=self.img + self.tm, dim=self.dim_ico).ICON()
+                Fct(wg=self.wg, img=self.img + self.img_rgb, dim=self.dim_ico).ICON()
             elif not self.wg.isChecked():
                 self.wg.setChecked(True)
-                Fct(wg=self.wg, img=self.img_check + self.tm, dim=self.dim_ico).ICON()
+                Fct(wg=self.wg, img=self.img_check + self.img_rgb, dim=self.dim_ico).ICON()
 
     def ENT_ICO(self, event):
         if not self.wg.isChecked() and self.wg.isEnabled():
-            Fct(wg=self.wg, img=self.img + self.tm_hover, dim=self.dim_ico).ICON()
+            Fct(wg=self.wg, img=self.img + self.img_hover_rgb, dim=self.dim_ico).ICON()
     def LVE_ICO(self, event):
         if not self.wg.isChecked() and self.wg.isEnabled():
-            Fct(wg=self.wg, img=self.img + self.tm, dim=self.dim_ico).ICON()
+            Fct(wg=self.wg, img=self.img + self.img_rgb, dim=self.dim_ico).ICON()
     def MP_ICO(self, event):
         if event.buttons() and QtCore.Qt.LeftButton and self.wg.isEnabled():
             if self.wg.isChecked():
                 self.wg.setChecked(False)
-                Fct(wg=self.wg, img=self.img + self.tm, dim=self.dim_ico).ICON()
+                Fct(wg=self.wg, img=self.img + self.img_rgb, dim=self.dim_ico).ICON()
             elif not self.wg.isChecked():
                 self.wg.setChecked(True)
-                Fct(wg=self.wg, img=self.img + self.tm_hover, dim=self.dim_ico).ICON()
+                Fct(wg=self.wg, img=self.img + self.img_hover_rgb, dim=self.dim_ico).ICON()
 
     def ENT_ZOOM(self, event):
         if not self.wg.isChecked() and self.wg.isEnabled():
