@@ -895,10 +895,28 @@ class StyleSheet:
         
                 /* BORDURES */
                 .QPushButton {{
-                border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
-                border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
-                border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
-                border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
+                border-top: {border_top}px {border_style} rgba{border_rgb};
+                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
+                border-right: {border_right}px {border_style} rgba{border_rgb};
+                border-left: {border_left}px {border_style} rgba{border_rgb};
+                }}
+                .QPushButton:hover {{
+                border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
+                }}
+                .QPushButton:checked {{
+                border-top: {border_top_checked}px {border_style_checked} rgba{border_rgb_checked};
+                border-bottom: {border_bottom_checked}px {border_style_checked} rgba{border_rgb_checked};
+                border-right: {border_right_checked}px {border_style_checked} rgba{border_rgb_checked};
+                border-left: {border_left_checked}px {border_style_checked} rgba{border_rgb_checked};
+                }}
+                .QPushButton:checked:hover {{
+                border-top: {border_top_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
+                border-bottom: {border_bottom_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
+                border-right: {border_right_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
+                border-left: {border_left_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
                 }}
 /****************************
 **      /QPushButton       **
