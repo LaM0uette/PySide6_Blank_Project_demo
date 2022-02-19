@@ -56,8 +56,6 @@ class StyleSheet:
             # Dimensions WG
             width=p_base.WG_WIDTH,
             height=p_base.WG_HEIGHT,
-            x_ico=P_style().x_ico(),
-            X_ICO=P_style().X_ICO(),
             spacing=10,
             padding_top=0,
             padding_bottom=0,

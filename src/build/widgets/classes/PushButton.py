@@ -12,26 +12,38 @@ class Style:
             button_type=None,
             width=p_base.WG_WIDTH,
             height=p_base.WG_HEIGHT,
+            x_ico=P_style().x_ico(),
+            X_ICO=P_style().X_ICO(),
             font=p_base.FONT,
             font_size=p_base.FONT_SIZE,
+            img_uncheck=p_base.IMG_UNCHECK,
+            img_uncheck_hover=p_base.IMG_UNCHECK_HOVER,
+            img_check=p_base.IMG_CHECK,
+            img_check_hover=p_base.IMG_CHECK_HOVER,
+            img=p_base.IMG_UNROLL,
+            img_hover=p_base.IMG_UNROLL_HOVER,
+            img_uncheck_rgb=p_base.IMG_UNCHECK_RGB,
+            img_uncheck_hover_rgb=p_base.IMG_UNCHECK_HOVER_RGB,
+            img_check_rgb=p_base.IMG_CHECK_RGB,
+            img_check_hover_rgb=p_base.IMG_CHECK_HOVER_RGB,
+            img_rgb=p_base.IMG_UNROLL_RGB,
+            img_hover_rgb=p_base.IMG_UNROLL_HOVER_RGB,
             curseur=p_base.CUR,
             style=StyleSheet().get()
     ):
         for wg in wgs:
             wg.setStyleSheet(style)
 
-            try:
-                Fct(wg=wg, w=width, h=height).DIM()
-                wg.setFont(Fct(font=font, font_size=font_size).FONT())
+            Fct(wg=wg, w=width, h=height).DIM()
+            wg.setFont(Fct(font=font, font_size=font_size).FONT())
 
-                wg.setFlat(True)
-                wg.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
+            wg.setFlat(True)
+            wg.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
 
-                wg.setCursor(Fct(cur=curseur).CUR())
-            except: pass
+            wg.setCursor(Fct(cur=curseur).CUR())
 
             if button_type is not None and img_uncheck is not None:
-                Fct(wg=wg, img=f"{self.img_uncheck}{self.img_uncheck_rgb}", dim=self.img_height).ICON()
+                Fct(wg=wg, img=f"{img_uncheck}{img_uncheck_rgb}", dim=height * x_ico).ICON()
 
             # try:
             #     if button_type is not None and button_type is not None:
