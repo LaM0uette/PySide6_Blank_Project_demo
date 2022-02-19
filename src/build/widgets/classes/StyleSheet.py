@@ -1327,4 +1327,5 @@ class StyleSheet:
                 img_check_rgb=self.img_check_rgb,
                 img_check_hover_rgb=self.img_check_hover_rgb,
             )
+            return cls
 
