@@ -43,12 +43,13 @@ class Classe_pb:
             if not self.wg.isChecked():
                 Fct(wg=self.wg, img=self.img_uncheck_hover + self.img_uncheck_hover_rgb, dim=self.dim_ico).ICON()
             else:
-                Fct(wg=self.wg, img=self.img_uncheck + self.img_uncheck_rgb, dim=self.dim_ico).ICON()
-
-
-
+                Fct(wg=self.wg, img=self.img_check_hover + self.img_check_hover_rgb, dim=self.dim_ico).ICON()
     def LVE_CHECK(self, event):
-        pass
+        if self.wg.isEnabled():
+            if not self.wg.isChecked():
+                Fct(wg=self.wg, img=self.img_uncheck + self.img_uncheck_rgb, dim=self.dim_ico).ICON()
+            else:
+                Fct(wg=self.wg, img=self.img_check + self.img_check_rgb, dim=self.dim_ico).ICON()
     def MP_CHECK(self, event):
         if self.wg.isChecked() and self.wg.isEnabled():
             self.wg.setChecked(False)
