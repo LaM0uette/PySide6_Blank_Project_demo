@@ -2,6 +2,7 @@ from PySide6 import QtGui
 
 from ....build import *
 from ....build.widgets import p_base
+from ....build.widgets.classes import Classe_pb
 
 
 class StyleSheet:
@@ -89,6 +90,8 @@ class StyleSheet:
             # Images DIM
             img_width=p_base.IMG_WIDTH,
             img_height=p_base.IMG_HEIGHT,
+            x_ico=P_style().x_ico(),
+            X_ICO=P_style().X_ICO(),
             # Images margin
             img_margin_top=0,
             img_margin_bottom=0,
@@ -1284,9 +1287,20 @@ class StyleSheet:
 
         self.fg = fg
         self.fg_placeholder = fg_placeholder
+
+        self.img_height = img_height
+        self.img = img_uncheck
+        self.img_rgb = img_uncheck_rgb
+        self.img_hover = img_uncheck
+        self.img_hover_rgb = img_uncheck_rgb
         self.img_uncheck = img_uncheck
         self.img_uncheck_rgb = img_uncheck_rgb
-        self.img_height = img_height
+        self.img_check = img_uncheck
+        self.img_check_rgb = img_uncheck_rgb
+        self.img_check_hover = img_uncheck
+        self.img_check_hover_rgb = img_uncheck_rgb
+        self.x_ico = x_ico
+        self.X_ICO = X_ICO
 
 
     def get(self): return self.style
@@ -1295,4 +1309,22 @@ class StyleSheet:
         palette_txt.setColor(QtGui.QPalette.Text, QtGui.QColor(*self.fg))
         palette_txt.setColor(QtGui.QPalette.PlaceholderText, QtGui.QColor(*self.fg_placeholder))
         return palette_txt
+    def get_cls_pb(self, wg, wg_type):
+        if wg_type is not None and self.img is not None:
+            Fct(wg=wg, img=f"{self.img}{self.img_rgb}", dim=self.img_height * self.x_ico).ICON()
+
+        if wg_type is not None:
+            cls = Classe_pb.Classe_pb(
+                wg=wg,
+                dim_ico=self.img_height * self.x_ico,
+                DIM_ICO=self.img_height * self.X_ICO,
+                img=self.img,
+                img_hover=self.img_hover,
+                img_check=self.img_check,
+                img_check_hover=self.img_check_hover,
+                img_rgb=self.img_rgb,
+                img_hover_rgb=self.img_hover_rgb,
+                img_check_rgb=self.img_check_rgb,
+                img_check_hover_rgb=self.img_check_hover_rgb,
+            )
 

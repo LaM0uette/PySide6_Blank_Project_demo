@@ -1,7 +1,6 @@
 from PySide6 import QtWidgets
 
 from .StyleSheet import StyleSheet
-from ....build.widgets.classes import Classe_pb
 from ....build import *
 from ....build.widgets import p_base
 
@@ -9,26 +8,16 @@ class Style:
     def __init__(
             self,
             *wgs,
-            button_type=None,
+            wg_type=None,
             width=p_base.WG_WIDTH,
             height=p_base.WG_HEIGHT,
-            x_ico=P_style().x_ico(),
-            X_ICO=P_style().X_ICO(),
             font=p_base.FONT,
             font_size=p_base.FONT_SIZE,
-            img=p_base.IMG_UNCHECK,
-            img_hover=p_base.IMG_UNCHECK_HOVER,
-            img_check=p_base.IMG_CHECK,
-            img_check_hover=p_base.IMG_CHECK_HOVER,
-            img_rgb=p_base.IMG_UNROLL_RGB,
-            img_hover_rgb=p_base.IMG_UNROLL_HOVER_RGB,
-            img_check_rgb=p_base.IMG_CHECK_RGB,
-            img_check_hover_rgb=p_base.IMG_CHECK_HOVER_RGB,
             curseur=p_base.CUR,
-            style=StyleSheet().get()
+            style=StyleSheet()
     ):
         for wg in wgs:
-            wg.setStyleSheet(style)
+            wg.setStyleSheet(style.get())
 
             Fct(wg=wg, w=width, h=height).DIM()
             wg.setFont(Fct(font=font, font_size=font_size).FONT())
@@ -38,31 +27,15 @@ class Style:
 
             wg.setCursor(Fct(cur=curseur).CUR())
 
-            if button_type is not None and img is not None:
-                Fct(wg=wg, img=f"{img}{img_rgb}", dim=height * x_ico).ICON()
+            cls = style.get_cls_pb(wg=wg, wg_type=wg_type)
 
-            if button_type is not None:
-                cls = Classe_pb.Classe_pb(
-                    wg=wg,
-                    dim_ico=height * x_ico,
-                    DIM_ICO=height * X_ICO,
-                    img=img,
-                    img_hover=img_hover,
-                    img_check=img_check,
-                    img_check_hover=img_check_hover,
-                    img_rgb=img_rgb,
-                    img_hover_rgb=img_hover_rgb,
-                    img_check_rgb=img_check_rgb,
-                    img_check_hover_rgb=img_check_hover_rgb,
-                )
-
-                if button_type == "check":
-                    wg.mousePressEvent = cls.MP_CHECK
-                elif button_type == "ico":
-                    wg.enterEvent = cls.ENT_ICO
-                    wg.leaveEvent = cls.LVE_ICO
-                    wg.mousePressEvent = cls.MP_ICO
-                elif button_type == "zoom":
+            if wg_type == "check":
+                wg.mousePressEvent = cls.MP_CHECK
+            elif wg_type == "ico":
+                wg.enterEvent = cls.ENT_ICO
+                wg.leaveEvent = cls.LVE_ICO
+                wg.mousePressEvent = cls.MP_ICO
+            elif wg_type == "zoom":
                     wg.enterEvent = cls.ENT_ZOOM
                     wg.leaveEvent = cls.LVE_ZOOM
 
@@ -72,7 +45,7 @@ class Base_th(Style):
         super().__init__(
             *wgs,
             style=StyleSheet(
-            ).get()
+            )
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
@@ -82,7 +55,7 @@ class Base_tr(Style):
                 bg_gen=Rgb().tr(),
                 fg=Rgb().th3(),
                 fg_checked=Rgb().bn1(),
-            ).get()
+            )
     )
 
 class menu_top:
@@ -95,10 +68,8 @@ class menu_top:
     ):
         Style(
             *self.wgs,
-            button_type="zoom",
+            wg_type="zoom",
             width=P_dim().h9() * 1.2,
-            img=img,
-            img_rgb=img_rgb,
             curseur=P_cur().souris_main(),
 
             style=StyleSheet(
@@ -108,7 +79,9 @@ class menu_top:
                 bg_checked_hover=Rgb().tr(),
                 bg_pressed=Rgb().tr(),
                 fg_checked=p_base.COULEURS.get("c3"),
-            ).get()
+                img=img,
+                img_rgb=img_rgb,
+            )
         )
 
     def option(self):
@@ -148,7 +121,7 @@ class txt(Style):
                 bg_checked_pressed=Rgb().th1(),
                 border_gen_all=P_style().bd(),
                 border_gen_rgb=Rgb().th3(),
-            ).get()
+            )
     )
 class txt_inv(Style):
     def __init__(self, *wgs):
@@ -167,7 +140,7 @@ class txt_inv(Style):
                 bg_checked_pressed=Rgb().th3(),
                 border_gen_all=P_style().bd(),
                 border_gen_rgb=Rgb().th3(),
-            ).get()
+            )
     )
 
 class dlg_ok(Style):
@@ -185,7 +158,7 @@ class dlg_ok(Style):
                 bg_pressed=Rgb().vert(),
                 border_gen_all=P_style().bd(),
                 border_gen_rgb=Rgb().vert(),
-            ).get()
+            )
     )
 class dlg_ok_inv(Style):
     def __init__(self, *wgs):
@@ -202,7 +175,7 @@ class dlg_ok_inv(Style):
                 bg_pressed=Rgb().th1(),
                 border_gen_all=P_style().bd(),
                 border_gen_rgb=Rgb().vert(),
-            ).get()
+            )
     )
 class dlg_nok(Style):
     def __init__(self, *wgs):
@@ -218,7 +191,7 @@ class dlg_nok(Style):
                 bg_pressed=Rgb().rouge(),
                 border_gen_all=P_style().bd(),
                 border_gen_rgb=Rgb().rouge(),
-            ).get()
+            )
         )
 class dlg_nok_inv(Style):
     def __init__(self, *wgs):
@@ -234,7 +207,7 @@ class dlg_nok_inv(Style):
                 bg_pressed=Rgb().th1(),
                 border_gen_all=P_style().bd(),
                 border_gen_rgb=Rgb().rouge(),
-            ).get()
+            )
         )
 
 class plein:
@@ -260,7 +233,7 @@ class plein:
                 fg_gen=fg_gen,
                 border_gen_all=border_gen_all,
                 border_gen_rgb=border_gen_rgb,
-            ).get()
+            )
         )
 
     def th1(self):
@@ -299,7 +272,7 @@ class Demo_bd(Style):
             style=StyleSheet(
                 border_gen_all=P_style().bd(),
                 border_gen_rgb=Rgb().bn1(),
-            ).get()
+            )
     )
 class Demo_rd(Style):
     def __init__(self, *wgs):
@@ -307,29 +280,29 @@ class Demo_rd(Style):
             *wgs,
             style=StyleSheet(
                 radius_all=10,
-            ).get()
+            )
     )
 
 class ck_ico(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            button_type="check",
+            wg_type="check",
 
             style=StyleSheet(
                 bg_gen=Rgb().tr(),
                 fg=Rgb().th3(),
-            ).get()
+            )
     )
 class zoom(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            button_type="zoom",
-            img=P_img().calendrier(),
-            img_rgb="",
+            wg_type="zoom",
 
             style=StyleSheet(
                 bg_gen=Rgb().tr(),
-            ).get()
+                img=P_img().calendrier(),
+                img_rgb="",
+            )
     )
