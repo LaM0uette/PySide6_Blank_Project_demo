@@ -30,7 +30,7 @@ class Style:
             cls = style.get_cls_pb(wg=wg, wg_type=wg_type)
 
             if wg_type == "check":
-                wg.mousePressEvent = style.MP_CHECK
+                wg.mousePressEvent = cls.MP_CHECK
             elif wg_type == "ico":
                 wg.enterEvent = cls.ENT_ICO
                 wg.leaveEvent = cls.LVE_ICO

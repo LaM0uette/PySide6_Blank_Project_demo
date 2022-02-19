@@ -1333,12 +1333,3 @@ class StyleSheet:
             )
             return cls
 
-    def MP_CHECK(self, wg, event):
-        if event.buttons() and QtCore.Qt.LeftButton and wg.isEnabled():
-            if wg.isChecked():
-                wg.setChecked(False)
-                Fct(wg=wg, img=self.img + self.img_rgb, dim=self.img_height * self.x_ico).ICON()
-            elif not wg.isChecked():
-                wg.setChecked(True)
-                Fct(wg=wg, img=self.img_check + self.img_rgb, dim=self.img_height * self.x_ico).ICON()
-

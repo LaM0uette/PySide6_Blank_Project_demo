@@ -37,13 +37,12 @@ class Classe_pb:
 
 
     def MP_CHECK(self, event):
-        if event.buttons() and QtCore.Qt.LeftButton and self.wg.isEnabled():
-            if self.wg.isChecked():
-                self.wg.setChecked(False)
-                Fct(wg=self.wg, img=self.img + self.img_rgb, dim=self.dim_ico).ICON()
-            elif not self.wg.isChecked():
-                self.wg.setChecked(True)
-                Fct(wg=self.wg, img=self.img_check + self.img_rgb, dim=self.dim_ico).ICON()
+        if self.wg.isChecked() and self.wg.isEnabled():
+            self.wg.setChecked(False)
+            Fct(wg=self.wg, img=self.img + self.img_rgb, dim=self.dim_ico).ICON()
+        elif not self.wg.isChecked() and self.wg.isEnabled():
+            self.wg.setChecked(True)
+            Fct(wg=self.wg, img=self.img_check + self.img_rgb, dim=self.dim_ico).ICON()
 
     def ENT_ICO(self, event):
         if not self.wg.isChecked() and self.wg.isEnabled():
@@ -52,13 +51,12 @@ class Classe_pb:
         if not self.wg.isChecked() and self.wg.isEnabled():
             Fct(wg=self.wg, img=self.img + self.img_rgb, dim=self.dim_ico).ICON()
     def MP_ICO(self, event):
-        if event.buttons() and QtCore.Qt.LeftButton and self.wg.isEnabled():
-            if self.wg.isChecked():
-                self.wg.setChecked(False)
-                Fct(wg=self.wg, img=self.img + self.img_rgb, dim=self.dim_ico).ICON()
-            elif not self.wg.isChecked():
-                self.wg.setChecked(True)
-                Fct(wg=self.wg, img=self.img + self.img_hover_rgb, dim=self.dim_ico).ICON()
+        if self.wg.isChecked() and self.wg.isEnabled():
+            self.wg.setChecked(False)
+            Fct(wg=self.wg, img=self.img + self.img_rgb, dim=self.dim_ico).ICON()
+        elif not self.wg.isChecked() and self.wg.isEnabled():
+            self.wg.setChecked(True)
+            Fct(wg=self.wg, img=self.img + self.img_hover_rgb, dim=self.dim_ico).ICON()
 
     def ENT_ZOOM(self, event):
         if not self.wg.isChecked() and self.wg.isEnabled():
