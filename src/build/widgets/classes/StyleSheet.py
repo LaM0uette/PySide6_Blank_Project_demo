@@ -1082,7 +1082,7 @@ class StyleSheet:
                 QSpinBox, QDoubleSpinBox {{
                 background-color: rgba{bg};
                 color: rgba{fg};
-                selection-background-color: rgb{bg_selection};
+                selection-background-color: rgba{bg_selection};
                 selection-color: rgba{fg_selection}
                 }}
         

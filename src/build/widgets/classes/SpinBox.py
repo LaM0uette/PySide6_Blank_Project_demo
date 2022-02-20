@@ -59,7 +59,8 @@ class Plus_moins_tr(Style):
             no_focus=True,
 
             style=StyleSheet(
-                bg_gen=Rgb().tr()
+                bg_gen=Rgb().tr(),
+                fg_gen=Rgb().th3(),
             )
     )
 
@@ -81,6 +82,7 @@ class Up_down_tr(Style):
 
             style=StyleSheet(
                 bg_gen=Rgb().tr(),
+                fg_gen=Rgb().th3(),
                 img_up=P_img().fleche_top(),
                 img_down=P_img().fleche_bottom(),
             )
