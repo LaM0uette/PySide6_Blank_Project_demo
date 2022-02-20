@@ -1084,17 +1084,23 @@ class StyleSheet:
                 bottom: {img_down_bottom}px;
                 right: {img_down_right}px;
                 left: {img_down_left}px;
-                image: url({f"{img_down}{tm_down}.svg"});
-                height: {img_down_height}px;
+                image: url({f"{img_down}{img_down_rgb}.svg"});
                 width: {img_down_width}px;
+                height: {img_down_height}px;
                 }}
         
                 /* BORDURES */
                 .QSpinBox, .QDoubleSpinBox {{
-                border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
-                border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
-                border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
-                border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
+                border-top: {border_top}px {border_style} rgba{border_rgb};
+                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
+                border-right: {border_right}px {border_style} rgba{border_rgb};
+                border-left: {border_left}px {border_style} rgba{border_rgb};
+                }}
+                .QSpinBox:hover, .QDoubleSpinBox:hover {{
+                border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
                 }}
 /*************************
 **       QSpinBox       **
