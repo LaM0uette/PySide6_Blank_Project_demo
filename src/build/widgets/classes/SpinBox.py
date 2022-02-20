@@ -8,16 +8,15 @@ class Style:
     def __init__(
             self,
             *wgs,
+            wg_type=p_base.SB_BUTTONS_TYPE,
             width=p_base.WG_WIDTH,
             height=p_base.WG_HEIGHT,
             font=p_base.FONT,
             font_size=p_base.FONT_SIZE,
-            buttons_type=p_base.SB_BUTTONS_TYPE,
             no_focus=p_base.NO_FOCUS,
             value_min=p_base.VAL_MIN,
             value_max=p_base.VAL_MAX,
             value_step=p_base.VAL_STEP,
-
             align_horizontal=Align().h_center(),
             align_vertical=Align().v_center(),
             curseur=p_base.CUR,
@@ -32,14 +31,14 @@ class Style:
 
             wg.setFont(Fct(font=font, font_size=font_size).FONT())
 
-            wg.setAlignment(align)
+            wg.setAlignment(align_horizontal | align_vertical)
 
             wg.setMinimum(value_min)
             wg.setMaximum(value_max)
             wg.setSingleStep(value_step)
 
             wg.setFrame(QtWidgets.QFrame.NoFrame)
-            wg.setButtonSymbols(buttons_type)
+            wg.setButtonSymbols(wg_type)
             if no_focus: wg.setFocusPolicy(QtCore.Qt.NoFocus)
 
             wg.setCursor(Fct(cur=curseur).CUR())
@@ -48,29 +47,43 @@ class Style:
 
 class Plus_moins_th(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs)
+        super().__init__(
+            *wgs,
+            style=StyleSheet(
+            )
+        )
 class Plus_moins_tr(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-              couleur_bg=(0, 0, 0, 0),
-              couleur_bg_hover=(0, 0, 0, 0),
-              no_focus=True
+        super().__init__(
+            *wgs,
+            no_focus=True,
+
+            style=StyleSheet(
+                bg_gen=Rgb().tr()
+            )
     )
 
 class Up_down_th(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-              img_up=P_img().fleche_top(),
-              img_down=P_img().fleche_bottom(),
+        super().__init__(
+            *wgs,
+            style=StyleSheet(
+                img_up=P_img().fleche_top(),
+                img_down=P_img().fleche_bottom(),
+            )
+
     )
 class Up_down_tr(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-              couleur_bg=(0, 0, 0, 0),
-              couleur_bg_hover=(0, 0, 0, 0),
-              img_up=P_img().fleche_top(),
-              img_down=P_img().fleche_bottom(),
-              no_focus=True
+        super().__init__(
+            *wgs,
+            no_focus=True,
+
+            style=StyleSheet(
+                bg_gen=Rgb().tr(),
+                img_up=P_img().fleche_top(),
+                img_down=P_img().fleche_bottom(),
+            )
     )
 
 
