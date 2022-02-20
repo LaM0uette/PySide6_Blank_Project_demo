@@ -25,6 +25,14 @@ BG_ITEM_CHECKED_HOVER = Rgb().th1()
 # BG Autres
 BG_CHUNK = Rgb().th2()
 BG_CHUNK_HOVER = Rgb().bn1()
+BG_GROOVE = Rgb().th3()
+BG_GROOVE_HOVER = Rgb().th3()
+BG_GROOVE_PRESSED = Rgb().th3()
+BG_HANDLE = Rgb().th2()
+BG_HANDLE_HOVER = Rgb().th2()
+BG_HANDLE_PRESSED = Rgb().bn1()
+
+
 
 
 _COLORS_BG= COULEURS.get("c1") + (255,)
