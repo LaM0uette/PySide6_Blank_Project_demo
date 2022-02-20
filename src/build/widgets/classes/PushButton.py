@@ -80,7 +80,7 @@ class menu_top:
                 bg_checked=Rgb().tr(),
                 bg_checked_hover=Rgb().tr(),
                 bg_pressed=Rgb().tr(),
-                fg_checked=p_base.COULEURS.get("c3"),
+                fg_checked=Rgb().th3(),
                 img=img,
                 img_rgb=img_rgb,
             )
