@@ -7,8 +7,6 @@ from ...config import *
 ######################
 ##     COULEURS     ##
 ######################
-COULEURS = P_rgb().p_th3()
-
 # BG
 BG = Rgb().th3()
 BG_HOVER = Rgb().th3()
