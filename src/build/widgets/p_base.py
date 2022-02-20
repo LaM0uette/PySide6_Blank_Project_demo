@@ -144,13 +144,13 @@ FONT_SIZE_HD = P_font().h3()
 ##     PARAMETRES     ##
 ########################
 EDIT = False
+NO_FOCUS = False
 SB_BUTTONS_TYPE = P_pb_sb().plus_minus()
 TEXT_VISIBLE = True
-WORD_WRAP = True
-NO_FOCUS = False
 VAL_MIN = 0
 VAL_MAX = 100
 VAL_STEP = 1
+WORD_WRAP = True
 
 
 #####################
