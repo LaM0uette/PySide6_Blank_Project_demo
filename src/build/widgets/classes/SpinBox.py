@@ -12,14 +12,7 @@ class Style:
             height=p_base.WG_HEIGHT,
             font=p_base.FONT,
             font_size=p_base.FONT_SIZE,
-            img_up=p_base.IMG_UP,
-            tm_up=p_base.TM_UP,
-            img_down=p_base.IMG_DOWN,
-            tm_down=p_base.TM_DOWN,
-            img_up_width=p_base.IMG_WIDTH,
-            img_up_height=p_base.IMG_HEIGHT,
-            img_down_width=p_base.IMG_WIDTH,
-            img_down_height=p_base.IMG_HEIGHT,
+
 
             align=P_align().c().c(),
             buttons_type=p_base.SB_BUTTONS_TYPE,

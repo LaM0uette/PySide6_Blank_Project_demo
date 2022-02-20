@@ -93,6 +93,8 @@ class StyleSheet:
             img_all=None,
             img=p_base.IMG_UNROLL,
             img_hover=p_base.IMG_UNROLL_HOVER,
+            img_up=p_base.IMG_UP,
+            img_down=p_base.IMG_DOWN,
             img_right=p_base.IMG_RIGHT,
             img_left=p_base.IMG_LEFT,
             # Images RGB
@@ -103,6 +105,8 @@ class StyleSheet:
             img_all_rgb=None,
             img_rgb=p_base.IMG_UNROLL_RGB,
             img_hover_rgb=p_base.IMG_UNROLL_HOVER_RGB,
+            img_up_rgb=p_base.IMG_UP_RGB,
+            img_down_rgb=p_base.IMG_DOWN_RGB,
             img_right_rgb=p_base.IMG_RIGHT_RGB,
             img_left_rgb=p_base.IMG_LEFT_RGB,
             # Images DIM
@@ -110,6 +114,14 @@ class StyleSheet:
             IMG_WIDTH=p_base.IMG_WIDTH,
             img_height=p_base.img_height,
             IMG_HEIGHT=p_base.IMG_HEIGHT,
+
+
+
+            img_up_width=p_base.IMG_WIDTH,
+            img_up_height=p_base.IMG_HEIGHT,
+            img_down_width=p_base.IMG_WIDTH,
+            img_down_height=p_base.IMG_HEIGHT,
+
             # Images positions
             img_margin_top=0,
             img_margin_bottom=0,
