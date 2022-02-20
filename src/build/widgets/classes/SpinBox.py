@@ -14,10 +14,10 @@ class Style:
             couleur_fg=p_base._COLORS_FG,
             couleur_fg_hover=p_base._COLORS_FG_HOVER,
             couleur_fg_selection=p_base.COLORS_FG_SELECTION,
-            dim_width=p_base.WG_WIDTH,
-            dim_height=p_base.WG_HEIGHT,
-            police=p_base.FONT,
-            police_taille=p_base.FONT_SIZE,
+            width=p_base.WG_WIDTH,
+            height=p_base.WG_HEIGHT,
+            font=p_base.FONT,
+            font_size=p_base.FONT_SIZE,
             img_up=p_base.IMG_UP,
             tm_up=p_base.TM_UP,
             img_down=p_base.IMG_DOWN,
@@ -110,25 +110,23 @@ class Style:
         for wg in wgs:
             wg.setStyleSheet(style)
 
-            try: Fct(wg=wg, w=dim_width, h=dim_height).DIM()
+            try: Fct(wg=wg, w=width, h=height).DIM()
             except: pass
 
-            try:
-                wg.setFont(Fct(font=police, font_size=police_taille).FONT())
+            wg.setFont(Fct(font=font, font_size=font_size).FONT())
 
-                wg.setAlignment(align)
+            wg.setAlignment(align)
 
-                wg.setMinimum(value_min)
-                wg.setMaximum(value_max)
-                wg.setSingleStep(value_pas)
+            wg.setMinimum(value_min)
+            wg.setMaximum(value_max)
+            wg.setSingleStep(value_pas)
 
-                wg.setFrame(QtWidgets.QFrame.NoFrame)
-                wg.setButtonSymbols(buttons_type)
-                if no_focus: wg.setFocusPolicy(QtCore.Qt.NoFocus)
+            wg.setFrame(QtWidgets.QFrame.NoFrame)
+            wg.setButtonSymbols(buttons_type)
+            if no_focus: wg.setFocusPolicy(QtCore.Qt.NoFocus)
 
-                wg.setCursor(Fct(cur=curseur).CUR())
-                wg.lineEdit().setCursor(Fct(cur=curseur_le).CUR())
-            except: pass
+            wg.setCursor(Fct(cur=curseur).CUR())
+            wg.lineEdit().setCursor(Fct(cur=curseur_le).CUR())
 
 
 class Plus_moins_th(Style):
