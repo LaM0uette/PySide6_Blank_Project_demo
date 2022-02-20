@@ -114,9 +114,6 @@ class StyleSheet:
             IMG_WIDTH=p_base.IMG_WIDTH,
             img_height=p_base.img_height,
             IMG_HEIGHT=p_base.IMG_HEIGHT,
-
-
-
             img_up_width=p_base.IMG_WIDTH,
             img_up_height=p_base.IMG_HEIGHT,
             img_down_width=p_base.IMG_WIDTH,
