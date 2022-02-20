@@ -24,7 +24,7 @@ class Style:
             style=StyleSheet()
     ):
         for wg in wgs:
-            wg.setStyleSheet(style)
+            wg.setStyleSheet(style.get())
 
             try: Fct(wg=wg, w=width, h=height).DIM()
             except: pass
