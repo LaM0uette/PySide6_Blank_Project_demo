@@ -25,6 +25,14 @@ class StyleSheet:
             bg_item_checked_hover=p_base.BG_ITEM_CHECKED_HOVER,
             bg_chunk=p_base.BG_CHUNK,
             bg_chunk_hover=p_base.BG_CHUNK_HOVER,
+
+            bg_groove=p_base.BG,
+            bg_groove_hover=p_base.BG_HOVER,
+            bg_groove_pressed=p_base.BG_PRESSED,
+            bg_handle=p_base.BG,
+            bg_handle_hover=p_base.BG_HOVER,
+            bg_handle_pressed=p_base.BG_PRESSED,
+
             bg_corner=p_base.BG,
             bg_header=Rgb().th2(),
             bg_header_hover=Rgb().th2(),
@@ -57,7 +65,17 @@ class StyleSheet:
             # Dimensions WG
             width=p_base.WG_WIDTH,
             height=p_base.WG_HEIGHT,
+            width_groove=None,
+            height_groove=None,
+            height_handle_h=None,
+            width_handle_h=None,
+            height_handle_v=None,
+            width_handle_v=None,
             spacing=10,
+            margin_top=0,
+            margin_bottom=0,
+            margin_right=0,
+            margin_left=0,
             padding_top=0,
             padding_bottom=0,
             padding_right=0,
@@ -967,7 +985,7 @@ class StyleSheet:
                 /* BARRE_H */
                 QSlider::groove:horizontal {{
                 background-color: rgba{bg_groove};
-                height: {groove_height}px;
+                height: {height_groove}px;
                 }}
                 QSlider::groove:horizontal:hover {{
                 background-color: rgba{bg_groove_hover};
@@ -996,7 +1014,7 @@ class StyleSheet:
                 /* BARRE_V */
                 QSlider::groove:vertical {{
                 background-color: rgba{bg_groove};
-                width: {groove_width}px;
+                width: {width_groove}px;
                 }}
                 QSlider::groove:vertical:hover {{
                 background-color: rgba{bg_groove_hover};
@@ -1024,10 +1042,16 @@ class StyleSheet:
         
                 /* BORDURES */
                 .QSlider {{
-                border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
-                border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
-                border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
-                border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
+                border-top: {border_top}px {border_style} rgba{border_rgb};
+                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
+                border-right: {border_right}px {border_style} rgba{border_rgb};
+                border-left: {border_left}px {border_style} rgba{border_rgb};
+                }}
+                .QSlider:hover {{
+                border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
                 }}
 /************************
 **      /QSlider       **
