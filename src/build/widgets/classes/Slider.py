@@ -10,7 +10,7 @@ class Style:
             height=p_base.HEIGHT,
             value_min=p_base.VAL_MIN,
             value_max=p_base.VAL_MAX,
-            value_step=p_base.VAL_PAS,
+            value_step=p_base.VAL_STEP,
             curseur=p_base.CUR,
             style=StyleSheet()
     ):

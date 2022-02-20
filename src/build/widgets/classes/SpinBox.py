@@ -12,14 +12,14 @@ class Style:
             height=p_base.WG_HEIGHT,
             font=p_base.FONT,
             font_size=p_base.FONT_SIZE,
-
-
-            align=P_align().c().c(),
             buttons_type=p_base.SB_BUTTONS_TYPE,
             no_focus=p_base.NO_FOCUS,
             value_min=p_base.VAL_MIN,
             value_max=p_base.VAL_MAX,
-            value_pas=p_base.VAL_PAS,
+            value_step=p_base.VAL_STEP,
+
+            align_horizontal=Align().h_center(),
+            align_vertical=Align().v_center(),
             curseur=p_base.CUR,
             curseur_le=p_base.CUR_LE,
             style=StyleSheet()
@@ -36,7 +36,7 @@ class Style:
 
             wg.setMinimum(value_min)
             wg.setMaximum(value_max)
-            wg.setSingleStep(value_pas)
+            wg.setSingleStep(value_step)
 
             wg.setFrame(QtWidgets.QFrame.NoFrame)
             wg.setButtonSymbols(buttons_type)

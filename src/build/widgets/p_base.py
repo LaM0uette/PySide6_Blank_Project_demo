@@ -202,7 +202,7 @@ WORD_WRAP = True
 NO_FOCUS = False
 VAL_MIN = 0
 VAL_MAX = 100
-VAL_PAS = 1
+VAL_STEP = 1
 
 
 #####################
