@@ -959,6 +959,76 @@ class StyleSheet:
 /************************
 **       QSlider       **
 *************************/
+                /* SLIDER  */
+                QSlider {{
+                background-color: rgba{bg};
+                }}
+        
+                /* BARRE_H */
+                QSlider::groove:horizontal {{
+                background-color: rgba{bg_groove};
+                height: {groove_height}px;
+                }}
+                QSlider::groove:horizontal:hover {{
+                background-color: rgba{bg_groove_hover};
+                }}
+                QSlider::groove:horizontal:pressed {{
+                background-color: rgba{bg_groove_pressed};
+                }}
+        
+                /* CURSEUR_H */
+                QSlider::handle:horizontal {{
+                background-color: rgba{bg_handle};
+                height: {height_handle_h}px;
+                width: {width_handle_h}px;
+                margin-top: {margin_top}px;
+                margin-bottom: {margin_bottom}px;
+                margin_right: {margin_right}px;
+                margin_left: {margin_left}px;
+                }}
+                QSlider::handle:horizontal:hover {{
+                background-color: rgba{bg_handle_hover};
+                }}
+                QSlider::handle:horizontal:pressed {{
+                background-color: rgba{bg_handle_pressed};
+                }}
+        
+                /* BARRE_V */
+                QSlider::groove:vertical {{
+                background-color: rgba{bg_groove};
+                width: {groove_width}px;
+                }}
+                QSlider::groove:vertical:hover {{
+                background-color: rgba{bg_groove_hover};
+                }}
+                QSlider::groove:vertical:pressed {{
+                background-color: rgba{bg_groove_pressed};
+                }}
+        
+                /* CURSEUR_V */
+                QSlider::handle:vertical {{
+                background-color: rgba{bg_handle};
+                height: {height_handle_v}px;
+                width: {width_handle_v}px;
+                margin-top: {margin_top}px;
+                margin-bottom: {margin_bottom}px;
+                margin_right: {margin_right}px;
+                margin_left: {margin_left}px;
+                }}
+                QSlider::handle:vertical:hover {{
+                background-color: rgba{bg_handle_hover};
+                }}
+                QSlider::handle:vertical:pressed {{
+                background-color: rgba{bg_handle_pressed};
+                }}
+        
+                /* BORDURES */
+                .QSlider {{
+                border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
+                border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
+                border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
+                border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
+                }}
 /************************
 **      /QSlider       **
 *************************/

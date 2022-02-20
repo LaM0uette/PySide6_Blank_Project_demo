@@ -1,3 +1,4 @@
+from .StyleSheet import StyleSheet
 from ....build import *
 from ....build.widgets import p_base
 
@@ -45,86 +46,7 @@ class Style:
                  rayon_bottom_right=p_base.WG_RADIUS,
                  rayon_bottom_left=p_base.WG_RADIUS,
                  curseur=p_base.CUR
-                 ):
-        style = f"""
-        /* SLIDER  */
-        QSlider {{
-        background-color: rgba{couleur_bg};
-        }}
-
-        /* BARRE_H */
-        QSlider::groove:horizontal {{
-        background-color: rgba{couleur_bg_barre};
-        height: {hauteur_barre_h}px;
-        }}
-        QSlider::groove:horizontal:hover {{
-        background-color: rgba{couleur_bg_barre_hover};
-        }}
-        QSlider::groove:horizontal:pressed {{
-        background-color: rgba{couleur_bg_barre_pressed};
-        }}
-
-        /* CURSEUR_H */
-        QSlider::handle:horizontal {{
-        background-color: rgba{couleur_bg_cur};
-        height: {hauteur_main_h}px;
-        width: {largeur_main_h}px;
-        margin-top: {margin_top}px;
-        margin-bottom: {margin_bottom}px;
-        margin_right: {margin_right}px;
-        margin_left: {margin_left}px;
-        }}
-        QSlider::handle:horizontal:hover {{
-        background-color: rgba{couleur_bg_cur_hover};
-        }}
-        QSlider::handle:horizontal:pressed {{
-        background-color: rgba{couleur_bg_cur_pressed};
-        }}
-
-        /* BARRE_V */
-        QSlider::groove:vertical {{
-        background-color: rgba{couleur_bg_barre};
-        width: {largeur_barre_v}px;
-        }}
-        QSlider::groove:vertical:hover {{
-        background-color: rgba{couleur_bg_barre_hover};
-        }}
-        QSlider::groove:vertical:pressed {{
-        background-color: rgba{couleur_bg_barre_pressed};
-        }}
-
-        /* CURSEUR_V */
-        QSlider::handle:vertical {{
-        background-color: rgba{couleur_bg_cur};
-        height: {hauteur_main_v}px;
-        width: {largeur_main_v}px;
-        margin-top: {margin_top}px;
-        margin-bottom: {margin_bottom}px;
-        margin_right: {margin_right}px;
-        margin_left: {margin_left}px;
-        }}
-        QSlider::handle:vertical:hover {{
-        background-color: rgba{couleur_bg_cur_hover};
-        }}
-        QSlider::handle:vertical:pressed {{
-        background-color: rgba{couleur_bg_cur_pressed};
-        }}
-
-        /* BORDURES */
-        .QSlider {{
-        border-top: {bordure_width_top}px {bordure_style_top} rgba{bordure_couleur_top};
-        border-bottom: {bordure_width_bottom}px {bordure_style_bottom} rgba{bordure_couleur_bottom};
-        border-right: {bordure_width_right}px {bordure_style_right} rgba{bordure_couleur_right};
-        border-left: {bordure_width_left}px {bordure_style_left} rgba{bordure_couleur_left};
-        }}
-
-        /* RAYONS */
-        .QSlider {{
-        border-top-left-radius: {rayon_top_left}px;
-        border-top-right-radius: {rayon_top_right}px;
-        border-bottom-right-radius: {rayon_bottom_right}px;
-        border-bottom-left-radius: {rayon_bottom_left}px;
-        }}"""
+    ):
         for wg in wgs:
             wg.setStyleSheet(style)
 
