@@ -89,42 +89,35 @@ class Up_down_tr(Style):
 
 class rgb_bd_th3(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-                         bordure_width_top=P_style().bd(),
-                         bordure_width_bottom=P_style().bd(),
-                         bordure_width_right=P_style().bd(),
-                         bordure_width_left=P_style().bd(),
-                         bordure_couleur_top=P_rgb().th3(),
-                         bordure_couleur_bottom=P_rgb().th3(),
-                         bordure_couleur_right=P_rgb().th3(),
-                         bordure_couleur_left=P_rgb().th3(),
-                         value_max=255
-                         )
+        super().__init__(
+            *wgs,
+            value_max=255,
+
+            style=StyleSheet(
+                border_gen_all=P_style().bd(),
+                border_gen_rgb=P_rgb().th3(),
+            )
+        )
 class Plus_moins_bd_th3(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-              bordure_width_top=P_style().bd(),
-              bordure_width_bottom=P_style().bd(),
-              bordure_width_right=P_style().bd(),
-              bordure_width_left=P_style().bd(),
-              bordure_couleur_top=P_rgb().th3(),
-              bordure_couleur_bottom=P_rgb().th3(),
-              bordure_couleur_right=P_rgb().th3(),
-              bordure_couleur_left=P_rgb().th3(),
+        super().__init__(
+            *wgs,
+            style=StyleSheet(
+                border_gen_all=P_style().bd(),
+                border_gen_rgb=P_rgb().th3(),
+            )
     )
 class Plus_moins_inf_bd_th3(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-                         bordure_width_top=P_style().bd(),
-                         bordure_width_bottom=P_style().bd(),
-                         bordure_width_right=P_style().bd(),
-                         bordure_width_left=P_style().bd(),
-                         bordure_couleur_top=P_rgb().th3(),
-                         bordure_couleur_bottom=P_rgb().th3(),
-                         bordure_couleur_right=P_rgb().th3(),
-                         bordure_couleur_left=P_rgb().th3(),
-                         value_max=999999
-                         )
+        super().__init__(
+            *wgs,
+            value_max=999999,
+
+            style=StyleSheet(
+                border_gen_all=P_style().bd(),
+                border_gen_rgb=P_rgb().th3(),
+            )
+        )
 
 
 """
