@@ -65,10 +65,10 @@ class StyleSheet:
             height=p_base.WG_HEIGHT,
             width_groove=P_dim().h9(),
             height_groove=P_dim().h9(),
-            height_handle_h=P_dim().h9(),
             width_handle_h=P_dim().h9(),
-            height_handle_v=P_dim().h9(),
+            height_handle_h=P_dim().h9(),
             width_handle_v=P_dim().h9(),
+            height_handle_v=P_dim().h9(),
             spacing=10,
             margin_top=0,
             margin_bottom=0,
@@ -995,8 +995,8 @@ class StyleSheet:
                 /* CURSEUR_H */
                 QSlider::handle:horizontal {{
                 background-color: rgba{bg_handle};
-                height: {height_handle_h}px;
                 width: {width_handle_h}px;
+                height: {height_handle_h}px;
                 margin-top: {margin_top}px;
                 margin-bottom: {margin_bottom}px;
                 margin_right: {margin_right}px;
@@ -1024,8 +1024,8 @@ class StyleSheet:
                 /* CURSEUR_V */
                 QSlider::handle:vertical {{
                 background-color: rgba{bg_handle};
-                height: {height_handle_v}px;
                 width: {width_handle_v}px;
+                height: {height_handle_v}px;
                 margin-top: {margin_top}px;
                 margin-bottom: {margin_bottom}px;
                 margin_right: {margin_right}px;
@@ -1073,9 +1073,9 @@ class StyleSheet:
                 bottom: {img_up_bottom}px;
                 right: {img_up_right}px;
                 left: {img_up_left}px;
-                image: url({f"{img_up}{tm_up}.svg"});
-                height: {img_up_height}px;
+                image: url({f"{img_up}{img_up_rgb}.svg"});
                 width: {img_up_width}px;
+                height: {img_up_height}px;
                 }}
         
                 QSpinBox::down-button, QDoubleSpinBox::down-button  {{
