@@ -48,6 +48,7 @@ FG_ITEM_CHECKED_HOVER = Rgb().bn1()
 # Autres
 GRIDLINE = Rgb().th2()
 
+
 ########################
 ##     DIMENSIONS     ##
 ########################
@@ -60,9 +61,6 @@ WG_HEIGHT = P_dim().h9()
 ####################
 ##     IMAGES     ##
 ####################
-
-IMG_RGB = "th2"
-
 # Check
 IMG_UNCHECK = P_img().check()
 IMG_UNCHECK_HOVER = P_img().check()
@@ -89,15 +87,7 @@ IMG_DOWN_RGB = "th2"
 IMG_RIGHT_RGB = "th3"
 IMG_LEFT_RGB = "th3"
 
-
-
-TM_DROITE = "th3"  ##
-TM_GAUCHE = "th3"  ##
-TM_UP = "th2"  ##
-TM_DOWN = "th2"  ##
-
-
-
+# img dim
 img_width = WG_HEIGHT * P_style().x_ico()
 IMG_WIDTH = WG_HEIGHT * P_style().X_ICO()
 img_height = WG_HEIGHT * P_style().x_ico()
@@ -153,7 +143,6 @@ FONT_SIZE_HD = P_font().h3()
 ########################
 ##     PARAMETRES     ##
 ########################
-ALIGN = P_align().l().c() ##
 EDIT = False
 SB_BUTTONS_TYPE = P_pb_sb().pl_mi()
 TEXT_VISIBLE = True
