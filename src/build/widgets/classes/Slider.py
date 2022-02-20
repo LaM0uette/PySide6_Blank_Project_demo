@@ -3,62 +3,27 @@ from ....build import *
 from ....build.widgets import p_base
 
 class Style:
-    def __init__(self,
-                 *wgs,
-                 couleur_bg=(0, 0, 0, 0),
-                 couleur_bg_barre=p_base.COLORS_BG_BARRE,
-                 couleur_bg_barre_hover=p_base.COLORS_BG_BARRE_HOVER,
-                 couleur_bg_barre_pressed=p_base.COLORS_BG_BARRE_PRESSED,
-                 couleur_bg_cur=p_base.COLORS_BG_CUR,
-                 couleur_bg_cur_hover=p_base.COLORS_BG_CUR_HOVER,
-                 couleur_bg_cur_pressed=p_base.COLORS_BG_CUR_PRESSED,
-                 couleur_degrade_1=p_base._COLORS_BG,
-                 couleur_degrade_2=p_base._COLORS_BG,
-                 dim_width=p_base.WIDTH,
-                 dim_height=p_base.HEIGHT,
-                 hauteur_barre_h=10,
-                 hauteur_main_h=20,
-                 largeur_main_h=20,
-                 largeur_barre_v=10,
-                 hauteur_main_v=20,
-                 largeur_main_v=20,
-                 margin_top=-10,
-                 margin_bottom=-10,
-                 margin_right=-10,
-                 margin_left=-10,
-                 valeur_min=p_base.VAL_MIN,
-                 valeur_max=p_base.VAL_MAX,
-                 valeur_pas=p_base.VAL_PAS,
-                 bordure_width_top=p_base.WG_BORDER_WIDTH,
-                 bordure_width_bottom=p_base.WG_BORDER_WIDTH,
-                 bordure_width_right=p_base.WG_BORDER_WIDTH,
-                 bordure_width_left=p_base.WG_BORDER_WIDTH,
-                 bordure_style_top=p_base.WG_BORDER_STYLE,
-                 bordure_style_bottom=p_base.WG_BORDER_STYLE,
-                 bordure_style_right=p_base.WG_BORDER_STYLE,
-                 bordure_style_left=p_base.WG_BORDER_STYLE,
-                 bordure_couleur_top=p_base.WG_BORDER_RGB,
-                 bordure_couleur_bottom=p_base.WG_BORDER_RGB,
-                 bordure_couleur_right=p_base.WG_BORDER_RGB,
-                 bordure_couleur_left=p_base.WG_BORDER_RGB,
-                 rayon_top_left=p_base.WG_RADIUS,
-                 rayon_top_right=p_base.WG_RADIUS,
-                 rayon_bottom_right=p_base.WG_RADIUS,
-                 rayon_bottom_left=p_base.WG_RADIUS,
-                 curseur=p_base.CUR
+    def __init__(
+            self,
+            *wgs,
+            width=p_base.WIDTH,
+            height=p_base.HEIGHT,
+            value_min=p_base.VAL_MIN,
+            value_max=p_base.VAL_MAX,
+            value_step=p_base.VAL_PAS,
+            curseur=p_base.CUR,
+            style=StyleSheet()
     ):
         for wg in wgs:
             wg.setStyleSheet(style)
 
-            try:
-                Fct(wg=wg, w=dim_width, h=dim_height).DIM()
+            Fct(wg=wg, w=width, h=height).DIM()
 
-                wg.setMinimum(valeur_min)
-                wg.setMaximum(valeur_max)
-                wg.setSingleStep(valeur_pas)
+            wg.setMinimum(value_min)
+            wg.setMaximum(value_max)
+            wg.setSingleStep(value_step)
 
-                wg.setCursor(Fct(cur=curseur).CUR())
-            except: pass
+            wg.setCursor(Fct(cur=curseur).CUR())
 
 
 class Base_th(Style):
@@ -70,8 +35,8 @@ class Base_rond(Style):
 class rgb(Style):
     def __init__(self, *wgs):
         super().__init__(*wgs,
-              valeur_max=255
-    )
+                         value_max=255
+                         )
 
 """
 "rgb": 
