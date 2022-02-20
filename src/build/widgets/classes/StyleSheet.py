@@ -69,6 +69,8 @@ class StyleSheet:
             height_handle_h=P_dim().h9(),
             width_handle_v=P_dim().h9(),
             height_handle_v=P_dim().h9(),
+
+            # Positions WG
             spacing=10,
             margin_top=0,
             margin_bottom=0,
@@ -108,11 +110,19 @@ class StyleSheet:
             IMG_WIDTH=p_base.IMG_WIDTH,
             img_height=p_base.img_height,
             IMG_HEIGHT=p_base.IMG_HEIGHT,
-            # Images margin
+            # Images positions
             img_margin_top=0,
             img_margin_bottom=0,
             img_margin_right=0,
             img_margin_left=0,
+            img_up_top=0,
+            img_up_bottom=0,
+            img_up_right=0,
+            img_up_left=0,
+            img_down_top=0,
+            img_down_bottom=0,
+            img_down_right=0,
+            img_down_left=0,
 
             # Bordures GEN
             border_gen_all=None,
