@@ -28,15 +28,27 @@ class Style:
 
 class Base_th(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs)
+        super().__init__(
+            *wgs,
+            style=StyleSheet(
+            )
+        )
 class Base_rond(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs)
+        super().__init__(
+            *wgs,
+            style=StyleSheet(
+            )
+        )
 class rgb(Style):
     def __init__(self, *wgs):
-        super().__init__(*wgs,
-                         value_max=255
-                         )
+        super().__init__(
+            *wgs,
+            value_max=255,
+
+            style=StyleSheet(
+            )
+        )
 
 """
 "rgb": 
