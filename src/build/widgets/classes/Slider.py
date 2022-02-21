@@ -71,9 +71,34 @@ class rgb(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            value_max=255,
+            width=100,
+            height=100,
 
             style=StyleSheet(
+                bg=Rgb().th1(),
+                bg_handle=Rgb().tr(),
+                bg_handle_hover = Rgb().tr(),
+                bg_handle_pressed = Rgb().tr(),
+
+                height_groove=20,
+                width_groove=20,
+                width_handle_h=14,
+                height_handle_h=5,
+                width_handle_v=5,
+                height_handle_v=14,
+
+                margin_top_handle_h=-5,
+                margin_bottom_handle_h=-5,
+                margin_right_handle_v=-5,
+                margin_left_handle_v=-5,
+
+                border_handle_gen_all=8,
+                border_handle_gen_rgb=Rgb().th2(),
+
+                border_radius_groove_h=10,
+                border_radius_groove_v=10,
+                border_radius_handle_h=15,
+                border_radius_handle_v=15,
             )
         )
 
