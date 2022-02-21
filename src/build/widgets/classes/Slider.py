@@ -70,8 +70,8 @@ class Base_rond(Style):
 class rgb(Style):
     def __init__(self,
                  *wgs,
-                 gradient_rgb_1,
-                 gradient_rgb_2,
+                 gradient_rgb_1=None,
+                 gradient_rgb_2=None,
     ):
         super().__init__(
             *wgs,
