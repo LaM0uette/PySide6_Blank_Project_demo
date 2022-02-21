@@ -290,6 +290,10 @@ class StyleSheet:
                 fg_item_checked = fg_item_gen
                 fg_item_checked_hover = fg_item_gen
 
+            if gradient_rgb_1 is None or gradient_rgb_2 is None:
+                gradient_rgb_1 = bg_groove
+                gradient_rgb_2 = bg_groove
+
             # IMG
             if not img_all is None:
                 img = img_all
