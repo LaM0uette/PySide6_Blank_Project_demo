@@ -40,12 +40,12 @@ class Base_rond(Style):
             style=StyleSheet(
                 height_groove=20,
                 width_groove=20,
-                width_handle_h=5,
-                height_handle_h=14,
-                width_handle_v=14,
-                height_handle_v=5,
-                border_radius_groove_h=15,
-                border_radius_groove_v=15,
+                width_handle_h=14,
+                height_handle_h=5,
+                width_handle_v=5,
+                height_handle_v=14,
+                border_radius_groove_h=10,
+                border_radius_groove_v=10,
                 border_radius_handle_h=15,
                 border_radius_handle_v=15,
             )
@@ -59,3 +59,52 @@ class rgb(Style):
             style=StyleSheet(
             )
         )
+
+"""
+"rgb": 
+/* SLIDER  */
+QSlider {{
+background-color: rgba(0, 0, 0, 0);
+margin: 0px
+}}
+
+/* BARRE_H */
+QSlider::groove:horizontal {{
+border-radius: 10px;
+height: 20px;
+margin: 0px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{gradient_colors.get("c1")}, stop:1 rgba{gradient_colors.get("c2")});
+}}
+
+/* CURSEUR_H */
+QSlider::handle:horizontal {{
+border: none;
+height: 5px;
+width: 14px;
+margin: -5px 0px;
+border-radius: 15px;
+border: 8px solid rgb{colors.get("c1")};
+}}
+
+/* BARRE_V */
+QSlider::groove:vertical {{
+border-radius: 10px;
+width: 20px;
+margin: 0px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{gradient_colors.get("c1")}, stop:1 rgba{gradient_colors.get("c2")});
+}}
+
+QSlider::groove:vertical:hover {{
+background-color: rgb{colors.get("c3")};
+}}
+
+/* CURSEUR_V */
+QSlider::handle:vertical {{
+border: none;
+height: 14px;
+width: 5px;
+margin: 0px -5px;
+border-radius: 15px;
+border: 8px solid rgb{colors.get("c1")};
+}}
+"""
