@@ -232,6 +232,7 @@ class StyleSheet:
             border_handle_v_style=p_base.WG_BORDER_STYLE,
             border_handle_v_rgb=p_base.WG_BORDER_RGB,
             border_handle_v_top=p_base.WG_BORDER_WIDTH, border_handle_v_bottom=p_base.WG_BORDER_WIDTH, border_handle_v_right=p_base.WG_BORDER_WIDTH, border_handle_v_left=p_base.WG_BORDER_WIDTH,
+
             # Rayons
             radius_all=None,
             radius_top_right=p_base.WG_RADIUS,
