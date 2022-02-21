@@ -40,8 +40,10 @@ class Base_rond(Style):
             style=StyleSheet(
                 height_groove=20,
                 width_groove=20,
-                width=14,
-                height=5,
+                width_handle_h=5,
+                height_handle_h=14,
+                width_handle_v=14,
+                height_handle_v=5,
                 border_radius_groove_h=15,
                 border_radius_groove_v=15,
                 border_radius_handle_h=15,

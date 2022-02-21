@@ -1083,38 +1083,7 @@ class StyleSheet:
 *************************/
 
 
-/* BARRE_H */
-QSlider::groove:horizontal {{
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{"c1"}, stop:1 rgba{"c2"});
-}}
 
-/* CURSEUR_H */
-QSlider::handle:horizontal {{
-margin: -5px 0px;
-border: 8px solid rgb{"c1"};
-}}
-
-/* BARRE_V */
-QSlider::groove:vertical {{
-border-radius: 10px;
-width: 20px;
-margin: 0px;
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{"c1"}, stop:1 rgba{"c2"});
-}}
-
-QSlider::groove:vertical:hover {{
-background-color: rgb{colors.get("c3")};
-}}
-
-/* CURSEUR_V */
-QSlider::handle:vertical {{
-border: none;
-height: 14px;
-width: 5px;
-margin: 0px -5px;
-border-radius: 15px;
-border: 8px solid rgb{colors.get("c1")};
-}}
 
 
 
