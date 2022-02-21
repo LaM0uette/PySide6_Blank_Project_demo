@@ -1034,6 +1034,7 @@ class StyleSheet:
                 margin-bottom: {margin_bottom_handle_h}px;
                 margin-right: {margin_right_handle_h}px;
                 margin-left: {margin_left_handle_h}px;
+                margin: -5px 0px;
                 border: 8px solid rgba{(0, 255, 0, 255)};
                 }}
                 QSlider::handle:horizontal:hover {{
@@ -1066,7 +1067,6 @@ class StyleSheet:
                 margin-bottom: {margin_bottom_handle_v}px;
                 margin_right: {margin_right_handle_v}px;
                 margin_left: {margin_left_handle_v}px;
-                margin: 0px -5px;
                 border: 8px solid rgba{(0, 255, 0, 255)};
                 }}
                 QSlider::handle:vertical:hover {{
