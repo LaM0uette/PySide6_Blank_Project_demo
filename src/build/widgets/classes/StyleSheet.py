@@ -1061,7 +1061,7 @@ class StyleSheet:
         
                 /* BARRE_H */
                 QSlider::groove:horizontal {{
-                background-color: rgba{bg_groove};
+                background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{gradient_rgb_1}, stop:1 rgba{gradient_rgb_2});
                 height: {height_groove}px;
                 border-radius: {border_radius_groove_h}px;
                 }}
@@ -1096,7 +1096,7 @@ class StyleSheet:
         
                 /* BARRE_V */
                 QSlider::groove:vertical {{
-                background-color: rgba{bg_groove};
+                background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{gradient_rgb_1}, stop:1 rgba{gradient_rgb_2});
                 width: {width_groove}px;
                 border-radius: {border_radius_groove_v}px;
                 }}
