@@ -42,6 +42,10 @@ class Base_rond(Style):
 
             style=StyleSheet(
                 bg=Rgb().th1(),
+                bg_handle=Rgb().tr(),
+                bg_handle_hover = Rgb().tr(),
+                bg_handle_pressed = Rgb().tr(),
+
                 height_groove=20,
                 width_groove=20,
                 width_handle_h=14,
@@ -53,6 +57,11 @@ class Base_rond(Style):
                 margin_bottom_handle_h=-5,
                 margin_right_handle_v=-5,
                 margin_left_handle_v=-5,
+
+                border_handle_h_all=8,
+                border_handle_h_rgb=Rgb().th2(),
+                border_handle_v_all=8,
+                border_handle_v_rgb=Rgb().th2(),
 
                 border_radius_groove_h=10,
                 border_radius_groove_v=10,
