@@ -1021,6 +1021,7 @@ class StyleSheet:
                 background-color: rgba{bg_handle};
                 width: {width_handle_h}px;
                 height: {height_handle_h}px;
+                border-radius: {border_radius_handle_h}px;
                 margin-top: {margin_top}px;
                 margin-bottom: {margin_bottom}px;
                 margin_right: {margin_right}px;
@@ -1051,6 +1052,7 @@ class StyleSheet:
                 background-color: rgba{bg_handle};
                 width: {width_handle_v}px;
                 height: {height_handle_v}px;
+                border-radius: {border_radius_handle_v}px;
                 margin-top: {margin_top}px;
                 margin-bottom: {margin_bottom}px;
                 margin_right: {margin_right}px;
