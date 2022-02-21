@@ -37,7 +37,11 @@ class Base_rond(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
+            width=100,
+            height=100,
+
             style=StyleSheet(
+                bg=Rgb().th1(),
                 height_groove=20,
                 width_groove=20,
                 width_handle_h=14,
