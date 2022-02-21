@@ -59,6 +59,8 @@ class StyleSheet:
             fg_mois=Rgb().th1(),
             # couleurs autres
             gridline=p_base.GRIDLINE,
+            gradient_rgb_1=None,
+            gradient_rgb_2=None,
 
             # Dimensions WG
             width=p_base.WG_WIDTH,
