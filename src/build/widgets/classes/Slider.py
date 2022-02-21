@@ -58,10 +58,8 @@ class Base_rond(Style):
                 margin_right_handle_v=-5,
                 margin_left_handle_v=-5,
 
-                border_handle_h_all=8,
-                border_handle_h_rgb=Rgb().th2(),
-                border_handle_v_all=8,
-                border_handle_v_rgb=Rgb().th2(),
+                border_handle_gen_all=8,
+                border_handle_gen_rgb=Rgb().th2(),
 
                 border_radius_groove_h=10,
                 border_radius_groove_v=10,
