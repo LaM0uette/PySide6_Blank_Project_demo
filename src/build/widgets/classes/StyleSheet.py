@@ -222,18 +222,27 @@ class StyleSheet:
             border_day_size=P_style().bd(),
             border_day_style=p_base.WG_BORDER_STYLE,
             border_day_rgb=p_base.FG_ITEM_HOVER,
-            # Bordures slider:
-            border_radius_groove_h=0,
-            border_radius_groove_v=0,
-            border_radius_handle_h=0,
-            border_radius_handle_v=0,
-
+            # Bordures slider h
+            border_handle_h_all=None,
+            border_handle_h_style=p_base.WG_BORDER_STYLE,
+            border_handle_h_rgb=p_base.WG_BORDER_RGB,
+            border_handle_h_top=p_base.WG_BORDER_WIDTH, border_handle_h_bottom=p_base.WG_BORDER_WIDTH, border_handle_h_right=p_base.WG_BORDER_WIDTH, border_handle_h_left=p_base.WG_BORDER_WIDTH,
+            # Bordures slider v
+            border_handle_v_all=None,
+            border_handle_v_style=p_base.WG_BORDER_STYLE,
+            border_handle_v_rgb=p_base.WG_BORDER_RGB,
+            border_handle_v_top=p_base.WG_BORDER_WIDTH, border_handle_v_bottom=p_base.WG_BORDER_WIDTH, border_handle_v_right=p_base.WG_BORDER_WIDTH, border_handle_v_left=p_base.WG_BORDER_WIDTH,
             # Rayons
             radius_all=None,
             radius_top_right=p_base.WG_RADIUS,
             radius_top_left=p_base.WG_RADIUS,
             radius_bottom_right=p_base.WG_RADIUS,
             radius_bottom_left=p_base.WG_RADIUS,
+            # Rayons slider
+            border_radius_groove_h=0,
+            border_radius_groove_v=0,
+            border_radius_handle_h=0,
+            border_radius_handle_v=0,
 
             # Scroll
             scroll_bg=p_base.SCROLL_BG,
@@ -494,6 +503,19 @@ class StyleSheet:
                 border_item_rgb_hover = border_item_gen_rgb
                 border_item_rgb_checked = border_item_gen_rgb
                 border_item_rgb_checked_hover = border_item_gen_rgb
+
+            # Bordure handle h
+            if not border_handle_h_all is None:
+                border_handle_h_top = border_handle_h_all
+                border_handle_h_bottom = border_handle_h_all
+                border_handle_h_right = border_handle_h_all
+                border_handle_h_left = border_handle_h_all
+            # Bordure handle v
+            if not border_handle_v_all is None:
+                border_handle_v_top = border_handle_v_all
+                border_handle_v_bottom = border_handle_v_all
+                border_handle_v_right = border_handle_v_all
+                border_handle_v_left = border_handle_v_all
 
             # Radius
             if not radius_all is None:
