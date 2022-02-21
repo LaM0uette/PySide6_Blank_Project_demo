@@ -321,8 +321,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
     def OK(self):
         if self.pb_opt_appliquer.isVisible():
             self._appliquer()
-            self.close()
-        else: self.close()
+        self.close()
     #######################
     ##    /FONCTIONS     ##
     #######################
