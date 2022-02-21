@@ -1026,6 +1026,8 @@ class StyleSheet:
                 margin-bottom: {margin_bottom}px;
                 margin_right: {margin_right}px;
                 margin_left: {margin_left}px;
+                margin: -5px 0px;
+                border: 8px solid rgba{"c1"};
                 }}
                 QSlider::handle:horizontal:hover {{
                 background-color: rgba{bg_handle_hover};
@@ -1083,7 +1085,28 @@ class StyleSheet:
 *************************/
 
 
+/* BARRE_H */
+QSlider::groove:horizontal {{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{"c1"}, stop:1 rgba{"c2"});
+}}
 
+/* CURSEUR_H */
+QSlider::handle:horizontal {{
+margin: -5px 0px;
+border: 8px solid rgb{"c1"};
+}}
+
+/* BARRE_V */
+QSlider::groove:vertical {{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{"c1"}, stop:1 rgba{"c2"});
+}}
+
+
+/* CURSEUR_V */
+QSlider::handle:vertical {{
+margin: 0px -5px;
+border: 8px solid rgb{"c1"};
+}}
 
 
 
