@@ -121,7 +121,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         ### QSlider ###
-        Slider.Base_th(self.hsd_demo)
+        Slider.Base_rond(self.hsd_demo)
         Slider.Base_rond(self.vsd_demo)
         ### /QSlider ###
 
