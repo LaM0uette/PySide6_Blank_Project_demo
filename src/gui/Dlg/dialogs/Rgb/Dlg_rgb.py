@@ -156,20 +156,20 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     def __set_fr_color(self):
         rgb = self.sd_rgb_red.value(), self.sd_rgb_green.value(), self.sd_rgb_blue.value()
 
-        rgb_r = {"c1": (0, self.sd_rgb_green.value(), self.sd_rgb_blue.value()) + (255,),
-                 "c2": (255, self.sd_rgb_green.value(), self.sd_rgb_blue.value()) + (255,)}
+        rgb_red_1 = (0, self.sd_rgb_green.value(), self.sd_rgb_blue.value(), 255)
+        rgb_red_2 = (255, self.sd_rgb_green.value(), self.sd_rgb_blue.value(), 255)
 
-        rgb_g = {"c1": (self.sd_rgb_red.value(), 0, self.sd_rgb_blue.value()) + (255,),
-                 "c2": (self.sd_rgb_red.value(), 255, self.sd_rgb_blue.value()) + (255,)}
+        rgb_green_1 = (self.sd_rgb_red.value(), 0, self.sd_rgb_blue.value(), 255)
+        rgb_green_2 = (self.sd_rgb_red.value(), 255, self.sd_rgb_blue.value(), 255)
 
-        rgb_b = {"c1": (self.sd_rgb_red.value(), self.sd_rgb_green.value(), 0) + (255,),
-                 "c2": (self.sd_rgb_red.value(), self.sd_rgb_green.value(), 255) + (255,)}
+        rgb_blue_1 = (self.sd_rgb_red.value(), self.sd_rgb_green.value(), 0, 255)
+        rgb_blue_2 = (self.sd_rgb_red.value(), self.sd_rgb_green.value(), 255, 255)
 
         self.le_rgb_hex.setText(Fct().RGB_HEX(rgb=rgb))
         Frame.palette_rgb(self.fr_rgb_colors, rgb=rgb)
-        Slider.rgb(self.sd_rgb_red, gradient_colors=rgb_r).rgb()
-        Slider.rgb(self.sd_rgb_green, gradient_colors=rgb_g).rgb()
-        Slider.rgb(self.sd_rgb_blue, gradient_colors=rgb_b).rgb()
+        Slider.rgb(self.sd_rgb_red, gradient_rgb_1=rgb_red_1, gradient_rgb2=rgb_red_2)
+        Slider.rgb(self.sd_rgb_green, gradient_rgb_1=rgb_green_1, gradient_rgb2=rgb_green_2)
+        Slider.rgb(self.sd_rgb_blue, gradient_rgb_1=rgb_blue_1, gradient_rgb2=rgb_blue_2)
     def _set_sb_val(self):
         self.sb_rgb_red.setValue(self.sd_rgb_red.value())
         self.sb_rgb_green.setValue(self.sd_rgb_green.value())
