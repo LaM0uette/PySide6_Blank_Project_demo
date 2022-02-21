@@ -245,7 +245,7 @@ class StyleSheet:
             scroll_handle_fg_hover=p_base.SCROLL_HANDLE_FG_HOVER,
             scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
             scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
-    ):
+    ):  # sourcery no-metrics
         # Style all generation
         try:
             # BG / FG
