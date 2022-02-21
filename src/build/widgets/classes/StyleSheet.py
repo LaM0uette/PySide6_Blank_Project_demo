@@ -1065,8 +1065,8 @@ class StyleSheet:
                 border-radius: {border_radius_handle_v}px;
                 margin-top: {margin_top_handle_v}px;
                 margin-bottom: {margin_bottom_handle_v}px;
-                margin_right: {margin_right_handle_v}px;
-                margin_left: {margin_left_handle_v}px;
+                margin-right: {margin_right_handle_v}px;
+                margin-left: {margin_left_handle_v}px;
                 border: 8px solid rgba{(0, 255, 0, 255)};
                 }}
                 QSlider::handle:vertical:hover {{

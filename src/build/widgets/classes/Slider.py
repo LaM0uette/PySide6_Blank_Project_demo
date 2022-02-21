@@ -49,6 +49,8 @@ class Base_rond(Style):
                 width_handle_v=5,
                 height_handle_v=14,
 
+                margin_top_handle_h=-5,
+                margin_bottom_handle_h=-5,
                 margin_right_handle_v=-5,
                 margin_left_handle_v=-5,
 
