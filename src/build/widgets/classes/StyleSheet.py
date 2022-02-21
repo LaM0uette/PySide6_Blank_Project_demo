@@ -1027,7 +1027,7 @@ class StyleSheet:
                 margin_right: {margin_right}px;
                 margin_left: {margin_left}px;
                 margin: -5px 0px;
-                border: 8px solid rgba{"c1"};
+                border: 8px solid rgba{(0, 255, 0, 255)};
                 }}
                 QSlider::handle:horizontal:hover {{
                 background-color: rgba{bg_handle_hover};
@@ -1059,6 +1059,8 @@ class StyleSheet:
                 margin-bottom: {margin_bottom}px;
                 margin_right: {margin_right}px;
                 margin_left: {margin_left}px;
+                margin: 0px -5px;
+                border: 8px solid rgba{(0, 255, 0, 255)};
                 }}
                 QSlider::handle:vertical:hover {{
                 background-color: rgba{bg_handle_hover};
@@ -1105,7 +1107,7 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
 /* CURSEUR_V */
 QSlider::handle:vertical {{
 margin: 0px -5px;
-border: 8px solid rgb{"c1"};
+border: 8px solid rgba{(0, 255, 0, 255)};
 }}
 
 
