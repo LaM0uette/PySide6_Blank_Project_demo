@@ -76,6 +76,14 @@ class StyleSheet:
             margin_bottom=0,
             margin_right=0,
             margin_left=0,
+            margin_top_handle_h=0,
+            margin_bottom_handle_h=0,
+            margin_right_handle_h=0,
+            margin_left_handle_h=0,
+            margin_top_handle_v=0,
+            margin_bottom_handle_v=0,
+            margin_right_handle_v=0,
+            margin_left_handle_v=0,
             padding_top=0,
             padding_bottom=0,
             padding_right=0,
@@ -1015,18 +1023,17 @@ class StyleSheet:
                 QSlider::groove:horizontal:pressed {{
                 background-color: rgba{bg_groove_pressed};
                 }}
-        
+
                 /* CURSEUR_H */
                 QSlider::handle:horizontal {{
                 background-color: rgba{bg_handle};
                 width: {width_handle_h}px;
                 height: {height_handle_h}px;
                 border-radius: {border_radius_handle_h}px;
-                margin-top: {margin_top}px;
-                margin-bottom: {margin_bottom}px;
-                margin_right: {margin_right}px;
-                margin_left: {margin_left}px;
-                margin: -5px 0px;
+                margin-top: {margin_top_handle_h}px;
+                margin-bottom: {margin_bottom_handle_h}px;
+                margin_right: {margin_right_handle_h}px;
+                margin_left: {margin_left_handle_h}px;
                 border: 8px solid rgba{(0, 255, 0, 255)};
                 }}
                 QSlider::handle:horizontal:hover {{
@@ -1055,10 +1062,10 @@ class StyleSheet:
                 width: {width_handle_v}px;
                 height: {height_handle_v}px;
                 border-radius: {border_radius_handle_v}px;
-                margin-top: {margin_top}px;
-                margin-bottom: {margin_bottom}px;
-                margin_right: {margin_right}px;
-                margin_left: {margin_left}px;
+                margin-top: {margin_top_handle_v}px;
+                margin-bottom: {margin_bottom_handle_v}px;
+                margin_right: {margin_right_handle_v}px;
+                margin_left: {margin_left_handle_v}px;
                 margin: 0px -5px;
                 border: 8px solid rgba{(0, 255, 0, 255)};
                 }}
