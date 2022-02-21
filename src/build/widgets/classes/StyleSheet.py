@@ -222,6 +222,10 @@ class StyleSheet:
             border_day_size=P_style().bd(),
             border_day_style=p_base.WG_BORDER_STYLE,
             border_day_rgb=p_base.FG_ITEM_HOVER,
+            # Bordures slider
+            border_handle_gen_all=None,
+            border_handle_gen_style=None,
+            border_handle_gen_rgb=None,
             # Bordures slider h
             border_handle_h_all=None,
             border_handle_h_style=p_base.WG_BORDER_STYLE,
@@ -505,18 +509,33 @@ class StyleSheet:
                 border_item_rgb_checked = border_item_gen_rgb
                 border_item_rgb_checked_hover = border_item_gen_rgb
 
-            # Bordure handle h
-            if not border_handle_h_all is None:
-                border_handle_h_top = border_handle_h_all
-                border_handle_h_bottom = border_handle_h_all
-                border_handle_h_right = border_handle_h_all
-                border_handle_h_left = border_handle_h_all
-            # Bordure handle v
-            if not border_handle_v_all is None:
-                border_handle_v_top = border_handle_v_all
-                border_handle_v_bottom = border_handle_v_all
-                border_handle_v_right = border_handle_v_all
-                border_handle_v_left = border_handle_v_all
+            # Bordure handle
+            if not border_handle_gen_all is None:
+                border_handle_h_top = border_handle_gen_all
+                border_handle_h_bottom = border_handle_gen_all
+                border_handle_h_right = border_handle_gen_all
+                border_handle_h_left = border_handle_gen_all
+                border_handle_v_top = border_handle_gen_all
+                border_handle_v_bottom = border_handle_gen_all
+                border_handle_v_right = border_handle_gen_all
+                border_handle_v_left = border_handle_gen_all
+            elif border_handle_gen_all is None:
+                if not border_handle_h_all is None:
+                    border_handle_h_top = border_handle_h_all
+                    border_handle_h_bottom = border_handle_h_all
+                    border_handle_h_right = border_handle_h_all
+                    border_handle_h_left = border_handle_h_all
+                if not border_handle_v_all is None:
+                    border_handle_v_top = border_handle_v_all
+                    border_handle_v_bottom = border_handle_v_all
+                    border_handle_v_right = border_handle_v_all
+                    border_handle_v_left = border_handle_v_all
+            if not border_handle_gen_style is None:
+                border_handle_h_style = border_handle_gen_style
+                border_handle_v_style = border_handle_gen_style
+            if not border_handle_gen_rgb is None:
+                border_handle_h_rgb = border_handle_gen_rgb
+                border_handle_v_rgb = border_handle_gen_rgb
 
             # Radius
             if not radius_all is None:
