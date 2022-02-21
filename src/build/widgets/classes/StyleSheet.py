@@ -1034,7 +1034,10 @@ class StyleSheet:
                 margin-bottom: {margin_bottom_handle_h}px;
                 margin-right: {margin_right_handle_h}px;
                 margin-left: {margin_left_handle_h}px;
-                border: 8px solid rgba{(0, 255, 0, 255)};
+                border-top: {border_handle_h_top}px {border_handle_h_style} rgba{border_handle_h_rgb};
+                border-bottom: {border_handle_h_bottom}px {border_handle_h_style} rgba{border_handle_h_rgb};
+                border-right: {border_handle_h_right}px {border_handle_h_style} rgba{border_handle_h_rgb};
+                border-left: {border_handle_h_left}px {border_handle_h_style} rgba{border_handle_h_rgb};
                 }}
                 QSlider::handle:horizontal:hover {{
                 background-color: rgba{bg_handle_hover};
@@ -1066,7 +1069,10 @@ class StyleSheet:
                 margin-bottom: {margin_bottom_handle_v}px;
                 margin-right: {margin_right_handle_v}px;
                 margin-left: {margin_left_handle_v}px;
-                border: 8px solid rgba{(0, 255, 0, 255)};
+                border-top: {border_handle_v_top}px {border_handle_v_style} rgba{border_handle_v_rgb};
+                border-bottom: {border_handle_v_bottom}px {border_handle_v_style} rgba{border_handle_v_rgb};
+                border-right: {border_handle_v_right}px {border_handle_v_style} rgba{border_handle_v_rgb};
+                border-left: {border_handle_v_left}px {border_handle_v_style} rgba{border_handle_v_rgb};
                 }}
                 QSlider::handle:vertical:hover {{
                 background-color: rgba{bg_handle_hover};
@@ -1488,7 +1494,7 @@ class StyleSheet:
             else:
                 Fct(wg=wg, img=f"{self.img}{self.img_rgb}", dim=self.img_height).ICON()
 
-            cls = Classe_pb.Classe_pb(
+            return Classe_pb.Classe_pb(
                 wg=wg,
                 dim_ico=self.img_height,
                 DIM_ICO=self.IMG_HEIGHT,
@@ -1505,5 +1511,4 @@ class StyleSheet:
                 img_check_rgb=self.img_check_rgb,
                 img_check_hover_rgb=self.img_check_hover_rgb,
             )
-            return cls
 
