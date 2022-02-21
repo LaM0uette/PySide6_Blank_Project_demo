@@ -210,11 +210,15 @@ class StyleSheet:
             border_item_style_checked_hover=p_base.WG_BORDER_STYLE,
             border_item_rgb_checked_hover=p_base.WG_BORDER_RGB,
             border_item_top_checked_hover=p_base.WG_BORDER_WIDTH, border_item_bottom_checked_hover=p_base.WG_BORDER_WIDTH, border_item_right_checked_hover=p_base.WG_BORDER_WIDTH, border_item_left_checked_hover=p_base.WG_BORDER_WIDTH,
-
             # Bordures jours
             border_day_size=P_style().bd(),
             border_day_style=p_base.WG_BORDER_STYLE,
             border_day_rgb=p_base.FG_ITEM_HOVER,
+            # Bordures slider:
+            border_radius_groove_h=0,
+            border_radius_groove_v=0,
+            border_radius_handle_h=0,
+            border_radius_handle_v=0,
 
             # Rayons
             radius_all=None,
@@ -1003,6 +1007,7 @@ class StyleSheet:
                 QSlider::groove:horizontal {{
                 background-color: rgba{bg_groove};
                 height: {height_groove}px;
+                border-radius: {border_radius_groove_h}px;
                 }}
                 QSlider::groove:horizontal:hover {{
                 background-color: rgba{bg_groove_hover};
@@ -1032,6 +1037,7 @@ class StyleSheet:
                 QSlider::groove:vertical {{
                 background-color: rgba{bg_groove};
                 width: {width_groove}px;
+                border-radius: {border_radius_groove_v}px;
                 }}
                 QSlider::groove:vertical:hover {{
                 background-color: rgba{bg_groove_hover};
@@ -1073,6 +1079,50 @@ class StyleSheet:
 /************************
 **      /QSlider       **
 *************************/
+
+
+/* BARRE_H */
+QSlider::groove:horizontal {{
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{"c1"}, stop:1 rgba{"c2"});
+}}
+
+/* CURSEUR_H */
+QSlider::handle:horizontal {{
+height: 5px;
+width: 14px;
+margin: -5px 0px;
+border-radius: 15px;
+border: 8px solid rgb{colors.get("c1")};
+}}
+
+/* BARRE_V */
+QSlider::groove:vertical {{
+border-radius: 10px;
+width: 20px;
+margin: 0px;
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{gradient_colors.get("c1")}, stop:1 rgba{gradient_colors.get("c2")});
+}}
+
+QSlider::groove:vertical:hover {{
+background-color: rgb{colors.get("c3")};
+}}
+
+/* CURSEUR_V */
+QSlider::handle:vertical {{
+border: none;
+height: 14px;
+width: 5px;
+margin: 0px -5px;
+border-radius: 15px;
+border: 8px solid rgb{colors.get("c1")};
+}}
+
+
+
+
+
+
+
 
 
 
