@@ -1090,11 +1090,8 @@ background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgb
 
 /* CURSEUR_H */
 QSlider::handle:horizontal {{
-height: 5px;
-width: 14px;
 margin: -5px 0px;
-border-radius: 15px;
-border: 8px solid rgb{colors.get("c1")};
+border: 8px solid rgb{"c1"};
 }}
 
 /* BARRE_V */
@@ -1102,7 +1099,7 @@ QSlider::groove:vertical {{
 border-radius: 10px;
 width: 20px;
 margin: 0px;
-background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{gradient_colors.get("c1")}, stop:1 rgba{gradient_colors.get("c2")});
+background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{"c1"}, stop:1 rgba{"c2"});
 }}
 
 QSlider::groove:vertical:hover {{
