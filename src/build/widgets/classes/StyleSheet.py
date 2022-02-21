@@ -1032,8 +1032,8 @@ class StyleSheet:
                 border-radius: {border_radius_handle_h}px;
                 margin-top: {margin_top_handle_h}px;
                 margin-bottom: {margin_bottom_handle_h}px;
-                margin_right: {margin_right_handle_h}px;
-                margin_left: {margin_left_handle_h}px;
+                margin-right: {margin_right_handle_h}px;
+                margin-left: {margin_left_handle_h}px;
                 border: 8px solid rgba{(0, 255, 0, 255)};
                 }}
                 QSlider::handle:horizontal:hover {{
