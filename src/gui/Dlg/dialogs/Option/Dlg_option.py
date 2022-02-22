@@ -6,7 +6,7 @@ from PySide6 import QtCore, QtWidgets, QtGui
 
 from ... import option_ui
 from ..Msg import Msg
-from ..Rgb import Rgb
+from .._Rgb import _Rgb
 from .....build import *
 from .....config import *
 from .....In_classe import In_classe
@@ -263,13 +263,13 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.stk_option.setCurrentWidget(self.dct_pg.get(item.text(0))[0])
     def _pb_tm_maj(self, tm):
         dct_colors = {
-            "th1": P_rgb().p_u1().get("c1"),
-            "th2": P_rgb().p_u2().get("c1"),
-            "th3": P_rgb().p_u3().get("c1"),
-            "bn1": P_rgb().p_u_bn1().get("c1"),
-            "bn2": P_rgb().p_u_bn2().get("c1")
+            "th1": Rgb().th1(),
+            "th2": Rgb().th2(),
+            "th3": Rgb().th3(),
+            "bn1": Rgb().bn1(),
+            "bn2": Rgb().bn2(),
         }
-        rep, colors = Rgb().GET(rgb=dct_colors.get(tm))
+        rep, colors = _Rgb().GET(rgb=dct_colors.get(tm))
         if rep:
             self._val_change_appliquer()
 
