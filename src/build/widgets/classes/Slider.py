@@ -83,6 +83,8 @@ class rgb(Style):
                 bg_handle=Rgb().tr(),
                 bg_handle_hover = Rgb().tr(),
                 bg_handle_pressed = Rgb().tr(),
+                gradient_rgb_1=gradient_rgb_1,
+                gradient_rgb_2=gradient_rgb_2,
 
                 height_groove=20,
                 width_groove=20,
