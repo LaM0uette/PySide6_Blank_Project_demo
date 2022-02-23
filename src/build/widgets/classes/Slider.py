@@ -69,9 +69,7 @@ class Style:
         
                 /* BARRE_H */
                 QSlider::groove:horizontal {{
-                background-color: qlineargradient(spread:pad, 
-                                    x1:{gradient[0]}, y1:{gradient[1]}, x2:{gradient[2]}, y2:{gradient[3]}, 
-                                    stop:0 rgba{bg_groove}, stop:1 rgba{bg_groove_2});
+                background-color: qlineargradient(spread:pad, x1:{gradient[0]}, y1:{gradient[1]}, x2:{gradient[2]}, y2:{gradient[3]}, stop:0 rgba{bg_groove}, stop:1 rgba{bg_groove_2});
                 height: {height_groove}px;
                 border-radius: {radius_groove_h}px;
                 }}
