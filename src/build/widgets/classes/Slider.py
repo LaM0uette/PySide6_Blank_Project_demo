@@ -223,8 +223,6 @@ class rgb(Style):
             bg_handle=Rgb().tr(),
             bg_handle_hover = Rgb().tr(),
             bg_handle_pressed = Rgb().tr(),
-            gradient_rgb_1=gradient_rgb_1,
-            gradient_rgb_2=gradient_rgb_2,
 
             height_groove=20,
             width_groove=20,
@@ -233,13 +231,12 @@ class rgb(Style):
             width_handle_v=5,
             height_handle_v=14,
 
-            margin_top_handle_h=-5,
-            margin_bottom_handle_h=-5,
-            margin_right_handle_v=-5,
-            margin_left_handle_v=-5,
-
-            border_handle_gen_all=8,
-            border_handle_gen_rgb=Rgb().th2(),
+            margin_handle_h=(-5, -5, 0, 0),
+            margin_handle_v=(0, 0, -5, -5),
+            border_handle_h=(8, 8, 8, 8),
+            border_handle_h_rgb=Rgb().th2(),
+            border_handle_v=(8, 8, 8, 8),
+            border_handle_v_rgb=Rgb().th2(),
 
             radius_groove_h=10,
             radius_groove_v=10,
