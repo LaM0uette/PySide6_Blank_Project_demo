@@ -73,108 +73,11 @@ class Style:
             border_handle_v_rgb=p_base.WG_BORDER_RGB,
             border_handle_v_top=p_base.WG_BORDER_WIDTH, border_handle_v_bottom=p_base.WG_BORDER_WIDTH, border_handle_v_right=p_base.WG_BORDER_WIDTH, border_handle_v_left=p_base.WG_BORDER_WIDTH,
 
-            # Rayons slider
-            border_radius_groove_h=0,
-            border_radius_groove_v=0,
-            border_radius_handle_h=0,
-            border_radius_handle_v=0,
-
             # Rayons
-            radius_all=None,
-            radius_top_right=p_base.WG_RADIUS,
-            radius_top_left=p_base.WG_RADIUS,
-            radius_bottom_right=p_base.WG_RADIUS,
-            radius_bottom_left=p_base.WG_RADIUS,
+            radius=(0, 0, 0, 0),
+            radius_groove = (0, 0),
+            radius_handle = (0, 0),
     ):
-        try:
-            # BG / FG
-            if not bg_gen is None:
-                bg = bg_gen
-                bg_hover = bg_gen
-                bg_pressed = bg_gen
-
-            if gradient_rgb_1 is None or gradient_rgb_2 is None:
-                gradient_rgb_1 = bg_groove
-                gradient_rgb_2 = bg_groove
-
-            # Bordure GEN
-            if not border_gen_all is None:
-                border_top = border_gen_all
-                border_bottom = border_gen_all
-                border_right = border_gen_all
-                border_left = border_gen_all
-                border_top_hover = border_gen_all
-                border_bottom_hover = border_gen_all
-                border_right_hover = border_gen_all
-                border_left_hover = border_gen_all
-            elif border_gen_all is None:
-                if not border_all is None:
-                    border_top = border_all
-                    border_bottom = border_all
-                    border_right = border_all
-                    border_left = border_all
-                if not border_all_hover is None:
-                    border_top_hover = border_all_hover
-                    border_bottom_hover = border_all_hover
-                    border_right_hover = border_all_hover
-                    border_left_hover = border_all_hover
-
-                if not border_gen_top is None:
-                    border_top = border_gen_top
-                    border_top_hover = border_gen_top
-                if not border_gen_bottom is None:
-                    border_bottom = border_gen_bottom
-                    border_bottom_hover = border_gen_bottom
-                if not border_gen_right is None:
-                    border_right = border_gen_right
-                    border_right_hover = border_gen_right
-                if not border_gen_left is None:
-                    border_left = border_gen_left
-                    border_left_hover = border_gen_left
-            if not border_gen_style is None:
-                border_style = border_gen_style
-                border_style_hover = border_gen_style
-            if not border_gen_rgb is None:
-                border_rgb = border_gen_rgb
-                border_rgb_hover = border_gen_rgb
-
-
-            # Bordure handle
-            if not border_handle_gen_all is None:
-                border_handle_h_top = border_handle_gen_all
-                border_handle_h_bottom = border_handle_gen_all
-                border_handle_h_right = border_handle_gen_all
-                border_handle_h_left = border_handle_gen_all
-                border_handle_v_top = border_handle_gen_all
-                border_handle_v_bottom = border_handle_gen_all
-                border_handle_v_right = border_handle_gen_all
-                border_handle_v_left = border_handle_gen_all
-            elif border_handle_gen_all is None:
-                if not border_handle_h_all is None:
-                    border_handle_h_top = border_handle_h_all
-                    border_handle_h_bottom = border_handle_h_all
-                    border_handle_h_right = border_handle_h_all
-                    border_handle_h_left = border_handle_h_all
-                if not border_handle_v_all is None:
-                    border_handle_v_top = border_handle_v_all
-                    border_handle_v_bottom = border_handle_v_all
-                    border_handle_v_right = border_handle_v_all
-                    border_handle_v_left = border_handle_v_all
-            if not border_handle_gen_style is None:
-                border_handle_h_style = border_handle_gen_style
-                border_handle_v_style = border_handle_gen_style
-            if not border_handle_gen_rgb is None:
-                border_handle_h_rgb = border_handle_gen_rgb
-                border_handle_v_rgb = border_handle_gen_rgb
-
-            # Radius
-            if not radius_all is None:
-                radius_top_right = radius_all
-                radius_top_left = radius_all
-                radius_bottom_right = radius_all
-                radius_bottom_left = radius_all
-        except: pass
-
         style = f"""
                 /* SLIDER  */
                 QSlider {{
@@ -185,7 +88,7 @@ class Style:
                 QSlider::groove:horizontal {{
                 background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{gradient_rgb_1}, stop:1 rgba{gradient_rgb_2});
                 height: {height_groove}px;
-                border-radius: {border_radius_groove_h}px;
+                border-radius: {radius_groove[0]}px;
                 }}
                 QSlider::groove:horizontal:hover {{
                 background-color: rgba{bg_groove_hover};
@@ -199,7 +102,7 @@ class Style:
                 background-color: rgba{bg_handle};
                 width: {width_handle_h}px;
                 height: {height_handle_h}px;
-                border-radius: {border_radius_handle_h}px;
+                border-radius: {radius_handle[0]}px;
                 margin-top: {margin_top_handle_h}px;
                 margin-bottom: {margin_bottom_handle_h}px;
                 margin-right: {margin_right_handle_h}px;
@@ -220,7 +123,7 @@ class Style:
                 QSlider::groove:vertical {{
                 background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{gradient_rgb_1}, stop:1 rgba{gradient_rgb_2});
                 width: {width_groove}px;
-                border-radius: {border_radius_groove_v}px;
+                border-radius: {radius_groove[1]}px;
                 }}
                 QSlider::groove:vertical:hover {{
                 background-color: rgba{bg_groove_hover};
@@ -234,7 +137,7 @@ class Style:
                 background-color: rgba{bg_handle};
                 width: {width_handle_v}px;
                 height: {height_handle_v}px;
-                border-radius: {border_radius_handle_v}px;
+                border-radius: {radius_handle[1]}px;
                 margin-top: {margin_top_handle_v}px;
                 margin-bottom: {margin_bottom_handle_v}px;
                 margin-right: {margin_right_handle_v}px;
@@ -266,10 +169,10 @@ class Style:
                 }}
                 
                 .QSlider {{
-                border-top-right-radius: {radius_top_right}px;
-                border-top-left-radius: {radius_top_left}px;
-                border-bottom-right-radius: {radius_bottom_right}px;
-                border-bottom-left-radius: {radius_bottom_left}px;
+                border-top-right-radius: {radius[0]}px;
+                border-top-left-radius: {radius[1]}px;
+                border-bottom-right-radius: {radius[2]}px;
+                border-bottom-left-radius: {radius[3]}px;
                 }}"""
 
         for wg in wgs:
@@ -296,11 +199,10 @@ class Base_rond(Style):
             width=100,
             height=100,
 
-
             bg=Rgb().th1(),
-            bg_handle=Rgb().tr(),
-            bg_handle_hover = Rgb().tr(),
-            bg_handle_pressed = Rgb().tr(),
+            bg_handle=Rgb().th2(),
+            bg_handle_hover = Rgb().bn1(),
+            bg_handle_pressed = Rgb().bn1(),
 
             height_groove=20,
             width_groove=20,
@@ -317,10 +219,10 @@ class Base_rond(Style):
             border_handle_gen_all=8,
             border_handle_gen_rgb=Rgb().th2(),
 
-            border_radius_groove_h=10,
-            border_radius_groove_v=10,
-            border_radius_handle_h=15,
-            border_radius_handle_v=15,
+            radius_groove=(10, 10),
+            radius_handle=(15, 15),
+
+            radius=(2, 2, 2, 2)
         )
 class rgb(Style):
     def __init__(self,
@@ -356,10 +258,10 @@ class rgb(Style):
             border_handle_gen_all=8,
             border_handle_gen_rgb=Rgb().th2(),
 
-            border_radius_groove_h=10,
-            border_radius_groove_v=10,
-            border_radius_handle_h=15,
-            border_radius_handle_v=15,
+            radius_groove_h=10,
+            radius_groove_v=10,
+            radius_handle_h=15,
+            radius_handle_v=15,
         )
 
 """
