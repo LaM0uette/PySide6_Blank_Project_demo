@@ -34,14 +34,8 @@ class Style:
             height_handle_v=P_dim().h9(),
 
             # Positions WG
-            margin_top_handle_h=0,
-            margin_bottom_handle_h=0,
-            margin_right_handle_h=0,
-            margin_left_handle_h=0,
-            margin_top_handle_v=0,
-            margin_bottom_handle_v=0,
-            margin_right_handle_v=0,
-            margin_left_handle_v=0,
+            margin_handle_h=(0, 0, 0, 0),
+            margin_handle_v=(0, 0, 0, 0),
 
             # Bordures
             border=(0, 0, 0, 0),
@@ -92,10 +86,10 @@ class Style:
                 width: {width_handle_h}px;
                 height: {height_handle_h}px;
                 border-radius: {radius_handle_h}px;
-                margin-top: {margin_top_handle_h}px;
-                margin-bottom: {margin_bottom_handle_h}px;
-                margin-right: {margin_right_handle_h}px;
-                margin-left: {margin_left_handle_h}px;
+                margin-top: {margin_handle_h[0]}px;
+                margin-bottom: {margin_handle_h[1]}px;
+                margin-right: {margin_handle_h[2]}px;
+                margin-left: {margin_handle_h[3]}px;
                 border-top: {border_handle_h[0]}px {border_handle_h_style} rgba{border_handle_h_rgb};
                 border-bottom: {border_handle_h[1]}px {border_handle_h_style} rgba{border_handle_h_rgb};
                 border-right: {border_handle_h[2]}px {border_handle_h_style} rgba{border_handle_h_rgb};
@@ -127,10 +121,10 @@ class Style:
                 width: {width_handle_v}px;
                 height: {height_handle_v}px;
                 border-radius: {radius_handle_v}px;
-                margin-top: {margin_top_handle_v}px;
-                margin-bottom: {margin_bottom_handle_v}px;
-                margin-right: {margin_right_handle_v}px;
-                margin-left: {margin_left_handle_v}px;
+                margin-top: {margin_handle_v[0]}px;
+                margin-bottom: {margin_handle_v[1]}px;
+                margin-right: {margin_handle_v[2]}px;
+                margin-left: {margin_handle_v[3]}px;
                 border-top: {border_handle_v[0]}px {border_handle_v_style} rgba{border_handle_v_rgb};
                 border-bottom: {border_handle_v[1]}px {border_handle_v_style} rgba{border_handle_v_rgb};
                 border-right: {border_handle_v[2]}px {border_handle_v_style} rgba{border_handle_v_rgb};
