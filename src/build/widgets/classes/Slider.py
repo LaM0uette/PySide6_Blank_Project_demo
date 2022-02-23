@@ -17,7 +17,9 @@ class Style:
             bg_groove=p_base.BG_GROOVE,
             bg_groove_2=None,
             bg_groove_hover=p_base.BG_GROOVE_HOVER,
+            bg_groove_hover_2=None,
             bg_groove_pressed=p_base.BG_GROOVE_PRESSED,
+            bg_groove_pressed_2=None,
             bg_handle=p_base.BG_HANDLE,
             bg_handle_hover=p_base.BG_HANDLE_HOVER,
             bg_handle_pressed=p_base.BG_HANDLE_PRESSED,
@@ -67,7 +69,9 @@ class Style:
         
                 /* BARRE_H */
                 QSlider::groove:horizontal {{
-                background-color: qlineargradient(spread:pad, x1:{gradient[0]}, y1:{gradient[1]}, x2:{gradient[2]}, y2:{gradient[3]}, stop:0 rgba{bg_groove}, stop:1 rgba{bg_groove_2});
+                background-color: qlineargradient(spread:pad, 
+                                    x1:{gradient[0]}, y1:{gradient[1]}, x2:{gradient[2]}, y2:{gradient[3]}, 
+                                    stop:0 rgba{bg_groove}, stop:1 rgba{bg_groove_2});
                 height: {height_groove}px;
                 border-radius: {radius_groove_h}px;
                 }}
