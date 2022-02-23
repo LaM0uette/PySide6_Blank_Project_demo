@@ -15,13 +15,13 @@ class Style:
             # Couleurs BG
             bg=p_base.BG,
             bg_groove=p_base.BG_GROOVE,
-            bg_groove_2=p_base.BG_GROOVE,
+            bg_groove_2=p_base.FG_HOVER,
             bg_groove_hover=p_base.BG_GROOVE_HOVER,
             bg_groove_pressed=p_base.BG_GROOVE_PRESSED,
             bg_handle=p_base.BG_HANDLE,
             bg_handle_hover=p_base.BG_HANDLE_HOVER,
             bg_handle_pressed=p_base.BG_HANDLE_PRESSED,
-            bg_gradient=(0, 0, 0, 0),
+            bg_gradient=(0, 0, 1, 0),
 
             # Dimensions WG
             width_groove=P_dim().h9(),
