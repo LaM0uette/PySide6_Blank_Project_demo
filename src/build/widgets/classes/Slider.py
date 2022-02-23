@@ -21,7 +21,7 @@ class Style:
             bg_handle=p_base.BG_HANDLE,
             bg_handle_hover=p_base.BG_HANDLE_HOVER,
             bg_handle_pressed=p_base.BG_HANDLE_PRESSED,
-            bg_gradient=(0, 0, 1, 0),
+            gradient=(0, 0, 0, 0),
 
             # Dimensions WG
             width_groove=P_dim().h9(),
@@ -67,7 +67,7 @@ class Style:
         
                 /* BARRE_H */
                 QSlider::groove:horizontal {{
-                background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{bg_groove}, stop:1 rgba{bg_groove_2});
+                background-color: qlineargradient(spread:pad, x1:{gradient[0]}, y1:{gradient[1]}, x2:{gradient[2]}, y2:{gradient[3]}, stop:0 rgba{bg_groove}, stop:1 rgba{bg_groove_2});
                 height: {height_groove}px;
                 border-radius: {radius_groove_h}px;
                 }}
@@ -102,11 +102,7 @@ class Style:
         
                 /* BARRE_V */
                 QSlider::groove:vertical {{
-                background-color: qlineargradient(spread:pad, x1:{bg_gradient[0]}, 
-                                                              y1:{bg_gradient[1]}, 
-                                                              x2:{bg_gradient[2]}, 
-                                                              y2:{bg_gradient[3]}, 
-                                                              stop:0 rgba{bg_groove}, stop:1 rgba{bg_groove_2});
+                background-color: qlineargradient(spread:pad, x1:{gradient[0]}, y1:{gradient[1]}, x2:{gradient[2]}, y2:{gradient[3]}, stop:0 rgba{bg_groove}, stop:1 rgba{bg_groove_2});
                 width: {width_groove}px;
                 border-radius: {radius_groove_v}px;
                 }}
