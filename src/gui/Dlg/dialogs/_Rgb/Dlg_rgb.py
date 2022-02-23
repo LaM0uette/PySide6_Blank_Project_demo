@@ -166,7 +166,7 @@ class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         rgb_blue_2 = self.sd_rgb_red.value(), self.sd_rgb_green.value(), 255, 255
 
         self.le_rgb_hex.setText(Fct().RGB_HEX(rgb=rgb))
-        Frame.palette_rgb(self.fr_rgb_colors, rgb=rgb+(255,))
+        # Frame.palette_rgb(self.fr_rgb_colors, rgb=rgb+(255,))
         Slider.rgb(self.sd_rgb_red, gradient_rgb_1=rgb_red_1, gradient_rgb_2=rgb_red_2)
         Slider.rgb(self.sd_rgb_green, gradient_rgb_1=rgb_green_1, gradient_rgb_2=rgb_green_2)
         Slider.rgb(self.sd_rgb_blue, gradient_rgb_1=rgb_blue_1, gradient_rgb_2=rgb_blue_2)

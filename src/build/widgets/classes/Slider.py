@@ -265,7 +265,7 @@ class Style:
                 border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
                 }}
                 
-                QWidget {{
+                .QSlider {{
                 border-top-right-radius: {radius_top_right}px;
                 border-top-left-radius: {radius_top_left}px;
                 border-bottom-right-radius: {radius_bottom_right}px;
