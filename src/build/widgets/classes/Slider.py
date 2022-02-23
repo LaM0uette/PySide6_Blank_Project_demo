@@ -215,9 +215,6 @@ class rgb(Style):
                  ):
         super().__init__(
             *wgs,
-            width=100,
-            height=100,
-
 
             bg=Rgb().th1(),
             bg_handle=Rgb().tr(),
