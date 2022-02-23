@@ -13,7 +13,6 @@ class Style:
             curseur=p_base.CUR,
 
             # Couleurs BG
-            bg_gen=None,
             bg=p_base.BG,
             bg_groove=p_base.BG_GROOVE,
             bg_groove_hover=p_base.BG_GROOVE_HOVER,
