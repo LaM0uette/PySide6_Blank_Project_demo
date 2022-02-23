@@ -74,10 +74,10 @@ class Style:
                 border-radius: {radius_groove_h}px;
                 }}
                 QSlider::groove:horizontal:hover {{
-                background-color: rgba{bg_groove_hover};
+                background-color: qlineargradient(spread:pad, x1:{gradient[0]}, y1:{gradient[1]}, x2:{gradient[2]}, y2:{gradient[3]}, stop:0 rgba{bg_groove_hover}, stop:1 rgba{bg_groove_hover_2});
                 }}
                 QSlider::groove:horizontal:pressed {{
-                background-color: rgba{bg_groove_pressed};
+                background-color: qlineargradient(spread:pad, x1:{gradient[0]}, y1:{gradient[1]}, x2:{gradient[2]}, y2:{gradient[3]}, stop:0 rgba{bg_groove_pressed}, stop:1 rgba{bg_groove_pressed_2});
                 }}
 
                 /* CURSEUR_H */
@@ -109,10 +109,10 @@ class Style:
                 border-radius: {radius_groove_v}px;
                 }}
                 QSlider::groove:vertical:hover {{
-                background-color: rgba{bg_groove_hover};
+                background-color: qlineargradient(spread:pad, x1:{gradient[0]}, y1:{gradient[1]}, x2:{gradient[2]}, y2:{gradient[3]}, stop:0 rgba{bg_groove_hover}, stop:1 rgba{bg_groove_hover_2});
                 }}
                 QSlider::groove:vertical:pressed {{
-                background-color: rgba{bg_groove_pressed};
+                background-color: qlineargradient(spread:pad, x1:{gradient[0]}, y1:{gradient[1]}, x2:{gradient[2]}, y2:{gradient[3]}, stop:0 rgba{bg_groove_pressed}, stop:1 rgba{bg_groove_pressed_2});
                 }}
         
                 /* CURSEUR_V */
