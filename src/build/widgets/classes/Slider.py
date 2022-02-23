@@ -187,8 +187,8 @@ class Base_rond(Style):
             bg_handle_hover = Rgb().th3(),
             bg_handle_pressed = Rgb().th3(),
 
-            height_groove=20,
-            width_groove=20,
+            height_groove=10,
+            width_groove=10,
             width_handle_h=14,
             height_handle_h=5,
             width_handle_v=5,
