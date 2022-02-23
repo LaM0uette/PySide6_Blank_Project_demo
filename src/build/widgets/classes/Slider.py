@@ -215,6 +215,8 @@ class rgb(Style):
                  ):
         super().__init__(
             *wgs,
+            height=P_dim().h8(),
+
 
             bg=Rgb().th1(),
             bg_handle=Rgb().tr(),
