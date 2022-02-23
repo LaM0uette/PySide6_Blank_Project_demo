@@ -230,6 +230,7 @@ class rgb(Style):
             bg_groove_hover_2=rgb_2,
             bg_groove_pressed=rgb_1,
             bg_groove_pressed_2=rgb_2,
+            gradient=(0, 0, 1, 0),
 
             height_groove=20,
             width_groove=20,
