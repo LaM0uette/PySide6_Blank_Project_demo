@@ -189,23 +189,23 @@ class Base_rond(Style):
 
             height_groove=12,
             width_groove=12,
-            width_handle_h=6,
+            width_handle_h=14,
             height_handle_h=6,
             width_handle_v=6,
-            height_handle_v=6,
+            height_handle_v=14,
 
-            margin_handle_h=(-5, -5, 0, 0),
-            margin_handle_v=(0, 0, -5, -5),
+            margin_handle_h=(-4, -4, 0, 0),
+            margin_handle_v=(0, 0, -4, -4),
 
-            border_handle_h=(2, 2, 2, 2),
+            border_handle_h=(5, 5, 5, 5),
             border_handle_h_rgb=Rgb().th2(),
-            border_handle_v=(2, 2, 2, 2),
+            border_handle_v=(5, 5, 5, 5),
             border_handle_v_rgb=Rgb().th2(),
 
-            radius_groove_h=6,
-            radius_groove_v=6,
-            radius_handle_h=3,
-            radius_handle_v=3,
+            radius_groove_h=3,
+            radius_groove_v=3,
+            radius_handle_h=5,
+            radius_handle_v=5,
         )
 class rgb(Style):
     def __init__(self,
