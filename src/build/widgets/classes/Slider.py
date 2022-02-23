@@ -43,40 +43,29 @@ class Style:
             margin_right_handle_v=0,
             margin_left_handle_v=0,
 
-            # Bordures GEN
-            border_gen_all=None,
-            border_gen_style=None,
-            border_gen_rgb=None,
-            border_gen_top=None, border_gen_bottom=None, border_gen_right=None, border_gen_left=None,
             # Bordures
-            border_all=None,
+            border=(0, 0, 0, 0),
             border_style=p_base.WG_BORDER_STYLE,
             border_rgb=p_base.WG_BORDER_RGB,
-            border_top=p_base.WG_BORDER_WIDTH, border_bottom=p_base.WG_BORDER_WIDTH, border_right=p_base.WG_BORDER_WIDTH, border_left=p_base.WG_BORDER_WIDTH,
             # Bordures hover
-            border_all_hover=None,
+            border_hover=(0, 0, 0, 0),
             border_style_hover=p_base.WG_BORDER_STYLE,
             border_rgb_hover=p_base.WG_BORDER_RGB,
-            border_top_hover=p_base.WG_BORDER_WIDTH, border_bottom_hover=p_base.WG_BORDER_WIDTH, border_right_hover=p_base.WG_BORDER_WIDTH, border_left_hover=p_base.WG_BORDER_WIDTH,
-            # Bordures slider
-            border_handle_gen_all=None,
-            border_handle_gen_style=None,
-            border_handle_gen_rgb=None,
             # Bordures slider h
-            border_handle_h_all=None,
+            border_handle_h=(0, 0, 0, 0),
             border_handle_h_style=p_base.WG_BORDER_STYLE,
             border_handle_h_rgb=p_base.WG_BORDER_RGB,
-            border_handle_h_top=p_base.WG_BORDER_WIDTH, border_handle_h_bottom=p_base.WG_BORDER_WIDTH, border_handle_h_right=p_base.WG_BORDER_WIDTH, border_handle_h_left=p_base.WG_BORDER_WIDTH,
             # Bordures slider v
-            border_handle_v_all=None,
+            border_handle_v=(0, 0, 0, 0),
             border_handle_v_style=p_base.WG_BORDER_STYLE,
             border_handle_v_rgb=p_base.WG_BORDER_RGB,
-            border_handle_v_top=p_base.WG_BORDER_WIDTH, border_handle_v_bottom=p_base.WG_BORDER_WIDTH, border_handle_v_right=p_base.WG_BORDER_WIDTH, border_handle_v_left=p_base.WG_BORDER_WIDTH,
 
             # Rayons
             radius=(0, 0, 0, 0),
-            radius_groove = (0, 0),
-            radius_handle = (0, 0),
+            radius_groove_h=0,
+            radius_groove_v=0,
+            radius_handle_h=0,
+            radius_handle_v=0,
     ):
         style = f"""
                 /* SLIDER  */
@@ -88,7 +77,7 @@ class Style:
                 QSlider::groove:horizontal {{
                 background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{gradient_rgb_1}, stop:1 rgba{gradient_rgb_2});
                 height: {height_groove}px;
-                border-radius: {radius_groove[0]}px;
+                border-radius: {radius_groove_h}px;
                 }}
                 QSlider::groove:horizontal:hover {{
                 background-color: rgba{bg_groove_hover};
@@ -102,15 +91,15 @@ class Style:
                 background-color: rgba{bg_handle};
                 width: {width_handle_h}px;
                 height: {height_handle_h}px;
-                border-radius: {radius_handle[0]}px;
+                border-radius: {radius_handle_h}px;
                 margin-top: {margin_top_handle_h}px;
                 margin-bottom: {margin_bottom_handle_h}px;
                 margin-right: {margin_right_handle_h}px;
                 margin-left: {margin_left_handle_h}px;
-                border-top: {border_handle_h_top}px {border_handle_h_style} rgba{border_handle_h_rgb};
-                border-bottom: {border_handle_h_bottom}px {border_handle_h_style} rgba{border_handle_h_rgb};
-                border-right: {border_handle_h_right}px {border_handle_h_style} rgba{border_handle_h_rgb};
-                border-left: {border_handle_h_left}px {border_handle_h_style} rgba{border_handle_h_rgb};
+                border-top: {border_handle_h[0]}px {border_handle_h_style} rgba{border_handle_h_rgb};
+                border-bottom: {border_handle_h[1]}px {border_handle_h_style} rgba{border_handle_h_rgb};
+                border-right: {border_handle_h[2]}px {border_handle_h_style} rgba{border_handle_h_rgb};
+                border-left: {border_handle_h[3]}px {border_handle_h_style} rgba{border_handle_h_rgb};
                 }}
                 QSlider::handle:horizontal:hover {{
                 background-color: rgba{bg_handle_hover};
@@ -123,7 +112,7 @@ class Style:
                 QSlider::groove:vertical {{
                 background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba{gradient_rgb_1}, stop:1 rgba{gradient_rgb_2});
                 width: {width_groove}px;
-                border-radius: {radius_groove[1]}px;
+                border-radius: {radius_groove_v}px;
                 }}
                 QSlider::groove:vertical:hover {{
                 background-color: rgba{bg_groove_hover};
@@ -137,15 +126,15 @@ class Style:
                 background-color: rgba{bg_handle};
                 width: {width_handle_v}px;
                 height: {height_handle_v}px;
-                border-radius: {radius_handle[1]}px;
+                border-radius: {radius_handle_v}px;
                 margin-top: {margin_top_handle_v}px;
                 margin-bottom: {margin_bottom_handle_v}px;
                 margin-right: {margin_right_handle_v}px;
                 margin-left: {margin_left_handle_v}px;
-                border-top: {border_handle_v_top}px {border_handle_v_style} rgba{border_handle_v_rgb};
-                border-bottom: {border_handle_v_bottom}px {border_handle_v_style} rgba{border_handle_v_rgb};
-                border-right: {border_handle_v_right}px {border_handle_v_style} rgba{border_handle_v_rgb};
-                border-left: {border_handle_v_left}px {border_handle_v_style} rgba{border_handle_v_rgb};
+                border-top: {border_handle_v[0]}px {border_handle_v_style} rgba{border_handle_v_rgb};
+                border-bottom: {border_handle_v[1]}px {border_handle_v_style} rgba{border_handle_v_rgb};
+                border-right: {border_handle_v[2]}px {border_handle_v_style} rgba{border_handle_v_rgb};
+                border-left: {border_handle_v[3]}px {border_handle_v_style} rgba{border_handle_v_rgb};
                 }}
                 QSlider::handle:vertical:hover {{
                 background-color: rgba{bg_handle_hover};
@@ -156,16 +145,16 @@ class Style:
         
                 /* BORDURES */
                 .QSlider {{
-                border-top: {border_top}px {border_style} rgba{border_rgb};
-                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
-                border-right: {border_right}px {border_style} rgba{border_rgb};
-                border-left: {border_left}px {border_style} rgba{border_rgb};
+                border-top: {border[0]}px {border_style} rgba{border_rgb};
+                border-bottom: {border[1]}px {border_style} rgba{border_rgb};
+                border-right: {border[2]}px {border_style} rgba{border_rgb};
+                border-left: {border[3]}px {border_style} rgba{border_rgb};
                 }}
                 .QSlider:hover {{
-                border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
-                border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
-                border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
-                border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-top: {border_hover[0]}px {border_style_hover} rgba{border_rgb_hover};
+                border-bottom: {border_hover[1]}px {border_style_hover} rgba{border_rgb_hover};
+                border-right: {border_hover[2]}px {border_style_hover} rgba{border_rgb_hover};
+                border-left: {border_hover[3]}px {border_style_hover} rgba{border_rgb_hover};
                 }}
                 
                 .QSlider {{
@@ -200,9 +189,9 @@ class Base_rond(Style):
             height=100,
 
             bg=Rgb().th1(),
-            bg_handle=Rgb().th2(),
-            bg_handle_hover = Rgb().bn1(),
-            bg_handle_pressed = Rgb().bn1(),
+            bg_handle=Rgb().th3(),
+            bg_handle_hover = Rgb().th3(),
+            bg_handle_pressed = Rgb().th3(),
 
             height_groove=20,
             width_groove=20,
@@ -216,13 +205,15 @@ class Base_rond(Style):
             margin_right_handle_v=-5,
             margin_left_handle_v=-5,
 
-            border_handle_gen_all=8,
-            border_handle_gen_rgb=Rgb().th2(),
+            border_handle_h=(8, 8, 8, 8),
+            border_handle_h_rgb=Rgb().th2(),
+            border_handle_v=(8, 8, 8, 8),
+            border_handle_v_rgb=Rgb().th2(),
 
-            radius_groove=(10, 10),
-            radius_handle=(15, 15),
-
-            radius=(2, 2, 2, 2)
+            radius_groove_h=10,
+            radius_groove_v=10,
+            radius_handle_h=15,
+            radius_handle_v=15,
         )
 class rgb(Style):
     def __init__(self,
