@@ -224,6 +224,13 @@ class rgb(Style):
             bg_handle_hover = Rgb().tr(),
             bg_handle_pressed = Rgb().tr(),
 
+            bg_groove=rgb_1,
+            bg_groove_2=rgb_2,
+            bg_groove_hover=rgb_1,
+            bg_groove_hover_2=rgb_2,
+            bg_groove_pressed=rgb_1,
+            bg_groove_pressed_2=rgb_2,
+
             height_groove=20,
             width_groove=20,
             width_handle_h=14,
