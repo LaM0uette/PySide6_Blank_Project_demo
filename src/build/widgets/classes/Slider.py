@@ -15,7 +15,7 @@ class Style:
             # Couleurs BG
             bg=p_base.BG,
             bg_groove=p_base.BG_GROOVE,
-            bg_groove_2=p_base.FG_HOVER,
+            bg_groove_2=None,
             bg_groove_hover=p_base.BG_GROOVE_HOVER,
             bg_groove_pressed=p_base.BG_GROOVE_PRESSED,
             bg_handle=p_base.BG_HANDLE,
