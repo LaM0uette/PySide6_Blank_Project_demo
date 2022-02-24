@@ -5,7 +5,7 @@ from .....build import *
 from .....In_classe import In_classe
 
 
-class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
+class DLG_REP(rep_ui.Ui_Rep, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
     rep = False
 
@@ -20,7 +20,7 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
                  height,
                  opacity,
     ):
-        super(Dlg_rep, self).__init__()
+        super(DLG_REP, self).__init__()
 
         self.titre = titre
         self.msg = msg

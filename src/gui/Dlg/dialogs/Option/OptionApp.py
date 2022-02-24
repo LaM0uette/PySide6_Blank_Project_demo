@@ -5,8 +5,8 @@ import time
 from PySide6 import QtCore, QtWidgets, QtGui
 
 from ... import option_ui
-from ..DLG_Msg import DLG_Msg
-from ..DLG_Rgb import DLG_Rgb
+from ..Msg import DLG_Msg
+from ..Rgb import DLG_Rgb
 from .....build import *
 from .....config import *
 from .....In_classe import In_classe
