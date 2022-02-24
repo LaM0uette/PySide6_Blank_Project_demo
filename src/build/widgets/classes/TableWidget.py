@@ -253,6 +253,8 @@ class Style:
 
             wg.resizeColumnsToContents()
 
+            wg.setFocusPolicy(QtCore.Qt.NoFocus)
+
 
 ##################
 ##     BASE     ##
