@@ -1,4 +1,3 @@
-from .StyleSheet import StyleSheet
 from PySide6 import QtCore
 
 from ....build import *
@@ -215,25 +214,26 @@ class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            style=StyleSheet(
-                img_all=P_img().calendrier(),
-                img_all_rgb="",
-                img_margin_top=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
-                img_margin_right=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
-            )
+            img=P_img().calendrier(),
+            img_hover=P_img().calendrier(),
+            img_rgb="",
+            img_hover_rgb="",
+            img_margin_top=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
+            img_margin_right=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            style=StyleSheet(
-                bg_gen=Rgb().tr(),
-                fg=Rgb().th3(),
-                bg_selection=Rgb().th3(),
-                fg_selection=Rgb().th1(),
-                img_all=P_img().calendrier(),
-                img_all_rgb="",
-                img_margin_top=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
-                img_margin_right=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
-            )
+            bg=Rgb().tr(),
+            bg_hover=Rgb().tr(),
+            fg=Rgb().th3(),
+            bg_selection=Rgb().th3(),
+            fg_selection=Rgb().th1(),
+            img=P_img().calendrier(),
+            img_hover=P_img().calendrier(),
+            img_rgb="",
+            img_hover_rgb="",
+            img_margin_top=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
+            img_margin_right=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
     )
