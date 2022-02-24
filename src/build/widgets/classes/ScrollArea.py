@@ -39,6 +39,7 @@ class Style:
             scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
     ):
         style = f"""
+                /* SCROLLAREA */
                 .QScrollArea .QWidget {{
                 background-color: rgba{bg};
                 }}
@@ -57,6 +58,7 @@ class Style:
                 border-left: {border_hover[3]}px {border_hover_style} rgba{border_hover_rgb};
                 }}
                 
+                /* RAYONS */
                 .QScrollArea {{
                 border-top-right-radius: {radius[0]}px;
                 border-top-left-radius: {radius[1]}px;
@@ -64,6 +66,7 @@ class Style:
                 border-bottom-left-radius: {radius[3]}px;
                 }}
                 
+                /* SCROLL */
                 QScrollBar {{
                 background-color: rgba{scroll_bg};
                 width: {scroll_width}px;

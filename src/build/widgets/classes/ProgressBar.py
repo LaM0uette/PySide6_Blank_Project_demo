@@ -38,6 +38,7 @@ class Style:
             radius=p_base.WG_RADIUS
     ):
         style = f"""
+                /* PROGRESSBAR */
                 QProgressBar {{
                 background-color: rgba{bg};
                 color: rgba{fg};
@@ -69,6 +70,7 @@ class Style:
                 border-left: {border_hover[3]}px {border_hover_style} rgba{border_hover_rgb};
                 }}
                 
+                /* RAYONS */
                 .QProgressBar {{
                 border-top-right-radius: {radius[0]}px;
                 border-top-left-radius: {radius[1]}px;

@@ -65,6 +65,7 @@ class Style:
             radius=p_base.WG_RADIUS
     ):
         style = f"""
+                /* RADIOBUTTON */
                 QRadioButton {{
                 background-color: rgba{bg};
                 color: rgba{fg};
@@ -130,7 +131,8 @@ class Style:
                 border-right: {border_checked_hover[2]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
                 border-left: {border_checked_hover[3]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
                 }}
-        
+                
+                /* RAYONS */
                 .QRadioButton {{
                 border-top-right-radius: {radius[0]}px;
                 border-top-left-radius: {radius[1]}px;

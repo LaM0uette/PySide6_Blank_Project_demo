@@ -46,6 +46,7 @@ class Style:
                 border-left: {border_hover[3]}px {border_hover_style} rgba{border_hover_rgb};
                 }}
                 
+                /* RAYONS */
                 .QFrame {{
                 border-top-right-radius: {radius[0]}px;
                 border-top-left-radius: {radius[1]}px;

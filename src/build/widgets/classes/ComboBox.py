@@ -60,6 +60,7 @@ class Style:
 
     ):
         style = f"""
+                /* COMBOBOX */
                 QComboBox, QFontComboBox {{
                 background-color: rgba{bg};
                 color: rgba{fg};
@@ -113,6 +114,7 @@ class Style:
                 border-left: {border_hover[3]}px {border_hover_style} rgba{border_hover_rgb};
                 }}
                 
+                /* RAYONS */
                 .QComboBox, .QFontComboBox {{
                 border-top-right-radius: {radius[0]}px;
                 border-top-left-radius: {radius[1]}px;
@@ -120,6 +122,7 @@ class Style:
                 border-bottom-left-radius: {radius[3]}px;
                 }}
                 
+                /* SCROLL */
                 QScrollBar {{
                 background-color: rgba{scroll_bg};
                 width: {scroll_width}px;

@@ -158,6 +158,7 @@ class Style:
                 border-left: {border_hover[3]}px {border_hover_style} rgba{border_hover_rgb};
                 }}
                 
+                /* HEADER */
                 QHeaderView::section {{
                 background-color: rgba{bg_header};
                 color: rgba{fg_header};
@@ -191,6 +192,7 @@ class Style:
                 border-left: {border_hd_checked_hover[3]}px {border_hd_checked_hover_style} rgba{border_hd_checked_hover_rgb};
                 }}
                 
+                /* RAYONS */
                 .QTableWidget, .QTableView {{
                 border-top-right-radius: {radius[0]}px;
                 border-top-left-radius: {radius[1]}px;
@@ -198,6 +200,7 @@ class Style:
                 border-bottom-left-radius: {radius[3]}px;
                 }}
                 
+                /* SCROLL */
                 QScrollBar {{
                 background-color: rgba{scroll_bg};
                 width: {scroll_width}px;
