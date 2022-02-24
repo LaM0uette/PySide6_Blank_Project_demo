@@ -246,21 +246,21 @@ class rgb(Style):
 
             height_groove=12,
             width_groove=12,
-            width_handle_h=10,
+            width_handle_h=12,
             height_handle_h=4,
             width_handle_v=4,
-            height_handle_v=10,
+            height_handle_v=12,
 
             margin_handle_h=(-5, -5, 0, 0),
             margin_handle_v=(0, 0, -5, -5),
 
-            border_handle_h=(3, 3, 3, 3),
+            border_handle_h=((3, )*4),
             border_handle_h_rgb=rgb,
-            border_handle_v=(3, 3, 3, 3),
+            border_handle_v=((3, )*4),
             border_handle_v_rgb=rgb,
 
-            radius_groove_h=(3, 3, 3, 3),
-            radius_groove_v=(3, 3, 3, 3),
-            radius_handle_h=(4, 4, 4, 4),
-            radius_handle_v=(4, 4, 4, 4),
+            radius_groove_h=((3, )*4),
+            radius_groove_v=((3, )*4),
+            radius_handle_h=((4, )*4),
+            radius_handle_v=((4, )*4),
         )
