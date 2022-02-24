@@ -33,7 +33,6 @@ class StyleSheet:
             fg_pressed=p_base.FG_PRESSED,
             fg_checked_pressed=p_base.FG_CHECKED_PRESSED,
             fg_selection=p_base.FG_SELECTION,
-            fg_placeholder=p_base.FG_PLACEHOLDER,
             fg_item_gen=None,
             fg_item=p_base.FG_ITEM,
             fg_item_hover=p_base.FG_ITEM_HOVER,
@@ -649,10 +648,6 @@ class StyleSheet:
 **      /QTreeWidget  |  /QTreeView       **
 ********************************************/
 """
-
-        self.fg = fg
-        self.fg_placeholder = fg_placeholder
-
         self.img_height = img_height
         self.IMG_HEIGHT = IMG_HEIGHT
         self.img = img
