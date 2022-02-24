@@ -134,10 +134,10 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.setStyleSheet(f"background-color: rgb{P_rgb().th1()};")
 
         # Frame menu_top
-        self.fr_menu_top.setFixedHeight(P_dim().h9())
+        self.fr_menu_top.setFixedHeight(Dim().h9())
 
         # Menu_top
-        dim = P_dim().carr().h9()
+        dim = Dim().h9()
         Fct(wg=self.lb_mt_ico, w=dim.get("w"), h=dim.get("h")).DIM()
         self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}{self.tm}.svg"))
         self.lb_mt_ico.setScaledContents(True)
@@ -333,7 +333,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
     def mousePressEvent(self, event):
         cur = QtGui.QCursor()
         verifHeight = cur.pos().y() - self.pos().y()
-        if event.buttons() == QtCore.Qt.LeftButton and verifHeight < P_dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized:
+        if event.buttons() == QtCore.Qt.LeftButton and verifHeight < Dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized:
             self.dragPos = event.globalPosition().toPoint()
             event.accept()
     def mouseMoveEvent(self, event):
@@ -346,9 +346,9 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         height_verif = cur.pos().y() - self.pos().y()
 
         try:
-            if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized:
+            if event.buttons() == QtCore.Qt.LeftButton and height_verif < Dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized:
                 act_move(event)
-            if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h9() and self.windowState() == QtCore.Qt.WindowMaximized:
+            if event.buttons() == QtCore.Qt.LeftButton and height_verif < Dim().h9() and self.windowState() == QtCore.Qt.WindowMaximized:
                 self.setWindowState(QtCore.Qt.WindowNoState)
                 act_move(event)
         except AttributeError: pass
