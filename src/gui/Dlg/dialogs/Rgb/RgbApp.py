@@ -52,6 +52,7 @@ class RgbApp(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     def IN_CLASSE(self):
         ### QFrame ###
         Frame.Cadre(self.fr_main).th3()
+        Frame.Base_th(self.fr_body, rgb=Rgb().th1())
         Frame.Menu_bottom_dlg(self.fr_rgb_bottom)
         Frame.Base_th(self.fr_rgb_colors)
         ### /QFrame ###

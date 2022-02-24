@@ -444,6 +444,8 @@ class plein:
             border_hover_rgb=border_gen_rgb,
             border_checked_rgb=border_gen_rgb,
             border_checked_hover_rgb=border_gen_rgb,
+
+            radius=((0, )*4)
         )
 
     def th1(self):
