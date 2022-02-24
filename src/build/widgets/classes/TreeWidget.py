@@ -43,22 +43,35 @@ class Style:
             border_hd_style=p_base.WG_BORDER_STYLE,
             border_hd_rgb=p_base.WG_BORDER_RGB,
             # Bordures item
-            border_item_all=None,
+            border_item=p_base.WG_BORDER_WIDTH,
             border_item_style=p_base.WG_BORDER_STYLE,
             border_item_rgb=p_base.WG_BORDER_RGB,
-            border_item_top=p_base.WG_BORDER_WIDTH, border_item_bottom=p_base.WG_BORDER_WIDTH, border_item_right=p_base.WG_BORDER_WIDTH, border_item_left=p_base.WG_BORDER_WIDTH,
             # Bordures item hover
-            border_item_all_hover=None,
-            border_item_style_hover=p_base.WG_BORDER_STYLE,
-            border_item_rgb_hover=p_base.WG_BORDER_RGB,
-            border_item_top_hover=p_base.WG_BORDER_WIDTH, border_item_bottom_hover=p_base.WG_BORDER_WIDTH, border_item_right_hover=p_base.WG_BORDER_WIDTH, border_item_left_hover=p_base.WG_BORDER_WIDTH,
+            border_item_hover=p_base.WG_BORDER_WIDTH,
+            border_item_hover_style=p_base.WG_BORDER_STYLE,
+            border_item_hover_rgb=p_base.WG_BORDER_RGB,
             # Bordures item checked
-            border_item_all_checked=None,
-            border_item_style_checked=p_base.WG_BORDER_STYLE,
-            border_item_rgb_checked=p_base.WG_BORDER_RGB,
-            border_item_top_checked=p_base.WG_BORDER_WIDTH, border_item_bottom_checked=p_base.WG_BORDER_WIDTH, border_item_right_checked=p_base.WG_BORDER_WIDTH, border_item_left_checked=p_base.WG_BORDER_WIDTH,
+            border_item_checked=p_base.WG_BORDER_WIDTH,
+            border_item_checked_style=p_base.WG_BORDER_STYLE,
+            border_item_checked_rgb=p_base.WG_BORDER_RGB,
             # Bordures item checked hover
-            border_item_all_checked_hover=None,
+            border_item_checked_hover=p_base.WG_BORDER_WIDTH,
+            border_item_checked_hover_style=p_base.WG_BORDER_STYLE,
+            border_item_checked_hover_rgb=p_base.WG_BORDER_RGB,
+
+            # Rayons
+            radius=p_base.WG_RADIUS,
+
+            # Scroll
+            scroll_bg=p_base.SCROLL_BG,
+            scroll_width=p_base.SCROLL_WIDTH,
+            scroll_height=p_base.SCROLL_HEIGHT,
+            scroll_handle_bg=p_base.SCROLL_HANDLE_BG,
+            scroll_handle_bg_hover=p_base.SCROLL_HANDLE_BG_HOVER,
+            scroll_handle_fg=p_base.SCROLL_HANDLE_FG,
+            scroll_handle_fg_hover=p_base.SCROLL_HANDLE_FG_HOVER,
+            scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
+            scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
     ):
         style = f"""
                 /* TREEWIDGET */
@@ -79,37 +92,37 @@ class Style:
                 QTreeWidget::item, QTreeView::item {{
                 background-color: rgba{bg_item};
                 color: rgba{fg_item};
-                border-top: {border_item_top}px {border_item_style} rgba{border_item_rgb};
-                border-bottom: {border_item_bottom}px {border_item_style} rgba{border_item_rgb};
-                border-right: {border_item_right}px {border_item_style} rgba{border_item_rgb};
-                border-left: {border_item_left}px {border_item_style} rgba{border_item_rgb};
+                border-top: {border_item[0]}px {border_item_style} rgba{border_item_rgb};
+                border-bottom: {border_item[1]}px {border_item_style} rgba{border_item_rgb};
+                border-right: {border_item[2]}px {border_item_style} rgba{border_item_rgb};
+                border-left: {border_item[3]}px {border_item_style} rgba{border_item_rgb};
                 }}
         
                 QTreeWidget::item:hover, QTreeView::item:hover {{
                 background-color: rgba{bg_item_hover};
                 color: rgba{fg_item_hover};
-                border-top: {border_item_top_hover}px {border_item_style_hover} rgba{border_item_rgb_hover};
-                border-bottom: {border_item_bottom_hover}px {border_item_style_hover} rgba{border_item_rgb_hover};
-                border-right: {border_item_right_hover}px {border_item_style_hover} rgba{border_item_rgb_hover};
-                border-left: {border_item_left_hover}px {border_item_style_hover} rgba{border_item_rgb_hover};
+                border-top: {border_item_hover[0]}px {border_item_hover_style} rgba{border_item_hover_rgb};
+                border-bottom: {border_item_hover[1]}px {border_item_hover_style} rgba{border_item_hover_rgb};
+                border-right: {border_item_hover[2]}px {border_item_hover_style} rgba{border_item_hover_rgb};
+                border-left: {border_item_hover[3]}px {border_item_hover_style} rgba{border_item_hover_rgb};
                 }}
         
                 QTreeWidget::item:selected, QTreeView::item:selected {{
                 background-color: rgba{bg_item_checked};
                 color: rgba{fg_item_checked};
-                border-top: {border_item_top_checked}px {border_item_style_checked} rgba{border_item_rgb_checked};
-                border-bottom: {border_item_bottom_checked}px {border_item_style_checked} rgba{border_item_rgb_checked};
-                border-right: {border_item_right_checked}px {border_item_style_checked} rgba{border_item_rgb_checked};
-                border-left: {border_item_left_checked}px {border_item_style_checked} rgba{border_item_rgb_checked};
+                border-top: {border_item_checked[0]}px {border_item_checked_style} rgba{border_item_checked_rgb};
+                border-bottom: {border_item_checked[1]}px {border_item_checked_style} rgba{border_item_checked_rgb};
+                border-right: {border_item_checked[2]}px {border_item_checked_style} rgba{border_item_checked_rgb};
+                border-left: {border_item_checked[3]}px {border_item_checked_style} rgba{border_item_checked_rgb};
                 }}
         
                 QTreeWidget::item:selected:hover, QTreeView::item:selected:hover {{
                 background-color: rgba{bg_item_checked_hover};
                 color: rgba{fg_item_checked_hover};
-                border-top: {border_item_top_checked_hover}px {border_item_style_checked_hover} rgba{border_item_rgb_checked_hover};
-                border-bottom: {border_item_bottom_checked_hover}px {border_item_style_checked_hover} rgba{border_item_rgb_checked_hover};
-                border-right: {border_item_right_checked_hover}px {border_item_style_checked_hover} rgba{border_item_rgb_checked_hover};
-                border-left: {border_item_left_checked_hover}px {border_item_style_checked_hover} rgba{border_item_rgb_checked_hover};
+                border-top: {border_item_checked_hover[0]}px {border_item_checked_hover_style} rgba{border_item_checked_hover_rgb};
+                border-bottom: {border_item_checked_hover[1]}px {border_item_checked_hover_style} rgba{border_item_checked_hover_rgb};
+                border-right: {border_item_checked_hover[2]}px {border_item_checked_hover_style} rgba{border_item_checked_hover_rgb};
+                border-left: {border_item_checked_hover[3]}px {border_item_checked_hover_style} rgba{border_item_checked_hover_rgb};
                 }}
         
                 /* BORDURES */
@@ -125,7 +138,42 @@ class Style:
                 border-right: {border_hover[2]}px {border_hover_style} rgba{border_hover_rgb};
                 border-left: {border_hover[3]}px {border_hover_style} rgba{border_hover_rgb};
                 }}
-        """
+                
+                /* RAYONS */
+                .QTreeWidget, .QTreeView {{
+                border-top-right-radius: {radius[0]}px;
+                border-top-left-radius: {radius[1]}px;
+                border-bottom-right-radius: {radius[2]}px;
+                border-bottom-left-radius: {radius[3]}px;
+                }}
+                
+                /* SCROLL */
+                QScrollBar {{
+                background-color: rgba{scroll_bg};
+                width: {scroll_width}px;
+                height: {scroll_height}px;
+                }}
+                QScrollBar::handle:horizontal {{
+                min-width: {scroll_handle_min_width}px;
+                }}
+                QScrollBar::handle:vertical {{
+                min-height: {scroll_handle_min_height}px;
+                }}
+                QScrollBar::handle {{
+                background-color: rgba{scroll_handle_fg};
+                }}
+                QScrollBar::handle:hover {{
+                background-color: rgba{scroll_handle_fg_hover};
+                }}
+                
+                QScrollBar::add-page, QScrollBar::sub-page {{
+                background-color: rgba{scroll_handle_bg};
+                border: none;
+                }}
+                QScrollBar::add-page:hover, QScrollBar::sub-page:hover {{
+                background-color: rgba{scroll_handle_bg_hover};
+                border: none;
+                }}"""
 
         for wg in wgs:
             wg.setStyleSheet(style)

@@ -116,7 +116,7 @@ class Style:
                 }}
                 
                 /* RAYONS */
-                .QTableWidget, .QTableView {{
+                .QToolBox {{
                 border-top-right-radius: {radius[0]}px;
                 border-top-left-radius: {radius[1]}px;
                 border-bottom-right-radius: {radius[2]}px;
