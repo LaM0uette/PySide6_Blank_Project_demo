@@ -136,6 +136,9 @@ class Style:
             wg.lineEdit().setCursor(Fct(cur=curseur_le).CUR())
 
 
+##################
+##     BASE     ##
+##################
 class Plus_moins_th(Style):
     def __init__(self, *wgs):
         super().__init__(
@@ -150,7 +153,6 @@ class Plus_moins_tr(Style):
             bg=Rgb().tr(),
             fg=Rgb().th3(),
     )
-
 class Up_down_th(Style):
     def __init__(self, *wgs):
         super().__init__(
@@ -170,7 +172,6 @@ class Up_down_tr(Style):
             img_up=P_img().fleche_top(),
             img_down=P_img().fleche_bottom(),
     )
-
 
 class rgb_bd_th3(Style):
     def __init__(self, *wgs):
