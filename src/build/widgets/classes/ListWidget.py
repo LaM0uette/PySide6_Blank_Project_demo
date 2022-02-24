@@ -32,24 +32,24 @@ class Style:
             border_rgb=p_base.WG_BORDER_RGB,
             # Bordures hover
             border_hover=p_base.WG_BORDER_WIDTH,
-            border_style_hover=p_base.WG_BORDER_STYLE,
-            border_rgb_hover=p_base.WG_BORDER_RGB,
+            border_hover_style=p_base.WG_BORDER_STYLE,
+            border_hover_rgb=p_base.WG_BORDER_RGB,
             # Bordures item
             border_item=p_base.WG_BORDER_WIDTH,
             border_item_style=p_base.WG_BORDER_STYLE,
             border_item_rgb=p_base.WG_BORDER_RGB,
             # Bordures item hover
             border_item_hover=p_base.WG_BORDER_WIDTH,
-            border_item_style_hover=p_base.WG_BORDER_STYLE,
-            border_item_rgb_hover=p_base.WG_BORDER_RGB,
+            border_item_hover_style=p_base.WG_BORDER_STYLE,
+            border_item_hover_rgb=p_base.WG_BORDER_RGB,
             # Bordures item checked
             border_item_checked=p_base.WG_BORDER_WIDTH,
-            border_item_style_checked=p_base.WG_BORDER_STYLE,
-            border_item_rgb_checked=p_base.WG_BORDER_RGB,
+            border_item_checked_style=p_base.WG_BORDER_STYLE,
+            border_item_checked_rgb=p_base.WG_BORDER_RGB,
             # Bordures item checked hover
             border_item_checked_hover=p_base.WG_BORDER_WIDTH,
-            border_item_style_checked_hover=p_base.WG_BORDER_STYLE,
-            border_item_rgb_checked_hover=p_base.WG_BORDER_RGB,
+            border_item_checked_hover_style=p_base.WG_BORDER_STYLE,
+            border_item_checked_hover_rgb=p_base.WG_BORDER_RGB,
 
             # Rayons
             radius=p_base.WG_RADIUS,
@@ -83,26 +83,26 @@ class Style:
                 .QListWidget::item:hover, .QListView::item:hover {{
                 background-color: rgba{bg_item_hover};
                 color: rgba{fg_item_hover};
-                border-top: {border_item_hover[0]}px {border_item_style_hover} rgba{border_item_rgb_hover};
-                border-bottom: {border_item_hover[1]}px {border_item_style_hover} rgba{border_item_rgb_hover};
-                border-right: {border_item_hover[2]}px {border_item_style_hover} rgba{border_item_rgb_hover};
-                border-left: {border_item_hover[3]}px {border_item_style_hover} rgba{border_item_rgb_hover};
+                border-top: {border_item_hover[0]}px {border_item_hover_style} rgba{border_item_hover_rgb};
+                border-bottom: {border_item_hover[1]}px {border_item_hover_style} rgba{border_item_hover_rgb};
+                border-right: {border_item_hover[2]}px {border_item_hover_style} rgba{border_item_hover_rgb};
+                border-left: {border_item_hover[3]}px {border_item_hover_style} rgba{border_item_hover_rgb};
                 }}
                 .QListWidget::item:selected, .QListView::item:selected {{
                 background-color: rgba{bg_item_checked};
                 color: rgba{fg_item_checked};
-                border-top: {border_item_checked[0]}px {border_item_style_checked} rgba{border_item_rgb_checked};
-                border-bottom: {border_item_checked[1]}px {border_item_style_checked} rgba{border_item_rgb_checked};
-                border-right: {border_item_checked[2]}px {border_item_style_checked} rgba{border_item_rgb_checked};
-                border-left: {border_item_checked[3]}px {border_item_style_checked} rgba{border_item_rgb_checked};
+                border-top: {border_item_checked[0]}px {border_item_checked_style} rgba{border_item_checked_rgb};
+                border-bottom: {border_item_checked[1]}px {border_item_checked_style} rgba{border_item_checked_rgb};
+                border-right: {border_item_checked[2]}px {border_item_checked_style} rgba{border_item_checked_rgb};
+                border-left: {border_item_checked[3]}px {border_item_checked_style} rgba{border_item_checked_rgb};
                 }}
                 .QListWidget::item:selected:hover, .QListView::item:selected:hover {{
                 background-color: rgba{bg_item_checked_hover};
                 color: rgba{fg_item_checked_hover};
-                border-top: {border_item_checked_hover[0]}px {border_item_style_checked_hover} rgba{border_item_rgb_checked_hover};
-                border-bottom: {border_item_checked_hover[1]}px {border_item_style_checked_hover} rgba{border_item_rgb_checked_hover};
-                border-right: {border_item_checked_hover[2]}px {border_item_style_checked_hover} rgba{border_item_rgb_checked_hover};
-                border-left: {border_item_checked_hover[3]}px {border_item_style_checked_hover} rgba{border_item_rgb_checked_hover};
+                border-top: {border_item_checked_hover[0]}px {border_item_checked_hover_style} rgba{border_item_checked_hover_rgb};
+                border-bottom: {border_item_checked_hover[1]}px {border_item_checked_hover_style} rgba{border_item_checked_hover_rgb};
+                border-right: {border_item_checked_hover[2]}px {border_item_checked_hover_style} rgba{border_item_checked_hover_rgb};
+                border-left: {border_item_checked_hover[3]}px {border_item_checked_hover_style} rgba{border_item_checked_hover_rgb};
                 }}
 
                 /* BORDURES */
@@ -113,10 +113,10 @@ class Style:
                 border-left: {border[3]}px {border_style} rgba{border_rgb};
                 }}
                 .QListWidget:hover, .QListView:hover {{
-                border-top: {border_hover[0]}px {border_style_hover} rgba{border_rgb_hover};
-                border-bottom: {border_hover[1]}px {border_style_hover} rgba{border_rgb_hover};
-                border-right: {border_hover[2]}px {border_style_hover} rgba{border_rgb_hover};
-                border-left: {border_hover[3]}px {border_style_hover} rgba{border_rgb_hover};
+                border-top: {border_hover[0]}px {border_hover_style} rgba{border_hover_rgb};
+                border-bottom: {border_hover[1]}px {border_hover_style} rgba{border_hover_rgb};
+                border-right: {border_hover[2]}px {border_hover_style} rgba{border_hover_rgb};
+                border-left: {border_hover[3]}px {border_hover_style} rgba{border_hover_rgb};
                 }}
                 
                 .QListWidget, .QListView {{
@@ -221,7 +221,7 @@ class Demo_tr(Style):
             border_item_checked=self.bd_item,
             border_item_checked_hover=self.bd_item,
             border_item_rgb=Rgb().th2(),
-            border_item_rgb_hover=Rgb().th3(),
-            border_item_rgb_checked=Rgb().bn1(),
-            border_item_rgb_checked_hover=Rgb().bn1(),
+            border_item_hover_rgb=Rgb().th3(),
+            border_item_checked_rgb=Rgb().bn1(),
+            border_item_checked_hover_rgb=Rgb().bn1(),
     )
