@@ -201,15 +201,15 @@ class Base_rond(Style):
 
             height_groove=12,
             width_groove=12,
-            width_handle_h=6,
+            width_handle_h=8,
             height_handle_h=4,
             width_handle_v=4,
             height_handle_v=6,
 
-            margin_handle_h=(0, -4, 0, 0),
+            margin_handle_h=(6, -8, 0, 0),
             margin_handle_v=(0, 0, -4, -4),
 
-            border_handle_h=(0, 14, 2, 2),
+            border_handle_h=(0, 10, 2, 2),
             border_handle_h_rgb=Rgb().th2(),
             border_handle_v=(4, 4, 4, 4),
             border_handle_v_rgb=Rgb().th2(),
@@ -250,15 +250,16 @@ class rgb(Style):
             width_handle_v=4,
             height_handle_v=6,
 
-            margin_handle_h=(-4, -4, 0, 0),
+            margin_handle_h=(6, -8, 0, 0),
             margin_handle_v=(0, 0, -4, -4),
-            border_handle_h=(4, 4, 4, 4),
+
+            border_handle_h=(0, 10, 2, 2),
             border_handle_h_rgb=Rgb().th2(),
             border_handle_v=(4, 4, 4, 4),
             border_handle_v_rgb=Rgb().th2(),
 
-            radius_groove_h=3,
-            radius_groove_v=3,
-            radius_handle_h=4,
-            radius_handle_v=4,
+            radius_groove_h=(3, 3, 3, 3),
+            radius_groove_v=(3, 3, 3, 3),
+            radius_handle_h=(0, 0, 0, 0),
+            radius_handle_v=(0, 0, 4, 4),
         )
