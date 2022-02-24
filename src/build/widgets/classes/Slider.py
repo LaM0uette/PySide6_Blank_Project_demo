@@ -23,7 +23,7 @@ class Style:
             bg_handle=p_base.BG_HANDLE,
             bg_handle_hover=p_base.BG_HANDLE_HOVER,
             bg_handle_pressed=p_base.BG_HANDLE_PRESSED,
-            gradient=(0, 0, 0, 0),
+            gradient=((0, )*4),
 
             # Dimensions WG
             width_groove=P_dim().h9(),
@@ -34,8 +34,8 @@ class Style:
             height_handle_v=P_dim().h9(),
 
             # Positions WG
-            margin_handle_h=(0, 0, 0, 0),
-            margin_handle_v=(0, 0, 0, 0),
+            margin_handle_h=((0, )*4),
+            margin_handle_v=((0, )*4),
 
             # Bordures
             border=p_base.WG_BORDER_WIDTH,
