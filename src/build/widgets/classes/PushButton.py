@@ -145,7 +145,7 @@ class Style:
 
             wg.setCursor(Fct(cur=curseur).CUR())
 
-            cls = Classe_pb.ClassePb(
+            cls = ClassePb.ClassePb(
                 wg=wg,
                 dim_ico=img_height,
                 DIM_ICO=IMG_HEIGHT,
