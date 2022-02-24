@@ -20,8 +20,8 @@ class Style:
             border_rgb=p_base.WG_BORDER_RGB,
             # Bordures hover
             border_hover=p_base.WG_BORDER_WIDTH,
-            border_style_hover=p_base.WG_BORDER_STYLE,
-            border_rgb_hover=p_base.WG_BORDER_RGB,
+            border_hover_style=p_base.WG_BORDER_STYLE,
+            border_hover_rgb=p_base.WG_BORDER_RGB,
 
             # Rayons
             radius=p_base.WG_RADIUS,
@@ -40,10 +40,10 @@ class Style:
                 border-left: {border[3]}px {border_style} rgba{border_rgb};
                 }}
                 .QFrame:hover {{
-                border-top: {border_hover[0]}px {border_style_hover} rgba{border_rgb_hover};
-                border-bottom: {border_hover[1]}px {border_style_hover} rgba{border_rgb_hover};
-                border-right: {border_hover[2]}px {border_style_hover} rgba{border_rgb_hover};
-                border-left: {border_hover[3]}px {border_style_hover} rgba{border_rgb_hover};
+                border-top: {border_hover[0]}px {border_hover_style} rgba{border_hover_rgb};
+                border-bottom: {border_hover[1]}px {border_hover_style} rgba{border_hover_rgb};
+                border-right: {border_hover[2]}px {border_hover_style} rgba{border_hover_rgb};
+                border-left: {border_hover[3]}px {border_hover_style} rgba{border_hover_rgb};
                 }}
                 
                 .QFrame {{
@@ -122,7 +122,7 @@ class Cadre:
             border=((P_style().bd(), )*4),
             border_rgb=rgb,
             border_hover=((P_style().bd(),) * 4),
-            border_rgb_hover=rgb,
+            border_hover_rgb=rgb,
         )
 
     def th1(self): self.rtn(rgb=Rgb().th1())
@@ -150,6 +150,6 @@ class Demo_hover(Style):
             border=((P_style().bd(), )*4),
             border_rgb=Rgb().bn1(),
             border_hover=((P_style().bd()*2, )*4),
-            border_style_hover="dashed",
-            border_rgb_hover=Rgb().vert(),
+            border_hover_style="dashed",
+            border_hover_rgb=Rgb().vert(),
     )
