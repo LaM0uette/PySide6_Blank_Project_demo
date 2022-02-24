@@ -107,7 +107,7 @@ class Style:
                 }}
                 
                 /* RAYONS */
-                .QComboBox, .QFontComboBox {{
+                .QSpinBox, .QDoubleSpinBox {{
                 border-top-right-radius: {radius[0]}px;
                 border-top-left-radius: {radius[1]}px;
                 border-bottom-right-radius: {radius[2]}px;
