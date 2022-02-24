@@ -196,8 +196,6 @@ class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            style=StyleSheet(
-            )
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
@@ -206,17 +204,15 @@ class Base_tr(Style):
             scroll_h=QtCore.Qt.ScrollBarAlwaysOff,
             scroll_v=QtCore.Qt.ScrollBarAlwaysOff,
 
-            style=StyleSheet(
-                bg_gen=Rgb().tr(),
-                bg_item_gen=Rgb().tr(),
-                fg_item=Rgb().th3(),
-                fg_item_checked=Rgb().bn1(),
-                border_item_gen_left=2,
-                border_item_rgb=Rgb().th2(),
-                border_item_rgb_hover=Rgb().th3(),
-                border_item_rgb_checked=Rgb().bn1(),
-                border_item_rgb_checked_hover=Rgb().bn1(),
-            )
+            bg_gen=Rgb().tr(),
+            bg_item_gen=Rgb().tr(),
+            fg_item=Rgb().th3(),
+            fg_item_checked=Rgb().bn1(),
+            border_item_gen_left=2,
+            border_item_rgb=Rgb().th2(),
+            border_item_rgb_hover=Rgb().th3(),
+            border_item_rgb_checked=Rgb().bn1(),
+            border_item_rgb_checked_hover=Rgb().bn1(),
     )
 class option(Style):
     def __init__(self, *wgs):
