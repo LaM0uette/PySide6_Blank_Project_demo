@@ -178,19 +178,20 @@ class rgb_bd_th3(Style):
             *wgs,
             value_max=255,
 
-            style=StyleSheet(
-                border_gen_all=P_style().bd(),
-                border_gen_rgb=P_rgb().th3(),
-            )
+            border=((P_style().bd(), )*4),
+            border_hover=((P_style().bd(), )*4),
+            border_rgb=P_rgb().th3(),
+            border_hover_rgb=P_rgb().th3(),
         )
 class Plus_moins_bd_th3(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            style=StyleSheet(
-                border_gen_all=P_style().bd(),
-                border_gen_rgb=P_rgb().th3(),
-            )
+
+            border=((P_style().bd(),) * 4),
+            border_hover=((P_style().bd(),) * 4),
+            border_rgb=P_rgb().th3(),
+            border_hover_rgb=P_rgb().th3(),
     )
 class Plus_moins_inf_bd_th3(Style):
     def __init__(self, *wgs):
@@ -198,12 +199,11 @@ class Plus_moins_inf_bd_th3(Style):
             *wgs,
             value_max=999999,
 
-            style=StyleSheet(
-                border_gen_all=P_style().bd(),
-                border_gen_rgb=P_rgb().th3(),
-            )
+            border=((P_style().bd(),) * 4),
+            border_hover=((P_style().bd(),) * 4),
+            border_rgb=P_rgb().th3(),
+            border_hover_rgb=P_rgb().th3(),
         )
-
 
 """
 "lr":
