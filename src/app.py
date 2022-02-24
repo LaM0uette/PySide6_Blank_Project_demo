@@ -281,7 +281,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.hide()
         self._centreFen()
     def quitter(self):
-        if Rep().QUITTER():
+        if DLG_Rep().QUITTER():
             app.quit()
             quit()
     # event
