@@ -488,25 +488,31 @@ class Demo_rd(Style):
     )
 
 class ck_ico(Style):
+    bg = Rgb().tr()
+
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
             wg_type="check",
 
-            style=StyleSheet(
-                bg_gen=Rgb().tr(),
-                fg=Rgb().th3(),
-            )
+            bg=self.bg,
+            bg_hover=self.bg,
+            bg_checked=self.bg,
+            bg_checked_hover=self.bg,
+            fg=Rgb().th3(),
     )
 class zoom(Style):
+    bg = Rgb().tr()
+
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
             wg_type="zoom",
 
-            style=StyleSheet(
-                bg_gen=Rgb().tr(),
-                img=P_img().calendrier(),
-                img_rgb="",
-            )
+            bg=self.bg,
+            bg_hover=self.bg,
+            bg_checked=self.bg,
+            bg_checked_hover=self.bg,
+            img=P_img().calendrier(),
+            img_rgb="",
     )
