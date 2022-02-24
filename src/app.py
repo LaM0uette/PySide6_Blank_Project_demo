@@ -165,7 +165,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur=Cur().souris()).CUR())
-        # self.setStyleSheet(f"background-color: transparent;")
 
         # Icone de l'app
         dim = Dim().h9()

@@ -72,7 +72,6 @@ class Base_th(Style):
         super().__init__(
             *wgs,
             bg=rgb,
-            radius=((p_base.RADIUS + 1,) * 4)
         )
 class Base_tr(Style):
     def __init__(self, *wgs):

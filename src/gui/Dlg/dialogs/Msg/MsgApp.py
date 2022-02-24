@@ -67,7 +67,6 @@ class MsgApp(msg_ui.Ui_Msg, QtWidgets.QDialog):
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur=Cur().souris()).CUR())
-        self.setStyleSheet(f"background-color: rgba{Rgb().th1()};")
 
         # Frame menu_top
         self.fr_menu_top.setFixedHeight(Dim().h9())
