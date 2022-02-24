@@ -162,7 +162,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         In_classe(ui=self)
     def IN_WG(self):
         # Base
-        self.setCursor(Fct(cur=P_cur().souris()).CUR())
+        self.setCursor(Fct(cur=Cur().souris()).CUR())
 
         # Icone de l'app
         dim = P_dim().carr().h9()
@@ -180,7 +180,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         # SizeGrip
         if config.resize:
-            self.sizegrip.setCursor(Fct(cur=P_cur().fleche_nwse()).CUR())
+            self.sizegrip.setCursor(Fct(cur=Cur().fleche_nwse()).CUR())
             self.sizegrip.setStyleSheet("QSizeGrip {"
                                         f"image: url({P_img().resize()}th3.svg);"
                                         f"width: {P_dim().h10()}px;"
@@ -309,9 +309,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         height_verif = cur.pos().y() - self.pos().y()
 
         if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
-            self.setCursor(Fct(cur=P_cur().agrandir()).CUR())
+            self.setCursor(Fct(cur=Cur().agrandir()).CUR())
         else:
-            self.setCursor(Fct(cur=P_cur().souris()).CUR())
+            self.setCursor(Fct(cur=Cur().souris()).CUR())
 
         try:
             if event.buttons() == QtCore.Qt.LeftButton and height_verif < P_dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized:
@@ -325,7 +325,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         cur = QtGui.QCursor()
         height_verif = cur.pos().y() - self.pos().y()
         if height_verif < P_dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
-            self.setCursor(Fct(cur=P_cur().souris()).CUR())
+            self.setCursor(Fct(cur=Cur().souris()).CUR())
             self.agrandir()
             event.accept()
     def closeEvent(self, event):

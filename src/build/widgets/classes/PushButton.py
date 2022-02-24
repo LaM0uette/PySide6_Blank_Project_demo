@@ -218,7 +218,7 @@ class menu_top:
             *self.wgs,
             wg_type="zoom",
             width=P_dim().h9() * 1.2,
-            curseur=P_cur().souris_main(),
+            curseur=Cur().souris_main(),
 
             bg=Rgb().tr(),
             bg_hover=Rgb().tr(),
@@ -417,7 +417,7 @@ class plein:
 
             border_gen=((0, )*4),
             border_gen_rgb=Rgb().tr(),
-            curseur=P_cur().main()
+            curseur=Cur().main()
             ):
         Style(
             *self.wgs,

@@ -25,7 +25,7 @@ class Fct:
 
     def CUR(self):
         cur = self.kwargs.get("cur")
-        if cur is None: cur = P_cur().souris()
+        if cur is None: cur = Cur().souris()
         return QtGui.QCursor(QtGui.QPixmap(cur[0]), cur[1], cur[2])
     def DIM(self):
         wg = self.kwargs.get("wg")

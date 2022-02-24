@@ -12,7 +12,7 @@ class Style:
             text_visible=p_base.TEXT_VISIBLE,
             align_horizontal=Align().h_center(),
             align_vertical=Align().v_center(),
-            curseur=P_cur().souris(),
+            curseur=Cur().souris(),
 
             # Couleurs BG
             bg=p_base.BG,

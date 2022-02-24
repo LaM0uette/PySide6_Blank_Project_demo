@@ -9,7 +9,7 @@ class Style:
             *wgs,
             width=p_base.WIDTH,
             height=p_base.HEIGHT,
-            curseur=P_cur().souris(),
+            curseur=Cur().souris(),
 
             # Couleurs BG
             bg=p_base.BG,

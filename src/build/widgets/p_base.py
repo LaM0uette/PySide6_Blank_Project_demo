@@ -156,5 +156,5 @@ WORD_WRAP = True
 #####################
 ##     CURSEUR     ##
 #####################
-CUR = P_cur().souris()
-CUR_LE = P_cur().IBeam()
+CUR = Cur().souris()
+CUR_LE = Cur().IBeam()

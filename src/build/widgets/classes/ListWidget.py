@@ -11,7 +11,7 @@ class Style:
             font_size=p_base.FONT_SIZE,
             scroll_h=p_base.SCROLL_H,
             scroll_v=p_base.SCROLL_V,
-            curseur=P_cur().croix(),
+            curseur=Cur().croix(),
 
             # Couleurs BG
             bg=p_base.BG,
@@ -166,7 +166,7 @@ class Style:
             wg.setVerticalScrollBarPolicy(scroll_v)
 
             wg.setCursor(Fct(cur=curseur).CUR())
-            wg.viewport().setCursor(Fct(cur=P_cur().souris_main()).CUR())
+            wg.viewport().setCursor(Fct(cur=Cur().souris_main()).CUR())
 
 
 ##################

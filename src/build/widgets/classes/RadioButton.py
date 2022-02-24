@@ -9,7 +9,7 @@ class Style:
             height=p_base.WG_HEIGHT,
             font=p_base.FONT,
             font_size=p_base.FONT_SIZE,
-            curseur=P_cur().souris_main(),
+            curseur=Cur().souris_main(),
 
             # Couleurs BG
             bg=p_base.BG,

@@ -69,7 +69,7 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
         In_classe(ui=self)
     def IN_WG(self):
         # Base
-        self.setCursor(Fct(cur=P_cur().souris()).CUR())
+        self.setCursor(Fct(cur=Cur().souris()).CUR())
         self.setStyleSheet(f"background-color: rgb{P_rgb().th1()};")
 
         # Frame menu_top

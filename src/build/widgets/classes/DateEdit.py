@@ -14,7 +14,7 @@ class Style:
             font_size=p_base.FONT_SIZE,
             align_horizontal=Align().h_center(),
             align_vertical=Align().v_center(),
-            curseur=P_cur().souris_main(),
+            curseur=Cur().souris_main(),
 
             # Couleurs BG
             bg=p_base.BG,
@@ -207,8 +207,8 @@ class Style:
             wg.setAlignment(align_horizontal | align_vertical)
 
             wg.setCursor(Fct(cur=curseur).CUR())
-            wg.lineEdit().setCursor(Fct(cur=P_cur().IBeam()).CUR())
-            wg.calendarWidget().setCursor(Fct(cur=P_cur().souris_main()).CUR())
+            wg.lineEdit().setCursor(Fct(cur=Cur().IBeam()).CUR())
+            wg.calendarWidget().setCursor(Fct(cur=Cur().souris_main()).CUR())
 
 
 ##################

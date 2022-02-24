@@ -112,8 +112,8 @@ class Style:
             try: wg.setAlignment(align_horizontal | align_vertical)
             except: pass
 
-            wg.setCursor(Fct(cur=P_cur().IBeam()).CUR())
-            try: wg.viewport().setCursor(Fct(cur=P_cur().IBeam()).CUR())
+            wg.setCursor(Fct(cur=Cur().IBeam()).CUR())
+            try: wg.viewport().setCursor(Fct(cur=Cur().IBeam()).CUR())
             except: pass
 
             palette_txt = QtGui.QPalette()

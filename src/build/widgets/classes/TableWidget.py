@@ -16,7 +16,7 @@ class Style:
             scroll_v=p_base.SCROLL_V,
             header_h=p_base.HEADER_H,
             header_v=p_base.HEADER_V,
-            curseur=P_cur().croix(),
+            curseur=Cur().croix(),
 
             # Couleurs BG
             bg=p_base.BG,

@@ -10,7 +10,7 @@ class Style:
             font=p_base.FONT,
             font_size=p_base.FONT_SIZE,
             edit=p_base.EDIT,
-            curseur=P_cur().souris_main(),
+            curseur=Cur().souris_main(),
 
             # Couleurs BG
             bg=p_base.BG,
@@ -159,10 +159,10 @@ class Style:
             wg.setEditable(edit)
 
             wg.setCursor(Fct(cur=curseur).CUR())
-            wg.view().setCursor(Fct(cur=P_cur().souris_main()).CUR())
+            wg.view().setCursor(Fct(cur=Cur().souris_main()).CUR())
             if edit:
                 wg.lineEdit().setFont(Fct(font_size=font_size).FONT())
-                wg.lineEdit().setCursor(Fct(cur=P_cur().IBeam()).CUR())
+                wg.lineEdit().setCursor(Fct(cur=Cur().IBeam()).CUR())
 
 
 ##################
@@ -172,7 +172,7 @@ class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            curseur=P_cur().main(),
+            curseur=Cur().main(),
     )
 class Base_tr(Style):
     def __init__(self, *wgs):
