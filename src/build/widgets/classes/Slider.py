@@ -216,7 +216,7 @@ class Base_rond(Style):
 
             radius_groove_h=(3, 3, 3, 3),
             radius_groove_v=(3, 3, 3, 3),
-            radius_handle_h=(6, 4, 6, 4),
+            radius_handle_h=(6, 4, 4, 6),
             radius_handle_v=(4, 4, 4, 4),
         )
 class rgb(Style):
