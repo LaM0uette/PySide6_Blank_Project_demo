@@ -14,14 +14,46 @@ class Style:
             scroll_v=p_base.SCROLL_V,
             curseur=P_cur().croix(),
 
+            # Couleurs BG
+            bg=p_base.BG,
+            bg_item=p_base.BG_ITEM,
+            bg_item_hover=p_base.BG_ITEM_HOVER,
+            bg_item_checked=p_base.BG_ITEM_CHECKED,
+            bg_item_checked_hover=p_base.BG_ITEM_CHECKED_HOVER,
+            # Couleurs FG
+            fg=p_base.FG,
+            fg_item=p_base.FG_ITEM,
+            fg_item_hover=p_base.FG_ITEM_HOVER,
+            fg_item_checked=p_base.FG_ITEM_CHECKED,
+            fg_item_checked_hover=p_base.FG_ITEM_CHECKED_HOVER,
+
+            # Bordures
+            border_style=p_base.WG_BORDER_STYLE,
+            border_rgb=p_base.WG_BORDER_RGB,
+            border_top=p_base.WG_BORDER_WIDTH, border_bottom=p_base.WG_BORDER_WIDTH, border_right=p_base.WG_BORDER_WIDTH, border_left=p_base.WG_BORDER_WIDTH,
+            # Bordures hover
+            border_style_hover=p_base.WG_BORDER_STYLE,
+            border_rgb_hover=p_base.WG_BORDER_RGB,
+            border_top_hover=p_base.WG_BORDER_WIDTH, border_bottom_hover=p_base.WG_BORDER_WIDTH, border_right_hover=p_base.WG_BORDER_WIDTH, border_left_hover=p_base.WG_BORDER_WIDTH,
+            # Bordures item
+            border_item_style=p_base.WG_BORDER_STYLE,
+            border_item_rgb=p_base.WG_BORDER_RGB,
+            border_item_top=p_base.WG_BORDER_WIDTH, border_item_bottom=p_base.WG_BORDER_WIDTH, border_item_right=p_base.WG_BORDER_WIDTH, border_item_left=p_base.WG_BORDER_WIDTH,
+            # Bordures item hover
+            border_item_style_hover=p_base.WG_BORDER_STYLE,
+            border_item_rgb_hover=p_base.WG_BORDER_RGB,
+            border_item_top_hover=p_base.WG_BORDER_WIDTH, border_item_bottom_hover=p_base.WG_BORDER_WIDTH, border_item_right_hover=p_base.WG_BORDER_WIDTH, border_item_left_hover=p_base.WG_BORDER_WIDTH,
+            # Bordures item checked
+            border_item_style_checked=p_base.WG_BORDER_STYLE,
+            border_item_rgb_checked=p_base.WG_BORDER_RGB,
+            border_item_top_checked=p_base.WG_BORDER_WIDTH, border_item_bottom_checked=p_base.WG_BORDER_WIDTH, border_item_right_checked=p_base.WG_BORDER_WIDTH, border_item_left_checked=p_base.WG_BORDER_WIDTH,
+            # Bordures item checked hover
+            border_item_style_checked_hover=p_base.WG_BORDER_STYLE,
+            border_item_rgb_checked_hover=p_base.WG_BORDER_RGB,
+            border_item_top_checked_hover=p_base.WG_BORDER_WIDTH, border_item_bottom_checked_hover=p_base.WG_BORDER_WIDTH, border_item_right_checked_hover=p_base.WG_BORDER_WIDTH, border_item_left_checked_hover=p_base.WG_BORDER_WIDTH,
+
             # Rayons
             radius=p_base.WG_RADIUS,
-            radius_groove_h=p_base.WG_RADIUS,
-            radius_groove_v=p_base.WG_RADIUS,
-            radius_handle_h=p_base.WG_RADIUS,
-            radius_handle_v=p_base.WG_RADIUS,
-
-
     ):
         style = f"""
                 .QListWidget, .QListView {{
