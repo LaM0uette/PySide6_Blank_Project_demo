@@ -70,11 +70,13 @@ class Ui_Option(object):
 
         self.vlay_fr_main.addWidget(self.fr_menu_top)
 
-        self.hlay_opt_body = QHBoxLayout()
+        self.fr_body = QFrame(self.fr_main)
+        self.fr_body.setObjectName(u"fr_body")
+        self.hlay_opt_body = QHBoxLayout(self.fr_body)
         self.hlay_opt_body.setSpacing(0)
         self.hlay_opt_body.setObjectName(u"hlay_opt_body")
-        self.hlay_opt_body.setContentsMargins(0, -1, 0, -1)
-        self.trw_option = QTreeWidget(self.fr_main)
+        self.hlay_opt_body.setContentsMargins(1, -1, 1, -1)
+        self.trw_option = QTreeWidget(self.fr_body)
         self.trw_option.headerItem().setText(0, "")
         QTreeWidgetItem(self.trw_option)
         QTreeWidgetItem(self.trw_option)
@@ -84,7 +86,7 @@ class Ui_Option(object):
 
         self.hlay_opt_body.addWidget(self.trw_option)
 
-        self.stk_option = QStackedWidget(self.fr_main)
+        self.stk_option = QStackedWidget(self.fr_body)
         self.stk_option.setObjectName(u"stk_option")
         self.pg_opt_menu = QWidget()
         self.pg_opt_menu.setObjectName(u"pg_opt_menu")
@@ -429,7 +431,7 @@ class Ui_Option(object):
         self.hlay_opt_body.addWidget(self.stk_option)
 
 
-        self.vlay_fr_main.addLayout(self.hlay_opt_body)
+        self.vlay_fr_main.addWidget(self.fr_body)
 
         self.fr_opt_bottom = QFrame(self.fr_main)
         self.fr_opt_bottom.setObjectName(u"fr_opt_bottom")

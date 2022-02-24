@@ -23,7 +23,7 @@ class Ui_Input(object):
     def setupUi(self, Input):
         if not Input.objectName():
             Input.setObjectName(u"Input")
-        Input.resize(773, 261)
+        Input.resize(773, 262)
         self.glay_dlg = QGridLayout(Input)
         self.glay_dlg.setSpacing(0)
         self.glay_dlg.setObjectName(u"glay_dlg")
@@ -68,7 +68,9 @@ class Ui_Input(object):
 
         self.vlay_fr_main.addWidget(self.fr_menu_top)
 
-        self.vlay_input_body = QVBoxLayout()
+        self.fr_body = QFrame(self.fr_main)
+        self.fr_body.setObjectName(u"fr_body")
+        self.vlay_input_body = QVBoxLayout(self.fr_body)
         self.vlay_input_body.setSpacing(2)
         self.vlay_input_body.setObjectName(u"vlay_input_body")
         self.vlay_input_body.setContentsMargins(20, -1, 20, -1)
@@ -76,12 +78,12 @@ class Ui_Input(object):
 
         self.vlay_input_body.addItem(self.verticalSpacer_2)
 
-        self.lb_input_text = QLabel(self.fr_main)
+        self.lb_input_text = QLabel(self.fr_body)
         self.lb_input_text.setObjectName(u"lb_input_text")
 
         self.vlay_input_body.addWidget(self.lb_input_text)
 
-        self.le_input_text = QLineEdit(self.fr_main)
+        self.le_input_text = QLineEdit(self.fr_body)
         self.le_input_text.setObjectName(u"le_input_text")
 
         self.vlay_input_body.addWidget(self.le_input_text)
@@ -91,7 +93,7 @@ class Ui_Input(object):
         self.vlay_input_body.addItem(self.verticalSpacer)
 
 
-        self.vlay_fr_main.addLayout(self.vlay_input_body)
+        self.vlay_fr_main.addWidget(self.fr_body)
 
         self.fr_input_bottom = QFrame(self.fr_main)
         self.fr_input_bottom.setObjectName(u"fr_input_bottom")

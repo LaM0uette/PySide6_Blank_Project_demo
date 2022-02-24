@@ -68,7 +68,9 @@ class Ui_Msg(object):
 
         self.vlay_fr_main.addWidget(self.fr_menu_top)
 
-        self.vlay_msg_body = QVBoxLayout()
+        self.fr_body = QFrame(self.fr_main)
+        self.fr_body.setObjectName(u"fr_body")
+        self.vlay_msg_body = QVBoxLayout(self.fr_body)
         self.vlay_msg_body.setSpacing(0)
         self.vlay_msg_body.setObjectName(u"vlay_msg_body")
         self.vlay_msg_body.setContentsMargins(20, -1, 20, -1)
@@ -76,7 +78,7 @@ class Ui_Msg(object):
 
         self.vlay_msg_body.addItem(self.verticalSpacer_2)
 
-        self.lb_msg_text = QLabel(self.fr_main)
+        self.lb_msg_text = QLabel(self.fr_body)
         self.lb_msg_text.setObjectName(u"lb_msg_text")
 
         self.vlay_msg_body.addWidget(self.lb_msg_text)
@@ -86,7 +88,7 @@ class Ui_Msg(object):
         self.vlay_msg_body.addItem(self.verticalSpacer)
 
 
-        self.vlay_fr_main.addLayout(self.vlay_msg_body)
+        self.vlay_fr_main.addWidget(self.fr_body)
 
         self.fr_msg_bottom = QFrame(self.fr_main)
         self.fr_msg_bottom.setObjectName(u"fr_msg_bottom")

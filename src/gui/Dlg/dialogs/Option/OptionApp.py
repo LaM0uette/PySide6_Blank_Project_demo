@@ -83,6 +83,7 @@ class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):
             self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5,
             self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize
         ).th3()
+        Frame.Base_th(self.fr_body, rgb=Rgb().th1())
         Frame.Menu_bottom_dlg(self.fr_opt_bottom)
         ### /QFrame ###
 

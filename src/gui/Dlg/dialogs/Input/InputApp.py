@@ -52,6 +52,7 @@ class InputApp(input_ui.Ui_Input, QtWidgets.QDialog):
     def IN_CLASSE(self):
         ### QFrame ###
         Frame.Cadre(self.fr_main).th3()
+        Frame.Base_th(self.fr_body, rgb=Rgb().th1())
         Frame.Menu_bottom_dlg(self.fr_input_bottom)
         ### /QFrame ###
 
