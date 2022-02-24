@@ -1,4 +1,4 @@
-from .Input import *
+from .DLG_Input import *
 from .Msg import *
 from .Option import *
 from .Rep import *

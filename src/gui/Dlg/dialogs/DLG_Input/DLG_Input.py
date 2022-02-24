@@ -1,8 +1,8 @@
-from .Dlg_input import Dlg_input
+from .InputApp import InputApp
 from .....build import *
 
 
-class Input:
+class DLG_Input:
     def __init__(self,
                  width=600,
                  height=200,
@@ -13,7 +13,7 @@ class Input:
         self.opacity = opacity
 
     def _rtn(self, titre, msg, ico, tm, txt_pb_ok, txt_pb_annuler):
-        _input = Dlg_input(
+        _input = InputApp(
             titre=titre,
             msg=msg,
             ico=ico,

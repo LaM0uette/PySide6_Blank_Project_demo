@@ -1,4 +1,4 @@
-from .Rgb_app import Rgb_app
+from .RgbApp import RgbApp
 from .....build import *
 
 
@@ -13,7 +13,7 @@ class DLG_Rgb:
         self.opacity = opacity
 
     def _rtn(self, titre, rgb, ico, tm, txt_pb_ok, txt_pb_annuler):
-        rgb = Rgb_app(
+        rgb = RgbApp(
             titre=titre,
             rgb=rgb,
             ico=ico,

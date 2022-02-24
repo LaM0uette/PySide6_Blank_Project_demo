@@ -5,7 +5,7 @@ from .....build import *
 from .....In_classe import In_classe
 
 
-class Rgb_app(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
+class RgbApp(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
     rep = False
     rgb_rtn = (0, 0, 0)
@@ -21,7 +21,7 @@ class Rgb_app(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
                  height,
                  opacity,
     ):
-        super(Rgb_app, self).__init__()
+        super(RgbApp, self).__init__()
 
         self.titre = titre
         self.rgb = rgb

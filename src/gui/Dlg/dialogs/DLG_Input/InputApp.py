@@ -5,7 +5,7 @@ from .....build import *
 from .....In_classe import In_classe
 
 
-class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
+class InputApp(input_ui.Ui_Input, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
     rep = False
     input = ""
@@ -21,7 +21,7 @@ class Dlg_input(input_ui.Ui_Input, QtWidgets.QDialog):
                  height,
                  opacity,
     ):
-        super(Dlg_input, self).__init__()
+        super(InputApp, self).__init__()
 
         self.titre = titre
         self.msg = msg
