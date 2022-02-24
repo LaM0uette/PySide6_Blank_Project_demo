@@ -145,6 +145,11 @@ class Style:
             wg.setFont(Fct(font=font, font_size=font_size).FONT())
 
             wg.setCursor(Fct(cur=curseur).CUR())
+
+
+##################
+##     BASE     ##
+##################
 class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(

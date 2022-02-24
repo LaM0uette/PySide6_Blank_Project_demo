@@ -162,6 +162,9 @@ class Style:
                 wg.lineEdit().setCursor(Fct(cur=P_cur().IBeam()).CUR())
 
 
+##################
+##     BASE     ##
+##################
 class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(

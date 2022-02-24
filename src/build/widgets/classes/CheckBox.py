@@ -147,6 +147,9 @@ class Style:
             wg.setCursor(Fct(cur=curseur).CUR())
 
 
+##################
+##     BASE     ##
+##################
 class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(

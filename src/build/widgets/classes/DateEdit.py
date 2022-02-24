@@ -210,6 +210,9 @@ class Style:
             wg.calendarWidget().setCursor(Fct(cur=P_cur().souris_main()).CUR())
 
 
+##################
+##     BASE     ##
+##################
 class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(

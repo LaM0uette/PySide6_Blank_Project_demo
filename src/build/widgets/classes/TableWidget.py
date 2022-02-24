@@ -251,6 +251,9 @@ class Style:
             wg.resizeColumnsToContents()
 
 
+##################
+##     BASE     ##
+##################
 class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(
@@ -275,6 +278,9 @@ class Base_tr(Style):
     )
 
 
+##################
+##     DEMO     ##
+##################
 class Demo_th(Style):
     bd_gen = ((1, )*4)
     rgb_hd = Rgb().th1()
