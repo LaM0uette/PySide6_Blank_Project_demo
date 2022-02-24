@@ -415,45 +415,6 @@ class StyleSheet:
         except: pass
 
         self.style = f"""
-/*****************************
-**       QProgressBar       **
-******************************/      
-                QProgressBar {{
-                background-color: rgba{bg};
-                color: rgba{fg};
-                }}
-        
-                /* PROGRESS */
-                QProgressBar::chunk {{
-                background-color: rgba{bg_chunk};
-                }}
-                QProgressBar::chunk:hover {{
-                background-color: rgba{bg_chunk_hover};
-                }}
-        
-                /* BORDURES */
-                .QProgressBar {{
-                border-top: {border_top}px {border_style} rgba{border_rgb};
-                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
-                border-right: {border_right}px {border_style} rgba{border_rgb};
-                border-left: {border_left}px {border_style} rgba{border_rgb};
-                padding-top={padding_top}px;
-                padding-bottom={padding_bottom}px;
-                padding-right={padding_right}px;
-                padding-left={padding_left}px;
-                }}
-                .QProgressBar:hover {{
-                border-top: {border_hover_top}px {border_hover_style} rgba{border_hover_rgb};
-                border-bottom: {border_bottom_hover}px {border_hover_style} rgba{border_hover_rgb};
-                border-right: {border_right_hover}px {border_hover_style} rgba{border_hover_rgb};
-                border-left: {border_left_hover}px {border_hover_style} rgba{border_hover_rgb};
-                }}
-/*****************************
-**      /QProgressBar       **
-******************************/     
-
-
-
 /****************************
 **       QPushButton       **
 *****************************/
