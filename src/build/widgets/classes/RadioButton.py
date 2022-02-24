@@ -145,24 +145,22 @@ class Style:
             wg.setFont(Fct(font=font, font_size=font_size).FONT())
 
             wg.setCursor(Fct(cur=curseur).CUR())
-
-
 class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            style=StyleSheet(
-                img_margin_left=(p_base.WG_HEIGHT - (p_base.WG_HEIGHT * P_style().x_ico())) / 2,
-            )
+            img_margin_left=(p_base.WG_HEIGHT - (p_base.WG_HEIGHT * P_style().x_ico())) / 2,
         )
 class Base_tr(Style):
+    bg = Rgb().tr()
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            style=StyleSheet(
-                bg_gen=Rgb().tr(),
-                fg=Rgb().th3(),
-                fg_checked=Rgb().th3(),
-                img_margin_left=(p_base.WG_HEIGHT - (p_base.WG_HEIGHT * P_style().x_ico())) / 2
-            )
+            bg=self.bg,
+            bg_hover=self.bg,
+            bg_checked=self.bg,
+            bg_checked_hover=self.bg,
+            fg=Rgb().th3(),
+            fg_checked=Rgb().th3(),
+            img_margin_left=(p_base.WG_HEIGHT - (p_base.WG_HEIGHT * P_style().x_ico())) / 2
         )
