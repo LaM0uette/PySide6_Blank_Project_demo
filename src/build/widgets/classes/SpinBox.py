@@ -140,8 +140,6 @@ class Plus_moins_th(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            style=StyleSheet(
-            )
         )
 class Plus_moins_tr(Style):
     def __init__(self, *wgs):
@@ -149,20 +147,16 @@ class Plus_moins_tr(Style):
             *wgs,
             no_focus=True,
 
-            style=StyleSheet(
-                bg_gen=Rgb().tr(),
-                fg_gen=Rgb().th3(),
-            )
+            bg=Rgb().tr(),
+            fg=Rgb().th3(),
     )
 
 class Up_down_th(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            style=StyleSheet(
-                img_up=P_img().fleche_top(),
-                img_down=P_img().fleche_bottom(),
-            )
+            img_up=P_img().fleche_top(),
+            img_down=P_img().fleche_bottom(),
 
     )
 class Up_down_tr(Style):
@@ -171,12 +165,10 @@ class Up_down_tr(Style):
             *wgs,
             no_focus=True,
 
-            style=StyleSheet(
-                bg_gen=Rgb().tr(),
-                fg_gen=Rgb().th3(),
-                img_up=P_img().fleche_top(),
-                img_down=P_img().fleche_bottom(),
-            )
+            bg=Rgb().tr(),
+            fg=Rgb().th3(),
+            img_up=P_img().fleche_top(),
+            img_down=P_img().fleche_bottom(),
     )
 
 
