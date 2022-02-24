@@ -26,8 +26,6 @@ class StyleSheet:
             bg_chunk=p_base.BG_CHUNK,
             bg_chunk_hover=p_base.BG_CHUNK_HOVER,
             bg_header=Rgb().th2(),
-            bg_header_hover=Rgb().th2(),
-            bg_mois=Rgb().th2(),
             # Couleurs FG
             fg_gen=None,
             fg=p_base.FG,
@@ -44,8 +42,6 @@ class StyleSheet:
             fg_item_checked=p_base.FG_ITEM_CHECKED,
             fg_item_checked_hover=p_base.FG_ITEM_CHECKED_HOVER,
             fg_header=Rgb().th1(),
-            fg_header_hover=Rgb().bn1(),
-            fg_mois=Rgb().th1(),
 
             # Dimensions WG
             height=p_base.WG_HEIGHT,
@@ -57,10 +53,6 @@ class StyleSheet:
             padding_right=0,
             padding_left=0,
 
-            # Police
-            font=p_base.FONT,
-            font_size=p_base.FONT_SIZE,
-
             # Images
             img_uncheck=p_base.IMG_UNCHECK,
             img_uncheck_hover=p_base.IMG_UNCHECK_HOVER,
@@ -71,8 +63,6 @@ class StyleSheet:
             img_hover=p_base.IMG_UNROLL_HOVER,
             img_up=p_base.IMG_UP,
             img_down=p_base.IMG_DOWN,
-            img_right=p_base.IMG_RIGHT,
-            img_left=p_base.IMG_LEFT,
             # Images RGB
             img_uncheck_rgb=p_base.IMG_UNCHECK_RGB,
             img_uncheck_hover_rgb=p_base.IMG_UNCHECK_HOVER_RGB,
@@ -83,8 +73,6 @@ class StyleSheet:
             img_hover_rgb=p_base.IMG_UNROLL_HOVER_RGB,
             img_up_rgb=p_base.IMG_UP_RGB,
             img_down_rgb=p_base.IMG_DOWN_RGB,
-            img_right_rgb=p_base.IMG_RIGHT_RGB,
-            img_left_rgb=p_base.IMG_LEFT_RGB,
             # Images DIM
             img_width=p_base.img_width,
             img_height=p_base.img_height,
@@ -185,10 +173,6 @@ class StyleSheet:
             border_item_style_checked_hover=p_base.WG_BORDER_STYLE,
             border_item_rgb_checked_hover=p_base.WG_BORDER_RGB,
             border_item_top_checked_hover=p_base.WG_BORDER_WIDTH, border_item_bottom_checked_hover=p_base.WG_BORDER_WIDTH, border_item_right_checked_hover=p_base.WG_BORDER_WIDTH, border_item_left_checked_hover=p_base.WG_BORDER_WIDTH,
-            # Bordures jours
-            border_day_size=P_style().bd(),
-            border_day_style=p_base.WG_BORDER_STYLE,
-            border_day_rgb=p_base.FG_ITEM_HOVER,
     ):
         try:
             # BG / FG
@@ -571,124 +555,6 @@ class StyleSheet:
                 }}
 /**************************
 **      /QComboBox       **
-***************************/
-                
-                
-                
-/**************************
-**       QDateEdit       **
-***************************/
-                QDateEdit {{
-                background-color: rgba{bg};
-                color: rgba{fg};
-                selection-background-color: rgba{bg_selection};
-                selection-color: rgba{fg_selection};
-                }}
-                QDateEdit:hover {{
-                background-color: rgba{bg_hover};
-                color: rgba{fg_hover};
-                }}
-
-                /* IMG CALENDRIER */
-                QDateEdit::drop-down {{
-                image: url({f"{img}{img_rgb}.svg"});
-                width: {img_width}px;
-                height: {img_height}px;
-                margin-top: {img_margin_top}px;
-                margin-bottom: {img_margin_bottom}px;
-                margin-right: {img_margin_right}px;
-                margin-left: {img_margin_left}px;
-                }}
-                QDateEdit::drop-down:hover {{
-                image: url({f"{img_hover}{img_hover_rgb}.svg"});
-                }}
-
-                /* WIDGETS */
-                QCalendarWidget QWidget {{
-                alternate-background-color: rgba{bg_mois};
-                color: rgb{fg_mois};
-                }}
-
-                /* TOOL BUTTON */
-                QCalendarWidget QToolButton {{
-                font-size: {font_size}px;
-                background-color: rgba{bg_header};
-                color: rgba{fg_header};
-                }}
-                QCalendarWidget QToolButton:hover {{
-                background-color: rgba{bg_header_hover};
-                color: rgba{fg_header_hover};
-                }}
-
-                /* FLECHE GAUCHE DROITE */
-                QToolButton#qt_calendar_nextmonth  {{
-                qproperty-icon: url({f"{img_right}{img_right_rgb}.svg"});
-                icon-size: {font_size}px, {font_size}px;
-                }}
-                QToolButton#qt_calendar_prevmonth {{
-                qproperty-icon: url({f"{img_left}{img_left_rgb}.svg"});
-                icon-size: {font_size}px, {font_size}px;
-                }}
-
-                /* MENU DEROULANT */
-                QCalendarWidget QMenu {{
-                width: 150px;
-                font-size: {font_size}px;
-                font-family: {font};
-                background-color: rgba{bg_header};
-                color: rgba{fg_header};
-                }}
-
-                /* SPIN BOX */
-                QCalendarWidget QSpinBox {{
-                width: 60px;
-                font-size: {font_size}px;
-                font-family: {font};
-                background-color: rgba{bg_header};
-                color: rgba{fg_header};
-                selection-background-color: rgba{bg_selection};
-                selection-color: rgba{fg_selection};
-                }}
-
-                /* JOURS */
-                QCalendarWidget QAbstractItemView {{
-                font-size: {font_size}px;
-                font-family: {font};
-                font-weight: 30;
-                outline: 0px;
-                }}
-                QCalendarWidget QAbstractItemView:enabled {{
-                background-color: rgba{bg_item};
-                color: rgba{fg_item};
-                selection-background-color: rgba{fg_item};
-                selection-color: rgba{bg_item};
-                }}
-                QCalendarWidget QWidget:item:hover, QCalendarWidget QWidget:item:selected {{
-                background-color: rgba{bg_item_hover};
-                color: rgba{fg_item_hover};
-                border: {border_day_size}px {border_day_style} rgba{border_day_rgb};
-                }}
-
-                /* BARRE HAUT */
-                QCalendarWidget QWidget#qt_calendar_navigationbar {{
-                background-color: rgba{bg_header};
-                }}
-
-                /* BORDURES */
-                .QDateEdit {{
-                border-top: {border_top}px {border_style} rgba{border_rgb};
-                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
-                border-right: {border_right}px {border_style} rgba{border_rgb};
-                border-left: {border_left}px {border_style} rgba{border_rgb};
-                }}
-                .QDateEdit:hover {{
-                border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
-                border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
-                border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
-                border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
-                }}
-/**************************
-**      /QDateEdit       **
 ***************************/
                 
   
