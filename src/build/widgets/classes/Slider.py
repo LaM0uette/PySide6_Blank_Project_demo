@@ -251,13 +251,13 @@ class rgb(Style):
             width_handle_v=4,
             height_handle_v=10,
 
-            margin_handle_h=(-3, -3, 0, 0),
-            margin_handle_v=(0, 0, -3, -3),
+            margin_handle_h=(-5, -5, 0, 0),
+            margin_handle_v=(0, 0, -5, -5),
 
             border_handle_h=(3, 3, 3, 3),
-            border_handle_h_rgb=rgb_1,
+            border_handle_h_rgb=rgb,
             border_handle_v=(3, 3, 3, 3),
-            border_handle_v_rgb=rgb_1,
+            border_handle_v_rgb=rgb,
 
             radius_groove_h=(3, 3, 3, 3),
             radius_groove_v=(3, 3, 3, 3),
