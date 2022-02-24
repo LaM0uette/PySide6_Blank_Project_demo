@@ -38,19 +38,19 @@ class Style:
             margin_handle_v=(0, 0, 0, 0),
 
             # Bordures
-            border=(0, 0, 0, 0),
+            border=p_base.WG_BORDER_WIDTH,
             border_style=p_base.WG_BORDER_STYLE,
             border_rgb=p_base.WG_BORDER_RGB,
             # Bordures hover
-            border_hover=(0, 0, 0, 0),
+            border_hover=p_base.WG_BORDER_WIDTH,
             border_style_hover=p_base.WG_BORDER_STYLE,
             border_rgb_hover=p_base.WG_BORDER_RGB,
             # Bordures slider h
-            border_handle_h=(0, 0, 0, 0),
+            border_handle_h=p_base.WG_BORDER_WIDTH,
             border_handle_h_style=p_base.WG_BORDER_STYLE,
             border_handle_h_rgb=p_base.WG_BORDER_RGB,
             # Bordures slider v
-            border_handle_v=(0, 0, 0, 0),
+            border_handle_v=p_base.WG_BORDER_WIDTH,
             border_handle_v_style=p_base.WG_BORDER_STYLE,
             border_handle_v_rgb=p_base.WG_BORDER_RGB,
 
