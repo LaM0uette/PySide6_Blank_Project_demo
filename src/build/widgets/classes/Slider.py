@@ -232,9 +232,9 @@ class rgb(Style):
             value_max=255,
 
             bg=Rgb().th1(),
-            bg_handle=Rgb().tr(),
-            bg_handle_hover = Rgb().tr(),
-            bg_handle_pressed = Rgb().tr(),
+            bg_handle=rgb,
+            bg_handle_hover=rgb,
+            bg_handle_pressed=rgb,
 
             bg_groove=rgb_1,
             bg_groove_2=rgb_2,
@@ -255,9 +255,9 @@ class rgb(Style):
             margin_handle_v=(0, 0, -3, -3),
 
             border_handle_h=(3, 3, 3, 3),
-            border_handle_h_rgb=rgb,
+            border_handle_h_rgb=rgb_1,
             border_handle_v=(3, 3, 3, 3),
-            border_handle_v_rgb=rgb,
+            border_handle_v_rgb=rgb_1,
 
             radius_groove_h=(3, 3, 3, 3),
             radius_groove_v=(3, 3, 3, 3),
