@@ -166,6 +166,9 @@ class Style:
             wg.viewport().setCursor(Fct(cur=P_cur().souris_main()).CUR())
 
 
+##################
+##     BASE     ##
+##################
 class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(
@@ -186,6 +189,9 @@ class Base_tr(Style):
         )
 
 
+##################
+##     DEMO     ##
+##################
 class Demo_th(Style):
     def __init__(self, *wgs):
         super().__init__(
