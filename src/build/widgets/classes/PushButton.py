@@ -2,7 +2,7 @@ from PySide6 import QtWidgets
 
 from ....build import *
 from ....build.widgets import p_base
-from ....build.widgets.classes import Classe_pb
+from ....build.widgets.classes import ClassePb
 
 class Style:
     def __init__(
@@ -145,7 +145,7 @@ class Style:
 
             wg.setCursor(Fct(cur=curseur).CUR())
 
-            cls = Classe_pb.Classe_pb(
+            cls = Classe_pb.ClassePb(
                 wg=wg,
                 dim_ico=img_height,
                 DIM_ICO=IMG_HEIGHT,

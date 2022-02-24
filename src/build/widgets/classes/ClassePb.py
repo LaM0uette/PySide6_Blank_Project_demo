@@ -3,7 +3,7 @@ from PySide6 import QtCore
 from ....build import *
 
 
-class Classe_pb:
+class ClassePb:
     def __init__(
             self,
             wg,
