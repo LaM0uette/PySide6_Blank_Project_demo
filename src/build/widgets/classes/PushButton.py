@@ -312,7 +312,7 @@ class txt_inv(Style):
 #################
 class dlg_ok(Style):
     bd_gen = ((StyleBase().bd(),) * 4)
-    bd_rgb = Rgb().vert()
+    rgb_gen = Rgb().bn1()
 
     def __init__(self, *wgs):
         super().__init__(
@@ -321,22 +321,22 @@ class dlg_ok(Style):
             height=None,
 
             bg=Rgb().th1(),
-            fg=Rgb().vert(),
-            bg_hover=Rgb().vert(),
+            fg=self.rgb_gen,
+            bg_hover=self.rgb_gen,
             fg_hover=Rgb().th1(),
-            bg_pressed=Rgb().vert(),
+            bg_pressed=self.rgb_gen,
             border=self.bd_gen,
             border_hover=self.bd_gen,
             border_checked=self.bd_gen,
             border_checked_hover=self.bd_gen,
-            border_rgb=self.bd_rgb,
-            border_hover_rgb=self.bd_rgb,
-            border_checked_rgb=self.bd_rgb,
-            border_checked_hover_rgb=self.bd_rgb,
+            border_rgb=self.rgb_gen,
+            border_hover_rgb=self.rgb_gen,
+            border_checked_rgb=self.rgb_gen,
+            border_checked_hover_rgb=self.rgb_gen,
     )
 class dlg_ok_inv(Style):
     bd_gen = ((StyleBase().bd(),) * 4)
-    bd_rgb = Rgb().vert()
+    rgb_gen = Rgb().bn1()
 
     def __init__(self, *wgs):
         super().__init__(
@@ -344,23 +344,23 @@ class dlg_ok_inv(Style):
             width=Dim().h6(),
             height=None,
 
-            bg=Rgb().vert(),
+            bg=self.rgb_gen,
             fg=Rgb().th1(),
             bg_hover=Rgb().th1(),
-            fg_hover=Rgb().vert(),
+            fg_hover=self.rgb_gen,
             bg_pressed=Rgb().th1(),
             border=self.bd_gen,
             border_hover=self.bd_gen,
             border_checked=self.bd_gen,
             border_checked_hover=self.bd_gen,
-            border_rgb=self.bd_rgb,
-            border_hover_rgb=self.bd_rgb,
-            border_checked_rgb=self.bd_rgb,
-            border_checked_hover_rgb=self.bd_rgb,
+            border_rgb=self.rgb_gen,
+            border_hover_rgb=self.rgb_gen,
+            border_checked_rgb=self.rgb_gen,
+            border_checked_hover_rgb=self.rgb_gen,
     )
 class dlg_nok(Style):
     bd_gen = ((StyleBase().bd(),) * 4)
-    bd_rgb = Rgb().rouge()
+    rgb_gen = Rgb().bn2()
 
     def __init__(self, *wgs):
         super().__init__(
@@ -369,22 +369,22 @@ class dlg_nok(Style):
             height=None,
 
             bg=Rgb().th1(),
-            fg=Rgb().rouge(),
-            bg_hover=Rgb().rouge(),
+            fg=self.rgb_gen,
+            bg_hover=self.rgb_gen,
             fg_hover=Rgb().th1(),
-            bg_pressed=Rgb().rouge(),
+            bg_pressed=self.rgb_gen,
             border=self.bd_gen,
             border_hover=self.bd_gen,
             border_checked=self.bd_gen,
             border_checked_hover=self.bd_gen,
-            border_rgb=self.bd_rgb,
-            border_hover_rgb=self.bd_rgb,
-            border_checked_rgb=self.bd_rgb,
-            border_checked_hover_rgb=self.bd_rgb,
+            border_rgb=self.rgb_gen,
+            border_hover_rgb=self.rgb_gen,
+            border_checked_rgb=self.rgb_gen,
+            border_checked_hover_rgb=self.rgb_gen,
         )
 class dlg_nok_inv(Style):
     bd_gen = ((StyleBase().bd(),) * 4)
-    bd_rgb = Rgb().rouge()
+    rgb_gen = Rgb().bn2()
 
     def __init__(self, *wgs):
         super().__init__(
@@ -392,19 +392,19 @@ class dlg_nok_inv(Style):
             width=Dim().h6(),
             height=None,
 
-            bg=Rgb().rouge(),
+            bg=self.rgb_gen,
             fg=Rgb().th1(),
             bg_hover=Rgb().th1(),
-            fg_hover=Rgb().rouge(),
+            fg_hover=self.rgb_gen,
             bg_pressed=Rgb().th1(),
             border=self.bd_gen,
             border_hover=self.bd_gen,
             border_checked=self.bd_gen,
             border_checked_hover=self.bd_gen,
-            border_rgb=self.bd_rgb,
-            border_hover_rgb=self.bd_rgb,
-            border_checked_rgb=self.bd_rgb,
-            border_checked_hover_rgb=self.bd_rgb,
+            border_rgb=self.rgb_gen,
+            border_hover_rgb=self.rgb_gen,
+            border_checked_rgb=self.rgb_gen,
+            border_checked_hover_rgb=self.rgb_gen,
         )
 class plein:
     def __init__(self, *wgs):
