@@ -104,7 +104,7 @@ class Style:
                 border-right: {border_item_checked_hover[2]}px {border_item_style_checked_hover} rgba{border_item_rgb_checked_hover};
                 border-left: {border_item_checked_hover[3]}px {border_item_style_checked_hover} rgba{border_item_rgb_checked_hover};
                 }}
-        
+
                 /* BORDURES */
                 .QListWidget, .QListView {{
                 border-top: {border[0]}px {border_style} rgba{border_rgb};
