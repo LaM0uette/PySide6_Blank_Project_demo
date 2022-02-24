@@ -85,18 +85,16 @@ class Base_th(Style):
         super().__init__(
             *wgs,
             font_size=font_size,
-            style=StyleSheet(
-            )
     )
 class Base_tr(Style):
     def __init__(self, *wgs, font_size=p_base.FONT_SIZE):
         super().__init__(
             *wgs,
             font_size=font_size,
-            style=StyleSheet(
-                bg_gen=Rgb().tr(),
-                fg_gen=Rgb().th3(),
-            )
+            bg=Rgb().tr(),
+            bg_hover=Rgb().tr(),
+            fg=Rgb().th3(),
+            fg_hover=Rgb().th3(),
     )
 class Titre(Style):
     def __init__(self, *wgs):
@@ -104,10 +102,11 @@ class Titre(Style):
             *wgs,
             font_size=P_font().h1(),
             align_horizontal=Align().h_center(),
-            style=StyleSheet(
-                bg_gen=Rgb().tr(),
-                fg_gen=Rgb().th3(),
-            )
+
+            bg=Rgb().tr(),
+            bg_hover=Rgb().tr(),
+            fg=Rgb().th3(),
+            fg_hover=Rgb().th3(),
     )
 
 
@@ -120,10 +119,13 @@ class DemoCat(Style):
             *wgs,
             font_size=P_font().h2(),
             align_horizontal=Align().h_center(),
-            style=StyleSheet(
-                bg_gen=Rgb().tr(),
-                fg_gen=Rgb().th3(),
-                border_gen_bottom=P_style().bd(),
-                border_gen_rgb=Rgb().bn1(),
-            )
+
+            bg=Rgb().tr(),
+            bg_hover=Rgb().tr(),
+            fg=Rgb().th3(),
+            fg_hover=Rgb().th3(),
+            border=(0, P_style().bd(), 0, 0),
+            border_hover=(0, P_style().bd(), 0, 0),
+            border_rgb=Rgb().bn1(),
+            border_rgb_hover=Rgb().bn1(),
     )
