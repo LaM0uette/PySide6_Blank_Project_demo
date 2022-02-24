@@ -30,6 +30,20 @@ class Style:
             border_hover=p_base.WG_BORDER_WIDTH,
             border_hover_style=p_base.WG_BORDER_STYLE,
             border_hover_rgb=p_base.WG_BORDER_RGB,
+
+            # Rayons
+            radius=p_base.WG_RADIUS,
+
+            # Scroll
+            scroll_bg=p_base.SCROLL_BG,
+            scroll_width=p_base.SCROLL_WIDTH,
+            scroll_height=p_base.SCROLL_HEIGHT,
+            scroll_handle_bg=p_base.SCROLL_HANDLE_BG,
+            scroll_handle_bg_hover=p_base.SCROLL_HANDLE_BG_HOVER,
+            scroll_handle_fg=p_base.SCROLL_HANDLE_FG,
+            scroll_handle_fg_hover=p_base.SCROLL_HANDLE_FG_HOVER,
+            scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
+            scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
     ):
         style = f"""
                 /* WIDGET */
@@ -52,7 +66,42 @@ class Style:
                 border-right: {border_hover[2]}px {border_hover_style} rgba{border_hover_rgb};
                 border-left: {border_hover[3]}px {border_hover_style} rgba{border_hover_rgb};
                 }}
-        """
+                
+                /* RAYONS */
+                .QComboBox, .QFontComboBox {{
+                border-top-right-radius: {radius[0]}px;
+                border-top-left-radius: {radius[1]}px;
+                border-bottom-right-radius: {radius[2]}px;
+                border-bottom-left-radius: {radius[3]}px;
+                }}
+                
+                /* SCROLL */
+                QScrollBar {{
+                background-color: rgba{scroll_bg};
+                width: {scroll_width}px;
+                height: {scroll_height}px;
+                }}
+                QScrollBar::handle:horizontal {{
+                min-width: {scroll_handle_min_width}px;
+                }}
+                QScrollBar::handle:vertical {{
+                min-height: {scroll_handle_min_height}px;
+                }}
+                QScrollBar::handle {{
+                background-color: rgba{scroll_handle_fg};
+                }}
+                QScrollBar::handle:hover {{
+                background-color: rgba{scroll_handle_fg_hover};
+                }}
+                
+                QScrollBar::add-page, QScrollBar::sub-page {{
+                background-color: rgba{scroll_handle_bg};
+                border: none;
+                }}
+                QScrollBar::add-page:hover, QScrollBar::sub-page:hover {{
+                background-color: rgba{scroll_handle_bg_hover};
+                border: none;
+                }}"""
 
         for wg in wgs:
             wg.setStyleSheet(style)
