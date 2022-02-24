@@ -136,8 +136,8 @@ HEADER_V = True
 ##     POLICE     ##
 ####################
 FONT = config.font
-FONT_SIZE = P_font().h4()
-FONT_SIZE_HD = P_font().h3()
+FONT_SIZE = Font().h4()
+FONT_SIZE_HD = Font().h3()
 
 
 ########################

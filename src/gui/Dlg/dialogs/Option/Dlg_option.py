@@ -114,11 +114,11 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
 
 
         ### QText ###
-        TextEdit.tr_taille(self.le_opt_ft_texte_h1, h=P_font().h1())
-        TextEdit.tr_taille(self.le_opt_ft_texte_h2, h=P_font().h2())
-        TextEdit.tr_taille(self.le_opt_ft_texte_h3, h=P_font().h3())
-        TextEdit.tr_taille(self.le_opt_ft_texte_h4, h=P_font().h4())
-        TextEdit.tr_taille(self.le_opt_ft_texte_h5, h=P_font().h5())
+        TextEdit.tr_taille(self.le_opt_ft_texte_h1, h=Font().h1())
+        TextEdit.tr_taille(self.le_opt_ft_texte_h2, h=Font().h2())
+        TextEdit.tr_taille(self.le_opt_ft_texte_h3, h=Font().h3())
+        TextEdit.tr_taille(self.le_opt_ft_texte_h4, h=Font().h4())
+        TextEdit.tr_taille(self.le_opt_ft_texte_h5, h=Font().h5())
         ### /QText ###
 
 
@@ -146,11 +146,11 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         # Configs
         try:
             self.fcb_opt_ft_font.setCurrentText(config.font)
-            self.sb_opt_ft_h1.setValue(P_font().h1())
-            self.sb_opt_ft_h2.setValue(P_font().h2())
-            self.sb_opt_ft_h3.setValue(P_font().h3())
-            self.sb_opt_ft_h4.setValue(P_font().h4())
-            self.sb_opt_ft_h5.setValue(P_font().h5())
+            self.sb_opt_ft_h1.setValue(Font().h1())
+            self.sb_opt_ft_h2.setValue(Font().h2())
+            self.sb_opt_ft_h3.setValue(Font().h3())
+            self.sb_opt_ft_h4.setValue(Font().h4())
+            self.sb_opt_ft_h5.setValue(Font().h5())
 
             self.sb_opt_cfg_opacity.setValue(config.opacity*100)
             self.ck_opt_cfg_autoreload.setChecked(True) if config.auto_reload == True else self.ck_opt_cfg_autoreload.setChecked(False)

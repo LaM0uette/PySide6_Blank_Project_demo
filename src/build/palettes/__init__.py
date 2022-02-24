@@ -3,8 +3,7 @@ from .Cur import Cur
 from .Dim import Dim
 from .P_img import P_img
 from .P_pb_sb import P_pb_sb
-from .P_font import P_font
-from .P_header import P_header
+from .Font import Font
 from .P_rgb import P_rgb
 from .Rgb import Rgb
 from .P_scroll import P_scroll

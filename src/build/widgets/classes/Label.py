@@ -102,7 +102,7 @@ class Titre(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            font_size=P_font().h1(),
+            font_size=Font().h1(),
             align_horizontal=Align().h_center(),
 
             bg=Rgb().tr(),
@@ -119,7 +119,7 @@ class DemoCat(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            font_size=P_font().h2(),
+            font_size=Font().h2(),
             align_horizontal=Align().h_center(),
 
             bg=Rgb().tr(),
