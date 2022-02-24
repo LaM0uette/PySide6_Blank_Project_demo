@@ -204,8 +204,8 @@ class Base_rond(Style):
 
             radius_groove_h=3,
             radius_groove_v=3,
-            radius_handle_h=5,
-            radius_handle_v=5,
+            radius_handle_h=4,
+            radius_handle_v=4,
         )
 class rgb(Style):
     def __init__(self,
