@@ -23,8 +23,6 @@ class StyleSheet:
             bg_item_hover=p_base.BG_ITEM_HOVER,
             bg_item_checked=p_base.BG_ITEM_CHECKED,
             bg_item_checked_hover=p_base.BG_ITEM_CHECKED_HOVER,
-            bg_chunk=p_base.BG_CHUNK,
-            bg_chunk_hover=p_base.BG_CHUNK_HOVER,
             bg_header=Rgb().th2(),
             # Couleurs FG
             fg_gen=None,
@@ -42,12 +40,6 @@ class StyleSheet:
             fg_item_checked=p_base.FG_ITEM_CHECKED,
             fg_item_checked_hover=p_base.FG_ITEM_CHECKED_HOVER,
             fg_header=Rgb().th1(),
-
-            # Positions WG
-            padding_top=0,
-            padding_bottom=0,
-            padding_right=0,
-            padding_left=0,
 
             # Images
             img_uncheck=p_base.IMG_UNCHECK,
