@@ -60,7 +60,7 @@ class Style:
             border_item_checked_hover_rgb=p_base.WG_BORDER_RGB,
 
             # Rayons
-            radius=p_base.WG_RADIUS,
+            radius=(0, 0, 0, 0),
 
             # Scroll
             scroll_bg=p_base.SCROLL_BG,
@@ -240,10 +240,10 @@ class option(Style):
             bg_item_hover=Rgb().tr(),
             bg_item_checked=Rgb().tr(),
             bg_item_checked_hover=Rgb().tr(),
-            bg_header=Rgb().tr(),
+            bg_header=Rgb().th1(),
             fg_item=Rgb().th3(),
             fg_item_checked=Rgb().bn1(),
-            fg_header=Rgb().tr(),
+            fg_header=Rgb().th1(),
             border=self.bd_gen,
             border_hover=self.bd_gen,
             border_rgb=Rgb().th2(),
