@@ -56,10 +56,10 @@ class Style:
 
             # Rayons
             radius=p_base.WG_RADIUS,
-            radius_groove_h=0,
-            radius_groove_v=0,
-            radius_handle_h=0,
-            radius_handle_v=0,
+            radius_groove_h=p_base.WG_RADIUS,
+            radius_groove_v=p_base.WG_RADIUS,
+            radius_handle_h=p_base.WG_RADIUS,
+            radius_handle_v=p_base.WG_RADIUS,
     ):
         style = f"""
                 /* SLIDER  */
@@ -71,7 +71,10 @@ class Style:
                 QSlider::groove:horizontal {{
                 background-color: qlineargradient(spread:pad, x1:{gradient[0]}, y1:{gradient[1]}, x2:{gradient[2]}, y2:{gradient[3]}, stop:0 rgba{bg_groove}, stop:1 rgba{bg_groove_2});
                 height: {height_groove}px;
-                border-radius: {radius_groove_h}px;
+                border-top-right-radius: {radius_groove_h[0]}px;
+                border-top-left-radius: {radius_groove_h[1]}px;
+                border-bottom-right-radius: {radius_groove_h[2]}px;
+                border-bottom-left-radius: {radius_groove_h[3]}px;
                 }}
                 QSlider::groove:horizontal:hover {{
                 background-color: qlineargradient(spread:pad, x1:{gradient[0]}, y1:{gradient[1]}, x2:{gradient[2]}, y2:{gradient[3]}, stop:0 rgba{bg_groove_hover}, stop:1 rgba{bg_groove_hover_2});
@@ -85,7 +88,10 @@ class Style:
                 background-color: rgba{bg_handle};
                 width: {width_handle_h}px;
                 height: {height_handle_h}px;
-                border-radius: {radius_handle_h}px;
+                border-top-right-radius: {radius_handle_h[0]}px;
+                border-top-left-radius: {radius_handle_h[1]}px;
+                border-bottom-right-radius: {radius_handle_h[2]}px;
+                border-bottom-left-radius: {radius_handle_h[3]}px;
                 margin-top: {margin_handle_h[0]}px;
                 margin-bottom: {margin_handle_h[1]}px;
                 margin-right: {margin_handle_h[2]}px;
@@ -106,7 +112,10 @@ class Style:
                 QSlider::groove:vertical {{
                 background-color: qlineargradient(spread:pad, x1:{gradient[0]}, y1:{gradient[1]}, x2:{gradient[2]}, y2:{gradient[3]}, stop:0 rgba{bg_groove}, stop:1 rgba{bg_groove_2});
                 width: {width_groove}px;
-                border-radius: {radius_groove_v}px;
+                border-top-right-radius: {radius_groove_v[0]}px;
+                border-top-left-radius: {radius_groove_v[1]}px;
+                border-bottom-right-radius: {radius_groove_v[2]}px;
+                border-bottom-left-radius: {radius_groove_v[3]}px;
                 }}
                 QSlider::groove:vertical:hover {{
                 background-color: qlineargradient(spread:pad, x1:{gradient[0]}, y1:{gradient[1]}, x2:{gradient[2]}, y2:{gradient[3]}, stop:0 rgba{bg_groove_hover}, stop:1 rgba{bg_groove_hover_2});
@@ -120,7 +129,10 @@ class Style:
                 background-color: rgba{bg_handle};
                 width: {width_handle_v}px;
                 height: {height_handle_v}px;
-                border-radius: {radius_handle_v}px;
+                border-top-right-radius: {radius_handle_v[0]}px;
+                border-top-left-radius: {radius_handle_v[1]}px;
+                border-bottom-right-radius: {radius_handle_v[2]}px;
+                border-bottom-left-radius: {radius_handle_v[3]}px;
                 margin-top: {margin_handle_v[0]}px;
                 margin-bottom: {margin_handle_v[1]}px;
                 margin-right: {margin_handle_v[2]}px;
@@ -194,10 +206,10 @@ class Base_rond(Style):
             width_handle_v=4,
             height_handle_v=6,
 
-            margin_handle_h=(10, -4, 0, 0),
+            margin_handle_h=(4, -4, 0, 0),
             margin_handle_v=(0, 0, -4, -4),
 
-            border_handle_h=(4, 4, 4, 4),
+            border_handle_h=(0, 4, 4, 4),
             border_handle_h_rgb=Rgb().th2(),
             border_handle_v=(4, 4, 4, 4),
             border_handle_v_rgb=Rgb().th2(),
