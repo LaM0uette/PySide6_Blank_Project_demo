@@ -16,6 +16,3 @@ class Rgb(Data):
     def hx_th3(self): return self.TH_HEX(self.TH("th3"))
     def hx_bn1(self): return self.TH_HEX(self.TH("bn1"))
     def hx_bn2(self): return self.TH_HEX(self.TH("bn2"))
-
-    def vert(self): return 78, 194, 58, 255
-    def rouge(self): return 199, 60, 90, 255

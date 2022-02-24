@@ -152,5 +152,5 @@ class Demo_hover(Style):
             border_rgb=Rgb().bn1(),
             border_hover=((StyleBase().bd() * 2,) * 4),
             border_hover_style="dashed",
-            border_hover_rgb=Rgb().vert(),
+            border_hover_rgb=Rgb().bn1(),
     )
