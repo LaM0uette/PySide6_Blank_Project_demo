@@ -5,7 +5,7 @@ from .....build import *
 class DLG_Rgb:
     def __init__(self,
                  width=700,
-                 height=400,
+                 height=500,
                  opacity=1
     ):
         self.width = width

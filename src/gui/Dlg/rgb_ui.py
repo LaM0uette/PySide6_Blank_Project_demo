@@ -24,7 +24,7 @@ class Ui_Rgb(object):
     def setupUi(self, Rgb):
         if not Rgb.objectName():
             Rgb.setObjectName(u"Rgb")
-        Rgb.resize(773, 388)
+        Rgb.resize(783, 348)
         self.glay_dlg = QGridLayout(Rgb)
         self.glay_dlg.setSpacing(0)
         self.glay_dlg.setObjectName(u"glay_dlg")
@@ -74,7 +74,7 @@ class Ui_Rgb(object):
         self.vlay_rgb_body = QVBoxLayout(self.fr_body)
         self.vlay_rgb_body.setSpacing(0)
         self.vlay_rgb_body.setObjectName(u"vlay_rgb_body")
-        self.vlay_rgb_body.setContentsMargins(20, -1, 20, -1)
+        self.vlay_rgb_body.setContentsMargins(20, 0, 20, 0)
         self.glay_rgb = QGridLayout()
         self.glay_rgb.setObjectName(u"glay_rgb")
         self.glay_rgb.setHorizontalSpacing(20)
