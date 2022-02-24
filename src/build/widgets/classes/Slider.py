@@ -201,8 +201,8 @@ class Base_rond(Style):
 
             height_groove=12,
             width_groove=12,
-            width_handle_h=6,
-            height_handle_h=4,
+            width_handle_h=10,
+            height_handle_h=6,
             width_handle_v=4,
             height_handle_v=6,
 
