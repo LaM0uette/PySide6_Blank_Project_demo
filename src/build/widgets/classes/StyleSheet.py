@@ -25,7 +25,6 @@ class StyleSheet:
             bg_item_checked_hover=p_base.BG_ITEM_CHECKED_HOVER,
             bg_chunk=p_base.BG_CHUNK,
             bg_chunk_hover=p_base.BG_CHUNK_HOVER,
-            bg_groove=p_base.BG_GROOVE,
             bg_corner=p_base.BG,
             bg_header=Rgb().th2(),
             bg_header_hover=Rgb().th2(),
@@ -54,8 +53,6 @@ class StyleSheet:
             fg_mois=Rgb().th1(),
             # couleurs autres
             gridline=p_base.GRIDLINE,
-            gradient_rgb_1=None,
-            gradient_rgb_2=None,
 
             # Dimensions WG
             height=p_base.WG_HEIGHT,
