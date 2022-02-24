@@ -55,7 +55,7 @@ class Style:
             border_handle_v_rgb=p_base.WG_BORDER_RGB,
 
             # Rayons
-            radius=(0, 0, 0, 0),
+            radius=p_base.WG_RADIUS,
             radius_groove_h=0,
             radius_groove_v=0,
             radius_handle_h=0,
