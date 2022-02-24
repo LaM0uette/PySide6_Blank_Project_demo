@@ -101,6 +101,7 @@ class Menu_bottom(Style):
             height=Dim().h10(),
 
             bg=Rgb().th2(),
+            radius=(0, 0, p_base.RADIUS, p_base.RADIUS)
     )
 class Menu_bottom_dlg(Style):
     def __init__(self, *wgs):
@@ -109,6 +110,7 @@ class Menu_bottom_dlg(Style):
             height=Dim().h9(),
 
             bg=Rgb().th2(),
+            radius=(0, 0, p_base.RADIUS, p_base.RADIUS)
     )
 
 
