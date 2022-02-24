@@ -196,26 +196,7 @@ class StyleSheet:
             border_day_size=P_style().bd(),
             border_day_style=p_base.WG_BORDER_STYLE,
             border_day_rgb=p_base.FG_ITEM_HOVER,
-
-            # Rayons
-            radius_all=None,
-            radius_top_right=p_base.WG_RADIUS,
-            radius_top_left=p_base.WG_RADIUS,
-            radius_bottom_right=p_base.WG_RADIUS,
-            radius_bottom_left=p_base.WG_RADIUS,
-
-            # Scroll
-            scroll_bg=p_base.SCROLL_BG,
-            scroll_width=p_base.SCROLL_WIDTH,
-            scroll_height=p_base.SCROLL_HEIGHT,
-            scroll_handle_bg=p_base.SCROLL_HANDLE_BG,
-            scroll_handle_bg_hover=p_base.SCROLL_HANDLE_BG_HOVER,
-            scroll_handle_fg=p_base.SCROLL_HANDLE_FG,
-            scroll_handle_fg_hover=p_base.SCROLL_HANDLE_FG_HOVER,
-            scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
-            scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
-    ):  # sourcery no-metrics
-        # Style all generation
+    ):
         try:
             # BG / FG
             if not bg_gen is None:
@@ -463,13 +444,6 @@ class StyleSheet:
                 border_item_rgb_hover = border_item_gen_rgb
                 border_item_rgb_checked = border_item_gen_rgb
                 border_item_rgb_checked_hover = border_item_gen_rgb
-
-            # Radius
-            if not radius_all is None:
-                radius_top_right = radius_all
-                radius_top_left = radius_all
-                radius_bottom_right = radius_all
-                radius_bottom_left = radius_all
         except: pass
 
         self.style = f"""
@@ -1192,60 +1166,6 @@ class StyleSheet:
 /*******************************************
 **      /QTreeWidget  |  /QTreeView       **
 ********************************************/
-
-
-
-
-
-
-
-
-
-/***********************
-**       RAYONS       **
-************************/
-                QWidget {{
-                border-top-right-radius: {radius_top_right}px;
-                border-top-left-radius: {radius_top_left}px;
-                border-bottom-right-radius: {radius_bottom_right}px;
-                border-bottom-left-radius: {radius_bottom_left}px;
-                }}
-/***********************
-**       RAYONS       **
-************************/
-                
-/***************************
-**       QScrollBar       **
-****************************/
-                QScrollBar {{
-                background-color: rgba{scroll_bg};
-                width: {scroll_width}px;
-                height: {scroll_height}px;
-                }}
-                QScrollBar::handle:horizontal {{
-                min-width: {scroll_handle_min_width}px;
-                }}
-                QScrollBar::handle:vertical {{
-                min-height: {scroll_handle_min_height}px;
-                }}
-                QScrollBar::handle {{
-                background-color: rgba{scroll_handle_fg};
-                }}
-                QScrollBar::handle:hover {{
-                background-color: rgba{scroll_handle_fg_hover};
-                }}
-                
-                QScrollBar::add-page, QScrollBar::sub-page {{
-                background-color: rgba{scroll_handle_bg};
-                border: none;
-                }}
-                QScrollBar::add-page:hover, QScrollBar::sub-page:hover {{
-                background-color: rgba{scroll_handle_bg_hover};
-                border: none;
-                }}
-/***************************
-**      /QScrollBar       **
-****************************/
 """
 
         self.fg = fg
