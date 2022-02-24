@@ -471,32 +471,6 @@ class StyleSheet:
 
 
 
-/****************************
-**       QScrollArea       **
-*****************************/
-                .QScrollArea .QWidget {{
-                background-color: rgba{bg};
-                }}
-        
-                /* BORDURES */
-                .QScrollArea {{
-                border-top: {border_top}px {border_style} rgba{border_rgb};
-                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
-                border-right: {border_right}px {border_style} rgba{border_rgb};
-                border-left: {border_left}px {border_style} rgba{border_rgb};
-                }}
-                .QScrollArea:hover {{
-                border-top: {border_hover_top}px {border_hover_style} rgba{border_hover_rgb};
-                border-bottom: {border_bottom_hover}px {border_hover_style} rgba{border_hover_rgb};
-                border-right: {border_right_hover}px {border_hover_style} rgba{border_hover_rgb};
-                border-left: {border_left_hover}px {border_hover_style} rgba{border_hover_rgb};
-                }}
-/****************************
-**      /QScrollArea       **
-*****************************/
-
-
-
 /*************************
 **      /QSpinBox       **
 **************************/
