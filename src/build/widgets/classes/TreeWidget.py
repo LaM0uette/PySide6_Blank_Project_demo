@@ -198,21 +198,29 @@ class Base_th(Style):
             *wgs,
         )
 class Base_tr(Style):
+    bd_item = (0, 0, 0, 2)
+
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
             scroll_h=QtCore.Qt.ScrollBarAlwaysOff,
             scroll_v=QtCore.Qt.ScrollBarAlwaysOff,
 
-            bg_gen=Rgb().tr(),
-            bg_item_gen=Rgb().tr(),
+            bg=Rgb().tr(),
+            bg_item=Rgb().tr(),
+            bg_item_hover=Rgb().tr(),
+            bg_item_checked=Rgb().tr(),
+            bg_item_checked_hover=Rgb().tr(),
             fg_item=Rgb().th3(),
             fg_item_checked=Rgb().bn1(),
-            border_item_gen_left=2,
+            border_item=self.bd_item,
+            border_item_hover=self.bd_item,
+            border_item_checked=self.bd_item,
+            border_item_checked_hover=self.bd_item,
             border_item_rgb=Rgb().th2(),
-            border_item_rgb_hover=Rgb().th3(),
-            border_item_rgb_checked=Rgb().bn1(),
-            border_item_rgb_checked_hover=Rgb().bn1(),
+            border_item_hover_rgb=Rgb().th3(),
+            border_item_checked_rgb=Rgb().bn1(),
+            border_item_checked_hover_rgb=Rgb().bn1(),
     )
 class option(Style):
     def __init__(self, *wgs):
