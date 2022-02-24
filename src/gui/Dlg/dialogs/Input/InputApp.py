@@ -138,7 +138,7 @@ class InputApp(input_ui.Ui_Input, QtWidgets.QDialog):
     def mousePressEvent(self, event):
         cur = QtGui.QCursor()
         verifHeight = cur.pos().y() - self.pos().y()
-        if event.buttons() == QtCore.Qt.LeftButton and verifHeight < Dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized:
+        if event.buttons() == QtCore.Qt.LeftButton and verifHeight < Dim().h9():
             self.dragPos = event.globalPosition().toPoint()
             event.accept()
     def mouseMoveEvent(self, event):
@@ -151,10 +151,9 @@ class InputApp(input_ui.Ui_Input, QtWidgets.QDialog):
         height_verif = cur.pos().y() - self.pos().y()
 
         try:
-            if event.buttons() == QtCore.Qt.LeftButton and height_verif < Dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized:
+            if event.buttons() == QtCore.Qt.LeftButton and height_verif < Dim().h9():
                 act_move(event)
-            if event.buttons() == QtCore.Qt.LeftButton and height_verif < Dim().h9() and self.windowState() == QtCore.Qt.WindowMaximized:
-                self.setWindowState(QtCore.Qt.WindowNoState)
+            if event.buttons() == QtCore.Qt.LeftButton and height_verif < Dim().h9():
                 act_move(event)
         except AttributeError: pass
     ###################
