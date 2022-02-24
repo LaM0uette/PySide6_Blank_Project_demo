@@ -115,6 +115,24 @@ class Titre(Style):
 ##################
 ##     DEMO     ##
 ##################
+class Demo_th(Style):
+    def __init__(self, *wgs, font_size=p_base.FONT_SIZE):
+        super().__init__(
+            *wgs,
+            height=Dim().h9(),
+            font_size=font_size,
+    )
+class Demo_tr(Style):
+    def __init__(self, *wgs, font_size=p_base.FONT_SIZE):
+        super().__init__(
+            *wgs,
+            height=Dim().h9(),
+            font_size=font_size,
+            bg=Rgb().tr(),
+            bg_hover=Rgb().tr(),
+            fg=Rgb().th3(),
+            fg_hover=Rgb().th3(),
+    )
 class DemoCat(Style):
     def __init__(self, *wgs):
         super().__init__(

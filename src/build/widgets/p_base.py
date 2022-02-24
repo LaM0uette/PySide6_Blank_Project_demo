@@ -106,7 +106,7 @@ WG_BORDER_RGB = Rgb().tr()
 ###################
 ##     RAYON     ##
 ###################
-RADIUS = ((3, )*4)
+RADIUS = 3
 WG_RADIUS = ((3, )*4)
 
 
