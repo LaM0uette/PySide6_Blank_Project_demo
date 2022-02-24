@@ -222,6 +222,7 @@ class Base_rond(Style):
 class rgb(Style):
     def __init__(self,
                  *wgs,
+                 rgb=None,
                  rgb_1=None,
                  rgb_2=None,
                  ):
@@ -254,9 +255,9 @@ class rgb(Style):
             margin_handle_v=(0, 0, -3, -3),
 
             border_handle_h=(3, 3, 3, 3),
-            border_handle_h_rgb=Rgb().th2(),
+            border_handle_h_rgb=rgb,
             border_handle_v=(3, 3, 3, 3),
-            border_handle_v_rgb=Rgb().th2(),
+            border_handle_v_rgb=rgb,
 
             radius_groove_h=(3, 3, 3, 3),
             radius_groove_v=(3, 3, 3, 3),
