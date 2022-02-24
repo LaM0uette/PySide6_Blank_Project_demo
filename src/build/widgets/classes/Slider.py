@@ -214,7 +214,7 @@ class Base_rond(Style):
             border_handle_v=(4, 4, 4, 4),
             border_handle_v_rgb=Rgb().th2(),
 
-            radius_groove_h=(3, 3, 3, 3),
+            radius_groove_h=(6, 3, 6, 3),
             radius_groove_v=(3, 3, 3, 3),
             radius_handle_h=(4, 4, 4, 4),
             radius_handle_v=(4, 4, 4, 4),
