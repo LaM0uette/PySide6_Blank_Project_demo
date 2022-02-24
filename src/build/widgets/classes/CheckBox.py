@@ -50,16 +50,16 @@ class Style:
             border_rgb=p_base.WG_BORDER_RGB,
             # Bordures hover
             border_hover=p_base.WG_BORDER_WIDTH,
-            border_style_hover=p_base.WG_BORDER_STYLE,
-            border_rgb_hover=p_base.WG_BORDER_RGB,
+            border_hover_style=p_base.WG_BORDER_STYLE,
+            border_hover_rgb=p_base.WG_BORDER_RGB,
             # Bordures checked
             border_checked=p_base.WG_BORDER_WIDTH,
-            border_style_checked=p_base.WG_BORDER_STYLE,
-            border_rgb_checked=p_base.WG_BORDER_RGB,
+            border_checked_style=p_base.WG_BORDER_STYLE,
+            border_checked_rgb=p_base.WG_BORDER_RGB,
             # Bordures checked hover
             border_checked_hover=p_base.WG_BORDER_WIDTH,
-            border_style_checked_hover=p_base.WG_BORDER_STYLE,
-            border_rgb_checked_hover=p_base.WG_BORDER_RGB,
+            border_checked_hover_style=p_base.WG_BORDER_STYLE,
+            border_checked_hover_rgb=p_base.WG_BORDER_RGB,
 
             # Rayons
             radius=p_base.WG_RADIUS
@@ -113,22 +113,22 @@ class Style:
                 border-left: {border[3]}px {border_style} rgba{border_rgb};
                 }}
                 .QCheckBox:hover {{
-                border-top: {border_hover[0]}px {border_style_hover} rgba{border_rgb_hover};
-                border-bottom: {border_hover[1]}px {border_style_hover} rgba{border_rgb_hover};
-                border-right: {border_hover[2]}px {border_style_hover} rgba{border_rgb_hover};
-                border-left: {border_hover[3]}px {border_style_hover} rgba{border_rgb_hover};
+                border-top: {border_hover[0]}px {border_hover_style} rgba{border_hover_rgb};
+                border-bottom: {border_hover[1]}px {border_hover_style} rgba{border_hover_rgb};
+                border-right: {border_hover[2]}px {border_hover_style} rgba{border_hover_rgb};
+                border-left: {border_hover[3]}px {border_hover_style} rgba{border_hover_rgb};
                 }}
                 .QCheckBox:checked {{
-                border-top: {border_checked[0]}px {border_style_checked} rgba{border_rgb_checked};
-                border-bottom: {border_checked[1]}px {border_style_checked} rgba{border_rgb_checked};
-                border-right: {border_checked[2]}px {border_style_checked} rgba{border_rgb_checked};
-                border-left: {border_checked[3]}px {border_style_checked} rgba{border_rgb_checked};
+                border-top: {border_checked[0]}px {border_checked_style} rgba{border_checked_rgb};
+                border-bottom: {border_checked[1]}px {border_checked_style} rgba{border_checked_rgb};
+                border-right: {border_checked[2]}px {border_checked_style} rgba{border_checked_rgb};
+                border-left: {border_checked[3]}px {border_checked_style} rgba{border_checked_rgb};
                 }}
                 .QCheckBox:checked:hover {{
-                border-top: {border_checked_hover[0]}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
-                border-bottom: {border_checked_hover[1]}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
-                border-right: {border_checked_hover[2]}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
-                border-left: {border_checked_hover[3]}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
+                border-top: {border_checked_hover[0]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
+                border-bottom: {border_checked_hover[1]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
+                border-right: {border_checked_hover[2]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
+                border-left: {border_checked_hover[3]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
                 }}
                 
                 .QCheckBox {{
