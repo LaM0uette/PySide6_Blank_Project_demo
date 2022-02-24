@@ -189,10 +189,10 @@ class Base_rond(Style):
 
             height_groove=12,
             width_groove=12,
-            width_handle_h=6,
+            width_handle_h=10,
             height_handle_h=6,
             width_handle_v=6,
-            height_handle_v=6,
+            height_handle_v=10,
 
             margin_handle_h=(-4, -4, 0, 0),
             margin_handle_v=(0, 0, -4, -4),
