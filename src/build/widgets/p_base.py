@@ -100,7 +100,7 @@ IMG_HEIGHT = WG_HEIGHT * P_style().X_ICO()
 BORDER_WIDTH = 0
 BORDER_STYLE = "solid"
 BORDER_RGB = Rgb().tr()
-WG_BORDER_WIDTH = 0
+WG_BORDER_WIDTH = (0, 0, 0, 0)
 WG_BORDER_STYLE = "solid"
 WG_BORDER_RGB = Rgb().tr()
 
