@@ -13,6 +13,25 @@ class Style:
             align_vertical=Align().v_center(),
             word_wrap=p_base.WORD_WRAP,
             curseur=p_base.CUR,
+
+            # Couleurs BG
+            bg=p_base.BG,
+            bg_hover=p_base.BG_HOVER,
+            # Couleurs FG
+            fg=p_base.FG,
+            fg_hover=p_base.FG_HOVER,
+
+            # Bordures
+            border_all=None,
+            border_style=p_base.WG_BORDER_STYLE,
+            border_rgb=p_base.WG_BORDER_RGB,
+            border_top=p_base.WG_BORDER_WIDTH, border_bottom=p_base.WG_BORDER_WIDTH, border_right=p_base.WG_BORDER_WIDTH, border_left=p_base.WG_BORDER_WIDTH,
+            # Bordures hover
+            border_all_hover=None,
+            border_style_hover=p_base.WG_BORDER_STYLE,
+            border_rgb_hover=p_base.WG_BORDER_RGB,
+            border_top_hover=p_base.WG_BORDER_WIDTH, border_bottom_hover=p_base.WG_BORDER_WIDTH, border_right_hover=p_base.WG_BORDER_WIDTH, border_left_hover=p_base.WG_BORDER_WIDTH,
+
     ):
         style = f"""
                 .QLabel {{
