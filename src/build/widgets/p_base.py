@@ -126,8 +126,8 @@ SCROLL_HANDLE_FG_HOVER = Rgb().bn1()
 SCROLL_HANDLE_MIN_WIDTH = 20
 SCROLL_HANDLE_MIN_HEIGHT = 20
 
-SCROLL_H = QtCore.Qt.ScrollBarAsNeeded
-SCROLL_V = QtCore.Qt.ScrollBarAsNeeded
+SCROLL_H = Scroll().need()
+SCROLL_V = Scroll().need()
 HEADER_H = True
 HEADER_V = True
 

@@ -5,5 +5,5 @@ from .Img import Img
 from .SpinButton import SpinButton
 from .Font import Font
 from .Rgb import Rgb
-from .P_scroll import P_scroll
+from .Scroll import Scroll
 from .P_style import P_style

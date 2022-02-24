@@ -205,8 +205,8 @@ class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            scroll_h=QtCore.Qt.ScrollBarAlwaysOff,
-            scroll_v=QtCore.Qt.ScrollBarAlwaysOff,
+            scroll_h=Scroll().off(),
+            scroll_v=Scroll().off(),
 
             bg=Rgb().tr(),
             bg_item=Rgb().tr(),
@@ -232,8 +232,8 @@ class option(Style):
         super().__init__(
             *wgs,
             width=Dim().h5(),
-            scroll_h=QtCore.Qt.ScrollBarAlwaysOff,
-            scroll_v=QtCore.Qt.ScrollBarAlwaysOff,
+            scroll_h=Scroll().off(),
+            scroll_v=Scroll().off(),
 
             bg=Rgb().tr(),
             bg_item=Rgb().tr(),
