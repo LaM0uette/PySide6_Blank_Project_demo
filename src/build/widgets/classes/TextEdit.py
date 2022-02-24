@@ -1,4 +1,5 @@
-from .StyleSheet import StyleSheet
+from PySide6 import QtGui
+
 from ....build import *
 from ....build.widgets import p_base
 
@@ -12,11 +13,49 @@ class Style:
             font_size=p_base.FONT_SIZE,
             align_horizontal=Align().left(),
             align_vertical=Align().v_center(),
-            style=StyleSheet()
+
+            # Couleurs BG
+            bg=p_base.BG,
+            bg_selection=p_base.BG_SELECTION,
+            # Couleurs FG
+            fg=p_base.FG,
+            fg_selection=p_base.FG_SELECTION,
+            fg_placeholder=p_base.FG_PLACEHOLDER,
+
+            # Bordures
+            border=p_base.WG_BORDER_WIDTH,
+            border_style=p_base.WG_BORDER_STYLE,
+            border_rgb=p_base.WG_BORDER_RGB,
+            # Bordures hover
+            border_hover=p_base.WG_BORDER_WIDTH,
+            border_hover_style=p_base.WG_BORDER_STYLE,
+            border_hover_rgb=p_base.WG_BORDER_RGB,
     ):
+        style = f"""
+                /* WIDGET */
+                .QLineEdit, .QPlainTextEdit, .QTextEdit {{
+                background-color: rgba{bg};
+                selection-background-color: rgba{bg_selection};
+                selection-color: rgba{fg_selection};
+                }}
+        
+                /* BORDURES */
+                .QLineEdit, .QPlainTextEdit, .QTextEdit {{
+                border-top: {border[0]}px {border_style} rgba{border_rgb};
+                border-bottom: {border[1]}px {border_style} rgba{border_rgb};
+                border-right: {border[2]}px {border_style} rgba{border_rgb};
+                border-left: {border[3]}px {border_style} rgba{border_rgb};
+                }}
+                .QLineEdit:hover, .QPlainTextEdit:hover, .QTextEdit:hover {{
+                border-top: {border_hover[0]}px {border_hover_style} rgba{border_hover_rgb};
+                border-bottom: {border_hover[1]}px {border_hover_style} rgba{border_hover_rgb};
+                border-right: {border_hover[2]}px {border_hover_style} rgba{border_hover_rgb};
+                border-left: {border_hover[3]}px {border_hover_style} rgba{border_hover_rgb};
+                }}
+        """
 
         for wg in wgs:
-            wg.setStyleSheet(style.get())
+            wg.setStyleSheet(style)
 
             Fct(wg=wg, w=width, h=height).DIM()
             wg.setFont(Fct(font=font, font_size=font_size).FONT())
@@ -28,24 +67,26 @@ class Style:
             try: wg.viewport().setCursor(Fct(cur=P_cur().IBeam()).CUR())
             except: pass
 
-            wg.setPalette(style.get_txt_palette())
+            palette_txt = QtGui.QPalette()
+            palette_txt.setColor(QtGui.QPalette.Text, QtGui.QColor(*fg))
+            palette_txt.setColor(QtGui.QPalette.PlaceholderText, QtGui.QColor(*fg_placeholder))
+            wg.setPalette(palette_txt)
 
 
+##################
+##     BASE     ##
+##################
 class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            style=StyleSheet(
-            )
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            style=StyleSheet(
-                bg=Rgb().tr(),
-                fg=Rgb().th3()
-            )
+            bg=Rgb().tr(),
+            fg=Rgb().th3()
     )
 
 class tr_taille(Style):
@@ -55,21 +96,19 @@ class tr_taille(Style):
             height=None,
             font_size=h,
 
-            style=StyleSheet(
-                bg=Rgb().tr(),
-                fg=Rgb().th3()
-            )
+            bg=Rgb().tr(),
+            fg=Rgb().th3()
     )
 
 
+##################
+##     DEMO     ##
+##################
 class Demo_th(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
             height=P_dim().h5(),
-
-            style=StyleSheet(
-            )
     )
 class Demo_tr(Style):
     def __init__(self, *wgs):
@@ -77,7 +116,5 @@ class Demo_tr(Style):
             *wgs,
             height=P_dim().h5(),
 
-            style=StyleSheet(
-                bg=Rgb().tr(),
-            )
+            bg=Rgb().tr(),
     )

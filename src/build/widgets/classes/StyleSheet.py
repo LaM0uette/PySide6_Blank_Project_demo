@@ -521,34 +521,6 @@ class StyleSheet:
 **************************/
 
 
-
-/***********************************************************
-**       QLineEdit  |  QPlainTextEdit  |  QTextEdit       **
-************************************************************/
-                .QLineEdit, .QPlainTextEdit, .QTextEdit {{
-                background-color: rgba{bg};
-                selection-background-color: rgba{bg_selection};
-                selection-color: rgba{fg_selection};
-                }}
-        
-                /* BORDURES */
-                .QLineEdit, .QPlainTextEdit, .QTextEdit {{
-                border-top: {border_top}px {border_style} rgba{border_rgb};
-                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
-                border-right: {border_right}px {border_style} rgba{border_rgb};
-                border-left: {border_left}px {border_style} rgba{border_rgb};
-                }}
-                .QLineEdit:hover, .QPlainTextEdit:hover, .QTextEdit:hover {{
-                border-top: {border_hover_top}px {border_hover_style} rgba{border_hover_rgb};
-                border-bottom: {border_bottom_hover}px {border_hover_style} rgba{border_hover_rgb};
-                border-right: {border_right_hover}px {border_hover_style} rgba{border_hover_rgb};
-                border-left: {border_left_hover}px {border_hover_style} rgba{border_hover_rgb};
-                }}
-/*********************************************************
-**      /QLineEdit | /QPlainTextEdit | /QTextEdit       **
-**********************************************************/
-
-
 /*************************
 **       QToolBox       **
 **************************/
@@ -698,11 +670,6 @@ class StyleSheet:
 
 
     def get(self): return self.style
-    def get_txt_palette(self):
-        palette_txt = QtGui.QPalette()
-        palette_txt.setColor(QtGui.QPalette.Text, QtGui.QColor(*self.fg))
-        palette_txt.setColor(QtGui.QPalette.PlaceholderText, QtGui.QColor(*self.fg_placeholder))
-        return palette_txt
     def get_cls_pb(self, wg, wg_type):
         if wg_type is not None:
             if wg_type == "check":
