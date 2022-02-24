@@ -201,6 +201,8 @@ class Base_tr(Style):
             bg_hover=self.bg,
             bg_checked=self.bg,
             bg_checked_hover=self.bg,
+            bg_pressed=self.bg,
+            bg_checked_pressed=self.bg,
             fg=Rgb().th3(),
             fg_checked=Rgb().bn1(),
     )
@@ -413,7 +415,7 @@ class plein:
             fg_gen=Rgb().tr(),
             height=P_dim().h5(),
 
-            border_gen=0,
+            border_gen=((0, )*4),
             border_gen_rgb=Rgb().tr(),
             curseur=P_cur().main()
             ):
@@ -448,7 +450,7 @@ class plein:
         self.rtn(
             bg_gen=Rgb().th1(),
             fg_gen=Rgb().th3(),
-            border_gen=P_style().bd(),
+            border_gen=((P_style().bd(), )*4),
             border_gen_rgb=Rgb().th2(),
         )
     def th2(self):
@@ -524,6 +526,8 @@ class zoom(Style):
             bg_hover=self.bg,
             bg_checked=self.bg,
             bg_checked_hover=self.bg,
+            bg_pressed=self.bg,
+            bg_checked_pressed=self.bg,
             img=P_img().calendrier(),
             img_rgb="",
     )
