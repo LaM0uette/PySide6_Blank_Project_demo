@@ -11,7 +11,58 @@ class Style:
             font_size=p_base.FONT_SIZE,
             curseur=P_cur().souris_main(),
 
+            # Couleurs BG
+            bg=p_base.BG,
+            bg_hover=p_base.BG_HOVER,
+            bg_checked=p_base.BG_CHECKED,
+            bg_checked_hover=p_base.BG_CHECKED_HOVER,
+            # Couleurs FG
+            fg=p_base.FG,
+            fg_hover=p_base.FG_HOVER,
+            fg_checked=p_base.FG_CHECKED,
+            fg_checked_hover=p_base.FG_CHECKED_HOVER,
 
+            # Positions WG
+            spacing=10,
+
+            # Images
+            img_uncheck=p_base.IMG_UNCHECK,
+            img_uncheck_hover=p_base.IMG_UNCHECK_HOVER,
+            img_check=p_base.IMG_CHECK,
+            img_check_hover=p_base.IMG_CHECK_HOVER,
+            # Images RGB
+            img_uncheck_rgb=p_base.IMG_UNCHECK_RGB,
+            img_uncheck_hover_rgb=p_base.IMG_UNCHECK_HOVER_RGB,
+            img_check_rgb=p_base.IMG_CHECK_RGB,
+            img_check_hover_rgb=p_base.IMG_CHECK_HOVER_RGB,
+            # Images DIM
+            img_width=p_base.img_width,
+            img_height=p_base.img_height,
+            # Images positions
+            img_margin_top=0,
+            img_margin_bottom=0,
+            img_margin_right=0,
+            img_margin_left=0,
+
+            # Bordures
+            border=p_base.WG_BORDER_WIDTH,
+            border_style=p_base.WG_BORDER_STYLE,
+            border_rgb=p_base.WG_BORDER_RGB,
+            # Bordures hover
+            border_hover=p_base.WG_BORDER_WIDTH,
+            border_style_hover=p_base.WG_BORDER_STYLE,
+            border_rgb_hover=p_base.WG_BORDER_RGB,
+            # Bordures checked
+            border_checked=p_base.WG_BORDER_WIDTH,
+            border_style_checked=p_base.WG_BORDER_STYLE,
+            border_rgb_checked=p_base.WG_BORDER_RGB,
+            # Bordures checked hover
+            border_checked_hover=p_base.WG_BORDER_WIDTH,
+            border_style_checked_hover=p_base.WG_BORDER_STYLE,
+            border_rgb_checked_hover=p_base.WG_BORDER_RGB,
+
+            # Rayons
+            radius=p_base.WG_RADIUS
     ):
         style = f"""
                 QCheckBox {{
@@ -56,28 +107,28 @@ class Style:
 
                 /* BORDURES */
                 .QCheckBox {{
-                border-top: {border_top}px {border_style} rgba{border_rgb};
-                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
-                border-right: {border_right}px {border_style} rgba{border_rgb};
-                border-left: {border_left}px {border_style} rgba{border_rgb};
+                border-top: {border[0]}px {border_style} rgba{border_rgb};
+                border-bottom: {border[1]}px {border_style} rgba{border_rgb};
+                border-right: {border[2]}px {border_style} rgba{border_rgb};
+                border-left: {border[3]}px {border_style} rgba{border_rgb};
                 }}
                 .QCheckBox:hover {{
-                border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
-                border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
-                border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
-                border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-top: {border_hover[0]}px {border_style_hover} rgba{border_rgb_hover};
+                border-bottom: {border_hover[1]}px {border_style_hover} rgba{border_rgb_hover};
+                border-right: {border_hover[2]}px {border_style_hover} rgba{border_rgb_hover};
+                border-left: {border_hover[3]}px {border_style_hover} rgba{border_rgb_hover};
                 }}
                 .QCheckBox:checked {{
-                border-top: {border_top_checked}px {border_style_checked} rgba{border_rgb_checked};
-                border-bottom: {border_bottom_checked}px {border_style_checked} rgba{border_rgb_checked};
-                border-right: {border_right_checked}px {border_style_checked} rgba{border_rgb_checked};
-                border-left: {border_left_checked}px {border_style_checked} rgba{border_rgb_checked};
+                border-top: {border_checked[0]}px {border_style_checked} rgba{border_rgb_checked};
+                border-bottom: {border_checked[1]}px {border_style_checked} rgba{border_rgb_checked};
+                border-right: {border_checked[2]}px {border_style_checked} rgba{border_rgb_checked};
+                border-left: {border_checked[3]}px {border_style_checked} rgba{border_rgb_checked};
                 }}
                 .QCheckBox:checked:hover {{
-                border-top: {border_top_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
-                border-bottom: {border_bottom_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
-                border-right: {border_right_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
-                border-left: {border_left_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
+                border-top: {border_checked_hover[0]}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
+                border-bottom: {border_checked_hover[1]}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
+                border-right: {border_checked_hover[2]}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
+                border-left: {border_checked_hover[3]}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
                 }}
                 
                 .QCheckBox {{
