@@ -1,5 +1,3 @@
-from PySide6 import QtCore
-
 from ...build import *
 from ...config import *
 
