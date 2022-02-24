@@ -1,8 +1,8 @@
-from .Dlg_msg import Dlg_msg
+from .MsgApp import MsgApp
 from .....build import *
 
 
-class Msg:
+class DLG_Msg:
     def __init__(self,
                  width=600,
                  height=200,
@@ -13,7 +13,7 @@ class Msg:
         self.opacity = opacity
 
     def _rtn(self, titre, msg, ico, tm, txt_pb_ok):
-        msg = Dlg_msg(
+        msg = MsgApp(
             titre=titre,
             msg=msg,
             ico=ico,

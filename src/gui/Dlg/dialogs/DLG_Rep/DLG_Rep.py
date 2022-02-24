@@ -1,8 +1,8 @@
-from .Dlg_rep import Dlg_rep
+from .RepApp import RepApp
 from .....build import *
 
 
-class Rep:
+class DLG_Rep:
     def __init__(self,
                  width=600,
                  height=200,
@@ -13,7 +13,7 @@ class Rep:
         self.opacity = opacity
 
     def _rtn(self, titre, msg, ico, tm, txt_pb_ok, txt_pb_annuler):
-        rep = Dlg_rep(
+        rep = RepApp(
             titre=titre,
             msg=msg,
             ico=ico,

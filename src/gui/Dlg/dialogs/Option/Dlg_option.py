@@ -5,7 +5,7 @@ import time
 from PySide6 import QtCore, QtWidgets, QtGui
 
 from ... import option_ui
-from ..Msg import Msg
+from ..DLG_Msg import DLG_Msg
 from ..DLG_Rgb import DLG_Rgb
 from .....build import *
 from .....config import *
@@ -249,7 +249,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
         QtWidgets.QApplication.restoreOverrideCursor()
 
         if self.reload:
-            Msg().INFO(msg="Modifications appliquées !\nCertains paramètres peuvent nécessiter un redémarrage de l'application.")
+            DLG_Msg().INFO(msg="Modifications appliquées !\nCertains paramètres peuvent nécessiter un redémarrage de l'application.")
             self.reload = False
     ## configuration
     def _maj_cb_theme(self):

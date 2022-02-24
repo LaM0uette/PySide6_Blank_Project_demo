@@ -1,13 +1,12 @@
 from PySide6 import QtCore, QtWidgets, QtGui
 
-from ... import rep_ui
+from ... import msg_ui
 from .....build import *
 from .....In_classe import In_classe
 
 
-class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
+class MsgApp(msg_ui.Ui_Msg, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
-    rep = False
 
     def __init__(self,
                  titre,
@@ -15,19 +14,17 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
                  ico,
                  tm,
                  txt_pb_ok,
-                 txt_pb_annuler,
                  width,
                  height,
                  opacity,
     ):
-        super(Dlg_rep, self).__init__()
+        super(MsgApp, self).__init__()
 
         self.titre = titre
         self.msg = msg
         self.ico = ico
         self.tm = tm
         self.txt_pb_ok = txt_pb_ok
-        self.txt_pb_annuler = txt_pb_annuler
         self.width = width
         self.height = height
         self.opacity = opacity
@@ -50,20 +47,18 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
     def IN_CLASSE(self):
         ### QFrame ###
         Frame.Cadre(self.fr_main).th3()
-        Frame.Menu_bottom_dlg(self.fr_rep_bottom)
+        Frame.Menu_bottom_dlg(self.fr_msg_bottom)
         ### /QFrame ###
 
 
         ### QLabel ###
-        Label.Base_tr(self.lb_rep_text)
+        Label.Base_tr(self.lb_msg_text)
         ### /QLabel ###
 
 
         ### QPushButton ###
-        PushButton.dlg_ok(self.pb_rep_ok)
-        PushButton.dlg_nok_inv(self.pb_rep_annuler)
+        PushButton.dlg_ok(self.pb_msg_ok)
         ### /QPushButton ###
-
 
         # Lancement des fonctions de MEF global
         In_classe(ui=self)
@@ -83,19 +78,17 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
         self.lb_mt_nom.setText(self.titre)
 
         # Message
-        self.lb_rep_text.setText(self.msg)
+        self.lb_msg_text.setText(self.msg)
 
         # pb dlg
-        self.pb_rep_ok.setText(self.txt_pb_ok)
-        self.pb_rep_annuler.setText(self.txt_pb_annuler)
-        self.pb_rep_annuler.setDefault(True)
+        self.pb_msg_ok.setText(self.txt_pb_ok)
+        self.pb_msg_ok.setDefault(True)
     def IN_CONNECTIONS(self):
-        # Menu_top
+        ## Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
 
         # pb dlg
-        self.pb_rep_ok.clicked.connect(lambda: self.OK())
-        self.pb_rep_annuler.clicked.connect(lambda: self.close())
+        self.pb_msg_ok.clicked.connect(lambda: self.close())
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):
@@ -110,17 +103,6 @@ class Dlg_rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
     ############################
     ##    /INITIALISATION     ##
     ############################
-
-
-    #######################
-    ##     FONCTIONS     ##
-    #######################
-    def OK(self):
-        self.rep = True
-        self.close()
-    #######################
-    ##    /FONCTIONS     ##
-    #######################
 
 
     ###################

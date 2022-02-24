@@ -1,5 +1,5 @@
 from .DLG_Input import *
-from .Msg import *
+from .DLG_Msg import *
 from .Option import *
-from .Rep import *
+from .DLG_Rep import *
 from .DLG_Rgb import *
