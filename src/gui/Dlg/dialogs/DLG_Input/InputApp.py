@@ -67,7 +67,7 @@ class InputApp(input_ui.Ui_Input, QtWidgets.QDialog):
 
 
         ### QText ###
-        TextEdit.Demo_th(self.le_input_text)
+        TextEdit.Base_th(self.le_input_text)
         ### /QText ###
 
         # Lancement des fonctions de MEF global
