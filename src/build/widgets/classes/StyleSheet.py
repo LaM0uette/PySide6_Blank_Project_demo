@@ -43,9 +43,6 @@ class StyleSheet:
             fg_item_checked_hover=p_base.FG_ITEM_CHECKED_HOVER,
             fg_header=Rgb().th1(),
 
-            # Dimensions WG
-            height=p_base.WG_HEIGHT,
-
             # Positions WG
             padding_top=0,
             padding_bottom=0,
@@ -73,7 +70,6 @@ class StyleSheet:
             img_up_rgb=p_base.IMG_UP_RGB,
             img_down_rgb=p_base.IMG_DOWN_RGB,
             # Images DIM
-            img_width=p_base.img_width,
             img_height=p_base.img_height,
             IMG_HEIGHT=p_base.IMG_HEIGHT,
             img_up_width=10,
