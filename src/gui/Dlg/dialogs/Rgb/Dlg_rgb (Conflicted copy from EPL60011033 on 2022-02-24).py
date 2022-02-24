@@ -5,7 +5,7 @@ from .....build import *
 from .....In_classe import In_classe
 
 
-class RgbApp(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
+class Dlg_rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
     rep = False
     rgb_rtn = (0, 0, 0)
@@ -21,7 +21,7 @@ class RgbApp(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
                  height,
                  opacity,
     ):
-        super(RgbApp, self).__init__()
+        super(Dlg_rgb, self).__init__()
 
         self.titre = titre
         self.rgb = rgb
@@ -78,7 +78,7 @@ class RgbApp(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
 
 
         ### QText ###
-        TextEdit.rgb_hex(self.le_rgb_hex)
+        TextEdit.Base_tr(self.le_rgb_hex)
         ### /QText ###
 
         # Lancement des fonctions de MEF global

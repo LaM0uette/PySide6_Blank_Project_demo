@@ -148,6 +148,16 @@ class tr_taille(Style):
             bg=Rgb().tr(),
             fg=Rgb().th3()
     )
+class rgb_hex(Style):
+    def __init__(self, *wgs):
+        super().__init__(
+            *wgs,
+            bg=Rgb().tr(),
+            bg_selection=Rgb().th3(),
+            fg=Rgb().th3(),
+            fg_selection=Rgb().th1(),
+            align_horizontal=Align().h_center()
+    )
 
 
 ##################
