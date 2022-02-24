@@ -183,6 +183,9 @@ class Style:
                     wg.leaveEvent = cls.LVE_ZOOM
 
 
+##################
+##     BASE     ##
+##################
 class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(
@@ -201,7 +204,6 @@ class Base_tr(Style):
             fg=Rgb().th3(),
             fg_checked=Rgb().bn1(),
     )
-
 class menu_top:
     def __init__(self, *wgs):
         self.wgs = wgs
@@ -246,6 +248,10 @@ class menu_top:
             img_rgb="bn2"
         )
 
+
+#################
+##     TXT     ##
+#################
 class txt(Style):
     bd_gen = ((P_style().bd(), )*4)
     bd_rgb = Rgb().th3()
@@ -298,6 +304,10 @@ class txt_inv(Style):
             border_checked_hover_rgb=self.bd_rgb,
     )
 
+
+#################
+##     DLG     ##
+#################
 class dlg_ok(Style):
     bd_gen = ((P_style().bd(),) * 4)
     bd_rgb = Rgb().vert()
@@ -394,7 +404,6 @@ class dlg_nok_inv(Style):
             border_checked_rgb=self.bd_rgb,
             border_checked_hover_rgb=self.bd_rgb,
         )
-
 class plein:
     def __init__(self, *wgs):
         self.wgs = wgs
@@ -464,6 +473,9 @@ class plein:
         )
 
 
+##################
+##     DEMO     ##
+##################
 class Demo_bd(Style):
     bd_gen = ((P_style().bd(), )*4)
     bd_rgb = Rgb().bn1()
@@ -486,7 +498,6 @@ class Demo_rd(Style):
             *wgs,
             radius=((10, )*4)
     )
-
 class ck_ico(Style):
     bg = Rgb().tr()
 
