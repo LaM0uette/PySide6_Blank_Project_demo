@@ -465,21 +465,26 @@ class plein:
 
 
 class Demo_bd(Style):
+    bd_gen = ((P_style().bd(), )*4)
+    bd_rgb = Rgb().bn1()
+
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            style=StyleSheet(
-                border_gen_all=P_style().bd(),
-                border_gen_rgb=Rgb().bn1(),
-            )
+            border=self.bd_gen,
+            border_hover=self.bd_gen,
+            border_checked=self.bd_gen,
+            border_checked_hover=self.bd_gen,
+            border_rgb=self.bd_rgb,
+            border_hover_rgb=self.bd_rgb,
+            border_checked_rgb=self.bd_rgb,
+            border_checked_hover_rgb=self.bd_rgb,
     )
 class Demo_rd(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            style=StyleSheet(
-                # radius_all=10,
-            )
+            radius=((10, )*4)
     )
 
 class ck_ico(Style):
