@@ -103,6 +103,4 @@ class Base_tr(Style):
             text_visible=False,
 
             bg=Rgb().tr(),
-            bg_chunk=Rgb().tr(),
-            bg_chunk_hover=Rgb().tr(),
     )
