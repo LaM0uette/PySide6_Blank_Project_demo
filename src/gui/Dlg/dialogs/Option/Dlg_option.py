@@ -6,7 +6,7 @@ from PySide6 import QtCore, QtWidgets, QtGui
 
 from ... import option_ui
 from ..Msg import Msg
-from .._Rgb import _Rgb
+from ..DLG_Rgb import DLG_Rgb
 from .....build import *
 from .....config import *
 from .....In_classe import In_classe
@@ -269,7 +269,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
             "bn1": Rgb().bn1(),
             "bn2": Rgb().bn2(),
         }
-        rep, colors = _Rgb().GET(rgb=dct_colors.get(tm))
+        rep, colors = DLG_Rgb().GET(rgb=dct_colors.get(tm))
         if rep:
             self._val_change_appliquer()
 
