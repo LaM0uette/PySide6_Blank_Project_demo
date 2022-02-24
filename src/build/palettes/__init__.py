@@ -1,6 +1,6 @@
 from .Align import Align
 from .Cur import Cur
-from .P_dim import P_dim
+from .Dim import Dim
 from .P_img import P_img
 from .P_pb_sb import P_pb_sb
 from .P_font import P_font

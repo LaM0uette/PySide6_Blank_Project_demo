@@ -87,7 +87,7 @@ class Menu_top(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            height=P_dim().h9(),
+            height=Dim().h9(),
 
             bg=Rgb().th1(),
     )
@@ -95,7 +95,7 @@ class Menu_bottom(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            height=P_dim().h10(),
+            height=Dim().h10(),
 
             bg=Rgb().th2(),
     )
@@ -103,7 +103,7 @@ class Menu_bottom_dlg(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            height=P_dim().h9(),
+            height=Dim().h9(),
 
             bg=Rgb().th2(),
     )

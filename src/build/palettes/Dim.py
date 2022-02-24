@@ -1,4 +1,4 @@
-from .Data import Data
+from .data.Data import Data
 
 class Dim(Data):
     def __init__(self, grp="dimension"):

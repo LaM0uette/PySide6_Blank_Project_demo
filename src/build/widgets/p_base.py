@@ -55,7 +55,7 @@ GRIDLINE = Rgb().th2()
 WIDTH = None
 HEIGHT = None
 WG_WIDTH = None
-WG_HEIGHT = P_dim().h9()
+WG_HEIGHT = Dim().h9()
 
 
 ####################

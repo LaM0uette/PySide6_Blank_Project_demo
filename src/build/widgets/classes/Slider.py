@@ -26,12 +26,12 @@ class Style:
             gradient=((0, )*4),
 
             # Dimensions WG
-            width_groove=P_dim().h9(),
-            height_groove=P_dim().h9(),
-            width_handle_h=P_dim().h9(),
-            height_handle_h=P_dim().h9(),
-            width_handle_v=P_dim().h9(),
-            height_handle_v=P_dim().h9(),
+            width_groove=Dim().h9(),
+            height_groove=Dim().h9(),
+            width_handle_h=Dim().h9(),
+            height_handle_h=Dim().h9(),
+            width_handle_v=Dim().h9(),
+            height_handle_v=Dim().h9(),
 
             # Positions WG
             margin_handle_h=((0, )*4),
@@ -232,7 +232,7 @@ class rgb(Style):
                  ):
         super().__init__(
             *wgs,
-            height=P_dim().h8(),
+            height=Dim().h8(),
             value_max=255,
 
             bg=Rgb().th1(),

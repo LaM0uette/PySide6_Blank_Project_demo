@@ -157,13 +157,13 @@ class Demo_th(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            height=P_dim().h5(),
+            height=Dim().h5(),
     )
 class Demo_tr(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            height=P_dim().h5(),
+            height=Dim().h5(),
 
             bg=Rgb().tr(),
     )

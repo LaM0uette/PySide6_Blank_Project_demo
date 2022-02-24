@@ -217,7 +217,7 @@ class menu_top:
         Style(
             *self.wgs,
             wg_type="zoom",
-            width=P_dim().h9() * 1.2,
+            width=Dim().h9() * 1.2,
             curseur=Cur().souris_main(),
 
             bg=Rgb().tr(),
@@ -317,7 +317,7 @@ class dlg_ok(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            width=P_dim().h6(),
+            width=Dim().h6(),
             height=None,
 
             bg=Rgb().th1(),
@@ -341,7 +341,7 @@ class dlg_ok_inv(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            width=P_dim().h6(),
+            width=Dim().h6(),
             height=None,
 
             bg=Rgb().vert(),
@@ -365,7 +365,7 @@ class dlg_nok(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            width=P_dim().h6(),
+            width=Dim().h6(),
             height=None,
 
             bg=Rgb().th1(),
@@ -389,7 +389,7 @@ class dlg_nok_inv(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            width=P_dim().h6(),
+            width=Dim().h6(),
             height=None,
 
             bg=Rgb().rouge(),
@@ -413,7 +413,7 @@ class plein:
     def rtn(self,
             bg_gen=Rgb().tr(),
             fg_gen=Rgb().tr(),
-            height=P_dim().h5(),
+            height=Dim().h5(),
 
             border_gen=((0, )*4),
             border_gen_rgb=Rgb().tr(),
