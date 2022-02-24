@@ -266,7 +266,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         geo = self.frameGeometry()
         geo.moveCenter(center)
         self.move(geo.topLeft())
-    # intéraction des boutons
+    # interaction des boutons
     def agrandir(self):
         if self.windowState() == QtCore.Qt.WindowMaximized:
             self.win_state = QtCore.Qt.WindowNoState
