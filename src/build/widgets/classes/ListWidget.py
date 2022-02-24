@@ -171,20 +171,16 @@ class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            style=StyleSheet(
-                fg_item_checked=Rgb().bn1(),
-            )
+            fg_item_checked=Rgb().bn1(),
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            style=StyleSheet(
-                bg_gen=Rgb().tr(),
-                bg_item_gen=Rgb().tr(),
-                fg_item=Rgb().th3(),
-                fg_item_checked=Rgb().bn1(),
-            )
+            bg=Rgb().tr(),
+            bg_item=Rgb().tr(),
+            fg_item=Rgb().th3(),
+            fg_item_checked=Rgb().bn1(),
     )
 
 
