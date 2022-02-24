@@ -156,57 +156,6 @@ class StyleSheet:
 /****************************
 **      /QPushButton       **
 *****************************/
-
-
-
-/*************************
-**      /QSpinBox       **
-**************************/
-                QSpinBox, QDoubleSpinBox {{
-                background-color: rgba{bg};
-                color: rgba{fg};
-                selection-background-color: rgba{bg_selection};
-                selection-color: rgba{fg_selection}
-                }}
-        
-                QSpinBox::up-button, QDoubleSpinBox::up-button  {{
-                subcontrol-position: top right;
-                top: {img_up_top}px;
-                bottom: {img_up_bottom}px;
-                right: {img_up_right}px;
-                left: {img_up_left}px;
-                image: url({f"{img_up}{img_up_rgb}.svg"});
-                width: {img_up_width}px;
-                height: {img_up_height}px;
-                }}
-        
-                QSpinBox::down-button, QDoubleSpinBox::down-button  {{
-                subcontrol-position: bottom right;
-                top: {img_down_top}px;
-                bottom: {img_down_bottom}px;
-                right: {img_down_right}px;
-                left: {img_down_left}px;
-                image: url({f"{img_down}{img_down_rgb}.svg"});
-                width: {img_down_width}px;
-                height: {img_down_height}px;
-                }}
-        
-                /* BORDURES */
-                .QSpinBox, .QDoubleSpinBox {{
-                border-top: {border_top}px {border_style} rgba{border_rgb};
-                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
-                border-right: {border_right}px {border_style} rgba{border_rgb};
-                border-left: {border_left}px {border_style} rgba{border_rgb};
-                }}
-                .QSpinBox:hover, .QDoubleSpinBox:hover {{
-                border-top: {border_hover_top}px {border_hover_style} rgba{border_hover_rgb};
-                border-bottom: {border_bottom_hover}px {border_hover_style} rgba{border_hover_rgb};
-                border-right: {border_right_hover}px {border_hover_style} rgba{border_hover_rgb};
-                border-left: {border_left_hover}px {border_hover_style} rgba{border_hover_rgb};
-                }}
-/*************************
-**       QSpinBox       **
-**************************/
 """
         self.img_height = img_height
         self.IMG_HEIGHT = IMG_HEIGHT
