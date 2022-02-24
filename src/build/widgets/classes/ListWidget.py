@@ -201,6 +201,7 @@ class Demo_tr(Style):
 
             bg=Rgb().tr(),
             bg_item=Rgb().tr(),
+            bg_item_hover=Rgb().tr(),
             fg_item=Rgb().th3(),
             fg_item_checked=Rgb().bn1(),
             border_item=self.bd_item,
