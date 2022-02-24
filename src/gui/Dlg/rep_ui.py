@@ -22,7 +22,7 @@ from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
 class Ui_Rep(object):
     def setupUi(self, Rep):
         if not Rep.objectName():
-            Rep.setObjectName(u"DLG_Rep")
+            Rep.setObjectName(u"Rep")
         Rep.resize(773, 261)
         self.glay_dlg = QGridLayout(Rep)
         self.glay_dlg.setSpacing(0)

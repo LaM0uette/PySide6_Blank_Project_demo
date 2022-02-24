@@ -12,7 +12,7 @@ from .....config import *
 from .....In_classe import In_classe
 
 
-class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
+class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
 
     def __init__(self,
@@ -27,7 +27,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
                  height,
                  opacity,
     ):
-        super(Dlg_option, self).__init__()
+        super(OptionApp, self).__init__()
 
         self.fen = fen
         self.titre = titre

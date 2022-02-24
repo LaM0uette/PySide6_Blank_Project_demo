@@ -1,8 +1,8 @@
-from .Dlg_option import Dlg_option
+from .OptionApp import OptionApp
 from .....build import *
 
 
-class Option:
+class DLG_Option:
     def __init__(self,
                  fen,
                  width=800,
@@ -15,7 +15,7 @@ class Option:
         self.opacity = opacity
 
     def _rtn(self, titre, msg, ico, tm, txt_pb_appliquer, txt_pb_ok):
-        opt = Dlg_option(
+        opt = OptionApp(
             fen=self.fen,
             titre=titre,
             msg=msg,
