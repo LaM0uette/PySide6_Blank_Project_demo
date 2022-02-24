@@ -26,7 +26,7 @@ class DLG_Input:
         )
         _input.exec()
 
-        return msg.rep, msg.input
+        return _input.rep, _input.input
 
 
     def TXT(self, titre="INPUT", msg="", ico=Img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
