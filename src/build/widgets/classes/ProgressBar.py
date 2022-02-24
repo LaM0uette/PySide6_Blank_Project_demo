@@ -10,6 +10,8 @@ class Style:
             font=p_base.FONT,
             font_size=p_base.FONT_SIZE,
             text_visible=p_base.TEXT_VISIBLE,
+            align_horizontal=Align().h_center(),
+            align_vertical=Align().v_center(),
             curseur=P_cur().souris(),
 
             # Couleurs BG
@@ -84,7 +86,7 @@ class Style:
             Fct(wg=wg, w=width, h=height).DIM()
             wg.setFont(Fct(font=font, font_size=font_size).FONT())
 
-            wg.setAlignment(P_align().c().c())
+            wg.setAlignment(align_horizontal | align_vertical)
             wg.setTextVisible(text_visible)
 
             wg.setCursor(Fct(cur=curseur).CUR())

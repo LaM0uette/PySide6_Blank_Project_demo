@@ -1,4 +1,3 @@
-from .P_align import P_align
 from .Align import Align
 from .P_cur import P_cur
 from .P_dim import P_dim
