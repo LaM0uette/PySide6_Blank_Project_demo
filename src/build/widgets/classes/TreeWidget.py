@@ -39,10 +39,9 @@ class Style:
             border_hover_style=p_base.WG_BORDER_STYLE,
             border_hover_rgb=p_base.WG_BORDER_RGB,
             # Bordures HD
-            border_hd_all=None,
+            border_hd=p_base.WG_BORDER_WIDTH,
             border_hd_style=p_base.WG_BORDER_STYLE,
             border_hd_rgb=p_base.WG_BORDER_RGB,
-            border_hd_top=p_base.WG_BORDER_WIDTH, border_hd_bottom=p_base.WG_BORDER_WIDTH, border_hd_right=p_base.WG_BORDER_WIDTH, border_hd_left=p_base.WG_BORDER_WIDTH,
             # Bordures item
             border_item_all=None,
             border_item_style=p_base.WG_BORDER_STYLE,
@@ -66,10 +65,10 @@ class Style:
                 QHeaderView::section {{
                 background-color: rgba{bg_header};
                 color: rgba{fg_header};
-                border-top: {border_hd_top}px {border_hd_style} rgba{border_hd_rgb};
-                border-bottom: {border_hd_bottom}px {border_hd_style} rgba{border_hd_rgb};
-                border-right: {border_hd_right}px {border_hd_style} rgba{border_hd_rgb};
-                border-left: {border_hd_left}px {border_hd_style} rgba{border_hd_rgb};
+                border-top: {border_hd[0]}px {border_hd_style} rgba{border_hd_rgb};
+                border-bottom: {border_hd[1]}px {border_hd_style} rgba{border_hd_rgb};
+                border-right: {border_hd[2]}px {border_hd_style} rgba{border_hd_rgb};
+                border-left: {border_hd[3]}px {border_hd_style} rgba{border_hd_rgb};
                 }}
         
                 QTreeWidget, QTreeView {{
