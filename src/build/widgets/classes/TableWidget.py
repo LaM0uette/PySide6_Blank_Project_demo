@@ -312,14 +312,12 @@ class Demo_tr(Style):
             header_h=False,
             header_v=False,
 
-            style=StyleSheet(
-                bg_corner=Rgb().th1(),
-                bg=Rgb().tr(),
-                bg_item=Rgb().tr(),
-                bg_item_hover=Rgb().tr(),
-                bg_item_checked=Rgb().th3(),
-                bg_item_checked_hover=Rgb().th3(),
-                fg_item=Rgb().th3(),
-                fg_item_checked=Rgb().th1(),
-            )
+            bg_corner=Rgb().th1(),
+            bg=Rgb().tr(),
+            bg_item=Rgb().tr(),
+            bg_item_hover=Rgb().tr(),
+            bg_item_checked=Rgb().th3(),
+            bg_item_checked_hover=Rgb().th3(),
+            fg_item=Rgb().th3(),
+            fg_item_checked=Rgb().th1(),
     )
