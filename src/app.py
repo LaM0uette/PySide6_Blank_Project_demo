@@ -342,9 +342,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     ###################
 
 
-ICO_MAIN = f"{Img().main()}th3.svg"
+ICO_MAIN = f"{Img().main()}th2.svg"
 app = QtWidgets.QApplication(sys.argv)
-splash = QtWidgets.QSplashScreen(QtGui.QPixmap(ICO_MAIN).scaledToHeight(500), QtCore.Qt.WindowStaysOnTopHint)
+splash = QtWidgets.QSplashScreen(QtGui.QPixmap(ICO_MAIN).scaledToHeight(400), QtCore.Qt.WindowStaysOnTopHint)
 splash.show()
 app.processEvents()
 
