@@ -223,6 +223,9 @@ class Base_tr(Style):
             border_item_checked_hover_rgb=Rgb().bn1(),
     )
 class option(Style):
+    bd_gen = (0, 0, 2, 0)
+    bd_item = (0, 0, 0, 2)
+
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
@@ -230,19 +233,25 @@ class option(Style):
             scroll_h=QtCore.Qt.ScrollBarAlwaysOff,
             scroll_v=QtCore.Qt.ScrollBarAlwaysOff,
 
-            style=StyleSheet(
-                bg_gen=Rgb().tr(),
-                bg_item_gen=Rgb().tr(),
-                bg_header=Rgb().tr(),
-                fg_item=Rgb().th3(),
-                fg_item_checked=Rgb().bn1(),
-                fg_header=Rgb().tr(),
-                border_gen_right=2,
-                border_gen_rgb=Rgb().th2(),
-                border_item_gen_left=2,
-                border_item_rgb=Rgb().th2(),
-                border_item_rgb_hover=Rgb().th3(),
-                border_item_rgb_checked=Rgb().bn1(),
-                border_item_rgb_checked_hover=Rgb().bn1(),
-            )
+            bg=Rgb().tr(),
+            bg_item=Rgb().tr(),
+            bg_item_hover=Rgb().tr(),
+            bg_item_checked=Rgb().tr(),
+            bg_item_checked_hover=Rgb().tr(),
+            bg_header=Rgb().tr(),
+            fg_item=Rgb().th3(),
+            fg_item_checked=Rgb().bn1(),
+            fg_header=Rgb().tr(),
+            border=self.bd_gen,
+            border_hover=self.bd_gen,
+            border_rgb=Rgb().th2(),
+            border_hover_rgb=Rgb().th2(),
+            border_item=self.bd_item,
+            border_item_hover=self.bd_item,
+            border_item_checked=self.bd_item,
+            border_item_checked_hover=self.bd_item,
+            border_item_rgb=Rgb().th2(),
+            border_item_hover_rgb=Rgb().th3(),
+            border_item_checked_rgb=Rgb().bn1(),
+            border_item_checked_hover_rgb=Rgb().bn1(),
     )
