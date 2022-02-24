@@ -109,8 +109,8 @@ class StyleSheet:
             border_top_checked=p_base.WG_BORDER_WIDTH, border_bottom_checked=p_base.WG_BORDER_WIDTH, border_right_checked=p_base.WG_BORDER_WIDTH, border_left_checked=p_base.WG_BORDER_WIDTH,
             # Bordures checked hover
             border_all_checked_hover=None,
-            border_style_checked_hover=p_base.WG_BORDER_STYLE,
-            border_rgb_checked_hover=p_base.WG_BORDER_RGB,
+            border_checked_hover_style=p_base.WG_BORDER_STYLE,
+            border_checked_hover_rgb=p_base.WG_BORDER_RGB,
             border_top_checked_hover=p_base.WG_BORDER_WIDTH, border_bottom_checked_hover=p_base.WG_BORDER_WIDTH, border_right_checked_hover=p_base.WG_BORDER_WIDTH, border_left_checked_hover=p_base.WG_BORDER_WIDTH,
 
             # Bordures HD GEN
@@ -264,12 +264,12 @@ class StyleSheet:
                 border_style = border_gen_style
                 border_hover_style = border_gen_style
                 border_checked_style = border_gen_style
-                border_style_checked_hover = border_gen_style
+                border_checked_hover_style = border_gen_style
             if not border_gen_rgb is None:
                 border_rgb = border_gen_rgb
                 border_hover_rgb = border_gen_rgb
                 border_checked_rgb = border_gen_rgb
-                border_rgb_checked_hover = border_gen_rgb
+                border_checked_hover_rgb = border_gen_rgb
 
             # Bordure hd GEN
             if not border_hd_gen_all is None:
@@ -507,10 +507,10 @@ class StyleSheet:
                 border-left: {border_left_checked}px {border_checked_style} rgba{border_checked_rgb};
                 }}
                 .QPushButton:checked:hover {{
-                border-top: {border_top_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
-                border-bottom: {border_bottom_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
-                border-right: {border_right_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
-                border-left: {border_left_checked_hover}px {border_style_checked_hover} rgba{border_rgb_checked_hover};
+                border-top: {border_top_checked_hover}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
+                border-bottom: {border_bottom_checked_hover}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
+                border-right: {border_right_checked_hover}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
+                border-left: {border_left_checked_hover}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
                 }}
 /****************************
 **      /QPushButton       **
