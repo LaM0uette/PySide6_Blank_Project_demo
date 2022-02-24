@@ -11,10 +11,15 @@ class Style:
             font=p_base.FONT,
             font_size=p_base.FONT_SIZE,
             curseur=P_cur().souris_main(),
-            style=StyleSheet()
+
+
     ):
+        style = """
+        
+        """
+
         for wg in wgs:
-            wg.setStyleSheet(style.get())
+            wg.setStyleSheet(style)
 
             Fct(wg=wg, w=width, h=height).DIM()
             wg.setFont(Fct(font=font, font_size=font_size).FONT())
