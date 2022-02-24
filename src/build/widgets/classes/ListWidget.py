@@ -54,6 +54,17 @@ class Style:
 
             # Rayons
             radius=p_base.WG_RADIUS,
+
+            # Scroll
+            scroll_bg=p_base.SCROLL_BG,
+            scroll_width=p_base.SCROLL_WIDTH,
+            scroll_height=p_base.SCROLL_HEIGHT,
+            scroll_handle_bg=p_base.SCROLL_HANDLE_BG,
+            scroll_handle_bg_hover=p_base.SCROLL_HANDLE_BG_HOVER,
+            scroll_handle_fg=p_base.SCROLL_HANDLE_FG,
+            scroll_handle_fg_hover=p_base.SCROLL_HANDLE_FG_HOVER,
+            scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
+            scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
     ):
         style = f"""
                 .QListWidget, .QListView {{
@@ -114,6 +125,33 @@ class Style:
                 border-top-left-radius: {radius[1]}px;
                 border-bottom-right-radius: {radius[2]}px;
                 border-bottom-left-radius: {radius[3]}px;
+                }}
+                
+                QScrollBar {{
+                background-color: rgba{scroll_bg};
+                width: {scroll_width}px;
+                height: {scroll_height}px;
+                }}
+                QScrollBar::handle:horizontal {{
+                min-width: {scroll_handle_min_width}px;
+                }}
+                QScrollBar::handle:vertical {{
+                min-height: {scroll_handle_min_height}px;
+                }}
+                QScrollBar::handle {{
+                background-color: rgba{scroll_handle_fg};
+                }}
+                QScrollBar::handle:hover {{
+                background-color: rgba{scroll_handle_fg_hover};
+                }}
+                
+                QScrollBar::add-page, QScrollBar::sub-page {{
+                background-color: rgba{scroll_handle_bg};
+                border: none;
+                }}
+                QScrollBar::add-page:hover, QScrollBar::sub-page:hover {{
+                background-color: rgba{scroll_handle_bg_hover};
+                border: none;
                 }}"""
 
         for wg in wgs:
