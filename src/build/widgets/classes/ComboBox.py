@@ -1,4 +1,3 @@
-from .StyleSheet import StyleSheet
 from ....build import *
 from ....build.widgets import p_base
 
@@ -37,13 +36,27 @@ class Style:
             img_height=p_base.img_height,
 
             # Bordures
+            border=p_base.WG_BORDER_WIDTH,
             border_style=p_base.WG_BORDER_STYLE,
             border_rgb=p_base.WG_BORDER_RGB,
-            border_top=p_base.WG_BORDER_WIDTH, border_bottom=p_base.WG_BORDER_WIDTH, border_right=p_base.WG_BORDER_WIDTH, border_left=p_base.WG_BORDER_WIDTH,
             # Bordures hover
+            border_hover=p_base.WG_BORDER_WIDTH,
             border_style_hover=p_base.WG_BORDER_STYLE,
             border_rgb_hover=p_base.WG_BORDER_RGB,
-            border_top_hover=p_base.WG_BORDER_WIDTH, border_bottom_hover=p_base.WG_BORDER_WIDTH, border_right_hover=p_base.WG_BORDER_WIDTH, border_left_hover=p_base.WG_BORDER_WIDTH,
+
+            # Rayons
+            radius=p_base.WG_RADIUS,
+
+            # Scroll
+            scroll_bg=p_base.SCROLL_BG,
+            scroll_width=p_base.SCROLL_WIDTH,
+            scroll_height=p_base.SCROLL_HEIGHT,
+            scroll_handle_bg=p_base.SCROLL_HANDLE_BG,
+            scroll_handle_bg_hover=p_base.SCROLL_HANDLE_BG_HOVER,
+            scroll_handle_fg=p_base.SCROLL_HANDLE_FG,
+            scroll_handle_fg_hover=p_base.SCROLL_HANDLE_FG_HOVER,
+            scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
+            scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
 
     ):
         style = f"""
@@ -88,18 +101,51 @@ class Style:
 
                 /* BORDURES */
                 .QComboBox, .QFontComboBox {{
-                border-top: {border_top}px {border_style} rgba{border_rgb};
-                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
-                border-right: {border_right}px {border_style} rgba{border_rgb};
-                border-left: {border_left}px {border_style} rgba{border_rgb};
+                border-top: {border[0]}px {border_style} rgba{border_rgb};
+                border-bottom: {border[1]}px {border_style} rgba{border_rgb};
+                border-right: {border[2]}px {border_style} rgba{border_rgb};
+                border-left: {border[3]}px {border_style} rgba{border_rgb};
                 }}
                 .QComboBox:hover, .QFontComboBox:hover {{
-                border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
-                border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
-                border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
-                border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-top: {border_hover[0]}px {border_style_hover} rgba{border_rgb_hover};
+                border-bottom: {border_hover[1]}px {border_style_hover} rgba{border_rgb_hover};
+                border-right: {border_hover[2]}px {border_style_hover} rgba{border_rgb_hover};
+                border-left: {border_hover[3]}px {border_style_hover} rgba{border_rgb_hover};
                 }}
-        """
+                
+                .QComboBox, .QFontComboBox {{
+                border-top-right-radius: {radius[0]}px;
+                border-top-left-radius: {radius[1]}px;
+                border-bottom-right-radius: {radius[2]}px;
+                border-bottom-left-radius: {radius[3]}px;
+                }}
+                
+                QScrollBar {{
+                background-color: rgba{scroll_bg};
+                width: {scroll_width}px;
+                height: {scroll_height}px;
+                }}
+                QScrollBar::handle:horizontal {{
+                min-width: {scroll_handle_min_width}px;
+                }}
+                QScrollBar::handle:vertical {{
+                min-height: {scroll_handle_min_height}px;
+                }}
+                QScrollBar::handle {{
+                background-color: rgba{scroll_handle_fg};
+                }}
+                QScrollBar::handle:hover {{
+                background-color: rgba{scroll_handle_fg_hover};
+                }}
+                
+                QScrollBar::add-page, QScrollBar::sub-page {{
+                background-color: rgba{scroll_handle_bg};
+                border: none;
+                }}
+                QScrollBar::add-page:hover, QScrollBar::sub-page:hover {{
+                background-color: rgba{scroll_handle_bg_hover};
+                border: none;
+                }}"""
 
         for wg in wgs:
             wg.setStyleSheet(style)
@@ -121,18 +167,15 @@ class Base_th(Style):
         super().__init__(
             *wgs,
             curseur=P_cur().main(),
-            style=StyleSheet(
-            )
     )
 class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
             edit=True,
-            style=StyleSheet(
-                bg_gen=Rgb().tr(),
-                fg=Rgb().th3(),
-                bg_selection=Rgb().th3(),
-                fg_selection=Rgb().th1(),
-            )
+            bg=Rgb().tr(),
+            bg_hover=Rgb().tr(),
+            fg=Rgb().th3(),
+            bg_selection=Rgb().th3(),
+            fg_selection=Rgb().th1(),
     )
