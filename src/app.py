@@ -235,7 +235,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     #####################
     ##     ACTIONS     ##
     #####################
-
     #####################
     ##    /ACTIONS     ##
     #####################
@@ -244,7 +243,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     #######################
     ##     FONCTIONS     ##
     #######################
-
     #######################
     ##    /FONCTIONS     ##
     #######################
