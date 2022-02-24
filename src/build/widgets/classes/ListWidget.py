@@ -1,3 +1,5 @@
+from PySide6 import QtCore
+
 from ....build import *
 from ....build.widgets import p_base
 
@@ -167,6 +169,8 @@ class Style:
 
             wg.setCursor(Fct(cur=curseur).CUR())
             wg.viewport().setCursor(Fct(cur=Cur().souris_main()).CUR())
+
+            wg.setFocusPolicy(QtCore.Qt.NoFocus)
 
 
 ##################

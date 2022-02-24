@@ -188,6 +188,8 @@ class Style:
 
             wg.setCursor(Fct(cur=curseur).CUR())
 
+            wg.setFocusPolicy(QtCore.Qt.NoFocus)
+
 
 ##################
 ##     BASE     ##
