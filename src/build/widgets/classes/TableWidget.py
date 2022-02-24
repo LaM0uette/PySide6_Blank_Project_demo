@@ -48,40 +48,40 @@ class Style:
             border_rgb=p_base.WG_BORDER_RGB,
             # Bordures hover
             border_hover=p_base.WG_BORDER_WIDTH,
-            border_style_hover=p_base.WG_BORDER_STYLE,
-            border_rgb_hover=p_base.WG_BORDER_RGB,
+            border_hover_style=p_base.WG_BORDER_STYLE,
+            border_hover_rgb=p_base.WG_BORDER_RGB,
             # Bordures HD
             border_hd=p_base.WG_BORDER_WIDTH,
             border_hd_style=p_base.WG_BORDER_STYLE,
             border_hd_rgb=p_base.WG_BORDER_RGB,
             # Bordures HD hover
             border_hd_hover=p_base.WG_BORDER_WIDTH,
-            border_hd_style_hover=p_base.WG_BORDER_STYLE,
-            border_hd_rgb_hover=p_base.WG_BORDER_RGB,
+            border_hd_hover_style=p_base.WG_BORDER_STYLE,
+            border_hd_hover_rgb=p_base.WG_BORDER_RGB,
             # Bordures HD checked
             border_hd_checked=p_base.WG_BORDER_WIDTH,
-            border_hd_style_checked=p_base.WG_BORDER_STYLE,
-            border_hd_rgb_checked=p_base.WG_BORDER_RGB,
+            border_hd_checked_style=p_base.WG_BORDER_STYLE,
+            border_hd_checked_rgb=p_base.WG_BORDER_RGB,
             # Bordures HD checked hover
             border_hd_checked_hover=p_base.WG_BORDER_WIDTH,
-            border_hd_style_checked_hover=p_base.WG_BORDER_STYLE,
-            border_hd_rgb_checked_hover=p_base.WG_BORDER_RGB,
+            border_hd_checked_hover_style=p_base.WG_BORDER_STYLE,
+            border_hd_checked_hover_rgb=p_base.WG_BORDER_RGB,
             # Bordures item
             border_item=p_base.WG_BORDER_WIDTH,
             border_item_style=p_base.WG_BORDER_STYLE,
             border_item_rgb=p_base.WG_BORDER_RGB,
             # Bordures item hover
             border_item_hover=p_base.WG_BORDER_WIDTH,
-            border_item_style_hover=p_base.WG_BORDER_STYLE,
-            border_item_rgb_hover=p_base.WG_BORDER_RGB,
+            border_item_hover_style=p_base.WG_BORDER_STYLE,
+            border_item_hover_rgb=p_base.WG_BORDER_RGB,
             # Bordures item checked
             border_item_checked=p_base.WG_BORDER_WIDTH,
-            border_item_style_checked=p_base.WG_BORDER_STYLE,
-            border_item_rgb_checked=p_base.WG_BORDER_RGB,
+            border_item_checked_style=p_base.WG_BORDER_STYLE,
+            border_item_checked_rgb=p_base.WG_BORDER_RGB,
             # Bordures item checked hover
             border_item_checked_hover=p_base.WG_BORDER_WIDTH,
-            border_item_style_checked_hover=p_base.WG_BORDER_STYLE,
-            border_item_rgb_checked_hover=p_base.WG_BORDER_RGB,
+            border_item_checked_hover_style=p_base.WG_BORDER_STYLE,
+            border_item_checked_hover_rgb=p_base.WG_BORDER_RGB,
 
             # Rayons
             radius=p_base.WG_RADIUS,
@@ -122,26 +122,26 @@ class Style:
                 QTableWidget::item:hover, QTableView::item:hover {{
                 background-color: rgba{bg_item_hover};
                 color: rgba{fg_item_hover};
-                border-top: {border_item_hover[0]}px {border_item_style_hover} rgba{border_item_rgb_hover};
-                border-bottom: {border_item_hover[1]}px {border_item_style_hover} rgba{border_item_rgb_hover};
-                border-right: {border_item_hover[2]}px {border_item_style_hover} rgba{border_item_rgb_hover};
-                border-left: {border_item_hover[3]}px {border_item_style_hover} rgba{border_item_rgb_hover};
+                border-top: {border_item_hover[0]}px {border_item_hover_style} rgba{border_item_hover_rgb};
+                border-bottom: {border_item_hover[1]}px {border_item_hover_style} rgba{border_item_hover_rgb};
+                border-right: {border_item_hover[2]}px {border_item_hover_style} rgba{border_item_hover_rgb};
+                border-left: {border_item_hover[3]}px {border_item_hover_style} rgba{border_item_hover_rgb};
                 }}
                 QTableWidget::item:selected, QTableView::item:selected {{
                 background-color: rgba{bg_item_checked};
                 color: rgba{fg_item_checked};
-                border-top: {border_item_checked[0]}px {border_item_style_checked} rgba{border_item_rgb_checked};
-                border-bottom: {border_item_checked[1]}px {border_item_style_checked} rgba{border_item_rgb_checked};
-                border-right: {border_item_checked[2]}px {border_item_style_checked} rgba{border_item_rgb_checked};
-                border-left: {border_item_checked[3]}px {border_item_style_checked} rgba{border_item_rgb_checked};
+                border-top: {border_item_checked[0]}px {border_item_checked_style} rgba{border_item_checked_rgb};
+                border-bottom: {border_item_checked[1]}px {border_item_checked_style} rgba{border_item_checked_rgb};
+                border-right: {border_item_checked[2]}px {border_item_checked_style} rgba{border_item_checked_rgb};
+                border-left: {border_item_checked[3]}px {border_item_checked_style} rgba{border_item_checked_rgb};
                 }}
                 QTableWidget::item:selected:hover, QTableView::item:selected:hover {{
                 background-color: rgba{bg_item_checked_hover};
                 color: rgba{fg_item_checked_hover};
-                border-top: {border_item_checked_hover[0]}px {border_item_style_checked_hover} rgba{border_item_rgb_checked_hover};
-                border-bottom: {border_item_checked_hover[1]}px {border_item_style_checked_hover} rgba{border_item_rgb_checked_hover};
-                border-right: {border_item_checked_hover[2]}px {border_item_style_checked_hover} rgba{border_item_rgb_checked_hover};
-                border-left: {border_item_checked_hover[3]}px {border_item_style_checked_hover} rgba{border_item_rgb_checked_hover};
+                border-top: {border_item_checked_hover[0]}px {border_item_checked_hover_style} rgba{border_item_checked_hover_rgb};
+                border-bottom: {border_item_checked_hover[1]}px {border_item_checked_hover_style} rgba{border_item_checked_hover_rgb};
+                border-right: {border_item_checked_hover[2]}px {border_item_checked_hover_style} rgba{border_item_checked_hover_rgb};
+                border-left: {border_item_checked_hover[3]}px {border_item_checked_hover_style} rgba{border_item_checked_hover_rgb};
                 }}
         
                 /* BORDURES */
@@ -152,10 +152,10 @@ class Style:
                 border-left: {border[3]}px {border_style} rgba{border_rgb};
                 }}
                 .QTableWidget:hover, .QTableView:hover {{
-                border-top: {border_hover[0]}px {border_style_hover} rgba{border_rgb_hover};
-                border-bottom: {border_hover[1]}px {border_style_hover} rgba{border_rgb_hover};
-                border-right: {border_hover[2]}px {border_style_hover} rgba{border_rgb_hover};
-                border-left: {border_hover[3]}px {border_style_hover} rgba{border_rgb_hover};
+                border-top: {border_hover[0]}px {border_hover_style} rgba{border_hover_rgb};
+                border-bottom: {border_hover[1]}px {border_hover_style} rgba{border_hover_rgb};
+                border-right: {border_hover[2]}px {border_hover_style} rgba{border_hover_rgb};
+                border-left: {border_hover[3]}px {border_hover_style} rgba{border_hover_rgb};
                 }}
                 
                 QHeaderView::section {{
@@ -169,26 +169,26 @@ class Style:
                 QHeaderView::section:hover {{
                 background-color: rgba{bg_header_hover};
                 color: rgba{fg_header_hover};
-                border-top: {border_hd_hover[0]}px {border_hd_style_hover} rgba{border_hd_rgb_hover};
-                border-bottom: {border_hd_hover[1]}px {border_hd_style_hover} rgba{border_hd_rgb_hover};
-                border-right: {border_hd_hover[2]}px {border_hd_style_hover} rgba{border_hd_rgb_hover};
-                border-left: {border_hd_hover[3]}px {border_hd_style_hover} rgba{border_hd_rgb_hover};
+                border-top: {border_hd_hover[0]}px {border_hd_hover_style} rgba{border_hd_hover_rgb};
+                border-bottom: {border_hd_hover[1]}px {border_hd_hover_style} rgba{border_hd_hover_rgb};
+                border-right: {border_hd_hover[2]}px {border_hd_hover_style} rgba{border_hd_hover_rgb};
+                border-left: {border_hd_hover[3]}px {border_hd_hover_style} rgba{border_hd_hover_rgb};
                 }}
                 QHeaderView::section:checked {{
                 background-color: rgba{bg_header_checked};
                 color: rgba{fg_header_checked};
-                border-top: {border_hd_checked[0]}px {border_hd_style_checked} rgba{border_hd_rgb_checked};
-                border-bottom: {border_hd_checked[1]}px {border_hd_style_checked} rgba{border_hd_rgb_checked};
-                border-right: {border_hd_checked[2]}px {border_hd_style_checked} rgba{border_hd_rgb_checked};
-                border-left: {border_hd_checked[3]}px {border_hd_style_checked} rgba{border_hd_rgb_checked};
+                border-top: {border_hd_checked[0]}px {border_hd_checked_style} rgba{border_hd_checked_rgb};
+                border-bottom: {border_hd_checked[1]}px {border_hd_checked_style} rgba{border_hd_checked_rgb};
+                border-right: {border_hd_checked[2]}px {border_hd_checked_style} rgba{border_hd_checked_rgb};
+                border-left: {border_hd_checked[3]}px {border_hd_checked_style} rgba{border_hd_checked_rgb};
                 }}
                 QHeaderView::section:checked:hover {{
                 background-color: rgba{bg_header_checked_hover};
                 color: rgba{fg_header_checked_hover};
-                border-top: {border_hd_checked_hover[0]}px {border_hd_style_checked_hover} rgba{border_hd_rgb_checked_hover};
-                border-bottom: {border_hd_checked_hover[1]}px {border_hd_style_checked_hover} rgba{border_hd_rgb_checked_hover};
-                border-right: {border_hd_checked_hover[2]}px {border_hd_style_checked_hover} rgba{border_hd_rgb_checked_hover};
-                border-left: {border_hd_checked_hover[3]}px {border_hd_style_checked_hover} rgba{border_hd_rgb_checked_hover};
+                border-top: {border_hd_checked_hover[0]}px {border_hd_checked_hover_style} rgba{border_hd_checked_hover_rgb};
+                border-bottom: {border_hd_checked_hover[1]}px {border_hd_checked_hover_style} rgba{border_hd_checked_hover_rgb};
+                border-right: {border_hd_checked_hover[2]}px {border_hd_checked_hover_style} rgba{border_hd_checked_hover_rgb};
+                border-left: {border_hd_checked_hover[3]}px {border_hd_checked_hover_style} rgba{border_hd_checked_hover_rgb};
                 }}
                 
                 .QTableWidget, .QTableView {{
@@ -297,18 +297,18 @@ class Demo_th(Style):
             border_hd_checked=self.bd_gen,
             border_hd_checked_hover=self.bd_gen,
             border_hd_rgb=self.rgb_hd,
-            border_hd_rgb_hover=self.rgb_hd,
-            border_hd_rgb_checked=self.rgb_hd,
-            border_hd_rgb_checked_hover=self.rgb_hd,
+            border_hd_hover_rgb=self.rgb_hd,
+            border_hd_checked_rgb=self.rgb_hd,
+            border_hd_checked_hover_rgb=self.rgb_hd,
 
             border_item=self.bd_gen,
             border_item_hover=self.bd_gen,
             border_item_checked=self.bd_gen,
             border_item_checked_hover=self.bd_gen,
             border_item_rgb=self.rgb_item,
-            border_item_rgb_hover=self.rgb_item,
-            border_item_rgb_checked=self.rgb_item,
-            border_item_rgb_checked_hover=self.rgb_item,
+            border_item_hover_rgb=self.rgb_item,
+            border_item_checked_rgb=self.rgb_item,
+            border_item_checked_hover_rgb=self.rgb_item,
     )
 class Demo_tr(Style):
     def __init__(self, *wgs):
