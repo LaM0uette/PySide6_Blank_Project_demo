@@ -68,9 +68,10 @@ class Style:
 ##     BASE     ##
 ##################
 class Base_th(Style):
-    def __init__(self, *wgs):
+    def __init__(self, *wgs, rgb=None):
         super().__init__(
-            *wgs
+            *wgs,
+            bg=rgb
         )
 class Base_tr(Style):
     def __init__(self, *wgs):

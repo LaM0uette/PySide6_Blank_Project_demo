@@ -68,7 +68,9 @@ class Ui_Rep(object):
 
         self.vlay_fr_main.addWidget(self.fr_menu_top)
 
-        self.vlay_rep_body = QVBoxLayout()
+        self.fr_body = QFrame(self.fr_main)
+        self.fr_body.setObjectName(u"fr_body")
+        self.vlay_rep_body = QVBoxLayout(self.fr_body)
         self.vlay_rep_body.setSpacing(0)
         self.vlay_rep_body.setObjectName(u"vlay_rep_body")
         self.vlay_rep_body.setContentsMargins(20, -1, 20, -1)
@@ -76,7 +78,7 @@ class Ui_Rep(object):
 
         self.vlay_rep_body.addItem(self.verticalSpacer_2)
 
-        self.lb_rep_text = QLabel(self.fr_main)
+        self.lb_rep_text = QLabel(self.fr_body)
         self.lb_rep_text.setObjectName(u"lb_rep_text")
 
         self.vlay_rep_body.addWidget(self.lb_rep_text)
@@ -86,7 +88,7 @@ class Ui_Rep(object):
         self.vlay_rep_body.addItem(self.verticalSpacer)
 
 
-        self.vlay_fr_main.addLayout(self.vlay_rep_body)
+        self.vlay_fr_main.addWidget(self.fr_body)
 
         self.fr_rep_bottom = QFrame(self.fr_main)
         self.fr_rep_bottom.setObjectName(u"fr_rep_bottom")
