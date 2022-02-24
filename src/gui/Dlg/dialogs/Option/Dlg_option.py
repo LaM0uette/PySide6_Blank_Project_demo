@@ -138,7 +138,7 @@ class Dlg_option(option_ui.Ui_Option, QtWidgets.QDialog):
 
         # Menu_top
         dim = Dim().h9()
-        Fct(wg=self.lb_mt_ico, w=dim.get("w"), h=dim.get("h")).DIM()
+        Fct(wg=self.lb_mt_ico, w=dim, h=dim).DIM()
         self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}{self.tm}.svg"))
         self.lb_mt_ico.setScaledContents(True)
         self.lb_mt_nom.setText(self.titre)

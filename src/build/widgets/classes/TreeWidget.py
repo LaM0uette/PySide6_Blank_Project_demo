@@ -231,7 +231,7 @@ class option(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            width=P_dim().h5(),
+            width=Dim().h5(),
             scroll_h=QtCore.Qt.ScrollBarAlwaysOff,
             scroll_v=QtCore.Qt.ScrollBarAlwaysOff,
 
