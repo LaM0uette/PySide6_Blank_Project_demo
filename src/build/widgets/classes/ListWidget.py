@@ -3,15 +3,23 @@ from ....build import *
 from ....build.widgets import p_base
 
 class Style:
-    def __init__(self,
-                 *wgs,
-                 width=p_base.WG_WIDTH,
-                 height=p_base.WG_HEIGHT,
-                 font=p_base.FONT,
-                 font_size=p_base.FONT_SIZE,
-                 scroll_h=p_base.SCROLL_H,
-                 scroll_v=p_base.SCROLL_V,
-                 curseur=P_cur().croix(),
+    def __init__(
+            self,
+            *wgs,
+            width=p_base.WG_WIDTH,
+            height=p_base.WG_HEIGHT,
+            font=p_base.FONT,
+            font_size=p_base.FONT_SIZE,
+            scroll_h=p_base.SCROLL_H,
+            scroll_v=p_base.SCROLL_V,
+            curseur=P_cur().croix(),
+
+            # Rayons
+            radius=p_base.WG_RADIUS,
+            radius_groove_h=p_base.WG_RADIUS,
+            radius_groove_v=p_base.WG_RADIUS,
+            radius_handle_h=p_base.WG_RADIUS,
+            radius_handle_v=p_base.WG_RADIUS,
 
 
     ):
@@ -67,6 +75,13 @@ class Style:
                 border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
                 border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
                 border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
+                }}
+                
+                .QListWidget, .QListView {{
+                border-top-right-radius: {radius[0]}px;
+                border-top-left-radius: {radius[1]}px;
+                border-bottom-right-radius: {radius[2]}px;
+                border-bottom-left-radius: {radius[3]}px;
                 }}"""
 
         for wg in wgs:
