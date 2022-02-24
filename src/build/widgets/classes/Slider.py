@@ -206,7 +206,7 @@ class Base_rond(Style):
             width_handle_v=4,
             height_handle_v=6,
 
-            margin_handle_h=(0, -12, 0, 0),
+            margin_handle_h=(0, -4, 0, 0),
             margin_handle_v=(0, 0, -4, -4),
 
             border_handle_h=(0, 14, 2, 2),
