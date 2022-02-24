@@ -47,7 +47,6 @@ class StyleSheet:
             height=p_base.WG_HEIGHT,
 
             # Positions WG
-            spacing=10,
             padding_top=0,
             padding_bottom=0,
             padding_right=0,
@@ -83,10 +82,6 @@ class StyleSheet:
             img_down_height=10,
 
             # Images positions
-            img_margin_top=0,
-            img_margin_bottom=0,
-            img_margin_right=0,
-            img_margin_left=0,
             img_up_top=2,
             img_up_bottom=0,
             img_up_right=2,
