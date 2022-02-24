@@ -196,6 +196,7 @@ class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
+            bg_header=Rgb().th3()
         )
 class Base_tr(Style):
     bd_item = (0, 0, 0, 2)
