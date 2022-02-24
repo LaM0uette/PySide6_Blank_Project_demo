@@ -419,67 +419,6 @@ class StyleSheet:
         except: pass
 
         self.style = f"""
-/**************************
-**       QComboBox       **
-***************************/
-                QComboBox, QFontComboBox {{
-                background-color: rgba{bg};
-                color: rgba{fg};
-                selection-background-color: rgba{bg_selection};
-                selection-color: rgba{fg_selection};
-                }}
-                QComboBox:hover, QFontComboBox:hover {{
-                background-color: rgba{bg_hover};
-                color: rgba{fg_hover};
-                }}
-
-                /* BOUTON DE DEROULEMENT */
-                QComboBox::drop-down, QFontComboBox::drop-down {{
-                width: {height}px;
-                border: none;
-                }}
-
-                /* IMAGE DU BOUTON DE DEROULEMENT */
-                QComboBox::down-arrow, QFontComboBox::down-arrow {{
-                image: url({f"{img}{img_rgb}.svg"});
-                width: {img_width}px;
-                height: {img_height}px;
-                }}
-                QComboBox::down-arrow:hover, QFontComboBox::down-arrow:hover {{
-                image: url({f"{img_hover}{img_hover_rgb}.svg"});
-                width: {img_width}px;
-                height: {img_height}px;
-                }}
-
-                /* ELEMENTS DEROULEMENT */
-                QComboBox QAbstractItemView::item, QFontComboBox QAbstractItemView::item {{
-                background-color: rgba{bg_item};
-                color: rgba{fg_item};
-                }}
-                QComboBox QAbstractItemView::item:hover, QFontComboBox QAbstractItemView::item:hover {{
-                background-color: rgba{bg_item_hover};
-                color: rgba{fg_item_hover};
-                }}
-
-                /* BORDURES */
-                .QComboBox, .QFontComboBox {{
-                border-top: {border_top}px {border_style} rgba{border_rgb};
-                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
-                border-right: {border_right}px {border_style} rgba{border_rgb};
-                border-left: {border_left}px {border_style} rgba{border_rgb};
-                }}
-                .QComboBox:hover, .QFontComboBox:hover {{
-                border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
-                border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
-                border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
-                border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
-                }}
-/**************************
-**      /QComboBox       **
-***************************/
-                
-  
-                
 /***********************
 **       QLabel       **
 ************************/
