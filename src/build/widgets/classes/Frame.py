@@ -71,12 +71,14 @@ class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
+            radius=p_base.RADIUS
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-                bg=Rgb().tr()
+            bg=Rgb().tr(),
+            radius=p_base.RADIUS
     )
 
 
@@ -90,6 +92,7 @@ class Menu_top(Style):
             height=Dim().h9(),
 
             bg=Rgb().th1(),
+            radius=(p_base.RADIUS, p_base.RADIUS, 0, 0)
     )
 class Menu_bottom(Style):
     def __init__(self, *wgs):
@@ -124,6 +127,7 @@ class Cadre:
             border_rgb=rgb,
             border_hover=((StyleBase().bd(),) * 4),
             border_hover_rgb=rgb,
+            radius=p_base.RADIUS
         )
 
     def th1(self): self.rtn(rgb=Rgb().th1())

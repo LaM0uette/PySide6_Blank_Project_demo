@@ -15,6 +15,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         super(main, self).__init__()
 
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
 
         self.sizegrip = QtWidgets.QSizeGrip(self)
         self.win_state = QtCore.Qt.WindowNoState
@@ -163,6 +164,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur=Cur().souris()).CUR())
+        # self.setStyleSheet(f"background-color: transparent;")
 
         # Icone de l'app
         dim = Dim().h9()

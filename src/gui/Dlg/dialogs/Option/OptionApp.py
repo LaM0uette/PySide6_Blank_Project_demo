@@ -41,6 +41,7 @@ class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):
         self.opacity = opacity
 
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.setWindowModality(QtCore.Qt.ApplicationModal)
         self.setupUi(self)
 
