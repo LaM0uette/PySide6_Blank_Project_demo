@@ -182,7 +182,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         if config.resize:
             self.sizegrip.setCursor(Fct(cur=Cur().fleche_nwse()).CUR())
             self.sizegrip.setStyleSheet("QSizeGrip {"
-                                        f"image: url({P_img().resize()}th3.svg);"
+                                        f"image: url({Img().resize()}th3.svg);"
                                         f"width: {Dim().h10()}px;"
                                         f"height: {Dim().h10()}px;"
                                         "}")
@@ -342,7 +342,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     ###################
 
 
-ICO_MAIN = f"{P_img().main()}th3.svg"
+ICO_MAIN = f"{Img().main()}th3.svg"
 app = QtWidgets.QApplication(sys.argv)
 splash = QtWidgets.QSplashScreen(QtGui.QPixmap(ICO_MAIN).scaledToHeight(500), QtCore.Qt.WindowStaysOnTopHint)
 splash.show()

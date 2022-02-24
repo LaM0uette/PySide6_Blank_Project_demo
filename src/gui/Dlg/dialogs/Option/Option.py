@@ -30,7 +30,7 @@ class Option:
         opt.exec()
 
 
-    def MAIN(self, titre="OPTION", msg="", ico=P_img().info(), tm="th3", txt_pb_appliquer="Appliquer", txt_pb_ok="Ok"):
+    def MAIN(self, titre="OPTION", msg="", ico=Img().info(), tm="th3", txt_pb_appliquer="Appliquer", txt_pb_ok="Ok"):
         return self._rtn(
             titre=titre,
             msg=msg,

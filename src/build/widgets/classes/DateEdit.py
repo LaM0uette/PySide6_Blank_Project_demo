@@ -218,8 +218,8 @@ class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            img=P_img().calendrier(),
-            img_hover=P_img().calendrier(),
+            img=Img().calendrier(),
+            img_hover=Img().calendrier(),
             img_rgb="",
             img_hover_rgb="",
             img_margin_top=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
@@ -234,8 +234,8 @@ class Base_tr(Style):
             fg=Rgb().th3(),
             bg_selection=Rgb().th3(),
             fg_selection=Rgb().th1(),
-            img=P_img().calendrier(),
-            img_hover=P_img().calendrier(),
+            img=Img().calendrier(),
+            img_hover=Img().calendrier(),
             img_rgb="",
             img_hover_rgb="",
             img_margin_top=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,

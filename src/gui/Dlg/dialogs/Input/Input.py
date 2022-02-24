@@ -29,7 +29,7 @@ class Input:
         return msg.rep, msg.input
 
 
-    def TXT(self, titre="INPUT", msg="", ico=P_img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
+    def TXT(self, titre="INPUT", msg="", ico=Img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
         return self._rtn(
             titre=titre,
             msg=msg,

@@ -157,8 +157,8 @@ class Up_down_th(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            img_up=P_img().fleche_top(),
-            img_down=P_img().fleche_bottom(),
+            img_up=Img().fleche_top(),
+            img_down=Img().fleche_bottom(),
 
     )
 class Up_down_tr(Style):
@@ -169,8 +169,8 @@ class Up_down_tr(Style):
 
             bg=Rgb().tr(),
             fg=Rgb().th3(),
-            img_up=P_img().fleche_top(),
-            img_down=P_img().fleche_bottom(),
+            img_up=Img().fleche_top(),
+            img_down=Img().fleche_bottom(),
     )
 
 class rgb_bd_th3(Style):

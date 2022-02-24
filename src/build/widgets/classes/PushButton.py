@@ -211,9 +211,9 @@ class menu_top:
         self.wgs = wgs
 
     def rtn(self,
-            img=P_img().main(),
+            img=Img().main(),
             img_rgb="th2",
-    ):
+            ):
         Style(
             *self.wgs,
             wg_type="zoom",
@@ -232,21 +232,21 @@ class menu_top:
 
     def option(self):
         self.rtn(
-            img=P_img().option()
+            img=Img().option()
         )
     def reduire(self):
         self.rtn(
-            img=P_img().reduire(),
+            img=Img().reduire(),
             img_rgb="bn1"
         )
     def agrandir(self):
         self.rtn(
-            img=P_img().agrandir(),
+            img=Img().agrandir(),
             img_rgb="th3"
         )
     def quitter(self):
         self.rtn(
-            img=P_img().quitter(),
+            img=Img().quitter(),
             img_rgb="bn2"
         )
 
@@ -528,6 +528,6 @@ class zoom(Style):
             bg_checked_hover=self.bg,
             bg_pressed=self.bg,
             bg_checked_pressed=self.bg,
-            img=P_img().calendrier(),
+            img=Img().calendrier(),
             img_rgb="",
     )

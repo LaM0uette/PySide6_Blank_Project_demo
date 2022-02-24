@@ -62,12 +62,12 @@ WG_HEIGHT = Dim().h9()
 ##     IMAGES     ##
 ####################
 # Check
-IMG_UNCHECK = P_img().check()
-IMG_UNCHECK_HOVER = P_img().check()
-IMG_CHECK = P_img().valider()
-IMG_CHECK_HOVER = P_img().valider()
-IMG_UNROLL = P_img().fleche_bottom()
-IMG_UNROLL_HOVER = P_img().fleche_bottom()
+IMG_UNCHECK = Img().check()
+IMG_UNCHECK_HOVER = Img().check()
+IMG_CHECK = Img().valider()
+IMG_CHECK_HOVER = Img().valider()
+IMG_UNROLL = Img().fleche_bottom()
+IMG_UNROLL_HOVER = Img().fleche_bottom()
 # Check RGB
 IMG_UNCHECK_RGB = "th2"
 IMG_UNCHECK_HOVER_RGB = "bn1"
@@ -77,10 +77,10 @@ IMG_UNROLL_RGB = "th2"
 IMG_UNROLL_HOVER_RGB = "bn1"
 
 # Fleches
-IMG_UP = P_img().plus()
-IMG_DOWN = P_img().moins()
-IMG_RIGHT = P_img().fleche_droite()
-IMG_LEFT = P_img().fleche_gauche()
+IMG_UP = Img().plus()
+IMG_DOWN = Img().moins()
+IMG_RIGHT = Img().fleche_droite()
+IMG_LEFT = Img().fleche_gauche()
 # Fleches RGB
 IMG_UP_RGB = "th2"
 IMG_DOWN_RGB = "th2"
@@ -145,7 +145,7 @@ FONT_SIZE_HD = Font().h3()
 ########################
 EDIT = False
 NO_FOCUS = False
-SB_BUTTONS_TYPE = P_pb_sb().plus_minus()
+SB_BUTTONS_TYPE = SpinButton().plus_minus()
 TEXT_VISIBLE = True
 VAL_MIN = 0
 VAL_MAX = 100

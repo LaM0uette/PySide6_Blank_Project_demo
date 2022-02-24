@@ -1,6 +1,6 @@
 from ...config import vrb
 
-class P_img:
+class Img:
 
     def SVG(self, val, img): return f"{vrb.DO_IMG}{val}/tm/{img}"
 

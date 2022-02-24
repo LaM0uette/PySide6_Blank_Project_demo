@@ -26,7 +26,7 @@ class Msg:
         msg.exec()
 
 
-    def INFO(self, titre="INFO", msg="", ico=P_img().info(), tm="th3", txt_pb_ok="Ok"):
+    def INFO(self, titre="INFO", msg="", ico=Img().info(), tm="th3", txt_pb_ok="Ok"):
         self._rtn(
             titre=titre,
             msg=msg,
@@ -34,7 +34,7 @@ class Msg:
             tm=tm,
             txt_pb_ok=txt_pb_ok
         )
-    def ALERTE(self, titre="ALERTE", msg="", ico=P_img().alerte(), tm="th3", txt_pb_ok="Ok"):
+    def ALERTE(self, titre="ALERTE", msg="", ico=Img().alerte(), tm="th3", txt_pb_ok="Ok"):
         self._rtn(
             titre=titre,
             msg=msg,

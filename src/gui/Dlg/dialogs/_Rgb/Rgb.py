@@ -29,7 +29,7 @@ class Rgb:
         return rgb.rep, rgb.rgb_rtn
 
 
-    def GET(self, titre="RGB", rgb=None, ico=P_img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
+    def GET(self, titre="RGB", rgb=None, ico=Img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
         if rgb is None: rgb = (0, 0, 0)
 
         return self._rtn(
