@@ -126,8 +126,8 @@ class DemoCat(Style):
             bg_hover=Rgb().tr(),
             fg=Rgb().th3(),
             fg_hover=Rgb().th3(),
-            border=(0, P_style().bd(), 0, 0),
-            border_hover=(0, P_style().bd(), 0, 0),
+            border=(0, StyleBase().bd(), 0, 0),
+            border_hover=(0, StyleBase().bd(), 0, 0),
             border_rgb=Rgb().bn1(),
             border_hover_rgb=Rgb().bn1(),
     )

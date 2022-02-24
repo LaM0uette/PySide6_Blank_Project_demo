@@ -171,7 +171,7 @@ class Base_th(Style):
             *wgs,
         )
 class Base_tr(Style):
-    bd_hd = (0, P_style().bd(), 0, 0)
+    bd_hd = (0, StyleBase().bd(), 0, 0)
     rgb_hb = Rgb().bn1()
 
     def __init__(self, *wgs):

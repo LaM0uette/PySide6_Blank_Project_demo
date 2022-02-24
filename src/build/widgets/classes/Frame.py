@@ -120,9 +120,9 @@ class Cadre:
         Style(
             *self.wgs,
             bg=Rgb().tr(),
-            border=((P_style().bd(), )*4),
+            border=((StyleBase().bd(),) * 4),
             border_rgb=rgb,
-            border_hover=((P_style().bd(),) * 4),
+            border_hover=((StyleBase().bd(),) * 4),
             border_hover_rgb=rgb,
         )
 
@@ -148,9 +148,9 @@ class Demo_hover(Style):
         super().__init__(
             *wgs,
             bg=Rgb().tr(),
-            border=((P_style().bd(), )*4),
+            border=((StyleBase().bd(),) * 4),
             border_rgb=Rgb().bn1(),
-            border_hover=((P_style().bd()*2, )*4),
+            border_hover=((StyleBase().bd() * 2,) * 4),
             border_hover_style="dashed",
             border_hover_rgb=Rgb().vert(),
     )

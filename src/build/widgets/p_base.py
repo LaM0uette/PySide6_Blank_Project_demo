@@ -88,10 +88,10 @@ IMG_RIGHT_RGB = "th3"
 IMG_LEFT_RGB = "th3"
 
 # img dim
-img_width = WG_HEIGHT * P_style().x_ico()
-IMG_WIDTH = WG_HEIGHT * P_style().X_ICO()
-img_height = WG_HEIGHT * P_style().x_ico()
-IMG_HEIGHT = WG_HEIGHT * P_style().X_ICO()
+img_width = WG_HEIGHT * StyleBase().x_ico()
+IMG_WIDTH = WG_HEIGHT * StyleBase().X_ICO()
+img_height = WG_HEIGHT * StyleBase().x_ico()
+IMG_HEIGHT = WG_HEIGHT * StyleBase().X_ICO()
 
 
 #####################

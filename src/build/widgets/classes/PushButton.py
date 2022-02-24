@@ -255,7 +255,7 @@ class menu_top:
 ##     TXT     ##
 #################
 class txt(Style):
-    bd_gen = ((P_style().bd(), )*4)
+    bd_gen = ((StyleBase().bd(),) * 4)
     bd_rgb = Rgb().th3()
 
     def __init__(self, *wgs):
@@ -281,7 +281,7 @@ class txt(Style):
             border_checked_hover_rgb=self.bd_rgb,
     )
 class txt_inv(Style):
-    bd_gen = ((P_style().bd(),) * 4)
+    bd_gen = ((StyleBase().bd(),) * 4)
     bd_rgb = Rgb().th3()
     def __init__(self, *wgs):
         super().__init__(
@@ -311,7 +311,7 @@ class txt_inv(Style):
 ##     DLG     ##
 #################
 class dlg_ok(Style):
-    bd_gen = ((P_style().bd(),) * 4)
+    bd_gen = ((StyleBase().bd(),) * 4)
     bd_rgb = Rgb().vert()
 
     def __init__(self, *wgs):
@@ -335,7 +335,7 @@ class dlg_ok(Style):
             border_checked_hover_rgb=self.bd_rgb,
     )
 class dlg_ok_inv(Style):
-    bd_gen = ((P_style().bd(),) * 4)
+    bd_gen = ((StyleBase().bd(),) * 4)
     bd_rgb = Rgb().vert()
 
     def __init__(self, *wgs):
@@ -359,7 +359,7 @@ class dlg_ok_inv(Style):
             border_checked_hover_rgb=self.bd_rgb,
     )
 class dlg_nok(Style):
-    bd_gen = ((P_style().bd(),) * 4)
+    bd_gen = ((StyleBase().bd(),) * 4)
     bd_rgb = Rgb().rouge()
 
     def __init__(self, *wgs):
@@ -383,7 +383,7 @@ class dlg_nok(Style):
             border_checked_hover_rgb=self.bd_rgb,
         )
 class dlg_nok_inv(Style):
-    bd_gen = ((P_style().bd(),) * 4)
+    bd_gen = ((StyleBase().bd(),) * 4)
     bd_rgb = Rgb().rouge()
 
     def __init__(self, *wgs):
@@ -450,7 +450,7 @@ class plein:
         self.rtn(
             bg_gen=Rgb().th1(),
             fg_gen=Rgb().th3(),
-            border_gen=((P_style().bd(), )*4),
+            border_gen=((StyleBase().bd(),) * 4),
             border_gen_rgb=Rgb().th2(),
         )
     def th2(self):
@@ -479,7 +479,7 @@ class plein:
 ##     DEMO     ##
 ##################
 class Demo_bd(Style):
-    bd_gen = ((P_style().bd(), )*4)
+    bd_gen = ((StyleBase().bd(),) * 4)
     bd_rgb = Rgb().bn1()
 
     def __init__(self, *wgs):

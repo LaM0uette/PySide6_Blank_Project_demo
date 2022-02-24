@@ -6,4 +6,4 @@ from .SpinButton import SpinButton
 from .Font import Font
 from .Rgb import Rgb
 from .Scroll import Scroll
-from .P_style import P_style
+from .StyleBase import StyleBase

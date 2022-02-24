@@ -64,7 +64,7 @@ class Style:
             border_hover_rgb=p_base.WG_BORDER_RGB,
 
             # Bordures jours
-            border_day_size=P_style().bd(),
+            border_day_size=StyleBase().bd(),
             border_day_style=p_base.WG_BORDER_STYLE,
             border_day_rgb=p_base.FG_ITEM_HOVER,
 

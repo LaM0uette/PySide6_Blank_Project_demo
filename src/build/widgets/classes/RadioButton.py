@@ -156,7 +156,7 @@ class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            img_margin_left=(p_base.WG_HEIGHT - (p_base.WG_HEIGHT * P_style().x_ico())) / 2,
+            img_margin_left=(p_base.WG_HEIGHT - (p_base.WG_HEIGHT * StyleBase().x_ico())) / 2,
         )
 class Base_tr(Style):
     bg = Rgb().tr()
@@ -169,5 +169,5 @@ class Base_tr(Style):
             bg_checked_hover=self.bg,
             fg=Rgb().th3(),
             fg_checked=Rgb().th3(),
-            img_margin_left=(p_base.WG_HEIGHT - (p_base.WG_HEIGHT * P_style().x_ico())) / 2
+            img_margin_left=(p_base.WG_HEIGHT - (p_base.WG_HEIGHT * StyleBase().x_ico())) / 2
         )
