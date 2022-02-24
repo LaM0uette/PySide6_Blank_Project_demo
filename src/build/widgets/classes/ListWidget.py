@@ -190,26 +190,26 @@ class Demo_th(Style):
             *wgs,
             height=P_dim().h5(),
 
-            style=StyleSheet(
-                fg_item_checked=Rgb().bn1(),
-            )
+            fg_item_checked=Rgb().bn1(),
     )
 class Demo_tr(Style):
+    bd_item = (0, 0, 0, 2)
+
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
             height=P_dim().h5(),
 
-            style=StyleSheet(
-                bg_gen=Rgb().tr(),
-                bg_item_gen=Rgb().tr(),
-                fg_item=Rgb().th3(),
-                fg_item_checked=Rgb().bn1(),
-                border_item_gen_left=2,
-                border_item_rgb=Rgb().th2(),
-                border_item_rgb_hover=Rgb().th3(),
-                border_item_rgb_checked=Rgb().bn1(),
-                border_item_rgb_checked_hover=Rgb().bn1(),
-            )
-
+            bg=Rgb().tr(),
+            bg_item=Rgb().tr(),
+            fg_item=Rgb().th3(),
+            fg_item_checked=Rgb().bn1(),
+            border_item=self.bd_item,
+            border_item_hover=self.bd_item,
+            border_item_checked=self.bd_item,
+            border_item_checked_hover=self.bd_item,
+            border_item_rgb=Rgb().th2(),
+            border_item_rgb_hover=Rgb().th3(),
+            border_item_rgb_checked=Rgb().bn1(),
+            border_item_rgb_checked_hover=Rgb().bn1(),
     )
