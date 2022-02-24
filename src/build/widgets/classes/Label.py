@@ -1,4 +1,3 @@
-from .StyleSheet import StyleSheet
 from ....build import *
 from ....build.widgets import p_base
 
@@ -14,8 +13,32 @@ class Style:
             align_vertical=Align().v_center(),
             word_wrap=p_base.WORD_WRAP,
             curseur=p_base.CUR,
-            style=StyleSheet()
     ):
+        style = f"""
+                .QLabel {{
+                background-color: rgba{bg};
+                color: rgba{fg};
+                }}
+                .QLabel:hover {{
+                background-color: rgba{bg_hover};
+                color: rgba{fg_hover};
+                }}
+        
+                /* BORDURES */
+                .QLabel {{
+                border-top: {border_top}px {border_style} rgba{border_rgb};
+                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
+                border-right: {border_right}px {border_style} rgba{border_rgb};
+                border-left: {border_left}px {border_style} rgba{border_rgb};
+                }}
+                .QLabel:hover {{
+                border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
+                border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
+                }}
+        """
+
         for wg in wgs:
             wg.setStyleSheet(style.get())
 
@@ -28,6 +51,9 @@ class Style:
             wg.setCursor(Fct(cur=curseur).CUR())
 
 
+##################
+##     BASE     ##
+##################
 class Base_th(Style):
     def __init__(self, *wgs, font_size=p_base.FONT_SIZE):
         super().__init__(
@@ -46,7 +72,6 @@ class Base_tr(Style):
                 fg_gen=Rgb().th3(),
             )
     )
-
 class Titre(Style):
     def __init__(self, *wgs):
         super().__init__(
@@ -60,6 +85,9 @@ class Titre(Style):
     )
 
 
+##################
+##     DEMO     ##
+##################
 class DemoCat(Style):
     def __init__(self, *wgs):
         super().__init__(
