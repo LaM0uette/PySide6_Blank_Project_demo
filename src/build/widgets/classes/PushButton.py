@@ -281,7 +281,7 @@ class Demo_rd(Style):
         super().__init__(
             *wgs,
             style=StyleSheet(
-                radius_all=10,
+                # radius_all=10,
             )
     )
 
