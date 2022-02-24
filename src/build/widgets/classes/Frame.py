@@ -1,6 +1,5 @@
 from PySide6 import QtWidgets
 
-from .StyleSheet import StyleSheet
 from ....build import *
 from ....build.widgets import p_base
 
@@ -11,10 +10,51 @@ class Style:
             width=p_base.WIDTH,
             height=p_base.HEIGHT,
             curseur=P_cur().souris(),
-            style=StyleSheet()
+
+            # Couleurs BG
+            bg=p_base.BG,
+
+            # Bordures
+            border=p_base.WG_BORDER_WIDTH,
+            border_style=p_base.WG_BORDER_STYLE,
+            border_rgb=p_base.WG_BORDER_RGB,
+            # Bordures hover
+            border_hover=p_base.WG_BORDER_WIDTH,
+            border_style_hover=p_base.WG_BORDER_STYLE,
+            border_rgb_hover=p_base.WG_BORDER_RGB,
+
+            # Rayons
+            radius=p_base.WG_RADIUS,
     ):
+        style = f"""
+                /* FRAME */
+                .QFrame {{
+                background-color: rgba{bg};
+                }}
+        
+                /* BORDURES */
+                .QFrame {{
+                border-top: {border[0]}px {border_style} rgba{border_rgb};
+                border-bottom: {border[1]}px {border_style} rgba{border_rgb};
+                border-right: {border[2]}px {border_style} rgba{border_rgb};
+                border-left: {border[3]}px {border_style} rgba{border_rgb};
+                }}
+                .QFrame:hover {{
+                border-top: {border_hover[0]}px {border_style_hover} rgba{border_rgb_hover};
+                border-bottom: {border_hover[1]}px {border_style_hover} rgba{border_rgb_hover};
+                border-right: {border_hover[2]}px {border_style_hover} rgba{border_rgb_hover};
+                border-left: {border_hover[3]}px {border_style_hover} rgba{border_rgb_hover};
+                }}
+                
+                .QFrame {{
+                border-top-right-radius: {radius[0]}px;
+                border-top-left-radius: {radius[1]}px;
+                border-bottom-right-radius: {radius[2]}px;
+                border-bottom-left-radius: {radius[3]}px;
+                }}"""
+
         for wg in wgs:
-            wg.setStyleSheet(style.get())
+            wg.setStyleSheet(style)
 
             Fct(wg=wg, w=width, h=height).DIM()
 
@@ -23,31 +63,32 @@ class Style:
             wg.setFrameShape(QtWidgets.QFrame.NoFrame)
 
 
+##################
+##     BASE     ##
+##################
 class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            style=StyleSheet(
-            )
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            style=StyleSheet(
                 bg=Rgb().tr()
-            )
     )
 
+
+##################
+##     MENU     ##
+##################
 class Menu_top(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
             height=P_dim().h9(),
 
-            style=StyleSheet(
-                bg=Rgb().th1(),
-            )
+            bg=Rgb().th1(),
     )
 class Menu_bottom(Style):
     def __init__(self, *wgs):
@@ -55,9 +96,7 @@ class Menu_bottom(Style):
             *wgs,
             height=P_dim().h10(),
 
-            style=StyleSheet(
-                bg=Rgb().th2(),
-            )
+            bg=Rgb().th2(),
     )
 class Menu_bottom_dlg(Style):
     def __init__(self, *wgs):
@@ -65,11 +104,13 @@ class Menu_bottom_dlg(Style):
             *wgs,
             height=P_dim().h9(),
 
-            style=StyleSheet(
             bg=Rgb().th2(),
-            )
     )
 
+
+####################
+##     AUTRES     ##
+####################
 class Cadre:
     def __init__(self, *wgs):
         self.wgs = wgs
@@ -77,11 +118,11 @@ class Cadre:
     def rtn(self, rgb):
         Style(
             *self.wgs,
-            style=StyleSheet(
-                bg=Rgb().tr(),
-                border_gen_all=P_style().bd(),
-                border_gen_rgb=rgb,
-            )
+            bg=Rgb().tr(),
+            border=((P_style().bd(), )*4),
+            border_rgb=rgb,
+            border_hover=((P_style().bd(),) * 4),
+            border_rgb_hover=rgb,
         )
 
     def th1(self): self.rtn(rgb=Rgb().th1())
@@ -89,28 +130,26 @@ class Cadre:
     def th3(self): self.rtn(rgb=Rgb().th3())
     def bn1(self): self.rtn(rgb=Rgb().bn1())
     def bn2(self): self.rtn(rgb=Rgb().bn2())
-
 class palette_rgb(Style):
     def __init__(self, *wgs, rgb):
         super().__init__(
             *wgs,
-            style=StyleSheet(
-                bg=rgb,
-                radius_all=40,
-            )
+            bg=rgb,
+            radius=((40, )*4),
     )
 
 
+##################
+##     DEMO     ##
+##################
 class Demo_hover(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            style=StyleSheet(
-                bg=Rgb().tr(),
-                border_all=P_style().bd(),
-                border_rgb=Rgb().bn1(),
-                border_all_hover=P_style().bd() * 2,
-                border_style_hover="dashed",
-                border_rgb_hover=Rgb().vert(),
-            )
+            bg=Rgb().tr(),
+            border=((P_style().bd(), )*4),
+            border_rgb=Rgb().bn1(),
+            border_hover=((P_style().bd()*2, )*4),
+            border_style_hover="dashed",
+            border_rgb_hover=Rgb().vert(),
     )

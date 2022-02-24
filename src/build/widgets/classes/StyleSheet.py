@@ -724,33 +724,7 @@ class StyleSheet:
 **      /QDateEdit       **
 ***************************/
                 
-                
-                
-/***********************
-**       QFrame       **
-************************/
-                .QFrame {{
-                background-color: rgba{bg};
-                }}
-        
-                /* BORDURES */
-                .QFrame {{
-                border-top: {border_top}px {border_style} rgba{border_rgb};
-                border-bottom: {border_bottom}px {border_style} rgba{border_rgb};
-                border-right: {border_right}px {border_style} rgba{border_rgb};
-                border-left: {border_left}px {border_style} rgba{border_rgb};
-                }}
-                .QFrame:hover {{
-                border-top: {border_top_hover}px {border_style_hover} rgba{border_rgb_hover};
-                border-bottom: {border_bottom_hover}px {border_style_hover} rgba{border_rgb_hover};
-                border-right: {border_right_hover}px {border_style_hover} rgba{border_rgb_hover};
-                border-left: {border_left_hover}px {border_style_hover} rgba{border_rgb_hover};
-                }}
-/***********************
-**      /QFrame       **
-************************/
-                
-                
+  
                 
 /***********************
 **       QLabel       **
