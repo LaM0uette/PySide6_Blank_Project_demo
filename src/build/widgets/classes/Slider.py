@@ -209,7 +209,7 @@ class Base_rond(Style):
             margin_handle_h=(0, -12, 0, 0),
             margin_handle_v=(0, 0, -4, -4),
 
-            border_handle_h=(0, 8, 2, 2),
+            border_handle_h=(0, 14, 2, 2),
             border_handle_h_rgb=Rgb().th2(),
             border_handle_v=(4, 4, 4, 4),
             border_handle_v_rgb=Rgb().th2(),
