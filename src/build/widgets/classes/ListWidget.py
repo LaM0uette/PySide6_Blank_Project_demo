@@ -204,6 +204,7 @@ class Demo_tr(Style):
             bg_item_hover=Rgb().tr(),
             fg_item=Rgb().th3(),
             fg_item_checked=Rgb().bn1(),
+
             border_item=self.bd_item,
             border_item_hover=self.bd_item,
             border_item_checked=self.bd_item,
