@@ -239,6 +239,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             "sht_1": QtCore.Qt.SHIFT,
             "sht_2": QtCore.Qt.Key_Escape,
             "sht_3": None,
+            "height": None
         }
 
         ### Set actions
