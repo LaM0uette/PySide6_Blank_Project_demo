@@ -235,7 +235,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             "ico_rgb": "bn2",
             "txt": "Quitter",
             "shortcut": "Shift+Esc",
-            "fct": self.quitter,
+            "fct": self.quitterTray,
             "sht_1": QtCore.Qt.SHIFT,
             "sht_2": QtCore.Qt.Key_Escape,
             "sht_3": None,
@@ -321,6 +321,10 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
                 app.quit()
                 quit()
             else: self.hide()
+    def quitterTray(self):
+        if DLG_Rep().QUITTER():
+            app.quit()
+            quit()
     # event
     def mousePressEvent(self, event):
         cur = QtGui.QCursor()
