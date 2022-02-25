@@ -51,6 +51,7 @@ class Style:
 
             # Rayons
             radius=p_base.WG_RADIUS,
+            radius_tab=p_base.WG_RADIUS,
 
             # Scroll
             scroll_bg=p_base.SCROLL_BG,
@@ -72,6 +73,10 @@ class Style:
                 border-bottom: {border_hd[1]}px {border_hd_style} rgba{border_hd_rgb};
                 border-right: {border_hd[2]}px {border_hd_style} rgba{border_hd_rgb};
                 border-left: {border_hd[3]}px {border_hd_style} rgba{border_hd_rgb};
+                border-top-right-radius: {radius_tab[0]}px;
+                border-top-left-radius: {radius_tab[1]}px;
+                border-bottom-right-radius: {radius_tab[2]}px;
+                border-bottom-left-radius: {radius_tab[3]}px;
                 }}
         
                 QToolBox::tab:hover {{
@@ -188,4 +193,43 @@ class Base_tr(Style):
             border_hd_hover_rgb=self.rgb_hb,
             border_hd_checked_rgb=self.rgb_hb,
             border_hd_checked_hover_rgb=self.rgb_hb,
+            border=((StyleBase().bd(), )*4),
+            border_hover=((StyleBase().bd(), )*4),
+            border_rgb=Rgb().th3(),
+            border_hover_rgb=Rgb().th3(),
+            radius_tab=((0, )*4)
+    )
+
+
+##################
+##     DEMO     ##
+##################
+class Demo_th(Style):
+    def __init__(self, *wgs):
+        super().__init__(
+            *wgs,
+        )
+class Demo_tr(Style):
+    bd_hd = (0, StyleBase().bd(), 0, 0)
+    rgb_hb = Rgb().bn1()
+
+    def __init__(self, *wgs):
+        super().__init__(
+            *wgs,
+            bg=Rgb().tr(),
+            bg_hover=Rgb().tr(),
+            fg=Rgb().th3(),
+            border_hd=self.bd_hd,
+            border_hd_hover=self.bd_hd,
+            border_hd_checked=self.bd_hd,
+            border_hd_checked_hover=self.bd_hd,
+            border_hd_rgb=self.rgb_hb,
+            border_hd_hover_rgb=self.rgb_hb,
+            border_hd_checked_rgb=self.rgb_hb,
+            border_hd_checked_hover_rgb=self.rgb_hb,
+            border=((StyleBase().bd(), )*4),
+            border_hover=((StyleBase().bd(), )*4),
+            border_rgb=Rgb().th3(),
+            border_hover_rgb=Rgb().th3(),
+            radius_tab=((0, )*4)
     )
