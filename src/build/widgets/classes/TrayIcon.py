@@ -52,14 +52,14 @@ class Style:
                 QMenu::item {{
                 background-color: rgba{bg_item};
                 color: rgba{fg_item};
-                margin-top={margin[0]}px;
-                margin-bottom={margin[1]}px;
-                margin-right={margin[2]}px;
-                margin-left={margin[3]}px;
-                padding-top={padding[0]}px;
-                padding-bottom={padding[1]}px;
-                padding-right={padding[2]}px;
-                padding-left={padding[3]}px;
+                margin-top: {margin[0]}px;
+                margin-bottom: {margin[1]}px;
+                margin-right: {margin[2]}px;
+                margin-left: {margin[3]}px;
+                padding-top: {padding[0]}px;
+                padding-bottom: {padding[1]}px;
+                padding-right: {padding[2]}px;
+                padding-left: {padding[3]}px;
                 }}
                 QMenu::item:selected {{
                 background-color: rgba{bg_item_checked};
@@ -106,4 +106,6 @@ class Main(Style):
             fg_item_checked=Rgb().bn1(),
             border=((StyleBase().bd(), )*4),
             border_rgb=Rgb().th2(),
+
+            margin=(10, 10, 5, 5),
         )
