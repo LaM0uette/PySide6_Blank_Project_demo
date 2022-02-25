@@ -114,8 +114,8 @@ WG_RADIUS = ((3, )*4)
 ##     SCROLL     ##
 ####################
 SCROLL_BG = Rgb().th1()
-SCROLL_WIDTH = 4
-SCROLL_HEIGHT = 4
+SCROLL_WIDTH = 6
+SCROLL_HEIGHT = 6
 
 SCROLL_HANDLE_BG = Rgb().th3()
 SCROLL_HANDLE_BG_HOVER = Rgb().th3()
