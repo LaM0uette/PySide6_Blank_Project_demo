@@ -15,17 +15,13 @@ class Style:
             # Couleurs BG
             bg=VBase.BG,
             bg_item=VBase.BG_ITEM,
-            bg_item_hover=VBase.BG_ITEM_HOVER,
             bg_item_checked=VBase.BG_ITEM_CHECKED,
-            bg_item_checked_hover=VBase.BG_ITEM_CHECKED_HOVER,
             # Couleurs BG autres
             bg_separator=VBase.BG_SEPARATOR,
             # Couleurs FG
             fg=VBase.FG,
             fg_item=VBase.FG_ITEM,
-            fg_item_hover=VBase.FG_ITEM_HOVER,
             fg_item_checked=VBase.FG_ITEM_CHECKED,
-            fg_item_checked_hover=VBase.FG_ITEM_CHECKED_HOVER,
 
             # Positions WG
             margin=((0, )*4),
@@ -65,17 +61,9 @@ class Style:
                 padding-right={padding[2]}px;
                 padding-left={padding[3]}px;
                 }}
-                QMenu::item:hover {{
-                background-color: rgba{bg_item_hover};
-                color: rgba{fg_item_hover};
-                }}
                 QMenu::item:selected {{
                 background-color: rgba{bg_item_checked};
                 color: rgba{fg_item_checked};
-                }}
-                QMenu::item:selected:hover {{
-                background-color: rgba{bg_item_checked_hover};
-                color: rgba{fg_item_checked_hover};
                 }}
                 
                 /* BORDURES */
@@ -112,14 +100,10 @@ class Main(Style):
             *wgs,
             bg=Rgb().th1(),
             bg_item=Rgb().th1(),
-            bg_item_hover=Rgb().th1(),
-            bg_item_checked=Rgb().th3(),
-            bg_item_checked_hover=Rgb().th3(),
+            bg_item_checked=Rgb().th1(),
             fg=Rgb().th3(),
             fg_item=Rgb().th3(),
-            fg_item_hover=Rgb().bn1(),
-            fg_item_checked=Rgb().th1(),
-            fg_item_checked_hover=Rgb().bn1(),
+            fg_item_checked=Rgb().bn1(),
             border=((StyleBase().bd(), )*4),
             border_rgb=Rgb().th2(),
         )
