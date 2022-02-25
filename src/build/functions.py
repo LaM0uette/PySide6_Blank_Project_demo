@@ -105,6 +105,8 @@ class Fct:
         rgb = hex_colors.lstrip('#')
         lv = len(rgb)
         return tuple(int(rgb[i:i + lv // 3], 16) for i in range(0, lv, lv // 3))
+    def ADD_QACTION(self, tray, txt, shortcut, fct):
+        tray.addAction(QtGui.QAction(self, text=txt, shortcut=shortcut, triggered=fct))
 
 
 ### FICHIERS
