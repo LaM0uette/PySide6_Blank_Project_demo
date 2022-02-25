@@ -105,8 +105,10 @@ class Fct:
         rgb = hex_colors.lstrip('#')
         lv = len(rgb)
         return tuple(int(rgb[i:i + lv // 3], 16) for i in range(0, lv, lv // 3))
-    def QACTION(self, slf, ico, ico_rgb, txt, shortcut, fct):
-        return QtGui.QAction(slf, icon=QtGui.QPixmap(f"{ico}{ico_rgb}.svg"), text=txt, shortcut=shortcut, triggered=fct)
+    def QACTION(self, slf, ico, ico_rgb, txt, shortcut, fct, height):
+        if height is None : height=12
+
+        return QtGui.QAction(slf, icon=QtGui.QPixmap(f"{ico}{ico_rgb}.svg").scaledToHeight(height), text=txt, shortcut=shortcut, triggered=fct)
     def QSHORTCUT(self, slf, sht_1, sht_2, sht_3, fct):
         shortcut = int()
         if sht_1 is not None: shortcut += sht_1

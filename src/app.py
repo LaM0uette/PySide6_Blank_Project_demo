@@ -242,7 +242,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         }
 
         ### Set actions
-        act = lambda _act: (self, _act.get("ico"), _act.get("ico_rgb"), _act.get("txt"), _act.get("shortcut"), _act.get("fct"))
+        act = lambda _act: (self, _act.get("ico"), _act.get("ico_rgb"), _act.get("txt"), _act.get("shortcut"), _act.get("fct"), _act.get("height"))
         self.tray_menu.addAction(Fct().QACTION(*act(qact_quitter)))
 
         ### Raccourcis clavier
