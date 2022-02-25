@@ -1,6 +1,6 @@
 import importlib
 
-from . import p_base
+from . import VBase
 importlib.reload(p_base)
 
 from .classes import CheckBox, ComboBox, DateEdit, Frame, Label, \

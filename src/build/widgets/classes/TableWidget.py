@@ -1,7 +1,7 @@
 from PySide6 import QtWidgets, QtCore
 
 from ....build import *
-from ....build.widgets import p_base
+from ....build.widgets import VBase
 
 class Style:
     def __init__(
