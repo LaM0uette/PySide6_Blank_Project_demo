@@ -5,8 +5,8 @@ class Style:
     def __init__(
             self,
             *wgs,
-            width=VBase.WG_WIDTH,
-            height=VBase.WG_HEIGHT,
+            width=VBase.WIDTH,
+            height=VBase.HEIGHT,
             font=VBase.FONT,
             font_size=VBase.FONT_SIZE,
             height_separator=5,
