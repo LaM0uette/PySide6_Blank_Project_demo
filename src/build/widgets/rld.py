@@ -5,7 +5,7 @@ importlib.reload(VBase)
 
 from .classes import CheckBox, ComboBox, DateEdit, Frame, Label, \
     ListWidget, ProgressBar, RadioButton, ScrollArea, Slider, \
-    SpinBox, TableWidget, TextEdit, ToolBox, TreeWidget, PushButton
+    SpinBox, TableWidget, TextEdit, ToolBox, TrayIcon, TreeWidget, PushButton
 
 importlib.reload(CheckBox)
 importlib.reload(ComboBox)
@@ -22,4 +22,5 @@ importlib.reload(SpinBox)
 importlib.reload(TableWidget)
 importlib.reload(TextEdit)
 importlib.reload(ToolBox)
+importlib.reload(TrayIcon)
 importlib.reload(TreeWidget)
