@@ -20,4 +20,5 @@ if __name__ == "__main__":
         Fct().GEN_SVG()
         time.sleep(0.3)
 
+    if not pg_run:
         from src.app import app
