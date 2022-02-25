@@ -221,6 +221,40 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         pass
     def IN_WG_BASE(self):
         pass
+    def IN_TRAY(self):
+        self.tray = QtWidgets.QSystemTrayIcon(QtGui.QPixmap(ICO_MAIN), self)
+        self.tray.activated.connect(self.showTrayEvent)
+
+        # self.Tray.setContextMenu(self.TrayMenu)
+        self.tray.show()
+
+        # self.TrayMenu = QtWidgets.QMenu()
+        # self.TrayMenu.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        # self.TrayMenu.setFont(font.font12)
+        # self.TrayMenu.setStyleSheet("QMenu {"
+        #                             f"background-color: rgb{data.ColorTH1};"
+        #                             f"border: 2 solid rgb{data.ColorTH5};"
+        #                             "}"
+        #                             "QMenu::separator{"
+        #                             "height: 3px;"
+        #                             f"background-color: rgb{data.ColorTH5};"
+        #                             "}"
+        #                             "QMenu::item {"
+        #                             f"background-color: rgb{data.ColorTH1};"
+        #                             f"color: rgb{data.ColorTH3};"
+        #                             "margin-left: 20px;"
+        #                             "padding-left: 10px;"
+        #                             "margin-top: 8px;"
+        #                             "margin-bottom: 8px;"
+        #                             "}"
+        #                             "QMenu::item:hover {"
+        #                             f"background-color: rgb{data.ColorTH1};"
+        #                             f"color: rgb{data.ColorTH5};"
+        #                             "}"
+        #                             "QMenu::item:selected {"
+        #                             f"background-color: rgb{data.ColorTH1};"
+        #                             f"color: rgb{data.ColorTH5};"
+        #                             "}")
     def INIT(self):
         self.IN_BASE()
         self.IN_CLASSE()
@@ -228,6 +262,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.IN_CONNECTIONS()
         self.IN_ACT()
         self.IN_WG_BASE()
+        self.IN_TRAY()
     ############################
     ##    /INITIALISATION     ##
     ############################
@@ -283,8 +318,10 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self._centreFen()
     def quitter(self):
         if DLG_Rep().QUITTER():
-            app.quit()
-            quit()
+            if config.auto_close:
+                app.quit()
+                quit()
+            else: self.hide()
     # event
     def mousePressEvent(self, event):
         cur = QtGui.QCursor()
@@ -336,6 +373,10 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         else:
             self.setWindowState(self.win_state)
             self._resize()
+    def showTrayEvent(self, reason):
+        if reason == QtWidgets.QSystemTrayIcon.Trigger:
+            self.show()
+            fen.activateWindow()
     ###################
     ##    /EVENT     ##
     ###################
