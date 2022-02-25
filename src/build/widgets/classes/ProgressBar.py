@@ -101,7 +101,9 @@ class Base_th(Style):
             *wgs,
 
             border=((StyleBase().bd(), )*4),
-            border_rgb=Rgb().th3()
+            border_hover=((StyleBase().bd(), )*4),
+            border_rgb=Rgb().th3(),
+            border_hover_rgb=Rgb().th3(),
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
@@ -110,4 +112,9 @@ class Base_tr(Style):
             text_visible=False,
 
             bg=Rgb().tr(),
+
+            border=((StyleBase().bd(), )*4),
+            border_hover=((StyleBase().bd(), )*4),
+            border_rgb=Rgb().th3(),
+            border_hover_rgb=Rgb().th3(),
     )
