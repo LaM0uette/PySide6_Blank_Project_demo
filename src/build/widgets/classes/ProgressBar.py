@@ -99,6 +99,9 @@ class Base_th(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
+
+            border=((StyleBase().bd(), )*4),
+            border_rgb=Rgb().th3()
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
