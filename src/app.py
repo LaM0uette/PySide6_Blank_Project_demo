@@ -20,6 +20,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.sizegrip = QtWidgets.QSizeGrip(self)
         self.win_state = QtCore.Qt.WindowNoState
 
+        self.tray = QtWidgets.QSystemTrayIcon(QtGui.QPixmap(ICO_MAIN), self)
+        self.tray_menu = QtWidgets.QMenu()
+
         self.setupUi(self)
         self.INIT()
 
@@ -222,39 +225,37 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def IN_WG_BASE(self):
         pass
     def IN_TRAY(self):
-        self.tray = QtWidgets.QSystemTrayIcon(QtGui.QPixmap(ICO_MAIN), self)
         self.tray.activated.connect(self.showTrayEvent)
 
-        # self.Tray.setContextMenu(self.TrayMenu)
-        self.tray.show()
+        self.tray_menu.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
+        self.tray_menu.setFont(font.font12)
+        self.tray_menu.setStyleSheet("QMenu {"
+                                    f"background-color: rgb{data.ColorTH1};"
+                                    f"border: 2 solid rgb{data.ColorTH5};"
+                                    "}"
+                                    "QMenu::separator{"
+                                    "height: 3px;"
+                                    f"background-color: rgb{data.ColorTH5};"
+                                    "}"
+                                    "QMenu::item {"
+                                    f"background-color: rgb{data.ColorTH1};"
+                                    f"color: rgb{data.ColorTH3};"
+                                    "margin-left: 20px;"
+                                    "padding-left: 10px;"
+                                    "margin-top: 8px;"
+                                    "margin-bottom: 8px;"
+                                    "}"
+                                    "QMenu::item:hover {"
+                                    f"background-color: rgb{data.ColorTH1};"
+                                    f"color: rgb{data.ColorTH5};"
+                                    "}"
+                                    "QMenu::item:selected {"
+                                    f"background-color: rgb{data.ColorTH1};"
+                                    f"color: rgb{data.ColorTH5};"
+                                    "}")
 
-        # self.TrayMenu = QtWidgets.QMenu()
-        # self.TrayMenu.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        # self.TrayMenu.setFont(font.font12)
-        # self.TrayMenu.setStyleSheet("QMenu {"
-        #                             f"background-color: rgb{data.ColorTH1};"
-        #                             f"border: 2 solid rgb{data.ColorTH5};"
-        #                             "}"
-        #                             "QMenu::separator{"
-        #                             "height: 3px;"
-        #                             f"background-color: rgb{data.ColorTH5};"
-        #                             "}"
-        #                             "QMenu::item {"
-        #                             f"background-color: rgb{data.ColorTH1};"
-        #                             f"color: rgb{data.ColorTH3};"
-        #                             "margin-left: 20px;"
-        #                             "padding-left: 10px;"
-        #                             "margin-top: 8px;"
-        #                             "margin-bottom: 8px;"
-        #                             "}"
-        #                             "QMenu::item:hover {"
-        #                             f"background-color: rgb{data.ColorTH1};"
-        #                             f"color: rgb{data.ColorTH5};"
-        #                             "}"
-        #                             "QMenu::item:selected {"
-        #                             f"background-color: rgb{data.ColorTH1};"
-        #                             f"color: rgb{data.ColorTH5};"
-        #                             "}")
+        self.tray.setContextMenu(self.tray_menu)
+        self.tray.show()
     def INIT(self):
         self.IN_BASE()
         self.IN_CLASSE()
