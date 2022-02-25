@@ -23,7 +23,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.setupUi(self)
         self.INIT()
 
-
+        self.tw_demo_th.setVerticalHeader(False)
+        self.tw_demo_th.setHorizontalHeader(False)
     ############################
     ##     INITIALISATION     ##
     ############################

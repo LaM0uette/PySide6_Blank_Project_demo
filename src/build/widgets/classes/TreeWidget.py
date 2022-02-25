@@ -13,6 +13,8 @@ class Style:
             font_size=p_base.FONT_SIZE,
             scroll_h=p_base.SCROLL_H,
             scroll_v=p_base.SCROLL_V,
+            sorting=True,
+            animate=True,
             curseur=p_base.CUR,
 
             # Couleurs BG
@@ -60,7 +62,8 @@ class Style:
             border_item_checked_hover_rgb=p_base.WG_BORDER_RGB,
 
             # Rayons
-            radius=(0, 0, 0, 0),
+            radius=p_base.WG_RADIUS,
+            radius_item=p_base.WG_RADIUS,
 
             # Scroll
             scroll_bg=p_base.SCROLL_BG,
@@ -96,6 +99,10 @@ class Style:
                 border-bottom: {border_item[1]}px {border_item_style} rgba{border_item_rgb};
                 border-right: {border_item[2]}px {border_item_style} rgba{border_item_rgb};
                 border-left: {border_item[3]}px {border_item_style} rgba{border_item_rgb};
+                border-top-right-radius: {radius_item[0]}px;
+                border-top-left-radius: {radius_item[1]}px;
+                border-bottom-right-radius: {radius_item[2]}px;
+                border-bottom-left-radius: {radius_item[3]}px;
                 }}
         
                 QTreeWidget::item:hover, QTreeView::item:hover {{
@@ -185,6 +192,10 @@ class Style:
             wg.setVerticalScrollBarPolicy(scroll_v)
 
             wg.setFrameShape(QtWidgets.QFrame.NoFrame)
+            wg.setSortingEnabled(sorting)
+            wg.AnimatingState(animate)
+            wg.setHorizontalHeader(False)
+            wg.setVerticalHeader(False)
 
             wg.setCursor(Fct(cur=curseur).CUR())
 
@@ -225,6 +236,7 @@ class Base_tr(Style):
             border_item_hover_rgb=Rgb().th3(),
             border_item_checked_rgb=Rgb().bn1(),
             border_item_checked_hover_rgb=Rgb().bn1(),
+            radius_item=((0, )*4)
     )
 class option(Style):
     bd_gen = (0, 0, 2, 0)
@@ -258,4 +270,5 @@ class option(Style):
             border_item_hover_rgb=Rgb().th3(),
             border_item_checked_rgb=Rgb().bn1(),
             border_item_checked_hover_rgb=Rgb().bn1(),
+            radius_item=((0, )*4)
     )
