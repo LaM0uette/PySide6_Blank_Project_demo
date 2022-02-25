@@ -108,7 +108,12 @@ class Fct:
     def QACTION(self, slf, ico, ico_rgb, txt, shortcut, fct):
         return QtGui.QAction(slf, icon=QtGui.QPixmap(f"{ico}{ico_rgb}.svg"), text=txt, shortcut=shortcut, triggered=fct)
     def QSHORTCUT(self, slf, sht_1, sht_2, sht_3, fct):
-        QtGui.QShortcut(QtGui.QKeySequence(sht_1 + sht_2 + sht_3), slf).activated.connect(fct)
+        shortcut = None
+        if sht_1: shortcut += sht_1
+        if sht_2: shortcut += sht_2
+        if sht_3: shortcut += sht_3
+
+        QtGui.QShortcut(QtGui.QKeySequence(shortcut), slf).activated.connect(fct)
 
 
 ### FICHIERS
