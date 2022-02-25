@@ -109,7 +109,6 @@ class Base_th(Style):
             border_hover=((StyleBase().bd(), )*4),
             border_rgb=Rgb().th3(),
             border_hover_rgb=Rgb().th3(),
-            radius_chunk=(3, 0, 3, 0)
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
@@ -123,7 +122,6 @@ class Base_tr(Style):
             border_hover=((StyleBase().bd(), )*4),
             border_rgb=Rgb().th3(),
             border_hover_rgb=Rgb().th3(),
-            radius_chunk=(3, 0, 3, 0)
     )
 
 
