@@ -235,7 +235,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             "ico_rgb": "bn2",
             "txt": "Quitter",
             "shortcut": "Shift+Esc",
-            "fct": self.cacher,
+            "fct": self.quitter,
             "sht_1": QtCore.Qt.SHIFT,
             "sht_2": QtCore.Qt.Key_Escape,
             "sht_3": None,
