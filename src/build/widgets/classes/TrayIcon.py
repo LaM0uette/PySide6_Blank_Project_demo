@@ -107,5 +107,5 @@ class Main(Style):
             border=((StyleBase().bd(), )*4),
             border_rgb=Rgb().th2(),
 
-            margin=(10, 10, 5, 5),
+            margin=(10, 10, 15, 15),
         )
