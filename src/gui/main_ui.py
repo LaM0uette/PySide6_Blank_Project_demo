@@ -1158,9 +1158,6 @@ class Ui_main(object):
         self.glay_fr_trw.setContentsMargins(10, 10, 10, 10)
         self.trv_demo_th = QTreeView(self.fr_trw)
         self.trv_demo_th.setObjectName(u"trv_demo_th")
-        self.trv_demo_th.setSortingEnabled(True)
-        self.trv_demo_th.setAnimated(True)
-        self.trv_demo_th.setHeaderHidden(True)
 
         self.glay_fr_trw.addWidget(self.trv_demo_th, 2, 1, 1, 1)
 
