@@ -230,12 +230,23 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         TrayIcon.Main(self.tray_menu)
 
         ### Actions
-        qact_quitter = Fct().QACTION(slf=self, ico=Img().quitter(), ico_rgb="bn2", txt="Quitter", shortcut="Shift+Esc", fct=self.cacher)
+        qact_quitter = {
+            "ico": Img().quitter(),
+            "ico_rgb": "bn2",
+            "txt": "Quitter",
+            "shortcut": "Shift+Esc",
+            "fct": self.cacher,
+            "sht_1": QtCore.Qt.SHIFT,
+            "sht_2": QtCore.Qt.Key_Escape,
+            "sht_3": None,
+        }
 
         ### Set actions
-        self.tray_menu.addAction(qact_quitter)
+        act = lambda _act: (self, _act.get("ico"), _act.get("ico_rgb"), _act.get("txt"), _act.get("shortcut"), _act.get("fct"))
+        self.tray_menu.addAction(Fct().QACTION(*act(qact_quitter)))
 
         ### Raccourcis clavier
+        sht = lambda _sht: (self, _sht.get("sht_1"), _sht.get("sht_2"), _sht.get("sht_3"), _sht.get("fct"))
         QtGui.QShortcut(QtGui.QKeySequence(QtCore.Qt.SHIFT + QtCore.Qt.Key_Escape), self).activated.connect(self.cacher)
 
 
