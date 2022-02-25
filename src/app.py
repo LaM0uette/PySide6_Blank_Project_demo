@@ -377,6 +377,9 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         if reason == QtWidgets.QSystemTrayIcon.Trigger:
             self.show()
             fen.activateWindow()
+
+            if fen.windowState() == QtCore.Qt.WindowMinimized:
+                fen.setWindowState(QtCore.Qt.WindowActive)
     ###################
     ##    /EVENT     ##
     ###################
