@@ -206,6 +206,7 @@ class Demo_th(Style):
             height=Dim().h5(),
 
             fg_item_checked=Rgb().bn1(),
+            border_rgb=Rgb().th3()
     )
 class Demo_tr(Style):
     bd_item = (0, 0, 0, 2)
