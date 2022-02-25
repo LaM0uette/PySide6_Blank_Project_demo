@@ -228,7 +228,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.tray.activated.connect(self.showTrayEvent)
         TrayIcon.Main(self.tray_menu)
 
-        self.tray_menu.addAction(QtGui.QAction(self, text="Quitter", shortcut="Ctrl+Esc", triggered=self.cacher))
+        ac = QtGui.QAction(self, text="Quitter", shortcut="Ctrl+Esc", triggered=self.cacher)
+        self.tray_menu.addAction(ac)
 
         self.tray.setContextMenu(self.tray_menu)
         self.tray.show()
