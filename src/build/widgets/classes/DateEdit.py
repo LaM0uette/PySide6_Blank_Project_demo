@@ -219,8 +219,7 @@ class Base_th(Style):
             img_hover=Img().calendrier(),
             img_rgb="",
             img_hover_rgb="",
-            img_margin_top=(VBase.WG_HEIGHT - VBase.IMG_HEIGHT) / 2,
-            img_margin_right=(VBase.WG_HEIGHT - VBase.IMG_HEIGHT) / 2,
+            img_margin=((VBase.WG_HEIGHT - VBase.IMG_HEIGHT) / 2, 0, (VBase.WG_HEIGHT - VBase.IMG_HEIGHT) / 2, 0),
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
@@ -235,6 +234,5 @@ class Base_tr(Style):
             img_hover=Img().calendrier(),
             img_rgb="",
             img_hover_rgb="",
-            img_margin_top=(VBase.WG_HEIGHT - VBase.IMG_HEIGHT) / 2,
-            img_margin_right=(VBase.WG_HEIGHT - VBase.IMG_HEIGHT) / 2,
+            img_margin=((VBase.WG_HEIGHT - VBase.IMG_HEIGHT) / 2, 0, (VBase.WG_HEIGHT - VBase.IMG_HEIGHT) / 2, 0),
     )

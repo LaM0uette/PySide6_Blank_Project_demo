@@ -126,5 +126,4 @@ class Main(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            img_margin_left=(VBase.WG_HEIGHT - (VBase.WG_HEIGHT * StyleBase().x_ico())) / 2,
         )
