@@ -5,24 +5,24 @@ class Style:
     def __init__(
             self,
             *wgs,
-            width=p_base.WIDTH,
-            height=p_base.HEIGHT,
-            value_min=p_base.VAL_MIN,
-            value_max=p_base.VAL_MAX,
-            value_step=p_base.VAL_STEP,
-            curseur=p_base.CUR,
+            width=VBase.WIDTH,
+            height=VBase.HEIGHT,
+            value_min=VBase.VAL_MIN,
+            value_max=VBase.VAL_MAX,
+            value_step=VBase.VAL_STEP,
+            curseur=VBase.CUR,
 
             # Couleurs BG
-            bg=p_base.BG,
-            bg_groove=p_base.BG_GROOVE,
+            bg=VBase.BG,
+            bg_groove=VBase.BG_GROOVE,
             bg_groove_2=None,
-            bg_groove_hover=p_base.BG_GROOVE_HOVER,
+            bg_groove_hover=VBase.BG_GROOVE_HOVER,
             bg_groove_hover_2=None,
-            bg_groove_pressed=p_base.BG_GROOVE_PRESSED,
+            bg_groove_pressed=VBase.BG_GROOVE_PRESSED,
             bg_groove_pressed_2=None,
-            bg_handle=p_base.BG_HANDLE,
-            bg_handle_hover=p_base.BG_HANDLE_HOVER,
-            bg_handle_pressed=p_base.BG_HANDLE_PRESSED,
+            bg_handle=VBase.BG_HANDLE,
+            bg_handle_hover=VBase.BG_HANDLE_HOVER,
+            bg_handle_pressed=VBase.BG_HANDLE_PRESSED,
             gradient=((0, )*4),
 
             # Dimensions WG
@@ -38,28 +38,28 @@ class Style:
             margin_handle_v=((0, )*4),
 
             # Bordures
-            border=p_base.WG_BORDER_WIDTH,
-            border_style=p_base.WG_BORDER_STYLE,
-            border_rgb=p_base.WG_BORDER_RGB,
+            border=VBase.WG_BORDER_WIDTH,
+            border_style=VBase.WG_BORDER_STYLE,
+            border_rgb=VBase.WG_BORDER_RGB,
             # Bordures hover
-            border_hover=p_base.WG_BORDER_WIDTH,
-            border_hover_style=p_base.WG_BORDER_STYLE,
-            border_hover_rgb=p_base.WG_BORDER_RGB,
+            border_hover=VBase.WG_BORDER_WIDTH,
+            border_hover_style=VBase.WG_BORDER_STYLE,
+            border_hover_rgb=VBase.WG_BORDER_RGB,
             # Bordures slider h
-            border_handle_h=p_base.WG_BORDER_WIDTH,
-            border_handle_h_style=p_base.WG_BORDER_STYLE,
-            border_handle_h_rgb=p_base.WG_BORDER_RGB,
+            border_handle_h=VBase.WG_BORDER_WIDTH,
+            border_handle_h_style=VBase.WG_BORDER_STYLE,
+            border_handle_h_rgb=VBase.WG_BORDER_RGB,
             # Bordures slider v
-            border_handle_v=p_base.WG_BORDER_WIDTH,
-            border_handle_v_style=p_base.WG_BORDER_STYLE,
-            border_handle_v_rgb=p_base.WG_BORDER_RGB,
+            border_handle_v=VBase.WG_BORDER_WIDTH,
+            border_handle_v_style=VBase.WG_BORDER_STYLE,
+            border_handle_v_rgb=VBase.WG_BORDER_RGB,
 
             # Rayons
-            radius=p_base.WG_RADIUS,
-            radius_groove_h=p_base.WG_RADIUS,
-            radius_groove_v=p_base.WG_RADIUS,
-            radius_handle_h=p_base.WG_RADIUS,
-            radius_handle_v=p_base.WG_RADIUS,
+            radius=VBase.WG_RADIUS,
+            radius_groove_h=VBase.WG_RADIUS,
+            radius_groove_v=VBase.WG_RADIUS,
+            radius_handle_h=VBase.WG_RADIUS,
+            radius_handle_v=VBase.WG_RADIUS,
     ):
         style = f"""
                 /* SLIDER  */

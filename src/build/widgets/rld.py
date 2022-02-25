@@ -1,7 +1,7 @@
 import importlib
 
 from . import VBase
-importlib.reload(p_base)
+importlib.reload(VBase)
 
 from .classes import CheckBox, ComboBox, DateEdit, Frame, Label, \
     ListWidget, ProgressBar, RadioButton, ScrollArea, Slider, \

@@ -8,46 +8,46 @@ class Style:
     def __init__(
             self,
             *wgs,
-            width=p_base.WG_WIDTH,
-            height=p_base.WG_HEIGHT,
-            font=p_base.FONT,
-            font_size=p_base.FONT_SIZE,
+            width=VBase.WG_WIDTH,
+            height=VBase.WG_HEIGHT,
+            font=VBase.FONT,
+            font_size=VBase.FONT_SIZE,
             align_horizontal=Align().h_center(),
             align_vertical=Align().v_center(),
             curseur=Cur().souris_main(),
 
             # Couleurs BG
-            bg=p_base.BG,
-            bg_hover=p_base.BG_HOVER,
-            bg_selection=p_base.BG_SELECTION,
-            bg_item=p_base.BG_ITEM,
-            bg_item_hover=p_base.BG_ITEM_HOVER,
+            bg=VBase.BG,
+            bg_hover=VBase.BG_HOVER,
+            bg_selection=VBase.BG_SELECTION,
+            bg_item=VBase.BG_ITEM,
+            bg_item_hover=VBase.BG_ITEM_HOVER,
             bg_header=Rgb().th2(),
             bg_header_hover=Rgb().th2(),
             bg_mois=Rgb().th2(),
             # Couleurs FG
-            fg=p_base.FG,
-            fg_hover=p_base.FG_HOVER,
-            fg_selection=p_base.FG_SELECTION,
-            fg_item=p_base.FG_ITEM,
-            fg_item_hover=p_base.FG_ITEM_HOVER,
+            fg=VBase.FG,
+            fg_hover=VBase.FG_HOVER,
+            fg_selection=VBase.FG_SELECTION,
+            fg_item=VBase.FG_ITEM,
+            fg_item_hover=VBase.FG_ITEM_HOVER,
             fg_header=Rgb().th1(),
             fg_header_hover=Rgb().bn1(),
             fg_mois=Rgb().th1(),
 
             # Images
-            img=p_base.IMG_UNROLL,
-            img_hover=p_base.IMG_UNROLL_HOVER,
-            img_right=p_base.IMG_RIGHT,
-            img_left=p_base.IMG_LEFT,
+            img=VBase.IMG_UNROLL,
+            img_hover=VBase.IMG_UNROLL_HOVER,
+            img_right=VBase.IMG_RIGHT,
+            img_left=VBase.IMG_LEFT,
             # Images RGB
-            img_rgb=p_base.IMG_UNROLL_RGB,
-            img_hover_rgb=p_base.IMG_UNROLL_HOVER_RGB,
-            img_right_rgb=p_base.IMG_RIGHT_RGB,
-            img_left_rgb=p_base.IMG_LEFT_RGB,
+            img_rgb=VBase.IMG_UNROLL_RGB,
+            img_hover_rgb=VBase.IMG_UNROLL_HOVER_RGB,
+            img_right_rgb=VBase.IMG_RIGHT_RGB,
+            img_left_rgb=VBase.IMG_LEFT_RGB,
             # Images DIM
-            img_width=p_base.img_width,
-            img_height=p_base.img_height,
+            img_width=VBase.img_width,
+            img_height=VBase.img_height,
             # Images positions
             img_margin_top=0,
             img_margin_bottom=0,
@@ -55,21 +55,21 @@ class Style:
             img_margin_left=0,
 
             # Bordures
-            border=p_base.WG_BORDER_WIDTH,
-            border_style=p_base.WG_BORDER_STYLE,
-            border_rgb=p_base.WG_BORDER_RGB,
+            border=VBase.WG_BORDER_WIDTH,
+            border_style=VBase.WG_BORDER_STYLE,
+            border_rgb=VBase.WG_BORDER_RGB,
             # Bordures hover
-            border_hover=p_base.WG_BORDER_WIDTH,
-            border_hover_style=p_base.WG_BORDER_STYLE,
-            border_hover_rgb=p_base.WG_BORDER_RGB,
+            border_hover=VBase.WG_BORDER_WIDTH,
+            border_hover_style=VBase.WG_BORDER_STYLE,
+            border_hover_rgb=VBase.WG_BORDER_RGB,
 
             # Bordures jours
             border_day_size=StyleBase().bd(),
-            border_day_style=p_base.WG_BORDER_STYLE,
-            border_day_rgb=p_base.FG_ITEM_HOVER,
+            border_day_style=VBase.WG_BORDER_STYLE,
+            border_day_rgb=VBase.FG_ITEM_HOVER,
 
             # Rayons
-            radius=p_base.WG_RADIUS,
+            radius=VBase.WG_RADIUS,
     ):
         style = f"""
                 /* WIDGET */
@@ -222,8 +222,8 @@ class Base_th(Style):
             img_hover=Img().calendrier(),
             img_rgb="",
             img_hover_rgb="",
-            img_margin_top=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
-            img_margin_right=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
+            img_margin_top=(VBase.WG_HEIGHT - VBase.IMG_HEIGHT) / 2,
+            img_margin_right=(VBase.WG_HEIGHT - VBase.IMG_HEIGHT) / 2,
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
@@ -238,6 +238,6 @@ class Base_tr(Style):
             img_hover=Img().calendrier(),
             img_rgb="",
             img_hover_rgb="",
-            img_margin_top=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
-            img_margin_right=(p_base.WG_HEIGHT - p_base.IMG_HEIGHT) / 2,
+            img_margin_top=(VBase.WG_HEIGHT - VBase.IMG_HEIGHT) / 2,
+            img_margin_right=(VBase.WG_HEIGHT - VBase.IMG_HEIGHT) / 2,
     )

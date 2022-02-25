@@ -7,36 +7,36 @@ class Style:
     def __init__(
             self,
             *wgs,
-            width=p_base.WIDTH,
-            height=p_base.HEIGHT,
-            scroll_h=p_base.SCROLL_H,
-            scroll_v=p_base.SCROLL_V,
+            width=VBase.WIDTH,
+            height=VBase.HEIGHT,
+            scroll_h=VBase.SCROLL_H,
+            scroll_v=VBase.SCROLL_V,
 
             # Couleurs BG
-            bg=p_base.BG,
+            bg=VBase.BG,
 
             # Bordures
-            border=p_base.WG_BORDER_WIDTH,
-            border_style=p_base.WG_BORDER_STYLE,
-            border_rgb=p_base.WG_BORDER_RGB,
+            border=VBase.WG_BORDER_WIDTH,
+            border_style=VBase.WG_BORDER_STYLE,
+            border_rgb=VBase.WG_BORDER_RGB,
             # Bordures hover
-            border_hover=p_base.WG_BORDER_WIDTH,
-            border_hover_style=p_base.WG_BORDER_STYLE,
-            border_hover_rgb=p_base.WG_BORDER_RGB,
+            border_hover=VBase.WG_BORDER_WIDTH,
+            border_hover_style=VBase.WG_BORDER_STYLE,
+            border_hover_rgb=VBase.WG_BORDER_RGB,
 
             # Rayons
-            radius=p_base.WG_RADIUS,
+            radius=VBase.WG_RADIUS,
 
             # Scroll
-            scroll_bg=p_base.SCROLL_BG,
-            scroll_width=p_base.SCROLL_WIDTH,
-            scroll_height=p_base.SCROLL_HEIGHT,
-            scroll_handle_bg=p_base.SCROLL_HANDLE_BG,
-            scroll_handle_bg_hover=p_base.SCROLL_HANDLE_BG_HOVER,
-            scroll_handle_fg=p_base.SCROLL_HANDLE_FG,
-            scroll_handle_fg_hover=p_base.SCROLL_HANDLE_FG_HOVER,
-            scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
-            scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
+            scroll_bg=VBase.SCROLL_BG,
+            scroll_width=VBase.SCROLL_WIDTH,
+            scroll_height=VBase.SCROLL_HEIGHT,
+            scroll_handle_bg=VBase.SCROLL_HANDLE_BG,
+            scroll_handle_bg_hover=VBase.SCROLL_HANDLE_BG_HOVER,
+            scroll_handle_fg=VBase.SCROLL_HANDLE_FG,
+            scroll_handle_fg_hover=VBase.SCROLL_HANDLE_FG_HOVER,
+            scroll_handle_min_width=VBase.SCROLL_HANDLE_MIN_WIDTH,
+            scroll_handle_min_height=VBase.SCROLL_HANDLE_MIN_HEIGHT,
     ):
         style = f"""
                 /* SCROLLAREA */

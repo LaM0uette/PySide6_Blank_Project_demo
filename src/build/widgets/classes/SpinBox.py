@@ -7,33 +7,33 @@ class Style:
     def __init__(
             self,
             *wgs,
-            wg_type=p_base.SB_BUTTONS_TYPE,
-            width=p_base.WG_WIDTH,
-            height=p_base.WG_HEIGHT,
-            font=p_base.FONT,
-            font_size=p_base.FONT_SIZE,
-            no_focus=p_base.NO_FOCUS,
-            value_min=p_base.VAL_MIN,
-            value_max=p_base.VAL_MAX,
-            value_step=p_base.VAL_STEP,
+            wg_type=VBase.SB_BUTTONS_TYPE,
+            width=VBase.WG_WIDTH,
+            height=VBase.WG_HEIGHT,
+            font=VBase.FONT,
+            font_size=VBase.FONT_SIZE,
+            no_focus=VBase.NO_FOCUS,
+            value_min=VBase.VAL_MIN,
+            value_max=VBase.VAL_MAX,
+            value_step=VBase.VAL_STEP,
             align_horizontal=Align().h_center(),
             align_vertical=Align().v_center(),
-            curseur=p_base.CUR,
-            curseur_le=p_base.CUR_LE,
+            curseur=VBase.CUR,
+            curseur_le=VBase.CUR_LE,
 
             # Couleurs BG
-            bg=p_base.BG,
-            bg_selection=p_base.BG_SELECTION,
+            bg=VBase.BG,
+            bg_selection=VBase.BG_SELECTION,
             # Couleurs FG
-            fg=p_base.FG,
-            fg_selection=p_base.FG_SELECTION,
+            fg=VBase.FG,
+            fg_selection=VBase.FG_SELECTION,
 
             # Images
-            img_up=p_base.IMG_UP,
-            img_down=p_base.IMG_DOWN,
+            img_up=VBase.IMG_UP,
+            img_down=VBase.IMG_DOWN,
             # Images RGB
-            img_up_rgb=p_base.IMG_UP_RGB,
-            img_down_rgb=p_base.IMG_DOWN_RGB,
+            img_up_rgb=VBase.IMG_UP_RGB,
+            img_down_rgb=VBase.IMG_DOWN_RGB,
             # Images DIM
             img_up_width=10,
             img_up_height=10,
@@ -50,16 +50,16 @@ class Style:
             img_down_left=0,
 
             # Bordures
-            border=p_base.WG_BORDER_WIDTH,
-            border_style=p_base.WG_BORDER_STYLE,
-            border_rgb=p_base.WG_BORDER_RGB,
+            border=VBase.WG_BORDER_WIDTH,
+            border_style=VBase.WG_BORDER_STYLE,
+            border_rgb=VBase.WG_BORDER_RGB,
             # Bordures hover
-            border_hover=p_base.WG_BORDER_WIDTH,
-            border_hover_style=p_base.WG_BORDER_STYLE,
-            border_hover_rgb=p_base.WG_BORDER_RGB,
+            border_hover=VBase.WG_BORDER_WIDTH,
+            border_hover_style=VBase.WG_BORDER_STYLE,
+            border_hover_rgb=VBase.WG_BORDER_RGB,
 
             # Rayons
-            radius=p_base.WG_RADIUS,
+            radius=VBase.WG_RADIUS,
     ):
         style = f"""
                 /* SPINBOX */

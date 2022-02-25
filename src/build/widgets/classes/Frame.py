@@ -7,21 +7,21 @@ class Style:
     def __init__(
             self,
             *wgs,
-            width=p_base.WIDTH,
-            height=p_base.HEIGHT,
+            width=VBase.WIDTH,
+            height=VBase.HEIGHT,
             curseur=Cur().souris(),
 
             # Couleurs BG
-            bg=p_base.BG,
+            bg=VBase.BG,
 
             # Bordures
-            border=p_base.WG_BORDER_WIDTH,
-            border_style=p_base.WG_BORDER_STYLE,
-            border_rgb=p_base.WG_BORDER_RGB,
+            border=VBase.WG_BORDER_WIDTH,
+            border_style=VBase.WG_BORDER_STYLE,
+            border_rgb=VBase.WG_BORDER_RGB,
             # Bordures hover
-            border_hover=p_base.WG_BORDER_WIDTH,
-            border_hover_style=p_base.WG_BORDER_STYLE,
-            border_hover_rgb=p_base.WG_BORDER_RGB,
+            border_hover=VBase.WG_BORDER_WIDTH,
+            border_hover_style=VBase.WG_BORDER_STYLE,
+            border_hover_rgb=VBase.WG_BORDER_RGB,
 
             # Rayons
             radius=(0, 0, 0, 0),
@@ -91,7 +91,7 @@ class Menu_top(Style):
             height=Dim().h9(),
 
             bg=Rgb().th1(),
-            radius=(p_base.RADIUS, p_base.RADIUS, 0, 0)
+            radius=(VBase.RADIUS, VBase.RADIUS, 0, 0)
     )
 class Menu_bottom(Style):
     def __init__(self, *wgs):
@@ -100,7 +100,7 @@ class Menu_bottom(Style):
             height=Dim().h10(),
 
             bg=Rgb().th2(),
-            radius=(0, 0, p_base.RADIUS-1, p_base.RADIUS-1)
+            radius=(0, 0, VBase.RADIUS-1, VBase.RADIUS-1)
     )
 class Menu_bottom_dlg(Style):
     def __init__(self, *wgs):
@@ -109,7 +109,7 @@ class Menu_bottom_dlg(Style):
             height=Dim().h9(),
 
             bg=Rgb().th2(),
-            radius=(0, 0, p_base.RADIUS-1, p_base.RADIUS-1)
+            radius=(0, 0, VBase.RADIUS-1, VBase.RADIUS-1)
     )
 
 
@@ -128,7 +128,7 @@ class Cadre:
             border_rgb=rgb,
             border_hover=((StyleBase().bd(),) * 4),
             border_hover_rgb=rgb,
-            radius = ((p_base.RADIUS+1, )*4)
+            radius = ((VBase.RADIUS+1, )*4)
         )
 
     def th1(self): self.rtn(rgb=Rgb().th1())
@@ -158,5 +158,5 @@ class Demo_hover(Style):
             border_hover=((StyleBase().bd(),) * 4),
             border_hover_style="dashed",
             border_hover_rgb=Rgb().bn1(),
-            radius = ((p_base.RADIUS+1, )*4)
+            radius = ((VBase.RADIUS+1, )*4)
     )

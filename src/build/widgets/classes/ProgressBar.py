@@ -5,21 +5,21 @@ class Style:
     def __init__(
             self,
             *wgs,
-            width=p_base.WG_WIDTH,
-            height=p_base.WG_HEIGHT,
-            font=p_base.FONT,
-            font_size=p_base.FONT_SIZE,
-            text_visible=p_base.TEXT_VISIBLE,
+            width=VBase.WG_WIDTH,
+            height=VBase.WG_HEIGHT,
+            font=VBase.FONT,
+            font_size=VBase.FONT_SIZE,
+            text_visible=VBase.TEXT_VISIBLE,
             align_horizontal=Align().h_center(),
             align_vertical=Align().v_center(),
             curseur=Cur().souris(),
 
             # Couleurs BG
-            bg=p_base.BG,
-            bg_chunk=p_base.BG_CHUNK,
-            bg_chunk_hover=p_base.BG_CHUNK_HOVER,
+            bg=VBase.BG,
+            bg_chunk=VBase.BG_CHUNK,
+            bg_chunk_hover=VBase.BG_CHUNK_HOVER,
             # Couleurs FG
-            fg=p_base.FG,
+            fg=VBase.FG,
 
             # Positions WG
             padding_top=0,
@@ -28,17 +28,17 @@ class Style:
             padding_left=0,
 
             # Bordures
-            border=p_base.WG_BORDER_WIDTH,
-            border_style=p_base.WG_BORDER_STYLE,
-            border_rgb=p_base.WG_BORDER_RGB,
+            border=VBase.WG_BORDER_WIDTH,
+            border_style=VBase.WG_BORDER_STYLE,
+            border_rgb=VBase.WG_BORDER_RGB,
             # Bordures hover
-            border_hover=p_base.WG_BORDER_WIDTH,
-            border_hover_style=p_base.WG_BORDER_STYLE,
-            border_hover_rgb=p_base.WG_BORDER_RGB,
+            border_hover=VBase.WG_BORDER_WIDTH,
+            border_hover_style=VBase.WG_BORDER_STYLE,
+            border_hover_rgb=VBase.WG_BORDER_RGB,
 
             # Rayons
-            radius=p_base.WG_RADIUS,
-            radius_chunk=p_base.WG_RADIUS
+            radius=VBase.WG_RADIUS,
+            radius_chunk=VBase.WG_RADIUS
     ):
         style = f"""
                 /* PROGRESSBAR */

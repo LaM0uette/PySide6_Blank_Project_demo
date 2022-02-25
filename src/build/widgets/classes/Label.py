@@ -7,31 +7,31 @@ class Style:
             *wgs,
             width=None,
             height=None,
-            font=p_base.FONT,
-            font_size=p_base.FONT_SIZE,
+            font=VBase.FONT,
+            font_size=VBase.FONT_SIZE,
             align_horizontal=Align().left(),
             align_vertical=Align().v_center(),
-            word_wrap=p_base.WORD_WRAP,
-            curseur=p_base.CUR,
+            word_wrap=VBase.WORD_WRAP,
+            curseur=VBase.CUR,
 
             # Couleurs BG
-            bg=p_base.BG,
-            bg_hover=p_base.BG_HOVER,
+            bg=VBase.BG,
+            bg_hover=VBase.BG_HOVER,
             # Couleurs FG
-            fg=p_base.FG,
-            fg_hover=p_base.FG_HOVER,
+            fg=VBase.FG,
+            fg_hover=VBase.FG_HOVER,
 
             # Bordures
-            border=p_base.WG_BORDER_WIDTH,
-            border_style=p_base.WG_BORDER_STYLE,
-            border_rgb=p_base.WG_BORDER_RGB,
+            border=VBase.WG_BORDER_WIDTH,
+            border_style=VBase.WG_BORDER_STYLE,
+            border_rgb=VBase.WG_BORDER_RGB,
             # Bordures hover
-            border_hover=p_base.WG_BORDER_WIDTH,
-            border_hover_style=p_base.WG_BORDER_STYLE,
-            border_hover_rgb=p_base.WG_BORDER_RGB,
+            border_hover=VBase.WG_BORDER_WIDTH,
+            border_hover_style=VBase.WG_BORDER_STYLE,
+            border_hover_rgb=VBase.WG_BORDER_RGB,
 
             # Rayons
-            radius=p_base.WG_RADIUS,
+            radius=VBase.WG_RADIUS,
 
     ):
         style = f"""
@@ -83,13 +83,13 @@ class Style:
 ##     BASE     ##
 ##################
 class Base_th(Style):
-    def __init__(self, *wgs, font_size=p_base.FONT_SIZE):
+    def __init__(self, *wgs, font_size=VBase.FONT_SIZE):
         super().__init__(
             *wgs,
             font_size=font_size,
     )
 class Base_tr(Style):
-    def __init__(self, *wgs, font_size=p_base.FONT_SIZE):
+    def __init__(self, *wgs, font_size=VBase.FONT_SIZE):
         super().__init__(
             *wgs,
             font_size=font_size,
@@ -116,14 +116,14 @@ class Titre(Style):
 ##     DEMO     ##
 ##################
 class Demo_th(Style):
-    def __init__(self, *wgs, font_size=p_base.FONT_SIZE):
+    def __init__(self, *wgs, font_size=VBase.FONT_SIZE):
         super().__init__(
             *wgs,
             height=Dim().h9(),
             font_size=font_size,
     )
 class Demo_tr(Style):
-    def __init__(self, *wgs, font_size=p_base.FONT_SIZE):
+    def __init__(self, *wgs, font_size=VBase.FONT_SIZE):
         super().__init__(
             *wgs,
             height=Dim().h9(),

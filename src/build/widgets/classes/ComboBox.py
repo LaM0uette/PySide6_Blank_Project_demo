@@ -5,58 +5,58 @@ class Style:
     def __init__(
             self,
             *wgs,
-            width=p_base.WG_WIDTH,
-            height=p_base.WG_HEIGHT,
-            font=p_base.FONT,
-            font_size=p_base.FONT_SIZE,
-            edit=p_base.EDIT,
+            width=VBase.WG_WIDTH,
+            height=VBase.WG_HEIGHT,
+            font=VBase.FONT,
+            font_size=VBase.FONT_SIZE,
+            edit=VBase.EDIT,
             curseur=Cur().souris_main(),
 
             # Couleurs BG
-            bg=p_base.BG,
-            bg_hover=p_base.BG_HOVER,
-            bg_selection=p_base.BG_SELECTION,
-            bg_item=p_base.BG_ITEM,
-            bg_item_hover=p_base.BG_ITEM_HOVER,
+            bg=VBase.BG,
+            bg_hover=VBase.BG_HOVER,
+            bg_selection=VBase.BG_SELECTION,
+            bg_item=VBase.BG_ITEM,
+            bg_item_hover=VBase.BG_ITEM_HOVER,
             # Couleurs FG
-            fg=p_base.FG,
-            fg_hover=p_base.FG_HOVER,
-            fg_selection=p_base.FG_SELECTION,
-            fg_item=p_base.FG_ITEM,
-            fg_item_hover=p_base.FG_ITEM_HOVER,
+            fg=VBase.FG,
+            fg_hover=VBase.FG_HOVER,
+            fg_selection=VBase.FG_SELECTION,
+            fg_item=VBase.FG_ITEM,
+            fg_item_hover=VBase.FG_ITEM_HOVER,
 
             # Images
-            img=p_base.IMG_UNROLL,
-            img_hover=p_base.IMG_UNROLL_HOVER,
+            img=VBase.IMG_UNROLL,
+            img_hover=VBase.IMG_UNROLL_HOVER,
             # Images RGB
-            img_rgb=p_base.IMG_UNROLL_RGB,
-            img_hover_rgb=p_base.IMG_UNROLL_HOVER_RGB,
+            img_rgb=VBase.IMG_UNROLL_RGB,
+            img_hover_rgb=VBase.IMG_UNROLL_HOVER_RGB,
             # Images DIM
-            img_width=p_base.img_width,
-            img_height=p_base.img_height,
+            img_width=VBase.img_width,
+            img_height=VBase.img_height,
 
             # Bordures
-            border=p_base.WG_BORDER_WIDTH,
-            border_style=p_base.WG_BORDER_STYLE,
-            border_rgb=p_base.WG_BORDER_RGB,
+            border=VBase.WG_BORDER_WIDTH,
+            border_style=VBase.WG_BORDER_STYLE,
+            border_rgb=VBase.WG_BORDER_RGB,
             # Bordures hover
-            border_hover=p_base.WG_BORDER_WIDTH,
-            border_hover_style=p_base.WG_BORDER_STYLE,
-            border_hover_rgb=p_base.WG_BORDER_RGB,
+            border_hover=VBase.WG_BORDER_WIDTH,
+            border_hover_style=VBase.WG_BORDER_STYLE,
+            border_hover_rgb=VBase.WG_BORDER_RGB,
 
             # Rayons
-            radius=p_base.WG_RADIUS,
+            radius=VBase.WG_RADIUS,
 
             # Scroll
-            scroll_bg=p_base.SCROLL_BG,
-            scroll_width=p_base.SCROLL_WIDTH,
-            scroll_height=p_base.SCROLL_HEIGHT,
-            scroll_handle_bg=p_base.SCROLL_HANDLE_BG,
-            scroll_handle_bg_hover=p_base.SCROLL_HANDLE_BG_HOVER,
-            scroll_handle_fg=p_base.SCROLL_HANDLE_FG,
-            scroll_handle_fg_hover=p_base.SCROLL_HANDLE_FG_HOVER,
-            scroll_handle_min_width=p_base.SCROLL_HANDLE_MIN_WIDTH,
-            scroll_handle_min_height=p_base.SCROLL_HANDLE_MIN_HEIGHT,
+            scroll_bg=VBase.SCROLL_BG,
+            scroll_width=VBase.SCROLL_WIDTH,
+            scroll_height=VBase.SCROLL_HEIGHT,
+            scroll_handle_bg=VBase.SCROLL_HANDLE_BG,
+            scroll_handle_bg_hover=VBase.SCROLL_HANDLE_BG_HOVER,
+            scroll_handle_fg=VBase.SCROLL_HANDLE_FG,
+            scroll_handle_fg_hover=VBase.SCROLL_HANDLE_FG_HOVER,
+            scroll_handle_min_width=VBase.SCROLL_HANDLE_MIN_WIDTH,
+            scroll_handle_min_height=VBase.SCROLL_HANDLE_MIN_HEIGHT,
 
     ):
         style = f"""
