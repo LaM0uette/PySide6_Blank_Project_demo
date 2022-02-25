@@ -181,6 +181,8 @@ class Base_th(Style):
         super().__init__(
             *wgs,
             fg_item_checked=Rgb().bn1(),
+            border=((StyleBase().bd(), )*4),
+            border_rgb=Rgb().th3()
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
