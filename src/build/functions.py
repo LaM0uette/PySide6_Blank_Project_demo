@@ -90,14 +90,14 @@ class Fct:
         if wg is None or img is None or dim is None: return
 
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(img + ".svg"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon.addPixmap(QtGui.QPixmap(f"{img}.svg"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         wg.setIcon(icon)
         wg.setIconSize(QtCore.QSize(dim, dim))
     def PIXMAP(self):
         wg, img, dim = self.kwargs.get("wg"), self.kwargs.get("img"), self.kwargs.get("dim")
         if wg is None or img is None or dim is None: return
 
-        wg.setPixmap(QtGui.QPixmap(img + ".svg"))
+        wg.setPixmap(QtGui.QPixmap(f"{img}.svg"))
         wg.setScaledContents(True)
     def RGB_HEX(self, rgb):
         return "#" + "%02x%02x%02x" % rgb
