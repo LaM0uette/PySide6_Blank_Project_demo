@@ -85,6 +85,8 @@ class Style:
 
             # Rayons
             radius=p_base.WG_RADIUS,
+            radius_item=p_base.WG_RADIUS,
+            radius_hd=p_base.WG_RADIUS,
 
             # Scroll
             scroll_bg=p_base.SCROLL_BG,
@@ -118,6 +120,10 @@ class Style:
                 border-bottom: {border_item[1]}px {border_item_style} rgba{border_item_rgb};
                 border-right: {border_item[2]}px {border_item_style} rgba{border_item_rgb};
                 border-left: {border_item[3]}px {border_item_style} rgba{border_item_rgb};
+                border-top-right-radius: {radius_item[0]}px;
+                border-top-left-radius: {radius_item[1]}px;
+                border-bottom-right-radius: {radius_item[2]}px;
+                border-bottom-left-radius: {radius_item[3]}px;
                 }}
                 QTableWidget::item:hover, QTableView::item:hover {{
                 background-color: rgba{bg_item_hover};
@@ -166,6 +172,10 @@ class Style:
                 border-bottom: {border_hd[1]}px {border_hd_style} rgba{border_hd_rgb};
                 border-right: {border_hd[2]}px {border_hd_style} rgba{border_hd_rgb};
                 border-left: {border_hd[3]}px {border_hd_style} rgba{border_hd_rgb};
+                border-top-right-radius: {radius_hd[0]}px;
+                border-top-left-radius: {radius_hd[1]}px;
+                border-bottom-right-radius: {radius_hd[2]}px;
+                border-bottom-left-radius: {radius_hd[3]}px;
                 }}
                 QHeaderView::section:hover {{
                 background-color: rgba{bg_header_hover};
@@ -264,6 +274,9 @@ class Base_th(Style):
         super().__init__(
             *wgs,
             bg_corner=Rgb().th1(),
+
+            border=((StyleBase().bd(),) * 4),
+            border_rgb=Rgb().th3(),
         )
 class Base_tr(Style):
     def __init__(self, *wgs):
@@ -295,6 +308,9 @@ class Demo_th(Style):
         super().__init__(
             *wgs,
             height=Dim().h4(),
+
+            border=((StyleBase().bd(),) * 4),
+            border_rgb=Rgb().th3(),
 
             bg_corner=Rgb().th1(),
             border_hd=self.bd_gen,
