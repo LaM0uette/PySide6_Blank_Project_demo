@@ -14,7 +14,6 @@ class Style:
 
             # Couleurs BG
             bg=VBase.BG,
-            bg_hover=VBase.BG_HOVER,
             bg_item=VBase.BG_ITEM,
             bg_item_hover=VBase.BG_ITEM_HOVER,
             bg_item_checked=VBase.BG_ITEM_CHECKED,
@@ -23,7 +22,6 @@ class Style:
             bg_separator=VBase.BG_SEPARATOR,
             # Couleurs FG
             fg=VBase.FG,
-            fg_hover=VBase.FG_HOVER,
             fg_item=VBase.FG_ITEM,
             fg_item_hover=VBase.FG_ITEM_HOVER,
             fg_item_checked=VBase.FG_ITEM_CHECKED,
@@ -46,10 +44,6 @@ class Style:
                 QMenu {{
                 background-color: rgba{bg};
                 color: rgba{fg};
-                }}
-                QMenu:hover {{
-                background-color: rgba{bg_hover};
-                color: rgba{fg_hover};
                 }}
                 
                 /* SEPARATEUR */
@@ -116,7 +110,8 @@ class Main(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-
+            bg=Rgb().th1(),
+            fg=Rgb().th3(),
             border=((StyleBase().bd(), )*4),
             border_rgb=Rgb().th2(),
         )
