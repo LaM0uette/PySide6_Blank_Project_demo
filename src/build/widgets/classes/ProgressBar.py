@@ -37,7 +37,8 @@ class Style:
             border_hover_rgb=p_base.WG_BORDER_RGB,
 
             # Rayons
-            radius=p_base.WG_RADIUS
+            radius=p_base.WG_RADIUS,
+            radius_chunk=p_base.WG_RADIUS
     ):
         style = f"""
                 /* PROGRESSBAR */
@@ -49,6 +50,10 @@ class Style:
                 /* PROGRESS */
                 QProgressBar::chunk {{
                 background-color: rgba{bg_chunk};
+                border-top-right-radius: {radius_chunk[0]}px;
+                border-top-left-radius: {radius_chunk[1]}px;
+                border-bottom-right-radius: {radius_chunk[2]}px;
+                border-bottom-left-radius: {radius_chunk[3]}px;
                 }}
                 QProgressBar::chunk:hover {{
                 background-color: rgba{bg_chunk_hover};
