@@ -200,6 +200,7 @@ class Base_tr(Style):
             bg_item_checked_hover=Rgb().tr(),
             fg_item=Rgb().th3(),
             fg_item_checked=Rgb().bn1(),
+            radius_item=((0, )*4)
         )
 
 
@@ -240,4 +241,5 @@ class Demo_tr(Style):
             border_item_hover_rgb=Rgb().th3(),
             border_item_checked_rgb=Rgb().bn1(),
             border_item_checked_hover_rgb=Rgb().bn1(),
+            radius_item=((0, )*4)
     )
