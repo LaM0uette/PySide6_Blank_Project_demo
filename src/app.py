@@ -22,6 +22,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         self.tray = QtWidgets.QSystemTrayIcon(QtGui.QPixmap(ICO_MAIN), self)
         self.tray_menu = QtWidgets.QMenu()
+        self.tray_menu.setAttribute(QtCore.Qt.WA_TranslucentBackground)
 
         self.setupUi(self)
         self.INIT()
@@ -228,9 +229,12 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.tray.activated.connect(self.showTrayEvent)
         TrayIcon.Main(self.tray_menu)
 
+        ### Actions
         qact_quitter = Fct().QACTION(slf=self, ico=Img().quitter(), ico_rgb="bn2", txt="Quitter", shortcut="Ctrl+Esc", fct=self.cacher)
 
+        ## Set actions
         self.tray_menu.addAction(qact_quitter)
+
 
         self.tray.setContextMenu(self.tray_menu)
         self.tray.show()
