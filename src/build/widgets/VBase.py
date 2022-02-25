@@ -27,6 +27,7 @@ BG_GROOVE_PRESSED = Rgb().th3()
 BG_HANDLE = Rgb().th2()
 BG_HANDLE_HOVER = Rgb().th2()
 BG_HANDLE_PRESSED = Rgb().bn1()
+BG_SEPARATOR = Rgb().bn1()
 
 # FG
 FG = Rgb().th1()

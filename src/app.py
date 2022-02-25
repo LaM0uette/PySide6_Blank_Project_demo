@@ -226,33 +226,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         pass
     def IN_TRAY(self):
         self.tray.activated.connect(self.showTrayEvent)
-
-        self.tray_menu.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
-        self.tray_menu.setFont(font.font12)
-        self.tray_menu.setStyleSheet("QMenu {"
-                                    f"background-color: rgb{data.ColorTH1};"
-                                    f"border: 2 solid rgb{data.ColorTH5};"
-                                    "}"
-                                    "QMenu::separator{"
-                                    "height: 3px;"
-                                    f"background-color: rgb{data.ColorTH5};"
-                                    "}"
-                                    "QMenu::item {"
-                                    f"background-color: rgb{data.ColorTH1};"
-                                    f"color: rgb{data.ColorTH3};"
-                                    "margin-left: 20px;"
-                                    "padding-left: 10px;"
-                                    "margin-top: 8px;"
-                                    "margin-bottom: 8px;"
-                                    "}"
-                                    "QMenu::item:hover {"
-                                    f"background-color: rgb{data.ColorTH1};"
-                                    f"color: rgb{data.ColorTH5};"
-                                    "}"
-                                    "QMenu::item:selected {"
-                                    f"background-color: rgb{data.ColorTH1};"
-                                    f"color: rgb{data.ColorTH5};"
-                                    "}")
+        TrayIcon.Main(self.tray)
 
         self.tray.setContextMenu(self.tray_menu)
         self.tray.show()

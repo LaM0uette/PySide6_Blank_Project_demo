@@ -9,40 +9,25 @@ class Style:
             height=VBase.WG_HEIGHT,
             font=VBase.FONT,
             font_size=VBase.FONT_SIZE,
+            height_separator=5,
             curseur=Cur().souris_main(),
 
             # Couleurs BG
             bg=VBase.BG,
             bg_hover=VBase.BG_HOVER,
-            bg_checked=VBase.BG_CHECKED,
-            bg_checked_hover=VBase.BG_CHECKED_HOVER,
+            bg_item=VBase.BG_ITEM,
+            bg_item_hover=VBase.BG_ITEM_HOVER,
+            bg_item_checked=VBase.BG_ITEM_CHECKED,
+            bg_item_checked_hover=VBase.BG_ITEM_CHECKED_HOVER,
+            # Couleurs BG autres
+            bg_separator=VBase.BG_SEPARATOR,
             # Couleurs FG
             fg=VBase.FG,
             fg_hover=VBase.FG_HOVER,
-            fg_checked=VBase.FG_CHECKED,
-            fg_checked_hover=VBase.FG_CHECKED_HOVER,
-
-            # Positions WG
-            spacing=10,
-
-            # Images
-            img_uncheck=VBase.IMG_UNCHECK,
-            img_uncheck_hover=VBase.IMG_UNCHECK_HOVER,
-            img_check=VBase.IMG_CHECK,
-            img_check_hover=VBase.IMG_CHECK_HOVER,
-            # Images RGB
-            img_uncheck_rgb=VBase.IMG_UNCHECK_RGB,
-            img_uncheck_hover_rgb=VBase.IMG_UNCHECK_HOVER_RGB,
-            img_check_rgb=VBase.IMG_CHECK_RGB,
-            img_check_hover_rgb=VBase.IMG_CHECK_HOVER_RGB,
-            # Images DIM
-            img_width=VBase.img_width,
-            img_height=VBase.img_height,
-            # Images positions
-            img_margin_top=0,
-            img_margin_bottom=0,
-            img_margin_right=0,
-            img_margin_left=0,
+            fg_item=VBase.FG_ITEM,
+            fg_item_hover=VBase.FG_ITEM_HOVER,
+            fg_item_checked=VBase.FG_ITEM_CHECKED,
+            fg_item_checked_hover=VBase.FG_ITEM_CHECKED_HOVER,
 
             # Bordures
             border=VBase.WG_BORDER_WIDTH,
@@ -52,84 +37,61 @@ class Style:
             border_hover=VBase.WG_BORDER_WIDTH,
             border_hover_style=VBase.WG_BORDER_STYLE,
             border_hover_rgb=VBase.WG_BORDER_RGB,
-            # Bordures checked
-            border_checked=VBase.WG_BORDER_WIDTH,
-            border_checked_style=VBase.WG_BORDER_STYLE,
-            border_checked_rgb=VBase.WG_BORDER_RGB,
-            # Bordures checked hover
-            border_checked_hover=VBase.WG_BORDER_WIDTH,
-            border_checked_hover_style=VBase.WG_BORDER_STYLE,
-            border_checked_hover_rgb=VBase.WG_BORDER_RGB,
 
             # Rayons
             radius=VBase.WG_RADIUS
     ):
         style = f"""
-                /* CHECKBOX */
-                QCheckBox {{
+                /* MENU */
+                QMenu {{
                 background-color: rgba{bg};
                 color: rgba{fg};
-                spacing: {spacing}px;
                 }}
-                QCheckBox:hover {{
+                QMenu:hover {{
                 background-color: rgba{bg_hover};
                 color: rgba{fg_hover};
                 }}
-                QCheckBox:checked {{
-                background-color: rgba{bg_checked};
-                color: rgba{fg_checked};
+                
+                /* SEPARATEUR */
+                QMenu::separator{{
+                height: {height_separator}px;
+                background-color: rgba{bg_separator};
                 }}
-                QCheckBox:checked:hover {{
-                background-color: rgba{bg_checked_hover};
-                color: rgba{fg_checked_hover};
+                
+                /* ITEM */
+                QMenu::item {{
+                background-color: rgb{bg_item};
+                color: rgb{fg_item};
+                margin-left: 20px;
+                padding-left: 10px;
+                margin-top: 8px;
+                margin-bottom: 8px;
                 }}
-
-                /* IMG */
-                QCheckBox::indicator {{
-                margin-top: {img_margin_top}px;
-                margin-bottom: {img_margin_bottom}px;
-                margin-right: {img_margin_right}px;
-                margin-left: {img_margin_left}px;
-                width: {img_width}px;
-                height: {img_height}px;
+                QMenu::item:hover {{
+                background-color: rgb{bg_item_hover};
+                color: rgb{fg_item_hover};
                 }}
-                QCheckBox::indicator:unchecked {{
-                image: url({f"{img_uncheck}{img_uncheck_rgb}.svg"});
+                QMenu::item:selected {{
+                background-color: rgb{bg_item_checked};
+                color: rgb{fg_item_checked};
                 }}
-                QCheckBox::indicator:hover {{
-                image: url({f"{img_uncheck_hover}{img_uncheck_hover_rgb}.svg"});
+                QMenu::item:selected:hover {{
+                background-color: rgb{bg_item_checked_hover};
+                color: rgb{fg_item_checked_hover};
                 }}
-                QCheckBox::indicator:checked {{
-                image: url({f"{img_check}{img_check_rgb}.svg"});
-                }}
-                QCheckBox::indicator:checked:hover {{
-                image: url({f"{img_check_hover}{img_check_hover_rgb}.svg"});
-                }}
-
+                
                 /* BORDURES */
-                .QCheckBox {{
+                .QMenu {{
                 border-top: {border[0]}px {border_style} rgba{border_rgb};
                 border-bottom: {border[1]}px {border_style} rgba{border_rgb};
                 border-right: {border[2]}px {border_style} rgba{border_rgb};
                 border-left: {border[3]}px {border_style} rgba{border_rgb};
                 }}
-                .QCheckBox:hover {{
+                .QMenu:hover {{
                 border-top: {border_hover[0]}px {border_hover_style} rgba{border_hover_rgb};
                 border-bottom: {border_hover[1]}px {border_hover_style} rgba{border_hover_rgb};
                 border-right: {border_hover[2]}px {border_hover_style} rgba{border_hover_rgb};
                 border-left: {border_hover[3]}px {border_hover_style} rgba{border_hover_rgb};
-                }}
-                .QCheckBox:checked {{
-                border-top: {border_checked[0]}px {border_checked_style} rgba{border_checked_rgb};
-                border-bottom: {border_checked[1]}px {border_checked_style} rgba{border_checked_rgb};
-                border-right: {border_checked[2]}px {border_checked_style} rgba{border_checked_rgb};
-                border-left: {border_checked[3]}px {border_checked_style} rgba{border_checked_rgb};
-                }}
-                .QCheckBox:checked:hover {{
-                border-top: {border_checked_hover[0]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
-                border-bottom: {border_checked_hover[1]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
-                border-right: {border_checked_hover[2]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
-                border-left: {border_checked_hover[3]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
                 }}
                 
                 /* RAYONS */
@@ -152,23 +114,9 @@ class Style:
 ##################
 ##     BASE     ##
 ##################
-class Base_th(Style):
+class Main(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
             img_margin_left=(VBase.WG_HEIGHT - (VBase.WG_HEIGHT * StyleBase().x_ico())) / 2,
-        )
-class Base_tr(Style):
-    bg = Rgb().tr()
-
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            bg=self.bg,
-            bg_hover=self.bg,
-            bg_checked=self.bg,
-            bg_checked_hover=self.bg,
-            fg=Rgb().th3(),
-            fg_checked=Rgb().th3(),
-            img_margin_left=(VBase.WG_HEIGHT - (VBase.WG_HEIGHT * StyleBase().x_ico())) / 2
         )
