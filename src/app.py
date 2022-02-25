@@ -247,7 +247,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         ### Raccourcis clavier
         sht = lambda _sht: (self, _sht.get("sht_1"), _sht.get("sht_2"), _sht.get("sht_3"), _sht.get("fct"))
-        QtGui.QShortcut(QtGui.QKeySequence(QtCore.Qt.SHIFT + QtCore.Qt.Key_Escape), self).activated.connect(self.cacher)
+        Fct().QSHORTCUT(*sht(qact_quitter))
 
 
         self.tray.setContextMenu(self.tray_menu)

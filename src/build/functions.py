@@ -107,6 +107,8 @@ class Fct:
         return tuple(int(rgb[i:i + lv // 3], 16) for i in range(0, lv, lv // 3))
     def QACTION(self, slf, ico, ico_rgb, txt, shortcut, fct):
         return QtGui.QAction(slf, icon=QtGui.QPixmap(f"{ico}{ico_rgb}.svg"), text=txt, shortcut=shortcut, triggered=fct)
+    def QSHORTCUT(self, slf, sht_1, sht_2, sht_3, fct):
+        QtGui.QShortcut(QtGui.QKeySequence(sht_1 + sht_2 + sht_3), slf).activated.connect(fct)
 
 
 ### FICHIERS
