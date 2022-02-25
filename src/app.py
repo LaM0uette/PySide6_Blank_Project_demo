@@ -232,8 +232,12 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         ### Actions
         qact_quitter = Fct().QACTION(slf=self, ico=Img().quitter(), ico_rgb="bn2", txt="Quitter", shortcut="Ctrl+Esc", fct=self.cacher)
 
-        ## Set actions
+        ### Set actions
         self.tray_menu.addAction(qact_quitter)
+
+        ### Raccourcis clavier
+        qrcc_quitter = QtGui.QKeySequence(QtCore.Qt.SHIFT + QtCore.Qt.Key_Escape)
+        QtGui.QShortcut(qrcc_quitter, self).activated.connect(self.cacher)
 
 
         self.tray.setContextMenu(self.tray_menu)
