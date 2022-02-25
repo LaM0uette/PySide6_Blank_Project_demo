@@ -15,6 +15,7 @@ class Style:
             scroll_v=p_base.SCROLL_V,
             sorting=True,
             animate=True,
+            header_hidden=True,
             curseur=p_base.CUR,
 
             # Couleurs BG
@@ -193,9 +194,8 @@ class Style:
 
             wg.setFrameShape(QtWidgets.QFrame.NoFrame)
             wg.setSortingEnabled(sorting)
-            wg.AnimatingState(animate)
-            wg.setHorizontalHeader(False)
-            wg.setVerticalHeader(False)
+            wg.setAnimated(animate)
+            wg.setHeaderHidden(header_hidden)
 
             wg.setCursor(Fct(cur=curseur).CUR())
 
