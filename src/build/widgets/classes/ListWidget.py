@@ -55,6 +55,7 @@ class Style:
 
             # Rayons
             radius=p_base.WG_RADIUS,
+            radius_item=p_base.WG_RADIUS,
 
             # Scroll
             scroll_bg=p_base.SCROLL_BG,
@@ -82,6 +83,10 @@ class Style:
                 border-bottom: {border_item[1]}px {border_item_style} rgba{border_item_rgb};
                 border-right: {border_item[2]}px {border_item_style} rgba{border_item_rgb};
                 border-left: {border_item[3]}px {border_item_style} rgba{border_item_rgb};
+                border-top-right-radius: {radius_item[0]}px;
+                border-top-left-radius: {radius_item[1]}px;
+                border-bottom-right-radius: {radius_item[2]}px;
+                border-bottom-left-radius: {radius_item[3]}px;
                 }}
                 .QListWidget::item:hover, .QListView::item:hover {{
                 background-color: rgba{bg_item_hover};
