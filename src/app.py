@@ -228,6 +228,10 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.tray.activated.connect(self.showTrayEvent)
         TrayIcon.Main(self.tray_menu)
 
+        self.tray_menu.addAction(QtGui.QAction(self, text="test", triggered=lambda: print("test")))
+        self.tray_menu.addSeparator()
+        self.tray_menu.addAction(QtGui.QAction(self, text="test2", triggered=lambda: print("test2")))
+
         self.tray.setContextMenu(self.tray_menu)
         self.tray.show()
     def INIT(self):
