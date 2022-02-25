@@ -226,7 +226,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         pass
     def IN_TRAY(self):
         self.tray.activated.connect(self.showTrayEvent)
-        TrayIcon.Main(self.tray)
+        TrayIcon.Main(self.tray_menu)
 
         self.tray.setContextMenu(self.tray_menu)
         self.tray.show()
