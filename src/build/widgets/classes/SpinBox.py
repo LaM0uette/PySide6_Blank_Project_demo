@@ -40,14 +40,9 @@ class Style:
             img_down_width=10,
             img_down_height=10,
             # Images positions
-            img_up_top=2,
-            img_up_bottom=0,
-            img_up_right=2,
-            img_up_left=0,
-            img_down_top=0,
-            img_down_bottom=2,
-            img_down_right=2,
-            img_down_left=0,
+            img_up_dim=((0,) * 4),
+            img_down_dim=((0,) * 4),
+
 
             # Bordures
             border=VBase.WG_BORDER_WIDTH,
@@ -72,10 +67,10 @@ class Style:
         
                 QSpinBox::up-button, QDoubleSpinBox::up-button  {{
                 subcontrol-position: top right;
-                top: {img_up_top}px;
-                bottom: {img_up_bottom}px;
-                right: {img_up_right}px;
-                left: {img_up_left}px;
+                top: {img_up_dim[0]}px;
+                bottom: {img_up_dim[1]}px;
+                right: {img_up_dim[2]}px;
+                left: {img_up_dim[3]}px;
                 image: url({f"{img_up}{img_up_rgb}.svg"});
                 width: {img_up_width}px;
                 height: {img_up_height}px;
@@ -83,10 +78,10 @@ class Style:
         
                 QSpinBox::down-button, QDoubleSpinBox::down-button  {{
                 subcontrol-position: bottom right;
-                top: {img_down_top}px;
-                bottom: {img_down_bottom}px;
-                right: {img_down_right}px;
-                left: {img_down_left}px;
+                top: {img_down_dim[0]}px;
+                bottom: {img_down_dim[1]}px;
+                right: {img_down_dim[2]}px;
+                left: {img_down_dim[3]}px;
                 image: url({f"{img_down}{img_down_rgb}.svg"});
                 width: {img_down_width}px;
                 height: {img_down_height}px;

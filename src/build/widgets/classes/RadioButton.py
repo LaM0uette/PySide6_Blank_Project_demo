@@ -39,10 +39,7 @@ class Style:
             img_width=VBase.img_width,
             img_height=VBase.img_height,
             # Images positions
-            img_margin_top=0,
-            img_margin_bottom=0,
-            img_margin_right=0,
-            img_margin_left=0,
+            img_margin=((0,) * 4),
 
             # Bordures
             border=VBase.WG_BORDER_WIDTH,
@@ -86,10 +83,10 @@ class Style:
 
                 /* IMG */
                 QRadioButton::indicator {{
-                margin-top: {img_margin_top}px;
-                margin-bottom: {img_margin_bottom}px;
-                margin-right: {img_margin_right}px;
-                margin-left: {img_margin_left}px;
+                margin-top: {img_margin[0]}px;
+                margin-bottom: {img_margin[1]}px;
+                margin-right: {img_margin[2]}px;
+                margin-left: {img_margin[3]}px;
                 width: {img_width}px;
                 height: {img_height}px;
                 }}
