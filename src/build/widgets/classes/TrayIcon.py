@@ -37,10 +37,6 @@ class Style:
             border=VBase.WG_BORDER_WIDTH,
             border_style=VBase.WG_BORDER_STYLE,
             border_rgb=VBase.WG_BORDER_RGB,
-            # Bordures hover
-            border_hover=VBase.WG_BORDER_WIDTH,
-            border_hover_style=VBase.WG_BORDER_STYLE,
-            border_hover_rgb=VBase.WG_BORDER_RGB,
 
             # Rayons
             radius=VBase.WG_RADIUS
@@ -95,12 +91,6 @@ class Style:
                 border-right: {border[2]}px {border_style} rgba{border_rgb};
                 border-left: {border[3]}px {border_style} rgba{border_rgb};
                 }}
-                .QMenu:hover {{
-                border-top: {border_hover[0]}px {border_hover_style} rgba{border_hover_rgb};
-                border-bottom: {border_hover[1]}px {border_hover_style} rgba{border_hover_rgb};
-                border-right: {border_hover[2]}px {border_hover_style} rgba{border_hover_rgb};
-                border-left: {border_hover[3]}px {border_hover_style} rgba{border_hover_rgb};
-                }}
                 
                 /* RAYONS */
                 .QCheckBox {{
@@ -126,4 +116,7 @@ class Main(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
+
+            border=((StyleBase().bd(), )*4),
+            border_rgb=Rgb().th2(),
         )
