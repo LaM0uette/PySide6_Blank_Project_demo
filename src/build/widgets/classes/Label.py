@@ -148,4 +148,5 @@ class DemoCat(Style):
             border_hover=(0, StyleBase().bd(), 0, 0),
             border_rgb=Rgb().bn1(),
             border_hover_rgb=Rgb().bn1(),
+            radius=((0,) * 4)
     )
