@@ -54,8 +54,8 @@ class Style:
                 
                 /* ITEM */
                 QMenu::item {{
-                background-color: rgb{bg_item};
-                color: rgb{fg_item};
+                background-color: rgba{bg_item};
+                color: rgba{fg_item};
                 margin-top={margin[0]}px;
                 margin-bottom={margin[1]}px;
                 margin-right={margin[2]}px;
@@ -66,16 +66,16 @@ class Style:
                 padding-left={padding[3]}px;
                 }}
                 QMenu::item:hover {{
-                background-color: rgb{bg_item_hover};
-                color: rgb{fg_item_hover};
+                background-color: rgba{bg_item_hover};
+                color: rgba{fg_item_hover};
                 }}
                 QMenu::item:selected {{
-                background-color: rgb{bg_item_checked};
-                color: rgb{fg_item_checked};
+                background-color: rgba{bg_item_checked};
+                color: rgba{fg_item_checked};
                 }}
                 QMenu::item:selected:hover {{
-                background-color: rgb{bg_item_checked_hover};
-                color: rgb{fg_item_checked_hover};
+                background-color: rgba{bg_item_checked_hover};
+                color: rgba{fg_item_checked_hover};
                 }}
                 
                 /* BORDURES */
@@ -111,7 +111,15 @@ class Main(Style):
         super().__init__(
             *wgs,
             bg=Rgb().th1(),
+            bg_item=Rgb().th1(),
+            bg_item_hover=Rgb().th1(),
+            bg_item_checked=Rgb().th3(),
+            bg_item_checked_hover=Rgb().th3(),
             fg=Rgb().th3(),
+            fg_item=Rgb().th3(),
+            fg_item_hover=Rgb().bn1(),
+            fg_item_checked=Rgb().th1(),
+            fg_item_checked_hover=Rgb().bn1(),
             border=((StyleBase().bd(), )*4),
             border_rgb=Rgb().th2(),
         )
