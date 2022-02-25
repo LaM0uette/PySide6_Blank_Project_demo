@@ -22,10 +22,7 @@ class Style:
             fg=VBase.FG,
 
             # Positions WG
-            padding_top=0,
-            padding_bottom=0,
-            padding_right=0,
-            padding_left=0,
+            padding=((0, )*4),
 
             # Bordures
             border=VBase.WG_BORDER_WIDTH,
@@ -65,10 +62,10 @@ class Style:
                 border-bottom: {border[1]}px {border_style} rgba{border_rgb};
                 border-right: {border[2]}px {border_style} rgba{border_rgb};
                 border-left: {border[3]}px {border_style} rgba{border_rgb};
-                padding-top={padding_top}px;
-                padding-bottom={padding_bottom}px;
-                padding-right={padding_right}px;
-                padding-left={padding_left}px;
+                padding-top={padding[0]}px;
+                padding-bottom={padding[1]}px;
+                padding-right={padding[2]}px;
+                padding-left={padding[3]}px;
                 }}
                 .QProgressBar:hover {{
                 border-top: {border_hover[0]}px {border_hover_style} rgba{border_hover_rgb};

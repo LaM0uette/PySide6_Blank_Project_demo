@@ -30,14 +30,8 @@ class Style:
             fg_item_checked_hover=VBase.FG_ITEM_CHECKED_HOVER,
 
             # Positions WG
-            margin_top=0,
-            margin_bottom=0,
-            margin_right=0,
-            margin_left=0,
-            padding_top=0,
-            padding_bottom=0,
-            padding_right=0,
-            padding_left=0,
+            margin=((0, )*4),
+            padding=((0, )*4),
 
             # Bordures
             border=VBase.WG_BORDER_WIDTH,
@@ -72,14 +66,14 @@ class Style:
                 QMenu::item {{
                 background-color: rgb{bg_item};
                 color: rgb{fg_item};
-                margin-top={margin_top}px;
-                margin-bottom={margin_bottom}px;
-                margin-right={margin_right}px;
-                margin-left={margin_left}px;
-                padding-top={padding_top}px;
-                padding-bottom={padding_bottom}px;
-                padding-right={padding_right}px;
-                padding-left={padding_left}px;
+                margin-top={margin[0]}px;
+                margin-bottom={margin[1]}px;
+                margin-right={margin[2]}px;
+                margin-left={margin[3]}px;
+                padding-top={padding[0]}px;
+                padding-bottom={padding[1]}px;
+                padding-right={padding[2]}px;
+                padding-left={padding[3]}px;
                 }}
                 QMenu::item:hover {{
                 background-color: rgb{bg_item_hover};
