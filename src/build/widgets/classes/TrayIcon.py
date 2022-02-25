@@ -106,6 +106,6 @@ class Main(Style):
             fg_item_checked=Rgb().bn1(),
             border=((StyleBase().bd(), )*4),
             border_rgb=Rgb().th2(),
-
+            height_separator=3,
             margin=(10, 10, 15, 15),
         )
