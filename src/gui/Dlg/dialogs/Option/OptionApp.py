@@ -292,7 +292,7 @@ class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):
 
         config_ini = Ini(lien_ini=vrb.INI_CONFIG)
         config = config_ini.OPEN_INI()
-        config.theme = self.cb_opt_tm_theme.currentText()
+        config["config"]["theme"] = self.cb_opt_tm_theme.currentText()
         config["config"]["font"] = self.fcb_opt_ft_font.currentText()
         config["config"]["widht"] = f"{self.sb_opt_cfg_resize_width.value()}"
         config["config"]["height"] = f"{self.sb_opt_cfg_resize_height.value()}"
