@@ -407,7 +407,6 @@ if __name__ == "__main__":
             pg_run = True
 
     if config.auto_reload and not pg_run:
-        print(os.path.abspath(f"{vrb.DO_SCRIPT}convert_ui.bat"))
         os.startfile(os.path.relpath(f"{vrb.DO_SCRIPT}convert_ui.bat"))
         time.sleep(1)
         Fct().GEN_SVG()
