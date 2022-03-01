@@ -1,8 +1,8 @@
 from PySide6 import QtCore, QtWidgets, QtGui
 
-from ... import rep_ui
-from .....build import *
-from .....In_classe import In_classe
+from src.gui.Dlg import rep_ui
+from src.build import *
+from src.In_classe import In_classe
 
 
 class RepApp(rep_ui.Ui_Rep, QtWidgets.QDialog):

@@ -4,12 +4,12 @@ import time
 
 from PySide6 import QtCore, QtWidgets, QtGui
 
-from ... import option_ui
-from ..Msg import DLG_Msg
-from ..Rgb import DLG_Rgb
-from .....build import *
-from .....config import *
-from .....In_classe import In_classe
+from src.gui.Dlg import option_ui
+from src.gui.Dlg.dialogs.Msg import DLG_Msg
+from src.gui.Dlg.dialogs.Rgb import DLG_Rgb
+from src.build import *
+from src.config import *
+from src.In_classe import In_classe
 
 
 class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):

@@ -1,1 +1,1 @@
-from .DLG_Option import DLG_Option
+from src.gui.Dlg.dialogs.Option.DLG_Option import DLG_Option

@@ -1,3 +1,3 @@
-from . import main_ui
-from .Dlg.dialogs import *
+from src.gui import main_ui
+from src.gui.Dlg.dialogs import *
 

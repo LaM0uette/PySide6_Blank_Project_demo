@@ -1,1 +1,1 @@
-from .DLG_Rep import DLG_Rep
+from src.gui.Dlg.dialogs.Rep.DLG_Rep import DLG_Rep

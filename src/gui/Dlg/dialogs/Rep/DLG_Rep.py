@@ -1,5 +1,5 @@
-from .RepApp import RepApp
-from .....build import *
+from src.gui.Dlg.dialogs.Rep.RepApp import RepApp
+from src.build import *
 
 
 class DLG_Rep:

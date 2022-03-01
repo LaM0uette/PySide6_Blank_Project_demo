@@ -1,5 +1,5 @@
-from .RgbApp import RgbApp
-from .....build import *
+from src.gui.Dlg.dialogs.Rgb.RgbApp import RgbApp
+from src.build import *
 
 
 class DLG_Rgb:

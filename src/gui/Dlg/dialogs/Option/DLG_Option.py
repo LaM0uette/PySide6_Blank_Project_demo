@@ -1,5 +1,5 @@
-from .OptionApp import OptionApp
-from .....build import *
+from src.gui.Dlg.dialogs.Option.OptionApp import OptionApp
+from src.build import *
 
 
 class DLG_Option:

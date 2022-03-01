@@ -1,5 +1,5 @@
-from .InputApp import InputApp
-from .....build import *
+from src.gui.Dlg.dialogs.Input.InputApp import InputApp
+from src.build import *
 
 
 class DLG_Input:

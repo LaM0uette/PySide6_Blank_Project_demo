@@ -1,8 +1,8 @@
 from PySide6 import QtCore, QtWidgets, QtGui
 
-from ... import rgb_ui
-from .....build import *
-from .....In_classe import In_classe
+from src.gui.Dlg import rgb_ui
+from src.build import *
+from src.In_classe import In_classe
 
 
 class RgbApp(rgb_ui.Ui_Rgb, QtWidgets.QDialog):

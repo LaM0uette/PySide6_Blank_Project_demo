@@ -1,5 +1,5 @@
-from .MsgApp import MsgApp
-from .....build import *
+from src.gui.Dlg.dialogs.Msg.MsgApp import MsgApp
+from src.build import *
 
 
 class DLG_Msg:
