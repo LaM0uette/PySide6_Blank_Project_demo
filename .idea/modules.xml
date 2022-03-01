@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../.idea/01_PYTHON.iml" filepath="$PROJECT_DIR$/../.idea/01_PYTHON.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/PySide6_Blank_Project_demo.iml" filepath="$PROJECT_DIR$/.idea/PySide6_Blank_Project_demo.iml" />
     </modules>
   </component>
