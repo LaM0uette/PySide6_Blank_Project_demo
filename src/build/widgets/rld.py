@@ -1,9 +1,9 @@
 import importlib
 
-from . import VBase
+from src.build.widgets import VBase
 importlib.reload(VBase)
 
-from .classes import CheckBox, ComboBox, DateEdit, Frame, Label, \
+from src.build.widgets.classes import CheckBox, ComboBox, DateEdit, Frame, Label, \
     ListWidget, ProgressBar, RadioButton, ScrollArea, Slider, \
     SpinBox, TableWidget, TextEdit, ToolBox, TrayIcon, TreeWidget, PushButton
 

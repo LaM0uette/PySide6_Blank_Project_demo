@@ -8,7 +8,7 @@ class Data:
         self.grp = grp
 
     def OPEN_JSON(self, fichier_json):
-        with open(f"{fichier_json}.json", "r") as fichier:
+        with open(fr"{fichier_json}.json", "r") as fichier:
             return json.load(fichier)
     def GET_VAL(self, val):
         js = self.OPEN_JSON(fichier_json=f"{vrb.DO_DATA}{self.grp}")

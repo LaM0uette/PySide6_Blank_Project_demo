@@ -7,8 +7,8 @@ import shutil
 
 from PySide6 import QtCore, QtGui
 
-from . import *
-from ..config import *
+from src.build import *
+from src.config import *
 
 
 ### ACTIONS

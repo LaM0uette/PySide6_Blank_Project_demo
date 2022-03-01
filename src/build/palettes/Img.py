@@ -1,4 +1,4 @@
-from ...config import vrb
+from src.config import vrb
 
 class Img:
 

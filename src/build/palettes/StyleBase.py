@@ -1,4 +1,4 @@
-from .data.Data import Data
+from src.build.palettes.data.Data import Data
 
 class StyleBase(Data):
     def __init__(self, grp="wg"):

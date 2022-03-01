@@ -1,3 +1,3 @@
-from .palettes import *
-from .functions import Act, Fct, Json, Ini
-from .widgets import *
+from src.build.palettes import *
+from src.build.functions import Act, Fct, Json, Ini
+from src.build.widgets import *

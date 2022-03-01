@@ -1,7 +1,7 @@
 from PySide6 import QtGui
 
-from ....build import *
-from ....build.widgets import VBase
+from src.build import *
+from src.build.widgets import VBase
 
 class Style:
     def __init__(

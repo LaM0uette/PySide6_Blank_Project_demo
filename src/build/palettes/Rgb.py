@@ -1,4 +1,4 @@
-from .data.Data import Data
+from src.build.palettes.data.Data import Data
 
 class Rgb(Data):
     def __init__(self):

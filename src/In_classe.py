@@ -1,4 +1,4 @@
-from .build import *
+from src.build import *
 
 
 class In_classe:

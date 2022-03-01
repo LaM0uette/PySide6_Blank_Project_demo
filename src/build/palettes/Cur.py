@@ -1,5 +1,5 @@
-from ...config import vrb
-from ...config import config
+from src.config import vrb
+from src.config import config
 
 class Cur:
     def __init__(self):

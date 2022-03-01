@@ -1,8 +1,8 @@
 from PySide6 import QtWidgets
 
-from ....build import *
-from ....build.widgets import VBase
-from ....build.widgets.classes import ClassePb
+from src.build import *
+from src.build.widgets import VBase
+from src.build.widgets.classes import ClassePb
 
 class Style:
     def __init__(

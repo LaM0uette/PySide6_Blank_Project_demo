@@ -1,5 +1,5 @@
-from ...build import *
-from ...config import *
+from src.build import *
+from src.config import *
 
 
 ######################
