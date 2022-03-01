@@ -398,6 +398,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     ###################
 
 
+ICO_MAIN = f"{Img().main()}th2.svg"
 if __name__ == "__main__":
     pg_run = False
     for proc in psutil.process_iter():
@@ -412,7 +413,6 @@ if __name__ == "__main__":
         time.sleep(0.3)
 
     if not pg_run:
-        ICO_MAIN = f"{Img().main()}th2.svg"
         app = QtWidgets.QApplication(sys.argv)
         splash = QtWidgets.QSplashScreen(QtGui.QPixmap(ICO_MAIN).scaledToHeight(400), QtCore.Qt.WindowStaysOnTopHint)
         splash.show()
