@@ -1,18 +1,27 @@
+import configparser
+
+from src.config import vrb
+
+
+### FICHIER CONFIG ______________
+cfg = configparser.ConfigParser()
+cfg.read(vrb.INI_CONFIG, encoding="utf-8")
+
 ### infos _______________
-nom = "PySide6_Blank_Project_demo"
-description = "Modèle de base pour créer vos applications à partir de celle ci. Sur cette appli ce trouve également une démonstration des différents Widgets personnalisables."
-version = 0.1
-auteur = "LaM0uette"
+nom = cfg["infos"]["nom"]
+description = cfg["infos"]["description"]
+version = float(cfg["infos"]["version"])
+auteur = cfg["infos"]["auteur"]
 
 ### config ________________________
-theme = "columbia_blue"
-font = "Berlin Sans FB Demi"
-widht = 1000
-height = 700
-opacity = 0.96
-cur = "LaM0uette"
+theme = cfg["config"]["theme"]
+font = cfg["config"]["font"]
+widht = int(cfg["config"]["widht"])
+height = int(cfg["config"]["height"])
+opacity = float(cfg["config"]["opacity"])
+cur = cfg["config"]["cur"]
 
 ### var _____________________
-auto_reload = True
-auto_close = True
-resize = True
+auto_reload = cfg["var"]["autoreload"].lower() == "true"
+auto_close = cfg["var"]["autoClose"].lower() == "true"
+resize = cfg["var"]["resize"].lower() == "true"
