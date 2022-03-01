@@ -1,13 +1,15 @@
 import configparser
+import os
 
 from src.config import vrb
 
 
 ### FICHIER CONFIG ______________
 cfg = configparser.ConfigParser()
-cfg.read(vrb.INI_CONFIG, encoding="utf-8")
+cfg.read(filenames=os.path.relpath(vrb.INI_CONFIG), encoding="utf-8")
 
 ### infos _______________
+print(cfg.sections())
 nom = cfg["infos"]["nom"]
 description = cfg["infos"]["description"]
 version = float(cfg["infos"]["version"])
