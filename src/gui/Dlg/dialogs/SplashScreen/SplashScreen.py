@@ -11,7 +11,7 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
         super(SplashScreen, self).__init__()
 
         self.width = 400
-        self.height = 300
+        self.height = 200
         self.opacity = 1
 
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
@@ -32,7 +32,7 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
         self.setWindowOpacity(self.opacity)
     def IN_CLASSE(self):
         ### QFrame ###
-        Frame.Cadre(self.fr_main).th3()
+        Frame.SplashScreen(self.fr_main)
         ### /QFrame ###
     def IN_WG(self):
         # Base
