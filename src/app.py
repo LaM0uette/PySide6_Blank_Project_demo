@@ -14,6 +14,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def __init__(self):
         super(main, self).__init__()
 
+        DLG_Msg().INFO()
+
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
 
