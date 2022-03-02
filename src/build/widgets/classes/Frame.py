@@ -64,7 +64,7 @@ class Style:
                 self.shadow = QtWidgets.QGraphicsDropShadowEffect(wg)
                 self.shadow.setBlurRadius(15)
                 self.shadow.setColor(QtGui.QColor(0, 0, 0))
-                self.shadow.setOffset(0)
+                self.shadow.setOffset(0, 0)
                 wg.setGraphicsEffect(self.shadow)
 
             wg.setCursor(Fct(cur=curseur).CUR())
