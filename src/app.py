@@ -67,6 +67,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         ### QFrame ###
+        Frame.Menu_top(self.fr_menu_top)
+        Frame.Cadre(self.fr_main).th2()
         Frame.Base_th(self.fr_demo_th, self.fr_tb_demo_th_1, self.fr_tb_demo_th_2)
         Frame.Base_tr(self.fr_tb_demo_tr_1, self.fr_tb_demo_tr_2)
         Frame.Base_th(self.fr_body)
@@ -82,6 +84,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
         ### QLabel ###
+        Label.Base_tr(self.lb_mt_nom, font_size=Font().h3())
         Label.Base_tr(self.lb_mb_version)
         Label.Demo_th(self.lb_lb_demo_th)
         Label.Demo_tr(self.lb_lb_demo_tr)
@@ -113,6 +116,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         PushButton.menu_top(self.pb_mt_option).option()
         PushButton.menu_top(self.pb_mt_reduire).reduire()
         PushButton.menu_top(self.pb_mt_agrandir).agrandir()
+        PushButton.menu_top(self.pb_mt_quitter).quitter()
 
         PushButton.txt(self.pb_demo_txt)
         PushButton.txt_inv(self.pb_demo_txt_inv)
@@ -174,9 +178,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         TreeWidget.Base_th(self.trv_demo_th, self.trw_demo_th)
         TreeWidget.Base_tr(self.trv_demo_tr, self.trw_demo_tr)
         ### /QTreeWidget ###
-
-        # Lancement des fonctions de MEF global
-        In_classe(ui=self)
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur=Cur().souris()).CUR())
