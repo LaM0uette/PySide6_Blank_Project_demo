@@ -14,7 +14,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def __init__(self):
         super(main, self).__init__()
 
-        DLG_Msg().INFO()
+
 
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
@@ -399,12 +399,12 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 ICO_MAIN = f"{Img().main()}th2.svg"
 app = QtWidgets.QApplication(sys.argv)
-splash = QtWidgets.QSplashScreen(QtGui.QPixmap(ICO_MAIN).scaledToHeight(400), QtCore.Qt.WindowStaysOnTopHint)
-splash.show()
+
+
+
 app.processEvents()
 
 fen = main()
-splash.finish(fen)
 fen.show()
 
 sys.exit(app.exec())
