@@ -9,7 +9,6 @@ from src.gui.Dlg.dialogs.Msg import DLG_Msg
 from src.gui.Dlg.dialogs.Rgb import DLG_Rgb
 from src.build import *
 from src.config import *
-from src.In_classe import In_classe
 
 
 class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):
@@ -78,6 +77,8 @@ class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):
 
 
         ### QFrame ###
+        Frame.Menu_top(self.fr_menu_top)
+        Frame.Cadre(self.fr_main).th2()
         Frame.Cadre(
             self.fr_main,
             self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5,
@@ -89,6 +90,7 @@ class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):
 
 
         ### QLabel ###
+        Label.Base_tr(self.lb_mt_nom, font_size=Font().h3())
         Label.Titre(self.lb_opt_info_nom)
         Label.Base_tr(self.lb_opt_info_desc, self.lb_opt_info_auteur, self.lb_opt_info_version, self.lb_opt_ft_h1,
                       self.lb_opt_ft_h2, self.lb_opt_ft_h3, self.lb_opt_ft_h4, self.lb_opt_ft_h5, self.lb_opt_cfg_opacity,
@@ -100,6 +102,7 @@ class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):
         ### QPushButton ###
         PushButton.dlg_ok(self.pb_opt_appliquer)
         PushButton.dlg_ok_inv(self.pb_opt_ok)
+        PushButton.menu_top(self.pb_mt_quitter).quitter()
 
         PushButton.plein(self.pb_opt_tm_th1).th1()
         PushButton.plein(self.pb_opt_tm_th2).th2()
@@ -127,9 +130,6 @@ class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):
         ### QTreeWidget ###
         TreeWidget.option(self.trw_option)
         ### /QTreeWidget ###
-
-        # Lancement des fonctions de MEF global
-        In_classe(ui=self)
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur=Cur().souris()).CUR())
