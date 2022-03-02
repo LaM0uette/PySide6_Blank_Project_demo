@@ -46,11 +46,6 @@ class Ui_SplashScreen(object):
 
         self.hlay_menu_top.addItem(self.horizontalSpacer)
 
-        self.pb_mt_quitter = QPushButton(self.fr_menu_top)
-        self.pb_mt_quitter.setObjectName(u"pb_mt_quitter")
-
-        self.hlay_menu_top.addWidget(self.pb_mt_quitter)
-
 
         self.vlay_fr_main.addWidget(self.fr_menu_top)
 
@@ -60,6 +55,11 @@ class Ui_SplashScreen(object):
         self.vlay_body.setSpacing(0)
         self.vlay_body.setObjectName(u"vlay_body")
         self.vlay_body.setContentsMargins(0, 0, 0, 0)
+        self.pb_mt_quitter = QPushButton(self.fr_body)
+        self.pb_mt_quitter.setObjectName(u"pb_mt_quitter")
+
+        self.vlay_body.addWidget(self.pb_mt_quitter)
+
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.vlay_body.addItem(self.verticalSpacer)
