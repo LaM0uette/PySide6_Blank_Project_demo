@@ -34,18 +34,7 @@ class SplashScreen(msg_ui.Ui_Msg, QtWidgets.QDialog):
         ### QFrame ###
         Frame.Cadre(self.fr_main).th3()
         Frame.Base_th(self.fr_body, rgb=Rgb().th1())
-        Frame.Menu_bottom_dlg(self.fr_msg_bottom)
         ### /QFrame ###
-
-
-        ### QLabel ###
-        Label.Base_tr(self.lb_msg_text)
-        ### /QLabel ###
-
-
-        ### QPushButton ###
-        PushButton.dlg_ok(self.pb_msg_ok)
-        ### /QPushButton ###
 
         # Lancement des fonctions de MEF global
         In_classe(ui=self)
@@ -55,26 +44,9 @@ class SplashScreen(msg_ui.Ui_Msg, QtWidgets.QDialog):
 
         # Frame menu_top
         self.fr_menu_top.setFixedHeight(Dim().h9())
-
-        # Menu_top
-        dim = Dim().h9()
-        Fct(wg=self.lb_mt_ico, w=dim, h=dim).DIM()
-        self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}{self.tm}.svg"))
-        self.lb_mt_ico.setScaledContents(True)
-        self.lb_mt_nom.setText(self.titre)
-
-        # Message
-        self.lb_msg_text.setText(self.msg)
-
-        # pb dlg
-        self.pb_msg_ok.setText(self.txt_pb_ok)
-        self.pb_msg_ok.setDefault(True)
     def IN_CONNECTIONS(self):
         ## Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
-
-        # pb dlg
-        self.pb_msg_ok.clicked.connect(lambda: self.close())
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):
