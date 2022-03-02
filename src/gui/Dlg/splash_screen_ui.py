@@ -27,7 +27,7 @@ class Ui_SplashScreen(object):
         self.verticalLayout = QVBoxLayout(SplashScreen)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setContentsMargins(10, 10, 10, 10)
         self.fr_main = QFrame(SplashScreen)
         self.fr_main.setObjectName(u"fr_main")
         self.fr_main.setFrameShape(QFrame.StyledPanel)

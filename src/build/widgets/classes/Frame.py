@@ -62,7 +62,7 @@ class Style:
 
             if ombre_portee:
                 self.shadow = QtWidgets.QGraphicsDropShadowEffect(wg)
-                self.shadow.setBlurRadius(16)
+                self.shadow.setBlurRadius(15)
                 self.shadow.setColor(QtGui.QColor(0, 0, 0))
                 self.shadow.setOffset(0)
                 wg.setGraphicsEffect(self.shadow)
@@ -155,7 +155,7 @@ class SplashScreen(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-
+            ombre_portee=True,
             bg=Rgb().th1(),
             border=((StyleBase().bd(),) * 4),
             border_rgb=Rgb().th3(),
