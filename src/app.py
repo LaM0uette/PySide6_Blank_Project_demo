@@ -262,7 +262,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.IN_BASE()
         self.IN_CLASSE()
         self.IN_WG()
-        time.sleep(8)
+        time.sleep(4)
         self.IN_CONNECTIONS()
         self.IN_ACT()
         self.IN_WG_BASE()
