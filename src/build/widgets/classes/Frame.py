@@ -167,7 +167,7 @@ class TrayUi(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-
+            ombre_portee = True,
             bg=Rgb().th1(),
             border=((StyleBase().bd(),) * 4),
             border_rgb=Rgb().th3(),
