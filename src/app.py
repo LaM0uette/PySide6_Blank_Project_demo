@@ -1,8 +1,5 @@
-import os
 import sys
-import time
 
-import psutil
 from PySide6 import QtCore, QtWidgets, QtGui
 
 from src.gui import *
@@ -399,27 +396,13 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 
 ICO_MAIN = f"{Img().main()}th2.svg"
-if __name__ == "__main__":
-    pg_run = False
-    for proc in psutil.process_iter():
-        pi = proc.as_dict(attrs=["pid", "name"])
-        if pi["name"] == f"{config.nom}.exe":
-            pg_run = True
+app = QtWidgets.QApplication(sys.argv)
+splash = QtWidgets.QSplashScreen(QtGui.QPixmap(ICO_MAIN).scaledToHeight(400), QtCore.Qt.WindowStaysOnTopHint)
+splash.show()
+app.processEvents()
 
-    if config.auto_reload and not pg_run:
-        os.startfile(os.path.relpath(f"{vrb.DO_SCRIPT}convert_ui.bat"))
-        time.sleep(1)
-        Fct().GEN_SVG()
-        time.sleep(0.3)
+fen = main()
+splash.finish(fen)
+fen.show()
 
-    if not pg_run:
-        app = QtWidgets.QApplication(sys.argv)
-        splash = QtWidgets.QSplashScreen(QtGui.QPixmap(ICO_MAIN).scaledToHeight(400), QtCore.Qt.WindowStaysOnTopHint)
-        splash.show()
-        app.processEvents()
-
-        fen = main()
-        splash.finish(fen)
-        fen.show()
-
-        sys.exit(app.exec())
+sys.exit(app.exec())
