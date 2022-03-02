@@ -15,19 +15,18 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
-    QProgressBar, QPushButton, QSizePolicy, QSpacerItem,
-    QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QFrame, QProgressBar, QSizePolicy,
+    QSpacerItem, QVBoxLayout, QWidget)
 
 class Ui_SplashScreen(object):
     def setupUi(self, SplashScreen):
         if not SplashScreen.objectName():
             SplashScreen.setObjectName(u"SplashScreen")
         SplashScreen.resize(921, 347)
-        self.glay_dlg = QGridLayout(SplashScreen)
-        self.glay_dlg.setSpacing(0)
-        self.glay_dlg.setObjectName(u"glay_dlg")
-        self.glay_dlg.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout = QVBoxLayout(SplashScreen)
+        self.verticalLayout.setSpacing(0)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
         self.fr_main = QFrame(SplashScreen)
         self.fr_main.setObjectName(u"fr_main")
         self.fr_main.setFrameShape(QFrame.StyledPanel)
@@ -36,45 +35,18 @@ class Ui_SplashScreen(object):
         self.vlay_fr_main.setSpacing(0)
         self.vlay_fr_main.setObjectName(u"vlay_fr_main")
         self.vlay_fr_main.setContentsMargins(0, 0, 0, 0)
-        self.fr_menu_top = QFrame(self.fr_main)
-        self.fr_menu_top.setObjectName(u"fr_menu_top")
-        self.hlay_menu_top = QHBoxLayout(self.fr_menu_top)
-        self.hlay_menu_top.setSpacing(0)
-        self.hlay_menu_top.setObjectName(u"hlay_menu_top")
-        self.hlay_menu_top.setContentsMargins(0, 0, 0, 0)
-        self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
-
-        self.hlay_menu_top.addItem(self.horizontalSpacer)
-
-
-        self.vlay_fr_main.addWidget(self.fr_menu_top)
-
-        self.fr_body = QFrame(self.fr_main)
-        self.fr_body.setObjectName(u"fr_body")
-        self.vlay_body = QVBoxLayout(self.fr_body)
-        self.vlay_body.setSpacing(0)
-        self.vlay_body.setObjectName(u"vlay_body")
-        self.vlay_body.setContentsMargins(0, 0, 0, 0)
-        self.pb_mt_quitter = QPushButton(self.fr_body)
-        self.pb_mt_quitter.setObjectName(u"pb_mt_quitter")
-
-        self.vlay_body.addWidget(self.pb_mt_quitter)
-
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.vlay_body.addItem(self.verticalSpacer)
+        self.vlay_fr_main.addItem(self.verticalSpacer)
 
-        self.progressBar = QProgressBar(self.fr_body)
-        self.progressBar.setObjectName(u"progressBar")
-        self.progressBar.setValue(0)
+        self.pg_chargement = QProgressBar(self.fr_main)
+        self.pg_chargement.setObjectName(u"pg_chargement")
+        self.pg_chargement.setValue(0)
 
-        self.vlay_body.addWidget(self.progressBar)
-
-
-        self.vlay_fr_main.addWidget(self.fr_body)
+        self.vlay_fr_main.addWidget(self.pg_chargement)
 
 
-        self.glay_dlg.addWidget(self.fr_main, 1, 0, 1, 1)
+        self.verticalLayout.addWidget(self.fr_main)
 
 
         self.retranslateUi(SplashScreen)
