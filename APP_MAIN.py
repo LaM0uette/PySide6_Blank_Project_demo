@@ -360,7 +360,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def mouseDoubleClickEvent(self, event):
         cur = QtGui.QCursor()
         height_verif = cur.pos().y() - self.pos().y()
-        if height_verif < Dim().h9():
+        if 10 < height_verif < Dim().h9()+10:
             self.agrandir()
             event.accept()
     def mouseMoveEvent(self, event):
@@ -388,7 +388,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def mouseReleaseEvent(self, event):
         cur = QtGui.QCursor()
         height_verif = cur.pos().y() - self.pos().y()
-        if height_verif < Dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
+        if 10 < height_verif < Dim().h9()+10 and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
             self.setCursor(Fct(cur=Cur().souris()).CUR())
             self.agrandir()
             event.accept()
