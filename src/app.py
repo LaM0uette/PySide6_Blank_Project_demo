@@ -403,7 +403,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             self._resize()
     # Tray
     def traySingleClick(self):
-        screen = QtWidgets.QApplication.primaryScreen().geometry()
+        screen = QtWidgets.QApplication.primaryScreen().availableGeometry()
         widget = tray_ui.geometry()
 
         tray_ui.move(screen.width()-widget.width(), screen.height()-widget.height())
