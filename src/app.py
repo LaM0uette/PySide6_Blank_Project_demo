@@ -403,7 +403,10 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             self._resize()
     # Tray
     def traySingleClick(self):
-        # tray_ui.move(1600, 50)
+        screen = QtWidgets.QApplication.primaryScreen().geometry()
+        widget = tray_ui.geometry()
+
+        tray_ui.move(screen.width()-widget.width(), screen.height()-widget.height())
         tray_ui.open()
         tray_ui.activateWindow()
     def trayDoubleClick(self):
