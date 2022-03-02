@@ -2,6 +2,7 @@ from PySide6 import QtCore, QtWidgets, QtGui
 
 from src.gui.Dlg import splash_screen_ui
 from src.build import *
+from src.config import *
 
 
 class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
@@ -53,6 +54,9 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
         Fct(wg=self.lb_ico, w=dim, h=dim).DIM()
         self.lb_ico.setPixmap(QtGui.QPixmap(f"{Img().main()}th2.svg"))
         self.lb_ico.setScaledContents(True)
+
+        self.lb_titre.setText(config.nom)
+        self.lb_description.setText(config.description)
     def IN_CONNECTIONS(self):
         pass
     def IN_ACT(self):
