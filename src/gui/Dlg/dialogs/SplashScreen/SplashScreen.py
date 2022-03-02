@@ -47,6 +47,12 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur=Cur().souris()).CUR())
+
+        # Icone de l'app
+        dim = Dim().h6()
+        Fct(wg=self.lb_ico, w=dim, h=dim).DIM()
+        self.lb_ico.setPixmap(QtGui.QPixmap(f"{Img().main()}th2.svg"))
+        self.lb_ico.setScaledContents(True)
     def IN_CONNECTIONS(self):
         pass
     def IN_ACT(self):

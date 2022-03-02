@@ -39,6 +39,15 @@ class Ui_SplashScreen(object):
 
         self.vlay_fr_main.addItem(self.verticalSpacer)
 
+        self.lb_ico = QLabel(self.fr_main)
+        self.lb_ico.setObjectName(u"lb_ico")
+
+        self.vlay_fr_main.addWidget(self.lb_ico)
+
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.vlay_fr_main.addItem(self.verticalSpacer_2)
+
         self.lb_chargement = QLabel(self.fr_main)
         self.lb_chargement.setObjectName(u"lb_chargement")
 
