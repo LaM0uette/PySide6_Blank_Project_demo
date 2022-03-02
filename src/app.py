@@ -390,6 +390,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def closeEvent(self, event):
         event.accept()
         app.quit()
+        self.tray_menu.close()
     def showEvent(self, event):
         if self.win_state == QtCore.Qt.WindowMaximized:
             self.setWindowState(self.win_state)
