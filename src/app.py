@@ -6,7 +6,6 @@ from PySide6 import QtCore, QtWidgets, QtGui
 from src.gui import *
 from src.build import *
 from src.config import *
-from src.In_classe import In_classe
 
 
 class main(main_ui.Ui_main, QtWidgets.QWidget):
