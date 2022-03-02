@@ -68,9 +68,9 @@ class TrayUi(tray_ui_ui.Ui_TrayUi, QtWidgets.QDialog):
     #######################
     def PIN(self):
         if self.pb_mt_pin.isChecked():
-            self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.WindowStaysOnTopHint | QtCore.Qt.Tool)
+            self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.WindowStaysOnTopHint)
         else:
-            self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.Tool)
+            self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
     #######################
     ##    /FONCTIONS     ##
     #######################
