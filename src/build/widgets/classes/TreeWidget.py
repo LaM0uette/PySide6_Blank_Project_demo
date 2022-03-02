@@ -13,8 +13,8 @@ class Style:
             font_size=VBase.FONT_SIZE,
             scroll_h=VBase.SCROLL_H,
             scroll_v=VBase.SCROLL_V,
-            sorting=True,
-            animate=True,
+            sorting=False,
+            animate=False,
             header_hidden=True,
             curseur=VBase.CUR,
 
