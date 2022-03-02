@@ -43,6 +43,7 @@ class Ui_TrayUi(object):
         self.hlay_menu_top.setContentsMargins(0, 0, 0, 0)
         self.pb_mt_pin = QPushButton(self.fr_menu_top)
         self.pb_mt_pin.setObjectName(u"pb_mt_pin")
+        self.pb_mt_pin.setCheckable(True)
 
         self.hlay_menu_top.addWidget(self.pb_mt_pin)
 
