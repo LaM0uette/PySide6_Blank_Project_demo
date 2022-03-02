@@ -36,7 +36,7 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
         ### /QFrame ###
 
         # Lancement des fonctions de MEF global
-        In_classe(ui=self)
+        # In_classe(ui=self)
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur=Cur().souris()).CUR())
