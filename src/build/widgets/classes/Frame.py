@@ -1,4 +1,4 @@
-from PySide6 import QtWidgets
+from PySide6 import QtWidgets, QtGui
 
 from src.build import *
 from src.build.widgets import VBase
@@ -9,6 +9,7 @@ class Style:
             *wgs,
             width=VBase.WIDTH,
             height=VBase.HEIGHT,
+            ombre_portee=False,
             curseur=Cur().souris(),
 
             # Couleurs BG
@@ -59,9 +60,14 @@ class Style:
 
             Fct(wg=wg, w=width, h=height).DIM()
 
-            wg.setCursor(Fct(cur=curseur).CUR())
+            if ombre_portee:
+                self.shadow = QtWidgets.QGraphicsDropShadowEffect(wg)
+                self.shadow.setBlurRadius(10)
+                self.shadow.setColor(QtGui.QColor(20, 20, 20))
+                self.shadow.setOffset(3)
+                wg.setGraphicsEffect(self.shadow)
 
-            wg.setFrameShape(QtWidgets.QFrame.NoFrame)
+            wg.setCursor(Fct(cur=curseur).CUR())
 
 
 ##################
@@ -117,12 +123,14 @@ class Menu_bottom_dlg(Style):
 ##     AUTRES     ##
 ####################
 class Cadre:
-    def __init__(self, *wgs):
+    def __init__(self, *wgs, ombre_portee=False):
         self.wgs = wgs
+        self.ombre_portee = ombre_portee
 
     def rtn(self, rgb):
         Style(
             *self.wgs,
+            ombre_portee=self.ombre_portee,
             bg=Rgb().tr(),
             border=((StyleBase().bd(),) * 4),
             border_rgb=rgb,

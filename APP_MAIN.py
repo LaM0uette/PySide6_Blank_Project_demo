@@ -72,7 +72,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         ### QFrame ###
         Frame.Menu_top(self.fr_menu_top)
-        Frame.Cadre(self.fr_main).th2()
+        Frame.Cadre(self.fr_main, ombre_portee=True).th2()
         Frame.Base_th(self.fr_demo_th, self.fr_tb_demo_th_1, self.fr_tb_demo_th_2)
         Frame.Base_tr(self.fr_tb_demo_tr_1, self.fr_tb_demo_tr_2)
         Frame.Base_th(self.fr_body)

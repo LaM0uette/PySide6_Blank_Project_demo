@@ -78,7 +78,7 @@ class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):
 
         ### QFrame ###
         Frame.Menu_top(self.fr_menu_top)
-        Frame.Cadre(self.fr_main).th2()
+        Frame.Cadre(self.fr_main, ombre_portee=True).th2()
         Frame.Cadre(
             self.fr_main,
             self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5,
