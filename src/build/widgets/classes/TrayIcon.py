@@ -31,9 +31,18 @@ class Style:
             border=VBase.WG_BORDER_WIDTH,
             border_style=VBase.WG_BORDER_STYLE,
             border_rgb=VBase.WG_BORDER_RGB,
+            # Bordures item
+            border_item=VBase.WG_BORDER_WIDTH,
+            border_item_style=VBase.WG_BORDER_STYLE,
+            border_item_rgb=VBase.WG_BORDER_RGB,
+            # Bordures item checked
+            border_item_checked=VBase.WG_BORDER_WIDTH,
+            border_item_checked_style=VBase.WG_BORDER_STYLE,
+            border_item_checked_rgb=VBase.WG_BORDER_RGB,
 
             # Rayons
-            radius=VBase.WG_RADIUS
+            radius=VBase.WG_RADIUS,
+            radius_item=VBase.WG_RADIUS,
     ):
         style = f"""
                 /* MENU */
@@ -60,10 +69,22 @@ class Style:
                 padding-bottom: {padding[1]}px;
                 padding-right: {padding[2]}px;
                 padding-left: {padding[3]}px;
+                border-top: {border_item[0]}px {border_item_style} rgba{border_item_rgb};
+                border-bottom: {border_item[1]}px {border_item_style} rgba{border_item_rgb};
+                border-right: {border_item[2]}px {border_item_style} rgba{border_item_rgb};
+                border-left: {border_item[3]}px {border_item_style} rgba{border_item_rgb};
+                border-top-right-radius: {radius_item[0]}px;
+                border-top-left-radius: {radius_item[1]}px;
+                border-bottom-right-radius: {radius_item[2]}px;
+                border-bottom-left-radius: {radius_item[3]}px;
                 }}
                 QMenu::item:selected {{
                 background-color: rgba{bg_item_checked};
                 color: rgba{fg_item_checked};
+                border-top: {border_item_checked[0]}px {border_item_checked_style} rgba{border_item_checked_rgb};
+                border-bottom: {border_item_checked[1]}px {border_item_checked_style} rgba{border_item_checked_rgb};
+                border-right: {border_item_checked[2]}px {border_item_checked_style} rgba{border_item_checked_rgb};
+                border-left: {border_item_checked[3]}px {border_item_checked_style} rgba{border_item_checked_rgb};
                 }}
                 
                 /* BORDURES */
@@ -104,8 +125,16 @@ class Main(Style):
             fg=Rgb().th3(),
             fg_item=Rgb().th3(),
             fg_item_checked=Rgb().bn1(),
+
             border=((StyleBase().bd(), )*4),
             border_rgb=Rgb().th2(),
+
+            border_item=(0, StyleBase().bd(), 0, 0),
+            border_item_checked=(0, StyleBase().bd(), 0, 0),
+            border_item_rgb=Rgb().th1(),
+            border_item_checked_rgb=Rgb().th2(),
+            radius_item=((0, )*4),
+
             height_separator=3,
-            margin=(10, 10, 15, 15),
+            margin=(2, 2, 15, 15),
         )
