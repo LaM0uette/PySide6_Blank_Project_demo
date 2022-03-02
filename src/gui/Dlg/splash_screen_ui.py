@@ -34,7 +34,7 @@ class Ui_SplashScreen(object):
         self.vlay_fr_main = QVBoxLayout(self.fr_main)
         self.vlay_fr_main.setSpacing(0)
         self.vlay_fr_main.setObjectName(u"vlay_fr_main")
-        self.vlay_fr_main.setContentsMargins(0, 0, 0, 0)
+        self.vlay_fr_main.setContentsMargins(5, 0, 5, 5)
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.vlay_fr_main.addItem(self.verticalSpacer)
