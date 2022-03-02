@@ -8,26 +8,12 @@ from src.In_classe import In_classe
 class SplashScreen(msg_ui.Ui_Msg, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
 
-    def __init__(self,
-                 titre,
-                 msg,
-                 ico,
-                 tm,
-                 txt_pb_ok,
-                 width,
-                 height,
-                 opacity,
-    ):
+    def __init__(self):
         super(SplashScreen, self).__init__()
 
-        self.titre = titre
-        self.msg = msg
-        self.ico = ico
-        self.tm = tm
-        self.txt_pb_ok = txt_pb_ok
-        self.width = width
-        self.height = height
-        self.opacity = opacity
+        self.width = 400
+        self.height = 300
+        self.opacity = 1
 
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
@@ -41,7 +27,6 @@ class SplashScreen(msg_ui.Ui_Msg, QtWidgets.QDialog):
     ############################
     def IN_BASE(self):
         # Fenetre
-        self.setWindowTitle(self.titre)
         self.setFixedWidth(self.width)
         self.setFixedHeight(self.height)
         self.setWindowOpacity(self.opacity)
