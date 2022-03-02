@@ -44,7 +44,9 @@ class TrayUi(tray_ui_ui.Ui_TrayUi, QtWidgets.QDialog):
         # Base
         self.setCursor(Fct(cur=Cur().souris()).CUR())
     def IN_CONNECTIONS(self):
-        pass
+        # Menu_top
+        self.pb_mt_quitter.clicked.connect(lambda: self.close())
+        self.pb_mt_pin.clicked.connect(lambda: self.PIN())
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):
@@ -59,3 +61,16 @@ class TrayUi(tray_ui_ui.Ui_TrayUi, QtWidgets.QDialog):
     ############################
     ##    /INITIALISATION     ##
     ############################
+
+
+    #######################
+    ##     FONCTIONS     ##
+    #######################
+    def PIN(self):
+        if self.pb_mt_pin.isChecked():
+            self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.WindowStaysOnTopHint | QtCore.Qt.Tool)
+        else:
+            self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.Tool)
+    #######################
+    ##    /FONCTIONS     ##
+    #######################
