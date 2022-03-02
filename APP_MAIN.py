@@ -2,7 +2,6 @@ import os
 import sys
 import time
 
-import psutil as psutil
 from PySide6 import QtCore, QtWidgets, QtGui
 
 from src.gui import *
@@ -331,12 +330,12 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def reduire(self):
         self.setWindowState(QtCore.Qt.WindowMinimized)
     def cacher(self):
-        if config.auto_close: return self.quitter()
+        if config.debug: return self.quitter()
         self.hide()
         self._centreFen()
     def quitter(self):
         if DLG_Rep().QUITTER():
-            if config.auto_close:
+            if config.debug:
                 app.quit()
                 quit()
             else: self.hide()
