@@ -2,7 +2,6 @@ from PySide6 import QtCore, QtWidgets, QtGui
 
 from src.gui.Dlg import input_ui
 from src.build import *
-from src.In_classe import In_classe
 
 
 class InputApp(input_ui.Ui_Input, QtWidgets.QDialog):
@@ -75,9 +74,6 @@ class InputApp(input_ui.Ui_Input, QtWidgets.QDialog):
         ### QText ###
         TextEdit.Base_th(self.le_input_text)
         ### /QText ###
-
-        # Lancement des fonctions de MEF global
-        In_classe(ui=self)
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur=Cur().souris()).CUR())

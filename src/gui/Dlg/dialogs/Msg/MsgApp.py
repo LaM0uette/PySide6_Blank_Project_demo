@@ -2,7 +2,6 @@ from PySide6 import QtCore, QtWidgets, QtGui
 
 from src.gui.Dlg import msg_ui
 from src.build import *
-from src.In_classe import In_classe
 
 
 class MsgApp(msg_ui.Ui_Msg, QtWidgets.QDialog):
