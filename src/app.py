@@ -1,4 +1,5 @@
 import sys
+import time
 
 from PySide6 import QtCore, QtWidgets, QtGui
 
@@ -14,8 +15,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def __init__(self):
         super(main, self).__init__()
 
-
-
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
 
@@ -28,6 +27,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         self.setupUi(self)
         self.INIT()
+
+        sp.close()
 
     ############################
     ##     INITIALISATION     ##
@@ -400,7 +401,10 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 ICO_MAIN = f"{Img().main()}th2.svg"
 app = QtWidgets.QApplication(sys.argv)
 
+sp = SplashScreen()
+sp.show()
 
+time.sleep(2)
 
 app.processEvents()
 
