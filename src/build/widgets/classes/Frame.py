@@ -143,6 +143,18 @@ class palette_rgb(Style):
             bg=rgb,
             radius=((40, )*4),
     )
+class SplashScreen(Style):
+    def __init__(self, *wgs):
+        super().__init__(
+            *wgs,
+
+            bg=Rgb().th1(),
+            border=((StyleBase().bd(),) * 4),
+            border_rgb=Rgb().th3(),
+            border_hover=((StyleBase().bd(),) * 4),
+            border_hover_rgb=Rgb().th3(),
+            radius=((VBase.RADIUS, )*4)
+    )
 
 
 ##################
