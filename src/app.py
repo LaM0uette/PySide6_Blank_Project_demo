@@ -47,6 +47,10 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.setWindowOpacity(config.opacity)
         self._resize()
     def IN_CLASSE(self):
+        ### QScrollBoxArea ###
+        ScrollArea.Demo(self.sca_main)
+        ### /QScrollBoxArea ###
+
         ### QCheckBox ###
         CheckBox.Base_th(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3)
         CheckBox.Base_tr(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3)
@@ -132,11 +136,6 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         RadioButton.Base_th(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3)
         RadioButton.Base_tr(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3)
         ### /QRadioButton ###
-
-
-        ### QScrollBoxArea ###
-        ScrollArea.Demo(self.sca_main)
-        ### /QScrollBoxArea ###
 
 
         ### QSlider ###
