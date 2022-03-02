@@ -26,7 +26,7 @@ class Ui_TrayUi(object):
         self.verticalLayout = QVBoxLayout(TrayUi)
         self.verticalLayout.setSpacing(0)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setContentsMargins(10, 10, 10, 10)
         self.fr_main = QFrame(TrayUi)
         self.fr_main.setObjectName(u"fr_main")
         self.fr_main.setFrameShape(QFrame.StyledPanel)

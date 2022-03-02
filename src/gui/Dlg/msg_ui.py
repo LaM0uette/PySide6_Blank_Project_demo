@@ -27,7 +27,7 @@ class Ui_Msg(object):
         self.glay_dlg = QGridLayout(Msg)
         self.glay_dlg.setSpacing(0)
         self.glay_dlg.setObjectName(u"glay_dlg")
-        self.glay_dlg.setContentsMargins(0, 0, 0, 0)
+        self.glay_dlg.setContentsMargins(10, 10, 10, 10)
         self.fr_main = QFrame(Msg)
         self.fr_main.setObjectName(u"fr_main")
         self.fr_main.setFrameShape(QFrame.StyledPanel)

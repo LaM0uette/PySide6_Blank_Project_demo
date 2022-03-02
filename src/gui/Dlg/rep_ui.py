@@ -27,7 +27,7 @@ class Ui_Rep(object):
         self.glay_dlg = QGridLayout(Rep)
         self.glay_dlg.setSpacing(0)
         self.glay_dlg.setObjectName(u"glay_dlg")
-        self.glay_dlg.setContentsMargins(0, 0, 0, 0)
+        self.glay_dlg.setContentsMargins(10, 10, 10, 10)
         self.fr_main = QFrame(Rep)
         self.fr_main.setObjectName(u"fr_main")
         self.fr_main.setFrameShape(QFrame.StyledPanel)
