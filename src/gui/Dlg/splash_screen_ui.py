@@ -35,7 +35,11 @@ class Ui_SplashScreen(object):
         self.vlay_fr_main = QVBoxLayout(self.fr_main)
         self.vlay_fr_main.setSpacing(0)
         self.vlay_fr_main.setObjectName(u"vlay_fr_main")
-        self.vlay_fr_main.setContentsMargins(5, 5, 5, 5)
+        self.vlay_fr_main.setContentsMargins(5, 0, 5, 5)
+        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.vlay_fr_main.addItem(self.verticalSpacer)
+
         self.gridLayout = QGridLayout()
         self.gridLayout.setSpacing(10)
         self.gridLayout.setObjectName(u"gridLayout")
@@ -57,9 +61,9 @@ class Ui_SplashScreen(object):
 
         self.vlay_fr_main.addLayout(self.gridLayout)
 
-        self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.vlay_fr_main.addItem(self.verticalSpacer)
+        self.vlay_fr_main.addItem(self.verticalSpacer_2)
 
         self.lb_chargement = QLabel(self.fr_main)
         self.lb_chargement.setObjectName(u"lb_chargement")

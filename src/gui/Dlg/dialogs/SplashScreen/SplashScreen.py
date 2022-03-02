@@ -38,8 +38,8 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
 
 
         ### QLabel ###
-        Label.Base_tr(self.lb_titre, font_size=Font().h2)
-        Label.Base_tr(self.lb_description, self.lb_chargement)
+        Label.Base_tr(self.lb_titre, font_size=Font().h3())
+        Label.Base_tr(self.lb_description, self.lb_chargement, font_size=Font().h5())
         ### /QLabel ###
 
 
@@ -51,7 +51,7 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
         self.setCursor(Fct(cur=Cur().souris()).CUR())
 
         # Icone de l'app
-        dim = Dim().h6()
+        dim = Dim().h5()
         Fct(wg=self.lb_ico, w=dim, h=dim).DIM()
         self.lb_ico.setPixmap(QtGui.QPixmap(f"{Img().main()}th2.svg"))
         self.lb_ico.setScaledContents(True)
