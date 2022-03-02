@@ -150,7 +150,7 @@
          <item>
           <widget class="QStackedWidget" name="stk_option">
            <property name="currentIndex">
-            <number>3</number>
+            <number>2</number>
            </property>
            <widget class="QWidget" name="pg_opt_menu"/>
            <widget class="QWidget" name="pg_opt_font">
@@ -473,9 +473,6 @@
                 <property name="spacing">
                  <number>5</number>
                 </property>
-                <item row="1" column="1">
-                 <widget class="QCheckBox" name="ck_opt_cfg_autoclose"/>
-                </item>
                 <item row="1" column="0">
                  <widget class="QLabel" name="lb_opt_cfg_autoclose">
                   <property name="text">
@@ -490,10 +487,23 @@
                   </property>
                  </widget>
                 </item>
+                <item row="1" column="1">
+                 <widget class="QCheckBox" name="ck_opt_cfg_autoclose"/>
+                </item>
                 <item row="0" column="1">
                  <widget class="QCheckBox" name="ck_opt_cfg_autoreload"/>
                 </item>
-                <item row="0" column="2" rowspan="2">
+                <item row="2" column="0">
+                 <widget class="QLabel" name="lb_opt_cfg_ui_pin">
+                  <property name="text">
+                   <string>Ui pin :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QCheckBox" name="ck_opt_cfg_ui_pin"/>
+                </item>
+                <item row="0" column="2" rowspan="3">
                  <spacer name="horizontalSpacer_10">
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>

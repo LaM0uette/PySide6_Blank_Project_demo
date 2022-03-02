@@ -68,7 +68,7 @@ class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):
         self.setWindowOpacity(self.opacity)
     def IN_CLASSE(self):
         ### QCheckBox ###
-        CheckBox.Base_tr(self.ck_opt_cfg_autoreload, self.ck_opt_cfg_autoclose, self.ck_opt_cfg_resize)
+        CheckBox.Base_tr(self.ck_opt_cfg_autoreload, self.ck_opt_cfg_autoclose, self.ck_opt_cfg_resize, self.ck_opt_cfg_ui_pin)
         ### /QCheckBox ###
 
 
@@ -92,7 +92,7 @@ class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):
         Label.Titre(self.lb_opt_info_nom)
         Label.Base_tr(self.lb_opt_info_desc, self.lb_opt_info_auteur, self.lb_opt_info_version, self.lb_opt_ft_h1,
                       self.lb_opt_ft_h2, self.lb_opt_ft_h3, self.lb_opt_ft_h4, self.lb_opt_ft_h5, self.lb_opt_cfg_opacity,
-                      self.lb_opt_cfg_autoreload, self.lb_opt_cfg_autoclose, self.lb_opt_cfg_resize, self.lb_opt_cfg_resize_width,
+                      self.lb_opt_cfg_autoreload, self.lb_opt_cfg_autoclose, self.lb_opt_cfg_resize, self.lb_opt_cfg_ui_pin, self.lb_opt_cfg_resize_width,
                       self.lb_opt_cfg_resize_height)
         ### /QLabel ###
 
@@ -158,6 +158,7 @@ class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):
             self.ck_opt_cfg_autoreload.setChecked(True) if config.auto_reload == True else self.ck_opt_cfg_autoreload.setChecked(False)
             self.ck_opt_cfg_autoclose.setChecked(True) if config.auto_close == True else self.ck_opt_cfg_autoclose.setChecked(False)
             self.ck_opt_cfg_resize.setChecked(True) if config.resize == True else self.ck_opt_cfg_resize.setChecked(False)
+            self.ck_opt_cfg_ui_pin.setChecked(True) if config.tray_ui_pin == True else self.ck_opt_cfg_ui_pin.setChecked(False)
 
             self.sb_opt_cfg_resize_width.setValue(config.widht)
             self.sb_opt_cfg_resize_height.setValue(config.height)
@@ -195,6 +196,7 @@ class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):
         self.ck_opt_cfg_autoreload.stateChanged.connect(self._val_change_appliquer)
         self.ck_opt_cfg_autoclose.stateChanged.connect(self._val_change_appliquer)
         self.ck_opt_cfg_resize.stateChanged.connect(lambda: self._val_change_appliquer(val="true"))
+        self.ck_opt_cfg_ui_pin.stateChanged.connect(lambda: self._val_change_appliquer(val="true"))
         ## combo box theme
         self.cb_opt_tm_theme.currentTextChanged.connect(self._val_change_appliquer)
 
@@ -300,6 +302,7 @@ class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):
         config["var"]["autoreload"] = "true" if self.ck_opt_cfg_autoreload.isChecked() == True else "false"
         config["var"]["autoclose"] = "true" if self.ck_opt_cfg_autoclose.isChecked() == True else "false"
         config["var"]["resize"] = "true" if self.ck_opt_cfg_resize.isChecked() == True else "false"
+        config["var"]["tray_ui_pin"] = "true" if self.ck_opt_cfg_ui_pin.isChecked() == True else "false"
         config_ini.WRITE_INI(ini=config)
 
         dct = {
