@@ -26,3 +26,4 @@ cur = cfg["config"]["cur"]
 auto_reload = cfg["var"]["autoreload"].lower() == "true"
 auto_close = cfg["var"]["autoClose"].lower() == "true"
 resize = cfg["var"]["resize"].lower() == "true"
+tray_ui_pin = cfg["var"]["tray_ui_pin"].lower() == "true"

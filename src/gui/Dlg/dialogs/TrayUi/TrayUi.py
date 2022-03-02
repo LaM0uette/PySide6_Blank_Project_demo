@@ -2,6 +2,7 @@ from PySide6 import QtCore, QtWidgets, QtGui
 
 from src.gui.Dlg import tray_ui_ui
 from src.build import *
+from src.config import *
 
 
 class TrayUi(tray_ui_ui.Ui_TrayUi, QtWidgets.QDialog):
@@ -12,7 +13,11 @@ class TrayUi(tray_ui_ui.Ui_TrayUi, QtWidgets.QDialog):
         self.height = 600
         self.opacity = 1
 
-        self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.WindowStaysOnTopHint | QtCore.Qt.Tool)
+        if config.tray_ui_pin:
+            self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.WindowStaysOnTopHint | QtCore.Qt.Tool)
+        else:
+            self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.Tool)
+
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.setWindowModality(QtCore.Qt.ApplicationModal)
 
@@ -38,7 +43,6 @@ class TrayUi(tray_ui_ui.Ui_TrayUi, QtWidgets.QDialog):
 
         ### QPushButton ###
         PushButton.menu_top(self.pb_mt_quitter).quitter()
-        PushButton.pin(self.pb_mt_pin)
         ### /QPushButton ###
     def IN_WG(self):
         # Base
@@ -46,7 +50,6 @@ class TrayUi(tray_ui_ui.Ui_TrayUi, QtWidgets.QDialog):
     def IN_CONNECTIONS(self):
         # Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
-        self.pb_mt_pin.clicked.connect(lambda: self.PIN())
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):
@@ -61,16 +64,3 @@ class TrayUi(tray_ui_ui.Ui_TrayUi, QtWidgets.QDialog):
     ############################
     ##    /INITIALISATION     ##
     ############################
-
-
-    #######################
-    ##     FONCTIONS     ##
-    #######################
-    def PIN(self):
-        if self.pb_mt_pin.isChecked():
-            self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.WindowStaysOnTopHint)
-        else:
-            self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
-    #######################
-    ##    /FONCTIONS     ##
-    #######################

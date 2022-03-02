@@ -249,32 +249,6 @@ class menu_top:
             img=Img().quitter(),
             img_rgb="bn2"
         )
-class pin(Style):
-    bg = Rgb().tr()
-
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            wg_type="check",
-            width=Dim().h9() * 1.2,
-
-            bg=self.bg,
-            bg_hover=self.bg,
-            bg_checked=self.bg,
-            bg_checked_hover=self.bg,
-            fg=Rgb().th3(),
-
-            img_uncheck=Img().unlock(),
-            img_uncheck_hover=Img().unlock(),
-            img_check=Img().lock(),
-            img_check_hover=Img().lock(),
-            img_uncheck_rgb="th3",
-            img_uncheck_hover_rgb="th3",
-            img_check_rgb="th3",
-            img_check_hover_rgb="th3",
-
-            curseur=Cur().souris_main()
-    )
 
 #################
 ##     TXT     ##
