@@ -33,3 +33,6 @@ class Img:
         #plus | moins
     def plus(self): return self.SVG("ui", "plus")
     def moins(self): return self.SVG("ui", "moins")
+        #unpin | pin
+    def unpin(self): return self.SVG("ui", "unpin")
+    def pin(self): return self.SVG("ui", "pin")

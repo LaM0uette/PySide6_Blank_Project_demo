@@ -263,6 +263,8 @@ class pin(Style):
             bg_checked=self.bg,
             bg_checked_hover=self.bg,
             fg=Rgb().th3(),
+            img_uncheck=Img().unpin(),
+            img_check=Img().pin(),
     )
 
 #################
