@@ -32,7 +32,7 @@ class TrayUi(tray_ui_ui.Ui_TrayUi, QtWidgets.QDialog):
         ### QFrame ###
         Frame.TrayUi(self.fr_main)
         Frame.Menu_top(self.fr_menu_top)
-        Frame.Base_th(self.fr_body)
+        Frame.Base_th(self.fr_body, rgb=Rgb().th1())
         ### /QFrame ###
 
 
