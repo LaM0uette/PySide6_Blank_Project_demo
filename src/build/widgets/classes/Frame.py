@@ -62,9 +62,9 @@ class Style:
 
             if ombre_portee:
                 self.shadow = QtWidgets.QGraphicsDropShadowEffect(wg)
-                self.shadow.setBlurRadius(10)
-                self.shadow.setColor(QtGui.QColor(20, 20, 20))
-                self.shadow.setOffset(3)
+                self.shadow.setBlurRadius(16)
+                self.shadow.setColor(QtGui.QColor(0, 0, 0))
+                self.shadow.setOffset(0)
                 wg.setGraphicsEffect(self.shadow)
 
             wg.setCursor(Fct(cur=curseur).CUR())
