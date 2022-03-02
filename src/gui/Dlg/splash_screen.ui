@@ -64,6 +64,9 @@
        </spacer>
       </item>
       <item>
+       <widget class="QLabel" name="lb_chargement"/>
+      </item>
+      <item>
        <widget class="QProgressBar" name="pg_chargement">
         <property name="value">
          <number>0</number>

@@ -36,6 +36,11 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
         ### /QFrame ###
 
 
+        ### QLabel ###
+        Label.Base_tr(self.lb_chargement)
+        ### /QLabel ###
+
+
         ### QProgressBar ###
         ProgressBar.Chargement(self.pg_chargement)
         ### /QProgressBar ###
