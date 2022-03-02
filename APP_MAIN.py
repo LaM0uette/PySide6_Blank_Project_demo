@@ -372,15 +372,15 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         cur = QtGui.QCursor()
         height_verif = cur.pos().y() - self.pos().y()
 
-        if event.buttons() == QtCore.Qt.LeftButton and height_verif < Dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
+        if event.buttons() == QtCore.Qt.LeftButton and 10 < height_verif < Dim().h9()+10 and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
             self.setCursor(Fct(cur=Cur().agrandir()).CUR())
         else:
             self.setCursor(Fct(cur=Cur().souris()).CUR())
 
         try:
-            if event.buttons() == QtCore.Qt.LeftButton and height_verif < Dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized:
+            if event.buttons() == QtCore.Qt.LeftButton and 10 < height_verif < Dim().h9()+10 and self.windowState() != QtCore.Qt.WindowMaximized:
                 act_move(event)
-            if event.buttons() == QtCore.Qt.LeftButton and height_verif < Dim().h9() and self.windowState() == QtCore.Qt.WindowMaximized:
+            if event.buttons() == QtCore.Qt.LeftButton and 10 < height_verif < Dim().h9()+10 and self.windowState() == QtCore.Qt.WindowMaximized:
                 self.setWindowState(QtCore.Qt.WindowNoState)
                 self.win_state = QtCore.Qt.WindowNoState
                 act_move(event)
