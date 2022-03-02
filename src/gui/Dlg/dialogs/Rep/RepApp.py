@@ -32,7 +32,7 @@ class RepApp(rep_ui.Ui_Rep, QtWidgets.QDialog):
         self.height = height
         self.opacity = opacity
 
-        self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.Tool)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.setWindowModality(QtCore.Qt.ApplicationModal)
         self.setupUi(self)
