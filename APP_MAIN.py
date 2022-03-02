@@ -354,7 +354,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def mousePressEvent(self, event):
         cur = QtGui.QCursor()
         verifHeight = cur.pos().y() - self.pos().y()
-        if event.buttons() == QtCore.Qt.LeftButton and verifHeight < Dim().h9() and self.windowState() != QtCore.Qt.WindowMaximized:
+        if event.buttons() == QtCore.Qt.LeftButton and 10 < verifHeight < Dim().h9()+10 and self.windowState() != QtCore.Qt.WindowMaximized:
             self.dragPos = event.globalPosition().toPoint()
             event.accept()
     def mouseDoubleClickEvent(self, event):
