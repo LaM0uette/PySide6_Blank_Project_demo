@@ -58,16 +58,18 @@ class Ui_TrayUi(object):
 
         self.vlay_fr_main.addWidget(self.fr_menu_top)
 
-        self.fr_body = QVBoxLayout()
-        self.fr_body.setSpacing(0)
+        self.fr_body = QFrame(self.fr_main)
         self.fr_body.setObjectName(u"fr_body")
-        self.fr_body.setContentsMargins(5, 5, 5, 5)
+        self.vlay_body = QVBoxLayout(self.fr_body)
+        self.vlay_body.setSpacing(0)
+        self.vlay_body.setObjectName(u"vlay_body")
+        self.vlay_body.setContentsMargins(5, 5, 5, 5)
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.fr_body.addItem(self.verticalSpacer)
+        self.vlay_body.addItem(self.verticalSpacer)
 
 
-        self.vlay_fr_main.addLayout(self.fr_body)
+        self.vlay_fr_main.addWidget(self.fr_body)
 
 
         self.verticalLayout.addWidget(self.fr_main)
