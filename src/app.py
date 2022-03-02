@@ -403,7 +403,8 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             self._resize()
     # Tray
     def traySingleClick(self):
-        print("Tray icon double clicked")
+        tray_ui.open()
+        tray_ui.activateWindow()
     def trayDoubleClick(self):
         self.timer_double_click.stop()
         self.show()
@@ -427,6 +428,8 @@ app = QtWidgets.QApplication(sys.argv)
 
 splash_screen = SplashScreen()
 splash_screen.open()
+
+tray_ui = SplashScreen()
 
 app.processEvents()
 
