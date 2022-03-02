@@ -21,4 +21,4 @@ if __name__ == "__main__":
         time.sleep(0.3)
 
     if not pg_run:
-        pass
+        from src import app
