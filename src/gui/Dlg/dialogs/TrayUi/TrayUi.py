@@ -31,7 +31,15 @@ class TrayUi(tray_ui_ui.Ui_TrayUi, QtWidgets.QDialog):
     def IN_CLASSE(self):
         ### QFrame ###
         Frame.TrayUi(self.fr_main)
+        Frame.Menu_top(self.fr_menu_top)
+        Frame.Base_th(self.fr_body)
         ### /QFrame ###
+
+
+        ### QPushButton ###
+        PushButton.menu_top(self.pb_mt_quitter).quitter()
+        PushButton.menu_top(self.pb_mt_pin).pin()
+        ### /QPushButton ###
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur=Cur().souris()).CUR())
