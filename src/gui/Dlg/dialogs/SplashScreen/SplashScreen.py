@@ -6,8 +6,6 @@ from src.config import *
 
 
 class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
-    dragPos: QtCore.QPoint
-
     def __init__(self):
         super(SplashScreen, self).__init__()
 
@@ -74,32 +72,3 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
     ############################
     ##    /INITIALISATION     ##
     ############################
-
-
-    ###################
-    ##     EVENT     ##
-    ###################
-    def mousePressEvent(self, event):
-        cur = QtGui.QCursor()
-        verifHeight = cur.pos().y() - self.pos().y()
-        if event.buttons() == QtCore.Qt.LeftButton and verifHeight < Dim().h9():
-            self.dragPos = event.globalPosition().toPoint()
-            event.accept()
-    def mouseMoveEvent(self, event):
-        def act_move(event):
-            self.move(self.pos() + event.globalPosition().toPoint() - self.dragPos)
-            self.dragPos = event.globalPosition().toPoint()
-            event.accept()
-
-        cur = QtGui.QCursor()
-        height_verif = cur.pos().y() - self.pos().y()
-
-        try:
-            if event.buttons() == QtCore.Qt.LeftButton and height_verif < Dim().h9():
-                act_move(event)
-            if event.buttons() == QtCore.Qt.LeftButton and height_verif < Dim().h9():
-                act_move(event)
-        except AttributeError: pass
-    ###################
-    ##    /EVENT     ##
-    ###################
