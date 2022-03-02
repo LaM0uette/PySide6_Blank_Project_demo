@@ -4,8 +4,8 @@ from src.build import *
 
 class DLG_Rgb:
     def __init__(self,
-                 width=700,
-                 height=500,
+                 width=750,
+                 height=550,
                  opacity=1
     ):
         self.width = width

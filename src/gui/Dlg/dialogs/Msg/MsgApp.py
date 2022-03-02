@@ -111,7 +111,7 @@ class MsgApp(msg_ui.Ui_Msg, QtWidgets.QDialog):
     def mousePressEvent(self, event):
         cur = QtGui.QCursor()
         verifHeight = cur.pos().y() - self.pos().y()
-        if event.buttons() == QtCore.Qt.LeftButton and verifHeight < Dim().h9():
+        if event.buttons() == QtCore.Qt.LeftButton and 10< verifHeight < Dim().h9()+10:
             self.dragPos = event.globalPosition().toPoint()
             event.accept()
     def mouseMoveEvent(self, event):
@@ -124,9 +124,9 @@ class MsgApp(msg_ui.Ui_Msg, QtWidgets.QDialog):
         height_verif = cur.pos().y() - self.pos().y()
 
         try:
-            if event.buttons() == QtCore.Qt.LeftButton and height_verif < Dim().h9():
+            if event.buttons() == QtCore.Qt.LeftButton and 10< height_verif < Dim().h9()+10:
                 act_move(event)
-            if event.buttons() == QtCore.Qt.LeftButton and height_verif < Dim().h9():
+            if event.buttons() == QtCore.Qt.LeftButton and 10< height_verif < Dim().h9()+10:
                 act_move(event)
         except AttributeError: pass
     ###################

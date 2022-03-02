@@ -4,8 +4,8 @@ from src.build import *
 
 class DLG_Input:
     def __init__(self,
-                 width=600,
-                 height=200,
+                 width=650,
+                 height=250,
                  opacity=1
     ):
         self.width = width
