@@ -11,8 +11,8 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
     def __init__(self):
         super(SplashScreen, self).__init__()
 
-        self.width = 400
-        self.height = 200
+        self.width = 600
+        self.height = 400
         self.opacity = 1
 
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
@@ -38,7 +38,8 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
 
 
         ### QLabel ###
-        Label.Base_tr(self.lb_chargement)
+        Label.Base_tr(self.lb_titre, font_size=Font().h2)
+        Label.Base_tr(self.lb_description, self.lb_chargement)
         ### /QLabel ###
 
 
