@@ -238,7 +238,11 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def IN_WG_BASE(self):
         pass
     def IN_TRAY(self):
-        self.tray.activated.connect(self.showTrayEvent)
+        self.tray.activated.connect(self.trayActivate)
+        self.timer_double_click = QtCore.QTimer(self)
+        self.timer_double_click.setSingleShot(True)
+        self.timer_double_click.timeout.connect(self.traySingleClick)
+
         TrayIcon.Main(self.tray_menu)
 
         ### Actions
@@ -397,13 +401,22 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         else:
             self.setWindowState(self.win_state)
             self._resize()
-    def showTrayEvent(self, reason):
-        if reason == QtWidgets.QSystemTrayIcon.Trigger:
-            self.show()
-            fen.activateWindow()
+    # Tray
+    def traySingleClick(self):
+        print("Tray icon double clicked")
+    def trayDoubleClick(self):
+        self.timer_double_click.stop()
+        self.show()
+        fen.activateWindow()
 
-            if fen.windowState() == QtCore.Qt.WindowMinimized:
-                fen.setWindowState(QtCore.Qt.WindowActive)
+        if fen.windowState() == QtCore.Qt.WindowMinimized:
+            fen.setWindowState(QtCore.Qt.WindowActive)
+    def trayActivate(self, reason):
+        if reason == QtWidgets.QSystemTrayIcon.Trigger:
+            self.timer_double_click.start(app.doubleClickInterval())
+
+        elif reason == QtWidgets.QSystemTrayIcon.DoubleClick:
+            self.trayDoubleClick()
     ###################
     ##    /EVENT     ##
     ###################
