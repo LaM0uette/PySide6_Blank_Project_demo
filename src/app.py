@@ -1,4 +1,5 @@
 import sys
+import time
 
 from PySide6 import QtCore, QtWidgets, QtGui
 
@@ -270,7 +271,13 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
             sp.lb_chargement.setText(fct[1])
             sp.pg_chargement.setValue(sp.pg_chargement.value() + 100/len(args))
 
+            time.sleep(2)
+
             fct[0]()
+
+        sp.lb_chargement.setText("Lancement de l'application")
+        sp.pg_chargement.setValue(100)
+        time.sleep(4)
     ############################
     ##    /INITIALISATION     ##
     ############################
