@@ -433,7 +433,7 @@ app = QtWidgets.QApplication(sys.argv)
 splash_screen = SplashScreen()
 splash_screen.open()
 
-tray_ui = SplashScreen()
+tray_ui = TrayUi()
 
 app.processEvents()
 

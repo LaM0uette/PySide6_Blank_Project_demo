@@ -9,8 +9,8 @@ class TrayUi(tray_ui_ui.Ui_TrayUi, QtWidgets.QDialog):
     def __init__(self):
         super(TrayUi, self).__init__()
 
-        self.width = 600
-        self.height = 400
+        self.width = 300
+        self.height = 600
         self.opacity = 1
 
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
