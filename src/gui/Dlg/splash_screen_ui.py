@@ -15,8 +15,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QFrame, QProgressBar, QSizePolicy,
-    QSpacerItem, QVBoxLayout, QWidget)
+from PySide6.QtWidgets import (QApplication, QFrame, QLabel, QProgressBar,
+    QSizePolicy, QSpacerItem, QVBoxLayout, QWidget)
 
 class Ui_SplashScreen(object):
     def setupUi(self, SplashScreen):
@@ -38,6 +38,11 @@ class Ui_SplashScreen(object):
         self.verticalSpacer = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.vlay_fr_main.addItem(self.verticalSpacer)
+
+        self.lb_chargement = QLabel(self.fr_main)
+        self.lb_chargement.setObjectName(u"lb_chargement")
+
+        self.vlay_fr_main.addWidget(self.lb_chargement)
 
         self.pg_chargement = QProgressBar(self.fr_main)
         self.pg_chargement.setObjectName(u"pg_chargement")
