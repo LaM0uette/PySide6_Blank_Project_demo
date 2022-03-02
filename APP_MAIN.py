@@ -432,28 +432,20 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
 ICO_MAIN = f"{Img().main()}th2.svg"
 if __name__ == "__main__":
-    pg_run = False
-    for proc in psutil.process_iter():
-        pi = proc.as_dict(attrs=["pid", "name"])
-        if pi["name"] == f"{config.nom}.exe":
-            pg_run = True
-
-    if config.auto_reload and not pg_run:
+    if config.debug:
         os.startfile(os.path.abspath(f"{vrb.DO_SCRIPT}convert_ui.bat"))
         time.sleep(1)
-        Fct().GEN_SVG()
-        time.sleep(0.3)
 
-    if not pg_run:
-        app = QtWidgets.QApplication(sys.argv)
+    Fct().GEN_SVG()
+    time.sleep(0.3)
 
-        splash_screen = SplashScreen()
-        splash_screen.open()
-        tray_ui = TrayUi()
+    app = QtWidgets.QApplication(sys.argv)
+    splash_screen = SplashScreen()
+    splash_screen.open()
+    tray_ui = TrayUi()
+    app.processEvents()
 
-        app.processEvents()
+    fen = main()
+    fen.show()
 
-        fen = main()
-        fen.show()
-
-        sys.exit(app.exec())
+    sys.exit(app.exec())

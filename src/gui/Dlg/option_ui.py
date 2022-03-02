@@ -271,20 +271,20 @@ class Ui_Option(object):
 
         self.glay_fr_opt_cfg_autoclose.addWidget(self.lb_opt_cfg_autoclose, 1, 0, 1, 1)
 
-        self.lb_opt_cfg_autoreload = QLabel(self.fr_opt_cfg_autoclose)
-        self.lb_opt_cfg_autoreload.setObjectName(u"lb_opt_cfg_autoreload")
+        self.lb_opt_cfg_debug = QLabel(self.fr_opt_cfg_autoclose)
+        self.lb_opt_cfg_debug.setObjectName(u"lb_opt_cfg_debug")
 
-        self.glay_fr_opt_cfg_autoclose.addWidget(self.lb_opt_cfg_autoreload, 0, 0, 1, 1)
+        self.glay_fr_opt_cfg_autoclose.addWidget(self.lb_opt_cfg_debug, 0, 0, 1, 1)
 
         self.ck_opt_cfg_autoclose = QCheckBox(self.fr_opt_cfg_autoclose)
         self.ck_opt_cfg_autoclose.setObjectName(u"ck_opt_cfg_autoclose")
 
         self.glay_fr_opt_cfg_autoclose.addWidget(self.ck_opt_cfg_autoclose, 1, 1, 1, 1)
 
-        self.ck_opt_cfg_autoreload = QCheckBox(self.fr_opt_cfg_autoclose)
-        self.ck_opt_cfg_autoreload.setObjectName(u"ck_opt_cfg_autoreload")
+        self.ck_opt_cfg_debug = QCheckBox(self.fr_opt_cfg_autoclose)
+        self.ck_opt_cfg_debug.setObjectName(u"ck_opt_cfg_debug")
 
-        self.glay_fr_opt_cfg_autoclose.addWidget(self.ck_opt_cfg_autoreload, 0, 1, 1, 1)
+        self.glay_fr_opt_cfg_autoclose.addWidget(self.ck_opt_cfg_debug, 0, 1, 1, 1)
 
         self.lb_opt_cfg_ui_pin = QLabel(self.fr_opt_cfg_autoclose)
         self.lb_opt_cfg_ui_pin.setObjectName(u"lb_opt_cfg_ui_pin")
@@ -504,7 +504,7 @@ class Ui_Option(object):
         self.le_opt_ft_texte_h5.setText(QCoreApplication.translate("Option", u"TEST De la Police", None))
         self.lb_opt_cfg_opacity.setText(QCoreApplication.translate("Option", u"Opacit\u00e9 ", None))
         self.lb_opt_cfg_autoclose.setText(QCoreApplication.translate("Option", u"Auto close : ", None))
-        self.lb_opt_cfg_autoreload.setText(QCoreApplication.translate("Option", u"Auto reload : ", None))
+        self.lb_opt_cfg_debug.setText(QCoreApplication.translate("Option", u"Debug : ", None))
         self.lb_opt_cfg_ui_pin.setText(QCoreApplication.translate("Option", u"Ui pin :", None))
         self.lb_opt_cfg_resize.setText(QCoreApplication.translate("Option", u"Manuel : ", None))
         self.lb_opt_cfg_resize_width.setText(QCoreApplication.translate("Option", u"Largeur : ", None))

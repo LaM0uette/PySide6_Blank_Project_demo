@@ -67,7 +67,7 @@ class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):
         self.setWindowOpacity(self.opacity)
     def IN_CLASSE(self):
         ### QCheckBox ###
-        CheckBox.Base_tr(self.ck_opt_cfg_autoreload, self.ck_opt_cfg_autoclose, self.ck_opt_cfg_resize, self.ck_opt_cfg_ui_pin)
+        CheckBox.Base_tr(self.ck_opt_cfg_debug, self.ck_opt_cfg_autoclose, self.ck_opt_cfg_resize, self.ck_opt_cfg_ui_pin)
         ### /QCheckBox ###
 
 
@@ -94,7 +94,7 @@ class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):
         Label.Titre(self.lb_opt_info_nom)
         Label.Base_tr(self.lb_opt_info_desc, self.lb_opt_info_auteur, self.lb_opt_info_version, self.lb_opt_ft_h1,
                       self.lb_opt_ft_h2, self.lb_opt_ft_h3, self.lb_opt_ft_h4, self.lb_opt_ft_h5, self.lb_opt_cfg_opacity,
-                      self.lb_opt_cfg_autoreload, self.lb_opt_cfg_autoclose, self.lb_opt_cfg_resize, self.lb_opt_cfg_ui_pin, self.lb_opt_cfg_resize_width,
+                      self.lb_opt_cfg_debug, self.lb_opt_cfg_autoclose, self.lb_opt_cfg_resize, self.lb_opt_cfg_ui_pin, self.lb_opt_cfg_resize_width,
                       self.lb_opt_cfg_resize_height)
         ### /QLabel ###
 
@@ -155,7 +155,7 @@ class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):
             self.sb_opt_ft_h5.setValue(Font().h5())
 
             self.sb_opt_cfg_opacity.setValue(config.opacity*100)
-            self.ck_opt_cfg_autoreload.setChecked(True) if config.auto_reload == True else self.ck_opt_cfg_autoreload.setChecked(False)
+            self.ck_opt_cfg_debug.setChecked(True) if config.debug == True else self.ck_opt_cfg_debug.setChecked(False)
             self.ck_opt_cfg_autoclose.setChecked(True) if config.auto_close == True else self.ck_opt_cfg_autoclose.setChecked(False)
             self.ck_opt_cfg_resize.setChecked(True) if config.resize == True else self.ck_opt_cfg_resize.setChecked(False)
             self.ck_opt_cfg_ui_pin.setChecked(True) if config.tray_ui_pin == True else self.ck_opt_cfg_ui_pin.setChecked(False)
@@ -193,7 +193,7 @@ class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):
         self.sb_opt_cfg_opacity.valueChanged.connect(self._val_change_appliquer)
         self.sb_opt_cfg_resize_width.valueChanged.connect(lambda: self._val_change_appliquer(val="true"))
         self.sb_opt_cfg_resize_height.valueChanged.connect(lambda: self._val_change_appliquer(val="true"))
-        self.ck_opt_cfg_autoreload.stateChanged.connect(self._val_change_appliquer)
+        self.ck_opt_cfg_debug.stateChanged.connect(self._val_change_appliquer)
         self.ck_opt_cfg_autoclose.stateChanged.connect(self._val_change_appliquer)
         self.ck_opt_cfg_resize.stateChanged.connect(lambda: self._val_change_appliquer(val="true"))
         self.ck_opt_cfg_ui_pin.stateChanged.connect(lambda: self._val_change_appliquer(val="true"))
@@ -299,7 +299,7 @@ class OptionApp(option_ui.Ui_Option, QtWidgets.QDialog):
         config["config"]["widht"] = f"{self.sb_opt_cfg_resize_width.value()}"
         config["config"]["height"] = f"{self.sb_opt_cfg_resize_height.value()}"
         config["config"]["opacity"] = f"{self.sb_opt_cfg_opacity.value() / 100}"
-        config["var"]["autoreload"] = "true" if self.ck_opt_cfg_autoreload.isChecked() == True else "false"
+        config["var"]["debug"] = "true" if self.ck_opt_cfg_debug.isChecked() == True else "false"
         config["var"]["autoclose"] = "true" if self.ck_opt_cfg_autoclose.isChecked() == True else "false"
         config["var"]["resize"] = "true" if self.ck_opt_cfg_resize.isChecked() == True else "false"
         config["var"]["tray_ui_pin"] = "true" if self.ck_opt_cfg_ui_pin.isChecked() == True else "false"
