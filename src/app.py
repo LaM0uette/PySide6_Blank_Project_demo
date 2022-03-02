@@ -261,11 +261,16 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
     def INIT(self):
         self.IN_BASE()
         self.IN_CLASSE()
+        sp.progressBar.setValue(20)
         self.IN_WG()
         time.sleep(4)
+        sp.progressBar.setValue(40)
         self.IN_CONNECTIONS()
         self.IN_ACT()
         self.IN_WG_BASE()
+        time.sleep(2)
+        sp.progressBar.setValue(99)
+        time.sleep(2)
         self.IN_TRAY()
     ############################
     ##    /INITIALISATION     ##

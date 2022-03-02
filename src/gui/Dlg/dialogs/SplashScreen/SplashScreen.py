@@ -19,9 +19,9 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
 
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        self.setWindowModality(QtCore.Qt.ApplicationModal)
         self.setupUi(self)
         self.INIT()
-        QtCore.QCoreApplication.processEvents()
 
 
     ############################
