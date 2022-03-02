@@ -25,7 +25,15 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.tray_menu.setAttribute(QtCore.Qt.WA_TranslucentBackground)
 
         self.setupUi(self)
-        self.INIT()
+        self.INIT(
+            [self.IN_BASE, "Configuration des éléments principaux"],
+            [self.IN_CLASSE, "Initialisation des Widgets"],
+            [self.IN_WG, "Configuration de base des Widgets"],
+            [self.IN_CONNECTIONS, "Ajout des connexions"],
+            [self.IN_ACT, "Fonctions de base"],
+            [self.IN_WG_BASE, "Etat de base des Widgets"],
+            [self.IN_TRAY, "Finalisation de la configuration"]
+        )
 
         sp.close()
 
@@ -257,14 +265,12 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         self.tray.setContextMenu(self.tray_menu)
         self.tray.show()
-    def INIT(self):
-        self.IN_BASE()
-        self.IN_CLASSE()
-        self.IN_WG()
-        self.IN_CONNECTIONS()
-        self.IN_ACT()
-        self.IN_WG_BASE()
-        self.IN_TRAY()
+    def INIT(self, *args):
+        for fct in args:
+            sp.lb_chargement.setText(fct[1])
+            sp.pg_chargement.setValue(sp.pg_chargement.value() + 100/len(args))
+
+            fct[0]()
     ############################
     ##    /INITIALISATION     ##
     ############################
