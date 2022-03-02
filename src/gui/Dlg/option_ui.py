@@ -266,11 +266,6 @@ class Ui_Option(object):
         self.glay_fr_opt_cfg_autoclose.setSpacing(5)
         self.glay_fr_opt_cfg_autoclose.setObjectName(u"glay_fr_opt_cfg_autoclose")
         self.glay_fr_opt_cfg_autoclose.setContentsMargins(5, 5, 5, 5)
-        self.ck_opt_cfg_autoclose = QCheckBox(self.fr_opt_cfg_autoclose)
-        self.ck_opt_cfg_autoclose.setObjectName(u"ck_opt_cfg_autoclose")
-
-        self.glay_fr_opt_cfg_autoclose.addWidget(self.ck_opt_cfg_autoclose, 1, 1, 1, 1)
-
         self.lb_opt_cfg_autoclose = QLabel(self.fr_opt_cfg_autoclose)
         self.lb_opt_cfg_autoclose.setObjectName(u"lb_opt_cfg_autoclose")
 
@@ -281,14 +276,29 @@ class Ui_Option(object):
 
         self.glay_fr_opt_cfg_autoclose.addWidget(self.lb_opt_cfg_autoreload, 0, 0, 1, 1)
 
+        self.ck_opt_cfg_autoclose = QCheckBox(self.fr_opt_cfg_autoclose)
+        self.ck_opt_cfg_autoclose.setObjectName(u"ck_opt_cfg_autoclose")
+
+        self.glay_fr_opt_cfg_autoclose.addWidget(self.ck_opt_cfg_autoclose, 1, 1, 1, 1)
+
         self.ck_opt_cfg_autoreload = QCheckBox(self.fr_opt_cfg_autoclose)
         self.ck_opt_cfg_autoreload.setObjectName(u"ck_opt_cfg_autoreload")
 
         self.glay_fr_opt_cfg_autoclose.addWidget(self.ck_opt_cfg_autoreload, 0, 1, 1, 1)
 
+        self.lb_opt_cfg_ui_pin = QLabel(self.fr_opt_cfg_autoclose)
+        self.lb_opt_cfg_ui_pin.setObjectName(u"lb_opt_cfg_ui_pin")
+
+        self.glay_fr_opt_cfg_autoclose.addWidget(self.lb_opt_cfg_ui_pin, 2, 0, 1, 1)
+
+        self.ck_opt_cfg_ui_pin = QCheckBox(self.fr_opt_cfg_autoclose)
+        self.ck_opt_cfg_ui_pin.setObjectName(u"ck_opt_cfg_ui_pin")
+
+        self.glay_fr_opt_cfg_autoclose.addWidget(self.ck_opt_cfg_ui_pin, 2, 1, 1, 1)
+
         self.horizontalSpacer_10 = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
-        self.glay_fr_opt_cfg_autoclose.addItem(self.horizontalSpacer_10, 0, 2, 2, 1)
+        self.glay_fr_opt_cfg_autoclose.addItem(self.horizontalSpacer_10, 0, 2, 3, 1)
 
 
         self.vlay_pg_opt_configs.addWidget(self.fr_opt_cfg_autoclose)
@@ -462,7 +472,7 @@ class Ui_Option(object):
 
         self.retranslateUi(Option)
 
-        self.stk_option.setCurrentIndex(3)
+        self.stk_option.setCurrentIndex(2)
 
 
         QMetaObject.connectSlotsByName(Option)
@@ -495,6 +505,7 @@ class Ui_Option(object):
         self.lb_opt_cfg_opacity.setText(QCoreApplication.translate("Option", u"Opacit\u00e9 ", None))
         self.lb_opt_cfg_autoclose.setText(QCoreApplication.translate("Option", u"Auto close : ", None))
         self.lb_opt_cfg_autoreload.setText(QCoreApplication.translate("Option", u"Auto reload : ", None))
+        self.lb_opt_cfg_ui_pin.setText(QCoreApplication.translate("Option", u"Ui pin :", None))
         self.lb_opt_cfg_resize.setText(QCoreApplication.translate("Option", u"Manuel : ", None))
         self.lb_opt_cfg_resize_width.setText(QCoreApplication.translate("Option", u"Largeur : ", None))
         self.lb_opt_cfg_resize_height.setText(QCoreApplication.translate("Option", u"Hauteur : ", None))
