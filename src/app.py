@@ -277,7 +277,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
 
         sp.lb_chargement.setText("Lancement de l'application")
         sp.pg_chargement.setValue(100)
-        time.sleep(4)
+        time.sleep(2)
     ############################
     ##    /INITIALISATION     ##
     ############################
