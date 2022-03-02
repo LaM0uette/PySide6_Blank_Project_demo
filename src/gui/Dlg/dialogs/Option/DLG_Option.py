@@ -5,7 +5,7 @@ from src.build import *
 class DLG_Option:
     def __init__(self,
                  fen,
-                 width=800,
+                 width=850,
                  height=600,
                  opacity=1
     ):
