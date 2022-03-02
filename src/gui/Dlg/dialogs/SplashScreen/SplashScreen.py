@@ -11,6 +11,8 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
     def __init__(self):
         super(SplashScreen, self).__init__()
 
+
+
         self.width = 400
         self.height = 300
         self.opacity = 1
@@ -19,6 +21,7 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.setupUi(self)
         self.INIT()
+        QtCore.QCoreApplication.processEvents()
 
 
     ############################

@@ -403,7 +403,7 @@ ICO_MAIN = f"{Img().main()}th2.svg"
 app = QtWidgets.QApplication(sys.argv)
 
 sp = SplashScreen()
-sp.exec()
+sp.open()
 
 app.processEvents()
 
