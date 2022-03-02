@@ -11,8 +11,6 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
     def __init__(self):
         super(SplashScreen, self).__init__()
 
-
-
         self.width = 400
         self.height = 300
         self.opacity = 1
@@ -20,6 +18,7 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.setWindowModality(QtCore.Qt.ApplicationModal)
+
         self.setupUi(self)
         self.INIT()
 
@@ -35,20 +34,12 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
     def IN_CLASSE(self):
         ### QFrame ###
         Frame.Cadre(self.fr_main).th3()
-        Frame.Base_th(self.fr_body, rgb=Rgb().th1())
         ### /QFrame ###
-
-        # Lancement des fonctions de MEF global
-        # In_classe(ui=self)
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur=Cur().souris()).CUR())
-
-        # Frame menu_top
-        self.fr_menu_top.setFixedHeight(Dim().h9())
     def IN_CONNECTIONS(self):
-        ## Menu_top
-        self.pb_mt_quitter.clicked.connect(lambda: self.close())
+        pass
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):
