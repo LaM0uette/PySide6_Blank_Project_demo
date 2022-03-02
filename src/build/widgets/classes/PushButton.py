@@ -272,6 +272,8 @@ class pin(Style):
             img_uncheck_hover_rgb="th3",
             img_check_rgb="th3",
             img_check_hover_rgb="th3",
+
+            curseur=Cur().souris_main()
     )
 
 #################
