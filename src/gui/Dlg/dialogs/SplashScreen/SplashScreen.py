@@ -1,15 +1,15 @@
 from PySide6 import QtCore, QtWidgets, QtGui
 
-from src.gui.Dlg import msg_ui
+from src.gui.Dlg import splash_screen_ui
 from src.build import *
 from src.In_classe import In_classe
 
 
-class SplashScreen(msg_ui.Ui_Msg, QtWidgets.QDialog):
+class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
 
-    def __init__(self):
-        super(SplashScreen, self).__init__()
+    def __init__(self, parent=None):
+        super(SplashScreen, self).__init__(parent)
 
         self.width = 400
         self.height = 300
@@ -17,7 +17,6 @@ class SplashScreen(msg_ui.Ui_Msg, QtWidgets.QDialog):
 
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        self.setWindowModality(QtCore.Qt.ApplicationModal)
         self.setupUi(self)
         self.INIT()
 

@@ -262,6 +262,7 @@ class main(main_ui.Ui_main, QtWidgets.QWidget):
         self.IN_BASE()
         self.IN_CLASSE()
         self.IN_WG()
+        time.sleep(8)
         self.IN_CONNECTIONS()
         self.IN_ACT()
         self.IN_WG_BASE()
@@ -403,8 +404,6 @@ app = QtWidgets.QApplication(sys.argv)
 
 sp = SplashScreen()
 sp.show()
-
-time.sleep(2)
 
 app.processEvents()
 
