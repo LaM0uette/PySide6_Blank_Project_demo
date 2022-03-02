@@ -8,8 +8,8 @@ from src.In_classe import In_classe
 class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
 
-    def __init__(self, parent=None):
-        super(SplashScreen, self).__init__(parent)
+    def __init__(self):
+        super(SplashScreen, self).__init__()
 
         self.width = 400
         self.height = 300
