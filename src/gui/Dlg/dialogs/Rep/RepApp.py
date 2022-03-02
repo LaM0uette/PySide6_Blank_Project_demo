@@ -2,7 +2,6 @@ from PySide6 import QtCore, QtWidgets, QtGui
 
 from src.gui.Dlg import rep_ui
 from src.build import *
-from src.In_classe import In_classe
 
 
 class RepApp(rep_ui.Ui_Rep, QtWidgets.QDialog):
@@ -50,6 +49,8 @@ class RepApp(rep_ui.Ui_Rep, QtWidgets.QDialog):
         self.setWindowOpacity(self.opacity)
     def IN_CLASSE(self):
         ### QFrame ###
+        Frame.Menu_top(self.fr_menu_top)
+        Frame.Cadre(self.fr_main).th2()
         Frame.Cadre(self.fr_main).th3()
         Frame.Base_th(self.fr_body, rgb=Rgb().th1())
         Frame.Menu_bottom_dlg(self.fr_rep_bottom)
@@ -57,6 +58,7 @@ class RepApp(rep_ui.Ui_Rep, QtWidgets.QDialog):
 
 
         ### QLabel ###
+        Label.Base_tr(self.lb_mt_nom, font_size=Font().h3())
         Label.Base_tr(self.lb_rep_text)
         ### /QLabel ###
 
@@ -64,11 +66,8 @@ class RepApp(rep_ui.Ui_Rep, QtWidgets.QDialog):
         ### QPushButton ###
         PushButton.dlg_ok(self.pb_rep_ok)
         PushButton.dlg_nok_inv(self.pb_rep_annuler)
+        PushButton.menu_top(self.pb_mt_quitter).quitter()
         ### /QPushButton ###
-
-
-        # Lancement des fonctions de MEF global
-        In_classe(ui=self)
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur=Cur().souris()).CUR())

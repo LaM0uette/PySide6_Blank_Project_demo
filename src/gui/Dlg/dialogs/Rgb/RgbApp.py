@@ -2,7 +2,6 @@ from PySide6 import QtCore, QtWidgets, QtGui
 
 from src.gui.Dlg import rgb_ui
 from src.build import *
-from src.In_classe import In_classe
 
 
 class RgbApp(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
@@ -51,6 +50,8 @@ class RgbApp(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         self.setWindowOpacity(self.opacity)
     def IN_CLASSE(self):
         ### QFrame ###
+        Frame.Menu_top(self.fr_menu_top)
+        Frame.Cadre(self.fr_main).th2()
         Frame.Cadre(self.fr_main).th3()
         Frame.Base_th(self.fr_body, rgb=Rgb().th1())
         Frame.Menu_bottom_dlg(self.fr_rgb_bottom)
@@ -59,6 +60,7 @@ class RgbApp(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
 
 
         ### QLabel ###
+        Label.Base_tr(self.lb_mt_nom, font_size=Font().h3())
         Label.Base_tr(self.lb_rgb_red, self.lb_rgb_green, self.lb_rgb_blue, font_size=Font().h4())
         ### /QLabel ###
 
@@ -66,6 +68,7 @@ class RgbApp(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         ### QPushButton ###
         PushButton.dlg_ok(self.pb_rgb_ok)
         PushButton.dlg_nok_inv(self.pb_rgb_annuler)
+        PushButton.menu_top(self.pb_mt_quitter).quitter()
         ### /QPushButton ###
 
 
@@ -82,9 +85,6 @@ class RgbApp(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         ### QText ###
         TextEdit.rgb_hex(self.le_rgb_hex)
         ### /QText ###
-
-        # Lancement des fonctions de MEF global
-        In_classe(ui=self)
     def IN_WG(self):
         # Base
         self.setCursor(Fct(cur=Cur().souris()).CUR())
