@@ -38,7 +38,7 @@ class TrayUi(tray_ui_ui.Ui_TrayUi, QtWidgets.QDialog):
 
         ### QPushButton ###
         PushButton.menu_top(self.pb_mt_quitter).quitter()
-        PushButton.menu_top(self.pb_mt_pin).pin()
+        PushButton.pin(self.pb_mt_pin)
         ### /QPushButton ###
     def IN_WG(self):
         # Base

@@ -249,7 +249,21 @@ class menu_top:
             img=Img().quitter(),
             img_rgb="bn2"
         )
+class pin(Style):
+    bg = Rgb().tr()
 
+    def __init__(self, *wgs):
+        super().__init__(
+            *wgs,
+            wg_type="check",
+            width=Dim().h9() * 1.2,
+
+            bg=self.bg,
+            bg_hover=self.bg,
+            bg_checked=self.bg,
+            bg_checked_hover=self.bg,
+            fg=Rgb().th3(),
+    )
 
 #################
 ##     TXT     ##
