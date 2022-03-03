@@ -22,6 +22,7 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > ``` py
 > self.INIT(
 >     [self.IN_BASE, "Configuration des éléments principaux"],
+>     [self.IN_SETUP_UI, "Setup de l'interface graphique"],
 >     [self.IN_CLASSE, "Initialisation des Widgets"],
 >     [self.IN_WG, "Configuration de base des Widgets"],
 >     [self.IN_CONNECTIONS, "Ajout des connexions"],
@@ -31,6 +32,7 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > )
 > 
 > self.IN_BASE:          Permet les configurations de base de l'application.   
+> self.IN_SETUP_UI:      Configure l'interface graphique.   
 > self.IN_CLASSE:        Initialise les classes de chaque Widgets.   
 > self.IN_WG:            Initialise les Widgets (texte, img, dimension, ...).   
 > self.IN_CONNECTIONS:   Créer les connections des Widgets.   
