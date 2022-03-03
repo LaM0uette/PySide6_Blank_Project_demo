@@ -1,34 +1,10 @@
-from src.config import vrb
 from src.config import config
 
+
 class Cur:
-    def __init__(self):
 
-        self.dct = {
-            "agrandir": self.agrandir,
-            "copier": self.copier,
-            "crayon": self.crayon,
-            "croix": self.croix,
-            "fleche_nesw": self.fleche_nesw,
-            "fleche_ns": self.fleche_ns,
-            "fleche_nwse": self.fleche_nwse,
-            "fleche_top": self.fleche_top,
-            "fleche_tout": self.fleche_tout,
-            "fleche_we": self.fleche_we,
-            "IBeam": self.IBeam,
-            "infos": self.infos,
-            "main": self.main,
-            "non": self.non,
-            "retour": self.retour,
-            "souris": self.souris,
-            "souris_main": self.souris_main,
-            "souris_non": self.souris_non,
-            "wait": self.wait,
-        }
-
-    def CUR(self, img): return f"{vrb.DO_CUR}{config.cur}/{img}.cur"
-    def ANI(self, img): return f"{vrb.DO_CUR}{config.cur}/{img}.ani"
-    def RTN_CUR(self, cur="souris"): return self.dct.get(cur)()
+    def CUR(self, img): return f"src/assets/cursor/{config.cur}/{img}.cur"
+    def ANI(self, img): return f"src/assets/cursor/{config.cur}/{img}.ani"
 
 
     def agrandir(self): return [self.CUR("agrandir"), 9, 1]
