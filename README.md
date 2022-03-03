@@ -12,8 +12,19 @@ applications facilement et rapidement en customisant les différents Widgets de 
 - Un menu d'option déjà pré fait.
 - Des fonctions élémentaires préconstruite.
 
-## Fonctionnement
+## Charte
+> ### Couleur :
+> th1 = Primaire  
+> th2 = Secondaire  
+> th3 = Tertiaire   
+> bn1 = Bonus 1   
+> bn2 = Bonus 2   
+> 
+> ### Couleur :
 
+<br>
+
+## Fonctionnement
 > ### Initialisation :
 > 
 > Il s'agit d'un groupe de liste avec une fonction ainsi qu'une brève description.   
