@@ -41,3 +41,6 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > self.IN_TRAY:          Créer le trayIcon.   
 > ```
 > 
+> Fichier de configuration : src > config > config.json
+> 
+> 
