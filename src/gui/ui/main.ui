@@ -15,16 +15,16 @@
     <number>0</number>
    </property>
    <property name="leftMargin">
-    <number>30</number>
+    <number>10</number>
    </property>
    <property name="topMargin">
-    <number>30</number>
+    <number>10</number>
    </property>
    <property name="rightMargin">
-    <number>30</number>
+    <number>10</number>
    </property>
    <property name="bottomMargin">
-    <number>30</number>
+    <number>10</number>
    </property>
    <item>
     <widget class="QFrame" name="fr_main">
@@ -152,7 +152,7 @@
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>758</width>
+              <width>798</width>
               <height>6461</height>
              </rect>
             </property>
@@ -2356,7 +2356,7 @@ hr { height: 1px; border-width: 0; }
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>536</width>
+                     <width>576</width>
                      <height>69</height>
                     </rect>
                    </property>
@@ -2396,7 +2396,7 @@ hr { height: 1px; border-width: 0; }
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>536</width>
+                     <width>576</width>
                      <height>69</height>
                     </rect>
                    </property>
@@ -2443,7 +2443,7 @@ hr { height: 1px; border-width: 0; }
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>536</width>
+                     <width>576</width>
                      <height>69</height>
                     </rect>
                    </property>
@@ -2483,7 +2483,7 @@ hr { height: 1px; border-width: 0; }
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>536</width>
+                     <width>576</width>
                      <height>69</height>
                     </rect>
                    </property>
