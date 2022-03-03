@@ -1,1 +1,1 @@
-from src.gui.ui import main_ui
+from src.gui.ui.main_ui import Ui_main
