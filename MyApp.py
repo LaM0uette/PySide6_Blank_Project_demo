@@ -27,7 +27,7 @@ class main(Ui_main, QtWidgets.QWidget):
     ############################
     def IN_BASE(self):
         self.setWindowTitle(config.nom)
-        self.setWindowIcon(QtGui.QPixmap(ICO_MAIN))
+        # self.setWindowIcon(QtGui.QPixmap(ICO_MAIN))
         self.setWindowOpacity(config.opacity)
         # self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         # self.setAttribute(QtCore.Qt.WA_TranslucentBackground)

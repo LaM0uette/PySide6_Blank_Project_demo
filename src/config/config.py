@@ -1,15 +1,16 @@
-import configparser
+import json
+import os
 
 
 ### FICHIER CONFIG ______________
-cfg = configparser.ConfigParser()
-cfg.read(filenames="cfg.ini", encoding="utf-8")
+with open(os.path.relpath("src/config/config.json"), "r", encoding="utf-8") as fichier:
+    cfg = json.load(fichier)
 
 ### infos _______________
-nom = cfg["infos"]["nom"]
-description = cfg["infos"]["description"]
-version = float(cfg["infos"]["version"])
-auteur = cfg["infos"]["auteur"]
+nom = cfg["nom"]
+description = cfg["description"]
+version = float(cfg["version"])
+auteur = cfg["auteur"]
 
 ### config ________________________
 theme = cfg["config"]["theme"]
