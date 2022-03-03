@@ -43,4 +43,11 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > 
 > Fichier de configuration : src > config > config.json
 > 
+> <br>
+> 
+> ### Palettes :
+> Il y a des palettes mis à disposition et utilisable partout lors de l'import de "src".   
+> Il suffit d'écrire : nom_palette().valeur()   
+>    
+> Voici un exemple pour chaque palette :
 > 
