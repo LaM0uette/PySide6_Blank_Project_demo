@@ -3,7 +3,7 @@ import os
 
 
 ### FICHIER CONFIG ______________
-with open(os.path.abspath(r"src\config\config.json"), "r", encoding="utf-8") as fichier:
+with open(os.path.abspath(fr"{os.path.realpath(os.path.dirname(__file__))}\config.json"), "r", encoding="utf-8") as fichier:
     cfg = json.load(fichier)
 
 ### infos _______________
