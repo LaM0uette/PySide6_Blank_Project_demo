@@ -9,9 +9,6 @@ class main(QtWidgets.QWidget):
     def __init__(self):
         super(main, self).__init__()
 
-        # self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
-        # self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-
         self.INIT(
             [self.IN_BASE, "Configuration des éléments principaux"],
             [self.IN_CLASSE, "Initialisation des Widgets"],
@@ -27,6 +24,8 @@ class main(QtWidgets.QWidget):
     ############################
     def IN_BASE(self):
         pass
+        # self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        # self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
     def IN_CLASSE(self):
         pass
     def IN_WG(self):
