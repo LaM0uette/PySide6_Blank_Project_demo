@@ -49,5 +49,15 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > Il y a des palettes mis à disposition et utilisable partout lors de l'import de "src".   
 > Il suffit d'écrire : nom_palette().valeur()   
 >    
-> Voici un exemple pour chaque palette :
+> Voici un exemple pour chaque palette :   
+> - Align : Align().top()
+> - Cur : Cur().crayon()
+> - Dim : Dim().h4()
+> - Font : Font().h2()
+> - Img : Img().alerte()
+> - Rgb : Rgb().th2()
+> - Scroll : Scroll().on()
+> - SelectionBehavior : SelectionBehavior().row()
+> - SpinButton : SpinButton().plus_minus()
+> - StyleBase : StyleBase().border()
 > 

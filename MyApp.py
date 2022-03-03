@@ -52,6 +52,8 @@ class main(Ui_main, QtWidgets.QWidget):
     ##    /INITIALISATION     ##
     ############################
 
+    Align().top()
+
 
     #####################
     ##     ACTIONS     ##
