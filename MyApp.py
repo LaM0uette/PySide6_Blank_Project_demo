@@ -5,7 +5,7 @@ from PySide6 import QtCore, QtWidgets, QtGui
 from src import *
 
 
-class main(QtWidgets.QWidget):
+class main(Ui_main, QtWidgets.QWidget):
     dragPos: QtCore.QPoint
 
     def __init__(self):
