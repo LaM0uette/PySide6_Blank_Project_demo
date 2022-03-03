@@ -13,7 +13,7 @@ applications facilement et rapidement en customisant les différents Widgets de 
 - Des fonctions élémentaires préconstruite.
 
 ## Charte
-> ### Couleur :
+> ## Couleur :
 > th1 = Primaire  
 > th2 = Secondaire  
 > th3 = Tertiaire   
@@ -22,15 +22,18 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > 
 > <br>
 > 
-> ### Fonctions :
+> ## Fonctions :
+> Pas d'espaces entre des fonctions de même usage.   
+> Placer les fonctions entre des balises de commentaires.   
+> 
+> ### Nomenclature du nom des fonctions :
 > ***Fonctions :*** f_nom_de_la_fonction   
 > ***Fonctions "Masqué" :*** _f_nom_de_la_fonction   
-> 
 > ***Événement :*** e_nom_de_la_fonction   
 > ***Événement "Masqué" :*** _e_nom_de_la_fonction   
-> 
 > ***Actions :*** a_nom_de_la_fonction   
 > ***Actions "Masqué" :*** _a_nom_de_la_fonction   
+>
 
 <br>
 
