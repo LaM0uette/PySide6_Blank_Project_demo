@@ -1,5 +1,5 @@
 # MyApp
-## _Courte présentation_
+## Courte présentation
 
 MyApp est une sorte d'application "Modèle" qui a pour but de faciliter la création de multiples   
 applications facilement et rapidement en customisant les différents Widgets de manière simple et efficace.
