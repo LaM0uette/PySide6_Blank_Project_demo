@@ -13,6 +13,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
         self.INIT(
             [self.IN_BASE, "Configuration des éléments principaux"],
+            [self.IN_SETUP_UI, "Setup de l'interface graphique"],
             [self.IN_CLASSE, "Initialisation des Widgets"],
             [self.IN_WG, "Configuration de base des Widgets"],
             [self.IN_CONNECTIONS, "Ajout des connexions"],
@@ -28,6 +29,8 @@ class main(Ui_main, QtWidgets.QWidget):
         pass
         # self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         # self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+    def IN_SETUP_UI(self):
+        self.setupUi(self)
     def IN_CLASSE(self):
         pass
     def IN_WG(self):
