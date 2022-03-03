@@ -22,5 +22,5 @@ cur = cfg["config"]["cur"]
 ### var _____________________
 debug = cfg["var"]["debug"].lower() == "true"
 resize = cfg["var"]["resize"].lower() == "true"
-autoClose = cfg["var"]["autoclose"].lower() == "true"
-toolBoxPin = cfg["var"]["tray_ui_pin"].lower() == "true"
+autoClose = cfg["var"]["autoClose"].lower() == "true"
+toolBoxPin = cfg["var"]["toolBoxPin"].lower() == "true"
