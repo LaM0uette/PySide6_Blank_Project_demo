@@ -2,7 +2,7 @@ import sys
 
 from PySide6 import QtCore, QtWidgets, QtGui
 
-
+from src import *
 
 
 class main(QtWidgets.QWidget):
