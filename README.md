@@ -29,12 +29,13 @@ applications facilement et rapidement en customisant les différents Widgets de 
 >     [self.IN_WG_BASE, "Etat de base des Widgets"],
 >     [self.IN_TRAY, "Finalisation de la configuration"]
 > )
+> 
+> self.IN_BASE:          Permet les configurations de base de l'application.   
+> self.IN_CLASSE:        Initialise les classes de chaque Widgets.   
+> self.IN_WG:            Initialise les Widgets (texte, img, dimension, ...).   
+> self.IN_CONNECTIONS:   Créer les connections des Widgets.   
+> self.IN_ACT:           Lance des fonctions au démarage.   
+> self.IN_WG_BASE:       Initialise des états de base (CheckBox, CurrentItem, ...).   
+> self.IN_TRAY:          Créer le trayIcon.   
 > ```
 > 
-> self.IN_BASE          Permet les configurations de base de l'application.
-> self.IN_CLASSE        Initialise les classes de chaque Widgets.
-> self.IN_WG            Initialise les Widgets (texte, )
-> self.IN_CONNECTIONS   Créer les connections des Widgets.   
-> self.IN_ACT   
-> self.IN_WG_BASE   
-> self.IN_TRAY   
