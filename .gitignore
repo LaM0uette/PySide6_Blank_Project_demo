@@ -3,3 +3,4 @@ __pycache__/
 
 /src/logs
 /src/assets/img/*/rgb
+/src/config/versionfile.txt
