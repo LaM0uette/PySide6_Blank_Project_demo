@@ -20,7 +20,17 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > bn1 = Bonus 1   
 > bn2 = Bonus 2   
 > 
-> ### Couleur :
+> <br>
+> 
+> ### Fonctions :
+> ***Fonctions :*** f_nom_de_la_fonction   
+> ***Fonctions "Masqué" :*** _f_nom_de_la_fonction   
+> 
+> ***Événement :*** e_nom_de_la_fonction   
+> ***Événement "Masqué" :*** _e_nom_de_la_fonction   
+> 
+> ***Actions :*** a_nom_de_la_fonction   
+> ***Actions "Masqué" :*** _a_nom_de_la_fonction   
 
 <br>
 
@@ -41,16 +51,16 @@ applications facilement et rapidement en customisant les différents Widgets de 
 >     [self.IN_WG_BASE, "Etat de base des Widgets"],
 >     [self.IN_TRAY, "Finalisation de la configuration"]
 > )
-> 
-> self.IN_BASE:          Permet les configurations de base de l'application.   
-> self.IN_SETUP_UI:      Configure l'interface graphique.   
-> self.IN_CLASSE:        Initialise les classes de chaque Widgets.   
-> self.IN_WG:            Initialise les Widgets (texte, img, dimension, ...).   
-> self.IN_CONNECTIONS:   Créer les connections des Widgets.   
-> self.IN_ACT:           Lance des fonctions au démarage.   
-> self.IN_WG_BASE:       Initialise des états de base (CheckBox, CurrentItem, ...).   
-> self.IN_TRAY:          Créer le trayIcon.   
 > ```
+> 
+> ***self.IN_BASE :*** Permet les configurations de base de l'application.   
+> ***self.IN_SETUP_UI :*** Configure l'interface graphique.   
+> ***self.IN_CLASSE :*** Initialise les classes de chaque Widgets.   
+> ***self.IN_WG :*** Initialise les Widgets (texte, img, dimension, ...).   
+> ***self.IN_CONNECTIONS :*** Créer les connections des Widgets.   
+> ***self.IN_ACT :*** Lance des fonctions au démarage.   
+> ***self.IN_WG_BASE :*** Initialise des états de base (CheckBox, CurrentItem, ...).   
+> ***self.IN_TRAY :*** Créer le trayIcon.
 > 
 > Fichier de configuration : src > config > config.json
 > 
@@ -60,17 +70,15 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > Il y a des palettes mis à disposition et utilisable partout lors de l'import de "src".   
 > Il suffit d'écrire : nom_palette().valeur()   
 >    
-> Voici un exemple pour chaque palette :   
-> ```
-> - Align:  Align().top()
-> - Cur:  Cur().crayon()
-> - Dim:  Dim().h4()
-> - Font:  Font().h2()
-> - Img:  Img().alerte()
-> - Rgb:  Rgb().th2()
-> - Scroll:  Scroll().on()
-> - SelectionBehavior:  SelectionBehavior().row()
-> - SpinButton:  SpinButton().plus_minus()
-> - StyleBase:  StyleBase().border()
-> ```
+> Voici un exemple pour chaque palette :
+> - ***Align :*** Align().top()
+> - ***Cur :*** Cur().crayon()
+> - ***Dim :*** Dim().h4()
+> - ***Font :*** Font().h2()
+> - ***Img :*** Img().alerte()
+> - ***Rgb :*** Rgb().th2()
+> - ***Scroll :*** Scroll().on()
+> - ***SelectionBehavior :*** SelectionBehavior().row()
+> - ***SpinButton :*** SpinButton().plus_minus()
+> - ***StyleBase :*** StyleBase().border()
 > 
