@@ -7,7 +7,7 @@ from src.config import config
 
 
 class Cur:
-    with open(f"{os.path.dirname(f'src/assets/cursor/{config.cur}')}/_data.json", "r", encoding="utf-8") as fichier:
+    with open(f"{os.path.dirname(f'src/assets/cursor/{config.cur}/_data.json')}/_data.json", "r", encoding="utf-8") as fichier:
         cur = json.load(fichier)
 
     _souris = cur["_souris"]
