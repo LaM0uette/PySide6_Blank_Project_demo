@@ -42,6 +42,8 @@ class Event:
             self.ui.hide()
         elif config.auto_close:  # DLG_Rep().QUITTER()
             self.ui.app.quit()
+
+    # Tray
     def e_quitter_tray(self):
         self.ui.show()
         self.ui.fen.activateWindow()
