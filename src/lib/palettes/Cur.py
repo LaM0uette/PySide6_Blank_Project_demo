@@ -15,7 +15,7 @@ class Cur:
     _crayon = cur["_crayon"]
     _fleche_top = cur["_fleche_top"]
 
-    def CUR(self, img, xy): QtGui.QCursor(QtGui.QPixmap(f"src/assets/cursor/{config.cur}/{img}.cur"), xy[0], xy[1])
+    def CUR(self, img, xy): return QtGui.QCursor(QtGui.QPixmap(f"src/assets/cursor/{config.cur}/{img}.cur"), xy[0], xy[1])
 
     def agrandir(self): return self.CUR(img="agrandir", xy=self._souris)
     def copier(self): return self.CUR(img="copier", xy=self._souris)
