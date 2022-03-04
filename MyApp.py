@@ -6,7 +6,7 @@ from src import *
 
 
 class main(Ui_main, QtWidgets.QWidget):
-
+    dragPos: QtCore.QPoint
 
     def __init__(self):
         super(main, self).__init__()
@@ -30,7 +30,10 @@ class main(Ui_main, QtWidgets.QWidget):
         )
 
         ### CREATION DES EVENT ###
-        self.mousePressEvent = Event(self).mousePressEvent
+        evt = Event(self)
+
+        self.mousePressEvent = evt.mousePressEvent
+        self.mouseDoubleClickEvent = evt.mouseDoubleClickEvent
 
     ############################
     ##     INITIALISATION     ##
@@ -163,12 +166,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
     #####
 
-    def mouseDoubleClickEvent(self, event):
-        cur = QtGui.QCursor()
-        verif_height = cur.pos().y() - self.pos().y()
-        if v_gb.BD_LIMIT < verif_height < Dim().h9()+v_gb.BD_LIMIT:
-            self.e_agrandir()
-            event.accept()
+
     def mouseMoveEvent(self, event):
         def act_move(event):
             self.move(self.pos() + event.globalPosition().toPoint() - self.dragPos)
