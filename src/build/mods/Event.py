@@ -42,3 +42,10 @@ class Event:
                 self.ui.win_state = QtCore.Qt.WindowNoState
                 act_move(event)
         except AttributeError: pass
+    def mouseReleaseEvent(self, event):
+        cur = QtGui.QCursor()
+        verif_height = cur.pos().y() - self.ui.pos().y()
+        if v_gb.BD_LIMIT < verif_height < Dim().h9()+v_gb.BD_LIMIT and self.ui.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
+            self.ui.setCursor(Cur().souris())
+            self.ui.e_agrandir()
+            event.accept()

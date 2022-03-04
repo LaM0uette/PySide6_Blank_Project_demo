@@ -167,13 +167,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
     #####
 
-    def mouseReleaseEvent(self, event):
-        cur = QtGui.QCursor()
-        verif_height = cur.pos().y() - self.pos().y()
-        if v_gb.BD_LIMIT < verif_height < Dim().h9()+v_gb.BD_LIMIT and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
-            self.setCursor(Cur().souris())
-            self.e_agrandir()
-            event.accept()
+
     def closeEvent(self, event):
         event.accept()
         app.quit()
