@@ -145,18 +145,6 @@ class main(Ui_main, QtWidgets.QWidget):
             self.setFixedWidth(config.widht)
             self.setFixedHeight(config.height)
 
-    def e_reduire(self):
-        self.setWindowState(QtCore.Qt.WindowMinimized)
-    def e_cacher(self):
-        if config.debug: return self.e_quitter()
-        self.hide()
-        self._e_center_screen()
-    def e_quitter(self):
-        if not config.auto_close:
-            self.hide()
-        elif config.auto_close:  # DLG_Rep().QUITTER()
-            app.quit()
-
     #####
 
     def closeEvent(self, event):

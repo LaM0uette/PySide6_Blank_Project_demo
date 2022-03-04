@@ -17,6 +17,17 @@ class Event:
             self.ui.win_state = QtCore.Qt.WindowMaximized
 
         self.ui.setWindowState(self.ui.win_state)
+    def e_reduire(self):
+        self.ui.setWindowState(QtCore.Qt.WindowMinimized)
+    def e_cacher(self):
+        if config.debug: return self.e_quitter()
+        self.ui.hide()
+        self.ui._e_center_screen()
+    def e_quitter(self):
+        if not config.auto_close:
+            self.ui.hide()
+        elif config.auto_close:  # DLG_Rep().QUITTER()
+            self.ui.app.quit()
 
     def mousePressEvent(self, event):
         cur = QtGui.QCursor()
@@ -28,7 +39,7 @@ class Event:
         cur = QtGui.QCursor()
         verif_height = cur.pos().y() - self.ui.pos().y()
         if v_gb.BD_LIMIT < verif_height < Dim().h9()+v_gb.BD_LIMIT:
-            self.ui.e_agrandir()
+            self.e_agrandir()
             event.accept()
     def mouseMoveEvent(self, event):
         def act_move(event):
@@ -56,5 +67,5 @@ class Event:
         verif_height = cur.pos().y() - self.ui.pos().y()
         if v_gb.BD_LIMIT < verif_height < Dim().h9()+v_gb.BD_LIMIT and self.ui.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
             self.ui.setCursor(Cur().souris())
-            self.ui.e_agrandir()
+            self.e_agrandir()
             event.accept()
