@@ -179,17 +179,16 @@ class main(Ui_main, QtWidgets.QWidget):
             event.accept()
 
         cur = QtGui.QCursor()
-        height_verif = cur.pos().y() - self.pos().y()
-
-        if event.buttons() == QtCore.Qt.LeftButton and 10 < height_verif < Dim().h9()+10 and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
-            self.setCursor(Fct(cur=Cur().agrandir()).CUR())
+        verif_height = cur.pos().y() - self.pos().y()
+        if event.buttons() == QtCore.Qt.LeftButton and v_gb.BD_LIMIT < verif_height < Dim().h9()+v_gb.BD_LIMIT and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
+            self.setCursor(Cur().agrandir())
         else:
-            self.setCursor(Fct(cur=Cur().souris()).CUR())
+            self.setCursor(Cur().souris())
 
         try:
-            if event.buttons() == QtCore.Qt.LeftButton and 10 < height_verif < Dim().h9()+10 and self.windowState() != QtCore.Qt.WindowMaximized:
+            if event.buttons() == QtCore.Qt.LeftButton and v_gb.BD_LIMIT < verif_height < Dim().h9()+v_gb.BD_LIMIT and self.windowState() != QtCore.Qt.WindowMaximized:
                 act_move(event)
-            if event.buttons() == QtCore.Qt.LeftButton and 10 < height_verif < Dim().h9()+10 and self.windowState() == QtCore.Qt.WindowMaximized:
+            if event.buttons() == QtCore.Qt.LeftButton and v_gb.BD_LIMIT < verif_height < Dim().h9()+v_gb.BD_LIMIT and self.windowState() == QtCore.Qt.WindowMaximized:
                 self.setWindowState(QtCore.Qt.WindowNoState)
                 self.win_state = QtCore.Qt.WindowNoState
                 act_move(event)
