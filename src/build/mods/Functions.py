@@ -8,13 +8,14 @@ class Functions:
             if width is not None: wg.setFixedWidth(width)
             if height is not None: wg.setFixedHeight(height)
 
-    def ADD_QACTION(self, tray=None, ico=None, ico_rgb=None, txt=None, fct=None, height=None):
-        if height is None : height=12
+    def ADD_QACTION(self, tray, ico=None, ico_rgb=None, txt="", height=None, fct=None):
+        if height is None: height=12
 
         action = QtGui.QAction(self)
         action.setIcon(QtGui.QPixmap(f"{ico}{ico_rgb}.svg").scaledToHeight(height))
         action.setText(txt)
-        action.setShortcut("t")
+        action.setShortcut(QtGui.QKeySequence(QtCore.Qt.SHIFT + QtCore.Qt.Key_Escape))
+        action.triggered.connect(fct)
 
         tray.addAction(action)
     def ADD_QSHORTCUT(self, slf, sht_1, sht_2, sht_3, fct):

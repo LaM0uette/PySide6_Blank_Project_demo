@@ -113,8 +113,7 @@ class main(Ui_main, QtWidgets.QWidget):
     def IN_TRAY(self):
         # TrayIcon.Main(self.tray_menu)
 
-        ### Set actions
-        act = lambda _act: (self, self.tray_menu, _act.get("ico"), _act.get("ico_rgb"), _act.get("txt"), _act.get("shortcut"), _act.get("fct"), _act.get("height"))
+        ### Actions ###
         Functions.ADD_QACTION(
             self,
             tray=self.tray_menu,
@@ -204,6 +203,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
         # if DLG_Rep().QUITTER():
         #     self.ui.app.quit()
+        app.quit()
 
     #####
 
