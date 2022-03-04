@@ -124,8 +124,8 @@ class main(Ui_main, QtWidgets.QWidget):
             status_tip="Quitter",
             size=5,
             fct=self.e_quitter_tray,
-            sht_1=QtCore.Qt.SHIFT,
-            sht_2=QtCore.Qt.Key_Escape
+            sht_1=Keys().shift(),
+            sht_2=Keys().escape()
         )
 
         # self.tray_menu.addSeparator()
