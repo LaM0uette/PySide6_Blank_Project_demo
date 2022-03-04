@@ -9,11 +9,14 @@ class Event:
     def __init__(self, ui):
         self.ui = ui
 
+
     def _e_center_screen(self):
         center = QtGui.QScreen.availableGeometry(QtWidgets.QApplication.primaryScreen()).center()
         geo = self.ui.frameGeometry()
         geo.moveCenter(center)
         self.ui.move(geo.topLeft())
+
+    #####
 
     def e_agrandir(self):
         if self.ui.windowState() == QtCore.Qt.WindowMaximized:
@@ -35,6 +38,8 @@ class Event:
             self.ui.hide()
         elif config.auto_close:  # DLG_Rep().QUITTER()
             self.ui.app.quit()
+
+    #####
 
     def mousePressEvent(self, event):
         cur = QtGui.QCursor()
