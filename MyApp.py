@@ -122,7 +122,6 @@ class main(Ui_main, QtWidgets.QWidget):
             txt="Quitter",
             shortcut_txt="Shift+Esc",
             status_tip="Quitter",
-            size=5,
             fct=self.e_quitter_tray,
             sht_1=Keys().shift(),
             sht_2=Keys().escape()
