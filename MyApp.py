@@ -16,6 +16,7 @@ class main(Ui_main, QtWidgets.QWidget):
         self.size_grip = QtWidgets.QSizeGrip(self)
             # tray
         self.tray = QtWidgets.QSystemTrayIcon(QtGui.QPixmap(f"{Img().main()}th3.svg"), self)
+        self.tray.activated.connect(self.trayActivate)
         self.timer_double_click = QtCore.QTimer(self)
         self.timer_double_click.setSingleShot(True)
         self.timer_double_click.timeout.connect(self.traySingleClick)
@@ -110,9 +111,6 @@ class main(Ui_main, QtWidgets.QWidget):
     def IN_WG_BASE(self):
         pass
     def IN_TRAY(self):
-        self.tray.activated.connect(self.trayActivate)
-
-
         TrayIcon.Main(self.tray_menu)
 
         ### Actions
