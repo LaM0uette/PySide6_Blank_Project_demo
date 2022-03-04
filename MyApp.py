@@ -111,7 +111,7 @@ class main(Ui_main, QtWidgets.QWidget):
     def IN_WG_BASE(self):
         pass
     def IN_TRAY(self):
-        TrayIcon.Main(self.tray_menu)
+        # TrayIcon.Main(self.tray_menu)
 
         ### Actions
         qact_quitter = {
