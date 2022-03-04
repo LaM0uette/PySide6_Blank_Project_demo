@@ -113,18 +113,20 @@ class main(Ui_main, QtWidgets.QWidget):
     def IN_TRAY(self):
         # TrayIcon.Main(self.tray_menu)
 
-        ### Actions
-        qact_quitter = {
-            "ico": Img().quitter(),
-            "ico_rgb": "bn2",
-            "txt": "Quitter",
-            "shortcut": "Shift+Esc",
-            "fct": self.e_quitter_tray,
-            "sht_1": QtCore.Qt.SHIFT,
-            "sht_2": QtCore.Qt.Key_Escape,
-            "sht_3": None,
-            "height": None
-        }
+        style = f"""
+        /* MENU */
+        QMenu {{
+        background-color: rgba{(0, 255, 0, 255)};
+        color: rgba{(255, 0, 0, 255)};
+        }}
+
+        /* ITEM */
+        QMenu::item {{
+        background-color: rgba{(255, 0, 0, 255)};
+        color: rgba{(0, 255, 0, 255)};
+        }}
+        """
+        self.tray_menu.setStyleSheet(style)
 
         ### Set actions
         act = lambda _act: (self, self.tray_menu, _act.get("ico"), _act.get("ico_rgb"), _act.get("txt"), _act.get("shortcut"), _act.get("fct"), _act.get("height"))
