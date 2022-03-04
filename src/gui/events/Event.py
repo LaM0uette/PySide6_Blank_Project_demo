@@ -1,5 +1,6 @@
 from PySide6 import QtCore, QtWidgets, QtGui
 
+from src.config import config
 from src.lib.globals import v_gb
 from src.lib.palettes import *
 
