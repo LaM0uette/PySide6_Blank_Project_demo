@@ -38,6 +38,14 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > 
 > ***Fonctions externes :*** NOM_DE_LA_FONCTION   
 > ***Fonctions externes "Masqué" :*** _nom_de_la_fonction   
+> 
+> ## Classes :
+> Pas d'espaces entre des fonctions de même usage.   
+> Mettre des arguments explicits.   
+> 
+> ### Nomenclature du nom des classe :
+> ***Classe principal :*** NomDeLaClasse   
+> ***Classe diverse :*** nomDeLaClasse
 
 <br>
 
