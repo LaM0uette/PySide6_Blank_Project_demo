@@ -136,9 +136,7 @@ class main(Ui_main, QtWidgets.QWidget):
         else:
             self.setFixedWidth(config.widht)
             self.setFixedHeight(config.height)
-
     #####
-
     def closeEvent(self, event):
         event.accept()
         app.quit()
