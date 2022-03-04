@@ -128,7 +128,14 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### Set actions
         act = lambda _act: (self, self.tray_menu, _act.get("ico"), _act.get("ico_rgb"), _act.get("txt"), _act.get("shortcut"), _act.get("fct"), _act.get("height"))
-        # Fct().QACTION(*act(qact_quitter))
+        Functions.ADD_QACTION(
+            self,
+            tray=self.tray_menu,
+            ico=Img().quitter(),
+            ico_rgb="bn2",
+            txt="Quitter",
+            fct=self.e_quitter_tray
+        )
 
         # self.tray_menu.addSeparator()
 
