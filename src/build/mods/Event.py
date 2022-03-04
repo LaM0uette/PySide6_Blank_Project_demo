@@ -5,9 +5,18 @@ from src.lib.palettes import *
 
 
 class Event:
-
     def __init__(self, ui):
         self.ui = ui
+
+    def e_agrandir(self):
+        if self.ui.windowState() == QtCore.Qt.WindowMaximized:
+            self.ui.win_state = QtCore.Qt.WindowNoState
+            self.ui._e_center_screen()
+            self.ui.e_resize_screen()
+        else:
+            self.ui.win_state = QtCore.Qt.WindowMaximized
+
+        self.ui.setWindowState(self.ui.win_state)
 
     def mousePressEvent(self, event):
         cur = QtGui.QCursor()

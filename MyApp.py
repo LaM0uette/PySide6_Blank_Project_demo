@@ -144,15 +144,7 @@ class main(Ui_main, QtWidgets.QWidget):
         else:
             self.setFixedWidth(config.widht)
             self.setFixedHeight(config.height)
-    def e_agrandir(self):
-        if self.windowState() == QtCore.Qt.WindowMaximized:
-            self.win_state = QtCore.Qt.WindowNoState
-            self._e_center_screen()
-            self.e_resize_screen()
-        else:
-            self.win_state = QtCore.Qt.WindowMaximized
 
-        self.setWindowState(self.win_state)
     def e_reduire(self):
         self.setWindowState(QtCore.Qt.WindowMinimized)
     def e_cacher(self):
