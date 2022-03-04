@@ -151,10 +151,8 @@ class main(Ui_main, QtWidgets.QWidget):
     def e_quitter(self):
         if not config.auto_close:
             self.hide()
-            return
-        if DLG_Rep().QUITTER():
+        elif config.auto_close:  # DLG_Rep().QUITTER()
             app.quit()
-            quit()
     ###################
     ##    /EVENT     ##
     ###################
