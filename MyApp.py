@@ -195,17 +195,17 @@ class main(Ui_main, QtWidgets.QWidget):
         except AttributeError: pass
     def mouseReleaseEvent(self, event):
         cur = QtGui.QCursor()
-        height_verif = cur.pos().y() - self.pos().y()
-        if 10 < height_verif < Dim().h9()+10 and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
-            self.setCursor(Fct(cur=Cur().souris()).CUR())
-            self.agrandir()
+        verif_height = cur.pos().y() - self.pos().y()
+        if v_gb.BD_LIMIT < verif_height < Dim().h9()+v_gb.BD_LIMIT and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
+            self.setCursor(Cur().souris())
+            self.e_agrandir()
             event.accept()
     def closeEvent(self, event):
         event.accept()
         app.quit()
-        self.tray_menu.update()
-        self.tray_menu.close()
-        self.tray_menu.destroy()
+        # self.tray_menu.update()
+        # self.tray_menu.close()
+        # self.tray_menu.destroy()
     ###################
     ##    /EVENT     ##
     ###################
