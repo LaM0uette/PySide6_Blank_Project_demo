@@ -9,8 +9,8 @@ class Event:
     def __init__(self, ui):
         self.ui = ui
 
-
     def _e_center_screen(self):
+        """Permet de centrer la fenêtre."""
         center = QtGui.QScreen.availableGeometry(QtWidgets.QApplication.primaryScreen()).center()
         geo = self.ui.frameGeometry()
         geo.moveCenter(center)
@@ -19,6 +19,7 @@ class Event:
     #####
 
     def e_agrandir(self):
+        """Permet d'agrandir la fenêtre"""
         if self.ui.windowState() == QtCore.Qt.WindowMaximized:
             self.ui.win_state = QtCore.Qt.WindowNoState
             self._e_center_screen()
@@ -28,12 +29,15 @@ class Event:
 
         self.ui.setWindowState(self.ui.win_state)
     def e_reduire(self):
+        """Permet de réduire la fenêtre"""
         self.ui.setWindowState(QtCore.Qt.WindowMinimized)
     def e_cacher(self):
+        """Permet de cacher la fenêtre"""
         if config.debug: return self.e_quitter()
         self.ui.hide()
         self._e_center_screen()
     def e_quitter(self):
+        """Permet de quitter l'application"""
         if not config.auto_close:
             self.ui.hide()
         elif config.auto_close:  # DLG_Rep().QUITTER()
