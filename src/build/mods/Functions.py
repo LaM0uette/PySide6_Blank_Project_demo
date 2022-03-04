@@ -15,7 +15,6 @@ class Functions:
         if sht_1 is not None: shortcut += sht_1
         if sht_2 is not None: shortcut += sht_2
         if sht_3 is not None: shortcut += sht_3
-        print(shortcut)
 
         action = QtGui.QAction(self)
         action.setIcon(QtGui.QPixmap(f"{ico}{ico_rgb}.svg").scaledToHeight(size))
