@@ -14,6 +14,10 @@ class main(Ui_main, QtWidgets.QWidget):
         ### AJOUTS DE BASE ###
         self.size_grip = QtWidgets.QSizeGrip(self)
 
+        self.tray = QtWidgets.QSystemTrayIcon(QtGui.QPixmap(f"{Img().main()}th3.svg"), self)
+        self.tray_menu = QtWidgets.QMenu()
+        self.tray_menu.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+
         ### VARIABLES DE BASES ###
         self.win_state = QtCore.Qt.WindowNoState
 
