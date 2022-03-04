@@ -30,11 +30,11 @@ class main(Ui_main, QtWidgets.QWidget):
         )
 
         ### CREATION DES EVENT ###
-        evt = Event(self)
-        self.mousePressEvent = evt.mousePressEvent
-        self.mouseDoubleClickEvent = evt.mouseDoubleClickEvent
-        self.mouseMoveEvent = evt.mouseMoveEvent
-        self.mouseReleaseEvent = evt.mouseReleaseEvent
+        self.evt = Event(self)
+        self.mousePressEvent = self.evt.mousePressEvent
+        self.mouseDoubleClickEvent = self.evt.mouseDoubleClickEvent
+        self.mouseMoveEvent = self.evt.mouseMoveEvent
+        self.mouseReleaseEvent = self.evt.mouseReleaseEvent
 
     ############################
     ##     INITIALISATION     ##
@@ -93,9 +93,9 @@ class main(Ui_main, QtWidgets.QWidget):
     def IN_CONNECTIONS(self):
         ### Menu_top ###
         # self.pb_mt_option.clicked.connect(lambda: DLG_Option(fen=fen).MAIN())
-        self.pb_mt_reduire.clicked.connect(lambda: self.e_reduire())
-        self.pb_mt_agrandir.clicked.connect(lambda: self.e_agrandir())
-        self.pb_mt_quitter.clicked.connect(lambda: self.e_cacher())
+        self.pb_mt_reduire.clicked.connect(lambda: self.evt.e_reduire())
+        self.pb_mt_agrandir.clicked.connect(lambda: self.evt.e_agrandir())
+        self.pb_mt_quitter.clicked.connect(lambda: self.evt.e_cacher())
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):
