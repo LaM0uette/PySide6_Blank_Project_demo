@@ -172,6 +172,27 @@ class main(Ui_main, QtWidgets.QWidget):
         else:
             self.setFixedWidth(config.widht)
             self.setFixedHeight(config.height)
+
+    # def traySingleClick(self):
+    #     screen = QtWidgets.QApplication.primaryScreen().availableGeometry()
+    #     widget = tray_ui.geometry()
+    #
+    #     tray_ui.move(screen.width()-widget.width(), screen.height()-widget.height())
+    #     tray_ui.open()
+    #     tray_ui.activateWindow()
+    def trayDoubleClick(self):
+        self.timer_double_click.stop()
+        self.show()
+        fen.activateWindow()
+
+        if fen.windowState() == QtCore.Qt.WindowMinimized:
+            fen.setWindowState(QtCore.Qt.WindowActive)
+    def trayActivate(self, reason):
+        if reason == QtWidgets.QSystemTrayIcon.Trigger:
+            self.timer_double_click.start(app.doubleClickInterval())
+
+        elif reason == QtWidgets.QSystemTrayIcon.DoubleClick:
+            self.trayDoubleClick()
     def e_quitter_tray(self):
         self.show()
         fen.activateWindow()
