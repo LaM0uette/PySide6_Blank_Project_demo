@@ -129,7 +129,6 @@ class main(Ui_main, QtWidgets.QWidget):
     ###################
     ##     EVENT     ##
     ###################
-
     def e_resize_screen(self):
         if config.resize:
             self.setMinimumWidth(config.widht)
