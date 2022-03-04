@@ -106,7 +106,36 @@ class main(Ui_main, QtWidgets.QWidget):
     def IN_WG_BASE(self):
         pass
     def IN_TRAY(self):
-        pass
+        self.tray.activated.connect(self.trayActivate)
+        self.timer_double_click = QtCore.QTimer(self)
+        self.timer_double_click.setSingleShot(True)
+        self.timer_double_click.timeout.connect(self.traySingleClick)
+
+        TrayIcon.Main(self.tray_menu)
+
+        ### Actions
+        qact_quitter = {
+            "ico": Img().quitter(),
+            "ico_rgb": "bn2",
+            "txt": "Quitter",
+            "shortcut": "Shift+Esc",
+            "fct": self.quitterTray,
+            "sht_1": QtCore.Qt.SHIFT,
+            "sht_2": QtCore.Qt.Key_Escape,
+            "sht_3": None,
+            "height": None
+        }
+
+        ### Set actions
+        act = lambda _act: (self, self.tray_menu, _act.get("ico"), _act.get("ico_rgb"), _act.get("txt"), _act.get("shortcut"), _act.get("fct"), _act.get("height"))
+        Fct().QACTION(*act(qact_quitter))
+        # self.tray_menu.addSeparator()
+        ### Raccourcis clavier
+        sht = lambda _sht: (self, _sht.get("sht_1"), _sht.get("sht_2"), _sht.get("sht_3"), _sht.get("fct"))
+        Fct().QSHORTCUT(*sht(qact_quitter))
+
+        self.tray.setContextMenu(self.tray_menu)
+        self.tray.show()
     def INIT(self, *args):
         for fct in args:
             fct[0]()
