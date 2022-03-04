@@ -1,13 +1,19 @@
+import json
+import os
+
 from PySide6 import QtGui
 
 from src.config import config
 
 
 class Cur:
-    _souris = [9, 1]
-    _centre = [16, 16]
-    _crayon = [1, 32]
-    _fleche_top = [16, 1]
+    with open(f"{os.path.dirname(f'src/assets/cursor/{config.cur}')}/_data.json", "r", encoding="utf-8") as fichier:
+        cur = json.load(fichier)
+
+    _souris = cur["_souris"]
+    _centre = cur["_centre"]
+    _crayon = cur["_crayon"]
+    _fleche_top = cur["_fleche_top"]
 
     def CUR(self, img): return f"src/assets/cursor/{config.cur}/{img}.cur"
     def ANI(self, img): return f"src/assets/cursor/{config.cur}/{img}.ani"
