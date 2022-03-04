@@ -23,5 +23,5 @@ cur = cfg["config"]["cur"]
 ### var _____________________
 debug = cfg["var"]["debug"]
 resize = cfg["var"]["resize"]
-autoClose = cfg["var"]["autoClose"]
-toolBoxPin = cfg["var"]["toolBoxPin"]
+auto_close = cfg["var"]["auto_close"]
+toolbox_pin = cfg["var"]["toolbox_pin"]

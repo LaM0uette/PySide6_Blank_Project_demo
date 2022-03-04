@@ -118,6 +118,14 @@ class main(Ui_main, QtWidgets.QWidget):
     ###################
     ##     EVENT     ##
     ###################
+    def _e_center_screen(self):
+        center = QtGui.QScreen.availableGeometry(QtWidgets.QApplication.primaryScreen()).center()
+        geo = self.frameGeometry()
+        geo.moveCenter(center)
+        self.move(geo.topLeft())
+
+    ##########
+
     def e_resize_screen(self):
         if config.resize:
             self.setMinimumWidth(config.widht)
@@ -125,6 +133,28 @@ class main(Ui_main, QtWidgets.QWidget):
         else:
             self.setFixedWidth(config.widht)
             self.setFixedHeight(config.height)
+    def e_agrandir(self):
+        if self.windowState() == QtCore.Qt.WindowMaximized:
+            self.win_state = QtCore.Qt.WindowNoState
+            self._e_center_screen()
+            self.e_resize_screen()
+        else:
+            self.win_state = QtCore.Qt.WindowMaximized
+
+        self.setWindowState(self.win_state)
+    def e_reduire(self):
+        self.setWindowState(QtCore.Qt.WindowMinimized)
+    def e_cacher(self):
+        if config.debug: return self.e_quitter()
+        self.hide()
+        self._e_center_screen()
+    def e_quitter(self):
+        if not config.auto_close:
+            self.hide()
+            return
+        if DLG_Rep().QUITTER():
+            app.quit()
+            quit()
     ###################
     ##    /EVENT     ##
     ###################

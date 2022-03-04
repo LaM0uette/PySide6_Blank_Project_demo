@@ -16,7 +16,7 @@
   "var": {
     "debug": true,
     "resize": true,
-    "autoClose": true,
-    "toolBoxPin": true
+    "auto_close": true,
+    "toolbox_pin": true
   }
 }
