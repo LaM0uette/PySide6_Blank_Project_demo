@@ -1,4 +1,4 @@
-from PySide6 import QtCore, QtGui
+from PySide6 import QtCore, QtWidgets, QtGui
 
 from src.lib.globals import v_gb
 from src.lib.palettes import *
@@ -8,10 +8,16 @@ class Event:
     def __init__(self, ui):
         self.ui = ui
 
+    def _e_center_screen(self):
+        center = QtGui.QScreen.availableGeometry(QtWidgets.QApplication.primaryScreen()).center()
+        geo = self.ui.frameGeometry()
+        geo.moveCenter(center)
+        self.ui.move(geo.topLeft())
+
     def e_agrandir(self):
         if self.ui.windowState() == QtCore.Qt.WindowMaximized:
             self.ui.win_state = QtCore.Qt.WindowNoState
-            self.ui._e_center_screen()
+            self._e_center_screen()
             self.ui.e_resize_screen()
         else:
             self.ui.win_state = QtCore.Qt.WindowMaximized
@@ -22,7 +28,7 @@ class Event:
     def e_cacher(self):
         if config.debug: return self.e_quitter()
         self.ui.hide()
-        self.ui._e_center_screen()
+        self._e_center_screen()
     def e_quitter(self):
         if not config.auto_close:
             self.ui.hide()

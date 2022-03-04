@@ -129,13 +129,6 @@ class main(Ui_main, QtWidgets.QWidget):
     ###################
     ##     EVENT     ##
     ###################
-    def _e_center_screen(self):
-        center = QtGui.QScreen.availableGeometry(QtWidgets.QApplication.primaryScreen()).center()
-        geo = self.frameGeometry()
-        geo.moveCenter(center)
-        self.move(geo.topLeft())
-
-    #####
 
     def e_resize_screen(self):
         if config.resize:
