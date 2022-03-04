@@ -48,7 +48,7 @@ class main(Ui_main, QtWidgets.QWidget):
     def IN_WG(self):
         ### size_grip ###
         if config.resize:
-            # self.sizegrip.setCursor(Fct(cur=Cur().fleche_nwse()).CUR())
+            self.size_grip.setCursor(Cur().fleche_nwse())
             self.size_grip.setStyleSheet(
                 f"""
                 QSizeGrip {{
