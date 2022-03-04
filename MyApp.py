@@ -35,6 +35,7 @@ class main(Ui_main, QtWidgets.QWidget):
         self.mousePressEvent = evt.mousePressEvent
         self.mouseDoubleClickEvent = evt.mouseDoubleClickEvent
         self.mouseMoveEvent = evt.mouseMoveEvent
+        self.mouseReleaseEvent = evt.mouseReleaseEvent
 
     ############################
     ##     INITIALISATION     ##
@@ -167,13 +168,9 @@ class main(Ui_main, QtWidgets.QWidget):
 
     #####
 
-
     def closeEvent(self, event):
         event.accept()
         app.quit()
-        # self.tray_menu.update()
-        # self.tray_menu.close()
-        # self.tray_menu.destroy()
     ###################
     ##    /EVENT     ##
     ###################
