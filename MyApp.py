@@ -11,10 +11,10 @@ class main(Ui_main, QtWidgets.QWidget):
     def __init__(self):
         super(main, self).__init__()
 
-        ### AJOUT DE BASES ###
+        ### AJOUTS DE BASE ###
         self.size_grip = QtWidgets.QSizeGrip(self)
 
-        ### VARIABLE DE BASES ###
+        ### VARIABLES DE BASES ###
         self.win_state = QtCore.Qt.WindowNoState
 
         ### FONCTIONS AU LANCEMENT ###
@@ -33,14 +33,15 @@ class main(Ui_main, QtWidgets.QWidget):
     ##     INITIALISATION     ##
     ############################
     def IN_BASE(self):
+        ### Fenetre principal ###
         self.setWindowTitle(config.nom)
         self.setWindowIcon(QtGui.QPixmap(f"{Img().main()}th3.svg"))
         self.setWindowOpacity(config.opacity)
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-
         self.e_resize_screen()
     def IN_SETUP_UI(self):
+        ### Ui principal ###
         self.setupUi(self)
     def IN_CLASSE(self):
         pass
@@ -50,7 +51,7 @@ class main(Ui_main, QtWidgets.QWidget):
             # self.sizegrip.setCursor(Fct(cur=Cur().fleche_nwse()).CUR())
             self.size_grip.setStyleSheet(
                 f"""
-                "QSizeGrip {{
+                QSizeGrip {{
                 image: url({Img().resize()}th3.svg);
                 width: {Dim().h10()}px;
                 height: {Dim().h10()}px;
