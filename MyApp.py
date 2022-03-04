@@ -157,6 +157,56 @@ class main(Ui_main, QtWidgets.QWidget):
             self.hide()
         elif config.auto_close:  # DLG_Rep().QUITTER()
             app.quit()
+
+    #####
+
+    def mousePressEvent(self, event):
+        cur = QtGui.QCursor()
+        verifHeight = cur.pos().y() - self.pos().y()
+        if event.buttons() == QtCore.Qt.LeftButton and 10 < verifHeight < Dim().h9()+10 and self.windowState() != QtCore.Qt.WindowMaximized:
+            self.dragPos = event.globalPosition().toPoint()
+            event.accept()
+    def mouseDoubleClickEvent(self, event):
+        cur = QtGui.QCursor()
+        height_verif = cur.pos().y() - self.pos().y()
+        if 10 < height_verif < Dim().h9()+10:
+            self.agrandir()
+            event.accept()
+    def mouseMoveEvent(self, event):
+        def act_move(event):
+            self.move(self.pos() + event.globalPosition().toPoint() - self.dragPos)
+            self.dragPos = event.globalPosition().toPoint()
+            event.accept()
+
+        cur = QtGui.QCursor()
+        height_verif = cur.pos().y() - self.pos().y()
+
+        if event.buttons() == QtCore.Qt.LeftButton and 10 < height_verif < Dim().h9()+10 and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
+            self.setCursor(Fct(cur=Cur().agrandir()).CUR())
+        else:
+            self.setCursor(Fct(cur=Cur().souris()).CUR())
+
+        try:
+            if event.buttons() == QtCore.Qt.LeftButton and 10 < height_verif < Dim().h9()+10 and self.windowState() != QtCore.Qt.WindowMaximized:
+                act_move(event)
+            if event.buttons() == QtCore.Qt.LeftButton and 10 < height_verif < Dim().h9()+10 and self.windowState() == QtCore.Qt.WindowMaximized:
+                self.setWindowState(QtCore.Qt.WindowNoState)
+                self.win_state = QtCore.Qt.WindowNoState
+                act_move(event)
+        except AttributeError: pass
+    def mouseReleaseEvent(self, event):
+        cur = QtGui.QCursor()
+        height_verif = cur.pos().y() - self.pos().y()
+        if 10 < height_verif < Dim().h9()+10 and self.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
+            self.setCursor(Fct(cur=Cur().souris()).CUR())
+            self.agrandir()
+            event.accept()
+    def closeEvent(self, event):
+        event.accept()
+        app.quit()
+        self.tray_menu.update()
+        self.tray_menu.close()
+        self.tray_menu.destroy()
     ###################
     ##    /EVENT     ##
     ###################
