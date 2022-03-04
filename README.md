@@ -25,6 +25,16 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > ## Fonctions :
 > Pas d'espaces entre des fonctions de même usage.   
 > Placer les fonctions entre des balises de commentaires.   
+> Séparer les groupes de fonctions come ceci :
+> ```
+> def groupe_1():
+>   pass
+> 
+> #####
+> 
+> def groupe_2():
+>   pass
+> ```
 > 
 > ### Nomenclature du nom des fonctions :
 > ***Fonctions :*** f_nom_de_la_fonction   
