@@ -11,7 +11,7 @@ class Functions:
     def ADD_QACTION(self, tray=None, ico=None, ico_rgb=None, txt=None, fct=None, height=None):
         if height is None : height=12
 
-        action = QtGui.QAction()
+        action = QtGui.QAction(self)
         action.setIcon(QtGui.QPixmap(f"{ico}{ico_rgb}.svg").scaledToHeight(height))
         action.setText(txt)
         action.setShortcut("t")
