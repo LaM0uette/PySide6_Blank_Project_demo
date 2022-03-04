@@ -31,7 +31,6 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### CREATION DES EVENT ###
         evt = Event(self)
-
         self.mousePressEvent = evt.mousePressEvent
         self.mouseDoubleClickEvent = evt.mouseDoubleClickEvent
         self.mouseMoveEvent = evt.mouseMoveEvent
