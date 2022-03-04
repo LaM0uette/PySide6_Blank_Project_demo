@@ -8,16 +8,17 @@ class Functions:
             if width is not None: wg.setFixedWidth(width)
             if height is not None: wg.setFixedHeight(height)
 
-    def ADD_QACTION(self, tray, ico=None, ico_rgb=None, txt="", shortcut_txt="", status_tip="", height=None, fct=None, sht_1=None, sht_2=None, sht_3=None):
-        if height is None: height=12
+    def ADD_QACTION(self, tray, ico=None, ico_rgb=None, txt="", shortcut_txt="", status_tip="", size=None, fct=None, sht_1=None, sht_2=None, sht_3=None):
+        if size is None: size=12
 
         shortcut = int()
         if sht_1 is not None: shortcut += sht_1
         if sht_2 is not None: shortcut += sht_2
         if sht_3 is not None: shortcut += sht_3
+        print(shortcut)
 
         action = QtGui.QAction(self)
-        action.setIcon(QtGui.QPixmap(f"{ico}{ico_rgb}.svg").scaledToHeight(height))
+        action.setIcon(QtGui.QPixmap(f"{ico}{ico_rgb}.svg").scaledToHeight(size))
         action.setText(txt)
         action.setShortcut(shortcut_txt)
         action.setStatusTip(status_tip)
