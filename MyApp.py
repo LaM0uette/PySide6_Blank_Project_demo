@@ -120,14 +120,15 @@ class main(Ui_main, QtWidgets.QWidget):
             ico=Img().quitter(),
             ico_rgb="bn2",
             txt="Quitter",
-            fct=self.e_quitter_tray
+            shortcut_txt="Shift+Esc",
+            status_tip="Quitter",
+            size=5,
+            fct=self.e_quitter_tray,
+            sht_1=None,
+            sht_2=None,
+            sht_3=None
         )
-
         # self.tray_menu.addSeparator()
-
-        ### Raccourcis clavier
-        sht = lambda _sht: (self, _sht.get("sht_1"), _sht.get("sht_2"), _sht.get("sht_3"), _sht.get("fct"))
-        # Fct().QSHORTCUT(*sht(qact_quitter))
 
         self.tray.setContextMenu(self.tray_menu)
         self.tray.show()
