@@ -17,12 +17,12 @@ class main(Ui_main, QtWidgets.QWidget):
             # tray
         self.tray = QtWidgets.QSystemTrayIcon(QtGui.QPixmap(f"{Img().main()}th3.svg"), self)
         self.tray.activated.connect(self.trayActivate)
-        # self.timer_double_click = QtCore.QTimer(self)
-        # self.timer_double_click.setSingleShot(True)
-        # self.timer_double_click.timeout.connect(self.traySingleClick)
+        self.timer_double_click = QtCore.QTimer(self)
+        self.timer_double_click.setSingleShot(True)
+        self.timer_double_click.timeout.connect(self.traySingleClick)
             # tray_menu
         self.tray_menu = QtWidgets.QMenu()
-        # self.tray_menu.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        self.tray_menu.setAttribute(QtCore.Qt.WA_TranslucentBackground)
 
         ### VARIABLES DE BASES ###
         self.win_state = QtCore.Qt.WindowNoState
@@ -113,27 +113,10 @@ class main(Ui_main, QtWidgets.QWidget):
     def IN_TRAY(self):
         # TrayIcon.Main(self.tray_menu)
 
-        style = f"""
-        /* MENU */
-        QMenu {{
-        background-color: rgba{(0, 255, 0, 255)};
-        color: rgba{(255, 0, 0, 255)};
-        }}
-
-        /* ITEM */
-        QMenu::item {{
-        background-color: rgba{(255, 0, 0, 255)};
-        color: rgba{(0, 255, 0, 255)};
-        }}
-        """
-        self.tray_menu.setStyleSheet(style)
-        self.tray_menu.setFixedWidth(200)
-        self.tray_menu.setFixedHeight(600)
-
         ### Set actions
         act = lambda _act: (self, self.tray_menu, _act.get("ico"), _act.get("ico_rgb"), _act.get("txt"), _act.get("shortcut"), _act.get("fct"), _act.get("height"))
         Functions.ADD_QACTION(
-            slf=self,
+            self,
             tray=self.tray_menu,
             ico=Img().quitter(),
             ico_rgb="bn2",
