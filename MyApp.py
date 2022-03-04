@@ -119,7 +119,7 @@ class main(Ui_main, QtWidgets.QWidget):
             "ico_rgb": "bn2",
             "txt": "Quitter",
             "shortcut": "Shift+Esc",
-            "fct": self.evt.e_quitter_tray,
+            "fct": self.e_quitter_tray,
             "sht_1": QtCore.Qt.SHIFT,
             "sht_2": QtCore.Qt.Key_Escape,
             "sht_3": None,
@@ -172,7 +172,18 @@ class main(Ui_main, QtWidgets.QWidget):
         else:
             self.setFixedWidth(config.widht)
             self.setFixedHeight(config.height)
+    def e_quitter_tray(self):
+        self.show()
+        fen.activateWindow()
+
+        if fen.windowState() == QtCore.Qt.WindowMinimized:
+            fen.setWindowState(QtCore.Qt.WindowActive)
+
+        # if DLG_Rep().QUITTER():
+        #     self.ui.app.quit()
+
     #####
+
     def closeEvent(self, event):
         event.accept()
         app.quit()
