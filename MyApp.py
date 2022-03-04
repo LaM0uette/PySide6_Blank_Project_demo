@@ -84,7 +84,7 @@ class main(Ui_main, QtWidgets.QWidget):
             )
             self.hlay_menu_bottom.addWidget(self.size_grip)
     def IN_CONNECTIONS(self):
-        ## Menu_top
+        ### Menu_top ###
         # self.pb_mt_option.clicked.connect(lambda: DLG_Option(fen=fen).MAIN())
         self.pb_mt_reduire.clicked.connect(lambda: self.e_reduire())
         self.pb_mt_agrandir.clicked.connect(lambda: self.e_agrandir())
