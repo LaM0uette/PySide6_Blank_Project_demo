@@ -1,8 +1,8 @@
-from PySide6 import QtCore
+from PySide6.QtCore import Qt
 
 
 class Scroll:
 
-    def need(self): return QtCore.Qt.ScrollBarAsNeeded
-    def on(self): return QtCore.Qt.ScrollBarAlwaysOn
-    def off(self): return QtCore.Qt.ScrollBarAlwaysOff
+    def need(self): return Qt.ScrollBarAsNeeded
+    def on(self): return Qt.ScrollBarAlwaysOn
+    def off(self): return Qt.ScrollBarAlwaysOff

@@ -1,12 +1,12 @@
-from PySide6 import QtCore
+from PySide6.QtCore import Qt
 
 
 class Align:
 
-    def center(self): return QtCore.Qt.AlignCenter
-    def center_horizontal(self): return QtCore.Qt.AlignHCenter
-    def center_vertical(self): return QtCore.Qt.AlignVCenter
-    def top(self): return QtCore.Qt.AlignTop
-    def bottom(self): return QtCore.Qt.AlignBottom
-    def right(self): return QtCore.Qt.AlignRight
-    def left(self): return QtCore.Qt.AlignLeft
+    def center(self): return Qt.AlignCenter
+    def center_horizontal(self): return Qt.AlignHCenter
+    def center_vertical(self): return Qt.AlignVCenter
+    def top(self): return Qt.AlignTop
+    def bottom(self): return Qt.AlignBottom
+    def right(self): return Qt.AlignRight
+    def left(self): return Qt.AlignLeft

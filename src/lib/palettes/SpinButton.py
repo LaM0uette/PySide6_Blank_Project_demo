@@ -1,8 +1,8 @@
-from PySide6 import QtWidgets
+from PySide6.QtWidgets import QAbstractSpinBox
 
 
 class SpinButton:
 
-    def no_button(self): return QtWidgets.QAbstractSpinBox.NoButtons
-    def plus_minus(self): return QtWidgets.QAbstractSpinBox.PlusMinus
-    def up_down(self): return QtWidgets.QAbstractSpinBox.UpDownArrows
+    def no_button(self): return QAbstractSpinBox.NoButtons
+    def plus_minus(self): return QAbstractSpinBox.PlusMinus
+    def up_down(self): return QAbstractSpinBox.UpDownArrows
