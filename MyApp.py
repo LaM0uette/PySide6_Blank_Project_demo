@@ -173,13 +173,14 @@ class main(Ui_main, QtWidgets.QWidget):
             self.setFixedWidth(config.widht)
             self.setFixedHeight(config.height)
 
-    # def traySingleClick(self):
-    #     screen = QtWidgets.QApplication.primaryScreen().availableGeometry()
-    #     widget = tray_ui.geometry()
-    #
-    #     tray_ui.move(screen.width()-widget.width(), screen.height()-widget.height())
-    #     tray_ui.open()
-    #     tray_ui.activateWindow()
+    def traySingleClick(self):
+        pass
+        # screen = QtWidgets.QApplication.primaryScreen().availableGeometry()
+        # widget = tray_ui.geometry()
+        #
+        # tray_ui.move(screen.width()-widget.width(), screen.height()-widget.height())
+        # tray_ui.open()
+        # tray_ui.activateWindow()
     def trayDoubleClick(self):
         self.timer_double_click.stop()
         self.show()
