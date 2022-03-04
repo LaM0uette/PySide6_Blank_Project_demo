@@ -124,7 +124,7 @@ class main(Ui_main, QtWidgets.QWidget):
         geo.moveCenter(center)
         self.move(geo.topLeft())
 
-    ##########
+    #####
 
     def e_resize_screen(self):
         if config.resize:
