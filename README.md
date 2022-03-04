@@ -29,11 +29,15 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > ### Nomenclature du nom des fonctions :
 > ***Fonctions :*** f_nom_de_la_fonction   
 > ***Fonctions "Masqué" :*** _f_nom_de_la_fonction   
+> 
 > ***Événement :*** e_nom_de_la_fonction   
 > ***Événement "Masqué" :*** _e_nom_de_la_fonction   
+> 
 > ***Actions :*** a_nom_de_la_fonction   
 > ***Actions "Masqué" :*** _a_nom_de_la_fonction   
->
+> 
+> ***Fonctions externes :*** NOM_DE_LA_FONCTION   
+> ***Fonctions externes "Masqué" :*** _nom_de_la_fonction   
 
 <br>
 

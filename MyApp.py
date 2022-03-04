@@ -46,6 +46,27 @@ class main(Ui_main, QtWidgets.QWidget):
     def IN_CLASSE(self):
         pass
     def IN_WG(self):
+        ### Base ###
+        self.setCursor(Cur().souris())
+
+
+        ### Icone de l'app ###
+        dim = Dim().h9()
+        Fct(wg=self.lb_mt_ico, width=dim, height=dim).SET_DIM()
+        self.lb_mt_ico.setPixmap(QtGui.QPixmap(ICO_MAIN))
+        self.lb_mt_ico.setScaledContents(True)
+        self.lb_mt_nom.setText(config.nom)
+
+
+        ### Widget blanc pour centrer le nom de l'app ###
+        dim = Dim().h10() * 1.4
+        Fct(wg=self.wg_mt_blank, width=dim * 4, height=dim).DIM()
+
+
+        ### Version de l'app ###
+        self.lb_mb_version.setText(f" Version : {config.version}")
+
+
         ### size_grip ###
         if config.resize:
             self.size_grip.setCursor(Cur().fleche_nwse())
