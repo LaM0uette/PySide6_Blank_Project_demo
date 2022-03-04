@@ -42,6 +42,15 @@ class Event:
             self.ui.hide()
         elif config.auto_close:  # DLG_Rep().QUITTER()
             self.ui.app.quit()
+    def quitterTray(self):
+        self.ui.show()
+        self.ui.fen.activateWindow()
+
+        if self.ui.fen.windowState() == QtCore.Qt.WindowMinimized:
+            self.ui.fen.setWindowState(QtCore.Qt.WindowActive)
+
+        # if DLG_Rep().QUITTER():
+        #     self.ui.app.quit()
 
     #####
 

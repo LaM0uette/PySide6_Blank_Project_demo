@@ -128,11 +128,13 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### Set actions
         act = lambda _act: (self, self.tray_menu, _act.get("ico"), _act.get("ico_rgb"), _act.get("txt"), _act.get("shortcut"), _act.get("fct"), _act.get("height"))
-        Fct().QACTION(*act(qact_quitter))
+        # Fct().QACTION(*act(qact_quitter))
+
         # self.tray_menu.addSeparator()
+
         ### Raccourcis clavier
         sht = lambda _sht: (self, _sht.get("sht_1"), _sht.get("sht_2"), _sht.get("sht_3"), _sht.get("fct"))
-        Fct().QSHORTCUT(*sht(qact_quitter))
+        # Fct().QSHORTCUT(*sht(qact_quitter))
 
         self.tray.setContextMenu(self.tray_menu)
         self.tray.show()
