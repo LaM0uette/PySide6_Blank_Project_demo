@@ -12,10 +12,14 @@ class main(Ui_main, QtWidgets.QWidget):
         super(main, self).__init__()
 
         ### AJOUTS DE BASE ###
-        # size_grip
+            # size_grip
         self.size_grip = QtWidgets.QSizeGrip(self)
-        # tray / tray_menu
+            # tray
         self.tray = QtWidgets.QSystemTrayIcon(QtGui.QPixmap(f"{Img().main()}th3.svg"), self)
+        self.timer_double_click = QtCore.QTimer(self)
+        self.timer_double_click.setSingleShot(True)
+        self.timer_double_click.timeout.connect(self.traySingleClick)
+            # tray_menu
         self.tray_menu = QtWidgets.QMenu()
         self.tray_menu.setAttribute(QtCore.Qt.WA_TranslucentBackground)
 
@@ -107,9 +111,7 @@ class main(Ui_main, QtWidgets.QWidget):
         pass
     def IN_TRAY(self):
         self.tray.activated.connect(self.trayActivate)
-        self.timer_double_click = QtCore.QTimer(self)
-        self.timer_double_click.setSingleShot(True)
-        self.timer_double_click.timeout.connect(self.traySingleClick)
+
 
         TrayIcon.Main(self.tray_menu)
 
