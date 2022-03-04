@@ -52,15 +52,18 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### Icone de l'app ###
         dim = Dim().h9()
-        Fct(wg=self.lb_mt_ico, width=dim, height=dim).SET_DIM()
-        self.lb_mt_ico.setPixmap(QtGui.QPixmap(ICO_MAIN))
+        SET_DIM(wg=self.lb_mt_ico, width=dim, height=dim)
+        self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{Img().main()}th3.svg"))
         self.lb_mt_ico.setScaledContents(True)
+
+
+        ### Nom de l'app ###
         self.lb_mt_nom.setText(config.nom)
 
 
         ### Widget blanc pour centrer le nom de l'app ###
-        dim = Dim().h10() * 1.4
-        Fct(wg=self.wg_mt_blank, width=dim * 4, height=dim).DIM()
+        dim = Dim().h9() * 1.4
+        SET_DIM(self.wg_mt_blank, width=dim * 3, height=dim)
 
 
         ### Version de l'app ###
