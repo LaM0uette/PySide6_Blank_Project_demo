@@ -33,15 +33,9 @@ class Event:
         self.ui.setWindowState(QtCore.Qt.WindowMinimized)
     def e_cacher(self):
         """Permet de cacher la fenêtre"""
-        if config.debug: return self.e_quitter()
+        if config.debug: return self.ui.e_quitter()
         self.ui.hide()
         self._e_center_screen()
-    def e_quitter(self):
-        """Permet de quitter l'application"""
-        if not config.auto_close:
-            self.ui.hide()
-        elif config.auto_close:  # DLG_Rep().QUITTER()
-            self.ui.app.quit()
 
     #####
 

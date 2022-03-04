@@ -194,6 +194,13 @@ class main(Ui_main, QtWidgets.QWidget):
 
         elif reason == QtWidgets.QSystemTrayIcon.DoubleClick:
             self.trayDoubleClick()
+
+    def e_quitter(self):
+        """Permet de quitter l'application"""
+        if not config.auto_close:
+            self.hide()
+        elif config.auto_close:  # DLG_Rep().QUITTER()
+            app.quit()
     def e_quitter_tray(self):
         self.show()
         fen.activateWindow()
