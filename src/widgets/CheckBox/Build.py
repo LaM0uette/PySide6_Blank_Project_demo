@@ -17,7 +17,7 @@ class Build:
 
             # Arguments
             auto_exclusive=False,
-            triple_state=False,
+            triple_state=True,
 
             # Curseur
             curseur=vb_wg.CUR,
@@ -28,11 +28,15 @@ class Build:
             bg_hover=vb_wg.BG_HOVER,
             bg_checked=vb_wg.BG_CHECKED,
             bg_checked_hover=vb_wg.BG_CHECKED_HOVER,
+            bg_indeterminate=vb_wg.BG_INDETERMINATE,
+            bg_indeterminate_hover=vb_wg.BG_INDETERMINATE_HOVER,
             # Couleurs FG
             fg=vb_wg.FG,
             fg_hover=vb_wg.FG_HOVER,
             fg_checked=vb_wg.FG_CHECKED,
             fg_checked_hover=vb_wg.FG_CHECKED_HOVER,
+            fg_indeterminate=vb_wg.FG_INDETERMINATE,
+            fg_indeterminate_hover=vb_wg.FG_INDETERMINATE_HOVER,
 
             # Positions WG
             spacing=10,
@@ -91,6 +95,14 @@ class Build:
                 QCheckBox:checked:hover {{
                 background-color: rgba{bg_checked_hover};
                 color: rgba{fg_checked_hover};
+                }}
+                QCheckBox:indeterminate {{
+                background-color: rgba{bg_indeterminate};
+                color: rgba{fg_indeterminate};
+                }}
+                QCheckBox:indeterminate:hover {{
+                background-color: rgba{bg_indeterminate_hover};
+                color: rgba{fg_indeterminate_hover};
                 }}
 
                 /* IMG */
