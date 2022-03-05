@@ -19,6 +19,7 @@ class Base:
     def tr(self, bg=Rgb().tr(), fg=Rgb().th3()):
         Build(
             *self.wgs,
+            auto_exclusive=False,
             bg=bg,
             bg_hover=bg,
             bg_checked=bg,
