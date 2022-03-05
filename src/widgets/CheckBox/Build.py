@@ -89,6 +89,64 @@ class Build:
             # Rayons
             radius=vb_wg.RADIUS
     ):
+        """
+        :param wgs: Widgets séparés par "," .
+        :param width: int()
+        :param height: int()
+        :param font: str()  #nom de la police
+        :param font_size: int()
+        :param auto_exclusive: bool()
+        :param triple_state: bool()
+        :param curseur: Cur().%nomDuCurseur()
+        :param bg: Rgb().%couleur()
+        :param bg_hover: Rgb().%couleur()
+        :param bg_checked: Rgb().%couleur()
+        :param bg_checked_hover: Rgb().%couleur()
+        :param bg_indeterminate: Rgb().%couleur()
+        :param bg_indeterminate_hover: Rgb().%couleur()
+        :param fg: Rgb().%couleur()
+        :param fg_hover: Rgb().%couleur()
+        :param fg_checked: Rgb().%couleur()
+        :param fg_checked_hover: Rgb().%couleur()
+        :param fg_indeterminate: Rgb().%couleur()
+        :param fg_indeterminate_hover: Rgb().%couleur()
+        :param spacing:
+        :param img_uncheck:
+        :param img_uncheck_hover:
+        :param img_check:
+        :param img_check_hover:
+        :param img_indeterminate:
+        :param img_indeterminate_hover:
+        :param img_uncheck_rgb:
+        :param img_uncheck_hover_rgb:
+        :param img_check_rgb:
+        :param img_check_hover_rgb:
+        :param img_indeterminate_rgb:
+        :param img_indeterminate_hover_rgb:
+        :param img_width:
+        :param img_height:
+        :param img_margin:
+        :param border:
+        :param border_style:
+        :param border_rgb:
+        :param border_hover:
+        :param border_hover_style:
+        :param border_hover_rgb:
+        :param border_checked:
+        :param border_checked_style:
+        :param border_checked_rgb:
+        :param border_checked_hover:
+        :param border_checked_hover_style:
+        :param border_checked_hover_rgb:
+        :param border_indeterminate:
+        :param border_indeterminate_style:
+        :param border_indeterminate_rgb:
+        :param border_indeterminate_hover:
+        :param border_indeterminate_hover_style:
+        :param border_indeterminate_hover_rgb:
+        :param radius:
+        """
+
         style = f"""
                 /* CHECKBOX */
                 QCheckBox {{
@@ -190,7 +248,6 @@ class Build:
                 border-bottom-right-radius: {radius[2]}px;
                 border-bottom-left-radius: {radius[3]}px;
                 }}"""
-
         for wg in wgs:
             # Dimensions
             Functions().SET_DIM(wg, width=width, height=height)

@@ -111,4 +111,5 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > ### Widgets :
 > Chaque widgets possède sa propre classe (src/widgets/"nomDuWidget"/"nomDuWidget")   
 > Pour créer une nouvelle ```class``` pour le widget choisit, il suffit de l'ajouter dans le fichier au nom du widget.   
-> Vous pouvez ensuite appeler ces ```class``` dans les fichiers d'ui. 
+> Vous pouvez ensuite appeler ces ```class``` dans les fichiers d'ui.  
+> Dans la doc, %.. signifie qu'il faut remplacer le texte par votre valeur.
