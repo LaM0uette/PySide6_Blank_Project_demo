@@ -67,7 +67,7 @@ class main(Ui_main, QtWidgets.QWidget):
         ## /QCheckBox ###
     def IN_WG(self):
         ### Base ###
-        self.setCursor(Cur().souris())
+        self.setCursor(Functions().SET_CURSOR(Cur().souris()))
 
 
         ### Icone de l'app ###
@@ -92,7 +92,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### size_grip ###
         if config.resize:
-            self.size_grip.setCursor(Cur().fleche_nwse())
+            self.size_grip.setCursor(Functions().SET_CURSOR(Cur().fleche_nwse()))
             self.size_grip.setStyleSheet(
                 f"""
                 QSizeGrip {{

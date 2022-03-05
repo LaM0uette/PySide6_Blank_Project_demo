@@ -1,7 +1,8 @@
 from PySide6 import QtCore, QtWidgets, QtGui
 
+from src import Functions
 from src.config import config
-from src.lib.globals import v_gb
+from src import v_gb
 from src.lib.palettes import *
 
 
@@ -60,9 +61,9 @@ class Event:
         cur = QtGui.QCursor()
         verif_height = cur.pos().y() - self.ui.pos().y()
         if event.buttons() == QtCore.Qt.LeftButton and v_gb.BD_LIMIT < verif_height < Dim().h9()+v_gb.BD_LIMIT and self.ui.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
-            self.ui.setCursor(Cur().agrandir())
+            self.ui.setCursor(Functions().SET_CURSOR(Cur().agrandir()))
         else:
-            self.ui.setCursor(Cur().souris())
+            self.ui.setCursor(Functions().SET_CURSOR(Cur().souris()))
 
         try:
             if event.buttons() == QtCore.Qt.LeftButton and v_gb.BD_LIMIT < verif_height < Dim().h9()+v_gb.BD_LIMIT and self.ui.windowState() != QtCore.Qt.WindowMaximized:
@@ -76,6 +77,6 @@ class Event:
         cur = QtGui.QCursor()
         verif_height = cur.pos().y() - self.ui.pos().y()
         if v_gb.BD_LIMIT < verif_height < Dim().h9()+v_gb.BD_LIMIT and self.ui.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= 0:
-            self.ui.setCursor(Cur().souris())
+            self.ui.setCursor(Functions().SET_CURSOR(Cur().souris()))
             self.e_agrandir()
             event.accept()
