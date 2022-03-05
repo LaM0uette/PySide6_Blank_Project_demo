@@ -7,66 +7,66 @@ class Style:
             *wgs,
 
             # Dimensions
-            width=vbase.WG_WIDTH,
-            height=vbase.WG_HEIGHT,
+            width = vb_wg.WG_WIDTH,
+            height = vb_wg.WG_HEIGHT,
 
             # Police
-            font=vbase.FONT,
-            font_size=vbase.FONT_SIZE,
+            font = vb_wg.FONT,
+            font_size = vb_wg.FONT_SIZE,
 
             # Curseur
             curseur=Cur().souris_main(),
 
 
             # Couleurs BG
-            bg=vbase.BG,
-            bg_hover=vbase.BG_HOVER,
-            bg_checked=vbase.BG_CHECKED,
-            bg_checked_hover=vbase.BG_CHECKED_HOVER,
+            bg=vb_wg.BG,
+            bg_hover=vb_wg.BG_HOVER,
+            bg_checked=vb_wg.BG_CHECKED,
+            bg_checked_hover=vb_wg.BG_CHECKED_HOVER,
             # Couleurs FG
-            fg=vbase.FG,
-            fg_hover=vbase.FG_HOVER,
-            fg_checked=vbase.FG_CHECKED,
-            fg_checked_hover=vbase.FG_CHECKED_HOVER,
+            fg=vb_wg.FG,
+            fg_hover=vb_wg.FG_HOVER,
+            fg_checked=vb_wg.FG_CHECKED,
+            fg_checked_hover=vb_wg.FG_CHECKED_HOVER,
 
             # Positions WG
             spacing=10,
 
             # Images
-            img_uncheck=vbase.IMG_UNCHECK,
-            img_uncheck_hover=vbase.IMG_UNCHECK_HOVER,
-            img_check=vbase.IMG_CHECK,
-            img_check_hover=vbase.IMG_CHECK_HOVER,
+            img_uncheck=vb_wg.IMG_UNCHECK,
+            img_uncheck_hover=vb_wg.IMG_UNCHECK_HOVER,
+            img_check=vb_wg.IMG_CHECK,
+            img_check_hover=vb_wg.IMG_CHECK_HOVER,
             # Images RGB
-            img_uncheck_rgb=vbase.IMG_UNCHECK_RGB,
-            img_uncheck_hover_rgb=vbase.IMG_UNCHECK_HOVER_RGB,
-            img_check_rgb=vbase.IMG_CHECK_RGB,
-            img_check_hover_rgb=vbase.IMG_CHECK_HOVER_RGB,
+            img_uncheck_rgb=vb_wg.IMG_UNCHECK_RGB,
+            img_uncheck_hover_rgb=vb_wg.IMG_UNCHECK_HOVER_RGB,
+            img_check_rgb=vb_wg.IMG_CHECK_RGB,
+            img_check_hover_rgb=vb_wg.IMG_CHECK_HOVER_RGB,
             # Images DIM
-            img_width=vbase.img_width,
-            img_height=vbase.img_height,
+            img_width=vb_wg.img_width,
+            img_height=vb_wg.img_height,
             # Images positions
             img_margin=((0,) * 4),
 
             # Bordures
-            border=vbase.WG_BORDER_WIDTH,
-            border_style=vbase.WG_BORDER_STYLE,
-            border_rgb=vbase.WG_BORDER_RGB,
+            border=vb_wg.WG_BORDER_WIDTH,
+            border_style=vb_wg.WG_BORDER_STYLE,
+            border_rgb=vb_wg.WG_BORDER_RGB,
             # Bordures hover
-            border_hover=vbase.WG_BORDER_WIDTH,
-            border_hover_style=vbase.WG_BORDER_STYLE,
-            border_hover_rgb=vbase.WG_BORDER_RGB,
+            border_hover=vb_wg.WG_BORDER_WIDTH,
+            border_hover_style=vb_wg.WG_BORDER_STYLE,
+            border_hover_rgb=vb_wg.WG_BORDER_RGB,
             # Bordures checked
-            border_checked=vbase.WG_BORDER_WIDTH,
-            border_checked_style=vbase.WG_BORDER_STYLE,
-            border_checked_rgb=vbase.WG_BORDER_RGB,
+            border_checked=vb_wg.WG_BORDER_WIDTH,
+            border_checked_style=vb_wg.WG_BORDER_STYLE,
+            border_checked_rgb=vb_wg.WG_BORDER_RGB,
             # Bordures checked hover
-            border_checked_hover=vbase.WG_BORDER_WIDTH,
-            border_checked_hover_style=vbase.WG_BORDER_STYLE,
-            border_checked_hover_rgb=vbase.WG_BORDER_RGB,
+            border_checked_hover=vb_wg.WG_BORDER_WIDTH,
+            border_checked_hover_style=vb_wg.WG_BORDER_STYLE,
+            border_checked_hover_rgb=vb_wg.WG_BORDER_RGB,
 
             # Rayons
-            radius=vbase.WG_RADIUS
+            radius=vb_wg.WG_RADIUS
     ):
         style = f"""
                 /* CHECKBOX */
