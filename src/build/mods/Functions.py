@@ -1,6 +1,6 @@
 from PySide6 import QtCore, QtGui
 
-from src import *
+from src.config import config
 
 
 class Functions:
@@ -9,7 +9,9 @@ class Functions:
         for wg in args:
             if width is not None: wg.setFixedWidth(width)
             if height is not None: wg.setFixedHeight(height)
-    def SET_FONT(self, *args, font=config.font, font_size=Font().h5()):
+    def SET_FONT(self, *args, font=config.font, font_size=None):
+        if not font_size: return
+
         for wg in args:
             ft = QtGui.QFont()
             ft.setFamily(font)
