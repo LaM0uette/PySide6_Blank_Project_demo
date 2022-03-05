@@ -90,11 +90,11 @@ class Build:
             radius=vb_wg.RADIUS
     ):
         """
-
-        *Cur: Cur().%nomCurseur()
-        *Img: Img().%nomImage()
-        *Rgb: Rgb().%nomCouleur()
-        *Tuple: (int(), int(), int(), int())
+        *Border_Style: dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
+        *Cur: Cur().%nomCurseur() \n
+        *Img: Img().%nomImage() \n
+        *Rgb: Rgb().%nomCouleur() \n
+        *Tuple: (int(), int(), int(), int()) == (Top, Bottom, Right, Left) \n
 
         :param wgs: Widgets séparés par ","
         :param width: int()
@@ -132,25 +132,25 @@ class Build:
         :param img_width: int()
         :param img_height: int()
         :param img_margin: *Tuple
-        :param border:
-        :param border_style:
-        :param border_rgb:
-        :param border_hover:
-        :param border_hover_style:
-        :param border_hover_rgb:
-        :param border_checked:
-        :param border_checked_style:
-        :param border_checked_rgb:
-        :param border_checked_hover:
-        :param border_checked_hover_style:
-        :param border_checked_hover_rgb:
-        :param border_indeterminate:
-        :param border_indeterminate_style:
-        :param border_indeterminate_rgb:
-        :param border_indeterminate_hover:
-        :param border_indeterminate_hover_style:
-        :param border_indeterminate_hover_rgb:
-        :param radius:
+        :param border: *Tuple
+        :param border_style: *Border_Style
+        :param border_rgb: *Rgb
+        :param border_hover: *Tuple
+        :param border_hover_style: *Border_Style
+        :param border_hover_rgb: *Rgb
+        :param border_checked: *Tuple
+        :param border_checked_style: *Border_Style
+        :param border_checked_rgb: *Rgb
+        :param border_checked_hover: *Tuple
+        :param border_checked_hover_style: *Border_Style
+        :param border_checked_hover_rgb: *Rgb
+        :param border_indeterminate: *Tuple
+        :param border_indeterminate_style: *Border_Style
+        :param border_indeterminate_rgb: *Rgb
+        :param border_indeterminate_hover: *Tuple
+        :param border_indeterminate_hover_style: *Border_Style
+        :param border_indeterminate_hover_rgb: *Rgb
+        :param radius: *Tuple
         """
 
         style = f"""
