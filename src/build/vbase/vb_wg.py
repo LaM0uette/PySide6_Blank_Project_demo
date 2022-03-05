@@ -67,3 +67,53 @@ FG_ITEM_CHECKED_HOVER = Rgb().bn1()
 
     # Autres
 GRIDLINE = Rgb().th2()
+
+
+####################
+##     IMAGES     ##
+####################
+    # Check
+IMG_UNCHECK = Img().check()
+IMG_UNCHECK_HOVER = Img().check()
+IMG_CHECK = Img().valider()
+IMG_CHECK_HOVER = Img().valider()
+IMG_UNROLL = Img().fleche_bottom()
+IMG_UNROLL_HOVER = Img().fleche_bottom()
+    # Check RGB
+IMG_UNCHECK_RGB = "th2"
+IMG_UNCHECK_HOVER_RGB = "bn1"
+IMG_CHECK_RGB = "th2"
+IMG_CHECK_HOVER_RGB = "bn1"
+IMG_UNROLL_RGB = "th2"
+IMG_UNROLL_HOVER_RGB = "bn1"
+
+    # Fleches
+IMG_UP = Img().plus()
+IMG_DOWN = Img().moins()
+IMG_RIGHT = Img().fleche_droite()
+IMG_LEFT = Img().fleche_gauche()
+    # Fleches RGB
+IMG_UP_RGB = "th2"
+IMG_DOWN_RGB = "th2"
+IMG_RIGHT_RGB = "th3"
+IMG_LEFT_RGB = "th3"
+
+    # img dim
+img_width = HEIGHT * StyleBase().x_ico()
+IMG_WIDTH = HEIGHT * StyleBase().X_ICO()
+img_height = HEIGHT * StyleBase().x_ico()
+IMG_HEIGHT = HEIGHT * StyleBase().X_ICO()
+
+
+#####################
+##     BORDURE     ##
+#####################
+BORDER_WIDTH = ((0,) * 4)
+BORDER_STYLE = "solid"
+BORDER_RGB = Rgb().tr()
+
+
+###################
+##     RAYON     ##
+###################
+RADIUS = ((3,) * 4)

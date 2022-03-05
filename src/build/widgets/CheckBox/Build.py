@@ -49,24 +49,24 @@ class Style:
             img_margin=((0,) * 4),
 
             # Bordures
-            border=vb_wg.WG_BORDER_WIDTH,
-            border_style=vb_wg.WG_BORDER_STYLE,
-            border_rgb=vb_wg.WG_BORDER_RGB,
+            border=vb_wg.BORDER_WIDTH,
+            border_style=vb_wg.BORDER_STYLE,
+            border_rgb=vb_wg.BORDER_RGB,
             # Bordures hover
-            border_hover=vb_wg.WG_BORDER_WIDTH,
-            border_hover_style=vb_wg.WG_BORDER_STYLE,
-            border_hover_rgb=vb_wg.WG_BORDER_RGB,
+            border_hover=vb_wg.BORDER_WIDTH,
+            border_hover_style=vb_wg.BORDER_STYLE,
+            border_hover_rgb=vb_wg.BORDER_RGB,
             # Bordures checked
-            border_checked=vb_wg.WG_BORDER_WIDTH,
-            border_checked_style=vb_wg.WG_BORDER_STYLE,
-            border_checked_rgb=vb_wg.WG_BORDER_RGB,
+            border_checked=vb_wg.BORDER_WIDTH,
+            border_checked_style=vb_wg.BORDER_STYLE,
+            border_checked_rgb=vb_wg.BORDER_RGB,
             # Bordures checked hover
-            border_checked_hover=vb_wg.WG_BORDER_WIDTH,
-            border_checked_hover_style=vb_wg.WG_BORDER_STYLE,
-            border_checked_hover_rgb=vb_wg.WG_BORDER_RGB,
+            border_checked_hover=vb_wg.BORDER_WIDTH,
+            border_checked_hover_style=vb_wg.BORDER_STYLE,
+            border_checked_hover_rgb=vb_wg.BORDER_RGB,
 
             # Rayons
-            radius=vb_wg.WG_RADIUS
+            radius=vb_wg.RADIUS
     ):
         style = f"""
                 /* CHECKBOX */
