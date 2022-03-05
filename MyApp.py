@@ -1,4 +1,5 @@
 import sys
+import time
 
 from PySide6 import QtCore, QtWidgets, QtGui
 
@@ -216,6 +217,9 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
 if __name__ == "__main__":
+    Functions().GEN_SVG()
+    time.sleep(0.3)
+
     app = QtWidgets.QApplication(sys.argv)
     app.processEvents()
 
