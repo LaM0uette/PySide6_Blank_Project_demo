@@ -117,14 +117,14 @@ class Build:
         :param img_check_hover: Img().%nomImage()
         :param img_indeterminate: Img().%nomImage()
         :param img_indeterminate_hover: Img().%nomImage()
-        :param img_uncheck_rgb:
-        :param img_uncheck_hover_rgb:
-        :param img_check_rgb:
-        :param img_check_hover_rgb:
-        :param img_indeterminate_rgb:
-        :param img_indeterminate_hover_rgb:
-        :param img_width:
-        :param img_height:
+        :param img_uncheck_rgb:  Rgb().%nomCouleur()
+        :param img_uncheck_hover_rgb:  Rgb().%nomCouleur()
+        :param img_check_rgb:  Rgb().%nomCouleur()
+        :param img_check_hover_rgb:  Rgb().%nomCouleur()
+        :param img_indeterminate_rgb:  Rgb().%nomCouleur()
+        :param img_indeterminate_hover_rgb:  Rgb().%nomCouleur()
+        :param img_width: int()
+        :param img_height: int()
         :param img_margin:
         :param border:
         :param border_style:
