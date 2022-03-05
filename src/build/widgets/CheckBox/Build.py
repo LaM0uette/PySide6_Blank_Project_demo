@@ -5,11 +5,19 @@ class Style:
     def __init__(
             self,
             *wgs,
+
+            # Dimensions
             width=vbase.WG_WIDTH,
             height=vbase.WG_HEIGHT,
+
+            # Police
             font=vbase.FONT,
             font_size=vbase.FONT_SIZE,
+
+            # Curseur
             curseur=Cur().souris_main(),
+
+
             # Couleurs BG
             bg=vbase.BG,
             bg_hover=vbase.BG_HOVER,
@@ -20,8 +28,10 @@ class Style:
             fg_hover=vbase.FG_HOVER,
             fg_checked=vbase.FG_CHECKED,
             fg_checked_hover=vbase.FG_CHECKED_HOVER,
+
             # Positions WG
             spacing=10,
+
             # Images
             img_uncheck=vbase.IMG_UNCHECK,
             img_uncheck_hover=vbase.IMG_UNCHECK_HOVER,
@@ -37,6 +47,7 @@ class Style:
             img_height=vbase.img_height,
             # Images positions
             img_margin=((0,) * 4),
+
             # Bordures
             border=vbase.WG_BORDER_WIDTH,
             border_style=vbase.WG_BORDER_STYLE,
@@ -53,6 +64,7 @@ class Style:
             border_checked_hover=vbase.WG_BORDER_WIDTH,
             border_checked_hover_style=vbase.WG_BORDER_STYLE,
             border_checked_hover_rgb=vbase.WG_BORDER_RGB,
+
             # Rayons
             radius=vbase.WG_RADIUS
     ):
