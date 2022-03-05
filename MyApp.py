@@ -65,6 +65,12 @@ class main(Ui_main, QtWidgets.QWidget):
         CheckBox.Demo(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3).th()
         CheckBox.Demo(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3).tr()
         ## /QCheckBox ###
+
+
+        ## QRadioButton ###
+        RadioButton.Base(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3).th()
+        RadioButton.Base(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3).tr()
+        ## /QRadioButton ###
     def IN_WG(self):
         ### Base ###
         self.setCursor(Functions().SET_CURSOR(Cur().souris()))

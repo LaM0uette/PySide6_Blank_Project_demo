@@ -123,26 +123,26 @@ class Build:
 
         style = f"""
                 /* CHECKBOX */
-                QCheckBox {{
+                QRadioButton {{
                 background-color: rgba{bg};
                 color: rgba{fg};
                 spacing: {spacing}px;
                 }}
-                QCheckBox:hover {{
+                QRadioButton:hover {{
                 background-color: rgba{bg_hover};
                 color: rgba{fg_hover};
                 }}
-                QCheckBox:checked {{
+                QRadioButton:checked {{
                 background-color: rgba{bg_checked};
                 color: rgba{fg_checked};
                 }}
-                QCheckBox:checked:hover {{
+                QRadioButton:checked:hover {{
                 background-color: rgba{bg_checked_hover};
                 color: rgba{fg_checked_hover};
                 }}
 
                 /* IMG */
-                QCheckBox::indicator {{
+                QRadioButton::indicator {{
                 margin-top: {img_margin[0]}px;
                 margin-bottom: {img_margin[1]}px;
                 margin-right: {img_margin[2]}px;
@@ -150,39 +150,39 @@ class Build:
                 width: {img_width}px;
                 height: {img_height}px;
                 }}
-                QCheckBox::indicator:unchecked {{
+                QRadioButton::indicator:unchecked {{
                 image: url({f"{img_uncheck}{img_uncheck_rgb}.svg"});
                 }}
-                QCheckBox::indicator:hover {{
+                QRadioButton::indicator:hover {{
                 image: url({f"{img_uncheck_hover}{img_uncheck_hover_rgb}.svg"});
                 }}
-                QCheckBox::indicator:checked {{
+                QRadioButton::indicator:checked {{
                 image: url({f"{img_check}{img_check_rgb}.svg"});
                 }}
-                QCheckBox::indicator:checked:hover {{
+                QRadioButton::indicator:checked:hover {{
                 image: url({f"{img_check_hover}{img_check_hover_rgb}.svg"});
                 }}
 
                 /* BORDURES */
-                .QCheckBox {{
+                .QRadioButton {{
                 border-top: {border[0]}px {border_style} rgba{border_rgb};
                 border-bottom: {border[1]}px {border_style} rgba{border_rgb};
                 border-right: {border[2]}px {border_style} rgba{border_rgb};
                 border-left: {border[3]}px {border_style} rgba{border_rgb};
                 }}
-                .QCheckBox:hover {{
+                .QRadioButton:hover {{
                 border-top: {border_hover[0]}px {border_hover_style} rgba{border_hover_rgb};
                 border-bottom: {border_hover[1]}px {border_hover_style} rgba{border_hover_rgb};
                 border-right: {border_hover[2]}px {border_hover_style} rgba{border_hover_rgb};
                 border-left: {border_hover[3]}px {border_hover_style} rgba{border_hover_rgb};
                 }}
-                .QCheckBox:checked {{
+                .QRadioButton:checked {{
                 border-top: {border_checked[0]}px {border_checked_style} rgba{border_checked_rgb};
                 border-bottom: {border_checked[1]}px {border_checked_style} rgba{border_checked_rgb};
                 border-right: {border_checked[2]}px {border_checked_style} rgba{border_checked_rgb};
                 border-left: {border_checked[3]}px {border_checked_style} rgba{border_checked_rgb};
                 }}
-                .QCheckBox:checked:hover {{
+                .QRadioButton:checked:hover {{
                 border-top: {border_checked_hover[0]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
                 border-bottom: {border_checked_hover[1]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
                 border-right: {border_checked_hover[2]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
@@ -190,7 +190,7 @@ class Build:
                 }}
 
                 /* RAYONS */
-                .QCheckBox {{
+                .QRadioButton {{
                 border-top-right-radius: {radius[0]}px;
                 border-top-left-radius: {radius[1]}px;
                 border-bottom-right-radius: {radius[2]}px;
