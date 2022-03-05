@@ -19,7 +19,7 @@ class Build:
             auto_exclusive=True,
 
             # Curseur
-            curseur=vb_wg.CUR,
+            curseur=vb_wg.CUR_MAIN,
 
 
             # Couleurs BG

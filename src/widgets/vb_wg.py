@@ -21,6 +21,7 @@ FONT_SIZE_HD = Font().h3()
 ##     CURSEUR     ##
 #####################
 CUR = Cur().souris()
+CUR_MAIN = Cur().main()
 CUR_LE = Cur().ibeam()
 
 

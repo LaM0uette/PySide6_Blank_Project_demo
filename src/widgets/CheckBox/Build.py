@@ -20,7 +20,7 @@ class Build:
             triple_state=False,
 
             # Curseur
-            curseur=vb_wg.CUR,
+            curseur=vb_wg.CUR_MAIN,
 
 
             # Couleurs BG
