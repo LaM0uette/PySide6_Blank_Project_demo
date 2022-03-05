@@ -165,7 +165,7 @@ class main(Ui_main, QtWidgets.QWidget):
         else:
             self.setFixedWidth(config.widht)
             self.setFixedHeight(config.height)
-
+    #####
     def traySingleClick(self):
         pass
         # screen = QtWidgets.QApplication.primaryScreen().availableGeometry()
@@ -187,7 +187,6 @@ class main(Ui_main, QtWidgets.QWidget):
 
         elif reason == QtWidgets.QSystemTrayIcon.DoubleClick:
             self.trayDoubleClick()
-
     def e_quitter(self):
         """Permet de quitter l'application"""
         if not config.auto_close:
@@ -204,9 +203,7 @@ class main(Ui_main, QtWidgets.QWidget):
         # if DLG_Rep().QUITTER():
         #     self.ui.app.quit()
         app.quit()
-
     #####
-
     def closeEvent(self, event):
         event.accept()
         app.quit()
