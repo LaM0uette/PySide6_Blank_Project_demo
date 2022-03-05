@@ -11,6 +11,7 @@ applications facilement et rapidement en customisant les différents Widgets de 
 - Des fenêtre de dialogue 100% personnalisables.
 - Un menu d'option déjà pré fait.
 - Des fonctions élémentaires préconstruite.
+- Les images SVG se régénères selon le thème choisit.
 
 ## Charte
 > ## Couleur :
