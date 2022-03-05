@@ -77,6 +77,14 @@ class Build:
             border_checked_hover=vb_wg.BORDER_WIDTH,
             border_checked_hover_style=vb_wg.BORDER_STYLE,
             border_checked_hover_rgb=vb_wg.BORDER_RGB,
+            # Bordures indeterminate
+            border_indeterminate=vb_wg.BORDER_WIDTH,
+            border_indeterminate_style=vb_wg.BORDER_STYLE,
+            border_indeterminate_rgb=vb_wg.BORDER_RGB,
+            # Bordures indeterminate hover
+            border_indeterminate_hover=vb_wg.BORDER_WIDTH,
+            border_indeterminate_hover_style=vb_wg.BORDER_STYLE,
+            border_indeterminate_hover_rgb=vb_wg.BORDER_RGB,
 
             # Rayons
             radius=vb_wg.RADIUS
@@ -161,6 +169,18 @@ class Build:
                 border-bottom: {border_checked_hover[1]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
                 border-right: {border_checked_hover[2]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
                 border-left: {border_checked_hover[3]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
+                }}
+                .QCheckBox:indeterminate {{
+                border-top: {border_indeterminate[0]}px {border_indeterminate_style} rgba{border_indeterminate_rgb};
+                border-bottom: {border_indeterminate[1]}px {border_indeterminate_style} rgba{border_indeterminate_rgb};
+                border-right: {border_indeterminate[2]}px {border_indeterminate_style} rgba{border_indeterminate_rgb};
+                border-left: {border_indeterminate[3]}px {border_indeterminate_style} rgba{border_indeterminate_rgb};
+                }}
+                .QCheckBox:indeterminate:hover {{
+                border-top: {border_indeterminate_hover[0]}px {border_indeterminate_hover_style} rgba{border_indeterminate_hover_rgb};
+                border-bottom: {border_indeterminate_hover[1]}px {border_indeterminate_hover_style} rgba{border_indeterminate_hover_rgb};
+                border-right: {border_indeterminate_hover[2]}px {border_indeterminate_hover_style} rgba{border_indeterminate_hover_rgb};
+                border-left: {border_indeterminate_hover[3]}px {border_indeterminate_hover_style} rgba{border_indeterminate_hover_rgb};
                 }}
 
                 /* RAYONS */

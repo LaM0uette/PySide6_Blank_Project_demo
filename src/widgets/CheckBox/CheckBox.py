@@ -23,6 +23,8 @@ class Base:
             bg_hover=bg,
             bg_checked=bg,
             bg_checked_hover=bg,
+            bg_indeterminate=bg,
+            bg_indeterminate_hover=bg,
             fg=fg,
             fg_checked=fg,
             img_margin=self.margin,
