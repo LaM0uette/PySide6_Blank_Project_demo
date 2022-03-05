@@ -46,11 +46,15 @@ class Build:
             img_uncheck_hover=vb_wg.IMG_UNCHECK_HOVER,
             img_check=vb_wg.IMG_CHECK,
             img_check_hover=vb_wg.IMG_CHECK_HOVER,
+            img_indeterminate=vb_wg.IMG_INDETERMINATE,
+            img_indeterminate_hover=vb_wg.IMG_INDETERMINATE_HOVER,
             # Images RGB
             img_uncheck_rgb=vb_wg.IMG_UNCHECK_RGB,
             img_uncheck_hover_rgb=vb_wg.IMG_UNCHECK_HOVER_RGB,
             img_check_rgb=vb_wg.IMG_CHECK_RGB,
             img_check_hover_rgb=vb_wg.IMG_CHECK_HOVER_RGB,
+            img_indeterminate_rgb=vb_wg.IMG_INDETERMINATE_RGB,
+            img_indeterminate_hover_rgb=vb_wg.IMG_INDETERMINATE_HOVER_RGB,
             # Images DIM
             img_width=vb_wg.img_width,
             img_height=vb_wg.img_height,
@@ -125,6 +129,12 @@ class Build:
                 }}
                 QCheckBox::indicator:checked:hover {{
                 image: url({f"{img_check_hover}{img_check_hover_rgb}.svg"});
+                }}
+                QCheckBox::indicator::indeterminate {{
+                image: url({f"{img_indeterminate}{img_indeterminate_rgb}.svg"});
+                }}
+                QCheckBox::indicator::indeterminate:hover {{
+                image: url({f"{img_indeterminate_hover}{img_indeterminate_hover_rgb}.svg"});
                 }}
 
                 /* BORDURES */

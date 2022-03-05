@@ -82,6 +82,8 @@ IMG_UNCHECK = Img().check()
 IMG_UNCHECK_HOVER = Img().check()
 IMG_CHECK = Img().valider()
 IMG_CHECK_HOVER = Img().valider()
+IMG_INDETERMINATE = Img().check()
+IMG_INDETERMINATE_HOVER = Img().check()
 IMG_UNROLL = Img().fleche_bottom()
 IMG_UNROLL_HOVER = Img().fleche_bottom()
     # Check RGB
@@ -89,6 +91,8 @@ IMG_UNCHECK_RGB = "th2"
 IMG_UNCHECK_HOVER_RGB = "bn1"
 IMG_CHECK_RGB = "th2"
 IMG_CHECK_HOVER_RGB = "bn1"
+IMG_INDETERMINATE_RGB = "th1"
+IMG_INDETERMINATE_HOVER_RGB = "th3"
 IMG_UNROLL_RGB = "th2"
 IMG_UNROLL_HOVER_RGB = "bn1"
 
