@@ -1,4 +1,3 @@
-from src import *
 from src.build.vbase import *
 
 
@@ -16,7 +15,7 @@ class Build:
             font_size = vb_wg.FONT_SIZE,
 
             # Curseur
-            curseur=Cur().main(),
+            curseur=vb_wg.CUR,
 
 
             # Couleurs BG

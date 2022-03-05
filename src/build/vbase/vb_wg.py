@@ -1,4 +1,5 @@
-from src import *
+from src.config import config
+from src.lib.palettes import *
 
 
 ########################

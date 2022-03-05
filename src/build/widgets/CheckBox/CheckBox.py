@@ -1,6 +1,6 @@
-from src import *
 from src.build.vbase import *
 from src.build.widgets.CheckBox.Build import Build
+from src.lib.palettes import *
 
 
 ##################
