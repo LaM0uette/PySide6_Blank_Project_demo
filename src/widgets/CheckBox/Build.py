@@ -146,9 +146,6 @@ class Build:
                 }}"""
 
         for wg in wgs:
-            # Style
-            wg.setStyleSheet(style)
-
             # Dimensions
             Functions().SET_DIM(wg, width=width, height=height)
 
@@ -157,3 +154,6 @@ class Build:
 
             # Curseur
             wg.setCursor(Functions().SET_CURSOR(curseur))
+
+            # Style
+            wg.setStyleSheet(style)
