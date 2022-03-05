@@ -16,7 +16,7 @@ class Build:
             font_size = vb_wg.FONT_SIZE,
 
             # Arguments
-            auto_exclusive=False,
+            auto_exclusive=True,
 
             # Curseur
             curseur=vb_wg.CUR,
