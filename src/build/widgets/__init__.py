@@ -1,1 +1,1 @@
-from src.build.widgets import *
+from src.build.widgets.CheckBox import *

@@ -61,7 +61,10 @@ class main(Ui_main, QtWidgets.QWidget):
         ### Ui principal ###
         self.setupUi(self)
     def IN_CLASSE(self):
-        pass
+        ### QCheckBox ###
+        CheckBox.Base_th(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3)
+        CheckBox.Base_tr(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3)
+        ### /QCheckBox ###
     def IN_WG(self):
         ### Base ###
         self.setCursor(Cur().souris())
