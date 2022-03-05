@@ -13,16 +13,36 @@ class Base_th(Build):
             img_margin=(0, 0, 0, (vb_wg.HEIGHT - (vb_wg.HEIGHT * StyleBase().x_ico())) / 2),
         )
 class Base_tr(Build):
-    bg = Rgb().tr()
-
-    def __init__(self, *wgs):
+    def __init__(self, *wgs, bg=Rgb().tr(), fg=Rgb().th3()):
         super().__init__(
             *wgs,
-            bg=self.bg,
-            bg_hover=self.bg,
-            bg_checked=self.bg,
-            bg_checked_hover=self.bg,
-            fg=Rgb().th3(),
-            fg_checked=Rgb().th3(),
+            bg=bg,
+            bg_hover=bg,
+            bg_checked=bg,
+            bg_checked_hover=bg,
+            fg=fg,
+            fg_checked=fg,
             img_margin=(0, 0, 0, (vb_wg.HEIGHT - (vb_wg.HEIGHT * StyleBase().x_ico())) / 2),
+        )
+
+class Base:
+    def __init__(self, *wgs, margin=(0, 0, 0, (vb_wg.HEIGHT-(vb_wg.HEIGHT*StyleBase().x_ico()))/2)):
+        self.wgs = wgs
+        self.margin = margin
+
+    def Base_th(self):
+        Build(
+            *self.wgs,
+            img_margin=self.margin,
+        )
+    def Base_tr(self, bg=Rgb().tr(), fg=Rgb().th3()):
+        Build(
+            *self.wgs,
+            bg=bg,
+            bg_hover=bg,
+            bg_checked=bg,
+            bg_checked_hover=bg,
+            fg=fg,
+            fg_checked=fg,
+            img_margin=self.margin,
         )
