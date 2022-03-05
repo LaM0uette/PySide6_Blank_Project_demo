@@ -108,3 +108,7 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > - ***SpinButton :*** SpinButton().plus_minus()
 > - ***StyleBase :*** StyleBase().border()
 > 
+> ### Widgets :
+> Chaque widgets possède sa propre classe (src/widgets/"nomDuWidget"/"nomDuWidget")   
+> Pour créer une nouvelle ```class``` pour le widget choisit, il suffit de l'ajouter dans le fichier au nom du widget.   
+> Vous pouvez ensuite appeler ces ```class``` dans les fichiers d'ui. 
