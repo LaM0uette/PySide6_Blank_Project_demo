@@ -66,7 +66,12 @@ class Functions:
             lien = f"src/assets/img/{lien_img}/"
             lien_rgb = f"{lien}rgb"
 
-            os.makedirs(lien_rgb) if not os.path.exists(lien_rgb) else False
+            if not os.path.exists(lien_rgb):
+                os.makedirs(lien_rgb)
+            else:
+                fichiers = glob.glob(f"{lien_rgb}/*")
+                for fichier in fichiers:
+                    os.remove(fichier)
 
             for svg in glob.glob(f"{lien}*.svg"):
                 if "thc" not in svg:
