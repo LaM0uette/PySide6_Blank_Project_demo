@@ -20,9 +20,8 @@ FONT_SIZE_HD = Font().h3()
 #####################
 ##     CURSEUR     ##
 #####################
-# CUR = Cur().souris()
-# CUR_LE = Cur().ibeam()
-CUR = Cur().yy()
+CUR = Cur().souris()
+CUR_LE = Cur().ibeam()
 
 
 ######################

@@ -156,5 +156,4 @@ class Build:
             Functions().SET_FONT(wg, font=font, font_size=font_size)
 
             # Curseur
-            if curseur:
-                wg.setCursor(Functions().SET_CURSOR(curseur))
+            wg.setCursor(Functions().SET_CURSOR(curseur))
