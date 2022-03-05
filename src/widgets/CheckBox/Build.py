@@ -90,61 +90,67 @@ class Build:
             radius=vb_wg.RADIUS
     ):
         """
-        :param wgs: Widgets séparés par "," .
+
+        *Cur: Cur().%nomCurseur()
+        *Img: Img().%nomImage()
+        *Rgb: Rgb().%nomCouleur()
+        *Tuple: (int(), int(), int(), int())
+
+        :param wgs: Widgets séparés par ","
         :param width: int()
         :param height: int()
-        :param font: str()  #nom de la police
+        :param font: str()
         :param font_size: int()
         :param auto_exclusive: bool()
         :param triple_state: bool()
-        :param curseur: Cur().%nomCurseur()
-        :param bg: Rgb().%nomCouleur()
-        :param bg_hover: Rgb().%nomCouleur()
-        :param bg_checked: Rgb().%nomCouleur()
-        :param bg_checked_hover: Rgb().%nomCouleur()
-        :param bg_indeterminate: Rgb().%nomCouleur()
-        :param bg_indeterminate_hover: Rgb().%nomCouleur()
-        :param fg: Rgb().%nomCouleur()
-        :param fg_hover: Rgb().%nomCouleur()
-        :param fg_checked: Rgb().%nomCouleur()
-        :param fg_checked_hover: Rgb().%nomCouleur()
-        :param fg_indeterminate: Rgb().%nomCouleur()
-        :param fg_indeterminate_hover: Rgb().%nomCouleur()
+        :param curseur: *Cur
+        :param bg: *Rgb
+        :param bg_hover: *Rgb
+        :param bg_checked: *Rgb
+        :param bg_checked_hover: *Rgb
+        :param bg_indeterminate: *Rgb
+        :param bg_indeterminate_hover: *Rgb
+        :param fg: *Rgb
+        :param fg_hover: *Rgb
+        :param fg_checked: *Rgb
+        :param fg_checked_hover: *Rgb
+        :param fg_indeterminate: *Rgb
+        :param fg_indeterminate_hover: *Rgb
         :param spacing: int()
-        :param img_uncheck: Img().%nomImage()
-        :param img_uncheck_hover: Img().%nomImage()
-        :param img_check: Img().%nomImage()
-        :param img_check_hover: Img().%nomImage()
-        :param img_indeterminate: Img().%nomImage()
-        :param img_indeterminate_hover: Img().%nomImage()
-        :param img_uncheck_rgb:  Rgb().%nomCouleur()
-        :param img_uncheck_hover_rgb:  Rgb().%nomCouleur()
-        :param img_check_rgb:  Rgb().%nomCouleur()
-        :param img_check_hover_rgb:  Rgb().%nomCouleur()
-        :param img_indeterminate_rgb:  Rgb().%nomCouleur()
-        :param img_indeterminate_hover_rgb:  Rgb().%nomCouleur()
+        :param img_uncheck: *Img
+        :param img_uncheck_hover: *Img
+        :param img_check: *Img
+        :param img_check_hover: *Img
+        :param img_indeterminate: *Img
+        :param img_indeterminate_hover: *Img
+        :param img_uncheck_rgb: *Rgb
+        :param img_uncheck_hover_rgb: *Rgb
+        :param img_check_rgb: *Rgb
+        :param img_check_hover_rgb: *Rgb
+        :param img_indeterminate_rgb: *Rgb
+        :param img_indeterminate_hover_rgb: *Rgb
         :param img_width: int()
         :param img_height: int()
-        :param img_margin: tuple(int(), int(), int(), int())
-        :param border: tuple(int(), int(), int(), int())
-        :param border_style: str()  # dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none
-        :param border_rgb:  Rgb().%nomCouleur()
-        :param border_hover: tuple(int(), int(), int(), int())
-        :param border_hover_style: str()  # dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none
-        :param border_hover_rgb:  Rgb().%nomCouleur()
-        :param border_checked: tuple(int(), int(), int(), int())
-        :param border_checked_style: str()  # dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none
-        :param border_checked_rgb:  Rgb().%nomCouleur()
-        :param border_checked_hover: tuple(int(), int(), int(), int())
-        :param border_checked_hover_style: str()  # dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none
-        :param border_checked_hover_rgb:  Rgb().%nomCouleur()
-        :param border_indeterminate: tuple(int(), int(), int(), int())
-        :param border_indeterminate_style: str()  # dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none
-        :param border_indeterminate_rgb:  Rgb().%nomCouleur()
-        :param border_indeterminate_hover: tuple(int(), int(), int(), int())
-        :param border_indeterminate_hover_style: str()  # dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none
-        :param border_indeterminate_hover_rgb:  Rgb().%nomCouleur()
-        :param radius: tuple(int(), int(), int(), int())
+        :param img_margin: *Tuple
+        :param border:
+        :param border_style:
+        :param border_rgb:
+        :param border_hover:
+        :param border_hover_style:
+        :param border_hover_rgb:
+        :param border_checked:
+        :param border_checked_style:
+        :param border_checked_rgb:
+        :param border_checked_hover:
+        :param border_checked_hover_style:
+        :param border_checked_hover_rgb:
+        :param border_indeterminate:
+        :param border_indeterminate_style:
+        :param border_indeterminate_rgb:
+        :param border_indeterminate_hover:
+        :param border_indeterminate_hover_style:
+        :param border_indeterminate_hover_rgb:
+        :param radius:
         """
 
         style = f"""
