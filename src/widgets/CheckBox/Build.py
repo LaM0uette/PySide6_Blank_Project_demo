@@ -15,6 +15,10 @@ class Build:
             font = vb_wg.FONT,
             font_size = vb_wg.FONT_SIZE,
 
+            # Arguments
+            auto_exclusive=False,
+            triple_state=False,
+
             # Curseur
             curseur=vb_wg.CUR,
 
@@ -151,6 +155,9 @@ class Build:
 
             # Police
             Functions().SET_FONT(wg, font=font, font_size=font_size)
+
+            wg.setAutoExclusive(auto_exclusive)
+            wg.setTristate(triple_state)
 
             # Curseur
             wg.setCursor(Functions().SET_CURSOR(curseur))
