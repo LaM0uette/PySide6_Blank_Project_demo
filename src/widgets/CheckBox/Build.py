@@ -97,26 +97,26 @@ class Build:
         :param font_size: int()
         :param auto_exclusive: bool()
         :param triple_state: bool()
-        :param curseur: Cur().%nomDuCurseur()
-        :param bg: Rgb().%couleur()
-        :param bg_hover: Rgb().%couleur()
-        :param bg_checked: Rgb().%couleur()
-        :param bg_checked_hover: Rgb().%couleur()
-        :param bg_indeterminate: Rgb().%couleur()
-        :param bg_indeterminate_hover: Rgb().%couleur()
-        :param fg: Rgb().%couleur()
-        :param fg_hover: Rgb().%couleur()
-        :param fg_checked: Rgb().%couleur()
-        :param fg_checked_hover: Rgb().%couleur()
-        :param fg_indeterminate: Rgb().%couleur()
-        :param fg_indeterminate_hover: Rgb().%couleur()
-        :param spacing:
-        :param img_uncheck:
-        :param img_uncheck_hover:
-        :param img_check:
-        :param img_check_hover:
-        :param img_indeterminate:
-        :param img_indeterminate_hover:
+        :param curseur: Cur().%nomCurseur()
+        :param bg: Rgb().%nomCouleur()
+        :param bg_hover: Rgb().%nomCouleur()
+        :param bg_checked: Rgb().%nomCouleur()
+        :param bg_checked_hover: Rgb().%nomCouleur()
+        :param bg_indeterminate: Rgb().%nomCouleur()
+        :param bg_indeterminate_hover: Rgb().%nomCouleur()
+        :param fg: Rgb().%nomCouleur()
+        :param fg_hover: Rgb().%nomCouleur()
+        :param fg_checked: Rgb().%nomCouleur()
+        :param fg_checked_hover: Rgb().%nomCouleur()
+        :param fg_indeterminate: Rgb().%nomCouleur()
+        :param fg_indeterminate_hover: Rgb().%nomCouleur()
+        :param spacing: int()
+        :param img_uncheck: Img().%nomImage()
+        :param img_uncheck_hover: Img().%nomImage()
+        :param img_check: Img().%nomImage()
+        :param img_check_hover: Img().%nomImage()
+        :param img_indeterminate: Img().%nomImage()
+        :param img_indeterminate_hover: Img().%nomImage()
         :param img_uncheck_rgb:
         :param img_uncheck_hover_rgb:
         :param img_check_rgb:
