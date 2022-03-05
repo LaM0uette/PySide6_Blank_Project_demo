@@ -17,7 +17,7 @@ class Build:
 
             # Arguments
             auto_exclusive=False,
-            triple_state=True,
+            triple_state=False,
 
             # Curseur
             curseur=vb_wg.CUR,
