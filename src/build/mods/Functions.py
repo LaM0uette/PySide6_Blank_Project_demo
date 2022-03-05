@@ -5,6 +5,8 @@ from src.config import config
 
 class Functions:
 
+    def SET_CURSOR(self, cur):
+        return QtGui.QCursor(QtGui.QPixmap(cur[0]), cur[1], cur[2])
     def SET_DIM(self, *args, width=None, height=None):
         for wg in args:
             if width is not None: wg.setFixedWidth(width)

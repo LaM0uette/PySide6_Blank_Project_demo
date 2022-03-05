@@ -68,7 +68,6 @@ class main(Ui_main, QtWidgets.QWidget):
     def IN_WG(self):
         ### Base ###
         self.setCursor(Cur().souris())
-        print(Cur().ibeam())
 
 
         ### Icone de l'app ###

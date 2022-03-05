@@ -35,3 +35,5 @@ class Cur:
     def souris(self): return self.CUR(img="souris", xy=self._souris)
     def souris_main(self): return self.CUR(img="souris_main", xy=self._souris)
     def souris_non(self): return self.CUR(img="souris_non", xy=self._souris)
+
+    def yy(self): return [f"src/assets/cursor/{config.cur}/{'souris_main'}.cur", 8, 0]
