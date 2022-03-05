@@ -29,5 +29,7 @@ class Base:
             fg_checked=fg,
             fg_indeterminate=fg,
             fg_indeterminate_hover=Rgb().th2(),
+            img_indeterminate_rgb="th3",
+            img_indeterminate_hover_rgb="th2",
             img_margin=self.margin,
         )
