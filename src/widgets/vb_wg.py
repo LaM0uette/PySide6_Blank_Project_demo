@@ -78,12 +78,12 @@ GRIDLINE = Rgb().th2()
 ##     IMAGES     ##
 ####################
     # Check
-IMG_UNCHECK = Img().check()
-IMG_UNCHECK_HOVER = Img().check()
-IMG_CHECK = Img().valider()
-IMG_CHECK_HOVER = Img().valider()
-IMG_INDETERMINATE = Img().check()
-IMG_INDETERMINATE_HOVER = Img().check()
+IMG_UNCHECK = Img().check0()
+IMG_UNCHECK_HOVER = Img().check0()
+IMG_CHECK = Img().check2()
+IMG_CHECK_HOVER = Img().check2()
+IMG_INDETERMINATE = Img().check0()
+IMG_INDETERMINATE_HOVER = Img().check0()
 IMG_UNROLL = Img().fleche_bottom()
 IMG_UNROLL_HOVER = Img().fleche_bottom()
     # Check RGB
