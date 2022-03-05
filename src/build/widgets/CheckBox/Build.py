@@ -1,7 +1,7 @@
 from src import *
 
 
-class Style:
+class Build:
     def __init__(
             self,
             *wgs,
