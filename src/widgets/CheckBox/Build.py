@@ -90,17 +90,19 @@ class Build:
             radius=vb_wg.RADIUS
     ):
         """
-        *Border_Style: dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
-        *Cur: Cur().%nomCurseur() \n
-        *Img: Img().%nomImage() \n
-        *Rgb: Rgb().%nomCouleur() \n
-        *Tuple: (int(), int(), int(), int()) == (Top, Bottom, Right, Left) \n
+        *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
+        *Cur: list() : Cur().%nomCurseur() \n
+        *Dim: int() : Dim().%nomDim() \n
+        *Font: int() : Font().%nomFont() \n
+        *Img: str() : Img().%nomImage() \n
+        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
-        :param width: int()
-        :param height: int()
+        :param width: *Dim
+        :param height: *Dim
         :param font: str()
-        :param font_size: int()
+        :param font_size: *Font
         :param auto_exclusive: bool()
         :param triple_state: bool()
         :param curseur: *Cur
@@ -129,8 +131,8 @@ class Build:
         :param img_check_hover_rgb: *Rgb
         :param img_indeterminate_rgb: *Rgb
         :param img_indeterminate_hover_rgb: *Rgb
-        :param img_width: int()
-        :param img_height: int()
+        :param img_width: *Dim
+        :param img_height: *Dim
         :param img_margin: *Tuple
         :param border: *Tuple
         :param border_style: *Border_Style
