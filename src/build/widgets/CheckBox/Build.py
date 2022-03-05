@@ -7,15 +7,15 @@ class Style:
             *wgs,
 
             # Dimensions
-            width = vb_wg.WG_WIDTH,
-            height = vb_wg.WG_HEIGHT,
+            width = vb_wg.WIDTH,
+            height = vb_wg.HEIGHT,
 
             # Police
             font = vb_wg.FONT,
             font_size = vb_wg.FONT_SIZE,
 
             # Curseur
-            curseur=Cur().souris_main(),
+            curseur=Cur().main(),
 
 
             # Couleurs BG
