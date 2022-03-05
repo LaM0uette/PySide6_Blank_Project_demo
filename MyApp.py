@@ -63,8 +63,8 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setupUi(self)
     def IN_CLASSE(self):
         ## QCheckBox ###
-        CheckBox.Base(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3).th()
-        CheckBox.Base(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3).tr()
+        CheckBox.Demo(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3).th()
+        CheckBox.Demo(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3).tr()
         ## /QCheckBox ###
     def IN_WG(self):
         ### Base ###
