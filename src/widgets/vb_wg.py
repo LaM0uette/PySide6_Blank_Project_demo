@@ -17,6 +17,20 @@ FONT_SIZE = Font().h4()
 FONT_SIZE_HD = Font().h3()
 
 
+########################
+##     PARAMETRES     ##
+########################
+EDIT = False
+NO_FOCUS = False
+SB_BUTTONS_TYPE = SpinButton().plus_minus()
+TEXT_VISIBLE = True
+VAL_MIN = 0
+VAL_MAX = 100
+VAL_STEP = 1
+SELECTION_BEHAVIOR = SelectionBehavior().row()
+WORD_WRAP = True
+
+
 #####################
 ##     CURSEUR     ##
 #####################

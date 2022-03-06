@@ -6,12 +6,19 @@ class Build:
     def __init__(
             self,
             *wgs,
+
+            # Dimensions
             width=vb_wg.WIDTH,
             height=vb_wg.HEIGHT,
+
+            # Police
             font=vb_wg.FONT,
             font_size=vb_wg.FONT_SIZE,
+
+            # Paramètres
             edit=vb_wg.EDIT,
             curseur=vb_wg.CUR_MAIN,
+
             # Couleurs BG
             bg=vb_wg.BG,
             bg_hover=vb_wg.BG_HOVER,
