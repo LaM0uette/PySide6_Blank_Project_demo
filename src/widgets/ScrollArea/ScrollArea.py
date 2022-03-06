@@ -6,17 +6,21 @@ from src.widgets.ScrollArea.Build import Build
 ##################
 ##     BASE     ##
 ##################
-class Base_th(Style):
+class Base:
     def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
+        self.wgs = wgs
+
+    def th(self):
+        Build(
+            *self.wgs,
         )
-class Base_tr(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            bg=Rgb().tr()
+    def tr(self, bg=Rgb().tr()):
+        Build(
+            *self.wgs,
+
+            bg=bg,
         )
+
 
 
 ##################
