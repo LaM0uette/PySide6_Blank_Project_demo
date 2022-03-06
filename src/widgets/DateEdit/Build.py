@@ -25,6 +25,7 @@ class Build:
             align_vertical=Align().center_vertical(),
             button_symbols=vb_wg.BUTTON_SYMBOLS,
             calendar_popup=True,
+            focus_policy=vb_wg.FOCUS_POLICY,
 
             # Curseur
             curseur=Cur().souris_main(),
@@ -86,9 +87,10 @@ class Build:
     ):
         """
         *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
-        *ButtonSymbols: QtWidgets.QAbstractSpinBox | ButtonSymbols().%nomBoutons() \n
+        *ButtonSymbols: QtWidgets.QAbstractSpinBox : ButtonSymbols().%nomBoutons() \n
         *Cur: list() : Cur().%nomCurseur() \n
         *Dim: int() : Dim().%nomDim() \n
+        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
         *Font: int() : Font().%nomFont() \n
         *Img: str() : Img().%nomImage() \n
         *Rgb: tuple() : Rgb().%nomCouleur() \n
@@ -103,6 +105,7 @@ class Build:
         :param align_vertical: bool()
         :param button_symbols: *ButtonSymbols
         :param calendar_popup: bool()
+        :param focus_policy: *FocusPolicy
         :param curseur: *Cur
         :param bg: *Rgb
         :param bg_hover: *Rgb
@@ -286,12 +289,12 @@ class Build:
             wg.setAlignment(align_horizontal | align_vertical)
             wg.setButtonSymbols(button_symbols)
             wg.setCalendarPopup(calendar_popup)
+            wg.setFocusPolicy(focus_policy)
 
             dateDuJour = datetime.datetime.now().strftime("%Y_%m_%d").split("_")
             QdateDuJour = QtCore.QDate(int(dateDuJour[0]), int(dateDuJour[1]), int(dateDuJour[2]))
             wg.setDateTime(QtCore.QDateTime(QdateDuJour, QtCore.QTime(0, 0, 0)))
             wg.setDate(QdateDuJour)
-            wg.setFocusPolicy(QtCore.Qt.NoFocus)
 
             # Curseur
             wg.setCursor(Functions().SET_CURSOR(curseur))

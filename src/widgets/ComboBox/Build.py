@@ -17,6 +17,7 @@ class Build:
 
             # Paramètres
             edit=vb_wg.EDIT,
+            focus_policy=vb_wg.FOCUS_POLICY,
             max_visible_items=vb_wg.MAX_VISIBLE_ITEMS,
             insert_policy=vb_wg.INSERT_POLICY,
             curseur=vb_wg.CUR_MAIN,
@@ -72,6 +73,7 @@ class Build:
         *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
         *Cur: list() : Cur().%nomCurseur() \n
         *Dim: int() : Dim().%nomDim() \n
+        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
         *Font: int() : Font().%nomFont() \n
         *Img: str() : Img().%nomImage() \n
         *InsertPolicy: QtWidgets.QComboBox.%policy : InsertPolicy().%nomPolicy() \n
@@ -84,6 +86,7 @@ class Build:
         :param font: str()
         :param font_size: *Font
         :param edit: bool()
+        :param focus_policy: *FocusPolicy
         :param setMaxVisibleItems: int()
         :param setInsertPolicy: *InsertPolicy
         :param curseur: *Cur
@@ -221,6 +224,7 @@ class Build:
 
             # Paramètres
             wg.setEditable(edit)
+            wg.setFocusPolicy(focus_policy)
             wg.setMaxVisibleItems(max_visible_items)
             wg.setInsertPolicy(insert_policy)
 

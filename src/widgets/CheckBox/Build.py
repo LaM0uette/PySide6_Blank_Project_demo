@@ -17,6 +17,7 @@ class Build:
 
             # Paramètres
             auto_exclusive=False,
+            focus_policy=vb_wg.FOCUS_POLICY,
             triple_state=False,
 
             # Curseur
@@ -93,6 +94,7 @@ class Build:
         *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
         *Cur: list() : Cur().%nomCurseur() \n
         *Dim: int() : Dim().%nomDim() \n
+        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
         *Font: int() : Font().%nomFont() \n
         *Img: str() : Img().%nomImage() \n
         *Rgb: tuple() : Rgb().%nomCouleur() \n
@@ -104,6 +106,7 @@ class Build:
         :param font: str()
         :param font_size: *Font
         :param auto_exclusive: bool()
+        :param focus_policy: *FocusPolicy
         :param triple_state: bool()
         :param curseur: *Cur
         :param bg: *Rgb
@@ -263,8 +266,11 @@ class Build:
             # Police
             Functions().SET_FONT(wg, font=font, font_size=font_size)
 
+            # Paramètres
             wg.setAutoExclusive(auto_exclusive)
+            wg.setFocusPolicy(focus_policy)
             wg.setTristate(triple_state)
+
 
             # Curseur
             wg.setCursor(Functions().SET_CURSOR(curseur))
