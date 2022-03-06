@@ -1,4 +1,5 @@
 from src.build.mods import Functions
+from src.lib.palettes import *
 from src.widgets import vb_wg
 
 
@@ -6,13 +7,20 @@ class Build:
     def __init__(
             self,
             *wgs,
+
+            # Dimensions
             width=vb_wg.WIDTH,
             height=vb_wg.HEIGHT,
+
+            # Police
             font=vb_wg.FONT,
             font_size=vb_wg.FONT_SIZE,
-            align_horizontal=Align().h_center(),
-            align_vertical=Align().v_center(),
+
+            # Paramètres
+            align_horizontal=Align().center_horizontal(),
+            align_vertical=Align().center_vertical(),
             curseur=Cur().souris_main(),
+
             # Couleurs BG
             bg=vb_wg.BG,
             bg_hover=vb_wg.BG_HOVER,
@@ -31,6 +39,7 @@ class Build:
             fg_header=Rgb().th1(),
             fg_header_hover=Rgb().bn1(),
             fg_mois=Rgb().th1(),
+
             # Images
             img=vb_wg.IMG_UNROLL,
             img_hover=vb_wg.IMG_UNROLL_HOVER,
@@ -46,6 +55,7 @@ class Build:
             img_height=vb_wg.img_height,
             # Images positions
             img_margin=((0,) * 4),
+
             # Bordures
             border=vb_wg.BORDER_WIDTH,
             border_style=vb_wg.BORDER_STYLE,
@@ -55,9 +65,10 @@ class Build:
             border_hover_style=vb_wg.BORDER_STYLE,
             border_hover_rgb=vb_wg.BORDER_RGB,
             # Bordures jours
-            border_day_size=StyleBase().bd(),
+            border_day_size=StyleBase().border(),
             border_day_style=vb_wg.BORDER_STYLE,
             border_day_rgb=vb_wg.FG_ITEM_HOVER,
+
             # Rayons
             radius=vb_wg.RADIUS,
     ):
