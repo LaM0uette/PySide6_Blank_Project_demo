@@ -1,3 +1,7 @@
+import datetime
+
+from PySide6 import QtCore
+
 from src.build.mods import Functions
 from src.lib.palettes import *
 from src.widgets import vb_wg
@@ -193,20 +197,26 @@ class Build:
                 }}"""
 
         for wg in wgs:
-            wg.setStyleSheet(style)
+            # Dimensions
+            Functions().SET_DIM(wg, width=width, height=height)
+
+            # Police
+            Functions().SET_FONT(wg, font=font, font_size=font_size)
+
+            # Paramètres
+            wg.setAlignment(align_horizontal | align_vertical)
 
             wg.setCalendarPopup(True)
-            dateDuJour = vrb.DATE_NOW_FORMAT.split("_")
-            QdateDuJour = QtCore.QDate(int(dateDuJour[2]), int(dateDuJour[1]), int(dateDuJour[0]))
+            dateDuJour = datetime.datetime.now().strftime("%Y_%m_%d").split("_")
+            QdateDuJour = QtCore.QDate(int(dateDuJour[0]), int(dateDuJour[1]), int(dateDuJour[2]))
             wg.setDateTime(QtCore.QDateTime(QdateDuJour, QtCore.QTime(0, 0, 0)))
             wg.setDate(QdateDuJour)
             wg.setFocusPolicy(QtCore.Qt.NoFocus)
 
-            Fct(wg=wg, w=width, h=height).DIM()
-            wg.setFont(Fct(font=font, font_size=font_size).FONT())
+            # Curseur
+            wg.setCursor(Functions().SET_CURSOR(curseur))
+            wg.lineEdit().setCursor(Functions().SET_CURSOR(vb_wg.CUR_LE))
+            wg.calendarWidget().setCursor(Functions().SET_CURSOR(vb_wg.CUR_VIEW))
 
-            wg.setAlignment(align_horizontal | align_vertical)
-
-            wg.setCursor(Fct(cur=curseur).CUR())
-            wg.lineEdit().setCursor(Fct(cur=Cur().IBeam()).CUR())
-            wg.calendarWidget().setCursor(Fct(cur=Cur().souris_main()).CUR())
+            # Style
+            wg.setStyleSheet(style)
