@@ -41,6 +41,11 @@ class Build:
             fg=vb_wg.FG,
             fg_hover=vb_wg.FG_HOVER,
 
+            # Images
+            img=vb_wg.IMG_UNROLL,
+            # Images RGB
+            img_rgb=vb_wg.IMG_UNROLL_RGB,
+
             # Positions WG
             margin=(0,) * 4,
             padding=(0,) * 4,
@@ -113,7 +118,7 @@ class Build:
             wg.setIndent(indent)
             wg.setLineWidth(line_width)
             wg.setOpenExternalLinks(open_external_link)
-            wg.setPixmap(QtGui.QPixmap(f"{Img().main()}th3.svg"))
+            wg.setPixmap(QtGui.QPixmap(f"{img}{img_rgb}.svg"))
             wg.setScaledContents(scaled_contents)
             wg.setTextFormat(text_format)
             wg.setWordWrap(word_wrap)
