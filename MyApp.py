@@ -73,6 +73,12 @@ class main(Ui_main, QtWidgets.QWidget):
         ### /QComboBox ###
 
 
+        ### QDateEdit ###
+        DateEdit.Base(self.de_demo_th).th()
+        DateEdit.Base(self.de_demo_tr).tr()
+        ### /QDateEdit ###
+
+
         ## QRadioButton ###
         RadioButton.Base(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3).th()
         RadioButton.Base(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3).tr()
