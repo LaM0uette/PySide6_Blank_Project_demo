@@ -18,6 +18,7 @@ class Build:
             # Paramètres
             edit=vb_wg.EDIT,
             focus_policy=vb_wg.FOCUS_POLICY,
+            set_frame=False,
             max_visible_items=vb_wg.MAX_VISIBLE_ITEMS,
             insert_policy=vb_wg.INSERT_POLICY,
             curseur=vb_wg.CUR_MAIN,
@@ -87,6 +88,7 @@ class Build:
         :param font_size: *Font
         :param edit: bool()
         :param focus_policy: *FocusPolicy
+        :param set_frame: bool()
         :param setMaxVisibleItems: int()
         :param setInsertPolicy: *InsertPolicy
         :param curseur: *Cur
@@ -225,6 +227,7 @@ class Build:
             # Paramètres
             wg.setEditable(edit)
             wg.setFocusPolicy(focus_policy)
+            wg.setFrame(set_frame)
             wg.setMaxVisibleItems(max_visible_items)
             wg.setInsertPolicy(insert_policy)
 
