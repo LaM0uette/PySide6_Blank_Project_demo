@@ -18,6 +18,7 @@ class Build:
             # Paramètres
             edit=vb_wg.EDIT,
             curseur=vb_wg.CUR_MAIN,
+            curseur_view=vb_wg.CUR_VIEW,
 
             # Couleurs BG
             bg=vb_wg.BG,
@@ -81,6 +82,7 @@ class Build:
         :param font_size: *Font
         :param edit: bool()
         :param curseur: *Cur
+        :param curseur_view: *Cur
         :param bg: *Rgb
         :param bg_hover: *Rgb
         :param bg_selection: *Rgb
@@ -206,15 +208,21 @@ class Build:
                 border: none;
                 }}"""
         for wg in wgs:
-            wg.setStyleSheet(style)
+            # Dimensions
+            Functions().SET_DIM(wg, width=width, height=height)
 
-            Fct(wg=wg, w=width, h=height).DIM()
-            wg.setFont(Fct(font=font, font_size=font_size).FONT())
+            # Police
+            Functions().SET_FONT(wg, font=font, font_size=font_size)
 
+            # Paramètres
             wg.setEditable(edit)
-
-            wg.setCursor(Fct(cur=curseur).CUR())
-            wg.view().setCursor(Fct(cur=Cur().souris_main()).CUR())
             if edit:
-                wg.lineEdit().setFont(Fct(font_size=font_size).FONT())
-                wg.lineEdit().setCursor(Fct(cur=Cur().IBeam()).CUR())
+                wg.lineEdit().SET_FONT(wg, font=font, font_size=font_size)
+                wg.lineEdit().setCursor(Functions().SET_CURSOR(vb_wg.CUR_LE()))
+
+            # Curseur
+            wg.setCursor(Functions().SET_CURSOR(curseur))
+            wg.view().setCursor(Functions().SET_CURSOR(curseur_view))
+
+            # Style
+            wg.setStyleSheet(style)

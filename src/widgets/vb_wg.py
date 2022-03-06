@@ -36,6 +36,7 @@ WORD_WRAP = True
 #####################
 CUR = Cur().souris()
 CUR_MAIN = Cur().main()
+CUR_VIEW = Cur().souris_main()
 CUR_LE = Cur().ibeam()
 
 
