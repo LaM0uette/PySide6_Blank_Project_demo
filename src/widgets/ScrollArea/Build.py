@@ -1,5 +1,4 @@
 from src.build.mods import Functions
-from src.lib.palettes import *
 from src.widgets import vb_wg
 
 
@@ -7,33 +6,84 @@ class Build:
     def __init__(
             self,
             *wgs,
-            width=VBase.WIDTH,
-            height=VBase.HEIGHT,
-            scroll_h=VBase.SCROLL_H,
-            scroll_v=VBase.SCROLL_V,
+
+            # Dimensions
+            width=vb_wg.WIDTH,
+            height=vb_wg.HEIGHT,
+
+            # Paramètres
+            focus_policy=vb_wg.FOCUS_POLICY,
+            frame_shape=vb_wg.FRAME_SHAPE,
+            frame_shadow=vb_wg.FRAME_SHADOW,
+            line_width=0,
+            scroll_h=vb_wg.SCROLL_H,
+            scroll_v=vb_wg.SCROLL_V,
+
             # Couleurs BG
-            bg=VBase.BG,
+            bg=vb_wg.BG,
+
             # Bordures
-            border=VBase.WG_BORDER_WIDTH,
-            border_style=VBase.WG_BORDER_STYLE,
-            border_rgb=VBase.WG_BORDER_RGB,
+            border=vb_wg.BORDER_WIDTH,
+            border_style=vb_wg.BORDER_STYLE,
+            border_rgb=vb_wg.BORDER_RGB,
             # Bordures hover
-            border_hover=VBase.WG_BORDER_WIDTH,
-            border_hover_style=VBase.WG_BORDER_STYLE,
-            border_hover_rgb=VBase.WG_BORDER_RGB,
+            border_hover=vb_wg.BORDER_WIDTH,
+            border_hover_style=vb_wg.BORDER_STYLE,
+            border_hover_rgb=vb_wg.BORDER_RGB,
+
             # Rayons
-            radius=VBase.WG_RADIUS,
+            radius=vb_wg.RADIUS,
+
             # Scroll
-            scroll_bg=VBase.SCROLL_BG,
-            scroll_width=VBase.SCROLL_WIDTH,
-            scroll_height=VBase.SCROLL_HEIGHT,
-            scroll_handle_bg=VBase.SCROLL_HANDLE_BG,
-            scroll_handle_bg_hover=VBase.SCROLL_HANDLE_BG_HOVER,
-            scroll_handle_fg=VBase.SCROLL_HANDLE_FG,
-            scroll_handle_fg_hover=VBase.SCROLL_HANDLE_FG_HOVER,
-            scroll_handle_min_width=VBase.SCROLL_HANDLE_MIN_WIDTH,
-            scroll_handle_min_height=VBase.SCROLL_HANDLE_MIN_HEIGHT,
+            scroll_bg=vb_wg.SCROLL_BG,
+            scroll_width=vb_wg.SCROLL_WIDTH,
+            scroll_height=vb_wg.SCROLL_HEIGHT,
+            scroll_handle_bg=vb_wg.SCROLL_HANDLE_BG,
+            scroll_handle_bg_hover=vb_wg.SCROLL_HANDLE_BG_HOVER,
+            scroll_handle_fg=vb_wg.SCROLL_HANDLE_FG,
+            scroll_handle_fg_hover=vb_wg.SCROLL_HANDLE_FG_HOVER,
+            scroll_handle_min_width=vb_wg.SCROLL_HANDLE_MIN_WIDTH,
+            scroll_handle_min_height=vb_wg.SCROLL_HANDLE_MIN_HEIGHT,
     ):
+        """
+        *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
+        *Dim: int() : Dim().%nomDim() \n
+        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
+        *Font: int() : Font().%nomFont() \n
+        *Img: str() : Img().%nomImage() \n
+        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *FrameShape: QtWidgets.QFrame : FrameShape().%nomFrameForme \n
+        *FrameShadow: QtWidgets.QFrame : FrameShadow().%nomFrameOmbre \n
+        *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
+
+        :param wgs: Widgets séparés par ","
+        :param width: *Dim
+        :param height: *Dim
+        :param focus_policy: *FocusPolicy
+        :param frame_shape: *FrameShape
+        :param frame_shadow: *FrameShape
+        :param line_width: int()
+        :param scroll_h: bool()
+        :param scroll_v: bool()
+        :param bg: *Rgb
+        :param border: *Tuple
+        :param border_style: *Border_Style
+        :param border_rgb: *Rgb
+        :param border_hover: *Tuple
+        :param border_hover_style: *Border_Style
+        :param border_hover_rgb: *Rgb
+        :param radius: *Tuple
+        :param scroll_bg: *Rgb
+        :param scroll_width: *Dim
+        :param scroll_height: *Dim
+        :param scroll_handle_bg: *Rgb
+        :param scroll_handle_bg_hover: *Rgb
+        :param scroll_handle_fg: *Rgb
+        :param scroll_handle_fg_hover: *Rgb
+        :param scroll_handle_min_width: *Dim
+        :param scroll_handle_min_height: *Dim
+        """
+
         style = f"""
                 /* SCROLLAREA */
                 .QScrollArea .QWidget {{
@@ -89,13 +139,17 @@ class Build:
                 background-color: rgba{scroll_handle_bg_hover};
                 border: none;
                 }}"""
-
         for wg in wgs:
-            wg.setStyleSheet(style)
+            # Dimensions
+            Functions().SET_DIM(wg, width=width, height=height)
 
-            Fct(wg=wg, w=width, h=height).DIM()
-
+            # Paramètres
+            wg.setFocusPolicy(focus_policy)
+            wg.setFrameShape(frame_shape)
+            wg.setFrameShadow(frame_shadow)
+            wg.setLineWidth(line_width)
             wg.setHorizontalScrollBarPolicy(scroll_h)
             wg.setVerticalScrollBarPolicy(scroll_v)
 
-            wg.setFrameShape(QtWidgets.QFrame.NoFrame)
+            # Style
+            wg.setStyleSheet(style)

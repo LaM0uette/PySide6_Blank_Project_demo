@@ -1,9 +1,6 @@
-from PySide6 import QtWidgets
-
-from src.build import *
-from src.build.widgets import VBase
-
-
+from src.lib.palettes import *
+from src.widgets import vb_wg
+from src.widgets.ScrollArea.Build import Build
 
 
 ##################
