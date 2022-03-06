@@ -11,12 +11,18 @@ class Build:
     def __init__(
             self,
             *wgs,
+
+            # Dimensions
             width=vb_wg.WIDTH,
             height=vb_wg.HEIGHT,
-            ombre_portee=False,
+
+            # Paramètres
+            shadow=None,
             curseur=Cur().souris(),
+
             # Couleurs BG
             bg=vb_wg.BG,
+
             # Bordures
             border=vb_wg.BORDER_WIDTH,
             border_style=vb_wg.BORDER_STYLE,
@@ -25,8 +31,9 @@ class Build:
             border_hover=vb_wg.BORDER_WIDTH,
             border_hover_style=vb_wg.BORDER_STYLE,
             border_hover_rgb=vb_wg.BORDER_RGB,
+
             # Rayons
-            radius=(0, 0, 0, 0),
+            radius=vb_wg.RADIUS,
     ):
         style = f"""
                 /* FRAME */
@@ -57,15 +64,14 @@ class Build:
                 }}"""
 
         for wg in wgs:
+            # Dimensions
+            Functions().SET_DIM(wg, width=width, height=height)
+
+            # Paramètres
+            if shadow is not None: wg.setGraphicsEffect(shadow)
+
+            # Curseur
+            wg.setCursor(Functions().SET_CURSOR(curseur))
+
+            # Style
             wg.setStyleSheet(style)
-
-            Fct(wg=wg, w=width, h=height).DIM()
-
-            if ombre_portee:
-                self.shadow = QtWidgets.QGraphicsDropShadowEffect(wg)
-                self.shadow.setBlurRadius(12)
-                self.shadow.setColor(QtGui.QColor(0, 0, 0, 130))
-                self.shadow.setOffset(0, 0)
-                wg.setGraphicsEffect(self.shadow)
-
-            wg.setCursor(Fct(cur=curseur).CUR())
