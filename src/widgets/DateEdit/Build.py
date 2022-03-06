@@ -72,6 +72,10 @@ class Build:
             border_day_size=(StyleBase().border(), )*4,
             border_day_style=vb_wg.BORDER_STYLE,
             border_day_rgb=vb_wg.FG_HOVER,
+            # Bordures mois
+            border_month_size=(0, StyleBase().border(), 0, 0),
+            border_month_style=vb_wg.BORDER_STYLE,
+            border_month_rgb=vb_wg.FG_HOVER,
 
             # Rayons
             radius=vb_wg.RADIUS,
@@ -163,6 +167,14 @@ class Build:
                 selection-color: rgba{bg_item};
                 }}
                 QCalendarWidget QWidget::item:hover, QCalendarWidget QWidget::item:selected {{
+                background-color: rgba{bg_item_hover};
+                color: rgba{fg_item_hover};
+                border-top: {border_month_size[0]}px {border_month_style} rgba{border_month_rgb};
+                border-bottom: {border_month_size[1]}px {border_month_style} rgba{border_month_rgb};
+                border-right: {border_month_size[2]}px {border_month_style} rgba{border_month_rgb};
+                border-left: {border_month_size[3]}px {border_month_style} rgba{border_month_rgb};
+                }}
+                QCalendarWidget QAbstractItemView::item:hover, QCalendarWidget QAbstractItemView::item:selected {{
                 background-color: rgba{bg_item_hover};
                 color: rgba{fg_item_hover};
                 border-top: {border_day_size[0]}px {border_day_style} rgba{border_day_rgb};
