@@ -23,6 +23,8 @@ class Build:
             # Paramètres
             align_horizontal=Align().center_horizontal(),
             align_vertical=Align().center_vertical(),
+
+            # Curseur
             curseur=Cur().souris_main(),
 
             # Couleurs BG
@@ -80,6 +82,65 @@ class Build:
             # Rayons
             radius=vb_wg.RADIUS,
     ):
+        """
+        *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
+        *Cur: list() : Cur().%nomCurseur() \n
+        *Dim: int() : Dim().%nomDim() \n
+        *Font: int() : Font().%nomFont() \n
+        *Img: str() : Img().%nomImage() \n
+        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
+
+        :param wgs: Widgets séparés par ","
+        :param width: *Dim
+        :param height: *Dim
+        :param font: str()
+        :param font_size: *Font
+        :param align_horizontal: bool()
+        :param align_vertical: bool()
+        :param curseur: *Cur
+        :param bg: *Rgb
+        :param bg_hover: *Rgb
+        :param bg_selection: *Rgb
+        :param bg_item: *Rgb
+        :param bg_item_hover: *Rgb
+        :param bg_header: *Rgb
+        :param bg_header_hover: *Rgb
+        :param bg_mois: *Rgb
+        :param fg: *Rgb
+        :param fg_hover: *Rgb
+        :param fg_selection: *Rgb
+        :param fg_item: *Rgb
+        :param fg_item_hover: *Rgb
+        :param fg_header: *Rgb
+        :param fg_header_hover: *Rgb
+        :param fg_mois: *Rgb
+        :param img: *Img
+        :param img_hover: *Img
+        :param img_right: *Img
+        :param img_left: *Img
+        :param img_rgb: *Rgb
+        :param img_hover_rgb: *Rgb
+        :param img_right_rgb: *Rgb
+        :param img_left_rgb: *Rgb
+        :param img_width: *Dim
+        :param img_height: *Dim
+        :param img_margin: *Tuple
+        :param border: *Tuple
+        :param border_style: *Border_Style
+        :param border_rgb: *Rgb
+        :param border_hover: *Tuple
+        :param border_hover_style: *Border_Style
+        :param border_hover_rgb: *Rgb
+        :param border_day_size: *Tuple
+        :param border_day_style: *Border_Style
+        :param border_day_rgb: *Rgb
+        :param border_month_size: *Tuple
+        :param border_month_style: *Border_Style
+        :param border_month_rgb: *Rgb
+        :param radius: *Tuple
+        """
+
         style = f"""
                 /* WIDGET */
                 QDateEdit {{
@@ -209,7 +270,6 @@ class Build:
                 border-bottom-right-radius: {radius[2]}px;
                 border-bottom-left-radius: {radius[3]}px;
                 }}"""
-
         for wg in wgs:
             # Dimensions
             Functions().SET_DIM(wg, width=width, height=height)
