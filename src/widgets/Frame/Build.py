@@ -64,8 +64,7 @@ class Build:
             Functions().SET_DIM(wg, width=width, height=height)
 
             # Paramètres
-            if shadow is not None:
-                wg.setGraphicsEffect(shadow)
+            if shadow is not None: wg.setGraphicsEffect(shadow)
 
             # Curseur
             wg.setCursor(Functions().SET_CURSOR(curseur))
