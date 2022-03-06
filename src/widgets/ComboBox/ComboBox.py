@@ -1,24 +1,27 @@
-from src.build.mods import Functions
-from src.widgets import vb_wg
+from src.lib.palettes import *
+from src.widgets.ComboBox.Build import Build
 
 
 ##################
 ##     BASE     ##
 ##################
-class Base_th(Style):
+class Base:
     def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            curseur=Cur().main(),
-    )
-class Base_tr(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
+        self.wgs = wgs
+
+    def th(self):
+        Build(
+            *self.wgs,
+        )
+    def tr(self):
+        Build(
+            *self.wgs,
             edit=True,
+            curseur=Cur().souris_main(),
+
             bg=Rgb().tr(),
             bg_hover=Rgb().tr(),
             fg=Rgb().th3(),
             bg_selection=Rgb().th3(),
             fg_selection=Rgb().th1(),
-    )
+        )
