@@ -26,32 +26,38 @@ class Base:
 ##     MENU     ##
 ##################
 class Menu:
-    def __init__(self, *wgs, height=Dim().h9()):
+    def __init__(self, *wgs, bg=Rgb().th2(), height=Dim().h9(), radius=(0, 0, vb_wg.RADIUS_SIZE - 1, vb_wg.RADIUS_SIZE - 1)):
         self.wgs = wgs
+        self.bg = bg
         self.height = height
+        self.radius = radius
 
     def top(self):
         Build(
             *self.wgs,
+
             height=self.height,
 
             bg=Rgb().th1(),
-            radius=(vb_wg.RADIUS, vb_wg.RADIUS, 0, 0)
+            radius=(vb_wg.RADIUS_SIZE, vb_wg.RADIUS_SIZE, 0, 0)
         )
-    def bottom(self, rgb=Rgb().th3()):
+    def bottom(self):
         Build(
             *self.wgs,
+
             height=Dim().h10(),
-            bg=Rgb().th2(),
-            radius=(0, 0, vb_wg.RADIUS - 1, vb_wg.RADIUS - 1)
+
+            bg=self.bg,
+            radius=self.radius
         )
     def bottom_dlg(self):
         Build(
             *self.wgs,
+
             height=self.height,
 
-            bg=Rgb().th2(),
-            radius=(0, 0, vb_wg.RADIUS - 1, vb_wg.RADIUS - 1)
+            bg=self.bg,
+            radius=self.radius
         )
 
 

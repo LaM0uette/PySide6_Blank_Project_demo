@@ -144,7 +144,8 @@ BORDER_RGB = Rgb().tr()
 ###################
 ##     RAYON     ##
 ###################
-RADIUS = (3,) * 4
+RADIUS_SIZE = 3
+RADIUS = (RADIUS_SIZE,) * 4
 
 
 ####################
