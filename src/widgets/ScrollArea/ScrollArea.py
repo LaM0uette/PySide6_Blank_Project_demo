@@ -10,13 +10,15 @@ class Base:
     def __init__(self, *wgs):
         self.wgs = wgs
 
-    def th(self):
-        Build(
-            *self.wgs,
-        )
-    def tr(self, bg=Rgb().tr()):
+    def th(self, bg=Rgb().th1()):
         Build(
             *self.wgs,
 
             bg=bg,
+        )
+    def tr(self):
+        Build(
+            *self.wgs,
+
+            bg=Rgb().tr()
         )
