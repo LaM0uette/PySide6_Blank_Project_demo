@@ -1,4 +1,5 @@
 from src.build.mods import Functions
+from src.lib.palettes import *
 from src.widgets import vb_wg
 
 
@@ -37,10 +38,10 @@ class Build:
             spacing=10,
 
             # Images
-            img_uncheck=vb_wg.IMG_UNCHECK,
-            img_uncheck_hover=vb_wg.IMG_UNCHECK_HOVER,
-            img_check=vb_wg.IMG_CHECK,
-            img_check_hover=vb_wg.IMG_CHECK_HOVER,
+            img_uncheck=Img().check0_rond(),
+            img_uncheck_hover=Img().check0_rond(),
+            img_check=Img().check2_rond(),
+            img_check_hover=Img().check2_rond(),
             # Images RGB
             img_uncheck_rgb=vb_wg.IMG_UNCHECK_RGB,
             img_uncheck_hover_rgb=vb_wg.IMG_UNCHECK_HOVER_RGB,
