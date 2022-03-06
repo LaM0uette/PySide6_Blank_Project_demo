@@ -64,9 +64,10 @@ class Menu:
 ##     CADRES     ##
 ####################
 class Cadre:
-    def __init__(self, *wgs, border=vb_app.BORDER_WIDTH):
+    def __init__(self, *wgs, border=vb_app.BORDER_WIDTH, radius=vb_app.RADIUS):
         self.wgs = wgs
         self.border = border
+        self.radius = radius
 
     def rtn(self, rgb):
         Build(
@@ -78,7 +79,7 @@ class Cadre:
             border_hover=self.border,
             border_hover_rgb=rgb,
 
-            radius=vb_app.RADIUS
+            radius=self.radius
         )
 
     def th1(self): self.rtn(rgb=Rgb().th1())
