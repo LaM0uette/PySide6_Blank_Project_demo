@@ -22,7 +22,7 @@ FONT_SIZE_HD = Font().h3()
 ########################
 BUTTON_SYMBOLS = ButtonSymbols().plus_minus()
 EDIT = False
-FOCUS_POLICY = FocusPolicy.strong_focus()
+FOCUS_POLICY = FocusPolicy().strong_focus()
 INSERT_POLICY = InsertPolicy().insert_bottom()
 MAX_VISIBLE_ITEMS = 10
 NO_FOCUS = False

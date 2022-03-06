@@ -133,5 +133,5 @@ class Demo_hover(Build):
             border_hover=(StyleBase().border(),) * 4,
             border_hover_style="dashed",
             border_hover_rgb=Rgb().bn1(),
-            radius=(vb_wg.RADIUS+1, )*4
+            radius=(vb_wg.RADIUS_SIZE, )*4
     )
