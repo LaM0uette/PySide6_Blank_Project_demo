@@ -26,11 +26,10 @@ class Base:
 ##     MENU     ##
 ##################
 class Menu:
-    def __init__(self, *wgs, bg=Rgb().th2(), height=Dim().h9(), radius=(0, 0, vb_wg.RADIUS_SIZE - 1, vb_wg.RADIUS_SIZE - 1)):
+    def __init__(self, *wgs, bg=Rgb().th2(), height=Dim().h9()):
         self.wgs = wgs
         self.bg = bg
         self.height = height
-        self.radius = radius
 
     def top(self):
         Build(
@@ -39,7 +38,7 @@ class Menu:
             height=self.height,
 
             bg=Rgb().th1(),
-            radius=(vb_wg.RADIUS_SIZE, vb_wg.RADIUS_SIZE, 0, 0)
+            radius=(vb_app.RADIUS_SIZE, vb_wg.RADIUS_SIZE, 0, 0)
         )
     def bottom(self):
         Build(
@@ -48,7 +47,7 @@ class Menu:
             height=Dim().h10(),
 
             bg=self.bg,
-            radius=self.radius
+            radius=(0, 0, vb_app.RADIUS_SIZE, vb_wg.RADIUS_SIZE)
         )
     def bottom_dlg(self):
         Build(
@@ -57,7 +56,7 @@ class Menu:
             height=self.height,
 
             bg=self.bg,
-            radius=self.radius
+            radius=(0, 0, vb_app.RADIUS_SIZE, vb_wg.RADIUS_SIZE)
         )
 
 
@@ -78,7 +77,7 @@ class Cadre:
             border_hover=(StyleBase().border(),) * 4,
             border_hover_rgb=rgb,
 
-            radius = (vb_wg.RADIUS_SIZE, )*4
+            radius=vb_app.RADIUS
         )
 
     def th1(self): self.rtn(rgb=Rgb().th1())
