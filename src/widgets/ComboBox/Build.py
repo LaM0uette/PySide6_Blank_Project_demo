@@ -74,6 +74,7 @@ class Build:
         *Dim: int() : Dim().%nomDim() \n
         *Font: int() : Font().%nomFont() \n
         *Img: str() : Img().%nomImage() \n
+        *InsertPolicy: QtWidgets.QComboBox.%policy : InsertPolicy().%nomPolicy() \n
         *Rgb: tuple() : Rgb().%nomCouleur() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
@@ -83,6 +84,8 @@ class Build:
         :param font: str()
         :param font_size: *Font
         :param edit: bool()
+        :param setMaxVisibleItems: int()
+        :param setInsertPolicy: *InsertPolicy
         :param curseur: *Cur
         :param curseur_view: *Cur
         :param bg: *Rgb
