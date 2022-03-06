@@ -16,6 +16,7 @@ class Build:
             focus_policy=vb_wg.FOCUS_POLICY,
             frame_shape=vb_wg.FRAME_SHAPE,
             frame_shadow=vb_wg.FRAME_SHADOW,
+            line_width=0,
             shadow=None,
 
             # Curseur
@@ -72,6 +73,7 @@ class Build:
             wg.setFocusPolicy(focus_policy)
             wg.setFrameShape(frame_shape)
             wg.setFrameShadow(frame_shadow)
+            wg.setLineWidth(line_width)
             if shadow is not None: wg.setGraphicsEffect(shadow)
 
             # Curseur
