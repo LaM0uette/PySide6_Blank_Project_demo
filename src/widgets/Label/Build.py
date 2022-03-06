@@ -70,6 +70,7 @@ class Build:
         *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
         *Font: int() : Font().%nomFont() \n
         *Img: str() : Img().%nomImage() \n
+        *Img_rgb: str() : th1 | th2 | th3 | bn1 | bn2 \n
         *Rgb: tuple() : Rgb().%nomCouleur() \n
         *Shadow: QtWidgets.QGraphicsDropShadowEffect(self) : Shadow().%nomOmbre() \n
         *FrameShape: QtWidgets.QFrame : FrameShape().%nomFrameForme \n
@@ -99,7 +100,7 @@ class Build:
         :param fg: *Rgb
         :param fg_hover: *Rgb
         :param img: *Img
-        :param img_rgb: *Rgb
+        :param img_rgb: *Img_rgb
         :param margin: *Tuple
         :param padding: *Tuple
         :param border: *Tuple

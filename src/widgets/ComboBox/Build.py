@@ -79,6 +79,7 @@ class Build:
         *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
         *Font: int() : Font().%nomFont() \n
         *Img: str() : Img().%nomImage() \n
+        *Img_rgb: str() : th1 | th2 | th3 | bn1 | bn2 \n
         *InsertPolicy: QtWidgets.QComboBox.%policy : InsertPolicy().%nomPolicy() \n
         *Rgb: tuple() : Rgb().%nomCouleur() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
@@ -107,8 +108,8 @@ class Build:
         :param fg_item_hover: *Rgb
         :param img: *Img
         :param img_hover: *Img
-        :param img_rgb: *Rgb
-        :param img_hover_rgb:
+        :param img_rgb: *Img_rgb
+        :param img_hover_rgb: *Img_rgb
         :param img_width: *Dim
         :param img_height: *Dim
         :param border: *Tuplev
