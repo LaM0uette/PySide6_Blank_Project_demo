@@ -120,6 +120,11 @@ class main(Ui_main, QtWidgets.QWidget):
         RadioButton.Base(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3).th()
         RadioButton.Base(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3).tr()
         ## /QRadioButton ###
+
+
+        ## QRadioButton ###
+        TrayIcon.Main(self.tray_menu)
+        ## /QRadioButton ###
     def IN_WG(self):
         ### Base ###
         self.setCursor(Functions().SET_CURSOR(Cur().souris()))
@@ -162,8 +167,6 @@ class main(Ui_main, QtWidgets.QWidget):
     def IN_WG_BASE(self):
         pass
     def IN_TRAY(self):
-        # TrayIcon.Main(self.tray_menu)
-
         ### Actions ###
         Functions.ADD_QACTION(
             self,
