@@ -24,7 +24,7 @@ class Build:
             focus_policy=vb_wg.FOCUS_POLICY,
             frame_shape=vb_wg.FRAME_SHAPE,
             frame_shadow=vb_wg.FRAME_SHADOW,
-            indent=0,
+            indent=5,
             line_width=0,
             open_external_link=False,
             scaled_contents=True,
@@ -62,6 +62,54 @@ class Build:
             # Rayons
             radius=vb_wg.RADIUS,
     ):
+        """
+        *Align: QtCore.Qt : Align().%nomAlign() \n
+        *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
+        *Cur: list() : Cur().%nomCurseur() \n
+        *Dim: int() : Dim().%nomDim() \n
+        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
+        *Font: int() : Font().%nomFont() \n
+        *Img: str() : Img().%nomImage() \n
+        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *Shadow: QtWidgets.QGraphicsDropShadowEffect(self) : Shadow().%nomOmbre() \n
+        *FrameShape: QtWidgets.QFrame : FrameShape().%nomFrameForme \n
+        *FrameShadow: QtWidgets.QFrame : FrameShadow().%nomFrameOmbre \n
+        *TextFormat: QtCore.Qt : TextFormat().%nomFormat() \n
+        *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
+
+        :param wgs: Widgets séparés par ","
+        :param width: *Dim
+        :param height: *Dim
+        :param font: str()
+        :param font_size: *Font
+        :param align_horizontal: *Align
+        :param align_vertical: *Align
+        :param focus_policy: *FocusPolicy
+        :param frame_shape: *FrameShape
+        :param frame_shadow: *FrameShadow
+        :param indent: int()
+        :param line_width: int()
+        :param open_external_link: bool()
+        :param scaled_contents: bool()
+        :param text_format: *TextFormat
+        :param word_wrap: bool()
+        :param cursor: *Cur
+        :param bg: *Rgb
+        :param bg_hover: *Rgb
+        :param fg: *Rgb
+        :param fg_hover: *Rgb
+        :param img: *Img
+        :param img_rgb: *Rgb
+        :param margin: *Tuple
+        :param padding: *Tuple
+        :param border: *Tuple
+        :param border_style: *Border_Style
+        :param border_rgb: *Rgb
+        :param border_hover: *Tuple
+        :param border_hover_style: *Border_Style
+        :param border_hover_rgb: *Rgb
+        :param radius: *Tuple
+        """
 
         style = f"""
                 /* LABEL */
