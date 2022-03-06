@@ -5,3 +5,4 @@ from src.widgets.Frame import Frame
 from src.widgets.Label import Label
 from src.widgets.RadioButton import RadioButton
 from src.widgets.ScrollArea import ScrollArea
+from src.widgets.TrayIcon import TrayIcon
