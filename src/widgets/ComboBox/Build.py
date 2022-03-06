@@ -217,7 +217,8 @@ class Build:
             # Paramètres
             wg.setEditable(edit)
             if edit:
-                wg.lineEdit().SET_FONT(wg, font=font, font_size=font_size)
+                Functions().SET_FONT(wg, font=font, font_size=font_size)
+                wg.lineEdit().setFont(Functions().SET_FONT(wg, font=font, font_size=font_size))
                 wg.lineEdit().setCursor(Functions().SET_CURSOR(vb_wg.CUR_LE()))
 
             # Curseur

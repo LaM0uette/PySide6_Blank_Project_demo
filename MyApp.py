@@ -67,6 +67,12 @@ class main(Ui_main, QtWidgets.QWidget):
         ## /QCheckBox ###
 
 
+        ### QComboBox ###
+        ComboBox.Base(self.cb_demo_th).th()
+        ComboBox.Base(self.cb_demo_tr).tr()
+        ### /QComboBox ###
+
+
         ## QRadioButton ###
         RadioButton.Base(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3).th()
         RadioButton.Base(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3).tr()

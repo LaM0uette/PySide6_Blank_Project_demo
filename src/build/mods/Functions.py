@@ -17,13 +17,16 @@ class Functions:
         for wg in args:
             if width is not None: wg.setFixedWidth(width)
             if height is not None: wg.setFixedHeight(height)
-    def SET_FONT(self, *args, font=config.font, font_size=None):
+    def SET_FONT(self, *args, font=config.font, font_size=None, rtn=False):
         if not font_size: return
 
+        ft = QtGui.QFont()
+        ft.setFamily(font)
+        ft.setPointSize(font_size)
+
+        if rtn: return ft
+
         for wg in args:
-            ft = QtGui.QFont()
-            ft.setFamily(font)
-            ft.setPointSize(font_size)
             wg.setFont(ft)
     def ADD_QACTION(self, tray, ico=None, ico_rgb=None, txt="", shortcut_txt="", status_tip="", size=None, fct=None, sht_1=None, sht_2=None, sht_3=None):
         if size is None: size=12
