@@ -42,7 +42,6 @@ class Build:
         *Cur: list() : Cur().%nomCurseur() \n
         *Dim: int() : Dim().%nomDim() \n
         *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
-        *Font: int() : Font().%nomFont() \n
         *Rgb: tuple() : Rgb().%nomCouleur() \n
         *Shadow: QtWidgets.QGraphicsDropShadowEffect(self) : Shadow().%nomOmbre() \n
         *FrameShape: QtWidgets.QFrame : FrameShape().%nomFrameForme \n

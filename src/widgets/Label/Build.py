@@ -72,7 +72,6 @@ class Build:
         *Img: str() : Img().%nomImage() \n
         *Img_rgb: str() : th1 | th2 | th3 | bn1 | bn2 \n
         *Rgb: tuple() : Rgb().%nomCouleur() \n
-        *Shadow: QtWidgets.QGraphicsDropShadowEffect(self) : Shadow().%nomOmbre() \n
         *FrameShape: QtWidgets.QFrame : FrameShape().%nomFrameForme \n
         *FrameShadow: QtWidgets.QFrame : FrameShadow().%nomFrameOmbre \n
         *TextFormat: QtCore.Qt : TextFormat().%nomFormat() \n
