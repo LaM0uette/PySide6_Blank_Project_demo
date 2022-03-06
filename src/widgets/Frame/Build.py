@@ -20,7 +20,7 @@ class Build:
             shadow=None,
 
             # Curseur
-            curseur=Cur().souris(),
+            cursor=Cur().souris(),
 
             # Couleurs BG
             bg=vb_wg.BG,
@@ -58,7 +58,7 @@ class Build:
         :param frame_shadow: *FrameShadow
         :param line_width: int()
         :param shadow: *Shadow
-        :param curseur: *Cur
+        :param cursor: *Cur
         :param bg: *Rgb
         :param border: *Tuple
         :param border_style: *Border_Style
@@ -108,7 +108,7 @@ class Build:
             if shadow is not None: wg.setGraphicsEffect(shadow)
 
             # Curseur
-            wg.setCursor(Functions().SET_CURSOR(curseur))
+            wg.setCursor(Functions().SET_CURSOR(cursor))
 
             # Style
             wg.setStyleSheet(style)

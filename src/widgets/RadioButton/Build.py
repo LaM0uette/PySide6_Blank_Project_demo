@@ -20,7 +20,7 @@ class Build:
             auto_exclusive=True,
 
             # Curseur
-            curseur=vb_wg.CUR_MAIN,
+            cursor=vb_wg.CUR_MAIN,
 
 
             # Couleurs BG
@@ -88,7 +88,7 @@ class Build:
         :param font: str()
         :param font_size: *Font
         :param auto_exclusive: bool()
-        :param curseur: *Cur
+        :param cursor: *Cur
         :param bg: *Rgb
         :param bg_hover: *Rgb
         :param bg_checked: *Rgb
@@ -209,7 +209,7 @@ class Build:
             wg.setAutoExclusive(auto_exclusive)
 
             # Curseur
-            wg.setCursor(Functions().SET_CURSOR(curseur))
+            wg.setCursor(Functions().SET_CURSOR(cursor))
 
             # Style
             wg.setStyleSheet(style)

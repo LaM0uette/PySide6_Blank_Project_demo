@@ -20,7 +20,9 @@ class Build:
             align_horizontal=Align().left(),
             align_vertical=Align().center_vertical(),
             word_wrap=vb_wg.WORD_WRAP,
-            curseur=vb_wg.CUR,
+
+            # Curseur
+            cursor=vb_wg.CUR,
 
             # Couleurs BG
             bg=vb_wg.BG,
@@ -98,7 +100,7 @@ class Build:
             wg.setWordWrap(word_wrap)
 
             # Curseur
-            wg.setCursor(Functions().SET_CURSOR(curseur))
+            wg.setCursor(Functions().SET_CURSOR(cursor))
 
             # Style
             wg.setStyleSheet(style)

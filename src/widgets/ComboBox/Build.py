@@ -21,8 +21,10 @@ class Build:
             set_frame=False,
             max_visible_items=vb_wg.MAX_VISIBLE_ITEMS,
             insert_policy=vb_wg.INSERT_POLICY,
-            curseur=vb_wg.CUR_MAIN,
-            curseur_view=vb_wg.CUR_VIEW,
+
+            # Curseur
+            cursor=vb_wg.CUR_MAIN,
+            cursor_view=vb_wg.CUR_VIEW,
 
             # Couleurs BG
             bg=vb_wg.BG,
@@ -91,8 +93,8 @@ class Build:
         :param set_frame: bool()
         :param setMaxVisibleItems: int()
         :param setInsertPolicy: *InsertPolicy
-        :param curseur: *Cur
-        :param curseur_view: *Cur
+        :param cursor: *Cur
+        :param cursor_view: *Cur
         :param bg: *Rgb
         :param bg_hover: *Rgb
         :param bg_selection: *Rgb
@@ -237,8 +239,8 @@ class Build:
                 wg.lineEdit().setCursor(Functions().SET_CURSOR(vb_wg.CUR_LE))
 
             # Curseur
-            wg.setCursor(Functions().SET_CURSOR(curseur))
-            wg.view().setCursor(Functions().SET_CURSOR(curseur_view))
+            wg.setCursor(Functions().SET_CURSOR(cursor))
+            wg.view().setCursor(Functions().SET_CURSOR(cursor_view))
 
             # Style
             wg.setStyleSheet(style)

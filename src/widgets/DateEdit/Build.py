@@ -28,7 +28,7 @@ class Build:
             focus_policy=vb_wg.FOCUS_POLICY,
 
             # Curseur
-            curseur=Cur().souris_main(),
+            cursor=Cur().souris_main(),
 
             # Couleurs BG
             bg=vb_wg.BG,
@@ -106,7 +106,7 @@ class Build:
         :param button_symbols: *ButtonSymbols
         :param calendar_popup: bool()
         :param focus_policy: *FocusPolicy
-        :param curseur: *Cur
+        :param cursor: *Cur
         :param bg: *Rgb
         :param bg_hover: *Rgb
         :param bg_selection: *Rgb
@@ -297,7 +297,7 @@ class Build:
             wg.setDate(QdateDuJour)
 
             # Curseur
-            wg.setCursor(Functions().SET_CURSOR(curseur))
+            wg.setCursor(Functions().SET_CURSOR(cursor))
             wg.lineEdit().setCursor(Functions().SET_CURSOR(vb_wg.CUR_LE))
             wg.calendarWidget().setCursor(Functions().SET_CURSOR(vb_wg.CUR_VIEW))
 

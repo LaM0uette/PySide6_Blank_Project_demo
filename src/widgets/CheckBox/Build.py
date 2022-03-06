@@ -21,7 +21,7 @@ class Build:
             triple_state=False,
 
             # Curseur
-            curseur=vb_wg.CUR_MAIN,
+            cursor=vb_wg.CUR_MAIN,
 
 
             # Couleurs BG
@@ -108,7 +108,7 @@ class Build:
         :param auto_exclusive: bool()
         :param focus_policy: *FocusPolicy
         :param triple_state: bool()
-        :param curseur: *Cur
+        :param cursor: *Cur
         :param bg: *Rgb
         :param bg_hover: *Rgb
         :param bg_checked: *Rgb
@@ -273,7 +273,7 @@ class Build:
 
 
             # Curseur
-            wg.setCursor(Functions().SET_CURSOR(curseur))
+            wg.setCursor(Functions().SET_CURSOR(cursor))
 
             # Style
             wg.setStyleSheet(style)
