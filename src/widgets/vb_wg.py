@@ -33,6 +33,7 @@ TEXT_VISIBLE = True
 VAL_MIN = 0
 VAL_MAX = 100
 VAL_STEP = 1
+TEXT_FORMAT = TextFormat().plain_text()
 WORD_WRAP = True
 
 

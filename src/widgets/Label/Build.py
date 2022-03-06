@@ -19,6 +19,11 @@ class Build:
             # Paramètres
             align_horizontal=Align().left(),
             align_vertical=Align().center_vertical(),
+            focus_policy=vb_wg.FOCUS_POLICY,
+            frame_shape=vb_wg.FRAME_SHAPE,
+            frame_shadow=vb_wg.FRAME_SHADOW,
+            line_width=0,
+            text_format=vb_wg.TEXT_FORMAT,
             word_wrap=vb_wg.WORD_WRAP,
 
             # Curseur
@@ -97,6 +102,11 @@ class Build:
 
             # Paramètres
             wg.setAlignment(align_horizontal | align_vertical)
+            wg.setFocusPolicy(focus_policy)
+            wg.setFrameShape(frame_shape)
+            wg.setFrameShadow(frame_shadow)
+            wg.setLineWidth(line_width)
+            wg.setTextFormat(text_format)
             wg.setWordWrap(word_wrap)
 
             # Curseur
