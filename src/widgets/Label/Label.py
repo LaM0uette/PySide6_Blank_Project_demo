@@ -74,7 +74,7 @@ class Demo:
     def wg_categorie(self):
         Build(
             *self.wgs,
-            font_size=self.font_size,
+            font_size=Font().h2(),
 
             align_horizontal=Align().center_horizontal(),
 
@@ -85,8 +85,8 @@ class Demo:
 
             border=(0, StyleBase().border(), 0, 0),
             border_hover=(0, StyleBase().border(), 0, 0),
-            border_rgb=Rgb().bn1(),
-            border_hover_rgb=Rgb().bn1(),
+            border_rgb=Rgb().bn2(),
+            border_hover_rgb=Rgb().bn2(),
 
             radius=(0,) * 4
         )

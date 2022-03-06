@@ -1,3 +1,5 @@
+from PySide6 import QtGui
+
 from src.build.mods import Functions
 from src.lib.palettes import *
 from src.widgets import vb_wg
@@ -22,8 +24,10 @@ class Build:
             focus_policy=vb_wg.FOCUS_POLICY,
             frame_shape=vb_wg.FRAME_SHAPE,
             frame_shadow=vb_wg.FRAME_SHADOW,
+            indent=0,
             line_width=0,
             open_external_link=False,
+            scaled_contents=True,
             text_format=vb_wg.TEXT_FORMAT,
             word_wrap=vb_wg.WORD_WRAP,
 
@@ -106,8 +110,11 @@ class Build:
             wg.setFocusPolicy(focus_policy)
             wg.setFrameShape(frame_shape)
             wg.setFrameShadow(frame_shadow)
+            wg.setIndent(indent)
             wg.setLineWidth(line_width)
             wg.setOpenExternalLinks(open_external_link)
+            wg.setPixmap(QtGui.QPixmap(f"{Img().main()}th3.svg"))
+            wg.setScaledContents(scaled_contents)
             wg.setTextFormat(text_format)
             wg.setWordWrap(word_wrap)
 
