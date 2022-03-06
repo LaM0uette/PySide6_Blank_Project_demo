@@ -23,6 +23,7 @@ class Build:
             frame_shape=vb_wg.FRAME_SHAPE,
             frame_shadow=vb_wg.FRAME_SHADOW,
             line_width=0,
+            open_external_link=False,
             text_format=vb_wg.TEXT_FORMAT,
             word_wrap=vb_wg.WORD_WRAP,
 
@@ -106,6 +107,7 @@ class Build:
             wg.setFrameShape(frame_shape)
             wg.setFrameShadow(frame_shadow)
             wg.setLineWidth(line_width)
+            wg.setOpenExternalLinks(open_external_link)
             wg.setTextFormat(text_format)
             wg.setWordWrap(word_wrap)
 
