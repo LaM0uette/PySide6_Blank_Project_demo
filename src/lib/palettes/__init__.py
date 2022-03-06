@@ -4,6 +4,7 @@ from src.lib.palettes.Cur import Cur
 from src.lib.palettes.Dim import Dim
 from src.lib.palettes.FocusPolicy import FocusPolicy
 from src.lib.palettes.Font import Font
+from src.lib.palettes.FrameShape import FrameShape
 from src.lib.palettes.Img import Img
 from src.lib.palettes.InsertPolicy import InsertPolicy
 from src.lib.palettes.Keys import Keys

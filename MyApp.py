@@ -94,7 +94,6 @@ class main(Ui_main, QtWidgets.QWidget):
         Frame.Menu(self.fr_menu_bottom).bottom()
         Frame.Demo_hover(self.fr_demo_cadre_hover)
         ### /QFrame ###
-        self.cb_demo_th.setFrame()
 
 
         ## QRadioButton ###
