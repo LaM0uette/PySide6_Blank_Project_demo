@@ -62,17 +62,15 @@ class Menu:
 
 
 ####################
-##     AUTRES     ##
+##     CADRES     ##
 ####################
 class Cadre:
-    def __init__(self, *wgs, ombre_portee=False):
+    def __init__(self, *wgs):
         self.wgs = wgs
-        self.ombre_portee = ombre_portee
 
     def rtn(self, rgb):
         Style(
             *self.wgs,
-            ombre_portee=self.ombre_portee,
             bg=Rgb().tr(),
             border=((StyleBase().bd(),) * 4),
             border_rgb=rgb,
@@ -86,6 +84,11 @@ class Cadre:
     def th3(self): self.rtn(rgb=Rgb().th3())
     def bn1(self): self.rtn(rgb=Rgb().bn1())
     def bn2(self): self.rtn(rgb=Rgb().bn2())
+
+
+####################
+##     AUTRES     ##
+####################
 class palette_rgb(Style):
     def __init__(self, *wgs, rgb):
         super().__init__(
