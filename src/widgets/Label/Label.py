@@ -11,6 +11,21 @@ class Base:
         self.wgs = wgs
         self.font_size = font_size
 
+    def ico_main(self):
+        Build(
+            *self.wgs,
+
+            width=Dim().h9(),
+            height=Dim().h9(),
+
+            bg=Rgb().tr(),
+            bg_hover=Rgb().tr(),
+
+            img=Img().main(),
+            img_rgb="th3",
+
+            scaled_contents=True,
+        )
     def th(self):
         Build(
             *self.wgs,

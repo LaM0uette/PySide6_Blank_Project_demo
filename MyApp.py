@@ -102,6 +102,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### QLabel ###
+        Label.Base(self.lb_mt_ico).ico_main()
         Label.Demo(self.lb_lb_demo_th).th()
         Label.Base(self.lb_mt_nom, font_size=Font().h3()).tr()
         Label.Base(self.lb_mb_version).tr()
@@ -122,14 +123,6 @@ class main(Ui_main, QtWidgets.QWidget):
     def IN_WG(self):
         ### Base ###
         self.setCursor(Functions().SET_CURSOR(Cur().souris()))
-
-
-        ### Icone de l'app ###
-        dim = Dim().h9()
-        Functions().SET_DIM(self.lb_mt_ico, width=dim, height=dim)
-        self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{Img().main()}th3.svg"))
-        self.lb_mt_ico.setScaledContents(True)
-
 
         ### Nom de l'app ###
         self.lb_mt_nom.setText(config.nom)
