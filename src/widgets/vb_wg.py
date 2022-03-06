@@ -24,6 +24,7 @@ BUTTON_SYMBOLS = ButtonSymbols().plus_minus()
 EDIT = False
 FOCUS_POLICY = FocusPolicy().strong_focus()
 FRAME_SHAPE = FrameShape().no_frame()
+FRAME_SHADOW = FrameShadow().plain()
 INSERT_POLICY = InsertPolicy().insert_bottom()
 MAX_VISIBLE_ITEMS = 10
 NO_FOCUS = False
