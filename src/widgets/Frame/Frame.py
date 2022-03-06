@@ -89,51 +89,49 @@ class Cadre:
 ####################
 ##     AUTRES     ##
 ####################
-class palette_rgb(Style):
+class palette_rgb(Build):
     def __init__(self, *wgs, rgb):
         super().__init__(
             *wgs,
             bg=rgb,
-            radius=((40, )*4),
+            radius=(40, )*4,
     )
-class SplashScreen(Style):
+class SplashScreen(Build):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            ombre_portee=True,
             bg=Rgb().th1(),
-            border=((StyleBase().bd(),) * 4),
+            border=(StyleBase().border(),) * 4,
             border_rgb=Rgb().th3(),
-            border_hover=((StyleBase().bd(),) * 4),
+            border_hover=(StyleBase().border(),) * 4,
             border_hover_rgb=Rgb().th3(),
-            radius=((vb_wg.RADIUS, )*4)
+            radius=(vb_wg.RADIUS_SIZE, )*4
     )
-class TrayUi(Style):
+class TrayUi(Build):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            ombre_portee = True,
             bg=Rgb().th1(),
-            border=((StyleBase().bd(),) * 4),
+            border=(StyleBase().border(),) * 4,
             border_rgb=Rgb().th3(),
-            border_hover=((StyleBase().bd(),) * 4),
+            border_hover=(StyleBase().border(),) * 4,
             border_hover_rgb=Rgb().th3(),
-            radius=((vb_wg.RADIUS, )*4)
+            radius=(vb_wg.RADIUS, )*4
     )
 
 
 ##################
 ##     DEMO     ##
 ##################
-class Demo_hover(Style):
+class Demo_hover(Build):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
             bg=Rgb().tr(),
-            border=((StyleBase().bd(),) * 4),
+            border=(StyleBase().border(),) * 4,
             border_rgb=Rgb().bn1(),
-            border_hover=((StyleBase().bd(),) * 4),
+            border_hover=(StyleBase().border(),) * 4,
             border_hover_style="dashed",
             border_hover_rgb=Rgb().bn1(),
-            radius = ((vb_wg.RADIUS+1, )*4)
+            radius=(vb_wg.RADIUS+1, )*4
     )
