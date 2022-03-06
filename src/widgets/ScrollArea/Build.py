@@ -1,5 +1,5 @@
 from src.build.mods import Functions
-from src.widgets import vb_wg
+from src.widgets import vb_wg, vb_app
 
 
 class Build:
@@ -8,8 +8,8 @@ class Build:
             *wgs,
 
             # Dimensions
-            width=vb_wg.WIDTH,
-            height=vb_wg.HEIGHT,
+            width=vb_app.WIDTH,
+            height=vb_app.HEIGHT,
 
             # Paramètres
             focus_policy=vb_wg.FOCUS_POLICY,
