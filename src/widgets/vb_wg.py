@@ -21,7 +21,7 @@ FONT_SIZE_HD = Font().h3()
 ##     PARAMETRES     ##
 ########################
 EDIT = False
-INSERT_POLICY = InsertPolicy().cb_insert_bottom()
+INSERT_POLICY = InsertPolicy().insert_bottom()
 MAX_VISIBLE_ITEMS = 10
 NO_FOCUS = False
 SELECTION_BEHAVIOR = SelectionBehavior().row()
