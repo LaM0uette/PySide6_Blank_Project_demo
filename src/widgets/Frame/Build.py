@@ -65,7 +65,7 @@ class Build:
 
             # Paramètres
             if shadow is not None:
-                wg.setGraphicsEffect(shadow(wg))
+                wg.setGraphicsEffect(shadow)
 
             # Curseur
             wg.setCursor(Functions().SET_CURSOR(curseur))
