@@ -37,6 +37,38 @@ class Build:
             # Rayons
             radius=vb_wg.RADIUS,
     ):
+        """
+        *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
+        *Cur: list() : Cur().%nomCurseur() \n
+        *Dim: int() : Dim().%nomDim() \n
+        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
+        *Font: int() : Font().%nomFont() \n
+        *Img: str() : Img().%nomImage() \n
+        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *Shadow: QtWidgets.QGraphicsDropShadowEffect(self) : Shadow().%nomOmbre() \n
+        *FrameShape: QtWidgets.QFrame : FrameShape().%nomFrameForme \n
+        *FrameShadow: QtWidgets.QFrame : FrameShadow().%nomFrameOmbre \n
+        *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
+
+        :param wgs: wgs: Widgets séparés par ","
+        :param width: *Dim
+        :param height: *Dim
+        :param focus_policy: *FocusPolicy
+        :param frame_shape: *FrameShape
+        :param frame_shadow: *FrameShadow
+        :param line_width: int()
+        :param shadow: *Shadow
+        :param curseur: *Cur
+        :param bg: *Rgb
+        :param border: *Tuple
+        :param border_style: *Border_Style
+        :param border_rgb: *Rgb
+        :param border_hover: *Tuple
+        :param border_hover_style: *Border_Style
+        :param border_hover_rgb: *Rgb
+        :param radius: *Tuple
+        """
+
         style = f"""
                 /* FRAME */
                 .QFrame {{
@@ -64,7 +96,6 @@ class Build:
                 border-bottom-right-radius: {radius[2]}px;
                 border-bottom-left-radius: {radius[3]}px;
                 }}"""
-
         for wg in wgs:
             # Dimensions
             Functions().SET_DIM(wg, width=width, height=height)
