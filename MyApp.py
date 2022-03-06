@@ -124,6 +124,7 @@ class main(Ui_main, QtWidgets.QWidget):
         ### Base ###
         self.setCursor(Functions().SET_CURSOR(Cur().souris()))
 
+
         ### Nom de l'app ###
         self.lb_mt_nom.setText(config.nom)
 
