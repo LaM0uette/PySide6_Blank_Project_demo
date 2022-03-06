@@ -58,7 +58,7 @@ class Build:
             img_width=vb_wg.img_width,
             img_height=vb_wg.img_height,
             # Images positions
-            img_margin=((0,) * 4),
+            img_margin=(0,) * 4,
 
             # Bordures
             border=vb_wg.BORDER_WIDTH,
@@ -69,9 +69,9 @@ class Build:
             border_hover_style=vb_wg.BORDER_STYLE,
             border_hover_rgb=vb_wg.BORDER_RGB,
             # Bordures jours
-            border_day_size=StyleBase().border(),
+            border_day_size=(StyleBase().border(), )*4,
             border_day_style=vb_wg.BORDER_STYLE,
-            border_day_rgb=vb_wg.FG_ITEM_HOVER,
+            border_day_rgb=vb_wg.FG_HOVER,
 
             # Rayons
             radius=vb_wg.RADIUS,
@@ -106,7 +106,7 @@ class Build:
                 /* WIDGETS */
                 QCalendarWidget QWidget {{
                 alternate-background-color: rgba{bg_mois};
-                color: rgb{fg_mois};
+                color: rgba{fg_mois};
                 }}
 
                 /* TOOL BUTTON */
@@ -154,7 +154,6 @@ class Build:
                 QCalendarWidget QAbstractItemView {{
                 font-size: {font_size}px;
                 font-family: {font};
-                font-weight: 30;
                 outline: 0px;
                 }}
                 QCalendarWidget QAbstractItemView:enabled {{
@@ -163,10 +162,13 @@ class Build:
                 selection-background-color: rgba{fg_item};
                 selection-color: rgba{bg_item};
                 }}
-                QCalendarWidget QWidget:item:hover, QCalendarWidget QWidget:item:selected {{
+                QCalendarWidget QWidget::item:hover, QCalendarWidget QWidget::item:selected {{
                 background-color: rgba{bg_item_hover};
                 color: rgba{fg_item_hover};
-                border: {border_day_size}px {border_day_style} rgba{border_day_rgb};
+                border-top: {border_day_size[0]}px {border_day_style} rgba{border_day_rgb};
+                border-bottom: {border_day_size[1]}px {border_day_style} rgba{border_day_rgb};
+                border-right: {border_day_size[2]}px {border_day_style} rgba{border_day_rgb};
+                border-left: {border_day_size[3]}px {border_day_style} rgba{border_day_rgb};
                 }}
 
                 /* BARRE HAUT */
@@ -175,13 +177,13 @@ class Build:
                 }}
 
                 /* BORDURES */
-                .QDateEdit {{
+                QDateEdit {{
                 border-top: {border[0]}px {border_style} rgba{border_rgb};
                 border-bottom: {border[1]}px {border_style} rgba{border_rgb};
                 border-right: {border[2]}px {border_style} rgba{border_rgb};
                 border-left: {border[3]}px {border_style} rgba{border_rgb};
                 }}
-                .QDateEdit:hover {{
+                QDateEdit:hover {{
                 border-top: {border_hover[0]}px {border_hover_style} rgba{border_hover_rgb};
                 border-bottom: {border_hover[1]}px {border_hover_style} rgba{border_hover_rgb};
                 border-right: {border_hover[2]}px {border_hover_style} rgba{border_hover_rgb};
@@ -189,7 +191,7 @@ class Build:
                 }}
 
                 /* RAYONS */
-                .QDateEdit {{
+                QDateEdit {{
                 border-top-right-radius: {radius[0]}px;
                 border-top-left-radius: {radius[1]}px;
                 border-bottom-right-radius: {radius[2]}px;

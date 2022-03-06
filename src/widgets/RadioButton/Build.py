@@ -51,7 +51,7 @@ class Build:
             img_width=vb_wg.img_width,
             img_height=vb_wg.img_height,
             # Images positions
-            img_margin=((0,) * 4),
+            img_margin=(0,) * 4,
 
             # Bordures
             border=vb_wg.BORDER_WIDTH,

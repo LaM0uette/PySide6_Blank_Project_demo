@@ -135,7 +135,7 @@ IMG_HEIGHT = HEIGHT * StyleBase().X_ICO()
 #####################
 ##     BORDURE     ##
 #####################
-BORDER_WIDTH = ((0,) * 4)
+BORDER_WIDTH = (0,) * 4
 BORDER_STYLE = "solid"
 BORDER_RGB = Rgb().tr()
 
@@ -143,7 +143,7 @@ BORDER_RGB = Rgb().tr()
 ###################
 ##     RAYON     ##
 ###################
-RADIUS = ((3,) * 4)
+RADIUS = (3,) * 4
 
 
 ####################
