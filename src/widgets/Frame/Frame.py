@@ -1,5 +1,5 @@
 from src.lib.palettes import *
-from src.widgets import vb_wg
+from src.widgets import vb_wg, vb_app
 from src.widgets.Frame.Build import Build
 
 
@@ -71,11 +71,13 @@ class Cadre:
     def rtn(self, rgb):
         Build(
             *self.wgs,
+
             bg=Rgb().tr(),
             border=(StyleBase().border(),) * 4,
             border_rgb=rgb,
             border_hover=(StyleBase().border(),) * 4,
             border_hover_rgb=rgb,
+
             radius = (vb_wg.RADIUS_SIZE, )*4
         )
 
