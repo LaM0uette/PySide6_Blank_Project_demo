@@ -69,14 +69,14 @@ class Cadre:
         self.wgs = wgs
 
     def rtn(self, rgb):
-        Style(
+        Build(
             *self.wgs,
             bg=Rgb().tr(),
-            border=((StyleBase().bd(),) * 4),
+            border=(StyleBase().border(),) * 4,
             border_rgb=rgb,
-            border_hover=((StyleBase().bd(),) * 4),
+            border_hover=(StyleBase().border(),) * 4,
             border_hover_rgb=rgb,
-            radius = ((vb_wg.RADIUS+1, )*4)
+            radius = (vb_wg.RADIUS_SIZE, )*4
         )
 
     def th1(self): self.rtn(rgb=Rgb().th1())
