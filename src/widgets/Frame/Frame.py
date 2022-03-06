@@ -72,9 +72,9 @@ class Cadre:
             *self.wgs,
 
             bg=Rgb().tr(),
-            border=(StyleBase().border(),) * 4,
+            border=vb_app.BORDER_WIDTH,
             border_rgb=rgb,
-            border_hover=(StyleBase().border(),) * 4,
+            border_hover=vb_app.BORDER_WIDTH,
             border_hover_rgb=rgb,
 
             radius=vb_app.RADIUS
