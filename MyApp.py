@@ -61,6 +61,10 @@ class main(Ui_main, QtWidgets.QWidget):
         ### Ui principal ###
         self.setupUi(self)
     def IN_CLASSE(self):
+        ### QScrollBoxArea ###
+        ScrollArea.Base(self.sca_main).tr()
+        ### /QScrollBoxArea ###
+
         ## QCheckBox ###
         CheckBox.Demo(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3).th()
         CheckBox.Demo(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3).tr()

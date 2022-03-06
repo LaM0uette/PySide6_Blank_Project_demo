@@ -20,15 +20,3 @@ class Base:
 
             bg=bg,
         )
-
-
-
-##################
-##     DEMO     ##
-##################
-class Demo(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            bg=Rgb().th1(),
-    )
