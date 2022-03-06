@@ -1,46 +1,60 @@
 from src.build.mods import Functions
-from src.widgets import vb_wg, vb_app
+from src.widgets import vb_wg
 
 
 class Build:
     def __init__(
             self,
             *wgs,
-            width=VBase.WIDTH,
-            height=VBase.HEIGHT,
-            font=VBase.FONT,
-            font_size=VBase.FONT_SIZE,
+
+            # Dimensions
+            width=vb_wg.WIDTH,
+            height=vb_wg.HEIGHT,
             height_separator=5,
-            curseur=Cur().souris_main(),
+
+            # Police
+            font=vb_wg.FONT,
+            font_size=vb_wg.FONT_SIZE,
+
+            # Paramètres
+            focus_policy=vb_wg.FOCUS_POLICY,
+
+            # Curseur
+            cursor=vb_wg.CUR_VIEW,
+
             # Couleurs BG
-            bg=VBase.BG,
-            bg_item=VBase.BG_ITEM,
-            bg_item_checked=VBase.BG_ITEM_CHECKED,
+            bg=vb_wg.BG,
+            bg_item=vb_wg.BG_ITEM,
+            bg_item_checked=vb_wg.BG_ITEM_CHECKED,
             # Couleurs BG autres
-            bg_separator=VBase.BG_SEPARATOR,
+            bg_separator=vb_wg.BG_SEPARATOR,
             # Couleurs FG
-            fg=VBase.FG,
-            fg_item=VBase.FG_ITEM,
-            fg_item_checked=VBase.FG_ITEM_CHECKED,
+            fg=vb_wg.FG,
+            fg_item=vb_wg.FG_ITEM,
+            fg_item_checked=vb_wg.FG_ITEM_CHECKED,
+
             # Positions WG
-            margin=((0,) * 4),
-            padding=((0,) * 4),
+            margin=(0,) * 4,
+            padding=(0,) * 4,
+
             # Bordures
-            border=VBase.WG_BORDER_WIDTH,
-            border_style=VBase.WG_BORDER_STYLE,
-            border_rgb=VBase.WG_BORDER_RGB,
+            border=vb_wg.BORDER_WIDTH,
+            border_style=vb_wg.BORDER_STYLE,
+            border_rgb=vb_wg.BORDER_RGB,
             # Bordures item
-            border_item=VBase.WG_BORDER_WIDTH,
-            border_item_style=VBase.WG_BORDER_STYLE,
-            border_item_rgb=VBase.WG_BORDER_RGB,
+            border_item=vb_wg.BORDER_WIDTH,
+            border_item_style=vb_wg.BORDER_STYLE,
+            border_item_rgb=vb_wg.BORDER_RGB,
             # Bordures item checked
-            border_item_checked=VBase.WG_BORDER_WIDTH,
-            border_item_checked_style=VBase.WG_BORDER_STYLE,
-            border_item_checked_rgb=VBase.WG_BORDER_RGB,
+            border_item_checked=vb_wg.BORDER_WIDTH,
+            border_item_checked_style=vb_wg.BORDER_STYLE,
+            border_item_checked_rgb=vb_wg.BORDER_RGB,
+
             # Rayons
-            radius=VBase.WG_RADIUS,
-            radius_item=VBase.WG_RADIUS,
+            radius=vb_wg.RADIUS,
+            radius_item=vb_wg.RADIUS,
     ):
+
         style = f"""
                 /* MENU */
                 QMenu {{
@@ -99,11 +113,18 @@ class Build:
                 border-bottom-right-radius: {radius[2]}px;
                 border-bottom-left-radius: {radius[3]}px;
                 }}"""
-
         for wg in wgs:
+            # Dimensions
+            Functions().SET_DIM(wg, width=width, height=height)
+
+            # Police
+            Functions().SET_FONT(wg, font=font, font_size=font_size)
+
+            # Paramètres
+            wg.setFocusPolicy(focus_policy)
+
+            # Curseur
+            wg.setCursor(Functions().SET_CURSOR(cursor))
+
+            # Style
             wg.setStyleSheet(style)
-
-            Fct(wg=wg, w=width, h=height).DIM()
-            wg.setFont(Fct(font=font, font_size=font_size).FONT())
-
-            wg.setCursor(Fct(cur=curseur).CUR())
