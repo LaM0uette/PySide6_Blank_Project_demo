@@ -20,12 +20,12 @@ FONT_SIZE_HD = Font().h3()
 ########################
 ##     PARAMETRES     ##
 ########################
+BUTTON_SYMBOLS = ButtonSymbols().plus_minus()
 EDIT = False
 INSERT_POLICY = InsertPolicy().insert_bottom()
 MAX_VISIBLE_ITEMS = 10
 NO_FOCUS = False
 SELECTION_BEHAVIOR = SelectionBehavior().row()
-SB_BUTTONS_TYPE = SpinButton().plus_minus()
 TEXT_VISIBLE = True
 VAL_MIN = 0
 VAL_MAX = 100

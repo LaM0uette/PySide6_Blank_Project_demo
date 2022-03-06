@@ -8,5 +8,5 @@ from src.lib.palettes.Keys import Keys
 from src.lib.palettes.Rgb import Rgb
 from src.lib.palettes.Scroll import Scroll
 from src.lib.palettes.SelectionBehavior import SelectionBehavior
-from src.lib.palettes.SpinButton import SpinButton
+from src.lib.palettes.ButtonSymbols import ButtonSymbols
 from src.lib.palettes.StyleBase import StyleBase

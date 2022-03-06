@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QAbstractSpinBox
 
 
-class SpinButton:
+class ButtonSymbols:
 
     def no_button(self): return QAbstractSpinBox.NoButtons
     def plus_minus(self): return QAbstractSpinBox.PlusMinus
