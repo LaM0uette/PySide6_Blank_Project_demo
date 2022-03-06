@@ -13,7 +13,10 @@ class Build:
             height=vb_app.HEIGHT,
 
             # Paramètres
+            focus_policy=vb_wg.FOCUS_POLICY,
             shadow=None,
+
+            # Curseur
             curseur=Cur().souris(),
 
             # Couleurs BG
@@ -64,6 +67,7 @@ class Build:
             Functions().SET_DIM(wg, width=width, height=height)
 
             # Paramètres
+            wg.setFocusPolicy(focus_policy)
             if shadow is not None: wg.setGraphicsEffect(shadow)
 
             # Curseur
