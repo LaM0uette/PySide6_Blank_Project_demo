@@ -71,7 +71,7 @@ class main(Ui_main, QtWidgets.QWidget):
         ComboBox.Base(self.cb_demo_th).th()
         ComboBox.Base(self.cb_demo_tr).tr()
         ### /QComboBox ###
-
+        self.cb_demo_tr.setInsertPolicy()
 
         ## QRadioButton ###
         RadioButton.Base(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3).th()

@@ -21,13 +21,15 @@ FONT_SIZE_HD = Font().h3()
 ##     PARAMETRES     ##
 ########################
 EDIT = False
+INSERT_POLICY = InsertPolicy().cb_insert_bottom()
+MAX_VISIBLE_ITEMS = 10
 NO_FOCUS = False
+SELECTION_BEHAVIOR = SelectionBehavior().row()
 SB_BUTTONS_TYPE = SpinButton().plus_minus()
 TEXT_VISIBLE = True
 VAL_MIN = 0
 VAL_MAX = 100
 VAL_STEP = 1
-SELECTION_BEHAVIOR = SelectionBehavior().row()
 WORD_WRAP = True
 
 

@@ -17,6 +17,8 @@ class Build:
 
             # Paramètres
             edit=vb_wg.EDIT,
+            max_visible_items=vb_wg.MAX_VISIBLE_ITEMS,
+            insert_policy=vb_wg.INSERT_POLICY,
             curseur=vb_wg.CUR_MAIN,
             curseur_view=vb_wg.CUR_VIEW,
 
@@ -216,6 +218,9 @@ class Build:
 
             # Paramètres
             wg.setEditable(edit)
+            wg.setMaxVisibleItems(max_visible_items)
+            wg.setInsertPolicy(insert_policy)
+
             if edit:
                 Functions().SET_FONT(wg, font=font, font_size=font_size)
                 wg.lineEdit().setFont(Functions().SET_FONT(wg, font=font, font_size=font_size, rtn=True))
