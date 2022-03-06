@@ -90,7 +90,7 @@ class main(Ui_main, QtWidgets.QWidget):
             self.fr_rb, self.fr_pg, self.fr_sb, self.fr_tw, self.fr_le,
             self.fr_te, self.fr_pte, self.fr_tb, self.fr_trw, self.fr_sd,
             self.fr_demo_cadre, self.fr_fr, self.fr_lb
-        ).bn1()
+        , border=(StyleBase().border(), )*4).bn1()
         Frame.Menu(self.fr_menu_bottom).bottom()
         Frame.Demo_hover(self.fr_demo_cadre_hover)
         ### /QFrame ###
