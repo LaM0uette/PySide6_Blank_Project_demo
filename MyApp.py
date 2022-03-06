@@ -55,7 +55,7 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setWindowIcon(QtGui.QPixmap(f"{Img().main()}th3.svg"))
         self.setWindowOpacity(config.opacity)
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
-        # self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         self.e_resize_screen()
     def IN_SETUP_UI(self):
         ### Ui principal ###
