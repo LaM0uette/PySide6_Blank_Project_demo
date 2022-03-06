@@ -1,24 +1,25 @@
-from PySide6 import QtWidgets, QtGui
-
-from src.build import *
-from src.build.widgets import VBase
+from src.lib.palettes import *
+from src.widgets import vb_wg
+from src.widgets.Frame.Build import Build
 
 
 ##################
 ##     BASE     ##
 ##################
-class Base_th(Style):
-    def __init__(self, *wgs, rgb=Rgb().th3()):
-        super().__init__(
-            *wgs,
+class Base:
+    def __init__(self, *wgs):
+        self.wgs = wgs
+
+    def th(self, rgb=Rgb().th3()):
+        Build(
+            *self.wgs,
             bg=rgb,
         )
-class Base_tr(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            bg=Rgb().tr()
-    )
+    def tr(self, rgb=Rgb().th3()):
+        Build(
+            *self.wgs,
+            bg=rgb,
+        )
 
 
 ##################
