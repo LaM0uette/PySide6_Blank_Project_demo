@@ -31,6 +31,7 @@ class Build:
             fg_selection=vb_wg.FG_SELECTION,
             fg_item=vb_wg.FG_ITEM,
             fg_item_hover=vb_wg.FG_ITEM_HOVER,
+
             # Images
             img=vb_wg.IMG_UNROLL,
             img_hover=vb_wg.IMG_UNROLL_HOVER,
@@ -40,16 +41,19 @@ class Build:
             # Images DIM
             img_width=vb_wg.img_width,
             img_height=vb_wg.img_height,
+
             # Bordures
-            border=vb_wg.WG_BORDER_WIDTH,
-            border_style=vb_wg.WG_BORDER_STYLE,
-            border_rgb=vb_wg.WG_BORDER_RGB,
+            border=vb_wg.BORDER_WIDTH,
+            border_style=vb_wg.BORDER_STYLE,
+            border_rgb=vb_wg.BORDER_RGB,
             # Bordures hover
-            border_hover=vb_wg.WG_BORDER_WIDTH,
-            border_hover_style=vb_wg.WG_BORDER_STYLE,
-            border_hover_rgb=vb_wg.WG_BORDER_RGB,
+            border_hover=vb_wg.BORDER_WIDTH,
+            border_hover_style=vb_wg.BORDER_STYLE,
+            border_hover_rgb=vb_wg.BORDER_RGB,
+
             # Rayons
-            radius=vb_wg.WG_RADIUS,
+            radius=vb_wg.RADIUS,
+
             # Scroll
             scroll_bg=vb_wg.SCROLL_BG,
             scroll_width=vb_wg.SCROLL_WIDTH,

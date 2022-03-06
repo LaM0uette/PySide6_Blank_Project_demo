@@ -141,3 +141,23 @@ BORDER_RGB = Rgb().tr()
 ##     RAYON     ##
 ###################
 RADIUS = ((3,) * 4)
+
+
+####################
+##     SCROLL     ##
+####################
+SCROLL_BG = Rgb().th1()
+SCROLL_WIDTH = 6
+SCROLL_HEIGHT = 6
+
+SCROLL_HANDLE_BG = Rgb().th3()
+SCROLL_HANDLE_BG_HOVER = Rgb().th3()
+SCROLL_HANDLE_FG = Rgb().th2()
+SCROLL_HANDLE_FG_HOVER = Rgb().bn1()
+SCROLL_HANDLE_MIN_WIDTH = 20
+SCROLL_HANDLE_MIN_HEIGHT = 20
+
+SCROLL_H = Scroll().need()
+SCROLL_V = Scroll().need()
+HEADER_H = True
+HEADER_V = True
