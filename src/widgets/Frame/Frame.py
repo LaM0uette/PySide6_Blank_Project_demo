@@ -25,33 +25,34 @@ class Base:
 ##################
 ##     MENU     ##
 ##################
-class Menu_top(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            height=Dim().h9(),
+class Menu:
+    def __init__(self, *wgs, height=Dim().h9()):
+        self.wgs = wgs
+        self.height = height
+
+    def top(self):
+        Build(
+            *self.wgs,
+            height=self.height,
 
             bg=Rgb().th1(),
-            radius=(VBase.RADIUS, VBase.RADIUS, 0, 0)
-    )
-class Menu_bottom(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
+            radius=(vb_wg.RADIUS, vb_wg.RADIUS, 0, 0)
+        )
+    def bottom(self, rgb=Rgb().th3()):
+        Build(
+            *self.wgs,
             height=Dim().h10(),
+            bg=Rgb().th2(),
+            radius=(0, 0, vb_wg.RADIUS - 1, vb_wg.RADIUS - 1)
+        )
+    def bottom_dlg(self):
+        Build(
+            *self.wgs,
+            height=self.height,
 
             bg=Rgb().th2(),
-            radius=(0, 0, VBase.RADIUS-1, VBase.RADIUS-1)
-    )
-class Menu_bottom_dlg(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            height=Dim().h9(),
-
-            bg=Rgb().th2(),
-            radius=(0, 0, VBase.RADIUS-1, VBase.RADIUS-1)
-    )
+            radius=(0, 0, vb_wg.RADIUS - 1, vb_wg.RADIUS - 1)
+        )
 
 
 ####################
@@ -71,7 +72,7 @@ class Cadre:
             border_rgb=rgb,
             border_hover=((StyleBase().bd(),) * 4),
             border_hover_rgb=rgb,
-            radius = ((VBase.RADIUS+1, )*4)
+            radius = ((vb_wg.RADIUS+1, )*4)
         )
 
     def th1(self): self.rtn(rgb=Rgb().th1())
@@ -96,7 +97,7 @@ class SplashScreen(Style):
             border_rgb=Rgb().th3(),
             border_hover=((StyleBase().bd(),) * 4),
             border_hover_rgb=Rgb().th3(),
-            radius=((VBase.RADIUS, )*4)
+            radius=((vb_wg.RADIUS, )*4)
     )
 class TrayUi(Style):
     def __init__(self, *wgs):
@@ -108,7 +109,7 @@ class TrayUi(Style):
             border_rgb=Rgb().th3(),
             border_hover=((StyleBase().bd(),) * 4),
             border_hover_rgb=Rgb().th3(),
-            radius=((VBase.RADIUS, )*4)
+            radius=((vb_wg.RADIUS, )*4)
     )
 
 
@@ -125,5 +126,5 @@ class Demo_hover(Style):
             border_hover=((StyleBase().bd(),) * 4),
             border_hover_style="dashed",
             border_hover_rgb=Rgb().bn1(),
-            radius = ((VBase.RADIUS+1, )*4)
+            radius = ((vb_wg.RADIUS+1, )*4)
     )

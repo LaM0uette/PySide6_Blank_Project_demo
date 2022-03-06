@@ -11,20 +11,20 @@ class Build:
     def __init__(
             self,
             *wgs,
-            width=VBase.WIDTH,
-            height=VBase.HEIGHT,
+            width=vb_wg.WIDTH,
+            height=vb_wg.HEIGHT,
             ombre_portee=False,
             curseur=Cur().souris(),
             # Couleurs BG
-            bg=VBase.BG,
+            bg=vb_wg.BG,
             # Bordures
-            border=VBase.WG_BORDER_WIDTH,
-            border_style=VBase.WG_BORDER_STYLE,
-            border_rgb=VBase.WG_BORDER_RGB,
+            border=vb_wg.BORDER_WIDTH,
+            border_style=vb_wg.BORDER_STYLE,
+            border_rgb=vb_wg.BORDER_RGB,
             # Bordures hover
-            border_hover=VBase.WG_BORDER_WIDTH,
-            border_hover_style=VBase.WG_BORDER_STYLE,
-            border_hover_rgb=VBase.WG_BORDER_RGB,
+            border_hover=vb_wg.BORDER_WIDTH,
+            border_hover_style=vb_wg.BORDER_STYLE,
+            border_hover_rgb=vb_wg.BORDER_RGB,
             # Rayons
             radius=(0, 0, 0, 0),
     ):

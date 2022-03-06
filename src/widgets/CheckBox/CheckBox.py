@@ -14,11 +14,13 @@ class Base:
     def th(self):
         Build(
             *self.wgs,
+
             img_margin=self.margin,
         )
     def tr(self, bg=Rgb().tr(), fg=Rgb().th3()):
         Build(
             *self.wgs,
+
             bg=bg,
             bg_hover=bg,
             bg_checked=bg,
@@ -29,6 +31,7 @@ class Base:
             fg_checked=fg,
             fg_indeterminate=fg,
             fg_indeterminate_hover=Rgb().th2(),
+
             img_indeterminate_rgb="th3",
             img_indeterminate_hover_rgb="th2",
             img_margin=self.margin,

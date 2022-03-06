@@ -14,6 +14,7 @@ class Base:
     def th(self):
         Build(
             *self.wgs,
+
             img=Img().calendrier(),
             img_hover=Img().calendrier(),
             img_rgb="",
@@ -23,11 +24,13 @@ class Base:
     def tr(self):
         Build(
             *self.wgs,
+
             bg=Rgb().tr(),
             bg_hover=Rgb().tr(),
-            fg=Rgb().th3(),
             bg_selection=Rgb().th3(),
+            fg=Rgb().th3(),
             fg_selection=Rgb().th1(),
+
             img=Img().calendrier(),
             img_hover=Img().calendrier(),
             img_rgb="",
