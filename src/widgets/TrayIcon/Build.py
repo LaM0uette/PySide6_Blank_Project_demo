@@ -54,6 +54,44 @@ class Build:
             radius=vb_wg.RADIUS,
             radius_item=vb_wg.RADIUS,
     ):
+        """
+        *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
+        *Cur: list() : Cur().%nomCurseur() \n
+        *Dim: int() : Dim().%nomDim() \n
+        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
+        *Font: int() : Font().%nomFont() \n
+        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
+
+        :param wgs:
+        :param width: *Dim
+        :param height: *Dim
+        :param height_separator: int()
+        :param font: str()
+        :param font_size: *Font
+        :param focus_policy: *FocusPolicy
+        :param cursor: *Cur
+        :param bg: *Rgb
+        :param bg_item: *Rgb
+        :param bg_item_checked: *Rgb
+        :param bg_separator: *Rgb
+        :param fg: *Rgb
+        :param fg_item: *Rgb
+        :param fg_item_checked: *Rgb
+        :param margin: *Tuple
+        :param padding: *Tuple
+        :param border: *Tuple
+        :param border_style: *Border_Style
+        :param border_rgb: *Rgb
+        :param border_item: *Tuple
+        :param border_item_style: *Border_Style
+        :param border_item_rgb: *Rgb
+        :param border_item_checked: *Tuple
+        :param border_item_checked_style: *Border_Style
+        :param border_item_checked_rgb: *Rgb
+        :param radius: *Tuple
+        :param radius_item: *Tuple
+        """
 
         style = f"""
                 /* MENU */
