@@ -42,9 +42,9 @@ class Build:
             fg_hover=vb_wg.FG_HOVER,
 
             # Images
-            img=vb_wg.IMG_UNROLL,
+            img=None,
             # Images RGB
-            img_rgb=vb_wg.IMG_UNROLL_RGB,
+            img_rgb=vb_wg.IMG_UNCHECK_RGB,
 
             # Positions WG
             margin=(0,) * 4,
@@ -118,8 +118,9 @@ class Build:
             wg.setIndent(indent)
             wg.setLineWidth(line_width)
             wg.setOpenExternalLinks(open_external_link)
-            wg.setPixmap(QtGui.QPixmap(f"{img}{img_rgb}.svg"))
-            wg.setScaledContents(scaled_contents)
+            if img is not None:
+                wg.setPixmap(QtGui.QPixmap(f"{img}{img_rgb}.svg"))
+                wg.setScaledContents(scaled_contents)
             wg.setTextFormat(text_format)
             wg.setWordWrap(word_wrap)
 
