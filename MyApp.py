@@ -101,6 +101,20 @@ class main(Ui_main, QtWidgets.QWidget):
         ### /QFrame ###
 
 
+        ### QLabel ###
+        Label.Demo(self.lb_lb_demo_th).th()
+        Label.Base(self.lb_mt_nom, font_size=Font().h3()).tr()
+        Label.Base(self.lb_mb_version).tr()
+        Label.Demo(self.lb_lb_demo_tr).tr()
+        Label.Demo(
+            self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
+            self.lb_rb_demo, self.lb_pg_demo, self.lb_sb_demo, self.lb_tw_demo, self.lb_le_demo,
+            self.lb_te_demo, self.lb_pte_demo, self.lb_tb_demo, self.lb_trw_demo, self.lb_sd_demo,
+            self.lb_fr_demo, self.lb_lb_demo
+        ).wg_categorie()
+        ### /QLabel ###
+
+
         ## QRadioButton ###
         RadioButton.Base(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3).th()
         RadioButton.Base(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3).tr()
