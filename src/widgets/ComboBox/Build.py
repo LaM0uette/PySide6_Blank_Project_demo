@@ -65,6 +65,56 @@ class Build:
             scroll_handle_min_width=vb_wg.SCROLL_HANDLE_MIN_WIDTH,
             scroll_handle_min_height=vb_wg.SCROLL_HANDLE_MIN_HEIGHT,
     ):
+        """
+        *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
+        *Cur: list() : Cur().%nomCurseur() \n
+        *Dim: int() : Dim().%nomDim() \n
+        *Font: int() : Font().%nomFont() \n
+        *Img: str() : Img().%nomImage() \n
+        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
+
+        :param wgs: Widgets séparés par ","
+        :param width: *Dim
+        :param height: *Dim
+        :param font: str()
+        :param font_size: *Font
+        :param edit: bool()
+        :param curseur: *Cur
+        :param bg: *Rgb
+        :param bg_hover: *Rgb
+        :param bg_selection: *Rgb
+        :param bg_item: *Rgb
+        :param bg_item_hover: *Rgb
+        :param fg: *Rgb
+        :param fg_hover: *Rgb
+        :param fg_selection: *Rgb
+        :param fg_item: *Rgb
+        :param fg_item_hover: *Rgb
+        :param img: *Img
+        :param img_hover: *Img
+        :param img_rgb: *Rgb
+        :param img_hover_rgb:
+        :param img_width: *Dim
+        :param img_height: *Dim
+        :param border: *Tuplev
+        :param border_style: *Border_Style
+        :param border_rgb: *Rgb
+        :param border_hover: *Tuple
+        :param border_hover_style: *Border_Style
+        :param border_hover_rgb:
+        :param radius: *Tuple
+        :param scroll_bg: *Rgb
+        :param scroll_width: *Dim
+        :param scroll_height: *Dim
+        :param scroll_handle_bg: *Rgb
+        :param scroll_handle_bg_hover: *Rgb
+        :param scroll_handle_fg: *Rgb
+        :param scroll_handle_fg_hover: *Rgb
+        :param scroll_handle_min_width: *Dim
+        :param scroll_handle_min_height: *Dim
+        """
+
         style = f"""
                 /* COMBOBOX */
                 QComboBox, QFontComboBox {{
@@ -155,7 +205,6 @@ class Build:
                 background-color: rgba{scroll_handle_bg_hover};
                 border: none;
                 }}"""
-
         for wg in wgs:
             wg.setStyleSheet(style)
 
