@@ -26,6 +26,7 @@ class Build:
             line_width=0,
             scroll_h=vb_wg.SCROLL_H,
             scroll_v=vb_wg.SCROLL_V,
+            .setSelectionMode()=vb_wg.SCROLL_V,
 
             # Curseur
             cursor=vb_wg.CUR_VIEWPORT,
