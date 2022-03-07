@@ -116,6 +116,12 @@ class main(Ui_main, QtWidgets.QWidget):
         ### /QLabel ###
 
 
+        ### QListWidget ###
+        ListWidget.Demo(self.lv_demo_th, self.lw_demo_th).th()
+        ListWidget.Demo(self.lv_demo_tr, self.lw_demo_tr).tr()
+        ### /QListWidget ###
+
+
         ## QRadioButton ###
         RadioButton.Base(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3).th()
         RadioButton.Base(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3).tr()
