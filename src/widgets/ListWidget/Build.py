@@ -19,7 +19,11 @@ class Build:
             font_size=vb_wg.FONT_SIZE,
 
             # Paramètres
+            alternative_row_colors=False,
             focus_policy=FocusPolicy().no_focus(),
+            frame_shape=vb_wg.FRAME_SHAPE,
+            frame_shadow=vb_wg.FRAME_SHADOW,
+            line_width=0,
             scroll_h=vb_wg.SCROLL_H,
             scroll_v=vb_wg.SCROLL_V,
 
@@ -28,6 +32,7 @@ class Build:
 
             # Couleurs BG
             bg=vb_wg.BG,
+            bg_alternate=vb_wg.BG_ALTERNATE,
             bg_item=vb_wg.BG_ITEM,
             bg_item_hover=vb_wg.BG_ITEM_HOVER,
             bg_item_checked=vb_wg.BG_ITEM_CHECKED,
@@ -84,6 +89,7 @@ class Build:
                 /* LISTWIDGET */
                 .QListWidget, .QListView {{
                 background-color: rgba{bg};
+                alternate-background-color: rgba{bg_alternate};
                 color: rgba{fg};
                 }}
 
@@ -182,7 +188,11 @@ class Build:
             Functions().SET_FONT(wg, font=font, font_size=font_size)
 
             # Paramètres
+            wg.setAlternatingRowColors(alternative_row_colors)
             wg.setFocusPolicy(focus_policy)
+            wg.setFrameShape(frame_shape)
+            wg.setFrameShadow(frame_shadow)
+            wg.setLineWidth(line_width)
             wg.setHorizontalScrollBarPolicy(scroll_h)
             wg.setVerticalScrollBarPolicy(scroll_v)
 

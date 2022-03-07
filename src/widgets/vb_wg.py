@@ -52,6 +52,7 @@ CUR_LE = Cur().ibeam()
 ######################
     # BG
 BG = Rgb().th3()
+BG_ALTERNATE = Rgb().th2()
 BG_HOVER = Rgb().th3()
 BG_CHECKED = Rgb().th1()
 BG_CHECKED_HOVER = Rgb().th1()
