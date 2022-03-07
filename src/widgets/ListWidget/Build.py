@@ -20,7 +20,7 @@ class Build:
 
             # Paramètres
             alternative_row_colors=False,
-            drag_enabled=True,
+            drag_enabled=False,
             drag_drop_mode=vb_wg.DRAG_DROP_MODE,
             drop_action=vb_wg.DROP_ACTION,
             focus_policy=FocusPolicy().no_focus(),
@@ -195,8 +195,8 @@ class Build:
             # Paramètres
             wg.setAlternatingRowColors(alternative_row_colors)
             wg.setDragEnabled(drag_enabled)
-            wg.setDragDropMode()(drag_drop_mode)
-            wg.setDefaultDropAction()(drop_action)
+            wg.setDragDropMode(drag_drop_mode)
+            wg.setDefaultDropAction(drop_action)
             wg.setFocusPolicy(focus_policy)
             wg.setFrameShape(frame_shape)
             wg.setFrameShadow(frame_shadow)
