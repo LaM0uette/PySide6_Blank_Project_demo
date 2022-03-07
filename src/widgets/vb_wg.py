@@ -31,6 +31,7 @@ FRAME_SHADOW = FrameShadow().plain()
 INSERT_POLICY = InsertPolicy().insert_bottom()
 MAX_VISIBLE_ITEMS = 10
 NO_FOCUS = False
+PROGRESS_FORMAT = ProgressFormat().percentage()
 SELECTION_BEHAVIOR = SelectionBehavior().row()
 SELECTION_MODE = SelectionMode().single()
 TEXT_VISIBLE = True
