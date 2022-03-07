@@ -7,34 +7,47 @@ class Build:
     def __init__(
             self,
             *wgs,
-            width=VBase.WG_WIDTH,
-            height=VBase.WG_HEIGHT,
-            font=VBase.FONT,
-            font_size=VBase.FONT_SIZE,
-            text_visible=VBase.TEXT_VISIBLE,
-            align_horizontal=Align().h_center(),
-            align_vertical=Align().v_center(),
-            curseur=Cur().souris(),
+
+            # Dimensions
+            width=vb_wg.WIDTH,
+            height=vb_wg.HEIGHT,
+
+            # Police
+            font=vb_wg.FONT,
+            font_size=vb_wg.FONT_SIZE,
+
+            # Paramètres
+            align_horizontal=Align().center_horizontal(),
+            align_vertical=Align().center_vertical(),
+            text_visible=vb_wg.TEXT_VISIBLE,
+
+            # Curseur
+            cursor=Cur().souris(),
+
             # Couleurs BG
-            bg=VBase.BG,
-            bg_chunk=VBase.BG_CHUNK,
-            bg_chunk_hover=VBase.BG_CHUNK_HOVER,
+            bg=vb_wg.BG,
+            bg_chunk=vb_wg.BG_CHUNK,
+            bg_chunk_hover=vb_wg.BG_CHUNK_HOVER,
             # Couleurs FG
-            fg=VBase.FG,
+            fg=vb_wg.FG,
+
             # Positions WG
-            padding=((0,) * 4),
+            padding=(0,) * 4,
+
             # Bordures
-            border=VBase.WG_BORDER_WIDTH,
-            border_style=VBase.WG_BORDER_STYLE,
-            border_rgb=VBase.WG_BORDER_RGB,
+            border=vb_wg.BORDER_WIDTH,
+            border_style=vb_wg.BORDER_STYLE,
+            border_rgb=vb_wg.BORDER_RGB,
             # Bordures hover
-            border_hover=VBase.WG_BORDER_WIDTH,
-            border_hover_style=VBase.WG_BORDER_STYLE,
-            border_hover_rgb=VBase.WG_BORDER_RGB,
+            border_hover=vb_wg.BORDER_WIDTH,
+            border_hover_style=vb_wg.BORDER_STYLE,
+            border_hover_rgb=vb_wg.BORDER_RGB,
+
             # Rayons
-            radius=VBase.WG_RADIUS,
-            radius_chunk=VBase.WG_RADIUS
+            radius=vb_wg.RADIUS,
+            radius_chunk=vb_wg.RADIUS
     ):
+
         style = f"""
                 /* PROGRESSBAR */
                 QProgressBar {{
@@ -79,14 +92,19 @@ class Build:
                 border-bottom-right-radius: {radius[2]}px;
                 border-bottom-left-radius: {radius[3]}px;
                 }}"""
-
         for wg in wgs:
-            wg.setStyleSheet(style)
+            # Dimensions
+            Functions().SET_DIM(wg, width=width, height=height)
 
-            Fct(wg=wg, w=width, h=height).DIM()
-            wg.setFont(Fct(font=font, font_size=font_size).FONT())
+            # Police
+            Functions().SET_FONT(wg, font=font, font_size=font_size)
 
+            # Paramètres
             wg.setAlignment(align_horizontal | align_vertical)
             wg.setTextVisible(text_visible)
 
-            wg.setCursor(Fct(cur=curseur).CUR())
+            # Curseur
+            wg.setCursor(Functions().SET_CURSOR(cursor))
+
+            # Style
+            wg.setStyleSheet(style)
