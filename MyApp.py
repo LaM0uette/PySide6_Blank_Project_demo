@@ -134,8 +134,8 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### QTableWidget ###
-        TableWidget.Base(self.tv_demo_th, self.tw_demo_th).th()
-        TableWidget.Base(self.tv_demo_tr, self.tw_demo_tr).tr()
+        TableWidget.Demo(self.tv_demo_th, self.tw_demo_th).th()
+        TableWidget.Demo(self.tv_demo_tr, self.tw_demo_tr).tr()
         ### /QTableWidget ###
     def IN_WG(self):
         ### Base ###
