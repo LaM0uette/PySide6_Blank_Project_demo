@@ -2,6 +2,8 @@ from src.lib.palettes.Align import Align
 from src.lib.palettes.ButtonSymbols import ButtonSymbols
 from src.lib.palettes.Cur import Cur
 from src.lib.palettes.Dim import Dim
+from src.lib.palettes.DragDropMode import DragDropMode
+from src.lib.palettes.DropAction import DropAction
 from src.lib.palettes.FocusPolicy import FocusPolicy
 from src.lib.palettes.Font import Font
 from src.lib.palettes.FrameShadow import FrameShadow
