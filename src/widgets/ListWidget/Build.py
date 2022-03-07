@@ -1,6 +1,7 @@
 from PySide6 import QtGui
 
 from src.build.mods import Functions
+from src.lib.palettes import *
 from src.widgets import vb_wg
 
 
@@ -18,7 +19,7 @@ class Build:
             font_size=vb_wg.FONT_SIZE,
 
             # Paramètres
-            focus_policy=vb_wg.FOCUS_POLICY,
+            focus_policy=FocusPolicy().no_focus(),
             scroll_h=vb_wg.SCROLL_H,
             scroll_v=vb_wg.SCROLL_V,
 
