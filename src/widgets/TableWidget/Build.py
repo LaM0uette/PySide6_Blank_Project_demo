@@ -1,4 +1,4 @@
-from PySide6 import QtCore, QtWidgets
+from PySide6 import QtCore
 
 from src.build.mods import Functions
 from src.lib.palettes import *
