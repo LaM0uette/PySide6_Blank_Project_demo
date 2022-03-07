@@ -6,4 +6,5 @@ from src.widgets.Label import Label
 from src.widgets.ListWidget import ListWidget
 from src.widgets.RadioButton import RadioButton
 from src.widgets.ScrollArea import ScrollArea
+from src.widgets.TableWidget import TableWidget
 from src.widgets.TrayIcon import TrayIcon

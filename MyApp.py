@@ -131,6 +131,12 @@ class main(Ui_main, QtWidgets.QWidget):
         ## QRadioButton ###
         TrayIcon.Main(self.tray_menu)
         ## /QRadioButton ###
+
+
+        ### QTableWidget ###
+        TableWidget.Demo(self.tv_demo_th, self.tw_demo_th).th()
+        TableWidget.Demo(self.tv_demo_tr, self.tw_demo_tr).tr()
+        ### /QTableWidget ###
     def IN_WG(self):
         ### Base ###
         self.setCursor(Functions().SET_CURSOR(Cur().souris()))
@@ -182,6 +188,11 @@ class main(Ui_main, QtWidgets.QWidget):
                 model.setItem(ir, ic, QtGui.QStandardItem(f"item:{ic + ir}"))
         self.tv_demo_th.setModel(model)
         self.tv_demo_tr.setModel(model)
+
+        model = QtWidgets.QFileSystemModel()
+        model.setRootPath('')
+        self.trv_demo_th.setModel(model)
+        self.trv_demo_tr.setModel(model)
     def IN_CONNECTIONS(self):
         ### Menu_top ###
         # self.pb_mt_option.clicked.connect(lambda: DLG_Option(fen=fen).MAIN())
