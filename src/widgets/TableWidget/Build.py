@@ -37,7 +37,7 @@ class Build:
             selection_mode=vb_wg.SELECTION_MODE,
 
             # Curseur
-            curseur=Cur().croix(),
+            cursor=Cur().croix(),
 
             # Couleurs BG
             bg=vb_wg.BG,
@@ -288,8 +288,8 @@ class Build:
             wg.setSelectionMode(selection_mode)
 
             # Curseur
-            wg.setCursor(Fct(cur=curseur).CUR())
-            wg.viewport().setCursor(Fct(cur=curseur).CUR())
+            wg.setCursor(Functions().SET_CURSOR(cursor))
+            wg.viewport().setCursor(Functions().SET_CURSOR(vb_wg.CUR_VIEW))
 
             # Style
             wg.setStyleSheet(style)
