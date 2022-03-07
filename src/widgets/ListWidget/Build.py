@@ -26,7 +26,7 @@ class Build:
             line_width=0,
             scroll_h=vb_wg.SCROLL_H,
             scroll_v=vb_wg.SCROLL_V,
-            .setSelectionMode()=vb_wg.SCROLL_V,
+            selection_mode=vb_wg.SELECTION_MODE,
 
             # Curseur
             cursor=vb_wg.CUR_VIEWPORT,
@@ -196,6 +196,7 @@ class Build:
             wg.setLineWidth(line_width)
             wg.setHorizontalScrollBarPolicy(scroll_h)
             wg.setVerticalScrollBarPolicy(scroll_v)
+            wg.setSelectionMode(selection_mode)
 
             # Curseur
             wg.setCursor(Functions().SET_CURSOR(cursor))
