@@ -20,11 +20,24 @@ class Build:
             font_size_hd=vb_wg.FONT_SIZE_HD,
 
             # Paramètres
+            alternative_row_colors=False,
+            drag_enabled=False,
+            drag_drop_mode=vb_wg.DRAG_DROP_MODE,
+            drop_action=vb_wg.DROP_ACTION,
+            focus_policy=FocusPolicy().no_focus(),
+            flow=vb_wg.FLOW,
+            frame_shape=vb_wg.FRAME_SHAPE,
+            frame_shadow=vb_wg.FRAME_SHADOW,
+            line_width=0,
             scroll_h=vb_wg.SCROLL_H,
             scroll_v=vb_wg.SCROLL_V,
             header_h=vb_wg.HEADER_H,
             header_v=vb_wg.HEADER_V,
             selection_behavior=vb_wg.SELECTION_BEHAVIOR,
+            selection_mode=vb_wg.SELECTION_MODE,
+
+
+
 
             # Curseur
             curseur=Cur().croix(),
@@ -259,20 +272,23 @@ class Build:
             wg.verticalHeader().setFont(Functions().SET_FONT(wg, font=font, font_size=font_size_hd, rtn=True))
 
             # Paramètres
+            wg.setAlternatingRowColors(alternative_row_colors)
+            wg.setDragEnabled(drag_enabled)
+            wg.setDragDropMode(drag_drop_mode)
+            wg.setDefaultDropAction(drop_action)
+            wg.setFocusPolicy(focus_policy)
+            wg.setFlow(flow)
+            wg.setFrameShape(frame_shape)
+            wg.setFrameShadow(frame_shadow)
+            wg.setLineWidth(line_width)
+            wg.setHorizontalScrollBarPolicy(scroll_h)
+            wg.setVerticalScrollBarPolicy(scroll_v)
             wg.setHorizontalScrollBarPolicy(scroll_h)
             wg.setVerticalScrollBarPolicy(scroll_v)
             wg.horizontalHeader().setVisible(header_h)
             wg.verticalHeader().setVisible(header_v)
             wg.setSelectionBehavior(selection_behavior)
-
-            wg.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
-            wg.horizontalHeader().setDefaultAlignment(QtCore.Qt.AlignCenter)
-            wg.verticalHeader().setDefaultAlignment(QtCore.Qt.AlignCenter)
-            wg.setFrameShape(QtWidgets.QFrame.NoFrame)
-
-
-
-            wg.setFocusPolicy(QtCore.Qt.NoFocus)
+            wg.setSelectionMode(selection_mode)
 
             # Curseur
             wg.setCursor(Fct(cur=curseur).CUR())
@@ -285,4 +301,6 @@ class Build:
 
 
 
+            wg.horizontalHeader().setDefaultAlignment(QtCore.Qt.AlignCenter)
+            wg.verticalHeader().setDefaultAlignment(QtCore.Qt.AlignCenter)
             wg.resizeColumnsToContents()
