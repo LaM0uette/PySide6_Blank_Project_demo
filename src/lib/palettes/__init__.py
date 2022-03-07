@@ -12,6 +12,7 @@ from src.lib.palettes.Keys import Keys
 from src.lib.palettes.Rgb import Rgb
 from src.lib.palettes.Scroll import Scroll
 from src.lib.palettes.SelectionBehavior import SelectionBehavior
+from src.lib.palettes.SelectionMode import SelectionMode
 from src.lib.palettes.Shadow import Shadow
 from src.lib.palettes.StyleBase import StyleBase
 from src.lib.palettes.TextFormat import TextFormat
