@@ -25,7 +25,6 @@ class Build:
             drag_drop_mode=vb_wg.DRAG_DROP_MODE,
             drop_action=vb_wg.DROP_ACTION,
             focus_policy=FocusPolicy().no_focus(),
-            flow=vb_wg.FLOW,
             frame_shape=vb_wg.FRAME_SHAPE,
             frame_shadow=vb_wg.FRAME_SHADOW,
             line_width=0,
@@ -274,7 +273,6 @@ class Build:
             wg.setDragDropMode(drag_drop_mode)
             wg.setDefaultDropAction(drop_action)
             wg.setFocusPolicy(focus_policy)
-            wg.setFlow(flow)
             wg.setFrameShape(frame_shape)
             wg.setFrameShadow(frame_shadow)
             wg.setLineWidth(line_width)
