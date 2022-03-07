@@ -122,6 +122,12 @@ class main(Ui_main, QtWidgets.QWidget):
         ### /QListWidget ###
 
 
+        ### QProgressBar ###
+        ProgressBar.Demo(self.pg_demo_th).th()
+        ProgressBar.Demo(self.pg_demo_tr).tr()
+        ### /QProgressBar ###
+
+
         ## QRadioButton ###
         RadioButton.Base(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3).th()
         RadioButton.Base(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3).tr()

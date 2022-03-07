@@ -4,6 +4,7 @@ from src.widgets.DateEdit import DateEdit
 from src.widgets.Frame import Frame
 from src.widgets.Label import Label
 from src.widgets.ListWidget import ListWidget
+from src.widgets.ProgressBar import ProgressBar
 from src.widgets.RadioButton import RadioButton
 from src.widgets.ScrollArea import ScrollArea
 from src.widgets.TableWidget import TableWidget
