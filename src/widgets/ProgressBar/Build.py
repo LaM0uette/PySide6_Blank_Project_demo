@@ -108,7 +108,6 @@ class Build:
             wg.setTextVisible(text_visible)
             wg.setMinimum(value_min)
             wg.setMaximum(value_max)
-            wg.setValue(0)
 
             # Curseur
             wg.setCursor(Functions().SET_CURSOR(cursor))
