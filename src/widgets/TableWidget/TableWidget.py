@@ -1,24 +1,28 @@
 from src.lib.palettes import *
 from src.widgets import vb_wg
-from src.widgets.CheckBox.Build import Build
+from src.widgets.TableWidget.Build import Build
 
 
 ##################
 ##     BASE     ##
 ##################
-class Base_th(Style):
+class Base:
     def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
+        self.wgs = wgs
+
+    def th(self):
+        Build(
+            *self.wgs,
+
             bg_corner=Rgb().th1(),
 
-            border=((StyleBase().bd(),) * 4),
+            border=(StyleBase().border(),) * 4,
             border_rgb=Rgb().th3(),
         )
-class Base_tr(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
+    def tr(self):
+        Build(
+            *self.wgs,
+
             header_h=False,
             header_v=False,
 
@@ -30,48 +34,50 @@ class Base_tr(Style):
             bg_item_checked_hover=Rgb().th3(),
             fg_item=Rgb().th3(),
             fg_item_checked=Rgb().th1(),
-    )
+        )
 
 
 ##################
 ##     DEMO     ##
 ##################
-class Demo_th(Style):
-    bd_gen = ((1, )*4)
-    rgb_hd = Rgb().th1()
-    rgb_item = Rgb().th2()
-
+class Demo:
     def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
+        self.wgs = wgs
+    def th(self):
+        bd_gen = ((1,) * 4)
+        rgb_hd = Rgb().th1()
+        rgb_item = Rgb().th2()
+
+        Build(
+            *self.wgs,
+
             height=Dim().h4(),
 
-            border=((StyleBase().bd(),) * 4),
-            border_rgb=Rgb().th3(),
-
             bg_corner=Rgb().th1(),
-            border_hd=self.bd_gen,
-            border_hd_hover=self.bd_gen,
-            border_hd_checked=self.bd_gen,
-            border_hd_checked_hover=self.bd_gen,
-            border_hd_rgb=self.rgb_hd,
-            border_hd_hover_rgb=self.rgb_hd,
-            border_hd_checked_rgb=self.rgb_hd,
-            border_hd_checked_hover_rgb=self.rgb_hd,
 
-            border_item=self.bd_gen,
-            border_item_hover=self.bd_gen,
-            border_item_checked=self.bd_gen,
-            border_item_checked_hover=self.bd_gen,
-            border_item_rgb=self.rgb_item,
-            border_item_hover_rgb=self.rgb_item,
-            border_item_checked_rgb=self.rgb_item,
-            border_item_checked_hover_rgb=self.rgb_item,
-    )
-class Demo_tr(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
+            border=(StyleBase().border(),) * 4,
+            border_rgb=Rgb().th3(),
+            border_hd=bd_gen,
+            border_hd_hover=bd_gen,
+            border_hd_checked=bd_gen,
+            border_hd_checked_hover=bd_gen,
+            border_hd_rgb=rgb_hd,
+            border_hd_hover_rgb=rgb_hd,
+            border_hd_checked_rgb=rgb_hd,
+            border_hd_checked_hover_rgb=rgb_hd,
+            border_item=bd_gen,
+            border_item_hover=bd_gen,
+            border_item_checked=bd_gen,
+            border_item_checked_hover=bd_gen,
+            border_item_rgb=rgb_item,
+            border_item_hover_rgb=rgb_item,
+            border_item_checked_rgb=rgb_item,
+            border_item_checked_hover_rgb=rgb_item,
+        )
+    def tr(self):
+        Build(
+            *self.wgs,
+
             height=Dim().h4(),
             header_h=False,
             header_v=False,
@@ -84,4 +90,4 @@ class Demo_tr(Style):
             bg_item_checked_hover=Rgb().th3(),
             fg_item=Rgb().th3(),
             fg_item_checked=Rgb().th1(),
-    )
+        )
