@@ -1,2 +1,2 @@
 ### Application ###
-BD_LIMIT = 10
+BORDER_LIMIT = 10
