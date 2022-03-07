@@ -51,32 +51,41 @@ class Build:
             radius_chunk=vb_wg.RADIUS
     ):
         """
+        *Align: QtCore.Qt : Align().%nomAlign() \n
+        *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
+        *Cur: list() : Cur().%nomCurseur() \n
+        *Dim: int() : Dim().%nomDim() \n
+        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
+        *Font: int() : Font().%nomFont() \n
+        *ProgressFormat: str() : ProgressFormat().%nomProgress() \n
+        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
-        :param wgs:
-        :param width:
-        :param height:
-        :param font:
-        :param font_size:
-        :param align_horizontal:
-        :param align_vertical:
-        :param progress_format:
-        :param text_visible:
-        :param value_min:
-        :param value_max:
-        :param cursor:
-        :param bg:
-        :param bg_chunk:
-        :param bg_chunk_hover:
-        :param fg:
-        :param padding:
-        :param border:
-        :param border_style:
-        :param border_rgb:
-        :param border_hover:
-        :param border_hover_style:
-        :param border_hover_rgb:
-        :param radius:
-        :param radius_chunk:
+        :param wgs: Widgets séparés par ","
+        :param width: *Dim
+        :param height: *Dim
+        :param font: str()
+        :param font_size: *Font
+        :param align_horizontal: *Align
+        :param align_vertical: *Align
+        :param progress_format: *ProgressFormat
+        :param text_visible: bool()
+        :param value_min: int()
+        :param value_max: int()
+        :param cursor: *Cur
+        :param bg: *Rgb
+        :param bg_chunk: *Rgb
+        :param bg_chunk_hover: *Rgb
+        :param fg: *Rgb
+        :param padding: *Tuple
+        :param border: *Tuple
+        :param border_style: *Border_Style
+        :param border_rgb: *Rgb
+        :param border_hover: *Tuple
+        :param border_hover_style: *Border_Style
+        :param border_hover_rgb: *Rgb
+        :param radius: *Tuple
+        :param radius_chunk: *Tuple
         """
 
         style = f"""
