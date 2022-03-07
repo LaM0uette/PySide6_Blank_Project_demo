@@ -12,6 +12,7 @@ from src.lib.palettes.FrameShape import FrameShape
 from src.lib.palettes.Img import Img
 from src.lib.palettes.InsertPolicy import InsertPolicy
 from src.lib.palettes.Keys import Keys
+from src.lib.palettes.ProgressFormat import ProgressFormat
 from src.lib.palettes.Rgb import Rgb
 from src.lib.palettes.Scroll import Scroll
 from src.lib.palettes.SelectionBehavior import SelectionBehavior

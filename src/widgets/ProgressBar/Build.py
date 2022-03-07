@@ -20,6 +20,8 @@ class Build:
             align_horizontal=Align().center_horizontal(),
             align_vertical=Align().center_vertical(),
             text_visible=vb_wg.TEXT_VISIBLE,
+            value_min=vb_wg.VAL_MIN,
+            value_max=vb_wg.VAL_MAX,
 
             # Curseur
             cursor=Cur().souris(),
@@ -102,6 +104,9 @@ class Build:
             # Paramètres
             wg.setAlignment(align_horizontal | align_vertical)
             wg.setTextVisible(text_visible)
+            wg.setMinimum(value_min)
+            wg.setMaximum(value_max)
+            wg.setValue(0)
 
             # Curseur
             wg.setCursor(Functions().SET_CURSOR(cursor))
