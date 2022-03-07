@@ -36,9 +36,6 @@ class Build:
             selection_behavior=vb_wg.SELECTION_BEHAVIOR,
             selection_mode=vb_wg.SELECTION_MODE,
 
-
-
-
             # Curseur
             curseur=Cur().croix(),
 
