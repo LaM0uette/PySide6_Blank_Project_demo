@@ -88,6 +88,80 @@ class Build:
             scroll_handle_min_width=vb_wg.SCROLL_HANDLE_MIN_WIDTH,
             scroll_handle_min_height=vb_wg.SCROLL_HANDLE_MIN_HEIGHT,
     ):
+        """
+        *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
+        *Cur: list() : Cur().%nomCurseur() \n
+        *Dim: int() : Dim().%nomDim() \n
+        *DragDropMode: QtWidgets.QAbstractItemView : DragDropMode().%nomDragMode \n
+        *DropAction: QtCore.Qt : DropAction().%nomDropAction \n
+        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
+        *Font: int() : Font().%nomFont() \n
+        *Flow: QtWidgets.QListView : Flow().%nomFlow \n
+        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *SelectionBehavior: QtWidgets.QAbstractItemView : SelectionBehavior().%nomSelection \n
+        *SelectionMode: QtWidgets.QAbstractItemView : SelectionMode().%nomSelection \n
+        *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
+
+        :param wgs: Widgets séparés par ","
+        :param width: *Dim
+        :param height: *Dim
+        :param font: str()
+        :param font_size: *Font
+        :param alternative_row_colors: bool()
+        :param drag_enabled: bool()
+        :param drag_drop_mode: *DragDropMode
+        :param drop_action: *DropAction
+        :param focus_policy: *FocusPolicy
+        :param flow: *Flow
+        :param frame_shape: *FrameShape
+        :param frame_shadow: *FrameShadow
+        :param line_width: int()
+        :param scroll_h: bool()
+        :param scroll_v: bool()
+        :param selection_behavior: *SelectionBehavior
+        :param selection_mode: *SelectionMode
+        :param cursor: *Cur
+        :param bg: *Rgb
+        :param bg_alternate: *Rgb
+        :param bg_item: *Rgb
+        :param bg_item_hover: *Rgb
+        :param bg_item_checked: *Rgb
+        :param bg_item_checked_hover: *Rgb
+        :param fg: *Rgb
+        :param fg_item: *Rgb
+        :param fg_item_hover: *Rgb
+        :param fg_item_checked: *Rgb
+        :param fg_item_checked_hover: *Rgb
+        :param border: *Tuple
+        :param border_style: *Border_Style
+        :param border_rgb: *Rgb
+        :param border_hover: *Tuple
+        :param border_hover_style: *Border_Style
+        :param border_hover_rgb: *Rgb
+        :param border_item: *Tuple
+        :param border_item_style: *Border_Style
+        :param border_item_rgb: *Rgb
+        :param border_item_hover: *Tuple
+        :param border_item_hover_style: *Border_Style
+        :param border_item_hover_rgb: *Rgb
+        :param border_item_checked: *Tuple
+        :param border_item_checked_style: *Border_Style
+        :param border_item_checked_rgb: *Rgb
+        :param border_item_checked_hover: *Tuple
+        :param border_item_checked_hover_style: *Border_Style
+        :param border_item_checked_hover_rgb: *Rgb
+        :param radius: *Tuple
+        :param radius_item: *Tuple
+        :param scroll_bg: *Rgb
+        :param scroll_width: *Rgb
+        :param scroll_height: *Rgb
+        :param scroll_handle_bg: *Rgb
+        :param scroll_handle_bg_hover: *Rgb
+        :param scroll_handle_fg: *Rgb
+        :param scroll_handle_fg_hover: *Rgb
+        :param scroll_handle_min_width: *Dim
+        :param scroll_handle_min_height: *Dim
+        """
 
         style = f"""
                 /* LISTWIDGET */
