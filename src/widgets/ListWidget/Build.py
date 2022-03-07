@@ -18,9 +18,12 @@ class Build:
             font_size=vb_wg.FONT_SIZE,
 
             # Paramètres
+            focus_policy=vb_wg.FOCUS_POLICY,
             scroll_h=vb_wg.SCROLL_H,
             scroll_v=vb_wg.SCROLL_V,
-            curseur=vb_wg.CUR_VIEWPORT,
+
+            # Curseur
+            cursor=vb_wg.CUR_VIEWPORT,
 
             # Couleurs BG
             bg=vb_wg.BG,
@@ -34,33 +37,36 @@ class Build:
             fg_item_hover=vb_wg.FG_ITEM_HOVER,
             fg_item_checked=vb_wg.FG_ITEM_CHECKED,
             fg_item_checked_hover=vb_wg.FG_ITEM_CHECKED_HOVER,
+
             # Bordures
-            border=vb_wg.WG_BORDER_WIDTH,
-            border_style=vb_wg.WG_BORDER_STYLE,
-            border_rgb=vb_wg.WG_BORDER_RGB,
+            border=vb_wg.BORDER_WIDTH,
+            border_style=vb_wg.BORDER_STYLE,
+            border_rgb=vb_wg.BORDER_RGB,
             # Bordures hover
-            border_hover=vb_wg.WG_BORDER_WIDTH,
-            border_hover_style=vb_wg.WG_BORDER_STYLE,
-            border_hover_rgb=vb_wg.WG_BORDER_RGB,
+            border_hover=vb_wg.BORDER_WIDTH,
+            border_hover_style=vb_wg.BORDER_STYLE,
+            border_hover_rgb=vb_wg.BORDER_RGB,
             # Bordures item
-            border_item=vb_wg.WG_BORDER_WIDTH,
-            border_item_style=vb_wg.WG_BORDER_STYLE,
-            border_item_rgb=vb_wg.WG_BORDER_RGB,
+            border_item=vb_wg.BORDER_WIDTH,
+            border_item_style=vb_wg.BORDER_STYLE,
+            border_item_rgb=vb_wg.BORDER_RGB,
             # Bordures item hover
-            border_item_hover=vb_wg.WG_BORDER_WIDTH,
-            border_item_hover_style=vb_wg.WG_BORDER_STYLE,
-            border_item_hover_rgb=vb_wg.WG_BORDER_RGB,
+            border_item_hover=vb_wg.BORDER_WIDTH,
+            border_item_hover_style=vb_wg.BORDER_STYLE,
+            border_item_hover_rgb=vb_wg.BORDER_RGB,
             # Bordures item checked
-            border_item_checked=vb_wg.WG_BORDER_WIDTH,
-            border_item_checked_style=vb_wg.WG_BORDER_STYLE,
-            border_item_checked_rgb=vb_wg.WG_BORDER_RGB,
+            border_item_checked=vb_wg.BORDER_WIDTH,
+            border_item_checked_style=vb_wg.BORDER_STYLE,
+            border_item_checked_rgb=vb_wg.BORDER_RGB,
             # Bordures item checked hover
-            border_item_checked_hover=vb_wg.WG_BORDER_WIDTH,
-            border_item_checked_hover_style=vb_wg.WG_BORDER_STYLE,
-            border_item_checked_hover_rgb=vb_wg.WG_BORDER_RGB,
+            border_item_checked_hover=vb_wg.BORDER_WIDTH,
+            border_item_checked_hover_style=vb_wg.BORDER_STYLE,
+            border_item_checked_hover_rgb=vb_wg.BORDER_RGB,
+
             # Rayons
-            radius=vb_wg.WG_RADIUS,
-            radius_item=vb_wg.WG_RADIUS,
+            radius=vb_wg.RADIUS,
+            radius_item=vb_wg.RADIUS,
+
             # Scroll
             scroll_bg=vb_wg.SCROLL_BG,
             scroll_width=vb_wg.SCROLL_WIDTH,
@@ -72,6 +78,7 @@ class Build:
             scroll_handle_min_width=vb_wg.SCROLL_HANDLE_MIN_WIDTH,
             scroll_handle_min_height=vb_wg.SCROLL_HANDLE_MIN_HEIGHT,
     ):
+
         style = f"""
                 /* LISTWIDGET */
                 .QListWidget, .QListView {{
@@ -166,17 +173,21 @@ class Build:
                 background-color: rgba{scroll_handle_bg_hover};
                 border: none;
                 }}"""
-
         for wg in wgs:
-            wg.setStyleSheet(style)
+            # Dimensions
+            Functions().SET_DIM(wg, width=width, height=height)
 
-            Fct(wg=wg, w=width, h=height).DIM()
-            wg.setFont(Fct(font=font, font_size=font_size).FONT())
+            # Police
+            Functions().SET_FONT(wg, font=font, font_size=font_size)
 
+            # Paramètres
+            wg.setFocusPolicy(focus_policy)
             wg.setHorizontalScrollBarPolicy(scroll_h)
             wg.setVerticalScrollBarPolicy(scroll_v)
 
-            wg.setCursor(Fct(cur=curseur).CUR())
-            wg.viewport().setCursor(Fct(cur=Cur().souris_main()).CUR())
+            # Curseur
+            wg.setCursor(Functions().SET_CURSOR(cursor))
+            wg.viewport().setCursor(Functions().SET_CURSOR(vb_wg.CUR_VIEW))
 
-            wg.setFocusPolicy(QtCore.Qt.NoFocus)
+            # Style
+            wg.setStyleSheet(style)
