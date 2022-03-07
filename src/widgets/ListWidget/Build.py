@@ -97,6 +97,8 @@ class Build:
         *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
         *Font: int() : Font().%nomFont() \n
         *Flow: QtWidgets.QListView : Flow().%nomFlow \n
+        *FrameShape: QtWidgets.QFrame : FrameShape().%nomFrameForme \n
+        *FrameShadow: QtWidgets.QFrame : FrameShadow().%nomFrameOmbre \n
         *Rgb: tuple() : Rgb().%nomCouleur() \n
         *SelectionBehavior: QtWidgets.QAbstractItemView : SelectionBehavior().%nomSelection \n
         *SelectionMode: QtWidgets.QAbstractItemView : SelectionMode().%nomSelection \n
