@@ -50,6 +50,34 @@ class Build:
             radius=vb_wg.RADIUS,
             radius_chunk=vb_wg.RADIUS
     ):
+        """
+
+        :param wgs:
+        :param width:
+        :param height:
+        :param font:
+        :param font_size:
+        :param align_horizontal:
+        :param align_vertical:
+        :param progress_format:
+        :param text_visible:
+        :param value_min:
+        :param value_max:
+        :param cursor:
+        :param bg:
+        :param bg_chunk:
+        :param bg_chunk_hover:
+        :param fg:
+        :param padding:
+        :param border:
+        :param border_style:
+        :param border_rgb:
+        :param border_hover:
+        :param border_hover_style:
+        :param border_hover_rgb:
+        :param radius:
+        :param radius_chunk:
+        """
 
         style = f"""
                 /* PROGRESSBAR */
