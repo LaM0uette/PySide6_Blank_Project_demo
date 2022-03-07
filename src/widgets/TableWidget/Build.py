@@ -1,99 +1,116 @@
+from PySide6 import QtCore, QtWidgets
+
 from src.build.mods import Functions
 from src.lib.palettes import *
 from src.widgets import vb_wg
-class Style:
+
+
+class Build:
     def __init__(
             self,
             *wgs,
-            width=VBase.WG_WIDTH,
-            height=VBase.WG_HEIGHT,
-            font=VBase.FONT,
-            font_size=VBase.FONT_SIZE,
-            font_size_hd=VBase.FONT_SIZE_HD,
-            scroll_h=VBase.SCROLL_H,
-            scroll_v=VBase.SCROLL_V,
-            header_h=VBase.HEADER_H,
-            header_v=VBase.HEADER_V,
-            selection_behavior=VBase.SELECTION_BEHAVIOR,
+
+            # Dimensions
+            width=vb_wg.WIDTH,
+            height=vb_wg.HEIGHT,
+
+            # Police
+            font=vb_wg.FONT,
+            font_size=vb_wg.FONT_SIZE,
+            font_size_hd=vb_wg.FONT_SIZE_HD,
+
+            # Paramètres
+            scroll_h=vb_wg.SCROLL_H,
+            scroll_v=vb_wg.SCROLL_V,
+            header_h=vb_wg.HEADER_H,
+            header_v=vb_wg.HEADER_V,
+            selection_behavior=vb_wg.SELECTION_BEHAVIOR,
+
+            # Curseur
             curseur=Cur().croix(),
+
             # Couleurs BG
-            bg=VBase.BG,
-            bg_item=VBase.BG_ITEM,
-            bg_item_hover=VBase.BG_ITEM_HOVER,
-            bg_item_checked=VBase.BG_ITEM_CHECKED,
-            bg_item_checked_hover=VBase.BG_ITEM_CHECKED_HOVER,
-            bg_corner=VBase.BG,
+            bg=vb_wg.BG,
+            bg_item=vb_wg.BG_ITEM,
+            bg_item_hover=vb_wg.BG_ITEM_HOVER,
+            bg_item_checked=vb_wg.BG_ITEM_CHECKED,
+            bg_item_checked_hover=vb_wg.BG_ITEM_CHECKED_HOVER,
+            bg_corner=vb_wg.BG,
             bg_header=Rgb().th2(),
             bg_header_hover=Rgb().th2(),
             bg_header_checked=Rgb().th3(),
             bg_header_checked_hover=Rgb().th3(),
             # Couleurs FG
-            fg=VBase.FG,
-            fg_item=VBase.FG_ITEM,
-            fg_item_hover=VBase.FG_ITEM_HOVER,
-            fg_item_checked=VBase.FG_ITEM_CHECKED,
-            fg_item_checked_hover=VBase.FG_ITEM_CHECKED_HOVER,
+            fg=vb_wg.FG,
+            fg_item=vb_wg.FG_ITEM,
+            fg_item_hover=vb_wg.FG_ITEM_HOVER,
+            fg_item_checked=vb_wg.FG_ITEM_CHECKED,
+            fg_item_checked_hover=vb_wg.FG_ITEM_CHECKED_HOVER,
             fg_header=Rgb().th1(),
             fg_header_hover=Rgb().bn1(),
             fg_header_checked=Rgb().bn1(),
             fg_header_checked_hover=Rgb().bn2(),
             # couleurs autres
-            gridline=VBase.GRIDLINE,
+            gridline=vb_wg.GRIDLINE,
+
             # Bordures
-            border=VBase.WG_BORDER_WIDTH,
-            border_style=VBase.WG_BORDER_STYLE,
-            border_rgb=VBase.WG_BORDER_RGB,
+            border=vb_wg.BORDER_WIDTH,
+            border_style=vb_wg.BORDER_STYLE,
+            border_rgb=vb_wg.BORDER_RGB,
             # Bordures hover
-            border_hover=VBase.WG_BORDER_WIDTH,
-            border_hover_style=VBase.WG_BORDER_STYLE,
-            border_hover_rgb=VBase.WG_BORDER_RGB,
+            border_hover=vb_wg.BORDER_WIDTH,
+            border_hover_style=vb_wg.BORDER_STYLE,
+            border_hover_rgb=vb_wg.BORDER_RGB,
             # Bordures HD
-            border_hd=VBase.WG_BORDER_WIDTH,
-            border_hd_style=VBase.WG_BORDER_STYLE,
-            border_hd_rgb=VBase.WG_BORDER_RGB,
+            border_hd=vb_wg.BORDER_WIDTH,
+            border_hd_style=vb_wg.BORDER_STYLE,
+            border_hd_rgb=vb_wg.BORDER_RGB,
             # Bordures HD hover
-            border_hd_hover=VBase.WG_BORDER_WIDTH,
-            border_hd_hover_style=VBase.WG_BORDER_STYLE,
-            border_hd_hover_rgb=VBase.WG_BORDER_RGB,
+            border_hd_hover=vb_wg.BORDER_WIDTH,
+            border_hd_hover_style=vb_wg.BORDER_STYLE,
+            border_hd_hover_rgb=vb_wg.BORDER_RGB,
             # Bordures HD checked
-            border_hd_checked=VBase.WG_BORDER_WIDTH,
-            border_hd_checked_style=VBase.WG_BORDER_STYLE,
-            border_hd_checked_rgb=VBase.WG_BORDER_RGB,
+            border_hd_checked=vb_wg.BORDER_WIDTH,
+            border_hd_checked_style=vb_wg.BORDER_STYLE,
+            border_hd_checked_rgb=vb_wg.BORDER_RGB,
             # Bordures HD checked hover
-            border_hd_checked_hover=VBase.WG_BORDER_WIDTH,
-            border_hd_checked_hover_style=VBase.WG_BORDER_STYLE,
-            border_hd_checked_hover_rgb=VBase.WG_BORDER_RGB,
+            border_hd_checked_hover=vb_wg.BORDER_WIDTH,
+            border_hd_checked_hover_style=vb_wg.BORDER_STYLE,
+            border_hd_checked_hover_rgb=vb_wg.BORDER_RGB,
             # Bordures item
-            border_item=VBase.WG_BORDER_WIDTH,
-            border_item_style=VBase.WG_BORDER_STYLE,
-            border_item_rgb=VBase.WG_BORDER_RGB,
+            border_item=vb_wg.BORDER_WIDTH,
+            border_item_style=vb_wg.BORDER_STYLE,
+            border_item_rgb=vb_wg.BORDER_RGB,
             # Bordures item hover
-            border_item_hover=VBase.WG_BORDER_WIDTH,
-            border_item_hover_style=VBase.WG_BORDER_STYLE,
-            border_item_hover_rgb=VBase.WG_BORDER_RGB,
+            border_item_hover=vb_wg.BORDER_WIDTH,
+            border_item_hover_style=vb_wg.BORDER_STYLE,
+            border_item_hover_rgb=vb_wg.BORDER_RGB,
             # Bordures item checked
-            border_item_checked=VBase.WG_BORDER_WIDTH,
-            border_item_checked_style=VBase.WG_BORDER_STYLE,
-            border_item_checked_rgb=VBase.WG_BORDER_RGB,
+            border_item_checked=vb_wg.BORDER_WIDTH,
+            border_item_checked_style=vb_wg.BORDER_STYLE,
+            border_item_checked_rgb=vb_wg.BORDER_RGB,
             # Bordures item checked hover
-            border_item_checked_hover=VBase.WG_BORDER_WIDTH,
-            border_item_checked_hover_style=VBase.WG_BORDER_STYLE,
-            border_item_checked_hover_rgb=VBase.WG_BORDER_RGB,
+            border_item_checked_hover=vb_wg.BORDER_WIDTH,
+            border_item_checked_hover_style=vb_wg.BORDER_STYLE,
+            border_item_checked_hover_rgb=vb_wg.BORDER_RGB,
+
             # Rayons
-            radius=VBase.WG_RADIUS,
-            radius_item=VBase.WG_RADIUS,
-            radius_hd=VBase.WG_RADIUS,
+            radius=vb_wg.RADIUS,
+            radius_item=vb_wg.RADIUS,
+            radius_hd=vb_wg.RADIUS,
+
             # Scroll
-            scroll_bg=VBase.SCROLL_BG,
-            scroll_width=VBase.SCROLL_WIDTH,
-            scroll_height=VBase.SCROLL_HEIGHT,
-            scroll_handle_bg=VBase.SCROLL_HANDLE_BG,
-            scroll_handle_bg_hover=VBase.SCROLL_HANDLE_BG_HOVER,
-            scroll_handle_fg=VBase.SCROLL_HANDLE_FG,
-            scroll_handle_fg_hover=VBase.SCROLL_HANDLE_FG_HOVER,
-            scroll_handle_min_width=VBase.SCROLL_HANDLE_MIN_WIDTH,
-            scroll_handle_min_height=VBase.SCROLL_HANDLE_MIN_HEIGHT,
+            scroll_bg=vb_wg.SCROLL_BG,
+            scroll_width=vb_wg.SCROLL_WIDTH,
+            scroll_height=vb_wg.SCROLL_HEIGHT,
+            scroll_handle_bg=vb_wg.SCROLL_HANDLE_BG,
+            scroll_handle_bg_hover=vb_wg.SCROLL_HANDLE_BG_HOVER,
+            scroll_handle_fg=vb_wg.SCROLL_HANDLE_FG,
+            scroll_handle_fg_hover=vb_wg.SCROLL_HANDLE_FG_HOVER,
+            scroll_handle_min_width=vb_wg.SCROLL_HANDLE_MIN_WIDTH,
+            scroll_handle_min_height=vb_wg.SCROLL_HANDLE_MIN_HEIGHT,
     ):
+
         style = f"""
                 /* CORNER */
                 QTableCornerButton::section {{
@@ -232,32 +249,40 @@ class Style:
                 background-color: rgba{scroll_handle_bg_hover};
                 border: none;
                 }}"""
-
         for wg in wgs:
-            wg.setStyleSheet(style)
-            wg.horizontalHeader().setStyleSheet(style)
-            wg.verticalHeader().setStyleSheet(style)
+            # Dimensions
+            Functions().SET_DIM(wg, width=width, height=height)
 
-            Fct(wg=wg, w=width, h=height).DIM()
-            wg.setFont(Fct(font=font, font_size=font_size).FONT())
-            wg.horizontalHeader().setFont(Fct(font_size=font_size_hd).FONT())
-            wg.verticalHeader().setFont(Fct(font_size=font_size_hd).FONT())
+            # Police
+            Functions().SET_FONT(wg, font=font, font_size=font_size)
+            wg.horizontalHeader().setFont(Functions().SET_FONT(wg, font=font, font_size=font_size_hd, rtn=True))
+            wg.verticalHeader().setFont(Functions().SET_FONT(wg, font=font, font_size=font_size_hd, rtn=True))
 
+            # Paramètres
             wg.setHorizontalScrollBarPolicy(scroll_h)
             wg.setVerticalScrollBarPolicy(scroll_v)
             wg.horizontalHeader().setVisible(header_h)
             wg.verticalHeader().setVisible(header_v)
-
             wg.setSelectionBehavior(selection_behavior)
-
-            wg.setCursor(Fct(cur=curseur).CUR())
-            wg.viewport().setCursor(Fct(cur=curseur).CUR())
 
             wg.setSelectionMode(QtWidgets.QAbstractItemView.ExtendedSelection)
             wg.horizontalHeader().setDefaultAlignment(QtCore.Qt.AlignCenter)
             wg.verticalHeader().setDefaultAlignment(QtCore.Qt.AlignCenter)
             wg.setFrameShape(QtWidgets.QFrame.NoFrame)
 
-            wg.resizeColumnsToContents()
+
 
             wg.setFocusPolicy(QtCore.Qt.NoFocus)
+
+            # Curseur
+            wg.setCursor(Fct(cur=curseur).CUR())
+            wg.viewport().setCursor(Fct(cur=curseur).CUR())
+
+            # Style
+            wg.setStyleSheet(style)
+            wg.horizontalHeader().setStyleSheet(style)
+            wg.verticalHeader().setStyleSheet(style)
+
+
+
+            wg.resizeColumnsToContents()
