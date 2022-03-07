@@ -25,6 +25,7 @@ DRAG_DROP_MODE = DragDropMode().no_drag()
 DROP_ACTION = DropAction().move()
 EDIT = False
 FOCUS_POLICY = FocusPolicy().strong_focus()
+FLOW = Flow().top_to_bottom()
 FRAME_SHAPE = FrameShape().no_frame()
 FRAME_SHADOW = FrameShadow().plain()
 INSERT_POLICY = InsertPolicy().insert_bottom()
