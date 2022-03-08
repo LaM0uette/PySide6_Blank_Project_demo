@@ -1,63 +1,23 @@
-from PySide6 import QtGui
-
-from src.build import *
-from src.build.widgets import VBase
-
-
+from src.lib.palettes import *
+from src.widgets import vb_wg
+from src.widgets.CheckBox.Build import Build
 
 
 ##################
 ##     BASE     ##
 ##################
-class Base_th(Style):
+class Base:
     def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
+        self.wgs = wgs
+
+    def th(self):
+        Build(
+            *self.wgs,
         )
-class Base_tr(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            bg=Rgb().tr(),
-            fg=Rgb().th3()
-    )
-
-class tr_taille(Style):
-    def __init__(self, *wgs, h):
-        super().__init__(
-            *wgs,
-            height=None,
-            font_size=h,
+    def tr(self):
+        Build(
+            *self.wgs,
 
             bg=Rgb().tr(),
             fg=Rgb().th3()
-    )
-class rgb_hex(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            bg=Rgb().tr(),
-            bg_selection=Rgb().th3(),
-            fg=Rgb().th3(),
-            fg_selection=Rgb().th1(),
-            align_horizontal=Align().h_center()
-    )
-
-
-##################
-##     DEMO     ##
-##################
-class Demo_th(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            height=Dim().h5(),
-    )
-class Demo_tr(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            height=Dim().h5(),
-
-            bg=Rgb().tr(),
-    )
+        )
