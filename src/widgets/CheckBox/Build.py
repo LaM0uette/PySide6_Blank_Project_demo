@@ -23,7 +23,6 @@ class Build:
             # Curseur
             cursor=vb_wg.CUR_MAIN,
 
-
             # Couleurs BG
             bg=vb_wg.BG,
             bg_hover=vb_wg.BG_HOVER,
