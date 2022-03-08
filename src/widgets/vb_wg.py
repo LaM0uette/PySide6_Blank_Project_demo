@@ -40,7 +40,7 @@ VALUE_MAX = 100
 VALUE_STEP = 1
 PAGE_STEP = 10
 TEXT_FORMAT = TextFormat().plain()
-TICK_POSITION = TickPosition().plain()
+TICK_POSITION = TickPosition().no()
 WORD_WRAP = True
 
 

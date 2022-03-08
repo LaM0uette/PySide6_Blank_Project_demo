@@ -20,3 +20,4 @@ from src.lib.palettes.SelectionMode import SelectionMode
 from src.lib.palettes.Shadow import Shadow
 from src.lib.palettes.StyleBase import StyleBase
 from src.lib.palettes.TextFormat import TextFormat
+from src.lib.palettes.TickPosition import TickPosition
