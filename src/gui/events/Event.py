@@ -66,9 +66,9 @@ class Event:
             self.ui.setCursor(Functions().SET_CURSOR(Cur().souris()))
 
         try:
-            if event.buttons() == QtCore.Qt.LeftButton and v_gb.MARGIN_APP < verif_height < Dim().h9()+v_gb.MARGIN_APP and self.ui.windowState() != QtCore.Qt.WindowMaximized:
+            if event.buttons() == QtCore.Qt.LeftButton and verif_height < Dim().h9() and self.ui.windowState() != QtCore.Qt.WindowMaximized:
                 act_move(event)
-            if event.buttons() == QtCore.Qt.LeftButton and v_gb.MARGIN_APP < verif_height < Dim().h9()+v_gb.MARGIN_APP and self.ui.windowState() == QtCore.Qt.WindowMaximized:
+            if event.buttons() == QtCore.Qt.LeftButton and verif_height < Dim().h9() and self.ui.windowState() == QtCore.Qt.WindowMaximized:
                 self.ui.setWindowState(QtCore.Qt.WindowNoState)
                 self.ui.win_state = QtCore.Qt.WindowNoState
                 act_move(event)
