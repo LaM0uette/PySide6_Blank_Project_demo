@@ -3,6 +3,7 @@ from src.widgets.ComboBox import ComboBox
 from src.widgets.DateEdit import DateEdit
 from src.widgets.Frame import Frame
 from src.widgets.Label import Label
+from src.widgets.LineEdit import LineEdit
 from src.widgets.ListWidget import ListWidget
 from src.widgets.ProgressBar import ProgressBar
 from src.widgets.RadioButton import RadioButton
