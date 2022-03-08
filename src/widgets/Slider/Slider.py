@@ -13,6 +13,18 @@ class Base:
     def th(self):
         Build(
             *self.wgs,
+
+            bg=Rgb().th1(),
+
+            height_groove=12,
+            width_groove=12,
+            width_handle_h=20,
+            height_handle_h=10,
+            width_handle_v=10,
+            height_handle_v=20,
+
+            margin_handle_h=(-3, -3, 0, 0),
+            margin_handle_v=(0, 0, -3, -3),
         )
     def rond(self):
         Build(
