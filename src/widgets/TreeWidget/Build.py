@@ -1,4 +1,7 @@
+from PySide6 import QtWidgets
+
 from src.build.mods import Functions
+from src.lib.palettes import *
 from src.widgets import vb_wg
 
 
@@ -6,16 +9,29 @@ class Build:
     def __init__(
             self,
             *wgs,
+
+            # Dimensions
             width=vb_wg.WIDTH,
             height=vb_wg.HEIGHT,
+
+            # Police
             font=vb_wg.FONT,
             font_size=vb_wg.FONT_SIZE,
+
+            # Paramètres
+            animate=False,
             scroll_h=vb_wg.SCROLL_H,
             scroll_v=vb_wg.SCROLL_V,
-            sorting=False,
-            animate=False,
+            focus_policy=vb_wg.FOCUS_POLICY,
+            frame_shape=vb_wg.FRAME_SHAPE,
+            frame_shadow=vb_wg.FRAME_SHADOW,
+            line_width=0,
             header_hidden=True,
-            curseur=vb_wg.CUR,
+            sorting=False,
+
+            # Curseur
+            cursor=vb_wg.CUR,
+
             # Couleurs BG
             bg=vb_wg.BG,
             bg_item=vb_wg.BG_ITEM,
@@ -30,6 +46,7 @@ class Build:
             fg_item_checked=vb_wg.FG_ITEM_CHECKED,
             fg_item_checked_hover=vb_wg.FG_ITEM_CHECKED_HOVER,
             fg_header=Rgb().th1(),
+
             # Bordures
             border=vb_wg.BORDER_WIDTH,
             border_style=vb_wg.BORDER_STYLE,
@@ -58,9 +75,11 @@ class Build:
             border_item_checked_hover=vb_wg.BORDER_WIDTH,
             border_item_checked_hover_style=vb_wg.BORDER_STYLE,
             border_item_checked_hover_rgb=vb_wg.BORDER_RGB,
+
             # Rayons
             radius=vb_wg.RADIUS,
             radius_item=vb_wg.RADIUS,
+
             # Scroll
             scroll_bg=vb_wg.SCROLL_BG,
             scroll_width=vb_wg.SCROLL_WIDTH,
@@ -179,19 +198,26 @@ class Build:
                 border: none;
                 }}"""
         for wg in wgs:
-            wg.setStyleSheet(style)
+            # Dimensions
+            Functions().SET_DIM(wg, width=width, height=height)
 
-            Fct(wg=wg, w=width, h=height).DIM()
-            wg.setFont(Fct(font=font, font_size=font_size).FONT())
+            # Police
+            Functions().SET_FONT(wg, font=font, font_size=font_size)
 
+            # Paramètres
+            wg.setAnimated(animate)
             wg.setHorizontalScrollBarPolicy(scroll_h)
             wg.setVerticalScrollBarPolicy(scroll_v)
-
             wg.setFrameShape(QtWidgets.QFrame.NoFrame)
-            wg.setSortingEnabled(sorting)
-            wg.setAnimated(animate)
+            wg.setFocusPolicy(focus_policy)
+            wg.setFrameShape(frame_shape)
+            wg.setFrameShadow(frame_shadow)
+            wg.setLineWidth(line_width)
             wg.setHeaderHidden(header_hidden)
+            wg.setSortingEnabled(sorting)
 
-            wg.setCursor(Fct(cur=curseur).CUR())
+            # Curseur
+            wg.setCursor(Functions().SET_CURSOR(cursor))
 
-            wg.setFocusPolicy(QtCore.Qt.NoFocus)
+            # Style
+            wg.setStyleSheet(style)
