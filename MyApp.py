@@ -64,6 +64,12 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setupUi(self)
         self.vlay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
     def IN_CLASSE(self):
+        ### QLineEdit ###
+        LineEdit.Base(self.le_demo_th).th()
+        LineEdit.Base(self.le_demo_tr).tr()
+        ### /QLineEdit ###
+
+
         ### QScrollBoxArea ###
         ScrollArea.Base(self.sca_main).th()
         ### /QScrollBoxArea ###
@@ -117,12 +123,6 @@ class main(Ui_main, QtWidgets.QWidget):
             self.lb_fr_demo, self.lb_lb_demo
         ).wg_categorie()
         ### /QLabel ###
-
-
-        ### QLineEdit ###
-        LineEdit.Base(self.le_demo_th).th()
-        LineEdit.Base(self.le_demo_tr).tr()
-        ### /QLineEdit ###
 
 
         ### QListWidget ###
