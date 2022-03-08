@@ -69,6 +69,7 @@ class main(Ui_main, QtWidgets.QWidget):
         LineEdit.Base(self.le_demo_tr).tr()
         ### /QLineEdit ###
 
+
         ### QTextEdit ###
         TextEdit.Demo(self.te_demo_th).th()
         TextEdit.Demo(self.te_demo_tr).tr()
