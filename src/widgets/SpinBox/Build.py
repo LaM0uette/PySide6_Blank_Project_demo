@@ -17,14 +17,18 @@ class Build:
             font_size=vb_wg.FONT_SIZE,
 
             # Paramètres
+            accelerated=True,
             align_horizontal=Align().center_horizontal(),
             align_vertical=Align().center_vertical(),
             button_symbols=vb_wg.BUTTON_SYMBOLS,
             focus_policy=vb_wg.FOCUS_POLICY,
+            frame=False,
             value_min=vb_wg.VALUE_MIN,
             value_max=vb_wg.VALUE_MAX,
             value_step=vb_wg.VALUE_STEP,
             page_step=vb_wg.PAGE_STEP,
+            prefix="",
+            suffix="",
 
             # Curseur
             cursor=vb_wg.CUR,
@@ -125,13 +129,18 @@ class Build:
             Functions().SET_FONT(wg, font=font, font_size=font_size)
 
             # Paramètres
+            wg.setAccelerated(accelerated)
             wg.setAlignment(align_horizontal | align_vertical)
             wg.setButtonSymbols(button_symbols)
             wg.setFocusPolicy(focus_policy)
+            wg.setFrame(frame)
             wg.setMinimum(value_min)
             wg.setMaximum(value_max)
             wg.setSingleStep(value_step)
             wg.setPageStep(page_step)
+            wg.setPrefix(prefix)
+            wg.setSuffix(suffix)
+
             # Curseur
             wg.setCursor(Functions().SET_CURSOR(cursor))
             wg.lineEdit().setCursor(Functions().SET_CURSOR(cursor_le))
