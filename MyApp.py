@@ -119,10 +119,10 @@ class main(Ui_main, QtWidgets.QWidget):
         ### /QLabel ###
 
 
-        ### QText ###
-        LineEdit.Base(self.le_demo_th).tr()
+        ### QLineEdit ###
+        LineEdit.Base(self.le_demo_th).th()
         LineEdit.Base(self.le_demo_tr).tr()
-        ### /QText ###
+        ### /QLineEdit ###
 
 
         ### QListWidget ###
