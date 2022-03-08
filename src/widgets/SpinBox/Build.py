@@ -1,35 +1,48 @@
 from src.build.mods import Functions
 from src.lib.palettes import *
 from src.widgets import vb_wg
-class Style:
+
+
+class Build:
     def __init__(
             self,
             *wgs,
-            wg_type=VBase.SB_BUTTONS_TYPE,
-            width=VBase.WG_WIDTH,
-            height=VBase.WG_HEIGHT,
-            font=VBase.FONT,
-            font_size=VBase.FONT_SIZE,
-            no_focus=VBase.NO_FOCUS,
-            value_min=VBase.VAL_MIN,
-            value_max=VBase.VAL_MAX,
-            value_step=VBase.VAL_STEP,
-            align_horizontal=Align().h_center(),
-            align_vertical=Align().v_center(),
-            curseur=VBase.CUR,
-            curseur_le=VBase.CUR_LE,
+
+            # Dimensions
+            width=vb_wg.WIDTH,
+            height=vb_wg.HEIGHT,
+
+            # Police
+            font=vb_wg.FONT,
+            font_size=vb_wg.FONT_SIZE,
+
+            # Paramètres
+            align_horizontal=Align().center_horizontal(),
+            align_vertical=Align().center_vertical(),
+            button_symbols=vb_wg.BUTTON_SYMBOLS,
+            focus_policy=vb_wg.FOCUS_POLICY,
+            value_min=vb_wg.VALUE_MIN,
+            value_max=vb_wg.VALUE_MAX,
+            value_step=vb_wg.VALUE_STEP,
+            page_step=vb_wg.PAGE_STEP,
+
+            # Curseur
+            cursor=vb_wg.CUR,
+            cursor_le=vb_wg.CUR_LE,
+
             # Couleurs BG
-            bg=VBase.BG,
-            bg_selection=VBase.BG_SELECTION,
+            bg=vb_wg.BG,
+            bg_selection=vb_wg.BG_SELECTION,
             # Couleurs FG
-            fg=VBase.FG,
-            fg_selection=VBase.FG_SELECTION,
+            fg=vb_wg.FG,
+            fg_selection=vb_wg.FG_SELECTION,
+
             # Images
-            img_up=VBase.IMG_UP,
-            img_down=VBase.IMG_DOWN,
+            img_up=vb_wg.IMG_UP,
+            img_down=vb_wg.IMG_DOWN,
             # Images RGB
-            img_up_rgb=VBase.IMG_UP_RGB,
-            img_down_rgb=VBase.IMG_DOWN_RGB,
+            img_up_rgb=vb_wg.IMG_UP_RGB,
+            img_down_rgb=vb_wg.IMG_DOWN_RGB,
             # Images DIM
             img_up_width=10,
             img_up_height=10,
@@ -38,17 +51,20 @@ class Style:
             # Images positions
             img_up_dim=((0,) * 4),
             img_down_dim=((0,) * 4),
+
             # Bordures
-            border=VBase.WG_BORDER_WIDTH,
-            border_style=VBase.WG_BORDER_STYLE,
-            border_rgb=VBase.WG_BORDER_RGB,
+            border=vb_wg.BORDER_WIDTH,
+            border_style=vb_wg.BORDER_STYLE,
+            border_rgb=vb_wg.BORDER_RGB,
             # Bordures hover
-            border_hover=VBase.WG_BORDER_WIDTH,
-            border_hover_style=VBase.WG_BORDER_STYLE,
-            border_hover_rgb=VBase.WG_BORDER_RGB,
+            border_hover=vb_wg.BORDER_WIDTH,
+            border_hover_style=vb_wg.BORDER_STYLE,
+            border_hover_rgb=vb_wg.BORDER_RGB,
+
             # Rayons
-            radius=VBase.WG_RADIUS,
+            radius=vb_wg.RADIUS,
     ):
+        
         style = f"""
                 /* SPINBOX */
                 QSpinBox, QDoubleSpinBox {{
@@ -101,24 +117,24 @@ class Style:
                 border-bottom-right-radius: {radius[2]}px;
                 border-bottom-left-radius: {radius[3]}px;
                 }}"""
-
         for wg in wgs:
-            wg.setStyleSheet(style)
+            # Dimensions
+            Functions().SET_DIM(wg, width=width, height=height)
 
-            try: Fct(wg=wg, w=width, h=height).DIM()
-            except: pass
+            # Police
+            Functions().SET_FONT(wg, font=font, font_size=font_size)
 
-            wg.setFont(Fct(font=font, font_size=font_size).FONT())
-
+            # Paramètres
             wg.setAlignment(align_horizontal | align_vertical)
-
+            wg.setButtonSymbols(button_symbols)
+            wg.setFocusPolicy(focus_policy)
             wg.setMinimum(value_min)
             wg.setMaximum(value_max)
             wg.setSingleStep(value_step)
+            wg.setPageStep(page_step)
+            # Curseur
+            wg.setCursor(Functions().SET_CURSOR(cursor))
+            wg.lineEdit().setCursor(Functions().SET_CURSOR(cursor_le))
 
-            wg.setFrame(QtWidgets.QFrame.NoFrame)
-            wg.setButtonSymbols(wg_type)
-            if no_focus: wg.setFocusPolicy(QtCore.Qt.NoFocus)
-
-            wg.setCursor(Fct(cur=curseur).CUR())
-            wg.lineEdit().setCursor(Fct(cur=curseur_le).CUR())
+            # Style
+            wg.setStyleSheet(style)
