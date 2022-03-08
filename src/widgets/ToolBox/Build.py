@@ -20,7 +20,7 @@ class Build:
             frame_shape=vb_wg.FRAME_SHAPE,
             frame_shadow=vb_wg.FRAME_SHADOW,
             line_width=0,
-            tab_spacing=0,
+            tab_spacing=5,
 
             # Curseur
             cursor=vb_wg.CUR,
