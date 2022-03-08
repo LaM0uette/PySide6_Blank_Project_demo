@@ -19,6 +19,11 @@ class Build:
             font_size=vb_wg.FONT_SIZE,
 
             # Paramètres
+            auto_exclusive=False,
+            auto_repeat=False,
+            auto_repeat_delay=300,
+            checkable=False,
+            flat=True,
             pb_type=None,
 
             # Curseur
@@ -151,7 +156,11 @@ class Build:
             Functions().SET_FONT(wg, font=font, font_size=font_size)
 
             # Paramètres
-            wg.setFlat(True)
+            wg.setAutoExclusive(auto_exclusive)
+            wg.setAutoRepeat(auto_repeat)
+            wg.setAutoRepeatDelay(auto_repeat_delay)
+            wg.setCheckable(checkable)
+            wg.setFlat(flat)
             wg.setSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
 
             # Curseur
