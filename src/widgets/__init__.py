@@ -11,4 +11,5 @@ from src.widgets.ScrollArea import ScrollArea
 from src.widgets.Slider import Slider
 from src.widgets.SpinBox import SpinBox
 from src.widgets.TableWidget import TableWidget
+from src.widgets.TextEdit import TextEdit
 from src.widgets.TrayIcon import TrayIcon
