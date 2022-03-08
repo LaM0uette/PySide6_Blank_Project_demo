@@ -21,8 +21,8 @@ class Build:
             align_vertical=Align().center_vertical(),
             progress_format=vb_wg.PROGRESS_FORMAT,
             text_visible=vb_wg.TEXT_VISIBLE,
-            value_min=vb_wg.VAL_MIN,
-            value_max=vb_wg.VAL_MAX,
+            value_min=vb_wg.VALUE_MIN,
+            value_max=vb_wg.VALUE_MAX,
 
             # Curseur
             cursor=Cur().souris(),

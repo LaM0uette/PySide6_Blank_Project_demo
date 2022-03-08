@@ -35,9 +35,10 @@ PROGRESS_FORMAT = ProgressFormat().percentage()
 SELECTION_BEHAVIOR = SelectionBehavior().row()
 SELECTION_MODE = SelectionMode().single()
 TEXT_VISIBLE = True
-VAL_MIN = 0
-VAL_MAX = 100
-VAL_STEP = 1
+VALUE_MIN = 0
+VALUE_MAX = 100
+VALUE_STEP = 1
+PAGE_STEP = 10
 TEXT_FORMAT = TextFormat().plain()
 WORD_WRAP = True
 

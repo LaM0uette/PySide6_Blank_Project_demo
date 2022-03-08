@@ -13,9 +13,10 @@ class Build:
             height=vb_wg.HEIGHT,
 
             # Paramètres
-            value_min=vb_wg.VAL_MIN,
-            value_max=vb_wg.VAL_MAX,
-            value_step=vb_wg.VAL_STEP,
+            value_min=vb_wg.VALUE_MIN,
+            value_max=vb_wg.VALUE_MAX,
+            value_step=vb_wg.VALUE_STEP,
+            page_step=vb_wg.PAGE_STEP,
 
             # Curseur
             cursor=vb_wg.CUR,
@@ -187,6 +188,7 @@ class Build:
             wg.setMinimum(value_min)
             wg.setMaximum(value_max)
             wg.setSingleStep(value_step)
+            wg.setPageStep(page_step)
 
             # Curseur
             wg.setCursor(Functions().SET_CURSOR(cursor))
