@@ -49,8 +49,8 @@ class Build:
             img_down_width=10,
             img_down_height=10,
             # Images positions
-            img_up_dim=((0,) * 4),
-            img_down_dim=((0,) * 4),
+            img_up_dim=(0,) * 4,
+            img_down_dim=(0,) * 4,
 
             # Bordures
             border=vb_wg.BORDER_WIDTH,
