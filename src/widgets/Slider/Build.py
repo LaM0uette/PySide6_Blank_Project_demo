@@ -17,6 +17,7 @@ class Build:
             value_max=vb_wg.VALUE_MAX,
             value_step=vb_wg.VALUE_STEP,
             page_step=vb_wg.PAGE_STEP,
+            tick_position=vb_wg.TICK_POSITION,
 
             # Curseur
             cursor=vb_wg.CUR,
@@ -189,6 +190,7 @@ class Build:
             wg.setMaximum(value_max)
             wg.setSingleStep(value_step)
             wg.setPageStep(page_step)
+            wg.setTickPosition(tick_position)
 
             # Curseur
             wg.setCursor(Functions().SET_CURSOR(cursor))
