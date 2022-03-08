@@ -22,10 +22,12 @@ class Event:
     def e_agrandir(self):
         """Permet d'agrandir la fenêtre"""
         if self.ui.windowState() == QtCore.Qt.WindowMaximized:
+            self.ui.vlay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
             self.ui.win_state = QtCore.Qt.WindowNoState
             self._e_center_screen()
             self.ui.e_resize_screen()
         else:
+            self.ui.vlay_main.setContentsMargins(0, 0, 0, 0)
             self.ui.win_state = QtCore.Qt.WindowMaximized
 
         self.ui.setWindowState(self.ui.win_state)

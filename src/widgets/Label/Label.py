@@ -18,6 +18,8 @@ class Base:
             width=Dim().h9(),
             height=Dim().h9(),
 
+            focus_policy=FocusPolicy().no_focus(),
+
             bg=Rgb().tr(),
             bg_hover=Rgb().tr(),
 
@@ -30,11 +32,15 @@ class Base:
         Build(
             *self.wgs,
 
+            focus_policy=FocusPolicy().no_focus(),
+
             font_size=self.font_size,
         )
     def tr(self):
         Build(
             *self.wgs,
+
+            focus_policy=FocusPolicy().no_focus(),
 
             font_size=self.font_size,
 
@@ -46,6 +52,8 @@ class Base:
     def titre(self):
         Build(
             *self.wgs,
+
+            focus_policy=FocusPolicy().no_focus(),
 
             font_size=self.font_size,
 
