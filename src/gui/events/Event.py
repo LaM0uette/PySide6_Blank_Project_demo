@@ -76,7 +76,7 @@ class Event:
     def mouseReleaseEvent(self, event):
         cur = QtGui.QCursor()
         verif_height = cur.pos().y() - self.ui.pos().y()
-        if v_gb.MARGIN_APP < verif_height < Dim().h9()+v_gb.MARGIN_APP and self.ui.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= v_gb.MARGIN_APP:
+        if Dim().h9() + v_gb.MARGIN_APP > verif_height > v_gb.MARGIN_APP >= cur.pos().y() and self.ui.windowState() != QtCore.Qt.WindowMaximized:
             self.ui.setCursor(Functions().SET_CURSOR(Cur().souris()))
             self.e_agrandir()
             event.accept()
