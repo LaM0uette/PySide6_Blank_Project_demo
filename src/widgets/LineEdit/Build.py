@@ -21,6 +21,7 @@ class Build:
             # Paramètres
             align_horizontal=Align().left(),
             align_vertical=Align().center_vertical(),
+            clear_button=False,
             echo_mode=EchoMode().normal(),
             focus_policy=vb_wg.FOCUS_POLICY,
             frame=False,
@@ -86,6 +87,7 @@ class Build:
 
             # Paramètres
             wg.setAlignment(align_horizontal | align_vertical)
+            wg.setClearButtonEnabled(clear_button)
             wg.setEchoMode(echo_mode)
             wg.setFocusPolicy(focus_policy)
             wg.setFrame(frame)
