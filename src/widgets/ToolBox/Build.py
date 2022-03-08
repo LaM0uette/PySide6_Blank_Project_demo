@@ -2,7 +2,7 @@ from src.build.mods import Functions
 from src.widgets import vb_wg
 
 
-class Style:
+class Build:
     def __init__(
             self,
             *wgs,
