@@ -82,6 +82,70 @@ class Build:
             # Rayons
             radius=vb_wg.RADIUS
     ):
+        """
+        *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
+        *Cur: list() : Cur().%nomCurseur() \n
+        *Dim: int() : Dim().%nomDim() \n
+        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
+        *Font: int() : Font().%nomFont() \n
+        *Img: str() : Img().%nomImage() \n
+        *Img_rgb: str() : th1 | th2 | th3 | bn1 | bn2 \n
+        *PbType: str() : None | "check" | "ico" | "zoom" \n
+        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
+
+        :param wgs: Widgets séparés par ","
+        :param width: *Dim
+        :param height: *Dim
+        :param font: str()
+        :param font_size: *Font
+        :param auto_exclusive: bool()
+        :param auto_repeat: bool()
+        :param auto_repeat_delay: int()
+        :param checkable: bool()
+        :param flat: bool()
+        :param pb_type: *PbType
+        :param cursor: *Cur
+        :param bg: *Rgb
+        :param bg_hover: *Rgb
+        :param bg_checked: *Rgb
+        :param bg_checked_hover: *Rgb
+        :param bg_pressed: *Rgb
+        :param bg_checked_pressed: *Rgb
+        :param fg: *Rgb
+        :param fg_hover: *Rgb
+        :param fg_checked: *Rgb
+        :param fg_checked_hover: *Rgb
+        :param fg_pressed: *Rgb
+        :param fg_checked_pressed: *Rgb
+        :param img_uncheck: *Img
+        :param img_uncheck_hover: *Img
+        :param img_check: *Img
+        :param img_check_hover: *Img
+        :param img: *Img
+        :param img_hover: *Img
+        :param img_uncheck_rgb: *Rgb
+        :param img_uncheck_hover_rgb: *Rgb
+        :param img_check_rgb: *Rgb
+        :param img_check_hover_rgb: *Rgb
+        :param img_rgb: *Rgb
+        :param img_hover_rgb: *Rgb
+        :param img_height: *Dim
+        :param IMG_HEIGHT: *Dim
+        :param border: *Tuple
+        :param border_style: *Border_Style
+        :param border_rgb: *Rgb
+        :param border_hover: *Tuple
+        :param border_hover_style: *Border_Style
+        :param border_hover_rgb: *Rgb
+        :param border_checked: *Tuple
+        :param border_checked_style: *Border_Style
+        :param border_checked_rgb: *Rgb
+        :param border_checked_hover: *Tuple
+        :param border_checked_hover_style: *Border_Style
+        :param border_checked_hover_rgb: *Rgb
+        :param radius: *Tuple
+        """
         
         style = f"""
                 /* BUTTON */
