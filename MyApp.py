@@ -140,8 +140,8 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### QSlider ###
-        Slider.Base_rond(self.hsd_demo)
-        Slider.Base_rond(self.vsd_demo)
+        Slider.Base(self.hsd_demo).th()
+        Slider.Base(self.vsd_demo).rond()
         ### /QSlider ###
 
 
