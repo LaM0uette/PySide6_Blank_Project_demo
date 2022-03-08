@@ -20,6 +20,9 @@ class Build:
 
             # Paramètres
             focus_policy=vb_wg.FOCUS_POLICY,
+            frame_shape=vb_wg.FRAME_SHAPE,
+            frame_shadow=vb_wg.FRAME_SHADOW,
+            line_width=0,
 
             # Couleurs BG
             bg=vb_wg.BG,
@@ -59,6 +62,8 @@ class Build:
         *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
         *Font: int() : Font().%nomFont() \n
         *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *FrameShape: QtWidgets.QFrame : FrameShape().%nomFrameForme \n
+        *FrameShadow: QtWidgets.QFrame : FrameShadow().%nomFrameOmbre \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
@@ -67,6 +72,9 @@ class Build:
         :param font: str()
         :param font_size: *Font
         :param focus_policy: *FocusPolicy
+        :param frame_shape: *FrameShape
+        :param frame_shadow: *FrameShadow
+        :param line_width: int()
         :param bg: *Rgb
         :param bg_selection: *Rgb
         :param fg: *Rgb
@@ -147,6 +155,9 @@ class Build:
 
             # Paramètres
             wg.setFocusPolicy(focus_policy)
+            wg.setFrameShape(frame_shape)
+            wg.setFrameShadow(frame_shadow)
+            wg.setLineWidth(line_width)
 
             # Palettes
             palette_txt = QtGui.QPalette()
