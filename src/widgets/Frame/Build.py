@@ -20,7 +20,7 @@ class Build:
             shadow=None,
 
             # Curseur
-            cursor=Cur().souris(),
+            cursor=None,
 
             # Couleurs BG
             bg=vb_wg.BG,
@@ -106,7 +106,7 @@ class Build:
             if shadow is not None: wg.setGraphicsEffect(shadow)
 
             # Curseur
-            wg.setCursor(Functions().SET_CURSOR(cursor))
+            if not cursor: wg.setCursor(Functions().SET_CURSOR(cursor))
 
             # Style
             wg.setStyleSheet(style)
