@@ -1,6 +1,9 @@
-from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QLineEdit
 
 
 class EchoMode:
 
-    def center(self): return Qt.AlignCenter
+    def normal(self): return QLineEdit.Normal
+    def no(self): return QLineEdit.NoEcho
+    def password(self): return QLineEdit.Password
+    def password_on_edit(self): return QLineEdit.PasswordEchoOnEdit
