@@ -41,6 +41,7 @@ VALUE_STEP = 1
 PAGE_STEP = 10
 TEXT_FORMAT = TextFormat().plain()
 TICK_POSITION = TickPosition().no()
+TICK_INTERVAL = 0
 WORD_WRAP = True
 
 

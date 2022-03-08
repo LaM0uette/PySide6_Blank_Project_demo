@@ -18,6 +18,7 @@ class Build:
             value_step=vb_wg.VALUE_STEP,
             page_step=vb_wg.PAGE_STEP,
             tick_position=vb_wg.TICK_POSITION,
+            tick_interval=vb_wg.TICK_INTERVAL,
 
             # Curseur
             cursor=vb_wg.CUR,
@@ -191,7 +192,7 @@ class Build:
             wg.setSingleStep(value_step)
             wg.setPageStep(page_step)
             wg.setTickPosition(tick_position)
-
+            wg.setTickInterval(tick_interval)
             # Curseur
             wg.setCursor(Functions().SET_CURSOR(cursor))
 
