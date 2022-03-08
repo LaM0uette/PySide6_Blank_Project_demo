@@ -48,6 +48,45 @@ class Build:
             # Rayons
             radius=vb_wg.RADIUS,
     ):
+        """
+        *Align: QtCore.Qt : Align().%nomAlign() \n
+        *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
+        *Cur: list() : Cur().%nomCurseur() \n
+        *Dim: int() : Dim().%nomDim() \n
+        *EchoMode: QtWidgets.QLineEdit : EchoMode().%nomEcho() \n
+        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
+        *Font: int() : Font().%nomFont() \n
+        *InputMask: str() : InputMask().%nomInput() \n
+        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
+
+        :param wgs: Widgets séparés par ","
+        :param width: *Dim
+        :param height: *Dim
+        :param font: str()
+        :param font_size: *Font
+        :param align_horizontal: *Align
+        :param align_vertical: *Align
+        :param clear_button: bool()
+        :param echo_mode: *EchoMode
+        :param focus_policy: *FocusPolicy
+        :param frame: bool()
+        :param input_mask: *InputMask
+        :param max_length: int()
+        :param bg: *Rgb
+        :param bg_selection: *Rgb
+        :param fg: *Rgb
+        :param fg_selection: *Rgb
+        :param fg_placeholder: *Rgb
+        :param border: *Tuple
+        :param border_style: *Border_Style
+        :param border_rgb: *Rgb
+        :param border_hover: *Tuple
+        :param border_hover_style: *Border_Style
+        :param border_hover_rgb: *Rgb
+        :param radius: *Tuple
+        """
+
         style = f"""
                 /* WIDGET */
                 QLineEdit {{
@@ -77,7 +116,6 @@ class Build:
                 border-bottom-right-radius: {radius[2]}px;
                 border-bottom-left-radius: {radius[3]}px;
                 }}"""
-
         for wg in wgs:
             # Dimensions
             Functions().SET_DIM(wg, width=width, height=height)
