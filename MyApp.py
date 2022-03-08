@@ -56,10 +56,12 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setWindowOpacity(config.opacity)
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+
         self.e_resize_screen()
     def IN_SETUP_UI(self):
         ### Ui principal ###
         self.setupUi(self)
+        self.vlay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
     def IN_CLASSE(self):
         ### QScrollBoxArea ###
         ScrollArea.Base(self.sca_main).th()

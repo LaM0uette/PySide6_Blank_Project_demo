@@ -1,2 +1,2 @@
 ### Application ###
-BORDER_LIMIT = 10
+MARGIN_APP = 10

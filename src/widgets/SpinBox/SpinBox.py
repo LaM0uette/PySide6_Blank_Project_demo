@@ -1,80 +1,76 @@
-from PySide6 import QtCore, QtWidgets
-
-from src.build import *
-from src.build.widgets import VBase
-
-
+from src.lib.palettes import *
+from src.widgets import vb_wg
+from src.widgets.SpinBox.Build import Build
 
 
 ##################
 ##     BASE     ##
 ##################
-class Plus_moins_th(Style):
+class PlusMinus:
     def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
+        self.wgs = wgs
+
+    def th(self):
+        Build(
+            *self.wgs,
         )
-class Plus_moins_tr(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            no_focus=True,
+    def tr(self):
+        Build(
+            *self.wgs,
+
+            focus_policy=FocusPolicy().no_focus(),
 
             bg=Rgb().tr(),
             fg=Rgb().th3(),
-    )
-class Up_down_th(Style):
+        )
+class UpDown:
     def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
+        self.wgs = wgs
+    def th(self):
+        Build(
+            *self.wgs,
+
             img_up=Img().fleche_top(),
             img_down=Img().fleche_bottom(),
-
-    )
-class Up_down_tr(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            no_focus=True,
-
+        )
+    def tr(self):
+        Build(
+            *self.wgs,
+            focus_policy=FocusPolicy().no_focus(),
             bg=Rgb().tr(),
             fg=Rgb().th3(),
+
             img_up=Img().fleche_top(),
             img_down=Img().fleche_bottom(),
-    )
+        )
 
-class rgb_bd_th3(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            value_max=255,
 
-            border=((StyleBase().bd(),) * 4),
-            border_hover=((StyleBase().bd(),) * 4),
+####################
+##     CADRES     ##
+####################
+class Border:
+    def __init__(self):
+        self.wgs = wgs
+        self.border = border
+        self.radius = radius
+        self.shadow = shadow
+
+    def rtn(self, value_max):
+        Build(
+            *self.wgs,
+
+            value_max=value_max,
+
+            border=(StyleBase().border(),) * 4,
+            border_hover=(StyleBase().border(),) * 4,
             border_rgb=Rgb().th3(),
             border_hover_rgb=Rgb().th3(),
         )
-class Plus_moins_bd_th3(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
 
-            border=((StyleBase().bd(),) * 4),
-            border_hover=((StyleBase().bd(),) * 4),
-            border_rgb=Rgb().th3(),
-            border_hover_rgb=Rgb().th3(),
-    )
-class Plus_moins_inf_bd_th3(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            value_max=999999,
+    def th(self): self.rtn(value_max=100)
+    def rgb(self): self.rtn(value_max=255)
+    def inf(self): self.rtn(value_max=99999999)
 
-            border=((StyleBase().bd(),) * 4),
-            border_hover=((StyleBase().bd(),) * 4),
-            border_rgb=Rgb().th3(),
-            border_hover_rgb=Rgb().th3(),
-        )
 
 """
 "lr":
