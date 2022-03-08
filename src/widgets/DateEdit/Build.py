@@ -86,6 +86,7 @@ class Build:
             radius=vb_wg.RADIUS,
     ):
         """
+        *Align: QtCore.Qt : Align().%nomAlign() \n
         *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
         *ButtonSymbols: QtWidgets.QAbstractSpinBox : ButtonSymbols().%nomBoutons() \n
         *Cur: list() : Cur().%nomCurseur() \n
@@ -102,8 +103,8 @@ class Build:
         :param height: *Dim
         :param font: str()
         :param font_size: *Font
-        :param align_horizontal: bool()
-        :param align_vertical: bool()
+        :param align_horizontal: *Align
+        :param align_vertical: *Align
         :param button_symbols: *ButtonSymbols
         :param calendar_popup: bool()
         :param focus_policy: *FocusPolicy

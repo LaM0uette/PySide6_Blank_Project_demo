@@ -52,8 +52,8 @@ class Build:
             img_down_width=10,
             img_down_height=10,
             # Images positions
-            img_up_dim=(0,) * 4,
-            img_down_dim=(0,) * 4,
+            img_up_pos=(0,) * 4,
+            img_down_pos=(0,) * 4,
 
             # Bordures
             border=vb_wg.BORDER_WIDTH,
@@ -67,6 +67,59 @@ class Build:
             # Rayons
             radius=vb_wg.RADIUS,
     ):
+        """
+        *Align: QtCore.Qt : Align().%nomAlign() \n
+        *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
+        *ButtonSymbols: QtWidgets.QAbstractSpinBox : ButtonSymbols().%nomBouton() \n
+        *Cur: list() : Cur().%nomCurseur() \n
+        *Dim: int() : Dim().%nomDim() \n
+        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
+        *Font: int() : Font().%nomFont() \n
+        *Img: str() : Img().%nomImage() \n
+        *Img_rgb: str() : th1 | th2 | th3 | bn1 | bn2 \n
+        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
+
+        :param wgs: Widgets séparés par ","
+        :param width: *Dim
+        :param height: *Dim
+        :param font: str()
+        :param font_size: *Font
+        :param accelerated: bool()
+        :param align_horizontal: *Align
+        :param align_vertical: *Align
+        :param button_symbols: *ButtonSymbols
+        :param focus_policy: *FocusPolicy
+        :param frame: bool()
+        :param value_min: int()
+        :param value_max: int()
+        :param value_step: int()
+        :param prefix: str()
+        :param suffix: str()
+        :param cursor: *Cur
+        :param cursor_le: *Cur
+        :param bg: *Rgb
+        :param bg_selection: *Rgb
+        :param fg: *Rgb
+        :param fg_selection: *Rgb
+        :param img_up: *Img
+        :param img_down: *Img
+        :param img_up_rgb: *Img
+        :param img_down_rgb: *Img
+        :param img_up_width: *Dim
+        :param img_up_height: *Dim
+        :param img_down_width: *Dim
+        :param img_down_height: *Dim
+        :param img_up_pos: *Tuple
+        :param img_down_pos: *Tuple
+        :param border: *Tuple
+        :param border_style: *Border_Style
+        :param border_rgb: *Rgb
+        :param border_hover: *Tuple
+        :param border_hover_style: *Border_Style
+        :param border_hover_rgb: *Rgb
+        :param radius: *Tuple
+        """
         
         style = f"""
                 /* SPINBOX */
@@ -79,10 +132,10 @@ class Build:
 
                 QSpinBox::up-button, QDoubleSpinBox::up-button  {{
                 subcontrol-position: top right;
-                top: {img_up_dim[0]}px;
-                bottom: {img_up_dim[1]}px;
-                right: {img_up_dim[2]}px;
-                left: {img_up_dim[3]}px;
+                top: {img_up_pos[0]}px;
+                bottom: {img_up_pos[1]}px;
+                right: {img_up_pos[2]}px;
+                left: {img_up_pos[3]}px;
                 image: url({f"{img_up}{img_up_rgb}.svg"});
                 width: {img_up_width}px;
                 height: {img_up_height}px;
@@ -90,10 +143,10 @@ class Build:
 
                 QSpinBox::down-button, QDoubleSpinBox::down-button  {{
                 subcontrol-position: bottom right;
-                top: {img_down_dim[0]}px;
-                bottom: {img_down_dim[1]}px;
-                right: {img_down_dim[2]}px;
-                left: {img_down_dim[3]}px;
+                top: {img_down_pos[0]}px;
+                bottom: {img_down_pos[1]}px;
+                right: {img_down_pos[2]}px;
+                left: {img_down_pos[3]}px;
                 image: url({f"{img_down}{img_down_rgb}.svg"});
                 width: {img_down_width}px;
                 height: {img_down_height}px;
