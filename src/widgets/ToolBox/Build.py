@@ -77,55 +77,64 @@ class Style:
             scroll_handle_min_height=vb_wg.SCROLL_HANDLE_MIN_HEIGHT,
     ):
         """
+        *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
+        *Cur: list() : Cur().%nomCurseur() \n
+        *Dim: int() : Dim().%nomDim() \n
+        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
+        *Font: int() : Font().%nomFont() \n
+        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *FrameShape: QtWidgets.QFrame : FrameShape().%nomFrameForme \n
+        *FrameShadow: QtWidgets.QFrame : FrameShadow().%nomFrameOmbre \n
+        *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs:
-        :param width:
-        :param height:
-        :param font:
-        :param font_size:
-        :param focus_policy:
-        :param frame_shape:
-        :param frame_shadow:
-        :param line_width:
-        :param tab_spacing:
-        :param cursor:
-        :param bg:
-        :param bg_hover:
-        :param bg_checked:
-        :param bg_checked_hover:
-        :param fg:
-        :param fg_hover:
-        :param fg_checked:
-        :param fg_checked_hover:
-        :param border:
-        :param border_style:
-        :param border_rgb:
-        :param border_hover:
-        :param border_hover_style:
-        :param border_hover_rgb:
-        :param border_hd:
-        :param border_hd_style:
-        :param border_hd_rgb:
-        :param border_hd_hover:
-        :param border_hd_hover_style:
-        :param border_hd_hover_rgb:
-        :param border_hd_checked:
-        :param border_hd_checked_style:
-        :param border_hd_checked_rgb:
-        :param border_hd_checked_hover:
-        :param border_hd_checked_hover_style:
-        :param border_hd_checked_hover_rgb:
-        :param radius:
-        :param radius_tab:
-        :param scroll_bg:
-        :param scroll_width:
-        :param scroll_height:
-        :param scroll_handle_bg:
-        :param scroll_handle_bg_hover:
-        :param scroll_handle_fg:
-        :param scroll_handle_fg_hover:
-        :param scroll_handle_min_width:
-        :param scroll_handle_min_height:
+        :param width: *Dim
+        :param height: *Dim
+        :param font: str()
+        :param font_size: *Font
+        :param focus_policy: *FocusPolicy
+        :param frame_shape: *FrameShape
+        :param frame_shadow: *FrameShadow
+        :param line_width: int()
+        :param tab_spacing: int()
+        :param cursor: *Cur
+        :param bg: *Rgb
+        :param bg_hover: *Rgb
+        :param bg_checked: *Rgb
+        :param bg_checked_hover: *Rgb
+        :param fg: *Rgb
+        :param fg_hover: *Rgb
+        :param fg_checked: *Rgb
+        :param fg_checked_hover: *Rgb
+        :param border: *Tuple
+        :param border_style: *Border_Style
+        :param border_rgb: *Rgb
+        :param border_hover: *Tuple
+        :param border_hover_style: *Border_Style
+        :param border_hover_rgb: *Rgb
+        :param border_hd: *Tuple
+        :param border_hd_style: *Border_Style
+        :param border_hd_rgb: *Rgb
+        :param border_hd_hover: *Tuple
+        :param border_hd_hover_style: *Border_Style
+        :param border_hd_hover_rgb: *Rgb
+        :param border_hd_checked: *Tuple
+        :param border_hd_checked_style: *Border_Style
+        :param border_hd_checked_rgb: *Rgb
+        :param border_hd_checked_hover: *Tuple
+        :param border_hd_checked_hover_style: *Border_Style
+        :param border_hd_checked_hover_rgb: *Rgb
+        :param radius: *Tuple
+        :param radius_tab: *Tuple
+        :param scroll_bg: *Rgb
+        :param scroll_width: int()
+        :param scroll_height: int()
+        :param scroll_handle_bg: *Rgb
+        :param scroll_handle_bg_hover: *Rgb
+        :param scroll_handle_fg: *Rgb
+        :param scroll_handle_fg_hover: *Rgb
+        :param scroll_handle_min_width: int()
+        :param scroll_handle_min_height: int()
         """
 
         style = f"""
