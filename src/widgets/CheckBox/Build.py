@@ -272,7 +272,6 @@ class Build:
             wg.setFocusPolicy(focus_policy)
             wg.setTristate(triple_state)
 
-
             # Curseur
             wg.setCursor(Functions().SET_CURSOR(cursor))
 

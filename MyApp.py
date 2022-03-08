@@ -139,6 +139,12 @@ class main(Ui_main, QtWidgets.QWidget):
         ## /QRadioButton ###
 
 
+        ### QSlider ###
+        Slider.Base_rond(self.hsd_demo)
+        Slider.Base_rond(self.vsd_demo)
+        ### /QSlider ###
+
+
         ### QTableWidget ###
         TableWidget.Demo(self.tv_demo_th, self.tw_demo_th).th()
         TableWidget.Demo(self.tv_demo_tr, self.tw_demo_tr).tr()
