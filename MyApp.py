@@ -62,6 +62,7 @@ class main(Ui_main, QtWidgets.QWidget):
     def IN_SETUP_UI(self):
         ### Ui principal ###
         self.setupUi(self)
+        self.vlay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
     def IN_CLASSE(self):
         ### QScrollBoxArea ###
         ScrollArea.Base(self.sca_main).th()
