@@ -10,6 +10,7 @@ from src.lib.palettes.Font import Font
 from src.lib.palettes.FrameShadow import FrameShadow
 from src.lib.palettes.FrameShape import FrameShape
 from src.lib.palettes.Img import Img
+from src.lib.palettes.InputMask import InputMask
 from src.lib.palettes.InsertPolicy import InsertPolicy
 from src.lib.palettes.Keys import Keys
 from src.lib.palettes.ProgressFormat import ProgressFormat

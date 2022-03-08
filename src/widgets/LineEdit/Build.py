@@ -21,7 +21,7 @@ class Build:
             # Paramètres
             align_horizontal=Align().left(),
             align_vertical=Align().center_vertical(),
-            input_mask="",
+            input_mask=InputMask().no(),
 
             # Couleurs BG
             bg=vb_wg.BG,
