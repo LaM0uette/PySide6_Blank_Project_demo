@@ -1,6 +1,6 @@
 from src.lib.palettes import *
 from src.widgets import vb_wg
-from src.widgets.CheckBox.Build import Build
+from src.widgets.LineEdit.Build import Build
 
 
 ##################
