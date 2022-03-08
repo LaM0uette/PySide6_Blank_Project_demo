@@ -13,6 +13,7 @@ class Build:
             height=vb_wg.HEIGHT,
 
             # Paramètres
+            focus_policy=vb_wg.FOCUS_POLICY,
             value_min=vb_wg.VALUE_MIN,
             value_max=vb_wg.VALUE_MAX,
             value_step=vb_wg.VALUE_STEP,
@@ -72,6 +73,63 @@ class Build:
             radius_handle_h=vb_wg.RADIUS,
             radius_handle_v=vb_wg.RADIUS,
     ):
+        """
+        *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
+        *Cur: list() : Cur().%nomCurseur() \n
+        *Dim: int() : Dim().%nomDim() \n
+        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
+        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *TickPosition: QtWidgets.QSlider : TickPosition().%nomTickPosition() \n
+        *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
+
+        :param wgs: Widgets séparés par ","
+        :param width: *Dim
+        :param height: *Dim
+        :param focus_policy: *FocusPolicy
+        :param value_min: int()
+        :param value_max: int()
+        :param value_step: int()
+        :param page_step: int()
+        :param tick_position: *TickPosition
+        :param tick_interval: int()
+        :param cursor: *Cur
+        :param bg: *Rgb
+        :param bg_groove: *Rgb
+        :param bg_groove_2: *Rgb
+        :param bg_groove_hover: *Rgb
+        :param bg_groove_hover_2: *Rgb
+        :param bg_groove_pressed: *Rgb
+        :param bg_groove_pressed_2: *Rgb
+        :param bg_handle: *Rgb
+        :param bg_handle_hover: *Rgb
+        :param bg_handle_pressed: *Rgb
+        :param gradient: *Rgb
+        :param width_groove: int()
+        :param height_groove: int()
+        :param width_handle_h: int()
+        :param height_handle_h: int()
+        :param width_handle_v: int()
+        :param height_handle_v: int()
+        :param margin_handle_h: *Tuple
+        :param margin_handle_v: *Tuple
+        :param border: *Tuple
+        :param border_style: *Border_Style
+        :param border_rgb: *Rgb
+        :param border_hover: *Tuple
+        :param border_hover_style: *Border_Style
+        :param border_hover_rgb: *Rgb
+        :param border_handle_h: *Tuple
+        :param border_handle_h_style: *Border_Style
+        :param border_handle_h_rgb: *Rgb
+        :param border_handle_v: *Tuple
+        :param border_handle_v_style: *Border_Style
+        :param border_handle_v_rgb: *Rgb
+        :param radius: *Tuple
+        :param radius_groove_h: *Tuple
+        :param radius_groove_v: *Tuple
+        :param radius_handle_h: *Tuple
+        :param radius_handle_v: *Tuple
+        """
 
         style = f"""
                 /* SLIDER  */
@@ -187,6 +245,7 @@ class Build:
             Functions().SET_DIM(wg, width=width, height=height)
 
             # Paramètres
+            wg.setFocusPolicy(focus_policy)
             wg.setMinimum(value_min)
             wg.setMaximum(value_max)
             wg.setSingleStep(value_step)
