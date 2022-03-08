@@ -91,20 +91,20 @@ class Build:
 
         style = f"""
                 /* WIDGET */
-                QTextEdit {{
+                QPlainTextEdit {{
                 background-color: rgba{bg};
                 selection-background-color: rgba{bg_selection};
                 selection-color: rgba{fg_selection};
                 }}
 
                 /* BORDURES */
-                QTextEdit {{
+                QPlainTextEdit {{
                 border-top: {border[0]}px {border_style} rgba{border_rgb};
                 border-bottom: {border[1]}px {border_style} rgba{border_rgb};
                 border-right: {border[2]}px {border_style} rgba{border_rgb};
                 border-left: {border[3]}px {border_style} rgba{border_rgb};
                 }}
-                QTextEdit:hover {{
+                QPlainTextEdit:hover {{
                 border-top: {border_hover[0]}px {border_hover_style} rgba{border_hover_rgb};
                 border-bottom: {border_hover[1]}px {border_hover_style} rgba{border_hover_rgb};
                 border-right: {border_hover[2]}px {border_hover_style} rgba{border_hover_rgb};
@@ -112,7 +112,7 @@ class Build:
                 }}
 
                 /* RAYONS */
-                QTextEdit {{
+                QPlainTextEdit {{
                 border-top-right-radius: {radius[0]}px;
                 border-top-left-radius: {radius[1]}px;
                 border-bottom-right-radius: {radius[2]}px;
