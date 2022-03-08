@@ -1,4 +1,5 @@
 from src.lib.palettes.Align import Align
+from src.lib.palettes.AutoFormating import AutoFormating
 from src.lib.palettes.ButtonSymbols import ButtonSymbols
 from src.lib.palettes.Cur import Cur
 from src.lib.palettes.Dim import Dim

@@ -19,6 +19,7 @@ class Build:
             font_size=vb_wg.FONT_SIZE,
 
             # Paramètres
+            auto_formatting=AutoFormating().none(),
             focus_policy=vb_wg.FOCUS_POLICY,
             frame_shape=vb_wg.FRAME_SHAPE,
             frame_shadow=vb_wg.FRAME_SHADOW,
@@ -154,6 +155,7 @@ class Build:
             Functions().SET_FONT(wg, font=font, font_size=font_size)
 
             # Paramètres
+            wg.setAutoFormatting(auto_formatting)
             wg.setFocusPolicy(focus_policy)
             wg.setFrameShape(frame_shape)
             wg.setFrameShadow(frame_shadow)
