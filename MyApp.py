@@ -56,12 +56,12 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setWindowOpacity(config.opacity)
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        self.setGraphicsEffect(Shadow().ombre_portee(self))
 
         self.e_resize_screen()
     def IN_SETUP_UI(self):
         ### Ui principal ###
         self.setupUi(self)
-        self.vlay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
     def IN_CLASSE(self):
         ### QScrollBoxArea ###
         ScrollArea.Base(self.sca_main).th()
@@ -88,7 +88,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### QFrame ###
         Frame.Menu(self.fr_menu_top).top()
-        Frame.Cadre(self.fr_main, shadow=Shadow().ombre_portee(self)).th2()
+        Frame.Cadre(self.fr_main).th2()
         Frame.Base(self.fr_demo_th, self.fr_tb_demo_th_1, self.fr_tb_demo_th_2).th()
         Frame.Base(self.fr_tb_demo_tr_1, self.fr_tb_demo_tr_2).th()
         Frame.Base(self.fr_body).tr()
