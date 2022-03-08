@@ -30,6 +30,7 @@ FRAME_SHAPE = FrameShape().no_frame()
 FRAME_SHADOW = FrameShadow().plain()
 INSERT_POLICY = InsertPolicy().insert_bottom()
 MAX_VISIBLE_ITEMS = 10
+MAX_LENGTH = 32767
 PROGRESS_FORMAT = ProgressFormat().percentage()
 SELECTION_BEHAVIOR = SelectionBehavior().row()
 SELECTION_MODE = SelectionMode().single()

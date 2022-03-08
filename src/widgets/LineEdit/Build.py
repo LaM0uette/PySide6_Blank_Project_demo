@@ -21,7 +21,10 @@ class Build:
             # Paramètres
             align_horizontal=Align().left(),
             align_vertical=Align().center_vertical(),
+            focus_policy=vb_wg.FOCUS_POLICY,
+            frame=False,
             input_mask=InputMask().no(),
+            max_length=vb_wg.MAX_LENGTH,
 
             # Couleurs BG
             bg=vb_wg.BG,
@@ -82,7 +85,10 @@ class Build:
 
             # Paramètres
             wg.setAlignment(align_horizontal | align_vertical)
+            wg.setFocusPolicy(focus_policy)
+            wg.setFrame(frame)
             wg.setInputMask(input_mask)
+            wg.setMaxLength(max_length)
 
             # Palettes
             palette_txt = QtGui.QPalette()
