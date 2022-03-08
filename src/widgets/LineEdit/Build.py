@@ -41,34 +41,23 @@ class Build:
 
             # Rayons
             radius=vb_wg.RADIUS,
-
-            # Scroll
-            scroll_bg=vb_wg.SCROLL_BG,
-            scroll_width=vb_wg.SCROLL_WIDTH,
-            scroll_height=vb_wg.SCROLL_HEIGHT,
-            scroll_handle_bg=vb_wg.SCROLL_HANDLE_BG,
-            scroll_handle_bg_hover=vb_wg.SCROLL_HANDLE_BG_HOVER,
-            scroll_handle_fg=vb_wg.SCROLL_HANDLE_FG,
-            scroll_handle_fg_hover=vb_wg.SCROLL_HANDLE_FG_HOVER,
-            scroll_handle_min_width=vb_wg.SCROLL_HANDLE_MIN_WIDTH,
-            scroll_handle_min_height=vb_wg.SCROLL_HANDLE_MIN_HEIGHT,
     ):
         style = f"""
                 /* WIDGET */
-                .QLineEdit, .QPlainTextEdit, .QTextEdit {{
+                QLineEdit {{
                 background-color: rgba{bg};
                 selection-background-color: rgba{bg_selection};
                 selection-color: rgba{fg_selection};
                 }}
 
                 /* BORDURES */
-                .QLineEdit, .QPlainTextEdit, .QTextEdit {{
+                QLineEdit {{
                 border-top: {border[0]}px {border_style} rgba{border_rgb};
                 border-bottom: {border[1]}px {border_style} rgba{border_rgb};
                 border-right: {border[2]}px {border_style} rgba{border_rgb};
                 border-left: {border[3]}px {border_style} rgba{border_rgb};
                 }}
-                .QLineEdit:hover, .QPlainTextEdit:hover, .QTextEdit:hover {{
+                QLineEdit:hover {{
                 border-top: {border_hover[0]}px {border_hover_style} rgba{border_hover_rgb};
                 border-bottom: {border_hover[1]}px {border_hover_style} rgba{border_hover_rgb};
                 border-right: {border_hover[2]}px {border_hover_style} rgba{border_hover_rgb};
@@ -76,39 +65,11 @@ class Build:
                 }}
 
                 /* RAYONS */
-                .QLineEdit, .QPlainTextEdit, .QTextEdit {{
+                QLineEdit {{
                 border-top-right-radius: {radius[0]}px;
                 border-top-left-radius: {radius[1]}px;
                 border-bottom-right-radius: {radius[2]}px;
                 border-bottom-left-radius: {radius[3]}px;
-                }}
-
-                /* SCROLL */
-                QScrollBar {{
-                background-color: rgba{scroll_bg};
-                width: {scroll_width}px;
-                height: {scroll_height}px;
-                }}
-                QScrollBar::handle:horizontal {{
-                min-width: {scroll_handle_min_width}px;
-                }}
-                QScrollBar::handle:vertical {{
-                min-height: {scroll_handle_min_height}px;
-                }}
-                QScrollBar::handle {{
-                background-color: rgba{scroll_handle_fg};
-                }}
-                QScrollBar::handle:hover {{
-                background-color: rgba{scroll_handle_fg_hover};
-                }}
-
-                QScrollBar::add-page, QScrollBar::sub-page {{
-                background-color: rgba{scroll_handle_bg};
-                border: none;
-                }}
-                QScrollBar::add-page:hover, QScrollBar::sub-page:hover {{
-                background-color: rgba{scroll_handle_bg_hover};
-                border: none;
                 }}"""
 
         for wg in wgs:
@@ -129,7 +90,6 @@ class Build:
 
             # Curseur
             wg.setCursor(Functions().SET_CURSOR(Cur().ibeam()))
-            wg.viewport().setCursor(Functions().SET_CURSOR(Cur().ibeam()))
 
             # Style
             wg.setStyleSheet(style)
