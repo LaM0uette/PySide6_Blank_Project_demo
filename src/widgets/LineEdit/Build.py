@@ -21,6 +21,7 @@ class Build:
             # Paramètres
             align_horizontal=Align().left(),
             align_vertical=Align().center_vertical(),
+            input_mask="",
 
             # Couleurs BG
             bg=vb_wg.BG,
@@ -81,6 +82,7 @@ class Build:
 
             # Paramètres
             wg.setAlignment(align_horizontal | align_vertical)
+            wg.setInputMask(input_mask)
 
             # Palettes
             palette_txt = QtGui.QPalette()
