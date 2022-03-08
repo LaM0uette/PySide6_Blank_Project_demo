@@ -148,6 +148,14 @@ class main(Ui_main, QtWidgets.QWidget):
         ### /QSlider ###
 
 
+        ### QSpinBox ###
+        SpinBox.PlusMinus(self.sb_demo).th()
+        SpinBox.PlusMinus(self.sb_demo_3).tr()
+        SpinBox.UpDown(self.sb_demo_2).th()
+        SpinBox.UpDown(self.dsb_demo).tr()
+        ### /QSpinBox ###
+
+
         ### QTableWidget ###
         TableWidget.Demo(self.tv_demo_th, self.tw_demo_th).th()
         TableWidget.Demo(self.tv_demo_tr, self.tw_demo_tr).tr()
