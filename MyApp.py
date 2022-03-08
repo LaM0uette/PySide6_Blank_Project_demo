@@ -76,6 +76,12 @@ class main(Ui_main, QtWidgets.QWidget):
         ### /QTextEdit ###
 
 
+        ### QPlainTextEdit ###
+        PlainTextEdit.Demo(self.pte_demo_th).th()
+        PlainTextEdit.Demo(self.pte_demo_tr).tr()
+        ### /QPlainTextEdit ###
+
+
         ### QScrollBoxArea ###
         ScrollArea.Base(self.sca_main).th()
         ### /QScrollBoxArea ###

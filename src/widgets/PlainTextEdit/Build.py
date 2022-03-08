@@ -19,7 +19,6 @@ class Build:
             font_size=vb_wg.FONT_SIZE,
 
             # Paramètres
-            auto_formatting=AutoFormating().none(),
             focus_policy=vb_wg.FOCUS_POLICY,
             frame_shape=vb_wg.FRAME_SHAPE,
             frame_shadow=vb_wg.FRAME_SHADOW,
@@ -57,7 +56,6 @@ class Build:
             scroll_handle_min_height=vb_wg.SCROLL_HANDLE_MIN_HEIGHT,
     ):
         """
-        *AutoFormatting: QtWidgets.QTextEdit : AutoFormatting().%nomFormatting() \n
         *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
         *Cur: list() : Cur().%nomCurseur() \n
         *Dim: int() : Dim().%nomDim() \n
@@ -73,7 +71,6 @@ class Build:
         :param height: *Dim
         :param font: str()
         :param font_size: *Font
-        :param auto_formatting: *AutoFormatting
         :param focus_policy: *FocusPolicy
         :param frame_shape: *FrameShape
         :param frame_shadow: *FrameShadow
@@ -157,7 +154,6 @@ class Build:
             Functions().SET_FONT(wg, font=font, font_size=font_size)
 
             # Paramètres
-            wg.setAutoFormatting(auto_formatting)
             wg.setFocusPolicy(focus_policy)
             wg.setFrameShape(frame_shape)
             wg.setFrameShadow(frame_shadow)
