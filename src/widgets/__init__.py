@@ -7,6 +7,7 @@ from src.widgets.LineEdit import LineEdit
 from src.widgets.ListWidget import ListWidget
 from src.widgets.PlainTextEdit import PlainTextEdit
 from src.widgets.ProgressBar import ProgressBar
+from src.widgets.PushButton import PushButton
 from src.widgets.RadioButton import RadioButton
 from src.widgets.ScrollArea import ScrollArea
 from src.widgets.Slider import Slider

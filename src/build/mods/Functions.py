@@ -3,7 +3,7 @@ import os
 import pathlib
 import shutil
 
-from PySide6 import QtGui
+from PySide6 import QtGui, QtCore
 
 from src.config import config
 from src.lib.palettes import *
@@ -28,6 +28,11 @@ class Functions:
 
         for wg in args:
             wg.setFont(ft)
+    def SET_ICON(self, wg, img, dim):
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(f"{img}.svg"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        wg.setIcon(icon)
+        wg.setIconSize(QtCore.QSize(dim, dim))
     def ADD_QACTION(self, tray, ico=None, ico_rgb=None, txt="", shortcut_txt="", status_tip="", size=None, fct=None, sht_1=None, sht_2=None, sht_3=None):
         if size is None: size=12
 
