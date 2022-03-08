@@ -106,7 +106,7 @@ class Build:
             if shadow is not None: wg.setGraphicsEffect(shadow)
 
             # Curseur
-            if not cursor: wg.setCursor(Functions().SET_CURSOR(cursor))
+            if cursor: wg.setCursor(Functions().SET_CURSOR(cursor))
 
             # Style
             wg.setStyleSheet(style)
