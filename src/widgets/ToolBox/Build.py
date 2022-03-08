@@ -8,8 +8,8 @@ class Build:
             *wgs,
 
             # Dimensions
-            width=vb_wg.WIDTH,
-            height=vb_wg.HEIGHT,
+            width=None,
+            height=None,
 
             # Police
             font=vb_wg.FONT,

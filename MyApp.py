@@ -178,6 +178,12 @@ class main(Ui_main, QtWidgets.QWidget):
         TableWidget.Demo(self.tv_demo_th, self.tw_demo_th).th()
         TableWidget.Demo(self.tv_demo_tr, self.tw_demo_tr).tr()
         ### /QTableWidget ###
+
+
+        ### QToolBox ###
+        ToolBox.Demo(self.tb_demo_th).th()
+        ToolBox.Demo(self.tb_demo_tr).tr()
+        ### /QToolBox ###
     def IN_WG(self):
         ### Base ###
         self.setCursor(Functions().SET_CURSOR(Cur().souris()))
