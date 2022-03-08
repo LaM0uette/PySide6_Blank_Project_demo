@@ -49,11 +49,8 @@ class UpDown:
 ##     CADRES     ##
 ####################
 class Border:
-    def __init__(self):
+    def __init__(self, *wgs):
         self.wgs = wgs
-        self.border = border
-        self.radius = radius
-        self.shadow = shadow
 
     def rtn(self, value_max):
         Build(
