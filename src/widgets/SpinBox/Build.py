@@ -26,7 +26,6 @@ class Build:
             value_min=vb_wg.VALUE_MIN,
             value_max=vb_wg.VALUE_MAX,
             value_step=vb_wg.VALUE_STEP,
-            page_step=vb_wg.PAGE_STEP,
             prefix="",
             suffix="",
 
@@ -137,7 +136,6 @@ class Build:
             wg.setMinimum(value_min)
             wg.setMaximum(value_max)
             wg.setSingleStep(value_step)
-            wg.setPageStep(page_step)
             wg.setPrefix(prefix)
             wg.setSuffix(suffix)
 
