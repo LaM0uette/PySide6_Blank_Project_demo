@@ -3,31 +3,37 @@ from src.widgets import vb_wg
 from src.widgets.PushButton.Build import Build
 
 
-
-
 ##################
 ##     BASE     ##
 ##################
-class Base_th(Style):
+class Base:
     def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-        )
-class Base_tr(Style):
-    bg = Rgb().tr()
+        self.wgs = wgs
 
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            bg=self.bg,
-            bg_hover=self.bg,
-            bg_checked=self.bg,
-            bg_checked_hover=self.bg,
-            bg_pressed=self.bg,
-            bg_checked_pressed=self.bg,
+    def th(self):
+        Build(
+            *self.wgs,
+        )
+    def tr(self):
+        bg = Rgb().tr()
+        
+        Build(
+            *self.wgs,
+            
+            bg=bg,
+            bg_hover=bg,
+            bg_checked=bg,
+            bg_checked_hover=bg,
+            bg_pressed=bg,
+            bg_checked_pressed=bg,
             fg=Rgb().th3(),
             fg_checked=Rgb().bn1(),
-    )
+        )
+
+
+######################
+##     MENU TOP     ##
+######################
 class menu_top:
     def __init__(self, *wgs):
         self.wgs = wgs
@@ -36,11 +42,11 @@ class menu_top:
             img=Img().main(),
             img_rgb="th2",
             ):
-        Style(
+        Build(
             *self.wgs,
-            wg_type="zoom",
+            pb_type="zoom",
             width=Dim().h9() * 1.2,
-            curseur=Cur().souris_main(),
+            cursor=Cur().souris_main(),
 
             bg=Rgb().tr(),
             bg_hover=Rgb().tr(),
@@ -72,16 +78,20 @@ class menu_top:
             img_rgb="bn2"
         )
 
+
 #################
 ##     TXT     ##
 #################
-class txt(Style):
-    bd_gen = ((StyleBase().bd(),) * 4)
-    bd_rgb = Rgb().th3()
-
+class Txt:
     def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
+        self.wgs = wgs
+
+    def txt(self):
+        bd_gen = (StyleBase().border(),) * 4
+        bd_rgb = Rgb().th3()
+
+        Build(
+            *self.wgs,
             bg=Rgb().th1(),
             fg=Rgb().th3(),
             bg_hover=Rgb().th3(),
@@ -92,21 +102,21 @@ class txt(Style):
             bg_checked_hover=Rgb().th1(),
             fg_checked_hover=Rgb().th3(),
             bg_checked_pressed=Rgb().th1(),
-            border=self.bd_gen,
-            border_hover=self.bd_gen,
-            border_checked=self.bd_gen,
-            border_checked_hover=self.bd_gen,
-            border_rgb=self.bd_rgb,
-            border_hover_rgb=self.bd_rgb,
-            border_checked_rgb=self.bd_rgb,
-            border_checked_hover_rgb=self.bd_rgb,
-    )
-class txt_inv(Style):
-    bd_gen = ((StyleBase().bd(),) * 4)
-    bd_rgb = Rgb().th3()
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
+            border=bd_gen,
+            border_hover=bd_gen,
+            border_checked=bd_gen,
+            border_checked_hover=bd_gen,
+            border_rgb=bd_rgb,
+            border_hover_rgb=bd_rgb,
+            border_checked_rgb=bd_rgb,
+            border_checked_hover_rgb=bd_rgb,
+        )
+    def inv(self):
+        bd_gen = (StyleBase().border(),) * 4
+        bd_rgb = Rgb().th3()
+
+        Build(
+            *self.wgs,
             bg=Rgb().th3(),
             fg=Rgb().th1(),
             bg_hover=Rgb().th1(),
@@ -117,120 +127,124 @@ class txt_inv(Style):
             bg_checked_hover=Rgb().th3(),
             fg_checked_hover=Rgb().th1(),
             bg_checked_pressed=Rgb().th3(),
-            border=self.bd_gen,
-            border_hover=self.bd_gen,
-            border_checked=self.bd_gen,
-            border_checked_hover=self.bd_gen,
-            border_rgb=self.bd_rgb,
-            border_hover_rgb=self.bd_rgb,
-            border_checked_rgb=self.bd_rgb,
-            border_checked_hover_rgb=self.bd_rgb,
-    )
+            border=bd_gen,
+            border_hover=bd_gen,
+            border_checked=bd_gen,
+            border_checked_hover=bd_gen,
+            border_rgb=bd_rgb,
+            border_hover_rgb=bd_rgb,
+            border_checked_rgb=bd_rgb,
+            border_checked_hover_rgb=bd_rgb,
+        )
+
 
 
 #################
 ##     DLG     ##
 #################
-class dlg_ok(Style):
-    bd_gen = ((StyleBase().bd(),) * 4)
-    rgb_gen = Rgb().bn1()
-
+#################
+##     TXT     ##
+#################
+class Dlg:
     def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
+        self.wgs = wgs
+
+    def ok(self):
+        bd_gen = (StyleBase().border(),) * 4
+        rgb_gen = Rgb().bn1()
+
+        Build(
+            *self.wgs,
             width=Dim().h6(),
             height=None,
-
             bg=Rgb().th1(),
-            fg=self.rgb_gen,
-            bg_hover=self.rgb_gen,
+            fg=rgb_gen,
+            bg_hover=rgb_gen,
             fg_hover=Rgb().th1(),
-            bg_pressed=self.rgb_gen,
+            bg_pressed=rgb_gen,
             fg_pressed=Rgb().th1(),
-            border=self.bd_gen,
-            border_hover=self.bd_gen,
-            border_checked=self.bd_gen,
-            border_checked_hover=self.bd_gen,
-            border_rgb=self.rgb_gen,
-            border_hover_rgb=self.rgb_gen,
-            border_checked_rgb=self.rgb_gen,
-            border_checked_hover_rgb=self.rgb_gen,
-    )
-class dlg_ok_inv(Style):
-    bd_gen = ((StyleBase().bd(),) * 4)
-    rgb_gen = Rgb().bn1()
+            border=bd_gen,
+            border_hover=bd_gen,
+            border_checked=bd_gen,
+            border_checked_hover=bd_gen,
+            border_rgb=rgb_gen,
+            border_hover_rgb=rgb_gen,
+            border_checked_rgb=rgb_gen,
+            border_checked_hover_rgb=rgb_gen,
+        )
+    def ok_inv(self):
+        bd_gen = (StyleBase().border(),) * 4
+        rgb_gen = Rgb().bn1()
 
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
+        Build(
+            *self.wgs,
             width=Dim().h6(),
             height=None,
-
-            bg=self.rgb_gen,
+            bg=rgb_gen,
             fg=Rgb().th1(),
             bg_hover=Rgb().th1(),
-            fg_hover=self.rgb_gen,
+            fg_hover=rgb_gen,
             bg_pressed=Rgb().th1(),
-            fg_pressed=self.rgb_gen,
-            border=self.bd_gen,
-            border_hover=self.bd_gen,
-            border_checked=self.bd_gen,
-            border_checked_hover=self.bd_gen,
-            border_rgb=self.rgb_gen,
-            border_hover_rgb=self.rgb_gen,
-            border_checked_rgb=self.rgb_gen,
-            border_checked_hover_rgb=self.rgb_gen,
-    )
-class dlg_nok(Style):
-    bd_gen = ((StyleBase().bd(),) * 4)
-    rgb_gen = Rgb().bn2()
-
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            width=Dim().h6(),
-            height=None,
-
-            bg=Rgb().th1(),
-            fg=self.rgb_gen,
-            bg_hover=self.rgb_gen,
-            fg_hover=Rgb().th1(),
-            bg_pressed=self.rgb_gen,
-            fg_pressed=Rgb().th1(),
-            border=self.bd_gen,
-            border_hover=self.bd_gen,
-            border_checked=self.bd_gen,
-            border_checked_hover=self.bd_gen,
-            border_rgb=self.rgb_gen,
-            border_hover_rgb=self.rgb_gen,
-            border_checked_rgb=self.rgb_gen,
-            border_checked_hover_rgb=self.rgb_gen,
+            fg_pressed=rgb_gen,
+            border=bd_gen,
+            border_hover=bd_gen,
+            border_checked=bd_gen,
+            border_checked_hover=bd_gen,
+            border_rgb=rgb_gen,
+            border_hover_rgb=rgb_gen,
+            border_checked_rgb=rgb_gen,
+            border_checked_hover_rgb=rgb_gen,
         )
-class dlg_nok_inv(Style):
-    bd_gen = ((StyleBase().bd(),) * 4)
-    rgb_gen = Rgb().bn2()
+    def nok(self):
+        bd_gen = (StyleBase().border(),) * 4
+        rgb_gen = Rgb().bn2()
 
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
+        Build(
+            *self.wgs,
             width=Dim().h6(),
             height=None,
+            bg=Rgb().th1(),
+            fg=rgb_gen,
+            bg_hover=rgb_gen,
+            fg_hover=Rgb().th1(),
+            bg_pressed=rgb_gen,
+            fg_pressed=Rgb().th1(),
+            border=bd_gen,
+            border_hover=bd_gen,
+            border_checked=bd_gen,
+            border_checked_hover=bd_gen,
+            border_rgb=rgb_gen,
+            border_hover_rgb=rgb_gen,
+            border_checked_rgb=rgb_gen,
+            border_checked_hover_rgb=rgb_gen,
+        )
+    def nok_inv(self):
+        bd_gen = (StyleBase().border(),) * 4
+        rgb_gen = Rgb().bn2()
 
-            bg=self.rgb_gen,
+        Build(
+            *self.wgs,
+            width=Dim().h6(),
+            height=None,
+            bg=rgb_gen,
             fg=Rgb().th1(),
             bg_hover=Rgb().th1(),
-            fg_hover=self.rgb_gen,
+            fg_hover=rgb_gen,
             bg_pressed=Rgb().th1(),
-            fg_pressed=self.rgb_gen,
-            border=self.bd_gen,
-            border_hover=self.bd_gen,
-            border_checked=self.bd_gen,
-            border_checked_hover=self.bd_gen,
-            border_rgb=self.rgb_gen,
-            border_hover_rgb=self.rgb_gen,
-            border_checked_rgb=self.rgb_gen,
-            border_checked_hover_rgb=self.rgb_gen,
+            fg_pressed=rgb_gen,
+            border=bd_gen,
+            border_hover=bd_gen,
+            border_checked=bd_gen,
+            border_checked_hover=bd_gen,
+            border_rgb=rgb_gen,
+            border_hover_rgb=rgb_gen,
+            border_checked_rgb=rgb_gen,
+            border_checked_hover_rgb=rgb_gen,
         )
+
+
+
+
 class plein:
     def __init__(self, *wgs):
         self.wgs = wgs
@@ -333,7 +347,7 @@ class ck_ico(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            wg_type="check",
+            pb_type="check",
 
             bg=self.bg,
             bg_hover=self.bg,
@@ -347,7 +361,7 @@ class zoom(Style):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            wg_type="zoom",
+            pb_type="zoom",
 
             bg=self.bg,
             bg_hover=self.bg,
