@@ -24,10 +24,10 @@ class Ui_Rep(object):
         if not Rep.objectName():
             Rep.setObjectName(u"Rep")
         Rep.resize(773, 261)
-        self.glay_dlg = QGridLayout(Rep)
-        self.glay_dlg.setSpacing(0)
-        self.glay_dlg.setObjectName(u"glay_dlg")
-        self.glay_dlg.setContentsMargins(10, 10, 10, 10)
+        self.glay_main = QGridLayout(Rep)
+        self.glay_main.setSpacing(0)
+        self.glay_main.setObjectName(u"glay_main")
+        self.glay_main.setContentsMargins(0, 0, 0, 0)
         self.fr_main = QFrame(Rep)
         self.fr_main.setObjectName(u"fr_main")
         self.fr_main.setFrameShape(QFrame.StyledPanel)
@@ -95,7 +95,7 @@ class Ui_Rep(object):
         self.hlay_rep_bottom = QHBoxLayout(self.fr_rep_bottom)
         self.hlay_rep_bottom.setSpacing(2)
         self.hlay_rep_bottom.setObjectName(u"hlay_rep_bottom")
-        self.hlay_rep_bottom.setContentsMargins(0, 2, 0, 0)
+        self.hlay_rep_bottom.setContentsMargins(0, 2, 1, 1)
         self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.hlay_rep_bottom.addItem(self.horizontalSpacer)
@@ -114,7 +114,7 @@ class Ui_Rep(object):
         self.vlay_fr_main.addWidget(self.fr_rep_bottom)
 
 
-        self.glay_dlg.addWidget(self.fr_main, 1, 0, 1, 1)
+        self.glay_main.addWidget(self.fr_main, 1, 0, 1, 1)
 
 
         self.retranslateUi(Rep)

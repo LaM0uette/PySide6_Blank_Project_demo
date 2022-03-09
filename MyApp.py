@@ -318,7 +318,7 @@ class main(Ui_main, QtWidgets.QWidget):
     ##     ACTIONS     ##
     #####################
     def tt(self):
-        if DLG_Rep: print("oui")
+        if DLG_Rep().QUITTER(): print("oui")
         else: print("non")
     #####################
     ##    /ACTIONS     ##
@@ -369,7 +369,7 @@ class main(Ui_main, QtWidgets.QWidget):
         """Permet de quitter l'application"""
         if not config.auto_close:
             self.hide()
-        elif config.auto_close:  # DLG_Rep().QUITTER()
+        elif DLG_Rep().QUITTER():
             app.quit()
     def e_quitter_tray(self):
         self.show()
