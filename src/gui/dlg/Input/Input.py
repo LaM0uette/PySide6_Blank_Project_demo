@@ -25,7 +25,7 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
         self.titre = titre
         self.msg = msg
         self.ico = ico
-        self.tm = tm
+        self.rgb = tm
         self.txt_pb_ok = txt_pb_ok
         self.txt_pb_annuler = txt_pb_annuler
         self.width = width
@@ -58,6 +58,7 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
 
 
         ### QLabel ###
+        Label.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.rgb)
         Label.Base(self.lb_mt_nom, font_size=Font().h3()).tr()
         Label.Base(self.lb_input_text).tr()
         ### /QLabel ###
@@ -75,16 +76,12 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
         ### /QText ###
     def IN_WG(self):
         # Base
-        self.setCursor(Fct(cur=Cur().souris()).CUR())
+        self.setCursor(Functions().SET_CURSOR(cur=Cur().souris()))
 
         # Frame menu_top
         self.fr_menu_top.setFixedHeight(Dim().h9())
 
         # Menu_top
-        dim = Dim().h9()
-        Fct(wg=self.lb_mt_ico, w=dim, h=dim).DIM()
-        self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}{self.tm}.svg"))
-        self.lb_mt_ico.setScaledContents(True)
         self.lb_mt_nom.setText(self.titre)
 
         # Message

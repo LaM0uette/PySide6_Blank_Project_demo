@@ -45,6 +45,23 @@ class Base:
 
             scaled_contents=True,
         )
+    def ico_custom(self, img=Img().main(), img_rgb="th3"):
+        Build(
+            *self.wgs,
+
+            width=Dim().h9(),
+            height=Dim().h9(),
+
+            focus_policy=FocusPolicy().no_focus(),
+
+            bg=Rgb().tr(),
+            bg_hover=Rgb().tr(),
+
+            img=img,
+            img_rgb=img_rgb,
+
+            scaled_contents=True,
+        )
     def th(self):
         Build(
             *self.wgs,
