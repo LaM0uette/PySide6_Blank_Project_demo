@@ -95,7 +95,7 @@ class Ui_Msg(object):
         self.hlay_msg_bottom = QHBoxLayout(self.fr_msg_bottom)
         self.hlay_msg_bottom.setSpacing(2)
         self.hlay_msg_bottom.setObjectName(u"hlay_msg_bottom")
-        self.hlay_msg_bottom.setContentsMargins(0, 2, 0, 0)
+        self.hlay_msg_bottom.setContentsMargins(0, 2, 1, 1)
         self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.hlay_msg_bottom.addItem(self.horizontalSpacer)
