@@ -107,7 +107,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, 0, 818, 6461))
+        self.vlay_wg.setGeometry(QRect(0, -2463, 818, 6413))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -477,19 +477,9 @@ class Ui_main(object):
 
         self.vlay_pb.addItem(self.verticalSpacer_10)
 
-        self.pb_demo_rd = QPushButton(self.fr_pb)
-        self.pb_demo_rd.setObjectName(u"pb_demo_rd")
-
-        self.vlay_pb.addWidget(self.pb_demo_rd)
-
         self.verticalSpacer_11 = QSpacerItem(20, 5, QSizePolicy.Minimum, QSizePolicy.Fixed)
 
         self.vlay_pb.addItem(self.verticalSpacer_11)
-
-        self.pb_demo_bd = QPushButton(self.fr_pb)
-        self.pb_demo_bd.setObjectName(u"pb_demo_bd")
-
-        self.vlay_pb.addWidget(self.pb_demo_bd)
 
 
         self.verticalLayout.addWidget(self.fr_pb)
@@ -1078,7 +1068,7 @@ class Ui_main(object):
         self.tb_demo_th.setObjectName(u"tb_demo_th")
         self.page = QWidget()
         self.page.setObjectName(u"page")
-        self.page.setGeometry(QRect(0, 0, 596, 69))
+        self.page.setGeometry(QRect(0, 0, 98, 28))
         self.verticalLayout_2 = QVBoxLayout(self.page)
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
@@ -1128,7 +1118,7 @@ class Ui_main(object):
         self.tb_demo_tr.addItem(self.page_3, u"Page 1")
         self.page_4 = QWidget()
         self.page_4.setObjectName(u"page_4")
-        self.page_4.setGeometry(QRect(0, 0, 596, 69))
+        self.page_4.setGeometry(QRect(0, 0, 98, 28))
         self.verticalLayout_5 = QVBoxLayout(self.page_4)
         self.verticalLayout_5.setSpacing(0)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
@@ -1385,8 +1375,6 @@ class Ui_main(object):
         self.pb_demo_tr.setText(QCoreApplication.translate("main", u"PushButton transparent", None))
         self.pb_demo_ck.setText(QCoreApplication.translate("main", u"PushButton checkable", None))
         self.pb_demo_ck_ico.setText(QCoreApplication.translate("main", u"PushButton checkable avec icone", None))
-        self.pb_demo_rd.setText(QCoreApplication.translate("main", u"PushButton rd", None))
-        self.pb_demo_bd.setText(QCoreApplication.translate("main", u"PushButton bd", None))
         self.lb_rb_demo.setText(QCoreApplication.translate("main", u"QRadioButton :", None))
         self.rb_demo_th_1.setText(QCoreApplication.translate("main", u"RadioButton", None))
         self.rb_demo_th_2.setText(QCoreApplication.translate("main", u"RadioButton", None))

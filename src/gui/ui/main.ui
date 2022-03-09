@@ -151,9 +151,9 @@
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>0</y>
+              <y>-2463</y>
               <width>818</width>
-              <height>6461</height>
+              <height>6413</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout">
@@ -1016,13 +1016,6 @@
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QPushButton" name="pb_demo_rd">
-                  <property name="text">
-                   <string>PushButton rd</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
                  <spacer name="verticalSpacer_11">
                   <property name="orientation">
                    <enum>Qt::Vertical</enum>
@@ -1037,13 +1030,6 @@
                    </size>
                   </property>
                  </spacer>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="pb_demo_bd">
-                  <property name="text">
-                   <string>PushButton bd</string>
-                  </property>
-                 </widget>
                 </item>
                </layout>
               </widget>
@@ -2356,8 +2342,8 @@ hr { height: 1px; border-width: 0; }
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>596</width>
-                     <height>69</height>
+                     <width>98</width>
+                     <height>28</height>
                     </rect>
                    </property>
                    <attribute name="label">
@@ -2483,8 +2469,8 @@ hr { height: 1px; border-width: 0; }
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>596</width>
-                     <height>69</height>
+                     <width>98</width>
+                     <height>28</height>
                     </rect>
                    </property>
                    <attribute name="label">
