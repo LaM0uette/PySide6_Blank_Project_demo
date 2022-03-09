@@ -12,12 +12,6 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
         self.height = 400
         self.opacity = 1
 
-        self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.Tool)
-        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        self.setGraphicsEffect(Shadow().ombre_portee(self))
-        self.setWindowModality(QtCore.Qt.ApplicationModal)
-
-        self.setupUi(self)
         self.INIT()
 
     ############################
@@ -28,8 +22,13 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
         self.setFixedWidth(self.width)
         self.setFixedHeight(self.height)
         self.setWindowOpacity(self.opacity)
+        self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.Tool)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        self.setGraphicsEffect(Shadow().ombre_portee(self))
+        self.setWindowModality(QtCore.Qt.ApplicationModal)
     def IN_SETUP_UI(self):
         ### Ui ###
+        self.setupUi(self)
         self.vlay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
     def IN_CLASSE(self):
         ### QFrame ###
