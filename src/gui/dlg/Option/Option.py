@@ -87,10 +87,8 @@ class Option(option_ui.Ui_Option, QtWidgets.QDialog):
         ### QFrame ###
         Frame.Menu(self.fr_menu_top).top()
         Frame.Cadre(self.fr_main).th2()
-        Frame.Cadre(
-            self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize
-        ).th3()
-        Frame.Base(self.fr_body).th(rgb=Rgb().th1())
+        Frame.Cadre(self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize).th3()
+        Frame.Dlg(self.fr_body).th(rgb=Rgb().th1())
         Frame.Menu(self.fr_opt_bottom).bottom_dlg()
         ### /QFrame ###
 
