@@ -1,7 +1,7 @@
 from PySide6 import QtCore, QtWidgets
 
-from src.gui.ui import splash_screen_ui
 from src import *
+from src.gui.ui import splash_screen_ui
 
 
 class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):

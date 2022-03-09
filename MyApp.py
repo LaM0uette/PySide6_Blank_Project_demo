@@ -4,6 +4,7 @@ import time
 from PySide6 import QtCore, QtWidgets, QtGui
 
 from src import *
+from src.gui import *
 
 
 class main(Ui_main, QtWidgets.QWidget):
@@ -389,10 +390,9 @@ if __name__ == "__main__":
     Functions().GEN_SVG()
 
     app = QtWidgets.QApplication(sys.argv)
-    app.processEvents()
-
     splash_screen = SplashScreen()
     splash_screen.open()
+    app.processEvents()
 
     fen = main()
     fen.show()
