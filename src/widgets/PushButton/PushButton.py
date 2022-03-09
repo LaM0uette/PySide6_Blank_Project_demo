@@ -323,6 +323,7 @@ class ck_ico(Build):
         super().__init__(
             *wgs,
             pb_type="check",
+            checkable=True,
 
             bg=self.bg,
             bg_hover=self.bg,
