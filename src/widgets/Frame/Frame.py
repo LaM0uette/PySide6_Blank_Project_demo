@@ -134,7 +134,7 @@ class SplashScreen(Build):
             border_hover_rgb=Rgb().th3(),
             radius=(vb_wg.RADIUS_SIZE, )*4
     )
-class TrayUi(Build):
+class ToolBox(Build):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
