@@ -273,7 +273,6 @@ class main(Ui_main, QtWidgets.QWidget):
     def IN_CONNECTIONS(self):
         ### Menu_top ###
         # self.pb_mt_option.clicked.connect(lambda: DLG_Option(fen=fen).MAIN())
-        self.pb_mt_option.clicked.connect(lambda: self.tt())
         self.pb_mt_reduire.clicked.connect(lambda: self.evt.e_reduire())
         self.pb_mt_agrandir.clicked.connect(lambda: self.evt.e_agrandir())
         self.pb_mt_quitter.clicked.connect(lambda: self.evt.e_cacher())
@@ -317,8 +316,6 @@ class main(Ui_main, QtWidgets.QWidget):
     #####################
     ##     ACTIONS     ##
     #####################
-    def tt(self):
-        print(DLG_Rgb().GET())
     #####################
     ##    /ACTIONS     ##
     #####################
@@ -344,13 +341,12 @@ class main(Ui_main, QtWidgets.QWidget):
             self.setFixedHeight(config.height)
     #####
     def traySingleClick(self):
-        pass
-        # screen = QtWidgets.QApplication.primaryScreen().availableGeometry()
-        # widget = tray_ui.geometry()
-        #
-        # tray_ui.move(screen.width()-widget.width(), screen.height()-widget.height())
-        # tray_ui.open()
-        # tray_ui.activateWindow()
+        screen = QtWidgets.QApplication.primaryScreen().availableGeometry()
+        widget = toolBox.geometry()
+
+        toolBox.move(screen.width()-widget.width(), screen.height()-widget.height())
+        toolBox.open()
+        toolBox.activateWindow()
     def trayDoubleClick(self):
         self.timer_double_click.stop()
         self.show()
@@ -377,9 +373,8 @@ class main(Ui_main, QtWidgets.QWidget):
         if fen.windowState() == QtCore.Qt.WindowMinimized:
             fen.setWindowState(QtCore.Qt.WindowActive)
 
-        # if DLG_Rep().QUITTER():
-        #     self.ui.app.quit()
-        app.quit()
+        if DLG_Rep().QUITTER():
+            app.quit()
     #####
     def closeEvent(self, event):
         event.accept()
@@ -395,6 +390,9 @@ if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     splash_screen = SplashScreen()
     splash_screen.open()
+
+    toolBox = ToolBox()
+
     app.processEvents()
 
     fen = main()
