@@ -50,7 +50,7 @@ class ToolBoxUi(toolbox_ui.Ui_TrayUi, QtWidgets.QDialog):
         self.setCursor(Functions().SET_CURSOR(cur=Cur().souris()))
     def IN_CONNECTIONS(self):
         # Menu_top
-        self.pb_mt_quitter.clicked.connect(lambda: self.close())
+        self.pb_mt_quitter.clicked.connect(lambda: self.hide())
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):

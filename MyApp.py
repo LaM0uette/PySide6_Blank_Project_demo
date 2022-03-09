@@ -344,9 +344,11 @@ class main(Ui_main, QtWidgets.QWidget):
         screen = QtWidgets.QApplication.primaryScreen().availableGeometry()
         widget = toolBox.geometry()
 
-        toolBox.move(screen.width()-widget.width(), screen.height()-widget.height())
         toolBox.open()
+        toolBox.show()
         toolBox.activateWindow()
+
+        toolBox.move(screen.width()-widget.width(), screen.height()-widget.height())
     def trayDoubleClick(self):
         self.timer_double_click.stop()
         self.show()
@@ -390,9 +392,7 @@ if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     splash_screen = SplashScreen()
     splash_screen.open()
-
-    toolBox = ToolBox()
-
+    toolBox = ToolBoxUi()
     app.processEvents()
 
     fen = main()
