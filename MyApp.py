@@ -318,8 +318,7 @@ class main(Ui_main, QtWidgets.QWidget):
     ##     ACTIONS     ##
     #####################
     def tt(self):
-        if DLG_Rep().QUITTER(): print("oui")
-        else: print("non")
+        print()
     #####################
     ##    /ACTIONS     ##
     #####################

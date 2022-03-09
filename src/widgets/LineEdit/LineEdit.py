@@ -21,3 +21,14 @@ class Base:
             bg=Rgb().tr(),
             fg=Rgb().th3()
         )
+    def rgb_hex(self):
+        Build(
+            *self.wgs,
+
+            align_horizontal=Align().center_horizontal(),
+
+            bg=Rgb().tr(),
+            bg_selection=Rgb().th3(),
+            fg=Rgb().th3(),
+            fg_selection=Rgb().th1(),
+        )
