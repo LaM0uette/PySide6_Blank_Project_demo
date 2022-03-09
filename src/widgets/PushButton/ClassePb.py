@@ -1,6 +1,6 @@
 from PySide6 import QtCore
 
-from src.build import *
+from src.build.mods.Functions import Functions
 
 
 class ClassePb:
@@ -41,38 +41,38 @@ class ClassePb:
     def ENT_CHECK(self, event):
         if self.wg.isEnabled():
             if not self.wg.isChecked():
-                Fct(wg=self.wg, img=self.img_uncheck_hover + self.img_uncheck_hover_rgb, dim=self.dim_ico).ICON()
+                Functions().SET_ICON(wg=self.wg, img=self.img_uncheck_hover + self.img_uncheck_hover_rgb, dim=self.dim_ico)
             else:
-                Fct(wg=self.wg, img=self.img_check_hover + self.img_check_hover_rgb, dim=self.dim_ico).ICON()
+                Functions().SET_ICON(wg=self.wg, img=self.img_check_hover + self.img_check_hover_rgb, dim=self.dim_ico)
     def LVE_CHECK(self, event):
         if self.wg.isEnabled():
             if not self.wg.isChecked():
-                Fct(wg=self.wg, img=self.img_uncheck + self.img_uncheck_rgb, dim=self.dim_ico).ICON()
+                Functions().SET_ICON(wg=self.wg, img=self.img_uncheck + self.img_uncheck_rgb, dim=self.dim_ico)
             else:
-                Fct(wg=self.wg, img=self.img_check + self.img_check_rgb, dim=self.dim_ico).ICON()
+                Functions().SET_ICON(wg=self.wg, img=self.img_check + self.img_check_rgb, dim=self.dim_ico)
     def MP_CHECK(self, event):
         if self.wg.isEnabled():
             if not self.wg.isChecked():
                 self.wg.setChecked(True)
-                Fct(wg=self.wg, img=self.img_check_hover + self.img_check_hover_rgb, dim=self.dim_ico).ICON()
+                Functions().SET_ICON(wg=self.wg, img=self.img_check_hover + self.img_check_hover_rgb, dim=self.dim_ico)
             else:
                 self.wg.setChecked(False)
-                Fct(wg=self.wg, img=self.img_uncheck_hover + self.img_uncheck_hover_rgb, dim=self.dim_ico).ICON()
+                Functions().SET_ICON(wg=self.wg, img=self.img_uncheck_hover + self.img_uncheck_hover_rgb, dim=self.dim_ico)
 
 
     def ENT_ICO(self, event):
         if not self.wg.isChecked() and self.wg.isEnabled():
-            Fct(wg=self.wg, img=self.img + self.img_hover_rgb, dim=self.dim_ico).ICON()
+            Functions().SET_ICON(wg=self.wg, img=self.img + self.img_hover_rgb, dim=self.dim_ico)
     def LVE_ICO(self, event):
         if not self.wg.isChecked() and self.wg.isEnabled():
-            Fct(wg=self.wg, img=self.img + self.img_rgb, dim=self.dim_ico).ICON()
+            Functions().SET_ICON(wg=self.wg, img=self.img + self.img_rgb, dim=self.dim_ico)
     def MP_ICO(self, event):
         if self.wg.isChecked() and self.wg.isEnabled():
             self.wg.setChecked(False)
-            Fct(wg=self.wg, img=self.img + self.img_rgb, dim=self.dim_ico).ICON()
+            Functions().SET_ICON(wg=self.wg, img=self.img + self.img_rgb, dim=self.dim_ico)
         elif not self.wg.isChecked() and self.wg.isEnabled():
             self.wg.setChecked(True)
-            Fct(wg=self.wg, img=self.img + self.img_hover_rgb, dim=self.dim_ico).ICON()
+            Functions().SET_ICON(wg=self.wg, img=self.img + self.img_hover_rgb, dim=self.dim_ico)
 
     def ENT_ZOOM(self, event):
         if not self.wg.isChecked() and self.wg.isEnabled():
