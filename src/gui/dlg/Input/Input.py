@@ -133,32 +133,3 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
     #######################
     ##    /FONCTIONS     ##
     #######################
-
-
-    ###################
-    ##     EVENT     ##
-    ###################
-    def mousePressEvent(self, event):
-        cur = QtGui.QCursor()
-        verifHeight = cur.pos().y() - self.pos().y()
-        if event.buttons() == QtCore.Qt.LeftButton and 10< verifHeight < Dim().h9()+10:
-            self.dragPos = event.globalPosition().toPoint()
-            event.accept()
-    def mouseMoveEvent(self, event):
-        def act_move(event):
-            self.move(self.pos() + event.globalPosition().toPoint() - self.dragPos)
-            self.dragPos = event.globalPosition().toPoint()
-            event.accept()
-
-        cur = QtGui.QCursor()
-        height_verif = cur.pos().y() - self.pos().y()
-
-        try:
-            if event.buttons() == QtCore.Qt.LeftButton and 10< height_verif < Dim().h9()+10:
-                act_move(event)
-            if event.buttons() == QtCore.Qt.LeftButton and 10< height_verif < Dim().h9()+10:
-                act_move(event)
-        except AttributeError: pass
-    ###################
-    ##    /EVENT     ##
-    ###################
