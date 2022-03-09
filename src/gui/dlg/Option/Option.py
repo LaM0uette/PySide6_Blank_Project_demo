@@ -42,13 +42,14 @@ class Option(option_ui.Ui_Option, QtWidgets.QDialog):
 
         # Global
         self.reload = False
+
+        self.INIT()
+
         self.dct_pg = {
             "Configs": [self.pg_opt_configs],
             "Thèmes": [self.pg_opt_themes],
             "Infos": [self.pg_opt_infos],
         }
-
-        self.INIT()
 
         ### CREATION DES EVENT ###
         self.evt = Event(self)
@@ -197,9 +198,6 @@ class Option(option_ui.Ui_Option, QtWidgets.QDialog):
         # MAJ de la liste des thèmes
         self._maj_cb_theme()
     def IN_WG_BASE(self):
-        # stk
-        self.stk_option.setCurrentWidget(self.pg_opt_menu)
-
         # pb appliquer
         self.pb_opt_appliquer.setVisible(False)
     def INIT(self):
