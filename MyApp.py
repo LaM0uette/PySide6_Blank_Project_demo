@@ -1,4 +1,5 @@
 import sys
+import time
 
 from PySide6 import QtCore, QtWidgets, QtGui
 
@@ -38,6 +39,8 @@ class main(Ui_main, QtWidgets.QWidget):
             [self.IN_WG_BASE, "Etat de base des Widgets"],
             [self.IN_TRAY, "Finalisation de la configuration"]
         )
+
+        splash_screen.close()
 
         ### CREATION DES EVENT ###
         self.evt = Event(self)
@@ -297,7 +300,13 @@ class main(Ui_main, QtWidgets.QWidget):
         self.tray.show()
     def INIT(self, *args):
         for fct in args:
+            splash_screen.lb_chargement.setText(fct[1])
+            splash_screen.pg_chargement.setValue(splash_screen.pg_chargement.value() + 100 / len(args))
             fct[0]()
+
+        splash_screen.lb_chargement.setText("Lancement de l'application")
+        splash_screen.pg_chargement.setValue(100)
+        time.sleep(2)
     ############################
     ##    /INITIALISATION     ##
     ############################
@@ -381,6 +390,9 @@ if __name__ == "__main__":
 
     app = QtWidgets.QApplication(sys.argv)
     app.processEvents()
+
+    splash_screen = SplashScreen()
+    splash_screen.open()
 
     fen = main()
     fen.show()
