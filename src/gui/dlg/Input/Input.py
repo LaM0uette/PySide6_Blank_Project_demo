@@ -50,28 +50,28 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
         self.setWindowOpacity(self.opacity)
     def IN_CLASSE(self):
         ### QFrame ###
-        Frame.Menu_top(self.fr_menu_top)
-        Frame.Cadre(self.fr_main, ombre_portee=True).th2()
-        Frame.Base_th(self.fr_body, rgb=Rgb().th1())
-        Frame.Menu_bottom_dlg(self.fr_input_bottom)
+        Frame.Menu(self.fr_menu_top).top()
+        Frame.Cadre(self.fr_main).th2()
+        Frame.Base(self.fr_body).th(rgb=Rgb().th1())
+        Frame.Menu(self.fr_input_bottom).bottom_dlg()
         ### /QFrame ###
 
 
         ### QLabel ###
-        Label.Base_tr(self.lb_mt_nom, font_size=Font().h3())
-        Label.Base_tr(self.lb_input_text)
+        Label.Base(self.lb_mt_nom, font_size=Font().h3()).tr()
+        Label.Base(self.lb_input_text).tr()
         ### /QLabel ###
 
 
         ### QPushButton ###
-        PushButton.dlg_ok(self.pb_input_ok)
-        PushButton.dlg_nok_inv(self.pb_input_annuler)
+        PushButton.Dlg(self.pb_input_ok).ok()
+        PushButton.Dlg(self.pb_input_annuler).nok_inv()
         PushButton.menu_top(self.pb_mt_quitter).quitter()
         ### /QPushButton ###
 
 
         ### QText ###
-        TextEdit.Base_th(self.le_input_text)
+        TextEdit.Base(self.le_input_text).th()
         ### /QText ###
     def IN_WG(self):
         # Base
