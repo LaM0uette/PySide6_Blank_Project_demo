@@ -28,7 +28,7 @@ class DLG_Input:
 
         return _input.rep, _input.input
 
-    def TXT(self, titre="INPUT", msg="", ico=Img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
+    def TXT(self, titre="INPUT", msg="Tapez votre texte", ico=Img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
         return self._rtn(
             titre=titre,
             msg=msg,
