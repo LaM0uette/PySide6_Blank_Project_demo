@@ -145,9 +145,8 @@
          <item>
           <widget class="QStackedWidget" name="stk_option">
            <property name="currentIndex">
-            <number>1</number>
+            <number>0</number>
            </property>
-           <widget class="QWidget" name="pg_opt_menu"/>
            <widget class="QWidget" name="pg_opt_configs">
             <layout class="QVBoxLayout" name="vlay_pg_opt_configs">
              <property name="spacing">

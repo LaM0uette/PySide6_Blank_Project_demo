@@ -87,9 +87,6 @@ class Ui_Option(object):
 
         self.stk_option = QStackedWidget(self.fr_body)
         self.stk_option.setObjectName(u"stk_option")
-        self.pg_opt_menu = QWidget()
-        self.pg_opt_menu.setObjectName(u"pg_opt_menu")
-        self.stk_option.addWidget(self.pg_opt_menu)
         self.pg_opt_configs = QWidget()
         self.pg_opt_configs.setObjectName(u"pg_opt_configs")
         self.vlay_pg_opt_configs = QVBoxLayout(self.pg_opt_configs)
@@ -336,7 +333,7 @@ class Ui_Option(object):
 
         self.retranslateUi(Option)
 
-        self.stk_option.setCurrentIndex(1)
+        self.stk_option.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(Option)
