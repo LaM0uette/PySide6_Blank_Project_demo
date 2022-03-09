@@ -1,13 +1,12 @@
 from PySide6 import QtCore, QtWidgets
 
 from src import *
-from src.gui.ui import input_ui
+from src.gui.ui import msg_ui
 from src.gui.events.Event import Event
 
 
-class Input(input_ui.Ui_Input, QtWidgets.QDialog):
+class Msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
-    input = ""
 
     def __init__(self,
                  titre,
@@ -15,19 +14,17 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
                  ico,
                  tm,
                  txt_pb_ok,
-                 txt_pb_annuler,
                  width,
                  height,
                  opacity,
     ):
-        super(Input, self).__init__()
+        super(Msg, self).__init__()
 
         self.titre = titre
         self.msg = msg
         self.ico = ico
         self.rgb = tm
         self.txt_pb_ok = txt_pb_ok
-        self.txt_pb_annuler = txt_pb_annuler
         self.width = width
         self.height = height
         self.opacity = opacity
@@ -55,33 +52,27 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
     def IN_SETUP_UI(self):
         ### Ui ###
         self.setupUi(self)
-        self.vlay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
+        self.glay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
     def IN_CLASSE(self):
         ### QFrame ###
         Frame.Menu(self.fr_menu_top).top()
         Frame.Cadre(self.fr_main).th2()
         Frame.Base(self.fr_body).th(rgb=Rgb().th1())
-        Frame.Menu(self.fr_input_bottom).bottom_dlg()
+        Frame.Menu(self.fr_msg_bottom).bottom_dlg()
         ### /QFrame ###
 
 
         ### QLabel ###
         Label.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.rgb)
         Label.Base(self.lb_mt_nom, font_size=Font().h3()).tr()
-        Label.Base(self.lb_input_text).tr()
+        Label.Base(self.lb_msg_text).tr()
         ### /QLabel ###
 
 
         ### QPushButton ###
-        PushButton.Dlg(self.pb_input_ok).ok()
-        PushButton.Dlg(self.pb_input_annuler).nok_inv()
+        PushButton.Dlg(self.pb_msg_ok).ok()
         PushButton.menu_top(self.pb_mt_quitter).quitter()
         ### /QPushButton ###
-
-
-        ### QText ###
-        LineEdit.Base(self.le_input_text).th()
-        ### /QText ###
     def IN_WG(self):
         # Base
         self.setCursor(Functions().SET_CURSOR(cur=Cur().souris()))
@@ -93,20 +84,17 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
         self.lb_mt_nom.setText(self.titre)
 
         # Message
-        self.lb_input_text.setText(f"{self.msg}: ")
-        self.le_input_text.setPlaceholderText(f"{self.msg}...")
+        self.lb_msg_text.setText(self.msg)
 
         # pb dlg
-        self.pb_input_ok.setText(self.txt_pb_ok)
-        self.pb_input_annuler.setText(self.txt_pb_annuler)
-        self.pb_input_annuler.setDefault(True)
+        self.pb_msg_ok.setText(self.txt_pb_ok)
+        self.pb_msg_ok.setDefault(True)
     def IN_CONNECTIONS(self):
-        # Menu_top
+        ## Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
 
         # pb dlg
-        self.pb_input_ok.clicked.connect(lambda: self.OK())
-        self.pb_input_annuler.clicked.connect(lambda: self.close())
+        self.pb_msg_ok.clicked.connect(lambda: self.close())
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):
@@ -122,14 +110,3 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
     ############################
     ##    /INITIALISATION     ##
     ############################
-
-
-    #######################
-    ##     FONCTIONS     ##
-    #######################
-    def OK(self):
-        self.input = self.le_input_text.text()
-        self.close()
-    #######################
-    ##    /FONCTIONS     ##
-    #######################

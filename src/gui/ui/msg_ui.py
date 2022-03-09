@@ -24,10 +24,10 @@ class Ui_Msg(object):
         if not Msg.objectName():
             Msg.setObjectName(u"Msg")
         Msg.resize(773, 261)
-        self.glay_dlg = QGridLayout(Msg)
-        self.glay_dlg.setSpacing(0)
-        self.glay_dlg.setObjectName(u"glay_dlg")
-        self.glay_dlg.setContentsMargins(10, 10, 10, 10)
+        self.glay_main = QGridLayout(Msg)
+        self.glay_main.setSpacing(0)
+        self.glay_main.setObjectName(u"glay_main")
+        self.glay_main.setContentsMargins(0, 0, 0, 0)
         self.fr_main = QFrame(Msg)
         self.fr_main.setObjectName(u"fr_main")
         self.fr_main.setFrameShape(QFrame.StyledPanel)
@@ -109,7 +109,7 @@ class Ui_Msg(object):
         self.vlay_fr_main.addWidget(self.fr_msg_bottom)
 
 
-        self.glay_dlg.addWidget(self.fr_main, 1, 0, 1, 1)
+        self.glay_main.addWidget(self.fr_main, 1, 0, 1, 1)
 
 
         self.retranslateUi(Msg)

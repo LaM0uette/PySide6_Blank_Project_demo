@@ -318,7 +318,7 @@ class main(Ui_main, QtWidgets.QWidget):
     ##     ACTIONS     ##
     #####################
     def tt(self):
-        print(DLG_Input().TXT())
+        print(DLG_Msg().INFO())
     #####################
     ##    /ACTIONS     ##
     #####################
