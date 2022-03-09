@@ -100,7 +100,7 @@ class Ui_Input(object):
         self.hlay_input_bottom = QHBoxLayout(self.fr_input_bottom)
         self.hlay_input_bottom.setSpacing(2)
         self.hlay_input_bottom.setObjectName(u"hlay_input_bottom")
-        self.hlay_input_bottom.setContentsMargins(0, 2, 0, 0)
+        self.hlay_input_bottom.setContentsMargins(0, 2, 1, 1)
         self.horizontalSpacer = QSpacerItem(40, 20, QSizePolicy.Expanding, QSizePolicy.Minimum)
 
         self.hlay_input_bottom.addItem(self.horizontalSpacer)
