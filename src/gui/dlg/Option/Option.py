@@ -3,7 +3,7 @@ import importlib
 import os
 import time
 
-from PySide6 import QtCore, QtWidgets, QtGui
+from PySide6 import QtCore, QtWidgets
 
 from src import *
 from src.gui.dlg.Msg.DLG_Msg import DLG_Msg
@@ -49,6 +49,11 @@ class Option(option_ui.Ui_Option, QtWidgets.QDialog):
         }
 
         self.INIT()
+
+        ### CREATION DES EVENT ###
+        self.evt = Event(self)
+        self.mousePressEvent = self.evt.mousePressEvent
+        self.mouseMoveEvent = self.evt.mouseMoveEvent
 
     ############################
     ##     INITIALISATION     ##
@@ -179,11 +184,11 @@ class Option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.cb_opt_tm_theme.currentTextChanged.connect(self._val_change_appliquer)
 
         # pb tm
-        self.pb_opt_tm_th1.clicked.connect(lambda: self._pb_tm_maj(tm="th1"))
-        self.pb_opt_tm_th2.clicked.connect(lambda: self._pb_tm_maj(tm="th2"))
-        self.pb_opt_tm_th3.clicked.connect(lambda: self._pb_tm_maj(tm="th3"))
-        self.pb_opt_tm_bn1.clicked.connect(lambda: self._pb_tm_maj(tm="bn1"))
-        self.pb_opt_tm_bn2.clicked.connect(lambda: self._pb_tm_maj(tm="bn2"))
+        self.pb_opt_tm_th1.clicked.connect(lambda: self._pb_tm_maj(rgb="th1"))
+        self.pb_opt_tm_th2.clicked.connect(lambda: self._pb_tm_maj(rgb="th2"))
+        self.pb_opt_tm_th3.clicked.connect(lambda: self._pb_tm_maj(rgb="th3"))
+        self.pb_opt_tm_bn1.clicked.connect(lambda: self._pb_tm_maj(rgb="bn1"))
+        self.pb_opt_tm_bn2.clicked.connect(lambda: self._pb_tm_maj(rgb="bn2"))
 
         # pb dlg
         self.pb_opt_ok.clicked.connect(lambda: self.OK())
@@ -238,14 +243,14 @@ class Option(option_ui.Ui_Option, QtWidgets.QDialog):
     def _maj_cb_theme(self):
         self.cb_opt_tm_theme.clear()
 
-        for i, js in enumerate(glob.glob(f"{vrb.DO_THEME}*.json")):
+        for i, js in enumerate(glob.glob(f"src/theme/*.json")):
             tm = os.path.basename(js).split(".")[0]
             self.cb_opt_tm_theme.addItem(tm)
             if tm == config.theme:
                 self.cb_opt_tm_theme.setCurrentIndex(i)
     def _set_opt(self, item):
         self.stk_option.setCurrentWidget(self.dct_pg.get(item.text(0))[0])
-    def _pb_tm_maj(self, tm):
+    def _pb_tm_maj(self, rgb):
         dct_colors = {
             "th1": Rgb().th1(),
             "th2": Rgb().th2(),
@@ -253,16 +258,17 @@ class Option(option_ui.Ui_Option, QtWidgets.QDialog):
             "bn1": Rgb().bn1(),
             "bn2": Rgb().bn2(),
         }
-        rep, colors = DLG_Rgb().GET(rgb=dct_colors.get(tm))
+        rep, colors = DLG_Rgb().GET(rgb=dct_colors.get(rgb))
         if rep:
             self._val_change_appliquer()
 
             dct = {
-                f"{tm}": list(colors),
+                f"{rgb}": list(colors),
             }
-            Json(lien_json=f"{vrb.DO_THEME}{config.theme}.json").UPDATE(dct)
+            Json(lien_json=f"src/theme/{config.theme}.json").UPDATE(dct)
 
             self.__reload()
+
     # application des modifs
     def _val_change_appliquer(self, val=""):
         if not self.pb_opt_appliquer.isVisible():
@@ -272,27 +278,23 @@ class Option(option_ui.Ui_Option, QtWidgets.QDialog):
     def _appliquer(self):
         self.pb_opt_appliquer.setVisible(False)
 
-        config_ini = Ini(lien_ini=vrb.INI_CONFIG)
-        config = config_ini.OPEN_INI()
-        config["config"]["theme"] = self.cb_opt_tm_theme.currentText()
-        config["config"]["font"] = self.fcb_opt_ft_font.currentText()
-        config["config"]["widht"] = f"{self.sb_opt_cfg_resize_width.value()}"
-        config["config"]["height"] = f"{self.sb_opt_cfg_resize_height.value()}"
-        config["config"]["opacity"] = f"{self.sb_opt_cfg_opacity.value() / 100}"
-        config["var"]["debug"] = "true" if self.ck_opt_cfg_debug.isChecked() == True else "false"
-        config["var"]["autoclose"] = "true" if self.ck_opt_cfg_autoclose.isChecked() == True else "false"
-        config["var"]["resize"] = "true" if self.ck_opt_cfg_resize.isChecked() == True else "false"
-        config["var"]["tray_ui_pin"] = "true" if self.ck_opt_cfg_ui_pin.isChecked() == True else "false"
-        config_ini.WRITE_INI(ini=config)
-
         dct = {
-            "h1": self.sb_opt_ft_h1.value(),
-            "h2": self.sb_opt_ft_h2.value(),
-            "h3": self.sb_opt_ft_h3.value(),
-            "h4": self.sb_opt_ft_h4.value(),
-            "h5": self.sb_opt_ft_h5.value(),
+            "config": {
+                "theme": self.cb_opt_tm_theme.currentText(),
+                "font": self.fcb_opt_ft_font.currentText(),
+                "widht": f"{self.sb_opt_cfg_resize_width.value()}",
+                "height": f"{self.sb_opt_cfg_resize_height.value()}",
+                "opacity": f"{self.sb_opt_cfg_opacity.value() / 100}"
+            },
+
+            "var": {
+                "debug": True if self.ck_opt_cfg_debug.isChecked() else False,
+                "resize": True if self.ck_opt_cfg_resize.isChecked() else False,
+                "auto_close": True if self.ck_opt_cfg_autoclose.isChecked() else False,
+                "toolbox_pin": True if self.ck_opt_cfg_ui_pin.isChecked() else False
+            },
         }
-        Json(lien_json=vrb.JS_FONT).UPDATE(dct)
+        Json(lien_json=f"src/config/config.json").UPDATE(dct)
 
         self.__reload()
     #####################
@@ -310,32 +312,3 @@ class Option(option_ui.Ui_Option, QtWidgets.QDialog):
     #######################
     ##    /FONCTIONS     ##
     #######################
-
-
-    ###################
-    ##     EVENT     ##
-    ###################
-    def mousePressEvent(self, event):
-        cur = QtGui.QCursor()
-        verifHeight = cur.pos().y() - self.pos().y()
-        if event.buttons() == QtCore.Qt.LeftButton and 10 < verifHeight < Dim().h9()+10 :
-            self.dragPos = event.globalPosition().toPoint()
-            event.accept()
-    def mouseMoveEvent(self, event):
-        def act_move(event):
-            self.move(self.pos() + event.globalPosition().toPoint() - self.dragPos)
-            self.dragPos = event.globalPosition().toPoint()
-            event.accept()
-
-        cur = QtGui.QCursor()
-        height_verif = cur.pos().y() - self.pos().y()
-
-        try:
-            if event.buttons() == QtCore.Qt.LeftButton and 10 < height_verif < Dim().h9()+10 :
-                act_move(event)
-            if event.buttons() == QtCore.Qt.LeftButton and 10 < height_verif < Dim().h9()+10 :
-                act_move(event)
-        except AttributeError: pass
-    ###################
-    ##    /EVENT     ##
-    ###################
