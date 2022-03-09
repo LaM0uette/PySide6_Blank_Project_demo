@@ -24,10 +24,10 @@ class Ui_SplashScreen(object):
         if not SplashScreen.objectName():
             SplashScreen.setObjectName(u"SplashScreen")
         SplashScreen.resize(768, 449)
-        self.verticalLayout = QVBoxLayout(SplashScreen)
-        self.verticalLayout.setSpacing(0)
-        self.verticalLayout.setObjectName(u"verticalLayout")
-        self.verticalLayout.setContentsMargins(10, 10, 10, 10)
+        self.vlay_main = QVBoxLayout(SplashScreen)
+        self.vlay_main.setSpacing(0)
+        self.vlay_main.setObjectName(u"vlay_main")
+        self.vlay_main.setContentsMargins(0, 0, 0, 0)
         self.fr_main = QFrame(SplashScreen)
         self.fr_main.setObjectName(u"fr_main")
         self.fr_main.setFrameShape(QFrame.StyledPanel)
@@ -77,7 +77,7 @@ class Ui_SplashScreen(object):
         self.vlay_fr_main.addWidget(self.pg_chargement)
 
 
-        self.verticalLayout.addWidget(self.fr_main)
+        self.vlay_main.addWidget(self.fr_main)
 
 
         self.retranslateUi(SplashScreen)
