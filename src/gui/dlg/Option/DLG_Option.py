@@ -15,7 +15,7 @@ class DLG_Option:
         self.opacity = opacity
 
     def _rtn(self, titre, msg, ico, tm, txt_pb_appliquer, txt_pb_ok):
-        opt = OptionApp(
+        opt = Option(
             fen=self.fen,
             titre=titre,
             msg=msg,
