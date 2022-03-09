@@ -316,7 +316,7 @@ class plein:
 ##################
 ##     DEMO     ##
 ##################
-class ck_ico(Style):
+class ck_ico(Build):
     bg = Rgb().tr()
 
     def __init__(self, *wgs):
@@ -330,7 +330,7 @@ class ck_ico(Style):
             bg_checked_hover=self.bg,
             fg=Rgb().th3(),
     )
-class zoom(Style):
+class zoom(Build):
     bg = Rgb().tr()
 
     def __init__(self, *wgs):
