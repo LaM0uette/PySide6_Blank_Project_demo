@@ -60,7 +60,7 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
         ### QFrame ###
         Frame.Menu(self.fr_menu_top).top()
         Frame.Cadre(self.fr_main).th2()
-        Frame.Base(self.fr_body).th(rgb=Rgb().th1())
+        Frame.Dlg(self.fr_body).th(rgb=Rgb().th1())
         Frame.Menu(self.fr_input_bottom).bottom_dlg()
         ### /QFrame ###
 

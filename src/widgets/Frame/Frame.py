@@ -92,6 +92,27 @@ class Cadre:
     def bn2(self): self.rtn(rgb=Rgb().bn2())
 
 
+#################
+##     DLG     ##
+#################
+class Dlg:
+    def __init__(self, *wgs):
+        self.wgs = wgs
+
+    def th(self, rgb=Rgb().th3()):
+        Build(
+            *self.wgs,
+            bg=rgb,
+            radius=(0, )*4
+        )
+    def tr(self, rgb=Rgb().th3()):
+        Build(
+            *self.wgs,
+            bg=rgb,
+            radius=(0, )*4
+        )
+
+
 ####################
 ##     AUTRES     ##
 ####################
