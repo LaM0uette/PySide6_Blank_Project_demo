@@ -32,12 +32,7 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
         self.height = height
         self.opacity = opacity
 
-        self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.Tool)
-        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        self.setWindowModality(QtCore.Qt.ApplicationModal)
-        self.setupUi(self)
         self.INIT()
-
 
     ############################
     ##     INITIALISATION     ##
@@ -48,6 +43,14 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
         self.setFixedWidth(self.width)
         self.setFixedHeight(self.height)
         self.setWindowOpacity(self.opacity)
+        self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.Tool)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        self.setGraphicsEffect(Shadow().ombre_portee(self))
+        self.setWindowModality(QtCore.Qt.ApplicationModal)
+    def IN_SETUP_UI(self):
+        ### Ui ###
+        self.setupUi(self)
+        self.vlay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
     def IN_CLASSE(self):
         ### QFrame ###
         Frame.Menu(self.fr_menu_top).top()
@@ -105,6 +108,7 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
         pass
     def INIT(self):
         self.IN_BASE()
+        self.IN_SETUP_UI()
         self.IN_CLASSE()
         self.IN_WG()
         self.IN_CONNECTIONS()

@@ -24,10 +24,10 @@ class Ui_Input(object):
         if not Input.objectName():
             Input.setObjectName(u"Input")
         Input.resize(773, 262)
-        self.glay_dlg = QGridLayout(Input)
-        self.glay_dlg.setSpacing(0)
-        self.glay_dlg.setObjectName(u"glay_dlg")
-        self.glay_dlg.setContentsMargins(10, 10, 10, 10)
+        self.vlay_main = QGridLayout(Input)
+        self.vlay_main.setSpacing(0)
+        self.vlay_main.setObjectName(u"vlay_main")
+        self.vlay_main.setContentsMargins(0, 0, 0, 0)
         self.fr_main = QFrame(Input)
         self.fr_main.setObjectName(u"fr_main")
         self.fr_main.setFrameShape(QFrame.StyledPanel)
@@ -119,7 +119,7 @@ class Ui_Input(object):
         self.vlay_fr_main.addWidget(self.fr_input_bottom)
 
 
-        self.glay_dlg.addWidget(self.fr_main, 1, 0, 1, 1)
+        self.vlay_main.addWidget(self.fr_main, 1, 0, 1, 1)
 
 
         self.retranslateUi(Input)
