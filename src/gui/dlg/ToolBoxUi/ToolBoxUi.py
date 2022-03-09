@@ -4,9 +4,9 @@ from src import *
 from src.gui.ui import toolbox_ui
 
 
-class ToolBox(toolbox_ui.Ui_TrayUi, QtWidgets.QDialog):
+class ToolBoxUi(toolbox_ui.Ui_TrayUi, QtWidgets.QDialog):
     def __init__(self):
-        super(ToolBox, self).__init__()
+        super(ToolBoxUi, self).__init__()
 
         self.width = 300
         self.height = 600
