@@ -316,28 +316,6 @@ class plein:
 ##################
 ##     DEMO     ##
 ##################
-class Demo_bd(Style):
-    bd_gen = ((StyleBase().bd(),) * 4)
-    bd_rgb = Rgb().bn1()
-
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            border=self.bd_gen,
-            border_hover=self.bd_gen,
-            border_checked=self.bd_gen,
-            border_checked_hover=self.bd_gen,
-            border_rgb=self.bd_rgb,
-            border_hover_rgb=self.bd_rgb,
-            border_checked_rgb=self.bd_rgb,
-            border_checked_hover_rgb=self.bd_rgb,
-    )
-class Demo_rd(Style):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            radius=((10, )*4)
-    )
 class ck_ico(Style):
     bg = Rgb().tr()
 
