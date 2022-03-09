@@ -50,6 +50,8 @@ class Functions:
 
         tray.addAction(action)
         QtGui.QShortcut(QtGui.QKeySequence(shortcut), self).activated.connect(fct)
+
+
     def GEN_SVG(self):
         hx1, hx2, hx3, hxbn1, hxbn2 = Rgb().hx_th1(), Rgb().hx_th2(), Rgb().hx_th3(), Rgb().hx_bn1(), Rgb().hx_bn2()
         ls_couleurs = [
@@ -94,3 +96,9 @@ class Functions:
                                 svgMod.write(data)
                 else:
                     shutil.copyfile(svg, f"{lien_rgb}/{pathlib.Path(svg).stem[:-4]}.svg")
+    def RGB_HEX(self, rgb):
+        return "#" + "%02x%02x%02x" % rgb
+    def HEX_RGB(self, hex_colors):
+        rgb = hex_colors.lstrip('#')
+        lv = len(rgb)
+        return tuple(int(rgb[i:i + lv // 3], 16) for i in range(0, lv, lv // 3))

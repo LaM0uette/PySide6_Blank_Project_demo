@@ -173,12 +173,12 @@ class Rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         rgb_blue_1 = rgb[0], rgb[1], 0, 255
         rgb_blue_2 = rgb[0], rgb[1], 255, 255
 
-        self.le_rgb_hex.setText(Fct().RGB_HEX(rgb=rgb))
+        self.le_rgb_hex.setText(Functions().RGB_HEX(rgb=rgb))
 
         Frame.palette_rgb(self.fr_rgb_colors, rgb=_rgb)
-        Slider.rgb(self.sd_rgb_red, rgb=_rgb, rgb_1=rgb_red_1, rgb_2=rgb_red_2)
-        Slider.rgb(self.sd_rgb_green, rgb=_rgb, rgb_1=rgb_green_1, rgb_2=rgb_green_2)
-        Slider.rgb(self.sd_rgb_blue, rgb=_rgb, rgb_1=rgb_blue_1, rgb_2=rgb_blue_2)
+        Slider.Base(self.sd_rgb_red).rgb(rgb=_rgb, rgb_1=rgb_red_1, rgb_2=rgb_red_2)
+        Slider.Base(self.sd_rgb_green).rgb(rgb=_rgb, rgb_1=rgb_green_1, rgb_2=rgb_green_2)
+        Slider.Base(self.sd_rgb_blue).rgb(rgb=_rgb, rgb_1=rgb_blue_1, rgb_2=rgb_blue_2)
     def _set_sb_val(self):
         self.sb_rgb_red.setValue(self.sd_rgb_red.value())
         self.sb_rgb_green.setValue(self.sd_rgb_green.value())
@@ -192,7 +192,7 @@ class Rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     def _set_rgb_val_hex(self):
         hex_colors = self.le_rgb_hex.text()
 
-        try: rgb = Fct().HEX_RGB(hex_colors=hex_colors)
+        try: rgb = Functions().HEX_RGB(hex_colors=hex_colors)
         except: return
 
         if len(rgb) == 3:
