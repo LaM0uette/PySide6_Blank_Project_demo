@@ -6,7 +6,6 @@ from src.gui.ui import input_ui
 
 class Input(input_ui.Ui_Input, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
-    rep = False
     input = ""
 
     def __init__(self,
@@ -123,7 +122,6 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
     ##     FONCTIONS     ##
     #######################
     def OK(self):
-        self.rep = True
         self.input = self.le_input_text.text()
         self.close()
     #######################

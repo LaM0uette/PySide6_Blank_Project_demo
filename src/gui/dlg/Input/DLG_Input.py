@@ -26,7 +26,7 @@ class DLG_Input:
         )
         _input.exec()
 
-        return _input.rep, _input.input
+        return _input.input if _input.input != "" else False
 
     def TXT(self, titre="INPUT", msg="Tapez votre texte", ico=Img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
         return self._rtn(
