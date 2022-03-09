@@ -24,7 +24,7 @@ class Build:
             focus_policy=vb_wg.FOCUS_POLICY,
             frame_shape=vb_wg.FRAME_SHAPE,
             frame_shadow=vb_wg.FRAME_SHADOW,
-            indent=5,
+            indent=0,
             line_width=0,
             open_external_link=False,
             scaled_contents=True,

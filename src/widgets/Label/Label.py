@@ -113,6 +113,7 @@ class Demo:
             *self.wgs,
 
             height=Dim().h9(),
+            indent=5,
 
             font_size=self.font_size,
         )
@@ -121,6 +122,7 @@ class Demo:
             *self.wgs,
 
             height=Dim().h9(),
+            indent=5,
 
             font_size=self.font_size,
             bg=Rgb().tr(),
