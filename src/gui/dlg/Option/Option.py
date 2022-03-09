@@ -236,6 +236,7 @@ class Option(option_ui.Ui_Option, QtWidgets.QDialog):
             DLG_Msg().INFO(msg="Modifications appliquées !\nCertains paramètres peuvent nécessiter un redémarrage de l'application.")
             self.reload = False
     ## configuration
+
     def _maj_cb_theme(self):
         self.cb_opt_tm_theme.clear()
 
