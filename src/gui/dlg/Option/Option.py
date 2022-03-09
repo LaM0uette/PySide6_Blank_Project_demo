@@ -7,6 +7,7 @@ from PySide6 import QtCore, QtWidgets, QtGui
 
 from src import *
 from src.gui.dlg.Msg.DLG_Msg import DLG_Msg
+from src.gui.dlg.Rgb.DLG_Rgb import DLG_Rgb
 from src.gui.ui import option_ui
 from src.gui.events.Event import Event
 
@@ -236,6 +237,7 @@ class Option(option_ui.Ui_Option, QtWidgets.QDialog):
     ## configuration
     def _maj_cb_theme(self):
         self.cb_opt_tm_theme.clear()
+
         for i, js in enumerate(glob.glob(f"{vrb.DO_THEME}*.json")):
             tm = os.path.basename(js).split(".")[0]
             self.cb_opt_tm_theme.addItem(tm)
