@@ -138,12 +138,8 @@ class Txt:
         )
 
 
-
 #################
 ##     DLG     ##
-#################
-#################
-##     TXT     ##
 #################
 class Dlg:
     def __init__(self, *wgs):
@@ -243,8 +239,9 @@ class Dlg:
         )
 
 
-
-
+###################
+##     PLEIN     ##
+###################
 class plein:
     def __init__(self, *wgs):
         self.wgs = wgs
@@ -254,14 +251,14 @@ class plein:
             fg_gen=Rgb().tr(),
             height=Dim().h5(),
 
-            border_gen=((0, )*4),
+            border_gen=(0, )*4,
             border_gen_rgb=Rgb().tr(),
-            curseur=Cur().main()
+            cursor=Cur().main()
             ):
-        Style(
+        Build(
             *self.wgs,
             height=height,
-            curseur=curseur,
+            cursor=cursor,
 
             bg=bg_gen,
             bg_hover=bg_gen,
@@ -284,14 +281,14 @@ class plein:
             border_checked_rgb=border_gen_rgb,
             border_checked_hover_rgb=border_gen_rgb,
 
-            radius=((0, )*4)
+            radius=(0, )*4
         )
 
     def th1(self):
         self.rtn(
             bg_gen=Rgb().th1(),
             fg_gen=Rgb().th3(),
-            border_gen=((StyleBase().bd(),) * 4),
+            border_gen=(StyleBase().border(),) * 4,
             border_gen_rgb=Rgb().th2(),
         )
     def th2(self):
