@@ -1,5 +1,5 @@
 from src import *
-from src.gui.dlg.Rgb.Rgb import Rgb
+from src.gui.dlg.Rgb.RgbSelector import RgbSelector
 
 
 class DLG_Rgb:
@@ -13,7 +13,7 @@ class DLG_Rgb:
         self.opacity = opacity
 
     def _rtn(self, titre, rgb, ico, tm, txt_pb_ok, txt_pb_annuler):
-        _rgb = Rgb(
+        _rgb = RgbSelector(
             titre=titre,
             rgb=rgb,
             ico=ico,

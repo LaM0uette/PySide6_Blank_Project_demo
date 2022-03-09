@@ -318,7 +318,7 @@ class main(Ui_main, QtWidgets.QWidget):
     ##     ACTIONS     ##
     #####################
     def tt(self):
-        print()
+        print(DLG_Rgb().GET())
     #####################
     ##    /ACTIONS     ##
     #####################

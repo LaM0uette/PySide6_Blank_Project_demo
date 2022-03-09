@@ -5,7 +5,7 @@ from src.gui.ui import rgb_ui
 from src.gui.events.Event import Event
 
 
-class Rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
+class RgbSelector(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
     rep = False
     rgb_rtn = (0, 0, 0)
@@ -21,7 +21,7 @@ class Rgb(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
                  height,
                  opacity,
     ):
-        super(Rgb, self).__init__()
+        super(RgbSelector, self).__init__()
 
         self.titre = titre
         self.rgb = rgb
