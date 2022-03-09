@@ -14,19 +14,19 @@ class RgbSelector(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
                  titre,
                  rgb,
                  ico,
-                 tm,
+                 ico_rgb,
                  txt_pb_ok,
                  txt_pb_annuler,
                  width,
                  height,
                  opacity,
-    ):
+                 ):
         super(RgbSelector, self).__init__()
 
         self.titre = titre
         self.rgb = rgb
         self.ico = ico
-        self.rgb = tm
+        self.ico_rgb = ico_rgb
         self.txt_pb_ok = txt_pb_ok
         self.txt_pb_annuler = txt_pb_annuler
         self.width = width
@@ -68,7 +68,7 @@ class RgbSelector(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
 
 
         ### QLabel ###
-        Label.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.rgb)
+        Label.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.ico_rgb)
         Label.Base(self.lb_mt_nom, font_size=Font().h3()).tr()
         Label.Base(self.lb_rgb_red, self.lb_rgb_green, self.lb_rgb_blue, font_size=Font().h4()).tr()
         ### /QLabel ###

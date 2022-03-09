@@ -12,12 +12,12 @@ class DLG_Rgb:
         self.height = height
         self.opacity = opacity
 
-    def _rtn(self, titre, rgb, ico, tm, txt_pb_ok, txt_pb_annuler):
+    def _rtn(self, titre, rgb, ico, ico_rgb, txt_pb_ok, txt_pb_annuler):
         _rgb = RgbSelector(
             titre=titre,
             rgb=rgb,
             ico=ico,
-            tm=tm,
+            ico_rgb=ico_rgb,
             txt_pb_ok=txt_pb_ok,
             txt_pb_annuler=txt_pb_annuler,
             width=self.width,
@@ -36,7 +36,7 @@ class DLG_Rgb:
             titre=titre,
             rgb=rgb,
             ico=ico,
-            tm=tm,
+            ico_rgb=tm,
             txt_pb_ok=txt_pb_ok,
             txt_pb_annuler=txt_pb_annuler
         )
