@@ -1,14 +1,14 @@
 import glob
+import importlib
 import os
 import time
 
 from PySide6 import QtCore, QtWidgets, QtGui
 
-from src.gui.Dlg import option_ui
-from src.gui.Dlg.dialogs.Msg import DLG_Msg
-from src.gui.Dlg.dialogs.Rgb import DLG_Rgb
-from src.build import *
-from src.config import *
+from src import *
+from src.gui.dlg.Msg.DLG_Msg import DLG_Msg
+from src.gui.ui import option_ui
+from src.gui.events.Event import Event
 
 
 class Option(option_ui.Ui_Option, QtWidgets.QDialog):
@@ -32,22 +32,16 @@ class Option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.titre = titre
         self.msg = msg
         self.ico = ico
-        self.tm = tm
+        self.ico_rgb = tm
         self.txt_pb_ok = txt_pb_ok
         self.txt_pb_appliquer = txt_pb_appliquer
         self.width = width
         self.height = height
         self.opacity = opacity
 
-        self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.Tool)
-        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        self.setWindowModality(QtCore.Qt.ApplicationModal)
-        self.setupUi(self)
-
         # Global
         self.reload = False
         self.dct_pg = {
-            "Polices": [self.pg_opt_font],
             "Configs": [self.pg_opt_configs],
             "Thèmes": [self.pg_opt_themes],
             "Infos": [self.pg_opt_infos],
@@ -55,52 +49,60 @@ class Option(option_ui.Ui_Option, QtWidgets.QDialog):
 
         self.INIT()
 
-
     ############################
     ##     INITIALISATION     ##
     ############################
     def IN_BASE(self):
-        # Fenetre
+        ### Fenetre ###
         self.setWindowTitle(self.titre)
         self.setFixedWidth(self.width)
         self.setFixedHeight(self.height)
         self.setWindowOpacity(self.opacity)
+        self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.Tool)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        self.setGraphicsEffect(Shadow().ombre_portee(self))
+        self.setWindowModality(QtCore.Qt.ApplicationModal)
+    def IN_SETUP_UI(self):
+        ### Ui ###
+        self.setupUi(self)
+        self.glay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
     def IN_CLASSE(self):
         ### QCheckBox ###
-        CheckBox.Base_tr(self.ck_opt_cfg_debug, self.ck_opt_cfg_autoclose, self.ck_opt_cfg_resize, self.ck_opt_cfg_ui_pin)
+        CheckBox.Base(self.ck_opt_cfg_debug, self.ck_opt_cfg_autoclose, self.ck_opt_cfg_resize, self.ck_opt_cfg_ui_pin).tr()
         ### /QCheckBox ###
 
 
         ### QComboBox ###
-        ComboBox.Base_th(self.fcb_opt_ft_font, self.cb_opt_tm_theme)
+        ComboBox.Base(self.fcb_opt_ft_font, self.cb_opt_tm_theme).th()
         ### /QComboBox ###
 
 
         ### QFrame ###
-        Frame.Menu_top(self.fr_menu_top)
-        Frame.Cadre(self.fr_main, ombre_portee=True).th2()
+        Frame.Menu(self.fr_menu_top).top()
+        Frame.Cadre(self.fr_main).th2()
         Frame.Cadre(
-            self.fr_opt_ft_h1, self.fr_opt_ft_h2, self.fr_opt_ft_h3, self.fr_opt_ft_h4, self.fr_opt_ft_h5,
             self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize
         ).th3()
-        Frame.Base_th(self.fr_body, rgb=Rgb().th1())
-        Frame.Menu_bottom_dlg(self.fr_opt_bottom)
+        Frame.Base(self.fr_body).th(rgb=Rgb().th1())
+        Frame.Menu(self.fr_opt_bottom).bottom_dlg()
         ### /QFrame ###
 
 
         ### QLabel ###
-        Label.Base_tr(self.lb_mt_nom, font_size=Font().h3())
-        Label.Titre(self.lb_opt_info_nom)
-        Label.Base_tr(self.lb_opt_info_desc, self.lb_opt_info_auteur, self.lb_opt_info_version, self.lb_opt_ft_h1,
-                      self.lb_opt_ft_h2, self.lb_opt_ft_h3, self.lb_opt_ft_h4, self.lb_opt_ft_h5, self.lb_opt_cfg_opacity,
-                      self.lb_opt_cfg_debug, self.lb_opt_cfg_autoclose, self.lb_opt_cfg_resize, self.lb_opt_cfg_ui_pin, self.lb_opt_cfg_resize_width,
-                      self.lb_opt_cfg_resize_height)
+        Label.Base(self.lb_mt_ico).ico_main()
+        Label.Base(self.lb_mt_nom, font_size=Font().h3()).tr()
+        Label.Base(self.lb_opt_info_nom).titre()
+        Label.Base(
+            self.lb_opt_info_desc, self.lb_opt_info_auteur, self.lb_opt_info_version, self.lb_opt_cfg_opacity,
+            self.lb_opt_cfg_debug, self.lb_opt_cfg_autoclose, self.lb_opt_cfg_resize, self.lb_opt_cfg_ui_pin, self.lb_opt_cfg_resize_width,
+            self.lb_opt_cfg_resize_height
+        ).tr()
         ### /QLabel ###
 
 
         ### QPushButton ###
-        PushButton.dlg_ok(self.pb_opt_appliquer)
-        PushButton.dlg_ok_inv(self.pb_opt_ok)
+        PushButton.Dlg(self.pb_opt_appliquer).ok()
+        PushButton.Dlg(self.pb_opt_ok).nok_inv()
         PushButton.menu_top(self.pb_mt_quitter).quitter()
 
         PushButton.plein(self.pb_opt_tm_th1).th1()
@@ -112,52 +114,33 @@ class Option(option_ui.Ui_Option, QtWidgets.QDialog):
 
 
         ### QSpinBox ###
-        SpinBox.Plus_moins_bd_th3(self.sb_opt_ft_h1, self.sb_opt_ft_h2, self.sb_opt_ft_h3, self.sb_opt_ft_h4, self.sb_opt_ft_h5, self.sb_opt_cfg_opacity)
-        SpinBox.Plus_moins_inf_bd_th3(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height)
+        SpinBox.Border(self.sb_opt_cfg_opacity).th()
+        SpinBox.Border(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height).inf()
         ### /QSpinBox ###
 
 
-        ### QText ###
-        TextEdit.tr_taille(self.le_opt_ft_texte_h1, h=Font().h1())
-        TextEdit.tr_taille(self.le_opt_ft_texte_h2, h=Font().h2())
-        TextEdit.tr_taille(self.le_opt_ft_texte_h3, h=Font().h3())
-        TextEdit.tr_taille(self.le_opt_ft_texte_h4, h=Font().h4())
-        TextEdit.tr_taille(self.le_opt_ft_texte_h5, h=Font().h5())
-        ### /QText ###
-
-
         ### QTreeWidget ###
-        TreeWidget.option(self.trw_option)
+        TreeWidget.Base(self.trw_option).option()
         ### /QTreeWidget ###
     def IN_WG(self):
         # Base
-        self.setCursor(Fct(cur=Cur().souris()).CUR())
-        self.setStyleSheet(f"background-color: rgba{Rgb().th1()};")
+        self.setCursor(Functions().SET_CURSOR(cur=Cur().souris()))
 
         # Frame menu_top
         self.fr_menu_top.setFixedHeight(Dim().h9())
 
         # Menu_top
-        dim = Dim().h9()
-        Fct(wg=self.lb_mt_ico, w=dim, h=dim).DIM()
-        self.lb_mt_ico.setPixmap(QtGui.QPixmap(f"{self.ico}{self.tm}.svg"))
-        self.lb_mt_ico.setScaledContents(True)
         self.lb_mt_nom.setText(self.titre)
 
         # Configs
         try:
             self.fcb_opt_ft_font.setCurrentText(config.font)
-            self.sb_opt_ft_h1.setValue(Font().h1())
-            self.sb_opt_ft_h2.setValue(Font().h2())
-            self.sb_opt_ft_h3.setValue(Font().h3())
-            self.sb_opt_ft_h4.setValue(Font().h4())
-            self.sb_opt_ft_h5.setValue(Font().h5())
 
             self.sb_opt_cfg_opacity.setValue(config.opacity*100)
             self.ck_opt_cfg_debug.setChecked(True) if config.debug == True else self.ck_opt_cfg_debug.setChecked(False)
             self.ck_opt_cfg_autoclose.setChecked(True) if config.auto_close == True else self.ck_opt_cfg_autoclose.setChecked(False)
             self.ck_opt_cfg_resize.setChecked(True) if config.resize == True else self.ck_opt_cfg_resize.setChecked(False)
-            self.ck_opt_cfg_ui_pin.setChecked(True) if config.tray_ui_pin == True else self.ck_opt_cfg_ui_pin.setChecked(False)
+            self.ck_opt_cfg_ui_pin.setChecked(True) if config.toolbox_pin == True else self.ck_opt_cfg_ui_pin.setChecked(False)
 
             self.sb_opt_cfg_resize_width.setValue(config.widht)
             self.sb_opt_cfg_resize_height.setValue(config.height)
@@ -182,12 +165,7 @@ class Option(option_ui.Ui_Option, QtWidgets.QDialog):
         # Connection value change #
         ## font combo box
         self.fcb_opt_ft_font.currentTextChanged.connect(self._val_change_appliquer)
-        ## spin box
-        self.sb_opt_ft_h1.valueChanged.connect(self._val_change_appliquer)
-        self.sb_opt_ft_h2.valueChanged.connect(self._val_change_appliquer)
-        self.sb_opt_ft_h3.valueChanged.connect(self._val_change_appliquer)
-        self.sb_opt_ft_h4.valueChanged.connect(self._val_change_appliquer)
-        self.sb_opt_ft_h5.valueChanged.connect(self._val_change_appliquer)
+
         ## slider
         self.sb_opt_cfg_opacity.valueChanged.connect(self._val_change_appliquer)
         self.sb_opt_cfg_resize_width.valueChanged.connect(lambda: self._val_change_appliquer(val="true"))
@@ -220,6 +198,7 @@ class Option(option_ui.Ui_Option, QtWidgets.QDialog):
         self.pb_opt_appliquer.setVisible(False)
     def INIT(self):
         self.IN_BASE()
+        self.IN_SETUP_UI()
         self.IN_CLASSE()
         self.IN_WG()
         self.IN_CONNECTIONS()
@@ -238,10 +217,10 @@ class Option(option_ui.Ui_Option, QtWidgets.QDialog):
 
         importlib.reload(config)
 
-        Fct().GEN_SVG()
+        Functions().GEN_SVG()
         time.sleep(0.5)
 
-        importlib.reload(rld)
+        # importlib.reload(rld)
 
         self.IN_WG()
         self.IN_CLASSE()
