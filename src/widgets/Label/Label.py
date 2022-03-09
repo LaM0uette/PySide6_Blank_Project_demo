@@ -28,6 +28,23 @@ class Base:
 
             scaled_contents=True,
         )
+    def ico_splash(self):
+        Build(
+            *self.wgs,
+
+            width=Dim().h5(),
+            height=Dim().h5(),
+
+            focus_policy=FocusPolicy().no_focus(),
+
+            bg=Rgb().tr(),
+            bg_hover=Rgb().tr(),
+
+            img=Img().main(),
+            img_rgb="th3",
+
+            scaled_contents=True,
+        )
     def th(self):
         Build(
             *self.wgs,

@@ -1,8 +1,7 @@
-from PySide6 import QtCore, QtWidgets, QtGui
+from PySide6 import QtCore, QtWidgets
 
-from src.gui.Dlg import splash_screen_ui
-from src.build import *
-from src.config import *
+from src.gui.ui import splash_screen_ui
+from src import *
 
 
 class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
@@ -20,12 +19,11 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
         self.setupUi(self)
         self.INIT()
 
-
     ############################
     ##     INITIALISATION     ##
     ############################
     def IN_BASE(self):
-        # Fenetre
+        ### Fenetre ###
         self.setFixedWidth(self.width)
         self.setFixedHeight(self.height)
         self.setWindowOpacity(self.opacity)
@@ -36,24 +34,20 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
 
 
         ### QLabel ###
-        Label.Base_tr(self.lb_titre, font_size=Font().h3())
-        Label.Base_tr(self.lb_description, self.lb_chargement, font_size=Font().h5())
+        Label.Base(self.lb_titre, font_size=Font().h3()).tr()
+        Label.Base(self.lb_description, self.lb_chargement, font_size=Font().h5()).tr()
+        Label.Base(self.lb_ico).ico_splash()
         ### /QLabel ###
 
 
         ### QProgressBar ###
-        ProgressBar.Chargement(self.pg_chargement)
+        ProgressBar.Base(self.pg_chargement).Chargement()
         ### /QProgressBar ###
     def IN_WG(self):
-        # Base
-        self.setCursor(Fct(cur=Cur().souris()).CUR())
+        ### Base ###
+        self.setCursor(Functions().SET_CURSOR(cur=Cur().souris()))
 
-        # Icone de l'app
-        dim = Dim().h5()
-        Fct(wg=self.lb_ico, w=dim, h=dim).DIM()
-        self.lb_ico.setPixmap(QtGui.QPixmap(f"{Img().main()}th2.svg"))
-        self.lb_ico.setScaledContents(True)
-
+        ### Infos ###
         self.lb_titre.setText(config.nom)
         self.lb_description.setText(config.description)
     def IN_CONNECTIONS(self):
