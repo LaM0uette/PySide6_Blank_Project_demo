@@ -23,10 +23,10 @@ class Ui_TrayUi(object):
         if not TrayUi.objectName():
             TrayUi.setObjectName(u"TrayUi")
         TrayUi.resize(446, 791)
-        self.verticalLayout = QVBoxLayout(TrayUi)
-        self.verticalLayout.setSpacing(0)
-        self.verticalLayout.setObjectName(u"verticalLayout")
-        self.verticalLayout.setContentsMargins(10, 10, 10, 10)
+        self.vlay_main = QVBoxLayout(TrayUi)
+        self.vlay_main.setSpacing(0)
+        self.vlay_main.setObjectName(u"vlay_main")
+        self.vlay_main.setContentsMargins(0, 0, 0, 0)
         self.fr_main = QFrame(TrayUi)
         self.fr_main.setObjectName(u"fr_main")
         self.fr_main.setFrameShape(QFrame.StyledPanel)
@@ -67,7 +67,7 @@ class Ui_TrayUi(object):
         self.vlay_fr_main.addWidget(self.fr_body)
 
 
-        self.verticalLayout.addWidget(self.fr_main)
+        self.vlay_main.addWidget(self.fr_main)
 
 
         self.retranslateUi(TrayUi)
