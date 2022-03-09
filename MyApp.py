@@ -263,6 +263,9 @@ class main(Ui_main, QtWidgets.QWidget):
         model.setRootPath('')
         self.trv_demo_th.setModel(model)
         self.trv_demo_tr.setModel(model)
+
+        # PB
+        self.pb_demo_ck.setCheckable(True)
     def IN_CONNECTIONS(self):
         ### Menu_top ###
         # self.pb_mt_option.clicked.connect(lambda: DLG_Option(fen=fen).MAIN())
