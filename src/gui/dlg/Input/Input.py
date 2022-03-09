@@ -2,6 +2,7 @@ from PySide6 import QtCore, QtWidgets, QtGui
 
 from src import *
 from src.gui.ui import input_ui
+from src.gui.events.Event import Event
 
 
 class Input(input_ui.Ui_Input, QtWidgets.QDialog):
@@ -32,6 +33,11 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
         self.opacity = opacity
 
         self.INIT()
+
+        ### CREATION DES EVENT ###
+        self.evt = Event(self)
+        self.mousePressEvent = self.evt.mousePressEvent
+        self.mouseMoveEvent = self.evt.mouseMoveEvent
 
     ############################
     ##     INITIALISATION     ##
