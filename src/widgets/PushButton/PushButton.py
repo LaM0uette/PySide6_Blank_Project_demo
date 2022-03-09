@@ -338,6 +338,7 @@ class zoom(Build):
         super().__init__(
             *wgs,
             pb_type="zoom",
+            checkable=True,
 
             bg=self.bg,
             bg_hover=self.bg,
