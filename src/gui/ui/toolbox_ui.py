@@ -18,16 +18,16 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QPushButton,
     QSizePolicy, QSpacerItem, QVBoxLayout, QWidget)
 
-class Ui_TrayUi(object):
-    def setupUi(self, TrayUi):
-        if not TrayUi.objectName():
-            TrayUi.setObjectName(u"TrayUi")
-        TrayUi.resize(446, 791)
-        self.vlay_main = QVBoxLayout(TrayUi)
+class Ui_ToolBoxUi(object):
+    def setupUi(self, ToolBoxUi):
+        if not ToolBoxUi.objectName():
+            ToolBoxUi.setObjectName(u"ToolBoxUi")
+        ToolBoxUi.resize(446, 791)
+        self.vlay_main = QVBoxLayout(ToolBoxUi)
         self.vlay_main.setSpacing(0)
         self.vlay_main.setObjectName(u"vlay_main")
         self.vlay_main.setContentsMargins(0, 0, 0, 0)
-        self.fr_main = QFrame(TrayUi)
+        self.fr_main = QFrame(ToolBoxUi)
         self.fr_main.setObjectName(u"fr_main")
         self.fr_main.setFrameShape(QFrame.StyledPanel)
         self.fr_main.setFrameShadow(QFrame.Raised)
@@ -70,12 +70,12 @@ class Ui_TrayUi(object):
         self.vlay_main.addWidget(self.fr_main)
 
 
-        self.retranslateUi(TrayUi)
+        self.retranslateUi(ToolBoxUi)
 
-        QMetaObject.connectSlotsByName(TrayUi)
+        QMetaObject.connectSlotsByName(ToolBoxUi)
     # setupUi
 
-    def retranslateUi(self, TrayUi):
+    def retranslateUi(self, ToolBoxUi):
         pass
     # retranslateUi
 
