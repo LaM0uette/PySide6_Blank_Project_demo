@@ -54,7 +54,7 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > Pas d'espaces entre des fonctions de même usage.   
 > Mettre des arguments explicits.   
 > 
-> ### Nomenclature du nom des classe :
+> ### Nomenclature du nom des classes :
 > ***Classe principal :*** NomDeLaClasse   
 > ***Classe diverse :*** nomDeLaClasse
 
@@ -64,7 +64,7 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > ### Initialisation :
 > 
 > Il s'agit d'un groupe de liste avec une fonction ainsi qu'une brève description.   
-> Toute les fonctions mise à l'intérieur seront exécuté au début du programme.
+> Toutes les fonctions mise à l'intérieur seront exécuté au début du programme.
 > 
 > ``` py
 > self.INIT(
@@ -81,7 +81,7 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > 
 > ***self.IN_BASE :*** Permet les configurations de base de l'application.   
 > ***self.IN_SETUP_UI :*** Configure l'interface graphique.   
-> ***self.IN_CLASSE :*** Initialise les classes de chaque Widgets.   
+> ***self.IN_CLASSE :*** Initialise les classes de chaque widget.   
 > ***self.IN_WG :*** Initialise les Widgets (texte, img, dimension, ...).   
 > ***self.IN_CONNECTIONS :*** Créer les connections des Widgets.   
 > ***self.IN_ACT :*** Lance des fonctions au démarage.   
@@ -93,7 +93,7 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > <br>
 > 
 > ### Imports :
-> Pour importer de manière global tous les modules, il suffit de faire :
+> Pour importer de manière globale tous les modules, il suffit de faire :
 > ```py
 > from src import *
 > ```
@@ -103,8 +103,8 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > <br>
 > 
 > ### Palettes :
-> Il y a des palettes mis à disposition et utilisable partout.
-> Pour importer le module il suffite de faire :
+> Il y a des palettes mises à disposition et utilisable partout.
+> Pour importer le module il suffit de faire :
 > ```py
 > from src.lib.palettes import *
 > ```
@@ -140,8 +140,24 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > - ***TickPosition :*** TickPosition().no()
 > 
 > ### Widgets :
-> Chaque widgets possède sa propre classe (src/widgets/"nomDuWidget"/"nomDuWidget")   
+> Chaque widget possède sa propre classe (src/widgets/"nomDuWidget"/"nomDuWidget")   
 > Pour créer une nouvelle ```class``` pour le widget choisit, il suffit de l'ajouter dans le fichier au nom du widget.   
 > Vous pouvez ensuite appeler ces ```class``` dans les fichiers d'ui.  
-> Dans la doc, %.. signifie qu'il faut remplacer le texte par votre valeur. # ex: Rgb().%nomCouleur() == Rgb().th3()   
+> Dans la doc, %.. Signifie qu'il faut remplacer le texte par votre valeur. # ex: Rgb().%nomCouleur() == Rgb().th3()   
+> 
+> ### Dialogues :
+> Des fenêtres de dialogues sont déjàs préconstruites.
+> Pour importer le module il suffit de faire :
+> ```py
+> from src.gui import *
+> ```
+> 
+> Ensuite, il suffit d'écrire : nomDlg().typeDlg()   
+>    
+> Voici un exemple pour chaque dialogue :
+> - ***Saisie de texte :*** InputBox().TXT(*arguments)
+> - ***Message :*** MsgBox().INFO(*arguments)
+> - ***Menu d'option :*** OptionBox().MAIN(*arguments)
+> - ***Demande de validation :*** ResponseBox().INFO(*arguments)
+> - ***Choix d'une couleur :*** RgbBox().GET(*arguments)
 > 
