@@ -12,28 +12,35 @@ class DLG_Input:
         self.height = height
         self.opacity = opacity
 
-    def _rtn(self, titre, msg, ico, tm, txt_pb_ok, txt_pb_annuler):
+    def _rtn(self, title, msg, ico, ico_rgb, txt_ok, txt_cancel):
         _input = Input(
-            titre=titre,
+            title=title,
             msg=msg,
             ico=ico,
-            tm=tm,
-            txt_pb_ok=txt_pb_ok,
-            txt_pb_annuler=txt_pb_annuler,
+            ico_rgb=ico_rgb,
+            txt_ok=txt_ok,
+            txt_cancel=txt_cancel,
             width=self.width,
             height=self.height,
             opacity=self.opacity
         )
         _input.exec()
-
         return _input.input if _input.input != "" else False
 
-    def TXT(self, titre="INPUT", msg="Tapez votre texte", ico=Img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
+    def TXT(
+            self,
+            title="INPUT",
+            msg="Tapez votre texte",
+            ico=Img().info(),
+            ico_rgb="th3",
+            txt_ok="Ok",
+            txt_cancel="Annuler"
+    ):
         return self._rtn(
-            titre=titre,
+            title=title,
             msg=msg,
             ico=ico,
-            tm=tm,
-            txt_pb_ok=txt_pb_ok,
-            txt_pb_annuler=txt_pb_annuler
+            ico_rgb=ico_rgb,
+            txt_ok=txt_ok,
+            txt_cancel=txt_cancel
         )

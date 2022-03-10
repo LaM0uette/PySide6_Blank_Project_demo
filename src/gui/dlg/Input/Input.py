@@ -9,25 +9,26 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
     input = ""
 
-    def __init__(self,
-                 titre,
-                 msg,
-                 ico,
-                 tm,
-                 txt_pb_ok,
-                 txt_pb_annuler,
-                 width,
-                 height,
-                 opacity,
+    def __init__(
+            self,
+            title,
+            msg,
+            ico,
+            ico_rgb,
+            txt_ok,
+            txt_cancel,
+            width,
+            height,
+            opacity,
     ):
         super(Input, self).__init__()
 
-        self.titre = titre
+        self.title = title
         self.msg = msg
         self.ico = ico
-        self.rgb = tm
-        self.txt_pb_ok = txt_pb_ok
-        self.txt_pb_annuler = txt_pb_annuler
+        self.ico_rgb = ico_rgb
+        self.txt_ok = txt_ok
+        self.txt_cancel = txt_cancel
         self.width = width
         self.height = height
         self.opacity = opacity
@@ -44,7 +45,7 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
     ############################
     def IN_BASE(self):
         ### Fenetre ###
-        self.setWindowTitle(self.titre)
+        self.setWindowTitle(self.title)
         self.setFixedWidth(self.width)
         self.setFixedHeight(self.height)
         self.setWindowOpacity(self.opacity)
@@ -66,7 +67,7 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
 
 
         ### QLabel ###
-        Label.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.rgb)
+        Label.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.ico_rgb)
         Label.Base(self.lb_mt_nom, font_size=Font().h3()).tr()
         Label.Base(self.lb_input_text).tr()
         ### /QLabel ###
@@ -90,22 +91,22 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
         self.fr_menu_top.setFixedHeight(Dim().h9())
 
         # Menu_top
-        self.lb_mt_nom.setText(self.titre)
+        self.lb_mt_nom.setText(self.title)
 
         # Message
         self.lb_input_text.setText(f"{self.msg}: ")
         self.le_input_text.setPlaceholderText(f"{self.msg}...")
 
         # pb dlg
-        self.pb_input_ok.setText(self.txt_pb_ok)
-        self.pb_input_annuler.setText(self.txt_pb_annuler)
+        self.pb_input_ok.setText(self.txt_ok)
+        self.pb_input_annuler.setText(self.txt_cancel)
         self.pb_input_annuler.setDefault(True)
     def IN_CONNECTIONS(self):
         # Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
 
         # pb dlg
-        self.pb_input_ok.clicked.connect(lambda: self.OK())
+        self.pb_input_ok.clicked.connect(lambda: self.f_ok())
         self.pb_input_annuler.clicked.connect(lambda: self.close())
     def IN_ACT(self):
         pass
@@ -127,7 +128,7 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
     #######################
     ##     FONCTIONS     ##
     #######################
-    def OK(self):
+    def f_ok(self):
         self.input = self.le_input_text.text()
         self.close()
     #######################
