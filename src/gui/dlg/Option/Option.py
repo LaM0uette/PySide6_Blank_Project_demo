@@ -279,9 +279,10 @@ class Option(option_ui.Ui_Option, QtWidgets.QDialog):
             "config": {
                 "theme": self.cb_opt_tm_theme.currentText(),
                 "font": self.fcb_opt_ft_font.currentText(),
-                "widht": f"{self.sb_opt_cfg_resize_width.value()}",
-                "height": f"{self.sb_opt_cfg_resize_height.value()}",
-                "opacity": f"{self.sb_opt_cfg_opacity.value() / 100}"
+                "widht": self.sb_opt_cfg_resize_width.value(),
+                "height": self.sb_opt_cfg_resize_height.value(),
+                "opacity": self.sb_opt_cfg_opacity.value() / 100,
+                "cur": "MyApp"
             },
 
             "var": {
