@@ -93,8 +93,15 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > <br>
 > 
 > ### Palettes :
-> Il y a des palettes mis à disposition et utilisable partout lors de l'import de "src".   
-> Il suffit d'écrire : nom_palette().valeur()   
+> Il y a des palettes mis à disposition et utilisable partout.
+> Pour importer le module il suffite de faire : 
+> ```py
+> from src import* 
+> ou :
+> from src.lib.palettes import *
+> ```
+> 
+> Ensuite, il suffit d'écrire : nomPalette().Valeur()   
 >    
 > Voici un exemple pour chaque palette :
 > - ***Align :*** Align().top()
