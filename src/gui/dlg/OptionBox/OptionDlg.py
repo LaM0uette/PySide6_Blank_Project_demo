@@ -15,27 +15,28 @@ from src.gui.events.Event import Event
 class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
 
-    def __init__(self,
-                 fen,
-                 titre,
-                 msg,
-                 ico,
-                 tm,
-                 txt_pb_appliquer,
-                 txt_pb_ok,
-                 width,
-                 height,
-                 opacity,
+    def __init__(
+            self,
+            fen_main,
+            title,
+            msg,
+            ico,
+            ico_rgb,
+            txt_apply,
+            txt_ok,
+            width,
+            height,
+            opacity,
     ):
         super(OptionDlg, self).__init__()
 
-        self.fen = fen
-        self.titre = titre
+        self.fen_main = fen_main
+        self.title = title
         self.msg = msg
         self.ico = ico
-        self.ico_rgb = tm
-        self.txt_pb_ok = txt_pb_ok
-        self.txt_pb_appliquer = txt_pb_appliquer
+        self.ico_rgb = ico_rgb
+        self.txt_ok = txt_ok
+        self.txt_pb_appliquer = txt_apply
         self.width = width
         self.height = height
         self.opacity = opacity
@@ -61,7 +62,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
     ############################
     def IN_BASE(self):
         ### Fenetre ###
-        self.setWindowTitle(self.titre)
+        self.setWindowTitle(self.title)
         self.setFixedWidth(self.width)
         self.setFixedHeight(self.height)
         self.setWindowOpacity(self.opacity)
@@ -135,7 +136,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
         self.fr_menu_top.setFixedHeight(Dim().h9())
 
         # Menu_top
-        self.lb_mt_nom.setText(self.titre)
+        self.lb_mt_nom.setText(self.title)
 
         # Configs
         try:
@@ -158,7 +159,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
         self.lb_opt_info_version.setText(f"Version : {config.version}")
 
         # pb dlg
-        self.pb_opt_ok.setText(self.txt_pb_ok)
+        self.pb_opt_ok.setText(self.txt_ok)
         self.pb_opt_ok.setDefault(True)
         self.pb_opt_appliquer.setText(self.txt_pb_appliquer)
         self.pb_opt_appliquer.setDefault(True)
@@ -190,7 +191,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
         self.pb_opt_tm_bn2.clicked.connect(lambda: self._pb_tm_maj(rgb="bn2"))
 
         # pb dlg
-        self.pb_opt_ok.clicked.connect(lambda: self.OK())
+        self.pb_opt_ok.clicked.connect(lambda: self.f_ok())
         self.pb_opt_appliquer.clicked.connect(self._appliquer)
     def IN_ACT(self):
         # MAJ de la liste des thèmes
@@ -227,8 +228,8 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
         self.IN_WG()
         self.IN_CLASSE()
 
-        self.fen.IN_BASE()
-        self.fen.IN_CLASSE()
+        self.fen_main.IN_BASE()
+        self.fen_main.IN_CLASSE()
 
         QtWidgets.QApplication.restoreOverrideCursor()
 
@@ -303,7 +304,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
     #######################
     ##     FONCTIONS     ##
     #######################
-    def OK(self):
+    def f_ok(self):
         if self.pb_opt_appliquer.isVisible():
             self._appliquer()
         self.close()

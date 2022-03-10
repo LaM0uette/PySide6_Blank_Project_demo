@@ -272,7 +272,7 @@ class main(Ui_main, QtWidgets.QWidget):
         self.pb_demo_ck.setCheckable(True)
     def IN_CONNECTIONS(self):
         ### Menu_top ###
-        self.pb_mt_option.clicked.connect(lambda: OptionBox(fen=fen).MAIN())
+        self.pb_mt_option.clicked.connect(lambda: OptionBox(fen_main=fen).MAIN())
         self.pb_demo_th.clicked.connect(lambda: self.test())
         self.pb_mt_reduire.clicked.connect(lambda: self.evt.e_reduire())
         self.pb_mt_agrandir.clicked.connect(lambda: self.evt.e_agrandir())

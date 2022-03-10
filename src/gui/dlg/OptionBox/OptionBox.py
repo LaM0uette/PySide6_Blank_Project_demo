@@ -4,25 +4,25 @@ from src.gui.dlg.OptionBox.OptionDlg import OptionDlg
 
 class OptionBox:
     def __init__(self,
-                 fen,
+                 fen_main,
                  width=850,
                  height=600,
                  opacity=1
-    ):
-        self.fen = fen
+                 ):
+        self.fen_main = fen_main
         self.width = width
         self.height = height
         self.opacity = opacity
 
-    def _rtn(self, titre, msg, ico, tm, txt_pb_appliquer, txt_pb_ok):
+    def _rtn(self, title, msg, ico, ico_rgb, txt_apply, txt_ok):
         opt = OptionDlg(
-            fen=self.fen,
-            titre=titre,
+            fen_main=self.fen_main,
+            title=title,
             msg=msg,
             ico=ico,
-            tm=tm,
-            txt_pb_appliquer=txt_pb_appliquer,
-            txt_pb_ok=txt_pb_ok,
+            ico_rgb=ico_rgb,
+            txt_apply=txt_apply,
+            txt_ok=txt_ok,
             width=self.width,
             height=self.height,
             opacity=self.opacity
@@ -30,12 +30,12 @@ class OptionBox:
         opt.exec()
 
 
-    def MAIN(self, titre="OPTION", msg="", ico=Img().info(), tm="th3", txt_pb_appliquer="Appliquer", txt_pb_ok="Ok"):
+    def MAIN(self, title="OPTION", msg="", ico=Img().info(), ico_rgb="th3", txt_apply="Appliquer", txt_ok="Ok"):
         return self._rtn(
-            titre=titre,
+            title=title,
             msg=msg,
             ico=ico,
-            tm=tm,
-            txt_pb_appliquer=txt_pb_appliquer,
-            txt_pb_ok=txt_pb_ok
+            ico_rgb=ico_rgb,
+            txt_apply=txt_apply,
+            txt_ok=txt_ok
         )
