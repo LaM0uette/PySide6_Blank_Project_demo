@@ -1,8 +1,8 @@
 from src import *
-from src.gui.dlg.Rep.Response import Response
+from src.gui.dlg.ResponseBox.Response import Response
 
 
-class DLG_Response:
+class ResponseBox:
     def __init__(
             self,
             width=650,

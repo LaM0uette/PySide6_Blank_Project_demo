@@ -42,7 +42,7 @@ class Build:
         *Cur: list() : Cur().%nomCurseur() \n
         *Dim: int() : Dim().%nomDim() \n
         *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
-        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *Shadow: QtWidgets.QGraphicsDropShadowEffect(self) : Shadow().%nomOmbre() \n
         *FrameShape: QtWidgets.QFrame : FrameShape().%nomFrameForme \n
         *FrameShadow: QtWidgets.QFrame : FrameShadow().%nomFrameOmbre \n
@@ -57,13 +57,13 @@ class Build:
         :param line_width: int()
         :param shadow: *Shadow
         :param cursor: *Cur
-        :param bg: *Rgb
+        :param bg: *RgbBox
         :param border: *Tuple
         :param border_style: *Border_Style
-        :param border_rgb: *Rgb
+        :param border_rgb: *RgbBox
         :param border_hover: *Tuple
         :param border_hover_style: *Border_Style
-        :param border_hover_rgb: *Rgb
+        :param border_hover_rgb: *RgbBox
         :param radius: *Tuple
         """
 

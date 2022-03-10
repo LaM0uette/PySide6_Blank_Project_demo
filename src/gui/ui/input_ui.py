@@ -22,7 +22,7 @@ from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
 class Ui_Input(object):
     def setupUi(self, Input):
         if not Input.objectName():
-            Input.setObjectName(u"Input")
+            Input.setObjectName(u"InputBox")
         Input.resize(773, 262)
         self.vlay_main = QGridLayout(Input)
         self.vlay_main.setSpacing(0)

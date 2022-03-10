@@ -82,7 +82,7 @@ class Build:
         *Dim: int() : Dim().%nomDim() \n
         *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
         *Font: int() : Font().%nomFont() \n
-        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *FrameShape: QtWidgets.QFrame : FrameShape().%nomFrameForme \n
         *FrameShadow: QtWidgets.QFrame : FrameShadow().%nomFrameOmbre \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
@@ -98,41 +98,41 @@ class Build:
         :param line_width: int()
         :param tab_spacing: int()
         :param cursor: *Cur
-        :param bg: *Rgb
-        :param bg_hover: *Rgb
-        :param bg_checked: *Rgb
-        :param bg_checked_hover: *Rgb
-        :param fg: *Rgb
-        :param fg_hover: *Rgb
-        :param fg_checked: *Rgb
-        :param fg_checked_hover: *Rgb
+        :param bg: *RgbBox
+        :param bg_hover: *RgbBox
+        :param bg_checked: *RgbBox
+        :param bg_checked_hover: *RgbBox
+        :param fg: *RgbBox
+        :param fg_hover: *RgbBox
+        :param fg_checked: *RgbBox
+        :param fg_checked_hover: *RgbBox
         :param border: *Tuple
         :param border_style: *Border_Style
-        :param border_rgb: *Rgb
+        :param border_rgb: *RgbBox
         :param border_hover: *Tuple
         :param border_hover_style: *Border_Style
-        :param border_hover_rgb: *Rgb
+        :param border_hover_rgb: *RgbBox
         :param border_hd: *Tuple
         :param border_hd_style: *Border_Style
-        :param border_hd_rgb: *Rgb
+        :param border_hd_rgb: *RgbBox
         :param border_hd_hover: *Tuple
         :param border_hd_hover_style: *Border_Style
-        :param border_hd_hover_rgb: *Rgb
+        :param border_hd_hover_rgb: *RgbBox
         :param border_hd_checked: *Tuple
         :param border_hd_checked_style: *Border_Style
-        :param border_hd_checked_rgb: *Rgb
+        :param border_hd_checked_rgb: *RgbBox
         :param border_hd_checked_hover: *Tuple
         :param border_hd_checked_hover_style: *Border_Style
-        :param border_hd_checked_hover_rgb: *Rgb
+        :param border_hd_checked_hover_rgb: *RgbBox
         :param radius: *Tuple
         :param radius_tab: *Tuple
-        :param scroll_bg: *Rgb
+        :param scroll_bg: *RgbBox
         :param scroll_width: int()
         :param scroll_height: int()
-        :param scroll_handle_bg: *Rgb
-        :param scroll_handle_bg_hover: *Rgb
-        :param scroll_handle_fg: *Rgb
-        :param scroll_handle_fg_hover: *Rgb
+        :param scroll_handle_bg: *RgbBox
+        :param scroll_handle_bg_hover: *RgbBox
+        :param scroll_handle_fg: *RgbBox
+        :param scroll_handle_fg_hover: *RgbBox
         :param scroll_handle_min_width: int()
         :param scroll_handle_min_height: int()
         """

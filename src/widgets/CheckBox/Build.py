@@ -97,7 +97,7 @@ class Build:
         *Font: int() : Font().%nomFont() \n
         *Img: str() : Img().%nomImage() \n
         *Img_rgb: str() : th1 | th2 | th3 | bn1 | bn2 \n
-        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
@@ -109,18 +109,18 @@ class Build:
         :param focus_policy: *FocusPolicy
         :param triple_state: bool()
         :param cursor: *Cur
-        :param bg: *Rgb
-        :param bg_hover: *Rgb
-        :param bg_checked: *Rgb
-        :param bg_checked_hover: *Rgb
-        :param bg_indeterminate: *Rgb
-        :param bg_indeterminate_hover: *Rgb
-        :param fg: *Rgb
-        :param fg_hover: *Rgb
-        :param fg_checked: *Rgb
-        :param fg_checked_hover: *Rgb
-        :param fg_indeterminate: *Rgb
-        :param fg_indeterminate_hover: *Rgb
+        :param bg: *RgbBox
+        :param bg_hover: *RgbBox
+        :param bg_checked: *RgbBox
+        :param bg_checked_hover: *RgbBox
+        :param bg_indeterminate: *RgbBox
+        :param bg_indeterminate_hover: *RgbBox
+        :param fg: *RgbBox
+        :param fg_hover: *RgbBox
+        :param fg_checked: *RgbBox
+        :param fg_checked_hover: *RgbBox
+        :param fg_indeterminate: *RgbBox
+        :param fg_indeterminate_hover: *RgbBox
         :param spacing: int()
         :param img_uncheck: *Img
         :param img_uncheck_hover: *Img
@@ -139,22 +139,22 @@ class Build:
         :param img_margin: *Tuple
         :param border: *Tuple
         :param border_style: *Border_Style
-        :param border_rgb: *Rgb
+        :param border_rgb: *RgbBox
         :param border_hover: *Tuple
         :param border_hover_style: *Border_Style
-        :param border_hover_rgb: *Rgb
+        :param border_hover_rgb: *RgbBox
         :param border_checked: *Tuple
         :param border_checked_style: *Border_Style
-        :param border_checked_rgb: *Rgb
+        :param border_checked_rgb: *RgbBox
         :param border_checked_hover: *Tuple
         :param border_checked_hover_style: *Border_Style
-        :param border_checked_hover_rgb: *Rgb
+        :param border_checked_hover_rgb: *RgbBox
         :param border_indeterminate: *Tuple
         :param border_indeterminate_style: *Border_Style
-        :param border_indeterminate_rgb: *Rgb
+        :param border_indeterminate_rgb: *RgbBox
         :param border_indeterminate_hover: *Tuple
         :param border_indeterminate_hover_style: *Border_Style
-        :param border_indeterminate_hover_rgb: *Rgb
+        :param border_indeterminate_hover_rgb: *RgbBox
         :param radius: *Tuple
         """
 

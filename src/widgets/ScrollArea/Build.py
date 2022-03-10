@@ -50,7 +50,7 @@ class Build:
         *Dim: int() : Dim().%nomDim() \n
         *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
         *Img: str() : Img().%nomImage() \n
-        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *FrameShape: QtWidgets.QFrame : FrameShape().%nomFrameForme \n
         *FrameShadow: QtWidgets.QFrame : FrameShadow().%nomFrameOmbre \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
@@ -64,21 +64,21 @@ class Build:
         :param line_width: int()
         :param scroll_h: bool()
         :param scroll_v: bool()
-        :param bg: *Rgb
+        :param bg: *RgbBox
         :param border: *Tuple
         :param border_style: *Border_Style
-        :param border_rgb: *Rgb
+        :param border_rgb: *RgbBox
         :param border_hover: *Tuple
         :param border_hover_style: *Border_Style
-        :param border_hover_rgb: *Rgb
+        :param border_hover_rgb: *RgbBox
         :param radius: *Tuple
-        :param scroll_bg: *Rgb
+        :param scroll_bg: *RgbBox
         :param scroll_width: *Dim
         :param scroll_height: *Dim
-        :param scroll_handle_bg: *Rgb
-        :param scroll_handle_bg_hover: *Rgb
-        :param scroll_handle_fg: *Rgb
-        :param scroll_handle_fg_hover: *Rgb
+        :param scroll_handle_bg: *RgbBox
+        :param scroll_handle_bg_hover: *RgbBox
+        :param scroll_handle_fg: *RgbBox
+        :param scroll_handle_fg_hover: *RgbBox
         :param scroll_handle_min_width: *Dim
         :param scroll_handle_min_height: *Dim
         """

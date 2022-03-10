@@ -57,7 +57,7 @@ class Build:
         *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
         *Font: int() : Font().%nomFont() \n
         *InputMask: str() : InputMask().%nomInput() \n
-        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
@@ -73,17 +73,17 @@ class Build:
         :param frame: bool()
         :param input_mask: *InputMask
         :param max_length: int()
-        :param bg: *Rgb
-        :param bg_selection: *Rgb
-        :param fg: *Rgb
-        :param fg_selection: *Rgb
-        :param fg_placeholder: *Rgb
+        :param bg: *RgbBox
+        :param bg_selection: *RgbBox
+        :param fg: *RgbBox
+        :param fg_selection: *RgbBox
+        :param fg_placeholder: *RgbBox
         :param border: *Tuple
         :param border_style: *Border_Style
-        :param border_rgb: *Rgb
+        :param border_rgb: *RgbBox
         :param border_hover: *Tuple
         :param border_hover_style: *Border_Style
-        :param border_hover_rgb: *Rgb
+        :param border_hover_rgb: *RgbBox
         :param radius: *Tuple
         """
 

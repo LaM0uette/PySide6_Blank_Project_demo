@@ -58,7 +58,7 @@ class Build:
         *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
         *Font: int() : Font().%nomFont() \n
         *ProgressFormat: str() : ProgressFormat().%nomProgress() \n
-        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
@@ -73,17 +73,17 @@ class Build:
         :param value_min: int()
         :param value_max: int()
         :param cursor: *Cur
-        :param bg: *Rgb
-        :param bg_chunk: *Rgb
-        :param bg_chunk_hover: *Rgb
-        :param fg: *Rgb
+        :param bg: *RgbBox
+        :param bg_chunk: *RgbBox
+        :param bg_chunk_hover: *RgbBox
+        :param fg: *RgbBox
         :param padding: *Tuple
         :param border: *Tuple
         :param border_style: *Border_Style
-        :param border_rgb: *Rgb
+        :param border_rgb: *RgbBox
         :param border_hover: *Tuple
         :param border_hover_style: *Border_Style
-        :param border_hover_rgb: *Rgb
+        :param border_hover_rgb: *RgbBox
         :param radius: *Tuple
         :param radius_chunk: *Tuple
         """

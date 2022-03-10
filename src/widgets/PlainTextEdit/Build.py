@@ -61,7 +61,7 @@ class Build:
         *Dim: int() : Dim().%nomDim() \n
         *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
         *Font: int() : Font().%nomFont() \n
-        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *FrameShape: QtWidgets.QFrame : FrameShape().%nomFrameForme \n
         *FrameShadow: QtWidgets.QFrame : FrameShadow().%nomFrameOmbre \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
@@ -75,17 +75,17 @@ class Build:
         :param frame_shape: *FrameShape
         :param frame_shadow: *FrameShadow
         :param line_width: int()
-        :param bg: *Rgb
-        :param bg_selection: *Rgb
-        :param fg: *Rgb
-        :param fg_selection: *Rgb
-        :param fg_placeholder: *Rgb
+        :param bg: *RgbBox
+        :param bg_selection: *RgbBox
+        :param fg: *RgbBox
+        :param fg_selection: *RgbBox
+        :param fg_placeholder: *RgbBox
         :param border: *Tuple
         :param border_style: *Border_Style
-        :param border_rgb: *Rgb
+        :param border_rgb: *RgbBox
         :param border_hover: *Tuple
         :param border_hover_style: *Border_Style
-        :param border_hover_rgb: *Rgb
+        :param border_hover_rgb: *RgbBox
         :param radius: *Tuple
         """
 

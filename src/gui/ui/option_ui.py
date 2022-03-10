@@ -24,7 +24,7 @@ from PySide6.QtWidgets import (QApplication, QCheckBox, QComboBox, QFontComboBox
 class Ui_Option(object):
     def setupUi(self, Option):
         if not Option.objectName():
-            Option.setObjectName(u"Option")
+            Option.setObjectName(u"OptionBox")
         Option.resize(972, 625)
         self.glay_main = QGridLayout(Option)
         self.glay_main.setSpacing(0)
@@ -344,25 +344,25 @@ class Ui_Option(object):
         __sortingEnabled = self.trw_option.isSortingEnabled()
         self.trw_option.setSortingEnabled(False)
         ___qtreewidgetitem = self.trw_option.topLevelItem(0)
-        ___qtreewidgetitem.setText(0, QCoreApplication.translate("Option", u"Configs", None));
+        ___qtreewidgetitem.setText(0, QCoreApplication.translate("OptionBox", u"Configs", None));
         ___qtreewidgetitem1 = self.trw_option.topLevelItem(1)
-        ___qtreewidgetitem1.setText(0, QCoreApplication.translate("Option", u"Th\u00e8mes", None));
+        ___qtreewidgetitem1.setText(0, QCoreApplication.translate("OptionBox", u"Th\u00e8mes", None));
         ___qtreewidgetitem2 = self.trw_option.topLevelItem(2)
-        ___qtreewidgetitem2.setText(0, QCoreApplication.translate("Option", u"Infos", None));
+        ___qtreewidgetitem2.setText(0, QCoreApplication.translate("OptionBox", u"Infos", None));
         self.trw_option.setSortingEnabled(__sortingEnabled)
 
-        self.lb_opt_cfg_opacity.setText(QCoreApplication.translate("Option", u"Opacit\u00e9 ", None))
-        self.lb_opt_cfg_autoclose.setText(QCoreApplication.translate("Option", u"Auto close : ", None))
-        self.lb_opt_cfg_debug.setText(QCoreApplication.translate("Option", u"Debug : ", None))
-        self.lb_opt_cfg_ui_pin.setText(QCoreApplication.translate("Option", u"ToolBox Pin :", None))
-        self.lb_opt_cfg_resize.setText(QCoreApplication.translate("Option", u"Manuel : ", None))
-        self.lb_opt_cfg_resize_width.setText(QCoreApplication.translate("Option", u"Largeur : ", None))
-        self.lb_opt_cfg_resize_height.setText(QCoreApplication.translate("Option", u"Hauteur : ", None))
-        self.pb_opt_tm_th1.setText(QCoreApplication.translate("Option", u"TH1", None))
-        self.pb_opt_tm_th2.setText(QCoreApplication.translate("Option", u"TH2", None))
-        self.pb_opt_tm_th3.setText(QCoreApplication.translate("Option", u"TH3", None))
-        self.pb_opt_tm_bn1.setText(QCoreApplication.translate("Option", u"BN1", None))
-        self.pb_opt_tm_bn2.setText(QCoreApplication.translate("Option", u"BN2", None))
+        self.lb_opt_cfg_opacity.setText(QCoreApplication.translate("OptionBox", u"Opacit\u00e9 ", None))
+        self.lb_opt_cfg_autoclose.setText(QCoreApplication.translate("OptionBox", u"Auto close : ", None))
+        self.lb_opt_cfg_debug.setText(QCoreApplication.translate("OptionBox", u"Debug : ", None))
+        self.lb_opt_cfg_ui_pin.setText(QCoreApplication.translate("OptionBox", u"ToolBox Pin :", None))
+        self.lb_opt_cfg_resize.setText(QCoreApplication.translate("OptionBox", u"Manuel : ", None))
+        self.lb_opt_cfg_resize_width.setText(QCoreApplication.translate("OptionBox", u"Largeur : ", None))
+        self.lb_opt_cfg_resize_height.setText(QCoreApplication.translate("OptionBox", u"Hauteur : ", None))
+        self.pb_opt_tm_th1.setText(QCoreApplication.translate("OptionBox", u"TH1", None))
+        self.pb_opt_tm_th2.setText(QCoreApplication.translate("OptionBox", u"TH2", None))
+        self.pb_opt_tm_th3.setText(QCoreApplication.translate("OptionBox", u"TH3", None))
+        self.pb_opt_tm_bn1.setText(QCoreApplication.translate("OptionBox", u"BN1", None))
+        self.pb_opt_tm_bn2.setText(QCoreApplication.translate("OptionBox", u"BN2", None))
         pass
     # retranslateUi
 

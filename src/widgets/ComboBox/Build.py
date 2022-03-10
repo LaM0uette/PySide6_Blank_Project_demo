@@ -81,7 +81,7 @@ class Build:
         *Img: str() : Img().%nomImage() \n
         *Img_rgb: str() : th1 | th2 | th3 | bn1 | bn2 \n
         *InsertPolicy: QtWidgets.QComboBox.%policy : InsertPolicy().%nomPolicy() \n
-        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
@@ -96,16 +96,16 @@ class Build:
         :param setInsertPolicy: *InsertPolicy
         :param cursor: *Cur
         :param cursor_view: *Cur
-        :param bg: *Rgb
-        :param bg_hover: *Rgb
-        :param bg_selection: *Rgb
-        :param bg_item: *Rgb
-        :param bg_item_hover: *Rgb
-        :param fg: *Rgb
-        :param fg_hover: *Rgb
-        :param fg_selection: *Rgb
-        :param fg_item: *Rgb
-        :param fg_item_hover: *Rgb
+        :param bg: *RgbBox
+        :param bg_hover: *RgbBox
+        :param bg_selection: *RgbBox
+        :param bg_item: *RgbBox
+        :param bg_item_hover: *RgbBox
+        :param fg: *RgbBox
+        :param fg_hover: *RgbBox
+        :param fg_selection: *RgbBox
+        :param fg_item: *RgbBox
+        :param fg_item_hover: *RgbBox
         :param img: *Img
         :param img_hover: *Img
         :param img_rgb: *Img_rgb
@@ -114,18 +114,18 @@ class Build:
         :param img_height: *Dim
         :param border: *Tuplev
         :param border_style: *Border_Style
-        :param border_rgb: *Rgb
+        :param border_rgb: *RgbBox
         :param border_hover: *Tuple
         :param border_hover_style: *Border_Style
         :param border_hover_rgb:
         :param radius: *Tuple
-        :param scroll_bg: *Rgb
+        :param scroll_bg: *RgbBox
         :param scroll_width: *Dim
         :param scroll_height: *Dim
-        :param scroll_handle_bg: *Rgb
-        :param scroll_handle_bg_hover: *Rgb
-        :param scroll_handle_fg: *Rgb
-        :param scroll_handle_fg_hover: *Rgb
+        :param scroll_handle_bg: *RgbBox
+        :param scroll_handle_bg_hover: *RgbBox
+        :param scroll_handle_fg: *RgbBox
+        :param scroll_handle_fg_hover: *RgbBox
         :param scroll_handle_min_width: *Dim
         :param scroll_handle_min_height: *Dim
         """

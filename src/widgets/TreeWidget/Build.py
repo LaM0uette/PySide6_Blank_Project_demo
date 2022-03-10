@@ -97,7 +97,7 @@ class Build:
         *Dim: int() : Dim().%nomDim() \n
         *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
         *Font: int() : Font().%nomFont() \n
-        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *FrameShape: QtWidgets.QFrame : FrameShape().%nomFrameForme \n
         *FrameShadow: QtWidgets.QFrame : FrameShadow().%nomFrameOmbre \n
         *Scroll: QtCore.Qt : Scroll().%nomScroll() \n
@@ -118,48 +118,48 @@ class Build:
         :param header_hidden: bool()
         :param sorting: bool()
         :param cursor: *Cur
-        :param bg: *Rgb
-        :param bg_item: *Rgb
-        :param bg_item_hover: *Rgb
-        :param bg_item_checked: *Rgb
-        :param bg_item_checked_hover: *Rgb
-        :param bg_header: *Rgb
-        :param fg: *Rgb
-        :param fg_item: *Rgb
-        :param fg_item_hover: *Rgb
-        :param fg_item_checked: *Rgb
-        :param fg_item_checked_hover: *Rgb
-        :param fg_header: *Rgb
+        :param bg: *RgbBox
+        :param bg_item: *RgbBox
+        :param bg_item_hover: *RgbBox
+        :param bg_item_checked: *RgbBox
+        :param bg_item_checked_hover: *RgbBox
+        :param bg_header: *RgbBox
+        :param fg: *RgbBox
+        :param fg_item: *RgbBox
+        :param fg_item_hover: *RgbBox
+        :param fg_item_checked: *RgbBox
+        :param fg_item_checked_hover: *RgbBox
+        :param fg_header: *RgbBox
         :param border: *Tuple
         :param border_style: *Border_Style
-        :param border_rgb: *Rgb
+        :param border_rgb: *RgbBox
         :param border_hover: *Tuple
         :param border_hover_style: *Border_Style
-        :param border_hover_rgb: *Rgb
+        :param border_hover_rgb: *RgbBox
         :param border_hd: *Tuple
         :param border_hd_style: *Border_Style
-        :param border_hd_rgb: *Rgb
+        :param border_hd_rgb: *RgbBox
         :param border_item: *Tuple
         :param border_item_style: *Border_Style
-        :param border_item_rgb: *Rgb
+        :param border_item_rgb: *RgbBox
         :param border_item_hover: *Tuple
         :param border_item_hover_style: *Border_Style
-        :param border_item_hover_rgb: *Rgb
+        :param border_item_hover_rgb: *RgbBox
         :param border_item_checked: *Tuple
         :param border_item_checked_style: *Border_Style
-        :param border_item_checked_rgb: *Rgb
+        :param border_item_checked_rgb: *RgbBox
         :param border_item_checked_hover: *Tuple
         :param border_item_checked_hover_style: *Border_Style
-        :param border_item_checked_hover_rgb: *Rgb
+        :param border_item_checked_hover_rgb: *RgbBox
         :param radius: *Tuple
         :param radius_item: *Tuple
-        :param scroll_bg: *Rgb
+        :param scroll_bg: *RgbBox
         :param scroll_width: *Dim
         :param scroll_height: *Dim
-        :param scroll_handle_bg: *Rgb
-        :param scroll_handle_bg_hover: *Rgb
-        :param scroll_handle_fg: *Rgb
-        :param scroll_handle_fg_hover: *Rgb
+        :param scroll_handle_bg: *RgbBox
+        :param scroll_handle_bg_hover: *RgbBox
+        :param scroll_handle_fg: *RgbBox
+        :param scroll_handle_fg_hover: *RgbBox
         :param scroll_handle_min_width: *Dim
         :param scroll_handle_min_height: *Dim
         """

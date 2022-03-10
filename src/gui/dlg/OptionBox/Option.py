@@ -6,8 +6,8 @@ import time
 from PySide6 import QtCore, QtWidgets
 
 from src import *
-from src.gui.dlg.Msg.DLG_Msg import DLG_Msg
-from src.gui.dlg.Rgb.DLG_Rgb import DLG_Rgb
+from src.gui.dlg.MsgBox.MsgBox import MsgBox
+from src.gui.dlg.RgbBox.RgbBox import RgbBox
 from src.gui.ui import option_ui
 from src.gui.events.Event import Event
 
@@ -233,7 +233,7 @@ class Option(option_ui.Ui_Option, QtWidgets.QDialog):
         QtWidgets.QApplication.restoreOverrideCursor()
 
         if self.reload:
-            DLG_Msg().INFO(msg="Modifications appliquées !\nCertains paramètres peuvent nécessiter un redémarrage de l'application.")
+            MsgBox().INFO(msg="Modifications appliquées !\nCertains paramètres peuvent nécessiter un redémarrage de l'application.")
             self.reload = False
     ## configuration
 
@@ -255,7 +255,7 @@ class Option(option_ui.Ui_Option, QtWidgets.QDialog):
             "bn1": Rgb().bn1(),
             "bn2": Rgb().bn2(),
         }
-        rep, colors = DLG_Rgb().GET(rgb=dct_colors.get(rgb))
+        rep, colors = RgbBox().GET(rgb=dct_colors.get(rgb))
         if rep:
             self._val_change_appliquer()
 

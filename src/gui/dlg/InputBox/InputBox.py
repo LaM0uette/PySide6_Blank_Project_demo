@@ -1,8 +1,8 @@
 from src import *
-from src.gui.dlg.Input.Input import Input
+from src.gui.dlg.InputBox.Input import Input
 
 
-class DLG_Input:
+class InputBox:
     def __init__(
             self,
             width=650,

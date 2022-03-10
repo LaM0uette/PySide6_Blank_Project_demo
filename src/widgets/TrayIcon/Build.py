@@ -60,7 +60,7 @@ class Build:
         *Dim: int() : Dim().%nomDim() \n
         *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
         *Font: int() : Font().%nomFont() \n
-        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs:
@@ -71,24 +71,24 @@ class Build:
         :param font_size: *Font
         :param focus_policy: *FocusPolicy
         :param cursor: *Cur
-        :param bg: *Rgb
-        :param bg_item: *Rgb
-        :param bg_item_checked: *Rgb
-        :param bg_separator: *Rgb
-        :param fg: *Rgb
-        :param fg_item: *Rgb
-        :param fg_item_checked: *Rgb
+        :param bg: *RgbBox
+        :param bg_item: *RgbBox
+        :param bg_item_checked: *RgbBox
+        :param bg_separator: *RgbBox
+        :param fg: *RgbBox
+        :param fg_item: *RgbBox
+        :param fg_item_checked: *RgbBox
         :param margin: *Tuple
         :param padding: *Tuple
         :param border: *Tuple
         :param border_style: *Border_Style
-        :param border_rgb: *Rgb
+        :param border_rgb: *RgbBox
         :param border_item: *Tuple
         :param border_item_style: *Border_Style
-        :param border_item_rgb: *Rgb
+        :param border_item_rgb: *RgbBox
         :param border_item_checked: *Tuple
         :param border_item_checked_style: *Border_Style
-        :param border_item_checked_rgb: *Rgb
+        :param border_item_checked_rgb: *RgbBox
         :param radius: *Tuple
         :param radius_item: *Tuple
         """

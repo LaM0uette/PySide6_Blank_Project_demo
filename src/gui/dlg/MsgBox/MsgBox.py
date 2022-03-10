@@ -1,8 +1,8 @@
 from src import *
-from src.gui.dlg.Msg.Msg import Msg
+from src.gui.dlg.MsgBox.Msg import Msg
 
 
-class DLG_Msg:
+class MsgBox:
     def __init__(
             self,
             width=650,

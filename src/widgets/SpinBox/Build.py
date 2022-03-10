@@ -77,7 +77,7 @@ class Build:
         *Font: int() : Font().%nomFont() \n
         *Img: str() : Img().%nomImage() \n
         *Img_rgb: str() : th1 | th2 | th3 | bn1 | bn2 \n
-        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
@@ -98,10 +98,10 @@ class Build:
         :param suffix: str()
         :param cursor: *Cur
         :param cursor_le: *Cur
-        :param bg: *Rgb
-        :param bg_selection: *Rgb
-        :param fg: *Rgb
-        :param fg_selection: *Rgb
+        :param bg: *RgbBox
+        :param bg_selection: *RgbBox
+        :param fg: *RgbBox
+        :param fg_selection: *RgbBox
         :param img_up: *Img
         :param img_down: *Img
         :param img_up_rgb: *Img
@@ -114,10 +114,10 @@ class Build:
         :param img_down_pos: *Tuple
         :param border: *Tuple
         :param border_style: *Border_Style
-        :param border_rgb: *Rgb
+        :param border_rgb: *RgbBox
         :param border_hover: *Tuple
         :param border_hover_style: *Border_Style
-        :param border_hover_rgb: *Rgb
+        :param border_hover_rgb: *RgbBox
         :param radius: *Tuple
         """
         

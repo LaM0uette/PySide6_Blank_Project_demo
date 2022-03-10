@@ -71,7 +71,7 @@ class Build:
         *Font: int() : Font().%nomFont() \n
         *Img: str() : Img().%nomImage() \n
         *Img_rgb: str() : th1 | th2 | th3 | bn1 | bn2 \n
-        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *FrameShape: QtWidgets.QFrame : FrameShape().%nomFrameForme \n
         *FrameShadow: QtWidgets.QFrame : FrameShadow().%nomFrameOmbre \n
         *TextFormat: QtCore.Qt : TextFormat().%nomFormat() \n
@@ -94,20 +94,20 @@ class Build:
         :param text_format: *TextFormat
         :param word_wrap: bool()
         :param cursor: *Cur
-        :param bg: *Rgb
-        :param bg_hover: *Rgb
-        :param fg: *Rgb
-        :param fg_hover: *Rgb
+        :param bg: *RgbBox
+        :param bg_hover: *RgbBox
+        :param fg: *RgbBox
+        :param fg_hover: *RgbBox
         :param img: *Img
         :param img_rgb: *Img_rgb
         :param margin: *Tuple
         :param padding: *Tuple
         :param border: *Tuple
         :param border_style: *Border_Style
-        :param border_rgb: *Rgb
+        :param border_rgb: *RgbBox
         :param border_hover: *Tuple
         :param border_hover_style: *Border_Style
-        :param border_hover_rgb: *Rgb
+        :param border_hover_rgb: *RgbBox
         :param radius: *Tuple
         """
 

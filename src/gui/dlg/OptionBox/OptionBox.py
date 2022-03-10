@@ -1,8 +1,8 @@
 from src import *
-from src.gui.dlg.Option.Option import Option
+from src.gui.dlg.OptionBox.Option import Option
 
 
-class DLG_Option:
+class OptionBox:
     def __init__(self,
                  fen,
                  width=850,

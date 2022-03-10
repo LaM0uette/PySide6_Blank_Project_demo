@@ -78,7 +78,7 @@ class Build:
         *Cur: list() : Cur().%nomCurseur() \n
         *Dim: int() : Dim().%nomDim() \n
         *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
-        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *TickPosition: QtWidgets.QSlider : TickPosition().%nomTickPosition() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
@@ -93,17 +93,17 @@ class Build:
         :param tick_position: *TickPosition
         :param tick_interval: int()
         :param cursor: *Cur
-        :param bg: *Rgb
-        :param bg_groove: *Rgb
-        :param bg_groove_2: *Rgb
-        :param bg_groove_hover: *Rgb
-        :param bg_groove_hover_2: *Rgb
-        :param bg_groove_pressed: *Rgb
-        :param bg_groove_pressed_2: *Rgb
-        :param bg_handle: *Rgb
-        :param bg_handle_hover: *Rgb
-        :param bg_handle_pressed: *Rgb
-        :param gradient: *Rgb
+        :param bg: *RgbBox
+        :param bg_groove: *RgbBox
+        :param bg_groove_2: *RgbBox
+        :param bg_groove_hover: *RgbBox
+        :param bg_groove_hover_2: *RgbBox
+        :param bg_groove_pressed: *RgbBox
+        :param bg_groove_pressed_2: *RgbBox
+        :param bg_handle: *RgbBox
+        :param bg_handle_hover: *RgbBox
+        :param bg_handle_pressed: *RgbBox
+        :param gradient: *RgbBox
         :param width_groove: int()
         :param height_groove: int()
         :param width_handle_h: int()
@@ -114,16 +114,16 @@ class Build:
         :param margin_handle_v: *Tuple
         :param border: *Tuple
         :param border_style: *Border_Style
-        :param border_rgb: *Rgb
+        :param border_rgb: *RgbBox
         :param border_hover: *Tuple
         :param border_hover_style: *Border_Style
-        :param border_hover_rgb: *Rgb
+        :param border_hover_rgb: *RgbBox
         :param border_handle_h: *Tuple
         :param border_handle_h_style: *Border_Style
-        :param border_handle_h_rgb: *Rgb
+        :param border_handle_h_rgb: *RgbBox
         :param border_handle_v: *Tuple
         :param border_handle_v_style: *Border_Style
-        :param border_handle_v_rgb: *Rgb
+        :param border_handle_v_rgb: *RgbBox
         :param radius: *Tuple
         :param radius_groove_h: *Tuple
         :param radius_groove_v: *Tuple

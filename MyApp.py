@@ -272,7 +272,7 @@ class main(Ui_main, QtWidgets.QWidget):
         self.pb_demo_ck.setCheckable(True)
     def IN_CONNECTIONS(self):
         ### Menu_top ###
-        self.pb_mt_option.clicked.connect(lambda: DLG_Option(fen=fen).MAIN())
+        self.pb_mt_option.clicked.connect(lambda: OptionBox(fen=fen).MAIN())
         self.pb_demo_th.clicked.connect(lambda: self.test())
         self.pb_mt_reduire.clicked.connect(lambda: self.evt.e_reduire())
         self.pb_mt_agrandir.clicked.connect(lambda: self.evt.e_agrandir())
@@ -318,7 +318,7 @@ class main(Ui_main, QtWidgets.QWidget):
     ##     ACTIONS     ##
     #####################
     def test(self):
-        print(DLG_Input().TXT())
+        print(InputBox().TXT())
     #####################
     ##    /ACTIONS     ##
     #####################
@@ -369,7 +369,7 @@ class main(Ui_main, QtWidgets.QWidget):
         """Permet de quitter l'application"""
         if not config.auto_close:
             self.hide()
-        elif DLG_Response().QUITTER():
+        elif ResponseBox().QUITTER():
             app.quit()
     def e_quitter_tray(self):
         self.show()
@@ -378,7 +378,7 @@ class main(Ui_main, QtWidgets.QWidget):
         if fen.windowState() == QtCore.Qt.WindowMinimized:
             fen.setWindowState(QtCore.Qt.WindowActive)
 
-        if DLG_Response().QUITTER():
+        if ResponseBox().QUITTER():
             app.quit()
     #####
     def closeEvent(self, event):

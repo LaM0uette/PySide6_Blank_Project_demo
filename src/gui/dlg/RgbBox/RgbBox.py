@@ -1,8 +1,8 @@
 from src import *
-from src.gui.dlg.Rgb.RgbSelector import RgbSelector
+from src.gui.dlg.RgbBox.RgbSelector import RgbSelector
 
 
-class DLG_Rgb:
+class RgbBox:
     def __init__(self,
                  width=750,
                  height=550,

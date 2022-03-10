@@ -91,7 +91,7 @@ class Build:
         *Img: str() : Img().%nomImage() \n
         *Img_rgb: str() : th1 | th2 | th3 | bn1 | bn2 \n
         *PbType: str() : None | "check" | "ico" | "zoom" \n
-        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
@@ -106,44 +106,44 @@ class Build:
         :param flat: bool()
         :param pb_type: *PbType
         :param cursor: *Cur
-        :param bg: *Rgb
-        :param bg_hover: *Rgb
-        :param bg_checked: *Rgb
-        :param bg_checked_hover: *Rgb
-        :param bg_pressed: *Rgb
-        :param bg_checked_pressed: *Rgb
-        :param fg: *Rgb
-        :param fg_hover: *Rgb
-        :param fg_checked: *Rgb
-        :param fg_checked_hover: *Rgb
-        :param fg_pressed: *Rgb
-        :param fg_checked_pressed: *Rgb
+        :param bg: *RgbBox
+        :param bg_hover: *RgbBox
+        :param bg_checked: *RgbBox
+        :param bg_checked_hover: *RgbBox
+        :param bg_pressed: *RgbBox
+        :param bg_checked_pressed: *RgbBox
+        :param fg: *RgbBox
+        :param fg_hover: *RgbBox
+        :param fg_checked: *RgbBox
+        :param fg_checked_hover: *RgbBox
+        :param fg_pressed: *RgbBox
+        :param fg_checked_pressed: *RgbBox
         :param img_uncheck: *Img
         :param img_uncheck_hover: *Img
         :param img_check: *Img
         :param img_check_hover: *Img
         :param img: *Img
         :param img_hover: *Img
-        :param img_uncheck_rgb: *Rgb
-        :param img_uncheck_hover_rgb: *Rgb
-        :param img_check_rgb: *Rgb
-        :param img_check_hover_rgb: *Rgb
-        :param img_rgb: *Rgb
-        :param img_hover_rgb: *Rgb
+        :param img_uncheck_rgb: *RgbBox
+        :param img_uncheck_hover_rgb: *RgbBox
+        :param img_check_rgb: *RgbBox
+        :param img_check_hover_rgb: *RgbBox
+        :param img_rgb: *RgbBox
+        :param img_hover_rgb: *RgbBox
         :param img_height: *Dim
         :param IMG_HEIGHT: *Dim
         :param border: *Tuple
         :param border_style: *Border_Style
-        :param border_rgb: *Rgb
+        :param border_rgb: *RgbBox
         :param border_hover: *Tuple
         :param border_hover_style: *Border_Style
-        :param border_hover_rgb: *Rgb
+        :param border_hover_rgb: *RgbBox
         :param border_checked: *Tuple
         :param border_checked_style: *Border_Style
-        :param border_checked_rgb: *Rgb
+        :param border_checked_rgb: *RgbBox
         :param border_checked_hover: *Tuple
         :param border_checked_hover_style: *Border_Style
-        :param border_checked_hover_rgb: *Rgb
+        :param border_checked_hover_rgb: *RgbBox
         :param radius: *Tuple
         """
         

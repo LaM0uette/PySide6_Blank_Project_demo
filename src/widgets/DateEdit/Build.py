@@ -95,7 +95,7 @@ class Build:
         *Font: int() : Font().%nomFont() \n
         *Img: str() : Img().%nomImage() \n
         *Img_rgb: str() : th1 | th2 | th3 | bn1 | bn2 \n
-        *Rgb: tuple() : Rgb().%nomCouleur() \n
+        *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
@@ -109,22 +109,22 @@ class Build:
         :param calendar_popup: bool()
         :param focus_policy: *FocusPolicy
         :param cursor: *Cur
-        :param bg: *Rgb
-        :param bg_hover: *Rgb
-        :param bg_selection: *Rgb
-        :param bg_item: *Rgb
-        :param bg_item_hover: *Rgb
-        :param bg_header: *Rgb
-        :param bg_header_hover: *Rgb
-        :param bg_mois: *Rgb
-        :param fg: *Rgb
-        :param fg_hover: *Rgb
-        :param fg_selection: *Rgb
-        :param fg_item: *Rgb
-        :param fg_item_hover: *Rgb
-        :param fg_header: *Rgb
-        :param fg_header_hover: *Rgb
-        :param fg_mois: *Rgb
+        :param bg: *RgbBox
+        :param bg_hover: *RgbBox
+        :param bg_selection: *RgbBox
+        :param bg_item: *RgbBox
+        :param bg_item_hover: *RgbBox
+        :param bg_header: *RgbBox
+        :param bg_header_hover: *RgbBox
+        :param bg_mois: *RgbBox
+        :param fg: *RgbBox
+        :param fg_hover: *RgbBox
+        :param fg_selection: *RgbBox
+        :param fg_item: *RgbBox
+        :param fg_item_hover: *RgbBox
+        :param fg_header: *RgbBox
+        :param fg_header_hover: *RgbBox
+        :param fg_mois: *RgbBox
         :param img: *Img
         :param img_hover: *Img
         :param img_right: *Img
@@ -138,16 +138,16 @@ class Build:
         :param img_margin: *Tuple
         :param border: *Tuple
         :param border_style: *Border_Style
-        :param border_rgb: *Rgb
+        :param border_rgb: *RgbBox
         :param border_hover: *Tuple
         :param border_hover_style: *Border_Style
-        :param border_hover_rgb: *Rgb
+        :param border_hover_rgb: *RgbBox
         :param border_day_size: *Tuple
         :param border_day_style: *Border_Style
-        :param border_day_rgb: *Rgb
+        :param border_day_rgb: *RgbBox
         :param border_month_size: *Tuple
         :param border_month_style: *Border_Style
-        :param border_month_rgb: *Rgb
+        :param border_month_rgb: *RgbBox
         :param radius: *Tuple
         """
 
