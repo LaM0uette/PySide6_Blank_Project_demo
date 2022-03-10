@@ -170,19 +170,19 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
 
         # Connection value change #
         # font combo box
-        self.fcb_opt_ft_font.currentTextChanged.connect(self.a_maj_appliquer)
+        self.fcb_opt_ft_font.currentTextChanged.connect(self.a_maj_button_appliquer)
 
         # slider
-        self.sb_opt_cfg_opacity.valueChanged.connect(self.a_maj_appliquer)
-        self.sb_opt_cfg_resize_width.valueChanged.connect(lambda: self.a_maj_appliquer(_reload=True))
-        self.sb_opt_cfg_resize_height.valueChanged.connect(lambda: self.a_maj_appliquer(_reload=True))
-        self.ck_opt_cfg_debug.stateChanged.connect(self.a_maj_appliquer)
-        self.ck_opt_cfg_autoclose.stateChanged.connect(self.a_maj_appliquer)
-        self.ck_opt_cfg_resize.stateChanged.connect(lambda: self.a_maj_appliquer(_reload=True))
-        self.ck_opt_cfg_ui_pin.stateChanged.connect(lambda: self.a_maj_appliquer(_reload=True))
+        self.sb_opt_cfg_opacity.valueChanged.connect(self.a_maj_button_appliquer)
+        self.sb_opt_cfg_resize_width.valueChanged.connect(lambda: self.a_maj_button_appliquer(_reload=True))
+        self.sb_opt_cfg_resize_height.valueChanged.connect(lambda: self.a_maj_button_appliquer(_reload=True))
+        self.ck_opt_cfg_debug.stateChanged.connect(self.a_maj_button_appliquer)
+        self.ck_opt_cfg_autoclose.stateChanged.connect(self.a_maj_button_appliquer)
+        self.ck_opt_cfg_resize.stateChanged.connect(lambda: self.a_maj_button_appliquer(_reload=True))
+        self.ck_opt_cfg_ui_pin.stateChanged.connect(lambda: self.a_maj_button_appliquer(_reload=True))
 
         # combo box theme
-        self.cb_opt_tm_theme.currentTextChanged.connect(self.a_maj_appliquer)
+        self.cb_opt_tm_theme.currentTextChanged.connect(self.a_maj_button_appliquer)
 
         # pb tm
         self.pb_opt_tm_th1.clicked.connect(lambda: self.f_maj_rgb_theme(rgb="th1"))
@@ -193,10 +193,10 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
 
         # pb dlg
         self.pb_opt_ok.clicked.connect(lambda: self.f_ok())
-        self.pb_opt_appliquer.clicked.connect(self._appliquer)
+        self.pb_opt_appliquer.clicked.connect(self.f_appliquer)
     def IN_ACT(self):
         # MAJ de la liste des thèmes
-        self._maj_cb_theme()
+        self.a_maj_liste_themes()
     def IN_WG_BASE(self):
         # pb appliquer
         self.pb_opt_appliquer.setVisible(False)
@@ -238,17 +238,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
             MsgBox().INFO(msg="Modifications appliquées !\nCertains paramètres peuvent nécessiter un redémarrage de l'application.")
             self.reload = False
     #####
-    def a_maj_appliquer(self, _reload=False):
-        if not self.pb_opt_appliquer.isVisible(): self.pb_opt_appliquer.setVisible(True)
-        if _reload: self.reload = True
-
-
-
-
-
-    ## configuration
-
-    def _maj_cb_theme(self):
+    def a_maj_liste_themes(self):
         self.cb_opt_tm_theme.clear()
 
         for i, js in enumerate(glob.glob(f"src/theme/*.json")):
@@ -256,34 +246,9 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
             self.cb_opt_tm_theme.addItem(tm)
             if tm == config.theme:
                 self.cb_opt_tm_theme.setCurrentIndex(i)
-
-
-
-    # application des modifs
-
-    def _appliquer(self):
-        self.pb_opt_appliquer.setVisible(False)
-
-        dct = {
-            "config": {
-                "theme": self.cb_opt_tm_theme.currentText(),
-                "font": self.fcb_opt_ft_font.currentText(),
-                "widht": self.sb_opt_cfg_resize_width.value(),
-                "height": self.sb_opt_cfg_resize_height.value(),
-                "opacity": self.sb_opt_cfg_opacity.value() / 100,
-                "cur": "MyApp"
-            },
-
-            "var": {
-                "debug": True if self.ck_opt_cfg_debug.isChecked() else False,
-                "resize": True if self.ck_opt_cfg_resize.isChecked() else False,
-                "auto_close": True if self.ck_opt_cfg_autoclose.isChecked() else False,
-                "toolbox_pin": True if self.ck_opt_cfg_ui_pin.isChecked() else False
-            },
-        }
-        Json(lien_json=f"src/config/config.json").UPDATE(dct)
-
-        self._a_reload_ui()
+    def a_maj_button_appliquer(self, _reload=False):
+        if not self.pb_opt_appliquer.isVisible(): self.pb_opt_appliquer.setVisible(True)
+        if _reload: self.reload = True
     #####################
     ##    /ACTIONS     ##
     #####################
@@ -304,16 +269,38 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
         }
         colors = RgbBox().GET(rgb=dct_colors.get(rgb))
         if colors:
-            self.a_maj_appliquer()
+            self.a_maj_button_appliquer()
 
             dct = {f"{rgb}": list(colors)}
             Json(lien_json=f"src/theme/{config.theme}.json").UPDATE(dct)
 
             self._a_reload_ui()
     #####
+    def f_appliquer(self):
+        self.pb_opt_appliquer.setVisible(False)
+
+        dct = {
+            "config": {
+                "theme": self.cb_opt_tm_theme.currentText(),
+                "font": self.fcb_opt_ft_font.currentText(),
+                "widht": self.sb_opt_cfg_resize_width.value(),
+                "height": self.sb_opt_cfg_resize_height.value(),
+                "opacity": self.sb_opt_cfg_opacity.value() / 100,
+                "cur": "MyApp"
+            },
+            "var": {
+                "debug": True if self.ck_opt_cfg_debug.isChecked() else False,
+                "resize": True if self.ck_opt_cfg_resize.isChecked() else False,
+                "auto_close": True if self.ck_opt_cfg_autoclose.isChecked() else False,
+                "toolbox_pin": True if self.ck_opt_cfg_ui_pin.isChecked() else False
+            }
+        }
+        Json(lien_json=f"src/config/config.json").UPDATE(dct)
+
+        self._a_reload_ui()
     def f_ok(self):
         if self.pb_opt_appliquer.isVisible():
-            self._appliquer()
+            self.f_appliquer()
         self.close()
     #######################
     ##    /FONCTIONS     ##
