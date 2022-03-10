@@ -175,12 +175,12 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
 
         # slider
         self.sb_opt_cfg_opacity.valueChanged.connect(self.a_maj_button_appliquer)
-        self.sb_opt_cfg_resize_width.valueChanged.connect(lambda: self.a_maj_button_appliquer(_reload=True))
-        self.sb_opt_cfg_resize_height.valueChanged.connect(lambda: self.a_maj_button_appliquer(_reload=True))
+        self.sb_opt_cfg_resize_width.valueChanged.connect(lambda: self.a_maj_button_appliquer(_reload="True"))
+        self.sb_opt_cfg_resize_height.valueChanged.connect(lambda: self.a_maj_button_appliquer(_reload="True"))
         self.ck_opt_cfg_debug.stateChanged.connect(self.a_maj_button_appliquer)
         self.ck_opt_cfg_autoclose.stateChanged.connect(self.a_maj_button_appliquer)
-        self.ck_opt_cfg_resize.stateChanged.connect(lambda: self.a_maj_button_appliquer(_reload=True))
-        self.ck_opt_cfg_ui_pin.stateChanged.connect(lambda: self.a_maj_button_appliquer(_reload=True))
+        self.ck_opt_cfg_resize.stateChanged.connect(lambda: self.a_maj_button_appliquer(_reload="True"))
+        self.ck_opt_cfg_ui_pin.stateChanged.connect(lambda: self.a_maj_button_appliquer(_reload="True"))
 
         # combo box theme
         self.cb_opt_tm_theme.currentTextChanged.connect(self.a_maj_button_appliquer)
@@ -246,9 +246,9 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
                 self.cb_opt_tm_theme.setCurrentIndex(i)
     def a_maj_cb_font(self):
         ComboBox.Base(self.fcb_opt_ft_font, self.cb_opt_tm_theme).font(font=self.fcb_opt_ft_font.currentText())
-    def a_maj_button_appliquer(self, _reload=False):
+    def a_maj_button_appliquer(self, _reload="False"):
         if not self.pb_opt_appliquer.isVisible(): self.pb_opt_appliquer.setVisible(True)
-        if _reload: self.reload = True
+        if _reload == "True": self.reload = True
     #####################
     ##    /ACTIONS     ##
     #####################
