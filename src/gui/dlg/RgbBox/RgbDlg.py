@@ -130,7 +130,7 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         self.le_rgb_hex.textEdited.connect(lambda: self._set_rgb_val_hex())
 
         # pb dlg
-        self.pb_rgb_ok.clicked.connect(lambda: self.OK())
+        self.pb_rgb_ok.clicked.connect(lambda: self.f_ok())
         self.pb_rgb_annuler.clicked.connect(lambda: self.close())
     def IN_ACT(self):
         pass
@@ -216,7 +216,7 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     #######################
     ##     FONCTIONS     ##
     #######################
-    def OK(self):
+    def f_ok(self):
         self.response = True
         self.return_rgb = self.sd_rgb_red.value(), self.sd_rgb_green.value(), self.sd_rgb_blue.value()
         self.close()
