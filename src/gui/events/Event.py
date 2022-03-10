@@ -1,7 +1,7 @@
 from PySide6 import QtCore, QtWidgets, QtGui
 
 from src.build.mods import Functions
-from src.config import config
+from src.config.config import Config
 from src.lib.globals import v_gb
 from src.lib.palettes import *
 
@@ -41,7 +41,7 @@ class Event:
         self.margin = v_gb.MARGIN_APP
     def e_cacher(self):
         """Permet de cacher la fenêtre"""
-        if config.debug: return self.ui.e_quitter()
+        if Config().debug: return self.ui.e_quitter()
         self.ui.hide()
         self._e_center_screen()
 
