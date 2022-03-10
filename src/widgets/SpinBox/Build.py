@@ -107,9 +107,13 @@ class Build:
         :param fg: *RgbBox
         :param fg_selection: *RgbBox
         :param img_up: *Img
+        :param img_up_hover: *Img
         :param img_down: *Img
+        :param img_down_hover: *Img
         :param img_up_rgb: *Img
+        :param img_up_hover_rgb: *Img
         :param img_down_rgb: *Img
+        :param img_down_hover_rgb: *Img
         :param img_up_width: *Dim
         :param img_up_height: *Dim
         :param img_down_width: *Dim
