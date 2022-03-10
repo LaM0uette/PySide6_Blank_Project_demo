@@ -92,12 +92,20 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > 
 > <br>
 > 
+> ### Imports :
+> Pour importer de manière global tous les modules, il suffit de faire :
+> ```py
+> from src import *
+> ```
+> Cependant, il faut faire attention à ne pas importer un module en boucle.   
+> Si vous importer le module ```Rgb()``` dans le fichier Rgb le programme ne pourras pas se lancer.
+> 
+> <br>
+> 
 > ### Palettes :
 > Il y a des palettes mis à disposition et utilisable partout.
-> Pour importer le module il suffite de faire : 
+> Pour importer le module il suffite de faire :
 > ```py
-> from src import* 
-> ou :
 > from src.lib.palettes import *
 > ```
 > 
