@@ -1,4 +1,5 @@
 from src.lib.palettes import *
+from src.widgets import vb_wg
 from src.widgets.ComboBox.Build import Build
 
 
@@ -25,4 +26,9 @@ class Base:
             bg_selection=Rgb().th3(),
             fg=Rgb().th3(),
             fg_selection=Rgb().th1(),
+        )
+    def font(self, font=vb_wg.FONT):
+        Build(
+            *self.wgs,
+            font=font
         )
