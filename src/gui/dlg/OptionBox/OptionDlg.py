@@ -229,9 +229,6 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
         self.fen_main.IN_BASE()
         self.fen_main.IN_WG()
         self.fen_main.IN_CLASSE()
-        self.fen_main.IN_CLASSE()
-        self.fen_main.IN_CLASSE()
-        self.fen_main.IN_CLASSE()
 
         QtWidgets.QApplication.restoreOverrideCursor()
 
