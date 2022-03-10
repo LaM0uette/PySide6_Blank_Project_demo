@@ -1,0 +1,809 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9ce35bbe-dd6b-4f71-b7c0-abe4ca8546c8" name="Changes" comment="REMAKE 100% - UI - Nettoyage">
+      <change beforePath="$PROJECT_DIR$/src/gui/dlg/Rep/DLG_Rep.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dlg/Rep/DLG_Rep.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/dlg/Rep/Rep.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dlg/Rep/Rep.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\XD5965\Creative Cloud Files\01_PROJETS\01_PROG\01_PYTHON\PySide6_Blank_Project_demo" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="package.json" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/MyApp.py" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/lib/palettes/Cur.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="22hIvtGK1QWY0hCXsFzpUKX3nDH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="PyCoverageOptionsProvider">
+    <option name="myUseBundledCoveragePy" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\XD5965\Creative Cloud Files\01_PROJETS\01_PROG\01_PYTHON\PySide6_Blank_Project_demo\src\config" />
+      <recent name="C:\Users\XD5965\Creative Cloud Files\01_PROJETS\01_PROG\01_PYTHON\PySide6_Blank_Project_demo\src\gui\dlg" />
+      <recent name="C:\Users\XD5965\Creative Cloud Files\01_PROJETS\01_PROG\01_PYTHON\PySide6_Blank_Project_demo\src\gui\ui" />
+      <recent name="C:\Users\XD5965\Creative Cloud Files\01_PROJETS\01_PROG\01_PYTHON\PySide6_Blank_Project_demo\src\build\mods" />
+      <recent name="C:\Users\XD5965\Creative Cloud Files\01_PROJETS\01_PROG\01_PYTHON\PySide6_Blank_Project_demo\src\widgets\PushButton" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_PYTHON\PySide6_Blank_Project_demo\src\widgets" />
+      <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_PYTHON\PySide6_Blank_Project_demo\src\widgets\vbase" />
+      <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_PYTHON\PySide6_Blank_Project_demo\src" />
+      <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_PYTHON\PySide6_Blank_Project_demo\src\lib\globals" />
+      <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_PYTHON\PySide6_Blank_Project_demo\src\config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.MyApp">
+    <configuration default="true" type="DjangoTestsConfigurationType">
+      <module name="01_PYTHON" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <module name="01_PYTHON" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="MyApp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PySide6_Blank_Project_demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MyApp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2">
+        <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_External Tools_convert_ui" />
+      </method>
+    </configuration>
+    <configuration name="MyApp_local" type="PythonConfigurationType" factoryName="Python">
+      <module name="PySide6_Blank_Project_demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MyApp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2">
+        <option name="ToolBeforeRunTask" enabled="true" actionId="Tool_External Tools_convert_ui" />
+      </method>
+    </configuration>
+    <configuration name="Random" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PySide6_Blank_Project_demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\venv\PySide6_Blank_Project_demo\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../z_old/python/ZZ_OLD/RouePDM" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../z_old/python/ZZ_OLD/RouePDM/Random.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="01_PYTHON" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Python.FlaskServer">
+      <module name="01_PYTHON" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="01_PYTHON" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Docutils task">
+      <module name="01_PYTHON" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Sphinx task">
+      <module name="01_PYTHON" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Autodetect">
+      <module name="01_PYTHON" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="01_PYTHON" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.MyApp_local" />
+      <item itemvalue="Python.MyApp" />
+      <item itemvalue="Python.Random" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.MyApp" />
+        <item itemvalue="Python.Random" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\doria\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9ce35bbe-dd6b-4f71-b7c0-abe4ca8546c8" name="Changes" comment="" />
+      <created>1640283625284</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1640283625284</updated>
+      <workItem from="1646142358754" duration="53000" />
+      <workItem from="1646144853234" duration="1109000" />
+      <workItem from="1646146721742" duration="377000" />
+      <workItem from="1646147958582" duration="642000" />
+      <workItem from="1646150122896" duration="213000" />
+      <workItem from="1646155269216" duration="164000" />
+      <workItem from="1646157947211" duration="5253000" />
+      <workItem from="1646163256140" duration="337000" />
+      <workItem from="1646209981855" duration="24444000" />
+      <workItem from="1646240886210" duration="6719000" />
+      <workItem from="1646291896656" duration="3564000" />
+      <workItem from="1646296348097" duration="7000" />
+      <workItem from="1646296434041" duration="18501000" />
+      <workItem from="1646325932653" duration="85000" />
+      <workItem from="1646326024546" duration="3569000" />
+      <workItem from="1646329796391" duration="1199000" />
+      <workItem from="1646331172965" duration="678000" />
+      <workItem from="1646379627654" duration="886000" />
+      <workItem from="1646380877931" duration="2753000" />
+      <workItem from="1646384878450" duration="2471000" />
+      <workItem from="1646466434033" duration="4599000" />
+      <workItem from="1646472294120" duration="14508000" />
+      <workItem from="1646553163136" duration="23924000" />
+      <workItem from="1646640922394" duration="16730000" />
+      <workItem from="1646675207253" duration="2321000" />
+      <workItem from="1646725333387" duration="25753000" />
+      <workItem from="1646811547845" duration="2197000" />
+      <workItem from="1646814502086" duration="21086000" />
+      <workItem from="1646848974648" duration="345000" />
+      <workItem from="1646849340893" duration="14000" />
+      <workItem from="1646898014574" duration="4104000" />
+    </task>
+    <task id="LOCAL-01765" summary="REMAKE 100% - UI - SplashScreen">
+      <created>1646820868929</created>
+      <option name="number" value="01765" />
+      <option name="presentableId" value="LOCAL-01765" />
+      <option name="project" value="LOCAL" />
+      <updated>1646820868929</updated>
+    </task>
+    <task id="LOCAL-01766" summary="REMAKE 100% - UI - Input">
+      <created>1646821974744</created>
+      <option name="number" value="01766" />
+      <option name="presentableId" value="LOCAL-01766" />
+      <option name="project" value="LOCAL" />
+      <updated>1646821974744</updated>
+    </task>
+    <task id="LOCAL-01767" summary="REMAKE 100% - UI - Input">
+      <created>1646821984127</created>
+      <option name="number" value="01767" />
+      <option name="presentableId" value="LOCAL-01767" />
+      <option name="project" value="LOCAL" />
+      <updated>1646821984127</updated>
+    </task>
+    <task id="LOCAL-01768" summary="REMAKE 100% - UI - Input">
+      <created>1646822088235</created>
+      <option name="number" value="01768" />
+      <option name="presentableId" value="LOCAL-01768" />
+      <option name="project" value="LOCAL" />
+      <updated>1646822088235</updated>
+    </task>
+    <task id="LOCAL-01769" summary="REMAKE 100% - UI - Input">
+      <created>1646822490715</created>
+      <option name="number" value="01769" />
+      <option name="presentableId" value="LOCAL-01769" />
+      <option name="project" value="LOCAL" />
+      <updated>1646822490715</updated>
+    </task>
+    <task id="LOCAL-01770" summary="REMAKE 100% - UI - Input">
+      <created>1646823516666</created>
+      <option name="number" value="01770" />
+      <option name="presentableId" value="LOCAL-01770" />
+      <option name="project" value="LOCAL" />
+      <updated>1646823516667</updated>
+    </task>
+    <task id="LOCAL-01771" summary="REMAKE 100% - UI - Input">
+      <created>1646823632603</created>
+      <option name="number" value="01771" />
+      <option name="presentableId" value="LOCAL-01771" />
+      <option name="project" value="LOCAL" />
+      <updated>1646823632603</updated>
+    </task>
+    <task id="LOCAL-01772" summary="REMAKE 100% - UI - Input">
+      <created>1646823724754</created>
+      <option name="number" value="01772" />
+      <option name="presentableId" value="LOCAL-01772" />
+      <option name="project" value="LOCAL" />
+      <updated>1646823724754</updated>
+    </task>
+    <task id="LOCAL-01773" summary="REMAKE 100% - UI - Input">
+      <created>1646823775360</created>
+      <option name="number" value="01773" />
+      <option name="presentableId" value="LOCAL-01773" />
+      <option name="project" value="LOCAL" />
+      <updated>1646823775361</updated>
+    </task>
+    <task id="LOCAL-01774" summary="REMAKE 100% - UI - Input">
+      <created>1646824168582</created>
+      <option name="number" value="01774" />
+      <option name="presentableId" value="LOCAL-01774" />
+      <option name="project" value="LOCAL" />
+      <updated>1646824168582</updated>
+    </task>
+    <task id="LOCAL-01775" summary="REMAKE 100% - UI - Input">
+      <created>1646824334300</created>
+      <option name="number" value="01775" />
+      <option name="presentableId" value="LOCAL-01775" />
+      <option name="project" value="LOCAL" />
+      <updated>1646824334300</updated>
+    </task>
+    <task id="LOCAL-01776" summary="REMAKE 100% - UI - Input">
+      <created>1646824423558</created>
+      <option name="number" value="01776" />
+      <option name="presentableId" value="LOCAL-01776" />
+      <option name="project" value="LOCAL" />
+      <updated>1646824423558</updated>
+    </task>
+    <task id="LOCAL-01777" summary="REMAKE 100% - UI - Input">
+      <created>1646824561196</created>
+      <option name="number" value="01777" />
+      <option name="presentableId" value="LOCAL-01777" />
+      <option name="project" value="LOCAL" />
+      <updated>1646824561196</updated>
+    </task>
+    <task id="LOCAL-01778" summary="REMAKE 100% - UI - Msg">
+      <created>1646829710512</created>
+      <option name="number" value="01778" />
+      <option name="presentableId" value="LOCAL-01778" />
+      <option name="project" value="LOCAL" />
+      <updated>1646829710512</updated>
+    </task>
+    <task id="LOCAL-01779" summary="REMAKE 100% - UI - Msg">
+      <created>1646830178548</created>
+      <option name="number" value="01779" />
+      <option name="presentableId" value="LOCAL-01779" />
+      <option name="project" value="LOCAL" />
+      <updated>1646830178548</updated>
+    </task>
+    <task id="LOCAL-01780" summary="REMAKE 100% - UI - Msg">
+      <created>1646830765421</created>
+      <option name="number" value="01780" />
+      <option name="presentableId" value="LOCAL-01780" />
+      <option name="project" value="LOCAL" />
+      <updated>1646830765421</updated>
+    </task>
+    <task id="LOCAL-01781" summary="REMAKE 100% - UI - Msg">
+      <created>1646830818015</created>
+      <option name="number" value="01781" />
+      <option name="presentableId" value="LOCAL-01781" />
+      <option name="project" value="LOCAL" />
+      <updated>1646830818015</updated>
+    </task>
+    <task id="LOCAL-01782" summary="REMAKE 100% - UI - Rep">
+      <created>1646831379837</created>
+      <option name="number" value="01782" />
+      <option name="presentableId" value="LOCAL-01782" />
+      <option name="project" value="LOCAL" />
+      <updated>1646831379837</updated>
+    </task>
+    <task id="LOCAL-01783" summary="REMAKE 100% - UI - Rep">
+      <created>1646831461385</created>
+      <option name="number" value="01783" />
+      <option name="presentableId" value="LOCAL-01783" />
+      <option name="project" value="LOCAL" />
+      <updated>1646831461385</updated>
+    </task>
+    <task id="LOCAL-01784" summary="REMAKE 100% - UI - Rgb">
+      <created>1646832385843</created>
+      <option name="number" value="01784" />
+      <option name="presentableId" value="LOCAL-01784" />
+      <option name="project" value="LOCAL" />
+      <updated>1646832385844</updated>
+    </task>
+    <task id="LOCAL-01785" summary="REMAKE 100% - UI - Rgb">
+      <created>1646832458911</created>
+      <option name="number" value="01785" />
+      <option name="presentableId" value="LOCAL-01785" />
+      <option name="project" value="LOCAL" />
+      <updated>1646832458911</updated>
+    </task>
+    <task id="LOCAL-01786" summary="REMAKE 100% - UI - Rgb">
+      <created>1646832594033</created>
+      <option name="number" value="01786" />
+      <option name="presentableId" value="LOCAL-01786" />
+      <option name="project" value="LOCAL" />
+      <updated>1646832594034</updated>
+    </task>
+    <task id="LOCAL-01787" summary="REMAKE 100% - UI - Rgb">
+      <created>1646833386258</created>
+      <option name="number" value="01787" />
+      <option name="presentableId" value="LOCAL-01787" />
+      <option name="project" value="LOCAL" />
+      <updated>1646833386258</updated>
+    </task>
+    <task id="LOCAL-01788" summary="REMAKE 100% - UI - Rgb">
+      <created>1646833591882</created>
+      <option name="number" value="01788" />
+      <option name="presentableId" value="LOCAL-01788" />
+      <option name="project" value="LOCAL" />
+      <updated>1646833591882</updated>
+    </task>
+    <task id="LOCAL-01789" summary="REMAKE 100% - UI - ToolBox">
+      <created>1646834523929</created>
+      <option name="number" value="01789" />
+      <option name="presentableId" value="LOCAL-01789" />
+      <option name="project" value="LOCAL" />
+      <updated>1646834523929</updated>
+    </task>
+    <task id="LOCAL-01790" summary="REMAKE 100% - UI - ToolBox">
+      <created>1646834721011</created>
+      <option name="number" value="01790" />
+      <option name="presentableId" value="LOCAL-01790" />
+      <option name="project" value="LOCAL" />
+      <updated>1646834721011</updated>
+    </task>
+    <task id="LOCAL-01791" summary="REMAKE 100% - UI - ToolBox">
+      <created>1646834744630</created>
+      <option name="number" value="01791" />
+      <option name="presentableId" value="LOCAL-01791" />
+      <option name="project" value="LOCAL" />
+      <updated>1646834744630</updated>
+    </task>
+    <task id="LOCAL-01792" summary="REMAKE 100% - UI - ToolBox">
+      <created>1646834904662</created>
+      <option name="number" value="01792" />
+      <option name="presentableId" value="LOCAL-01792" />
+      <option name="project" value="LOCAL" />
+      <updated>1646834904663</updated>
+    </task>
+    <task id="LOCAL-01793" summary="REMAKE 100% - UI - ToolBox">
+      <created>1646836058777</created>
+      <option name="number" value="01793" />
+      <option name="presentableId" value="LOCAL-01793" />
+      <option name="project" value="LOCAL" />
+      <updated>1646836058777</updated>
+    </task>
+    <task id="LOCAL-01794" summary="REMAKE 100% - UI - ToolBox">
+      <created>1646837780150</created>
+      <option name="number" value="01794" />
+      <option name="presentableId" value="LOCAL-01794" />
+      <option name="project" value="LOCAL" />
+      <updated>1646837780150</updated>
+    </task>
+    <task id="LOCAL-01795" summary="REMAKE 100% - UI - DLG_Option">
+      <created>1646837899519</created>
+      <option name="number" value="01795" />
+      <option name="presentableId" value="LOCAL-01795" />
+      <option name="project" value="LOCAL" />
+      <updated>1646837899519</updated>
+    </task>
+    <task id="LOCAL-01796" summary="REMAKE 100% - UI - DLG_Option">
+      <created>1646837914615</created>
+      <option name="number" value="01796" />
+      <option name="presentableId" value="LOCAL-01796" />
+      <option name="project" value="LOCAL" />
+      <updated>1646837914615</updated>
+    </task>
+    <task id="LOCAL-01797" summary="REMAKE 100% - UI - DLG_Option">
+      <created>1646838358482</created>
+      <option name="number" value="01797" />
+      <option name="presentableId" value="LOCAL-01797" />
+      <option name="project" value="LOCAL" />
+      <updated>1646838358483</updated>
+    </task>
+    <task id="LOCAL-01798" summary="REMAKE 100% - UI - DLG_Option">
+      <created>1646839030394</created>
+      <option name="number" value="01798" />
+      <option name="presentableId" value="LOCAL-01798" />
+      <option name="project" value="LOCAL" />
+      <updated>1646839030394</updated>
+    </task>
+    <task id="LOCAL-01799" summary="REMAKE 100% - UI - DLG_Option">
+      <created>1646839084591</created>
+      <option name="number" value="01799" />
+      <option name="presentableId" value="LOCAL-01799" />
+      <option name="project" value="LOCAL" />
+      <updated>1646839084591</updated>
+    </task>
+    <task id="LOCAL-01800" summary="REMAKE 100% - UI - DLG_Option">
+      <created>1646839883601</created>
+      <option name="number" value="01800" />
+      <option name="presentableId" value="LOCAL-01800" />
+      <option name="project" value="LOCAL" />
+      <updated>1646839883601</updated>
+    </task>
+    <task id="LOCAL-01801" summary="REMAKE 100% - UI - DLG_Option">
+      <created>1646839910254</created>
+      <option name="number" value="01801" />
+      <option name="presentableId" value="LOCAL-01801" />
+      <option name="project" value="LOCAL" />
+      <updated>1646839910254</updated>
+    </task>
+    <task id="LOCAL-01802" summary="REMAKE 100% - UI - DLG_Option">
+      <created>1646840083940</created>
+      <option name="number" value="01802" />
+      <option name="presentableId" value="LOCAL-01802" />
+      <option name="project" value="LOCAL" />
+      <updated>1646840083940</updated>
+    </task>
+    <task id="LOCAL-01803" summary="REMAKE 100% - UI - DLG_Option">
+      <created>1646840664070</created>
+      <option name="number" value="01803" />
+      <option name="presentableId" value="LOCAL-01803" />
+      <option name="project" value="LOCAL" />
+      <updated>1646840664070</updated>
+    </task>
+    <task id="LOCAL-01804" summary="REMAKE 100% - UI - DLG_Option">
+      <created>1646840725055</created>
+      <option name="number" value="01804" />
+      <option name="presentableId" value="LOCAL-01804" />
+      <option name="project" value="LOCAL" />
+      <updated>1646840725055</updated>
+    </task>
+    <task id="LOCAL-01805" summary="REMAKE 100% - UI - DLG_Option">
+      <created>1646841323303</created>
+      <option name="number" value="01805" />
+      <option name="presentableId" value="LOCAL-01805" />
+      <option name="project" value="LOCAL" />
+      <updated>1646841323303</updated>
+    </task>
+    <task id="LOCAL-01806" summary="REMAKE 100% - UI - DLG_Option">
+      <created>1646841495586</created>
+      <option name="number" value="01806" />
+      <option name="presentableId" value="LOCAL-01806" />
+      <option name="project" value="LOCAL" />
+      <updated>1646841495586</updated>
+    </task>
+    <task id="LOCAL-01807" summary="REMAKE 100% - UI - DLG_Option">
+      <created>1646849349356</created>
+      <option name="number" value="01807" />
+      <option name="presentableId" value="LOCAL-01807" />
+      <option name="project" value="LOCAL" />
+      <updated>1646849349356</updated>
+    </task>
+    <task id="LOCAL-01808" summary="REMAKE 100% - UI - DLG_Option">
+      <created>1646898964545</created>
+      <option name="number" value="01808" />
+      <option name="presentableId" value="LOCAL-01808" />
+      <option name="project" value="LOCAL" />
+      <updated>1646898964545</updated>
+    </task>
+    <task id="LOCAL-01809" summary="REMAKE 100% - UI - Nettoyage">
+      <created>1646900972805</created>
+      <option name="number" value="01809" />
+      <option name="presentableId" value="LOCAL-01809" />
+      <option name="project" value="LOCAL" />
+      <updated>1646900972805</updated>
+    </task>
+    <task id="LOCAL-01810" summary="REMAKE 100% - UI - Nettoyage">
+      <created>1646901327199</created>
+      <option name="number" value="01810" />
+      <option name="presentableId" value="LOCAL-01810" />
+      <option name="project" value="LOCAL" />
+      <updated>1646901327200</updated>
+    </task>
+    <task id="LOCAL-01811" summary="REMAKE 100% - UI - Nettoyage">
+      <created>1646901457507</created>
+      <option name="number" value="01811" />
+      <option name="presentableId" value="LOCAL-01811" />
+      <option name="project" value="LOCAL" />
+      <updated>1646901457507</updated>
+    </task>
+    <task id="LOCAL-01812" summary="REMAKE 100% - UI - Nettoyage">
+      <created>1646901549726</created>
+      <option name="number" value="01812" />
+      <option name="presentableId" value="LOCAL-01812" />
+      <option name="project" value="LOCAL" />
+      <updated>1646901549726</updated>
+    </task>
+    <task id="LOCAL-01813" summary="REMAKE 100% - UI - Nettoyage">
+      <created>1646901638830</created>
+      <option name="number" value="01813" />
+      <option name="presentableId" value="LOCAL-01813" />
+      <option name="project" value="LOCAL" />
+      <updated>1646901638830</updated>
+    </task>
+    <option name="localTasksCounter" value="1814" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="REMAKE 100% - wg - Frame" />
+    <MESSAGE value="REMAKE 100% - wg - ScrollArea" />
+    <MESSAGE value="REMAKE 100% - wg - Label" />
+    <MESSAGE value="REMAKE 100% - wg - TrayIcon" />
+    <MESSAGE value="REMAKE 100% - wg - ListWidget" />
+    <MESSAGE value="REMAKE 100% - wg - TableWidget" />
+    <MESSAGE value="REMAKE 100% - wg - ProgressBar" />
+    <MESSAGE value="REMAKE 100% - wg - Slider" />
+    <MESSAGE value="REMAKE 100% - wg - SpinBox" />
+    <MESSAGE value="REMAKE 100% - wg - corect bug" />
+    <MESSAGE value="REMAKE 100% - wg - LineEdit" />
+    <MESSAGE value="REMAKE 100% - wg - QTextEdit" />
+    <MESSAGE value="REMAKE 100% - wg - PlainTextEdit" />
+    <MESSAGE value="REMAKE 100% - wg - ToolBox" />
+    <MESSAGE value="REMAKE 100% - wg - TreeWidget" />
+    <MESSAGE value="REMAKE 100% - wg - PushButton" />
+    <MESSAGE value="REMAKE 100% - Json" />
+    <MESSAGE value="REMAKE 100% - UI - SplashScreen" />
+    <MESSAGE value="REMAKE 100% - UI - Input" />
+    <MESSAGE value="REMAKE 100% - UI - Msg" />
+    <MESSAGE value="REMAKE 100% - UI - Rep" />
+    <MESSAGE value="REMAKE 100% - UI - Rgb" />
+    <MESSAGE value="REMAKE 100% - UI - ToolBox" />
+    <MESSAGE value="REMAKE 100% - UI - DLG_Option" />
+    <MESSAGE value="REMAKE 100% - UI - Nettoyage" />
+    <option name="LAST_COMMIT_MESSAGE" value="REMAKE 100% - UI - Nettoyage" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../../GDT/main.py</url>
+          <line>171</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../01_MODELE/src/option.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../00_A ETUDIER/AUTOMATA_V2/src/export_pdb.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../00_A ETUDIER/AUTOMATA_V2/src/Logger.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../00_A ETUDIER/2_GESTION_HEXACLE/python/BanScraper.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../../extQgis/searchlayers/searchDialog.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../../AUTOMATA_V2/src/test.py</url>
+          <line>6</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/../../../../AUTOMATA_V2/src/Ui_Event_Handler.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/app_py$Random.coverage" NAME="Random Coverage Results" MODIFIED="1646742711706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../z_old/python/ZZ_OLD/RouePDM" />
+    <SUITE FILE_PATH="coverage/PySide6_Blank_Project_demo$app.coverage" NAME="app Coverage Results" MODIFIED="1646222382773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/app_py$tt.coverage" NAME="tt Coverage Results" MODIFIED="1646256551220" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Desktop/tt" />
+    <SUITE FILE_PATH="coverage/app_py$MyApp_local.coverage" NAME="MyApp_local Coverage Results" MODIFIED="1646849267720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/app_py$APP_MAIN.coverage" NAME="MyApp Coverage Results" MODIFIED="1646319357667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/app_py$versionFile.coverage" NAME="versionFile Coverage Results" MODIFIED="1646316237265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests" />
+    <SUITE FILE_PATH="coverage/PySide6_Blank_Project_demo$app__1_.coverage" NAME="app (1) Coverage Results" MODIFIED="1646211070965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/PySide6_Blank_Project_demo$App_Main.coverage" NAME="App_Main Coverage Results" MODIFIED="1646237079644" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/app_py$MyApp.coverage" NAME="MyApp Coverage Results" MODIFIED="1646899135046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/app_py$APP_MAIN__1_.coverage" NAME="APP_MAIN (1) Coverage Results" MODIFIED="1646295373585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/OneDrive - EQUANS/Bureau/PySide6_Blank_Project_demo" />
+    <SUITE FILE_PATH="coverage/app_py$versionFile__1_.coverage" NAME="versionFile (1) Coverage Results" MODIFIED="1646330194404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src/config" />
+    <SUITE FILE_PATH="coverage/app_py$minesweeper.coverage" NAME="minesweeper Coverage Results" MODIFIED="1646311251615" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../z_cours/Cours_Python/Livre_PySide6/pyside6-source/app" />
+    <SUITE FILE_PATH="coverage/PySide6_Blank_Project_demo$DrapeauxQuiz.coverage" NAME="DrapeauxQuiz Coverage Results" MODIFIED="1646222254632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../0_FORMATION/TP/PySide6/01_DrapeauxQuiz" />
+  </component>
+</project>

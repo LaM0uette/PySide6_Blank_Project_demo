@@ -3,56 +3,56 @@ from src.gui.dlg.Rep.Rep import Rep
 
 
 class DLG_Rep:
-    def __init__(self,
-                 width=650,
-                 height=250,
-                 opacity=1
+    def __init__(
+            self,
+            width=650,
+            height=250,
+            opacity=1
     ):
         self.width = width
         self.height = height
         self.opacity = opacity
 
-    def _rtn(self, titre, msg, ico, tm, txt_pb_ok, txt_pb_annuler):
-        rep = Rep(
-            titre=titre,
+    def _rtn(self, title, msg, ico, ico_rgb, txt_ok, txt_cancel):
+        _rep = Rep(
+            title=title,
             msg=msg,
             ico=ico,
-            tm=tm,
-            txt_pb_ok=txt_pb_ok,
-            txt_pb_annuler=txt_pb_annuler,
+            ico_rgb=ico_rgb,
+            txt_ok=txt_ok,
+            txt_cancel=txt_cancel,
             width=self.width,
             height=self.height,
             opacity=self.opacity
         )
-        rep.exec()
+        _rep.exec()
+        return _rep.rep
 
-        return rep.rep
 
-
-    def INFO(self, titre="INFO", msg="", ico=Img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
+    def INFO(self, title="INFO", msg="", ico=Img().info(), ico_rgb="th3", txt_ok="Ok", txt_cancel="Annuler"):
         return self._rtn(
-            titre=titre,
+            title=title,
             msg=msg,
             ico=ico,
-            tm=tm,
-            txt_pb_ok=txt_pb_ok,
-            txt_pb_annuler=txt_pb_annuler
+            ico_rgb=ico_rgb,
+            txt_ok=txt_ok,
+            txt_cancel=txt_cancel
         )
-    def ALERTE(self, titre="ALERTE", msg="", ico=Img().alerte(), tm="th3", txt_pb_ok="Valider", txt_pb_annuler="Annuler"):
+    def ALERTE(self, title="ALERTE", msg="", ico=Img().alerte(), ico_rgb="th3", txt_ok="Valider", txt_cancel="Annuler"):
         return self._rtn(
-            titre=titre,
+            title=title,
             msg=msg,
             ico=ico,
-            tm=tm,
-            txt_pb_ok=txt_pb_ok,
-            txt_pb_annuler=txt_pb_annuler
+            ico_rgb=ico_rgb,
+            txt_ok=txt_ok,
+            txt_cancel=txt_cancel
         )
-    def QUITTER(self, titre="Quitter", msg="Voulez vous quitter cette application ?", ico=Img().quitter(), tm="bn2", txt_pb_ok="Quitter", txt_pb_annuler="Annuler"):
+    def QUITTER(self, title="Quitter", msg="Voulez vous quitter cette application ?", ico=Img().quitter(), ico_rgb="bn2", txt_ok="Quitter", txt_cancel="Annuler"):
         return self._rtn(
-            titre=titre,
+            title=title,
             msg=msg,
             ico=ico,
-            tm=tm,
-            txt_pb_ok=txt_pb_ok,
-            txt_pb_annuler=txt_pb_annuler
+            ico_rgb=ico_rgb,
+            txt_ok=txt_ok,
+            txt_cancel=txt_cancel
         )
