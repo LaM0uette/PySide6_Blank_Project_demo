@@ -218,7 +218,7 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     #######################
     def OK(self):
         self.response = True
-        self.return_rgb = (self.sd_rgb_red.value(), self.sd_rgb_green.value(), self.sd_rgb_blue.value())
+        self.return_rgb = self.sd_rgb_red.value(), self.sd_rgb_green.value(), self.sd_rgb_blue.value()
         self.close()
     #######################
     ##    /FONCTIONS     ##
