@@ -369,7 +369,7 @@ class main(Ui_main, QtWidgets.QWidget):
         """Permet de quitter l'application"""
         if not config.auto_close:
             self.hide()
-        elif DLG_Rep().QUITTER():
+        elif DLG_Response().QUITTER():
             app.quit()
     def e_quitter_tray(self):
         self.show()
@@ -378,7 +378,7 @@ class main(Ui_main, QtWidgets.QWidget):
         if fen.windowState() == QtCore.Qt.WindowMinimized:
             fen.setWindowState(QtCore.Qt.WindowActive)
 
-        if DLG_Rep().QUITTER():
+        if DLG_Response().QUITTER():
             app.quit()
     #####
     def closeEvent(self, event):

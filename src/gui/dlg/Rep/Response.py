@@ -5,29 +5,30 @@ from src.gui.ui import rep_ui
 from src.gui.events.Event import Event
 
 
-class Rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
+class Response(rep_ui.Ui_Rep, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
     rep = False
 
-    def __init__(self,
-                 titre,
-                 msg,
-                 ico,
-                 tm,
-                 txt_pb_ok,
-                 txt_pb_annuler,
-                 width,
-                 height,
-                 opacity,
+    def __init__(
+            self,
+            title,
+            msg,
+            ico,
+            ico_rgb,
+            txt_ok,
+            txt_cancel,
+            width,
+            height,
+            opacity,
     ):
-        super(Rep, self).__init__()
+        super(Response, self).__init__()
 
-        self.titre = titre
+        self.title = title
         self.msg = msg
         self.ico = ico
-        self.rgb = tm
-        self.txt_pb_ok = txt_pb_ok
-        self.txt_pb_annuler = txt_pb_annuler
+        self.ico_rgb = ico_rgb
+        self.txt_ok = txt_ok
+        self.txt_cancel = txt_cancel
         self.width = width
         self.height = height
         self.opacity = opacity
@@ -44,7 +45,7 @@ class Rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
     ############################
     def IN_BASE(self):
         # Fenetre
-        self.setWindowTitle(self.titre)
+        self.setWindowTitle(self.title)
         self.setFixedWidth(self.width)
         self.setFixedHeight(self.height)
         self.setWindowOpacity(self.opacity)
@@ -66,7 +67,7 @@ class Rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
 
 
         ### QLabel ###
-        Label.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.rgb)
+        Label.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.ico_rgb)
         Label.Base(self.lb_mt_nom, font_size=Font().h3()).tr()
         Label.Base(self.lb_rep_text).tr()
         ### /QLabel ###
@@ -85,21 +86,21 @@ class Rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
         self.fr_menu_top.setFixedHeight(Dim().h9())
 
         # Menu_top
-        self.lb_mt_nom.setText(self.titre)
+        self.lb_mt_nom.setText(self.title)
 
         # Message
         self.lb_rep_text.setText(self.msg)
 
         # pb dlg
-        self.pb_rep_ok.setText(self.txt_pb_ok)
-        self.pb_rep_annuler.setText(self.txt_pb_annuler)
+        self.pb_rep_ok.setText(self.txt_ok)
+        self.pb_rep_annuler.setText(self.txt_cancel)
         self.pb_rep_annuler.setDefault(True)
     def IN_CONNECTIONS(self):
         # Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
 
         # pb dlg
-        self.pb_rep_ok.clicked.connect(lambda: self.OK())
+        self.pb_rep_ok.clicked.connect(lambda: self.f_ok())
         self.pb_rep_annuler.clicked.connect(lambda: self.close())
     def IN_ACT(self):
         pass
@@ -121,7 +122,7 @@ class Rep(rep_ui.Ui_Rep, QtWidgets.QDialog):
     #######################
     ##     FONCTIONS     ##
     #######################
-    def OK(self):
+    def f_ok(self):
         self.rep = True
         self.close()
     #######################

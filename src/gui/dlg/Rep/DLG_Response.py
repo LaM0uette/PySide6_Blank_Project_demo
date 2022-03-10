@@ -1,8 +1,8 @@
 from src import *
-from src.gui.dlg.Rep.Rep import Rep
+from src.gui.dlg.Rep.Response import Response
 
 
-class DLG_Rep:
+class DLG_Response:
     def __init__(
             self,
             width=650,
@@ -14,7 +14,7 @@ class DLG_Rep:
         self.opacity = opacity
 
     def _rtn(self, title, msg, ico, ico_rgb, txt_ok, txt_cancel):
-        _rep = Rep(
+        _reponse = Response(
             title=title,
             msg=msg,
             ico=ico,
@@ -25,8 +25,8 @@ class DLG_Rep:
             height=self.height,
             opacity=self.opacity
         )
-        _rep.exec()
-        return _rep.rep
+        _reponse.exec()
+        return _reponse.rep
 
 
     def INFO(self, title="INFO", msg="", ico=Img().info(), ico_rgb="th3", txt_ok="Ok", txt_cancel="Annuler"):
