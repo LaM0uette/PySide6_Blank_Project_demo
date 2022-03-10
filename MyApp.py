@@ -58,12 +58,14 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setWindowTitle(config.nom)
         self.setWindowIcon(QtGui.QPixmap(f"{Img().main()}th3.svg"))
         self.setWindowOpacity(config.opacity)
-        self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
-        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+
         self.setGraphicsEffect(Shadow().ombre_portee(self))
 
         self.e_resize_screen()
     def IN_SETUP_UI(self):
+        self.setWindowFlags(QtCore.Qt.FramelessWindowHint)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        
         ### Ui principal ###
         self.setupUi(self)
         self.vlay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
