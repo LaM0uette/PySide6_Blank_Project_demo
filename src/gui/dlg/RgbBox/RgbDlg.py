@@ -119,15 +119,15 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
 
         # Slider
-        self.sd_rgb_red.valueChanged.connect(lambda: self._set_sb_val())
-        self.sd_rgb_green.valueChanged.connect(lambda: self._set_sb_val())
-        self.sd_rgb_blue.valueChanged.connect(lambda: self._set_sb_val())
+        self.sd_rgb_red.valueChanged.connect(lambda: self.a_set_sb_val())
+        self.sd_rgb_green.valueChanged.connect(lambda: self.a_set_sb_val())
+        self.sd_rgb_blue.valueChanged.connect(lambda: self.a_set_sb_val())
         # Spin box
-        self.sb_rgb_red.valueChanged.connect(lambda: self._set_sd_val())
-        self.sb_rgb_green.valueChanged.connect(lambda: self._set_sd_val())
-        self.sb_rgb_blue.valueChanged.connect(lambda: self._set_sd_val())
+        self.sb_rgb_red.valueChanged.connect(lambda: self.a_set_sd_val())
+        self.sb_rgb_green.valueChanged.connect(lambda: self.a_set_sd_val())
+        self.sb_rgb_blue.valueChanged.connect(lambda: self.a_set_sd_val())
         # hex
-        self.le_rgb_hex.textEdited.connect(lambda: self._set_rgb_val_hex())
+        self.le_rgb_hex.textEdited.connect(lambda: self.a_set_rgb_val_hex())
 
         # pb dlg
         self.pb_rgb_ok.clicked.connect(lambda: self.f_ok())
@@ -161,7 +161,7 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     #####################
     ##     ACTIONS     ##
     #####################
-    def __set_fr_color(self):
+    def _a_set_fr_color(self):
         rgb = self.sd_rgb_red.value(), self.sd_rgb_green.value(), self.sd_rgb_blue.value()
         _rgb = rgb + (255, )
 
@@ -180,17 +180,17 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         Slider.Base(self.sd_rgb_red).rgb(rgb=_rgb, rgb_1=rgb_red_1, rgb_2=rgb_red_2)
         Slider.Base(self.sd_rgb_green).rgb(rgb=_rgb, rgb_1=rgb_green_1, rgb_2=rgb_green_2)
         Slider.Base(self.sd_rgb_blue).rgb(rgb=_rgb, rgb_1=rgb_blue_1, rgb_2=rgb_blue_2)
-    def _set_sb_val(self):
+    def a_set_sb_val(self):
         self.sb_rgb_red.setValue(self.sd_rgb_red.value())
         self.sb_rgb_green.setValue(self.sd_rgb_green.value())
         self.sb_rgb_blue.setValue(self.sd_rgb_blue.value())
 
-        self.__set_fr_color()
-    def _set_sd_val(self):
+        self._a_set_fr_color()
+    def a_set_sd_val(self):
         self.sd_rgb_red.setValue(self.sb_rgb_red.value())
         self.sd_rgb_green.setValue(self.sb_rgb_green.value())
         self.sd_rgb_blue.setValue(self.sb_rgb_blue.value())
-    def _set_rgb_val_hex(self):
+    def a_set_rgb_val_hex(self):
         hex_colors = self.le_rgb_hex.text()
 
         try: rgb = Functions().HEX_RGB(hex_colors=hex_colors)
