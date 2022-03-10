@@ -14,7 +14,7 @@ class ResponseBox:
         self.opacity = opacity
 
     def _rtn(self, title, msg, ico, ico_rgb, txt_ok, txt_cancel):
-        _reponse = ResponseDlg(
+        reponse_dlg = ResponseDlg(
             title=title,
             msg=msg,
             ico=ico,
@@ -25,8 +25,8 @@ class ResponseBox:
             height=self.height,
             opacity=self.opacity
         )
-        _reponse.exec()
-        return _reponse.response
+        reponse_dlg.exec()
+        return reponse_dlg.response
 
 
     def INFO(self, title="INFO", msg="", ico=Img().info(), ico_rgb="th3", txt_ok="Ok", txt_cancel="Annuler"):

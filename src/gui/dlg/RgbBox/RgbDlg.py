@@ -7,28 +7,29 @@ from src.gui.events.Event import Event
 
 class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
-    rep = False
-    rgb_rtn = (0, 0, 0)
+    response = False
+    return_rgb = (0, 0, 0)
 
-    def __init__(self,
-                 titre,
-                 rgb,
-                 ico,
-                 ico_rgb,
-                 txt_pb_ok,
-                 txt_pb_annuler,
-                 width,
-                 height,
-                 opacity,
-                 ):
+    def __init__(
+            self,
+            title,
+            rgb,
+            ico,
+            ico_rgb,
+            txt_ok,
+            txt_cancel,
+            width,
+            height,
+            opacity,
+    ):
         super(RgbDlg, self).__init__()
 
-        self.titre = titre
+        self.title = title
         self.rgb = rgb
         self.ico = ico
         self.ico_rgb = ico_rgb
-        self.txt_pb_ok = txt_pb_ok
-        self.txt_pb_annuler = txt_pb_annuler
+        self.txt_ok = txt_ok
+        self.txt_cancel = txt_cancel
         self.width = width
         self.height = height
         self.opacity = opacity
@@ -45,7 +46,7 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     ############################
     def IN_BASE(self):
         # Fenetre
-        self.setWindowTitle(self.titre)
+        self.setWindowTitle(self.title)
         self.setFixedWidth(self.width)
         self.setFixedHeight(self.height)
         self.setWindowOpacity(self.opacity)
@@ -102,7 +103,7 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         self.fr_menu_top.setFixedHeight(Dim().h9())
 
         # Menu_top
-        self.lb_mt_nom.setText(self.titre)
+        self.lb_mt_nom.setText(self.title)
 
         # Message
         self.lb_rgb_red.setText("ROUGE")
@@ -110,8 +111,8 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         self.lb_rgb_blue.setText("BLEU")
 
         # pb dlg
-        self.pb_rgb_ok.setText(self.txt_pb_ok)
-        self.pb_rgb_annuler.setText(self.txt_pb_annuler)
+        self.pb_rgb_ok.setText(self.txt_ok)
+        self.pb_rgb_annuler.setText(self.txt_cancel)
         self.pb_rgb_annuler.setDefault(True)
     def IN_CONNECTIONS(self):
         # Menu_top
@@ -216,8 +217,8 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     ##     FONCTIONS     ##
     #######################
     def OK(self):
-        self.rep = True
-        self.rgb_rtn = (self.sd_rgb_red.value(), self.sd_rgb_green.value(), self.sd_rgb_blue.value())
+        self.response = True
+        self.return_rgb = (self.sd_rgb_red.value(), self.sd_rgb_green.value(), self.sd_rgb_blue.value())
         self.close()
     #######################
     ##    /FONCTIONS     ##

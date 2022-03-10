@@ -3,40 +3,48 @@ from src.gui.dlg.RgbBox.RgbDlg import RgbDlg
 
 
 class RgbBox:
-    def __init__(self,
-                 width=750,
-                 height=550,
-                 opacity=1
+    def __init__(
+            self,
+            width=750,
+            height=550,
+            opacity=1
     ):
         self.width = width
         self.height = height
         self.opacity = opacity
 
-    def _rtn(self, titre, rgb, ico, ico_rgb, txt_pb_ok, txt_pb_annuler):
-        _rgb = RgbDlg(
-            titre=titre,
+    def _rtn(self, title, rgb, ico, ico_rgb, txt_ok, txt_cancel):
+        rgb_dlg = RgbDlg(
+            title=title,
             rgb=rgb,
             ico=ico,
             ico_rgb=ico_rgb,
-            txt_pb_ok=txt_pb_ok,
-            txt_pb_annuler=txt_pb_annuler,
+            txt_ok=txt_ok,
+            txt_cancel=txt_cancel,
             width=self.width,
             height=self.height,
             opacity=self.opacity
         )
-        _rgb.exec()
+        rgb_dlg.exec()
+        return rgb_dlg.return_rgb if rgb_dlg.response else False
 
-        return _rgb.rgb_rtn if _rgb.rep else False
 
-
-    def GET(self, titre="RGB", rgb=None, ico=Img().info(), tm="th3", txt_pb_ok="Ok", txt_pb_annuler="Annuler"):
+    def GET(
+            self,
+            title="RGB",
+            rgb=None,
+            ico=Img().info(),
+            ico_rgb="th3",
+            txt_ok="Ok",
+            txt_cancel="Annuler"
+    ):
         if rgb is None: rgb = (0, 0, 0)
 
         return self._rtn(
-            titre=titre,
+            title=title,
             rgb=rgb,
             ico=ico,
-            ico_rgb=tm,
-            txt_pb_ok=txt_pb_ok,
-            txt_pb_annuler=txt_pb_annuler
+            ico_rgb=ico_rgb,
+            txt_ok=txt_ok,
+            txt_cancel=txt_cancel
         )
