@@ -308,7 +308,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
         splash_screen.lb_chargement.setText("Lancement de l'application")
         splash_screen.pg_chargement.setValue(100)
-        time.sleep(2)
+        time.sleep(0)
     ############################
     ##    /INITIALISATION     ##
     ############################

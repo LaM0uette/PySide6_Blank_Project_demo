@@ -80,21 +80,23 @@ class Base:
 
             height_groove=12,
             width_groove=12,
-            width_handle_h=12,
+            width_handle_h=18,
             height_handle_h=4,
             width_handle_v=4,
-            height_handle_v=12,
+            height_handle_v=18,
 
             margin_handle_h=(-5, -5, 0, 0),
             margin_handle_v=(0, 0, -5, -5),
 
-            border_handle_h=(3,) * 4,
-            border_handle_h_rgb=rgb,
-            border_handle_v=(3,) * 4,
-            border_handle_v_rgb=rgb,
+            border_groove=(1,) * 4,
+            border_groove_rgb=Rgb().th3(),
+            border_handle_h=(2,) * 4,
+            border_handle_h_rgb=Rgb().th3(),
+            border_handle_v=(2,) * 4,
+            border_handle_v_rgb=Rgb().th3(),
 
-            radius_groove_h=(3,) * 4,
-            radius_groove_v=(3,) * 4,
-            radius_handle_h=(4,) * 4,
-            radius_handle_v=(4,) * 4,
+            radius_groove_h=(2,) * 4,
+            radius_groove_v=(2,) * 4,
+            radius_handle_h=(8,) * 4,
+            radius_handle_v=(8,) * 4,
         )
