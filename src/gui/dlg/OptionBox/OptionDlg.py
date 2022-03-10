@@ -166,29 +166,30 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
     def IN_CONNECTIONS(self):
         # Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
-        self.trw_option.itemClicked.connect(self._set_opt)
+        self.trw_option.itemClicked.connect(self.f_set_menu_option)
 
         # Connection value change #
-        ## font combo box
-        self.fcb_opt_ft_font.currentTextChanged.connect(self._val_change_appliquer)
+        # font combo box
+        self.fcb_opt_ft_font.currentTextChanged.connect(self.a_maj_appliquer)
 
-        ## slider
-        self.sb_opt_cfg_opacity.valueChanged.connect(self._val_change_appliquer)
-        self.sb_opt_cfg_resize_width.valueChanged.connect(lambda: self._val_change_appliquer(val="true"))
-        self.sb_opt_cfg_resize_height.valueChanged.connect(lambda: self._val_change_appliquer(val="true"))
-        self.ck_opt_cfg_debug.stateChanged.connect(self._val_change_appliquer)
-        self.ck_opt_cfg_autoclose.stateChanged.connect(self._val_change_appliquer)
-        self.ck_opt_cfg_resize.stateChanged.connect(lambda: self._val_change_appliquer(val="true"))
-        self.ck_opt_cfg_ui_pin.stateChanged.connect(lambda: self._val_change_appliquer(val="true"))
-        ## combo box theme
-        self.cb_opt_tm_theme.currentTextChanged.connect(self._val_change_appliquer)
+        # slider
+        self.sb_opt_cfg_opacity.valueChanged.connect(self.a_maj_appliquer)
+        self.sb_opt_cfg_resize_width.valueChanged.connect(lambda: self.a_maj_appliquer(_reload=True))
+        self.sb_opt_cfg_resize_height.valueChanged.connect(lambda: self.a_maj_appliquer(_reload=True))
+        self.ck_opt_cfg_debug.stateChanged.connect(self.a_maj_appliquer)
+        self.ck_opt_cfg_autoclose.stateChanged.connect(self.a_maj_appliquer)
+        self.ck_opt_cfg_resize.stateChanged.connect(lambda: self.a_maj_appliquer(_reload=True))
+        self.ck_opt_cfg_ui_pin.stateChanged.connect(lambda: self.a_maj_appliquer(_reload=True))
+
+        # combo box theme
+        self.cb_opt_tm_theme.currentTextChanged.connect(self.a_maj_appliquer)
 
         # pb tm
-        self.pb_opt_tm_th1.clicked.connect(lambda: self._pb_tm_maj(rgb="th1"))
-        self.pb_opt_tm_th2.clicked.connect(lambda: self._pb_tm_maj(rgb="th2"))
-        self.pb_opt_tm_th3.clicked.connect(lambda: self._pb_tm_maj(rgb="th3"))
-        self.pb_opt_tm_bn1.clicked.connect(lambda: self._pb_tm_maj(rgb="bn1"))
-        self.pb_opt_tm_bn2.clicked.connect(lambda: self._pb_tm_maj(rgb="bn2"))
+        self.pb_opt_tm_th1.clicked.connect(lambda: self.f_maj_rgb_theme(rgb="th1"))
+        self.pb_opt_tm_th2.clicked.connect(lambda: self.f_maj_rgb_theme(rgb="th2"))
+        self.pb_opt_tm_th3.clicked.connect(lambda: self.f_maj_rgb_theme(rgb="th3"))
+        self.pb_opt_tm_bn1.clicked.connect(lambda: self.f_maj_rgb_theme(rgb="bn1"))
+        self.pb_opt_tm_bn2.clicked.connect(lambda: self.f_maj_rgb_theme(rgb="bn2"))
 
         # pb dlg
         self.pb_opt_ok.clicked.connect(lambda: self.f_ok())
@@ -215,7 +216,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
     #####################
     ##     ACTIONS     ##
     #####################
-    def __reload(self):
+    def _a_reload_ui(self):
         QtWidgets.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
 
         importlib.reload(config)
@@ -236,6 +237,15 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
         if self.reload:
             MsgBox().INFO(msg="Modifications appliquées !\nCertains paramètres peuvent nécessiter un redémarrage de l'application.")
             self.reload = False
+    #####
+    def a_maj_appliquer(self, _reload=False):
+        if not self.pb_opt_appliquer.isVisible(): self.pb_opt_appliquer.setVisible(True)
+        if _reload: self.reload = True
+
+
+
+
+
     ## configuration
 
     def _maj_cb_theme(self):
@@ -246,33 +256,11 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
             self.cb_opt_tm_theme.addItem(tm)
             if tm == config.theme:
                 self.cb_opt_tm_theme.setCurrentIndex(i)
-    def _set_opt(self, item):
-        self.stk_option.setCurrentWidget(self.dct_pg.get(item.text(0))[0])
-    def _pb_tm_maj(self, rgb):
-        dct_colors = {
-            "th1": Rgb().th1(),
-            "th2": Rgb().th2(),
-            "th3": Rgb().th3(),
-            "bn1": Rgb().bn1(),
-            "bn2": Rgb().bn2(),
-        }
-        rep, colors = RgbBox().GET(rgb=dct_colors.get(rgb))
-        if rep:
-            self._val_change_appliquer()
 
-            dct = {
-                f"{rgb}": list(colors),
-            }
-            Json(lien_json=f"src/theme/{config.theme}.json").UPDATE(dct)
 
-            self.__reload()
 
     # application des modifs
-    def _val_change_appliquer(self, val=""):
-        if not self.pb_opt_appliquer.isVisible():
-            self.pb_opt_appliquer.setVisible(True)
-        if val == "true":
-            self.reload = True
+
     def _appliquer(self):
         self.pb_opt_appliquer.setVisible(False)
 
@@ -295,7 +283,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
         }
         Json(lien_json=f"src/config/config.json").UPDATE(dct)
 
-        self.__reload()
+        self._a_reload_ui()
     #####################
     ##    /ACTIONS     ##
     #####################
@@ -304,6 +292,25 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
     #######################
     ##     FONCTIONS     ##
     #######################
+    def f_set_menu_option(self, item):
+        self.stk_option.setCurrentWidget(self.dct_pg.get(item.text(0))[0])
+    def f_maj_rgb_theme(self, rgb):
+        dct_colors = {
+            "th1": Rgb().th1(),
+            "th2": Rgb().th2(),
+            "th3": Rgb().th3(),
+            "bn1": Rgb().bn1(),
+            "bn2": Rgb().bn2(),
+        }
+        colors = RgbBox().GET(rgb=dct_colors.get(rgb))
+        if colors:
+            self.a_maj_appliquer()
+
+            dct = {f"{rgb}": list(colors)}
+            Json(lien_json=f"src/theme/{config.theme}.json").UPDATE(dct)
+
+            self._a_reload_ui()
+    #####
     def f_ok(self):
         if self.pb_opt_appliquer.isVisible():
             self._appliquer()
