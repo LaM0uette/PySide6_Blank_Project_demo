@@ -1,5 +1,5 @@
 from src import *
-from src.gui.dlg.InputBox.Input import Input
+from src.gui.dlg.InputBox.InputDlg import InputDlg
 
 
 class InputBox:
@@ -14,7 +14,7 @@ class InputBox:
         self.opacity = opacity
 
     def _rtn(self, title, msg, ico, ico_rgb, txt_ok, txt_cancel):
-        _input = Input(
+        _input = InputDlg(
             title=title,
             msg=msg,
             ico=ico,

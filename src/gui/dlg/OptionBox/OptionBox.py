@@ -1,5 +1,5 @@
 from src import *
-from src.gui.dlg.OptionBox.Option import Option
+from src.gui.dlg.OptionBox.OptionDlg import OptionDlg
 
 
 class OptionBox:
@@ -15,7 +15,7 @@ class OptionBox:
         self.opacity = opacity
 
     def _rtn(self, titre, msg, ico, tm, txt_pb_appliquer, txt_pb_ok):
-        opt = Option(
+        opt = OptionDlg(
             fen=self.fen,
             titre=titre,
             msg=msg,

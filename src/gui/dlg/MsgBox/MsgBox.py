@@ -1,5 +1,5 @@
 from src import *
-from src.gui.dlg.MsgBox.Msg import Msg
+from src.gui.dlg.MsgBox.MsgDlg import MsgDlg
 
 
 class MsgBox:
@@ -14,7 +14,7 @@ class MsgBox:
         self.opacity = opacity
 
     def _rtn(self, title, msg, ico, ico_rgb, txt_ok):
-        _msg = Msg(
+        _msg = MsgDlg(
             title=title,
             msg=msg,
             ico=ico,

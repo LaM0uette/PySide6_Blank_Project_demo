@@ -1,5 +1,5 @@
 from src import *
-from src.gui.dlg.ResponseBox.Response import Response
+from src.gui.dlg.ResponseBox.ResponseDlg import ResponseDlg
 
 
 class ResponseBox:
@@ -14,7 +14,7 @@ class ResponseBox:
         self.opacity = opacity
 
     def _rtn(self, title, msg, ico, ico_rgb, txt_ok, txt_cancel):
-        _reponse = Response(
+        _reponse = ResponseDlg(
             title=title,
             msg=msg,
             ico=ico,

@@ -5,7 +5,7 @@ from src.gui.ui import input_ui
 from src.gui.events.Event import Event
 
 
-class Input(input_ui.Ui_Input, QtWidgets.QDialog):
+class InputDlg(input_ui.Ui_Input, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
     input = ""
 
@@ -21,7 +21,7 @@ class Input(input_ui.Ui_Input, QtWidgets.QDialog):
             height,
             opacity,
     ):
-        super(Input, self).__init__()
+        super(InputDlg, self).__init__()
 
         self.title = title
         self.msg = msg

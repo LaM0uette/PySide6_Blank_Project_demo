@@ -1,5 +1,5 @@
 from src import *
-from src.gui.dlg.RgbBox.RgbSelector import RgbSelector
+from src.gui.dlg.RgbBox.RgbDlg import RgbDlg
 
 
 class RgbBox:
@@ -13,7 +13,7 @@ class RgbBox:
         self.opacity = opacity
 
     def _rtn(self, titre, rgb, ico, ico_rgb, txt_pb_ok, txt_pb_annuler):
-        _rgb = RgbSelector(
+        _rgb = RgbDlg(
             titre=titre,
             rgb=rgb,
             ico=ico,
