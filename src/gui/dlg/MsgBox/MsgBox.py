@@ -14,7 +14,7 @@ class MsgBox:
         self.opacity = opacity
 
     def _rtn(self, title, msg, ico, ico_rgb, txt_ok):
-        _msg = MsgDlg(
+        msg_dlg = MsgDlg(
             title=title,
             msg=msg,
             ico=ico,
@@ -24,7 +24,7 @@ class MsgBox:
             height=self.height,
             opacity=self.opacity
         )
-        _msg.exec()
+        msg_dlg.exec()
 
 
     def INFO(

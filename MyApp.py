@@ -318,7 +318,7 @@ class main(Ui_main, QtWidgets.QWidget):
     ##     ACTIONS     ##
     #####################
     def test(self):
-        print(InputBox().TXT())
+        MsgBox().INFO()
     #####################
     ##    /ACTIONS     ##
     #####################
