@@ -1,12 +1,12 @@
 import json
 
-from src.config import config
+from src.config.config import Config
 
 
 class Rgb:
 
     def get_rgb(self, val):
-        with open(fr"src/theme/{config.theme}.json", "r") as fichier:
+        with open(fr"src/theme/{Config().theme}.json", "r") as fichier:
             js = json.load(fichier)
             return tuple(js[val])
     def rgb_to_hex(self, rgb):

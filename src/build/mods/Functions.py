@@ -77,9 +77,11 @@ class Functions:
             if not os.path.exists(lien_rgb):
                 os.makedirs(lien_rgb)
             else:
-                fichiers = glob.glob(f"{lien_rgb}/*")
-                for fichier in fichiers:
-                    os.remove(fichier)
+                try:
+                    fichiers = glob.glob(f"{lien_rgb}/*")
+                    for fichier in fichiers:
+                        os.remove(fichier)
+                except: pass
 
             for svg in glob.glob(f"{lien}*.svg"):
                 if "thc" not in svg:

@@ -140,23 +140,23 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
 
         # Configs
         try:
-            self.fcb_opt_ft_font.setCurrentText(config.font)
+            self.fcb_opt_ft_font.setCurrentText(Config().font)
 
-            self.sb_opt_cfg_opacity.setValue(config.opacity*100)
-            self.ck_opt_cfg_debug.setChecked(True) if config.debug == True else self.ck_opt_cfg_debug.setChecked(False)
-            self.ck_opt_cfg_autoclose.setChecked(True) if config.auto_close == True else self.ck_opt_cfg_autoclose.setChecked(False)
-            self.ck_opt_cfg_resize.setChecked(True) if config.resize == True else self.ck_opt_cfg_resize.setChecked(False)
-            self.ck_opt_cfg_ui_pin.setChecked(True) if config.toolbox_pin == True else self.ck_opt_cfg_ui_pin.setChecked(False)
+            self.sb_opt_cfg_opacity.setValue(Config().opacity*100)
+            self.ck_opt_cfg_debug.setChecked(True) if Config().debug == True else self.ck_opt_cfg_debug.setChecked(False)
+            self.ck_opt_cfg_autoclose.setChecked(True) if Config().auto_close == True else self.ck_opt_cfg_autoclose.setChecked(False)
+            self.ck_opt_cfg_resize.setChecked(True) if Config().resize == True else self.ck_opt_cfg_resize.setChecked(False)
+            self.ck_opt_cfg_ui_pin.setChecked(True) if Config().toolbox_pin == True else self.ck_opt_cfg_ui_pin.setChecked(False)
 
-            self.sb_opt_cfg_resize_width.setValue(config.widht)
-            self.sb_opt_cfg_resize_height.setValue(config.height)
+            self.sb_opt_cfg_resize_width.setValue(Config().widht)
+            self.sb_opt_cfg_resize_height.setValue(Config().height)
         except: pass
 
         # infos
-        self.lb_opt_info_nom.setText(config.nom)
-        self.lb_opt_info_desc.setText(config.description)
-        self.lb_opt_info_auteur.setText(f"Auteur : {config.auteur}")
-        self.lb_opt_info_version.setText(f"Version : {config.version}")
+        self.lb_opt_info_nom.setText(Config().nom)
+        self.lb_opt_info_desc.setText(Config().description)
+        self.lb_opt_info_auteur.setText(f"Auteur : {Config().auteur}")
+        self.lb_opt_info_version.setText(f"Version : {Config().version}")
 
         # pb dlg
         self.pb_opt_ok.setText(self.txt_ok)
@@ -245,7 +245,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
         for i, js in enumerate(glob.glob(f"src/theme/*.json")):
             tm = os.path.basename(js).split(".")[0]
             self.cb_opt_tm_theme.addItem(tm)
-            if tm == config.theme:
+            if tm == Config().theme:
                 self.cb_opt_tm_theme.setCurrentIndex(i)
     def a_maj_cb_font(self):
         ComboBox.Base(self.fcb_opt_ft_font, self.cb_opt_tm_theme).font(font=self.fcb_opt_ft_font.currentText())
@@ -275,7 +275,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
             self.a_maj_button_appliquer()
 
             dct = {f"{rgb}": list(colors)}
-            Json(lien_json=f"src/theme/{config.theme}.json").UPDATE(dct)
+            Json(lien_json=f"src/theme/{Config().theme}.json").UPDATE(dct)
 
             self._a_reload_ui()
     #####
