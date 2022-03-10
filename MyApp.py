@@ -318,7 +318,7 @@ class main(Ui_main, QtWidgets.QWidget):
     ##     ACTIONS     ##
     #####################
     def test(self):
-        MsgBox().INFO()
+        print(RgbBox().GET())
     #####################
     ##    /ACTIONS     ##
     #####################

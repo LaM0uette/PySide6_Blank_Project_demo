@@ -25,7 +25,7 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         super(RgbDlg, self).__init__()
 
         self.title = title
-        self.rgb = rgb
+        self.rgb = (0, 0, 0) if rgb is None else rgb
         self.ico = ico
         self.ico_rgb = ico_rgb
         self.txt_ok = txt_ok
@@ -33,6 +33,8 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         self.width = width
         self.height = height
         self.opacity = opacity
+
+
 
         self.INIT()
 

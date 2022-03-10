@@ -38,8 +38,6 @@ class RgbBox:
             txt_ok="Ok",
             txt_cancel="Annuler"
     ):
-        if rgb is None: rgb = (0, 0, 0)
-
         return self._rtn(
             title=title,
             rgb=rgb,
