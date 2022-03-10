@@ -8,16 +8,17 @@ from src.gui.events.Event import Event
 class Msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
 
-    def __init__(self,
-                 title,
-                 msg,
-                 ico,
-                 ico_rgb,
-                 txt_ok,
-                 width,
-                 height,
-                 opacity,
-                 ):
+    def __init__(
+            self,
+            title,
+            msg,
+            ico,
+            ico_rgb,
+            txt_ok,
+            width,
+            height,
+            opacity,
+    ):
         super(Msg, self).__init__()
 
         self.title = title
