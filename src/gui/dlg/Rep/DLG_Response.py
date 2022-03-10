@@ -26,7 +26,7 @@ class DLG_Response:
             opacity=self.opacity
         )
         _reponse.exec()
-        return _reponse.rep
+        return _reponse.response
 
 
     def INFO(self, title="INFO", msg="", ico=Img().info(), ico_rgb="th3", txt_ok="Ok", txt_cancel="Annuler"):

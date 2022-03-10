@@ -7,7 +7,7 @@ from src.gui.events.Event import Event
 
 class Response(rep_ui.Ui_Rep, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
-    rep = False
+    response = False
 
     def __init__(
             self,
@@ -123,7 +123,7 @@ class Response(rep_ui.Ui_Rep, QtWidgets.QDialog):
     ##     FONCTIONS     ##
     #######################
     def f_ok(self):
-        self.rep = True
+        self.response = True
         self.close()
     #######################
     ##    /FONCTIONS     ##
