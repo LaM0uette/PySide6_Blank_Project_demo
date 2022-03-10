@@ -22,7 +22,7 @@ from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
 class Ui_Msg(object):
     def setupUi(self, Msg):
         if not Msg.objectName():
-            Msg.setObjectName(u"MsgBox")
+            Msg.setObjectName(u"Msg")
         Msg.resize(773, 261)
         self.glay_main = QGridLayout(Msg)
         self.glay_main.setSpacing(0)
