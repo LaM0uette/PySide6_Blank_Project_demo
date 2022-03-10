@@ -27,7 +27,14 @@ class DLG_Msg:
         _msg.exec()
 
 
-    def INFO(self, title="INFO", msg="", ico=Img().info(), ico_rgb="th3", txt_ok="Ok"):
+    def INFO(
+            self,
+            title="INFO",
+            msg="",
+            ico=Img().info(),
+            ico_rgb="th3",
+            txt_ok="Ok"
+    ):
         self._rtn(
             title=title,
             msg=msg,
@@ -35,7 +42,14 @@ class DLG_Msg:
             ico_rgb=ico_rgb,
             txt_ok=txt_ok
         )
-    def ALERTE(self, title="ALERTE", msg="", ico=Img().alerte(), ico_rgb="th3", txt_ok="Ok"):
+    def ALERTE(
+            self,
+            title="ALERTE",
+            msg="",
+            ico=Img().alerte(),
+            ico_rgb="th3",
+            txt_ok="Ok"
+    ):
         self._rtn(
             title=title,
             msg=msg,

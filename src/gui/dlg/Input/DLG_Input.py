@@ -3,10 +3,11 @@ from src.gui.dlg.Input.Input import Input
 
 
 class DLG_Input:
-    def __init__(self,
-                 width=650,
-                 height=250,
-                 opacity=1
+    def __init__(
+            self,
+            width=650,
+            height=250,
+            opacity=1
     ):
         self.width = width
         self.height = height
