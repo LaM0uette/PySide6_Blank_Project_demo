@@ -27,6 +27,7 @@ class DLG_Input:
         _input.exec()
         return _input.input if _input.input != "" else False
 
+
     def TXT(
             self,
             title="INPUT",
