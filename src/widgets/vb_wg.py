@@ -135,9 +135,13 @@ IMG_RIGHT = Img().fleche_droite()
 IMG_LEFT = Img().fleche_gauche()
     # Fleches RGB
 IMG_UP_RGB = "th2"
+IMG_UP_HOVER_RGB = "bn1"
 IMG_DOWN_RGB = "th2"
+IMG_DOWN_HOVER_RGB = "bn1"
 IMG_RIGHT_RGB = "th3"
+IMG_RIGHT_HOVER_RGB = "bn1"
 IMG_LEFT_RGB = "th3"
+IMG_LEFT_HOVER_RGB = "bn1"
 
     # img dim
 img_width = HEIGHT * StyleBase().x_ico()

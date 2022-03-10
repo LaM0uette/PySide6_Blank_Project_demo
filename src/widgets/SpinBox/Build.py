@@ -42,10 +42,14 @@ class Build:
 
             # Images
             img_up=vb_wg.IMG_UP,
+            img_up_hover=vb_wg.IMG_UP,
             img_down=vb_wg.IMG_DOWN,
+            img_down_hover=vb_wg.IMG_DOWN,
             # Images RGB
             img_up_rgb=vb_wg.IMG_UP_RGB,
+            img_up_hover_rgb=vb_wg.IMG_UP_HOVER_RGB,
             img_down_rgb=vb_wg.IMG_DOWN_RGB,
+            img_down_hover_rgb=vb_wg.IMG_DOWN_HOVER_RGB,
             # Images DIM
             img_up_width=10,
             img_up_height=10,
@@ -140,6 +144,9 @@ class Build:
                 width: {img_up_width}px;
                 height: {img_up_height}px;
                 }}
+                QSpinBox::up-button:hover, QDoubleSpinBox::up-button:hover  {{
+                image: url({f"{img_up_hover}{img_up_hover_rgb}.svg"});
+                }}
 
                 QSpinBox::down-button, QDoubleSpinBox::down-button  {{
                 subcontrol-position: bottom right;
@@ -150,6 +157,9 @@ class Build:
                 image: url({f"{img_down}{img_down_rgb}.svg"});
                 width: {img_down_width}px;
                 height: {img_down_height}px;
+                }}
+                QSpinBox::up-button:hover, QDoubleSpinBox::up-button:hover  {{
+                image: url({f"{img_down_hover}{img_down_hover_rgb}.svg"});
                 }}
 
                 /* BORDURES */
