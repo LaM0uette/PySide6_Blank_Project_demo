@@ -32,6 +32,8 @@ class UpDown:
 
             img_up=Img().fleche_top(),
             img_down=Img().fleche_bottom(),
+            img_up_hover=Img().fleche_top(),
+            img_down_hover=Img().fleche_bottom(),
         )
     def tr(self):
         Build(
@@ -42,6 +44,8 @@ class UpDown:
 
             img_up=Img().fleche_top(),
             img_down=Img().fleche_bottom(),
+            img_up_hover=Img().fleche_top(),
+            img_down_hover=Img().fleche_bottom(),
         )
 
 
