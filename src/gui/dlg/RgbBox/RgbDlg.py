@@ -83,7 +83,7 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
 
 
         ### QSpinBox ###
-        SpinBox.Border(self.sb_rgb_red, self.sb_rgb_green, self.sb_rgb_blue).rgb()
+        SpinBox.Dlg(self.sb_rgb_red, self.sb_rgb_green, self.sb_rgb_blue).rgb()
         ### /QSpinBox ###
 
 

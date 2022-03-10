@@ -48,7 +48,7 @@ class UpDown:
 ####################
 ##     CADRES     ##
 ####################
-class Border:
+class Dlg:
     def __init__(self, *wgs):
         self.wgs = wgs
 
@@ -56,12 +56,9 @@ class Border:
         Build(
             *self.wgs,
 
-            value_max=value_max,
+            width=Dim().h7(),
 
-            border=(StyleBase().border(),) * 4,
-            border_hover=(StyleBase().border(),) * 4,
-            border_rgb=Rgb().th3(),
-            border_hover_rgb=Rgb().th3(),
+            value_max=value_max,
         )
 
     def th(self): self.rtn(value_max=100)

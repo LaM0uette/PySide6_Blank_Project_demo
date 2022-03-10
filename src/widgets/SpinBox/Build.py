@@ -52,8 +52,8 @@ class Build:
             img_down_width=10,
             img_down_height=10,
             # Images positions
-            img_up_pos=(0,) * 4,
-            img_down_pos=(0,) * 4,
+            img_up_pos=(3, 0, 3, 0),
+            img_down_pos=(0, 3, 3, 0),
 
             # Bordures
             border=vb_wg.BORDER_WIDTH,
