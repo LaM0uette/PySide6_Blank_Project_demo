@@ -162,6 +162,10 @@ class Build:
                 }}
 
                 /* ELEMENTS DEROULEMENT */
+                QComboBox QAbstractItemView, QFontComboBox QAbstractItemView {{
+                background-color: rgba{bg};
+                color: rgba{fg};
+                }}
                 QComboBox QAbstractItemView::item, QFontComboBox QAbstractItemView::item {{
                 background-color: rgba{bg_item};
                 color: rgba{fg_item};
@@ -235,7 +239,6 @@ class Build:
             wg.setInsertPolicy(insert_policy)
 
             if edit:
-                Functions().SET_FONT(wg, font=font, font_size=font_size)
                 wg.lineEdit().setFont(Functions().SET_FONT(wg, font=font, font_size=font_size, rtn=True))
                 wg.lineEdit().setCursor(Functions().SET_CURSOR(vb_wg.CUR_LE))
 
