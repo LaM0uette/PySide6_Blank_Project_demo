@@ -162,7 +162,7 @@ class Build:
                 width: {img_down_width}px;
                 height: {img_down_height}px;
                 }}
-                QSpinBox::up-button:hover, QDoubleSpinBox::up-button:hover  {{
+                QSpinBox::down-button:hover, QDoubleSpinBox::down-button:hover  {{
                 image: url({f"{img_down_hover}{img_down_hover_rgb}.svg"});
                 }}
 
