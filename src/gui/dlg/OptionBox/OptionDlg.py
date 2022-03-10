@@ -220,17 +220,14 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
     def _a_reload_ui(self):
         QtWidgets.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
 
-        importlib.reload(config)
-
         Functions().GEN_SVG()
         time.sleep(0.5)
-
-        # importlib.reload(rld)
 
         self.IN_WG()
         self.IN_CLASSE()
 
         self.fen_main.IN_BASE()
+        self.fen_main.IN_WG()
         self.fen_main.IN_CLASSE()
 
         QtWidgets.QApplication.restoreOverrideCursor()
