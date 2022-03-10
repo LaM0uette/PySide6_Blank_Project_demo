@@ -122,6 +122,9 @@ class Build:
         :param border_hover: *Tuple
         :param border_hover_style: *Border_Style
         :param border_hover_rgb: *RgbBox
+        :param border_groove: *Tuple
+        :param border_groove_style: *Border_Style
+        :param border_groove_rgb: *RgbBox
         :param border_handle_h: *Tuple
         :param border_handle_h_style: *Border_Style
         :param border_handle_h_rgb: *RgbBox
