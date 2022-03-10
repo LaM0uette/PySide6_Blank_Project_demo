@@ -34,8 +34,6 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         self.height = height
         self.opacity = opacity
 
-
-
         self.INIT()
 
         ### CREATION DES EVENT ###
