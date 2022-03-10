@@ -163,7 +163,7 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
     #####################
     def _a_set_fr_color(self):
         rgb = self.sd_rgb_red.value(), self.sd_rgb_green.value(), self.sd_rgb_blue.value()
-        _rgb = rgb + (255, )
+        rgba = rgb + (255, )
 
         rgb_red_1 = 0, rgb[1], rgb[2], 255
         rgb_red_2 = 255, rgb[1], rgb[2], 255
@@ -176,10 +176,11 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
 
         self.le_rgb_hex.setText(Functions().RGB_HEX(rgb=rgb))
 
-        Frame.palette_rgb(self.fr_rgb_colors, rgb=_rgb)
-        Slider.Base(self.sd_rgb_red).rgb(rgb=_rgb, rgb_1=rgb_red_1, rgb_2=rgb_red_2)
-        Slider.Base(self.sd_rgb_green).rgb(rgb=_rgb, rgb_1=rgb_green_1, rgb_2=rgb_green_2)
-        Slider.Base(self.sd_rgb_blue).rgb(rgb=_rgb, rgb_1=rgb_blue_1, rgb_2=rgb_blue_2)
+        Frame.palette_rgb(self.fr_rgb_colors, rgb=rgba)
+        Slider.Base(self.sd_rgb_red).rgb(rgb=rgba, rgb_1=rgb_red_1, rgb_2=rgb_red_2)
+        Slider.Base(self.sd_rgb_green).rgb(rgb=rgba, rgb_1=rgb_green_1, rgb_2=rgb_green_2)
+        Slider.Base(self.sd_rgb_blue).rgb(rgb=rgba, rgb_1=rgb_blue_1, rgb_2=rgb_blue_2)
+    #####
     def a_set_sb_val(self):
         self.sb_rgb_red.setValue(self.sd_rgb_red.value())
         self.sb_rgb_green.setValue(self.sd_rgb_green.value())
@@ -197,17 +198,17 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         except: return
 
         if len(rgb) == 3:
-            r = rgb[0]
-            g = rgb[1]
-            b = rgb[2]
+            red = rgb[0]
+            green = rgb[1]
+            blue = rgb[2]
 
-            self.sb_rgb_red.setValue(r)
-            self.sb_rgb_green.setValue(g)
-            self.sb_rgb_blue.setValue(b)
+            self.sb_rgb_red.setValue(red)
+            self.sb_rgb_green.setValue(green)
+            self.sb_rgb_blue.setValue(blue)
 
-            self.sd_rgb_red.setValue(r)
-            self.sd_rgb_green.setValue(g)
-            self.sd_rgb_blue.setValue(b)
+            self.sd_rgb_red.setValue(red)
+            self.sd_rgb_green.setValue(green)
+            self.sd_rgb_blue.setValue(blue)
     #####################
     ##    /ACTIONS     ##
     #####################
