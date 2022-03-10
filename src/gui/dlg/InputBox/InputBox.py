@@ -14,7 +14,7 @@ class InputBox:
         self.opacity = opacity
 
     def _rtn(self, title, msg, ico, ico_rgb, txt_ok, txt_cancel):
-        _input = InputDlg(
+        input_dlg = InputDlg(
             title=title,
             msg=msg,
             ico=ico,
@@ -25,8 +25,8 @@ class InputBox:
             height=self.height,
             opacity=self.opacity
         )
-        _input.exec()
-        return _input.input if _input.input != "" else False
+        input_dlg.exec()
+        return input_dlg.input_txt if input_dlg.input_txt != "" else False
 
 
     def TXT(

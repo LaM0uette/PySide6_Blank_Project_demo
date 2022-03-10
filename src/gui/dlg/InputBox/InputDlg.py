@@ -7,7 +7,7 @@ from src.gui.events.Event import Event
 
 class InputDlg(input_ui.Ui_Input, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
-    input = ""
+    input_txt = ""
 
     def __init__(
             self,
@@ -129,7 +129,7 @@ class InputDlg(input_ui.Ui_Input, QtWidgets.QDialog):
     ##     FONCTIONS     ##
     #######################
     def f_ok(self):
-        self.input = self.le_input_text.text()
+        self.input_txt = self.le_input_text.text()
         self.close()
     #######################
     ##    /FONCTIONS     ##
