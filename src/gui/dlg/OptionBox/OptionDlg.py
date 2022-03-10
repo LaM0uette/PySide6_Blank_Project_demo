@@ -171,6 +171,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
         # Connection value change #
         # font combo box
         self.fcb_opt_ft_font.currentTextChanged.connect(self.a_maj_button_appliquer)
+        self.fcb_opt_ft_font.currentTextChanged.connect(self.a_maj_cb_font)
 
         # slider
         self.sb_opt_cfg_opacity.valueChanged.connect(self.a_maj_button_appliquer)
@@ -246,6 +247,8 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
             self.cb_opt_tm_theme.addItem(tm)
             if tm == config.theme:
                 self.cb_opt_tm_theme.setCurrentIndex(i)
+    def a_maj_cb_font(self):
+        ComboBox.Base(self.fcb_opt_ft_font, self.cb_opt_tm_theme).th()
     def a_maj_button_appliquer(self, _reload=False):
         if not self.pb_opt_appliquer.isVisible(): self.pb_opt_appliquer.setVisible(True)
         if _reload: self.reload = True
