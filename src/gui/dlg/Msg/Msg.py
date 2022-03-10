@@ -9,22 +9,22 @@ class Msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
     dragPos: QtCore.QPoint
 
     def __init__(self,
-                 titre,
+                 title,
                  msg,
                  ico,
-                 tm,
-                 txt_pb_ok,
+                 ico_rgb,
+                 txt_ok,
                  width,
                  height,
                  opacity,
-    ):
+                 ):
         super(Msg, self).__init__()
 
-        self.titre = titre
+        self.title = title
         self.msg = msg
         self.ico = ico
-        self.rgb = tm
-        self.txt_pb_ok = txt_pb_ok
+        self.ico_rgb = ico_rgb
+        self.txt_ok = txt_ok
         self.width = width
         self.height = height
         self.opacity = opacity
@@ -41,7 +41,7 @@ class Msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
     ############################
     def IN_BASE(self):
         ### Fenetre ###
-        self.setWindowTitle(self.titre)
+        self.setWindowTitle(self.title)
         self.setFixedWidth(self.width)
         self.setFixedHeight(self.height)
         self.setWindowOpacity(self.opacity)
@@ -63,7 +63,7 @@ class Msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
 
 
         ### QLabel ###
-        Label.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.rgb)
+        Label.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.ico_rgb)
         Label.Base(self.lb_mt_nom, font_size=Font().h3()).tr()
         Label.Base(self.lb_msg_text).tr()
         ### /QLabel ###
@@ -81,13 +81,13 @@ class Msg(msg_ui.Ui_Msg, QtWidgets.QDialog):
         self.fr_menu_top.setFixedHeight(Dim().h9())
 
         # Menu_top
-        self.lb_mt_nom.setText(self.titre)
+        self.lb_mt_nom.setText(self.title)
 
         # Message
         self.lb_msg_text.setText(self.msg)
 
         # pb dlg
-        self.pb_msg_ok.setText(self.txt_pb_ok)
+        self.pb_msg_ok.setText(self.txt_ok)
         self.pb_msg_ok.setDefault(True)
     def IN_CONNECTIONS(self):
         ## Menu_top

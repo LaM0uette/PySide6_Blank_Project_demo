@@ -12,13 +12,13 @@ class DLG_Msg:
         self.height = height
         self.opacity = opacity
 
-    def _rtn(self, titre, msg, ico, tm, txt_pb_ok):
+    def _rtn(self, title, msg, ico, ico_rgb, txt_ok):
         msg = Msg(
-            titre=titre,
+            title=title,
             msg=msg,
             ico=ico,
-            tm=tm,
-            txt_pb_ok=txt_pb_ok,
+            ico_rgb=ico_rgb,
+            txt_ok=txt_ok,
             width=self.width,
             height=self.height,
             opacity=self.opacity
@@ -26,19 +26,19 @@ class DLG_Msg:
         msg.exec()
 
 
-    def INFO(self, titre="INFO", msg="", ico=Img().info(), tm="th3", txt_pb_ok="Ok"):
+    def INFO(self, title="INFO", msg="", ico=Img().info(), ico_rgb="th3", txt_ok="Ok"):
         self._rtn(
-            titre=titre,
+            title=title,
             msg=msg,
             ico=ico,
-            tm=tm,
-            txt_pb_ok=txt_pb_ok
+            ico_rgb=ico_rgb,
+            txt_ok=txt_ok
         )
-    def ALERTE(self, titre="ALERTE", msg="", ico=Img().alerte(), tm="th3", txt_pb_ok="Ok"):
+    def ALERTE(self, title="ALERTE", msg="", ico=Img().alerte(), ico_rgb="th3", txt_ok="Ok"):
         self._rtn(
-            titre=titre,
+            title=title,
             msg=msg,
             ico=ico,
-            tm=tm,
-            txt_pb_ok=txt_pb_ok
+            ico_rgb=ico_rgb,
+            txt_ok=txt_ok
         )
