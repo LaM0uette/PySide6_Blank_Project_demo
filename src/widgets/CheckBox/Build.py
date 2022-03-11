@@ -1,7 +1,6 @@
 from src.build.mods import Functions
 from src.widgets import vb_wg
 
-
 class Build:
     def __init__(
             self,
@@ -259,6 +258,8 @@ class Build:
                 border-bottom-right-radius: {radius[2]}px;
                 border-bottom-left-radius: {radius[3]}px;
                 }}"""
+
+        print(style)
         for wg in wgs:
             # Dimensions
             Functions().SET_DIM(wg, width=width, height=height)
