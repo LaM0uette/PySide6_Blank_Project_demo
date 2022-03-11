@@ -1,6 +1,3 @@
-import importlib
-import time
-
 from src.lib.palettes import *
 from src.widgets import vb_wg
 from src.widgets.CheckBox.Build import Build
@@ -13,23 +10,6 @@ class Base:
     def __init__(self, *wgs, margin=(0, 0, 0, (vb_wg.HEIGHT-(vb_wg.HEIGHT*StyleBase().x_ico()))/2)):
         self.wgs = wgs
         self.margin = margin
-
-    def _rtn(self):
-        Build(
-            bg=Rgb().th3(),
-            bg_hover=Rgb().th3(),
-            bg_checked=Rgb().th1(),
-            bg_checked_hover=Rgb().th1(),
-            bg_indeterminate=Rgb().th2(),
-            bg_indeterminate_hover=Rgb().th2(),
-
-            fg=Rgb().th1(),
-            fg_hover=Rgb().bn1(),
-            fg_checked=Rgb().th3(),
-            fg_checked_hover=Rgb().bn1(),
-            fg_indeterminate=Rgb().th3(),
-            fg_indeterminate_hover=Rgb().th1(),
-        )
 
     def th(self):
         Build(
