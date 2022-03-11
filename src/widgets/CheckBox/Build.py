@@ -157,7 +157,7 @@ class Build:
         :param radius: *Tuple
         """
 
-        style = f"""
+        self.style = f"""
                 /* CHECKBOX */
                 QCheckBox {{
                 background-color: rgba{bg};
@@ -258,8 +258,6 @@ class Build:
                 border-bottom-right-radius: {radius[2]}px;
                 border-bottom-left-radius: {radius[3]}px;
                 }}"""
-
-        print(style)
         for wg in wgs:
             # Dimensions
             Functions().SET_DIM(wg, width=width, height=height)
@@ -276,4 +274,4 @@ class Build:
             wg.setCursor(Functions().SET_CURSOR(cursor))
 
             # Style
-            wg.setStyleSheet(style)
+            wg.setStyleSheet(self.style)
