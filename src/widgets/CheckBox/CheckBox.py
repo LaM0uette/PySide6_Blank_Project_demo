@@ -47,9 +47,6 @@ class Demo:
         self.margin = margin
 
     def th(self):
-        from src.widgets import vb_wg
-        from src.widgets.CheckBox.Build import Build
-
         Build(
             *self.wgs,
             img_margin=self.margin,
