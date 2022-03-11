@@ -1,3 +1,5 @@
+import importlib
+
 from src.lib.palettes import *
 from src.widgets import vb_wg
 from src.widgets.CheckBox.Build import Build
@@ -47,6 +49,12 @@ class Demo:
         self.margin = margin
 
     def th(self):
+        from src.widgets import vb_wg
+        from src.widgets.CheckBox import Build as d
+
+        importlib.reload(vb_wg)
+        importlib.reload(d)
+
         Build(
             *self.wgs,
             img_margin=self.margin,
