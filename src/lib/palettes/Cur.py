@@ -1,11 +1,11 @@
 import json
 import os
 
-from src.config.config import Config
+from src.config import config
 
 
 class Cur:
-    with open(f"{os.path.dirname(f'src/assets/cursor/{Config().cur}/_data.json')}/_data.json", "r", encoding="utf-8") as fichier:
+    with open(f"{os.path.dirname(f'src/assets/cursor/{config.cur}/_data.json')}/_data.json", "r", encoding="utf-8") as fichier:
         cur = json.load(fichier)
 
     _souris = cur["_souris"]
@@ -13,7 +13,7 @@ class Cur:
     _crayon = cur["_crayon"]
     _fleche_top = cur["_fleche_top"]
 
-    def CUR(self, img, xy): return [f"src/assets/cursor/{Config().cur}/{img}.cur", xy[0], xy[1]]
+    def CUR(self, img, xy): return [f"src/assets/cursor/{config.cur}/{img}.cur", xy[0], xy[1]]
 
     def agrandir(self): return self.CUR(img="agrandir", xy=self._souris)
     def copier(self): return self.CUR(img="copier", xy=self._souris)

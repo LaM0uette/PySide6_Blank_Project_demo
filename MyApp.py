@@ -55,9 +55,9 @@ class main(Ui_main, QtWidgets.QWidget):
     ############################
     def IN_BASE(self):
         ### Fenetre principal ###
-        self.setWindowTitle(Config().nom)
+        self.setWindowTitle(config.nom)
         self.setWindowIcon(QtGui.QPixmap(f"{Img().main()}th3.svg"))
-        self.setWindowOpacity(Config().opacity)
+        self.setWindowOpacity(config.opacity)
 
         self.setGraphicsEffect(Shadow().ombre_portee(self))
 
@@ -219,7 +219,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### Nom de l'app ###
-        self.lb_mt_nom.setText(Config().nom)
+        self.lb_mt_nom.setText(config.nom)
 
 
         ### Widget blanc pour centrer le nom de l'app ###
@@ -228,11 +228,11 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### Version de l'app ###
-        self.lb_mb_version.setText(f" Version : {Config().version}")
+        self.lb_mb_version.setText(f" Version : {config.version}")
 
 
         ### size_grip ###
-        if Config().resize:
+        if config.resize:
             self.size_grip.setCursor(Functions().SET_CURSOR(Cur().fleche_nwse()))
             self.size_grip.setStyleSheet(
                 f"""
@@ -338,12 +338,12 @@ class main(Ui_main, QtWidgets.QWidget):
     ##     EVENT     ##
     ###################
     def e_resize_screen(self):
-        if Config().resize:
-            self.setMinimumWidth(Config().widht)
-            self.setMinimumHeight(Config().height)
+        if config.resize:
+            self.setMinimumWidth(config.widht)
+            self.setMinimumHeight(config.height)
         else:
-            self.setFixedWidth(Config().widht)
-            self.setFixedHeight(Config().height)
+            self.setFixedWidth(config.widht)
+            self.setFixedHeight(config.height)
     #####
     def traySingleClick(self):
         screen = QtWidgets.QApplication.primaryScreen().availableGeometry()
@@ -369,7 +369,7 @@ class main(Ui_main, QtWidgets.QWidget):
             self.trayDoubleClick()
     def e_quitter(self):
         """Permet de quitter l'application"""
-        if not Config().auto_close:
+        if not config.auto_close:
             self.hide()
         elif ResponseBox().QUITTER():
             app.quit()

@@ -2,29 +2,26 @@ import json
 import os
 
 
-class Config:
-    def __init__(self):
+### FICHIER CONFIG ###
+with open(f"{os.path.dirname(__file__)}\config.json", "r", encoding="utf-8") as fichier:
+    cfg = json.load(fichier)
 
-        ### FICHIER CONFIG ###
-        with open(f"{os.path.dirname(__file__)}\config.json", "r", encoding="utf-8") as fichier:
-            cfg = json.load(fichier)
+### infos ###
+nom = cfg["nom"]
+description = cfg["description"]
+version = cfg["version"]
+auteur = cfg["auteur"]
 
-        ### infos ###
-        self.nom = cfg["nom"]
-        self.description = cfg["description"]
-        self.version = cfg["version"]
-        self.auteur = cfg["auteur"]
+### config ###
+theme = cfg["config"]["theme"]
+font = cfg["config"]["font"]
+widht = cfg["config"]["widht"]
+height = cfg["config"]["height"]
+opacity = cfg["config"]["opacity"]
+cur = cfg["config"]["cur"]
 
-        ### config ###
-        self.theme = cfg["config"]["theme"]
-        self.font = cfg["config"]["font"]
-        self.widht = cfg["config"]["widht"]
-        self.height = cfg["config"]["height"]
-        self.opacity = cfg["config"]["opacity"]
-        self.cur = cfg["config"]["cur"]
-
-        ### var ###
-        self.debug = cfg["var"]["debug"]
-        self.resize = cfg["var"]["resize"]
-        self.auto_close = cfg["var"]["auto_close"]
-        self.toolbox_pin = cfg["var"]["toolbox_pin"]
+### var ###
+debug = cfg["var"]["debug"]
+resize = cfg["var"]["resize"]
+auto_close = cfg["var"]["auto_close"]
+toolbox_pin = cfg["var"]["toolbox_pin"]
