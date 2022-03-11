@@ -24,7 +24,7 @@ class Build:
             cursor=vb_wg.CUR_MAIN,
 
             # Couleurs BG
-            bg=vb_wg.VbWg().BG,
+            bg=vb_wg.BG,
             bg_hover=vb_wg.BG_HOVER,
             bg_checked=vb_wg.BG_CHECKED,
             bg_checked_hover=vb_wg.BG_CHECKED_HOVER,
