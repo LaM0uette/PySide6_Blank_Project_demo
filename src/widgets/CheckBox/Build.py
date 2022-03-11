@@ -8,12 +8,12 @@ class Build:
             *wgs,
 
             # Dimensions
-            width = vb_wg.WIDTH,
-            height = vb_wg.HEIGHT,
+            width=vb_wg.WIDTH,
+            height=vb_wg.HEIGHT,
 
             # Police
-            font = vb_wg.FONT,
-            font_size = vb_wg.FONT_SIZE,
+            font=vb_wg.FONT,
+            font_size=vb_wg.FONT_SIZE,
 
             # Paramètres
             auto_exclusive=False,
