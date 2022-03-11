@@ -218,23 +218,23 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
     ##     ACTIONS     ##
     #####################
     def _a_reload_ui(self):
-        QtWidgets.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
+        # QtWidgets.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
+        #
+        # Functions().GEN_SVG()
+        # time.sleep(0.5)
+        #
+        # self.IN_WG()
+        # self.IN_CLASSE()
+        #
+        # self.fen_main.IN_BASE()
+        # self.fen_main.IN_WG()
+        # self.fen_main.IN_CLASSE()
+        #
+        # QtWidgets.QApplication.restoreOverrideCursor()
 
-        Functions().GEN_SVG()
-        time.sleep(0.5)
-
-        self.IN_WG()
-        self.IN_CLASSE()
-
-        self.fen_main.IN_BASE()
-        self.fen_main.IN_WG()
-        self.fen_main.IN_CLASSE()
-
-        QtWidgets.QApplication.restoreOverrideCursor()
-
-        if self.reload:
-            MsgBox().INFO(msg="Modifications appliquées !\nCertains paramètres peuvent nécessiter un redémarrage de l'application.")
-            self.reload = False
+        # if self.reload:
+        MsgBox().INFO(msg="Modifications appliquées !\nCertains paramètres peuvent nécessiter un redémarrage de l'application.")
+        self.reload = False
     #####
     def a_maj_liste_themes(self):
         self.cb_opt_tm_theme.clear()
