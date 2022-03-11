@@ -1,7 +1,5 @@
 import glob
-import importlib
 import os
-import time
 
 from PySide6 import QtCore, QtWidgets
 
@@ -233,7 +231,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
         # QtWidgets.QApplication.restoreOverrideCursor()
 
         # if self.reload:
-        MsgBox().INFO(msg="Modifications appliquées !\nCertains paramètres peuvent nécessiter un redémarrage de l'application.")
+        MsgBox().INFO(msg="Modifications appliquées !\nVeuillez redémarrer l'application pour appliquer les modifications.")
         self.reload = False
     #####
     def a_maj_liste_themes(self):
