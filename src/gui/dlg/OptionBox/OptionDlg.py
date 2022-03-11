@@ -245,8 +245,11 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
     def a_maj_cb_font(self):
         ComboBox.Base(self.fcb_opt_ft_font, self.cb_opt_tm_theme).font(font=self.fcb_opt_ft_font.currentText())
     def a_maj_button_appliquer(self, _reload="False"):
-        if not self.pb_opt_appliquer.isVisible(): self.pb_opt_appliquer.setVisible(True)
-        if _reload == "True": self.reload = True
+        if not self.pb_opt_appliquer.isVisible():
+            self.pb_opt_appliquer.setVisible(True)
+
+        if _reload == "True":
+            self.reload = True
     #####################
     ##    /ACTIONS     ##
     #####################
