@@ -49,6 +49,8 @@ class Demo:
     def th(self):
         Build(
             *self.wgs,
+            bg=vb_wg.VbWg().BG,
+
             img_margin=self.margin,
             triple_state=True,
         )
