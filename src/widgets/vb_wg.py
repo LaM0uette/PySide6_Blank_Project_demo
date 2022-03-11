@@ -2,7 +2,7 @@ from src.config.config import Config
 from src.lib.palettes import *
 
 
-class vb_wg:
+class VbWg:
     def __init__(self):
         ########################
         ##     DIMENSIONS     ##
