@@ -105,7 +105,7 @@ IMG_INDETERMINATE = Img().check1()
 IMG_INDETERMINATE_HOVER = Img().check1()
 IMG_UNROLL = Img().fleche_bottom()
 IMG_UNROLL_HOVER = Img().fleche_bottom()
-    # Fleches
+    # Arrows
 IMG_UP = Img().plus()
 IMG_DOWN = Img().moins()
 IMG_RIGHT = Img().fleche_droite()
@@ -122,7 +122,7 @@ IMG_INDETERMINATE_RGB = "th3"
 IMG_INDETERMINATE_HOVER_RGB = "th1"
 IMG_UNROLL_RGB = "th2"
 IMG_UNROLL_HOVER_RGB = "bn1"
-    # Fleches RGB
+    # Arrows RGB
 IMG_UP_RGB = "th2"
 IMG_UP_HOVER_RGB = "bn1"
 IMG_DOWN_RGB = "th2"
@@ -132,6 +132,36 @@ IMG_RIGHT_HOVER_RGB = "bn1"
 IMG_LEFT_RGB = "th3"
 IMG_LEFT_HOVER_RGB = "bn1"
 ### /IMAGES RGB  ###
+
+
+###  BORDER  ###
+BORDER_WIDTH = (0,)*4
+BORDER_STYLE = "solid"
+BORDER_RGB = Rgb().tr()
+### /BORDER  ###
+
+
+###  RADIUS  ###
+RADIUS_SIZE = 3
+RADIUS = (RADIUS_SIZE,) * 4
+### /RADIUS  ###
+
+
+###  SCROLL  ###
+SCROLL_BG = Rgb().th1()
+SCROLL_WIDTH = 10
+SCROLL_HEIGHT = 10
+SCROLL_HANDLE_BG = Rgb().th3()
+SCROLL_HANDLE_BG_HOVER = Rgb().th3()
+SCROLL_HANDLE_FG = Rgb().th2()
+SCROLL_HANDLE_FG_HOVER = Rgb().bn1()
+SCROLL_HANDLE_MIN_WIDTH = 20
+SCROLL_HANDLE_MIN_HEIGHT = 20
+SCROLL_H = Scroll().need()
+SCROLL_V = Scroll().need()
+HEADER_H = True
+HEADER_V = True
+### /SCROLL  ###
 
 ###################
 ##    /STYLE     ##
