@@ -142,92 +142,50 @@ class Dlg:
     def __init__(self, widget):
         self.widget = widget
         self.bd = (StyleBase().border(),)*4
-        self.rgb_ok = Rgb().bn1()
-        self.rgb_nok = Rgb().bn2()
 
-    def _rtn(self):
+    def _rtn(
+            self,
+            rgb_1=Rgb().th1(),
+            rgb_2=Rgb().bn1(),
+    ):
+        Style(
+            self.widget,
+            fixed_width=Dim().h6(),
+            fixed_height=None,
+            bg=rgb_1,
+            fg=rgb_2,
+            bg_hover=rgb_2,
+            fg_hover=rgb_1,
+            bg_pressed=rgb_2,
+            fg_pressed=rgb_1,
+            border=self.bd,
+            border_hover=self.bd,
+            border_checked=self.bd,
+            border_checked_hover=self.bd,
+            border_rgb=rgb_2,
+            border_hover_rgb=rgb_2,
+            border_checked_rgb=rgb_2,
+            border_checked_hover_rgb=rgb_2,
+        )
 
 
     def ok(self):
-
-        Style(
-            self.widget,
-            fixed_width=Dim().h6(),
-            fixed_height=None,
-            bg=Rgb().th1(),
-            fg=self.rgb_ok,
-            bg_hover=self.rgb_ok,
-            fg_hover=Rgb().th1(),
-            bg_pressed=self.rgb_ok,
-            fg_pressed=Rgb().th1(),
-            border=self.bd,
-            border_hover=self.bd,
-            border_checked=self.bd,
-            border_checked_hover=self.bd,
-            border_rgb=self.rgb_ok,
-            border_hover_rgb=self.rgb_ok,
-            border_checked_rgb=self.rgb_ok,
-            border_checked_hover_rgb=self.rgb_ok,
+        self._rtn(
+            rgb_1=Rgb().th1(),
+            rgb_2=Rgb().bn1(),
         )
     def ok_inv(self):
-
-        
-        Style(
-            self.widget,
-            fixed_width=Dim().h6(),
-            fixed_height=None,
-            bg=self.rgb_ok,
-            fg=Rgb().th1(),
-            bg_hover=Rgb().th1(),
-            fg_hover=self.rgb_ok,
-            bg_pressed=Rgb().th1(),
-            fg_pressed=self.rgb_ok,
-            border=self.bd,
-            border_hover=self.bd,
-            border_checked=self.bd,
-            border_checked_hover=self.bd,
-            border_rgb=self.rgb_ok,
-            border_hover_rgb=self.rgb_ok,
-            border_checked_rgb=self.rgb_ok,
-            border_checked_hover_rgb=self.rgb_ok,
+        self._rtn(
+            rgb_1=Rgb().bn1(),
+            rgb_2=Rgb().th1(),
         )
     def nok(self):
-        Style(
-            self.widget,
-            fixed_width=Dim().h6(),
-            fixed_height=None,
-            bg=Rgb().th1(),
-            fg=self.rgb_nok,
-            bg_hover=self.rgb_nok,
-            fg_hover=Rgb().th1(),
-            bg_pressed=self.rgb_nok,
-            fg_pressed=Rgb().th1(),
-            border=self.bd,
-            border_hover=self.bd,
-            border_checked=self.bd,
-            border_checked_hover=self.bd,
-            border_rgb=self.rgb_nok,
-            border_hover_rgb=self.rgb_nok,
-            border_checked_rgb=self.rgb_nok,
-            border_checked_hover_rgb=self.rgb_nok,
+        self._rtn(
+            rgb_1=Rgb().th1(),
+            rgb_2=Rgb().bn2(),
         )
     def nok_inv(self):
-        Style(
-            self.widget,
-            fixed_width=Dim().h6(),
-            fixed_height=None,
-            bg=self.rgb_nok,
-            fg=Rgb().th1(),
-            bg_hover=Rgb().th1(),
-            fg_hover=self.rgb_nok,
-            bg_pressed=Rgb().th1(),
-            fg_pressed=self.rgb_nok,
-            border=self.bd,
-            border_hover=self.bd,
-            border_checked=self.bd,
-            border_checked_hover=self.bd,
-            border_rgb=self.rgb_nok,
-            border_hover_rgb=self.rgb_nok,
-            border_checked_rgb=self.rgb_nok,
-            border_checked_hover_rgb=self.rgb_nok,
+        self._rtn(
+            rgb_1=Rgb().bn2(),
+            rgb_2=Rgb().th1(),
         )
