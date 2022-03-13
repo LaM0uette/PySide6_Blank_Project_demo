@@ -1,4 +1,5 @@
 from .WgClass.MyQPushButton import MyQPushButton
+from src.lib.palettes import *
 from src.lib.globals import v_wg
 
 
@@ -128,3 +129,18 @@ class Base(MyQPushButton):
                 border-bottom-left-radius: {radius[3]}px;
                 }}"""
         widget.setStyleSheet(style)
+
+
+class Transparent(Base):
+    def __init__(self, widget):
+        super().__init__(
+            widget,
+            bg=Rgb().tr(),
+            bg_hover=Rgb().tr(),
+            bg_checked=Rgb().tr(),
+            bg_checked_hover=Rgb().tr(),
+            bg_pressed=Rgb().tr(),
+            bg_checked_pressed=Rgb().tr(),
+            fg=Rgb().th3(),
+            fg_checked=Rgb().bn1(),
+        )
