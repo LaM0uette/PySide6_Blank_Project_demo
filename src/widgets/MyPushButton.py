@@ -36,7 +36,7 @@ class MenuTop:
     def __init__(self, widget):
         self.widget = widget
 
-    def rtn(
+    def _rtn(
             self,
             img=Img().main(),
             img_rgb="th2",
@@ -60,21 +60,21 @@ class MenuTop:
         )
 
     def option(self):
-        self.rtn(
+        self._rtn(
             img=Img().option()
         )
     def reduire(self):
-        self.rtn(
+        self._rtn(
             img=Img().reduire(),
             img_rgb="bn1"
         )
     def agrandir(self):
-        self.rtn(
+        self._rtn(
             img=Img().agrandir(),
             img_rgb="th3"
         )
     def quitter(self):
-        self.rtn(
+        self._rtn(
             img=Img().quitter(),
             img_rgb="bn2"
         )
@@ -132,4 +132,102 @@ class Txt:
             border_hover_rgb=self.bd_rgb,
             border_checked_rgb=self.bd_rgb,
             border_checked_hover_rgb=self.bd_rgb,
+        )
+
+
+#################
+##     DLG     ##
+#################
+class Dlg:
+    def __init__(self, widget):
+        self.widget = widget
+        self.bd = (StyleBase().border(),)*4
+        self.rgb_ok = Rgb().bn1()
+        self.rgb_nok = Rgb().bn2()
+
+    def _rtn(self):
+
+
+    def ok(self):
+
+        Style(
+            self.widget,
+            fixed_width=Dim().h6(),
+            fixed_height=None,
+            bg=Rgb().th1(),
+            fg=self.rgb_ok,
+            bg_hover=self.rgb_ok,
+            fg_hover=Rgb().th1(),
+            bg_pressed=self.rgb_ok,
+            fg_pressed=Rgb().th1(),
+            border=self.bd,
+            border_hover=self.bd,
+            border_checked=self.bd,
+            border_checked_hover=self.bd,
+            border_rgb=self.rgb_ok,
+            border_hover_rgb=self.rgb_ok,
+            border_checked_rgb=self.rgb_ok,
+            border_checked_hover_rgb=self.rgb_ok,
+        )
+    def ok_inv(self):
+
+        
+        Style(
+            self.widget,
+            fixed_width=Dim().h6(),
+            fixed_height=None,
+            bg=self.rgb_ok,
+            fg=Rgb().th1(),
+            bg_hover=Rgb().th1(),
+            fg_hover=self.rgb_ok,
+            bg_pressed=Rgb().th1(),
+            fg_pressed=self.rgb_ok,
+            border=self.bd,
+            border_hover=self.bd,
+            border_checked=self.bd,
+            border_checked_hover=self.bd,
+            border_rgb=self.rgb_ok,
+            border_hover_rgb=self.rgb_ok,
+            border_checked_rgb=self.rgb_ok,
+            border_checked_hover_rgb=self.rgb_ok,
+        )
+    def nok(self):
+        Style(
+            self.widget,
+            fixed_width=Dim().h6(),
+            fixed_height=None,
+            bg=Rgb().th1(),
+            fg=self.rgb_nok,
+            bg_hover=self.rgb_nok,
+            fg_hover=Rgb().th1(),
+            bg_pressed=self.rgb_nok,
+            fg_pressed=Rgb().th1(),
+            border=self.bd,
+            border_hover=self.bd,
+            border_checked=self.bd,
+            border_checked_hover=self.bd,
+            border_rgb=self.rgb_nok,
+            border_hover_rgb=self.rgb_nok,
+            border_checked_rgb=self.rgb_nok,
+            border_checked_hover_rgb=self.rgb_nok,
+        )
+    def nok_inv(self):
+        Style(
+            self.widget,
+            fixed_width=Dim().h6(),
+            fixed_height=None,
+            bg=self.rgb_nok,
+            fg=Rgb().th1(),
+            bg_hover=Rgb().th1(),
+            fg_hover=self.rgb_nok,
+            bg_pressed=Rgb().th1(),
+            fg_pressed=self.rgb_nok,
+            border=self.bd,
+            border_hover=self.bd,
+            border_checked=self.bd,
+            border_checked_hover=self.bd,
+            border_rgb=self.rgb_nok,
+            border_hover_rgb=self.rgb_nok,
+            border_checked_rgb=self.rgb_nok,
+            border_checked_hover_rgb=self.rgb_nok,
         )
