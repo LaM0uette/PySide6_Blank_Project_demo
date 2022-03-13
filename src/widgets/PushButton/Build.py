@@ -234,7 +234,7 @@ class Build:
             wg.setStyleSheet(style)
 
             cls = ClassePb(
-                wg=wg,
+                widget=wg,
                 dim_ico=img_height,
                 DIM_ICO=IMG_HEIGHT,
                 img=img,
