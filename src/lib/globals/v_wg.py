@@ -29,7 +29,7 @@ LAYOUT_DIRECTION = LayoutDirection().left_to_right()
 ##     QAbstractButton     ##
 #############################
 # Txt
-TXT = ""
+TXT = "Texte de démonstration :)"
 
 # Actions
 REPEAT_DELAY = 300
