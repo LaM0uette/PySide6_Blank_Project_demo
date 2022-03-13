@@ -13,6 +13,7 @@ class MyQAbstractButton(MyQWidget):
             ico_width=None,
             ico_height=None,
             checkable = False,
+            checked = False,
             auto_repeat = False,
             auto_exclusive = False,
             auto_repeat_delay = v_wg.REPEAT_DELAY,
@@ -33,6 +34,7 @@ class MyQAbstractButton(MyQWidget):
 
         # Actions
         widget.setCheckable(checkable)
+        widget.setChecked(checked)
         widget.setAutoRepeat(auto_repeat)
         widget.setAutoExclusive(auto_exclusive)
         widget.setAutoRepeatDelay(auto_repeat_delay)
