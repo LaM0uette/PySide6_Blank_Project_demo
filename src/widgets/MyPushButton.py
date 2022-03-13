@@ -38,8 +38,8 @@ class Base(MyQPushButton):
             img_rgb=v_wg.IMG_UNROLL_RGB,
             img_hover_rgb=v_wg.IMG_UNROLL_HOVER_RGB,
 
-            img_height=v_wg.img_height,
-            IMG_HEIGHT=v_wg.IMG_HEIGHT,
+            img_height=None,
+            IMG_HEIGHT=None,
 
             border=v_wg.BORDER_WIDTH,
             border_style=v_wg.BORDER_STYLE,
