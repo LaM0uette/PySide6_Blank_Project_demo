@@ -1,5 +1,4 @@
 from .MyQAbstractButton import MyQAbstractButton
-from src.lib.globals import v_wg
 
 
 class MyQPushButton(MyQAbstractButton):
