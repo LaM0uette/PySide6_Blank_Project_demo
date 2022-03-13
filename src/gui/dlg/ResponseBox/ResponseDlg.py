@@ -74,8 +74,8 @@ class ResponseDlg(rep_ui.Ui_Rep, QtWidgets.QDialog):
 
 
         ### QPushButton ###
-        PushButton.Dlg(self.pb_rep_ok).ok()
-        PushButton.Dlg(self.pb_rep_annuler).nok_inv()
+        MyPushButton.Dlg(self.pb_rep_ok).ok()
+        MyPushButton.Dlg(self.pb_rep_annuler).nok_inv()
         MyPushButton.MenuTop(self.pb_mt_quitter).quitter()
         ### /QPushButton ###
     def IN_WG(self):

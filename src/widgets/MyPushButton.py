@@ -147,55 +147,71 @@ class Dlg:
             self,
             bg=Rgb().th1(),
             fg=Rgb().bn1(),
-            rgb_1=Rgb().th1(),
-            rgb_2=Rgb().bn1(),
+            bg_hover=Rgb().bn1(),
+            fg_hover=Rgb().th1(),
+            bg_pressed=Rgb().bn1(),
+            fg_pressed=Rgb().th1(),
+            bd_rgb=Rgb().bn1(),
     ):
         Style(
             self.widget,
+            size_policy_v=SizePolicy().expanding(),
             fixed_width=Dim().h6(),
             fixed_height=None,
             bg=bg,
             fg=fg,
-            bg_hover=rgb_2,
-            fg_hover=rgb_1,
-            bg_pressed=rgb_2,
-            fg_pressed=rgb_1,
+            bg_hover=bg_hover,
+            fg_hover=fg_hover,
+            bg_pressed=bg_pressed,
+            fg_pressed=fg_pressed,
             border=self.bd,
             border_hover=self.bd,
             border_checked=self.bd,
             border_checked_hover=self.bd,
-            border_rgb=rgb_2,
-            border_hover_rgb=rgb_2,
-            border_checked_rgb=rgb_2,
-            border_checked_hover_rgb=rgb_2,
+            border_rgb=bd_rgb,
+            border_hover_rgb=bd_rgb,
+            border_checked_rgb=bd_rgb,
+            border_checked_hover_rgb=bd_rgb,
         )
-
 
     def ok(self):
         self._rtn(
             bg=Rgb().th1(),
             fg=Rgb().bn1(),
-            rgb_1=Rgb().th1(),
-            rgb_2=Rgb().bn1(),
+            bg_hover=Rgb().bn1(),
+            fg_hover=Rgb().th1(),
+            bg_pressed=Rgb().bn1(),
+            fg_pressed=Rgb().th1(),
+            bd_rgb=Rgb().bn1(),
         )
     def ok_inv(self):
         self._rtn(
             bg=Rgb().bn1(),
             fg=Rgb().th1(),
-            rgb_1=Rgb().bn1(),
-            rgb_2=Rgb().th1(),
+            bg_hover=Rgb().th1(),
+            fg_hover=Rgb().bn1(),
+            bg_pressed=Rgb().th1(),
+            fg_pressed=Rgb().bn1(),
+            bd_rgb=Rgb().bn1(),
         )
     def nok(self):
         self._rtn(
             bg=Rgb().th1(),
             fg=Rgb().bn2(),
-            rgb_1=Rgb().th1(),
-            rgb_2=Rgb().bn2(),
+            bg_hover=Rgb().bn2(),
+            fg_hover=Rgb().th1(),
+            bg_pressed=Rgb().bn2(),
+            fg_pressed=Rgb().th1(),
+            bd_rgb=Rgb().bn2(),
         )
     def nok_inv(self):
         self._rtn(
             bg=Rgb().bn2(),
             fg=Rgb().th1(),
-            rgb_1=Rgb().bn2(),
-            rgb_2=Rgb().th1(),
+            bg_hover=Rgb().th1(),
+            fg_hover=Rgb().bn2(),
+            bg_pressed=Rgb().th1(),
+            fg_pressed=Rgb().bn2(),
+            bd_rgb=Rgb().bn2(),
         )
+
