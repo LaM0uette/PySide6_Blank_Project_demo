@@ -9,7 +9,9 @@ class MyQAbstractButton(MyQWidget):
             widget,
             txt=v_wg.TXT,
             ico=None,
-            ico_rgb=None,
+            ico_rgb="",
+            ico_width=None,
+            ico_height=None,
     ):
         super().__init__(widget)
 
@@ -18,5 +20,8 @@ class MyQAbstractButton(MyQWidget):
 
         # Ico
         if ico:
-            widget.setIcon(Functions().SET_ICON(ico=ico, ico_rgb=ico_rgb))
-            # widget.setIconSize(QtCore.QSize(dim, dim))
+            widget.setIcon(Functions().SET_ICON(ico=ico, rgb=ico_rgb))
+
+            if not ico_width: ico_width = widget.height()
+            if not ico_height: ico_height = widget.height()
+            widget.setIconSize(Functions().SET_ICON_DIM(width=ico_width, height=ico_height))

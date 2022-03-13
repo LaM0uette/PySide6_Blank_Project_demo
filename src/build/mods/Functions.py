@@ -13,10 +13,13 @@ class Functions:
 
     def SET_CURSOR(self, cur):
         return QtGui.QCursor(QtGui.QPixmap(cur[0]), cur[1], cur[2])
-    def SET_ICON(self, ico, ico_rgb):
+    def SET_ICON(self, ico, rgb):
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(f"{ico}{ico_rgb}.svg"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        icon.addPixmap(QtGui.QPixmap(f"{ico}{rgb}.svg"), QtGui.QIcon.Normal, QtGui.QIcon.On)
         return icon
+    def SET_ICON_DIM(self, width, height):
+        icon_dim = QtCore.QSize(width, height)
+        return icon_dim
 
 
 
