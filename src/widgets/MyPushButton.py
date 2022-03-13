@@ -78,3 +78,58 @@ class MenuTop:
             img=Img().quitter(),
             img_rgb="bn2"
         )
+
+
+#################
+##     TXT     ##
+#################
+class Txt:
+    def __init__(self, widget):
+        self.widget = widget
+        self.bd = (StyleBase().border(),) * 4
+        self.bd_rgb = Rgb().th3()
+
+    def txt(self):
+        Style(
+            self.widget,
+            bg=Rgb().th1(),
+            fg=Rgb().th3(),
+            bg_hover=Rgb().th3(),
+            fg_hover=Rgb().th1(),
+            bg_pressed=Rgb().th3(),
+            bg_checked=Rgb().th3(),
+            fg_checked=Rgb().th1(),
+            bg_checked_hover=Rgb().th1(),
+            fg_checked_hover=Rgb().th3(),
+            bg_checked_pressed=Rgb().th1(),
+            border=self.bd,
+            border_hover=self.bd,
+            border_checked=self.bd,
+            border_checked_hover=self.bd,
+            border_rgb=self.bd_rgb,
+            border_hover_rgb=self.bd_rgb,
+            border_checked_rgb=self.bd_rgb,
+            border_checked_hover_rgb=self.bd_rgb,
+        )
+    def inv(self):
+        Style(
+            self.widget,
+            bg=Rgb().th3(),
+            fg=Rgb().th1(),
+            bg_hover=Rgb().th1(),
+            fg_hover=Rgb().th3(),
+            bg_pressed=Rgb().th1(),
+            bg_checked=Rgb().th1(),
+            fg_checked=Rgb().th3(),
+            bg_checked_hover=Rgb().th3(),
+            fg_checked_hover=Rgb().th1(),
+            bg_checked_pressed=Rgb().th3(),
+            border=self.bd,
+            border_hover=self.bd,
+            border_checked=self.bd,
+            border_checked_hover=self.bd,
+            border_rgb=self.bd_rgb,
+            border_hover_rgb=self.bd_rgb,
+            border_checked_rgb=self.bd_rgb,
+            border_checked_hover_rgb=self.bd_rgb,
+        )
