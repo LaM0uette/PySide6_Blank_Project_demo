@@ -71,7 +71,12 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setupUi(self)
         self.vlay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
     def IN_CLASSE(self):
-        MyPushButton.Base(widget=self.pb_demo_th)
+        ###  QPushButton  ###
+        for wg in [self.pb_demo_th, self.pb_demo_tr]:
+            MyPushButton.Base(widget=wg)
+        ### /QPushButton  ###
+
+
     def IN_WG(self):
         ### Base ###
         self.setCursor(Functions().SET_CURSOR(Cur().souris()))
