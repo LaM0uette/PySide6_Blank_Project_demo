@@ -71,7 +71,7 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setupUi(self)
         self.vlay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
     def IN_CLASSE(self):
-        MyQWidget(widget=self.pb_demo_th)
+        MyQAbstractButton(widget=self.pb_demo_th)
     def IN_WG(self):
         ### Base ###
         self.setCursor(Functions().SET_CURSOR(Cur().souris()))
