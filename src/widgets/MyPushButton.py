@@ -86,7 +86,7 @@ class MenuTop:
 class Txt:
     def __init__(self, widget):
         self.widget = widget
-        self.bd = (StyleBase().border(),) * 4
+        self.bd = (StyleBase().border(),)*4
         self.bd_rgb = Rgb().th3()
 
     def txt(self):
