@@ -107,7 +107,7 @@ class Ui_main(object):
         self.sca_main.setWidgetResizable(True)
         self.vlay_wg = QWidget()
         self.vlay_wg.setObjectName(u"vlay_wg")
-        self.vlay_wg.setGeometry(QRect(0, -2463, 818, 6413))
+        self.vlay_wg.setGeometry(QRect(0, -2252, 818, 6287))
         self.verticalLayout = QVBoxLayout(self.vlay_wg)
         self.verticalLayout.setSpacing(100)
         self.verticalLayout.setObjectName(u"verticalLayout")
@@ -432,54 +432,6 @@ class Ui_main(object):
         self.pb_demo_tr.setObjectName(u"pb_demo_tr")
 
         self.vlay_pb.addWidget(self.pb_demo_tr)
-
-        self.verticalSpacer_6 = QSpacerItem(20, 5, QSizePolicy.Minimum, QSizePolicy.Fixed)
-
-        self.vlay_pb.addItem(self.verticalSpacer_6)
-
-        self.pb_demo_ck = QPushButton(self.fr_pb)
-        self.pb_demo_ck.setObjectName(u"pb_demo_ck")
-        self.pb_demo_ck.setCheckable(True)
-
-        self.vlay_pb.addWidget(self.pb_demo_ck)
-
-        self.verticalSpacer_7 = QSpacerItem(20, 5, QSizePolicy.Minimum, QSizePolicy.Fixed)
-
-        self.vlay_pb.addItem(self.verticalSpacer_7)
-
-        self.pb_demo_ck_ico = QPushButton(self.fr_pb)
-        self.pb_demo_ck_ico.setObjectName(u"pb_demo_ck_ico")
-        self.pb_demo_ck_ico.setCheckable(True)
-
-        self.vlay_pb.addWidget(self.pb_demo_ck_ico)
-
-        self.verticalSpacer_8 = QSpacerItem(20, 5, QSizePolicy.Minimum, QSizePolicy.Fixed)
-
-        self.vlay_pb.addItem(self.verticalSpacer_8)
-
-        self.pb_demo_ico_ck = QPushButton(self.fr_pb)
-        self.pb_demo_ico_ck.setObjectName(u"pb_demo_ico_ck")
-        self.pb_demo_ico_ck.setCheckable(True)
-
-        self.vlay_pb.addWidget(self.pb_demo_ico_ck)
-
-        self.verticalSpacer_9 = QSpacerItem(20, 5, QSizePolicy.Minimum, QSizePolicy.Fixed)
-
-        self.vlay_pb.addItem(self.verticalSpacer_9)
-
-        self.pb_demo_zoom = QPushButton(self.fr_pb)
-        self.pb_demo_zoom.setObjectName(u"pb_demo_zoom")
-        self.pb_demo_zoom.setCheckable(True)
-
-        self.vlay_pb.addWidget(self.pb_demo_zoom)
-
-        self.verticalSpacer_10 = QSpacerItem(20, 5, QSizePolicy.Minimum, QSizePolicy.Fixed)
-
-        self.vlay_pb.addItem(self.verticalSpacer_10)
-
-        self.verticalSpacer_11 = QSpacerItem(20, 5, QSizePolicy.Minimum, QSizePolicy.Fixed)
-
-        self.vlay_pb.addItem(self.verticalSpacer_11)
 
 
         self.verticalLayout.addWidget(self.fr_pb)
@@ -1373,8 +1325,6 @@ class Ui_main(object):
         self.pb_demo_txt_inv.setText(QCoreApplication.translate("main", u"PushButton text invers\u00e9", None))
         self.pb_demo_th.setText(QCoreApplication.translate("main", u"PushButton th", None))
         self.pb_demo_tr.setText(QCoreApplication.translate("main", u"PushButton transparent", None))
-        self.pb_demo_ck.setText(QCoreApplication.translate("main", u"PushButton checkable", None))
-        self.pb_demo_ck_ico.setText(QCoreApplication.translate("main", u"PushButton checkable avec icone", None))
         self.lb_rb_demo.setText(QCoreApplication.translate("main", u"QRadioButton :", None))
         self.rb_demo_th_1.setText(QCoreApplication.translate("main", u"RadioButton", None))
         self.rb_demo_th_2.setText(QCoreApplication.translate("main", u"RadioButton", None))
