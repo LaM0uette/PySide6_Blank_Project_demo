@@ -1,3 +1,4 @@
+from src.build.mods import Functions
 from src.lib.globals import v_wg
 from src.lib.palettes import *
 
@@ -15,6 +16,7 @@ class MyQWidget:
             maximum_width=None,
             maximum_height=None,
             font=v_wg.FONT,
+            cursor=v_wg.CUR,
     ):
         # SizePolicy
         widget.setSizePolicy(size_policy_h, size_policy_v)
@@ -29,3 +31,6 @@ class MyQWidget:
 
         # Font
         widget.setFont(font)
+
+        # Curseur
+        widget.setCursor(Functions().SET_CURSOR(cursor))

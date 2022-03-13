@@ -13,6 +13,9 @@ SIZE_POLICY_V = SizePolicy().prefered()
 # Font
 FONT = Font().base()
 
+# Cursor
+CUR = Cur().souris()
+
 #####################
 ##    /QWidget     ##
 #####################
