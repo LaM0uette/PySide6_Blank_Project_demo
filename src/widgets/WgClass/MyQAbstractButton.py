@@ -33,7 +33,7 @@ class MyQAbstractButton(MyQWidget):
         super().__init__(widget,size_policy_h,size_policy_v,fixed_width,fixed_height,minimum_width,minimum_height,maximum_width,maximum_height,font,cursor,focus_policy,layout_direction)
 
         # Txt
-        widget.setText(txt)
+        if txt: widget.setText(txt)
 
         # Ico
         if ico:
