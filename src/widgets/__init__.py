@@ -17,3 +17,6 @@ from src.widgets.TextEdit import TextEdit
 from src.widgets.ToolBox import ToolBox
 from src.widgets.TrayIcon import TrayIcon
 from src.widgets.TreeWidget import TreeWidget
+
+
+from src.widgets import *
