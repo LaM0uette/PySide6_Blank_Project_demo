@@ -214,4 +214,3 @@ class Dlg:
             fg_pressed=Rgb().bn2(),
             bd_rgb=Rgb().bn2(),
         )
-
