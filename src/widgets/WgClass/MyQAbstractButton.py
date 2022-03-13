@@ -37,7 +37,3 @@ class MyQAbstractButton(MyQWidget):
         widget.setAutoExclusive(auto_exclusive)
         widget.setAutoRepeatDelay(auto_repeat_delay)
         widget.setAutoRepeatDelay(auto_repeat_interval)
-
-
-        widget.setFlat(flat)
-        flat = True,
