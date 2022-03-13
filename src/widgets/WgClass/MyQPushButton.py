@@ -1,5 +1,4 @@
 from .MyQAbstractButton import MyQAbstractButton
-from src.build.mods import Functions
 from src.lib.globals import v_wg
 
 
