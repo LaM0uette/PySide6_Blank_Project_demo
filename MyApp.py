@@ -6,6 +6,7 @@ from PySide6 import QtCore, QtWidgets, QtGui
 from src import *
 from src.gui import *
 
+from src.widgets.WgClass import *
 # Renommez des de bases
 class main(Ui_main, QtWidgets.QWidget):
     dragPos: QtCore.QPoint
@@ -70,7 +71,8 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setupUi(self)
         self.vlay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
     def IN_CLASSE(self):
-        from src.widgets.
+
+        MyQWidget(widget=self.pb_demo_th)
     def IN_WG(self):
         ### Base ###
         self.setCursor(Functions().SET_CURSOR(Cur().souris()))
