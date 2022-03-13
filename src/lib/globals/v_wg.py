@@ -19,6 +19,9 @@ CUR = Cur().souris()
 # FocusPolicy
 FOCUS_POLICY = FocusPolicy().no_focus()
 
+# LayoutDirection
+LAYOUT_DIRECTION = LayoutDirection().left_to_right()
+
 #####################
 ##    /QWidget     ##
 #####################
