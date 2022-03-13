@@ -38,8 +38,8 @@ LAYOUT_DIRECTION = LayoutDirection().left_to_right()
 TXT = "Texte de démonstration :)"
 
 # Actions
-REPEAT_DELAY = 300
-REPEAT_INTERVAL = 100
+AUTO_REPEAT_DELAY = 300
+AUTO_REPEAT_INTERVAL = 100
 #############################
 ##    /QAbstractButton     ##
 #############################
