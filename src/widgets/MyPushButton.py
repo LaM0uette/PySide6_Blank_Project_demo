@@ -111,7 +111,7 @@ class Txt:
             border_checked_rgb=self.bd_rgb,
             border_checked_hover_rgb=self.bd_rgb,
         )
-    def inv(self):
+    def inverse(self):
         Style(
             self.widget,
             bg=Rgb().th3(),

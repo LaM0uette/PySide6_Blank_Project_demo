@@ -79,6 +79,9 @@ class main(Ui_main, QtWidgets.QWidget):
         MyPushButton.MenuTop(widget=self.pb_mt_reduire).reduire()
         MyPushButton.MenuTop(widget=self.pb_mt_agrandir).agrandir()
         MyPushButton.MenuTop(widget=self.pb_mt_quitter).quitter()
+
+        MyPushButton.Txt(widget=self.pb_demo_txt).txt()
+        MyPushButton.Txt(widget=self.pb_demo_txt_inv).inverse()
         ### /QPushButton  ###
 
 
