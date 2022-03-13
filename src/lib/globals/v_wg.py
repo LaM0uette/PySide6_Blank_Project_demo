@@ -16,6 +16,9 @@ FONT = Font().base()
 # Cursor
 CUR = Cur().souris()
 
+# FocusPolicy
+FOCUS_POLICY = FocusPolicy().no_focus()
+
 #####################
 ##    /QWidget     ##
 #####################

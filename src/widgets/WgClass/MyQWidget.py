@@ -17,6 +17,7 @@ class MyQWidget:
             maximum_height=None,
             font=v_wg.FONT,
             cursor=v_wg.CUR,
+            focus_policy=v_wg.FOCUS_POLICY,
     ):
         # SizePolicy
         widget.setSizePolicy(size_policy_h, size_policy_v)
@@ -34,3 +35,6 @@ class MyQWidget:
 
         # Curseur
         widget.setCursor(Functions().SET_CURSOR(cursor))
+
+        # FocusPolicy
+        widget.setFocusPolicy(focus_policy)
