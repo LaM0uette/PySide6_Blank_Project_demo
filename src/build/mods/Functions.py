@@ -13,26 +13,13 @@ class Functions:
 
     def SET_CURSOR(self, cur):
         return QtGui.QCursor(QtGui.QPixmap(cur[0]), cur[1], cur[2])
-    def SET_DIM(self, *args, width=None, height=None):
-        for wg in args:
-            if width is not None: wg.setFixedWidth(width)
-            if height is not None: wg.setFixedHeight(height)
-    def SET_FONT(self, *args, font=config.font, font_size=None, rtn=False):
-        if not font_size: return
-
-        ft = QtGui.QFont()
-        ft.setFamily(font)
-        ft.setPointSize(font_size)
-
-        if rtn: return ft
-
-        for wg in args:
-            wg.setFont(ft)
-    def SET_ICON(self, wg, img, dim):
+    def SET_ICON(self, ico, ico_rgb):
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap(f"{img}.svg"), QtGui.QIcon.Normal, QtGui.QIcon.On)
-        wg.setIcon(icon)
-        wg.setIconSize(QtCore.QSize(dim, dim))
+        icon.addPixmap(QtGui.QPixmap(f"{ico}{ico_rgb}.svg"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        return icon
+
+
+
     def ADD_QACTION(self, tray, ico=None, ico_rgb=None, txt="", shortcut_txt="", status_tip="", size=None, fct=None, sht_1=None, sht_2=None, sht_3=None):
         if size is None: size=12
 
@@ -50,7 +37,6 @@ class Functions:
 
         tray.addAction(action)
         QtGui.QShortcut(QtGui.QKeySequence(shortcut), self).activated.connect(fct)
-
 
     def GEN_SVG(self):
         hx1, hx2, hx3, hxbn1, hxbn2 = Rgb().hx_th1(), Rgb().hx_th2(), Rgb().hx_th3(), Rgb().hx_bn1(), Rgb().hx_bn2()
@@ -104,3 +90,27 @@ class Functions:
         rgb = hex_colors.lstrip('#')
         lv = len(rgb)
         return tuple(int(rgb[i:i + lv // 3], 16) for i in range(0, lv, lv // 3))
+
+
+
+    # A SUPPR
+    def SET_ICON_A_SUPPR(self, wg, img, dim):
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap(f"{img}.svg"), QtGui.QIcon.Normal, QtGui.QIcon.On)
+        wg.setIcon(icon)
+        wg.setIconSize(QtCore.QSize(dim, dim))
+    def SET_DIM(self, *args, width=None, height=None):
+        for wg in args:
+            if width is not None: wg.setFixedWidth(width)
+            if height is not None: wg.setFixedHeight(height)
+    def SET_FONT(self, *args, font=config.font, font_size=None, rtn=False):
+        if not font_size: return
+
+        ft = QtGui.QFont()
+        ft.setFamily(font)
+        ft.setPointSize(font_size)
+
+        if rtn: return ft
+
+        for wg in args:
+            wg.setFont(ft)

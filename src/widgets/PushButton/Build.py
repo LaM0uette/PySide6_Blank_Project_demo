@@ -253,9 +253,9 @@ class Build:
 
             if pb_type is not None:
                 if pb_type == "check":
-                    Functions().SET_ICON(wg=wg, img=f"{img_uncheck}{img_uncheck_rgb}", dim=img_height)
+                    Functions().SET_ICON_A_SUPPR(wg=wg, img=f"{img_uncheck}{img_uncheck_rgb}", dim=img_height)
                 else:
-                    Functions().SET_ICON(wg=wg, img=f"{img}{img_rgb}", dim=img_height)
+                    Functions().SET_ICON_A_SUPPR(wg=wg, img=f"{img}{img_rgb}", dim=img_height)
 
             if pb_type == "check":
                 wg.enterEvent = cls.ENT_CHECK
