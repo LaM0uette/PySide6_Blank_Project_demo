@@ -214,3 +214,77 @@ class Dlg:
             fg_pressed=Rgb().bn2(),
             bd_rgb=Rgb().bn2(),
         )
+
+
+###################
+##     PLEIN     ##
+###################
+class Plein:
+    def __init__(self, widget):
+        self.widget = widget
+
+    def _rtn(self,
+             bg_gen=Rgb().tr(),
+             fg_gen=Rgb().tr(),
+             height=Dim().h5(),
+
+             border_gen=(0, )*4,
+             border_gen_rgb=Rgb().tr(),
+             cursor=Cur().main()
+             ):
+        Style(
+            self.widget,
+            fixed_height=height,
+            cursor=cursor,
+
+            bg=bg_gen,
+            bg_hover=bg_gen,
+            bg_checked=bg_gen,
+            bg_checked_hover=bg_gen,
+            bg_pressed=bg_gen,
+            bg_checked_pressed=bg_gen,
+            fg=fg_gen,
+            fg_hover=fg_gen,
+            fg_checked=fg_gen,
+            fg_checked_hover=fg_gen,
+            fg_pressed=fg_gen,
+            fg_checked_pressed=fg_gen,
+            border=border_gen,
+            border_hover=border_gen,
+            border_checked=border_gen,
+            border_checked_hover=border_gen,
+            border_rgb=border_gen_rgb,
+            border_hover_rgb=border_gen_rgb,
+            border_checked_rgb=border_gen_rgb,
+            border_checked_hover_rgb=border_gen_rgb,
+
+            radius=(0, )*4
+        )
+
+    def th1(self):
+        self._rtn(
+            bg_gen=Rgb().th1(),
+            fg_gen=Rgb().th3(),
+            border_gen=(StyleBase().border(),) * 4,
+            border_gen_rgb=Rgb().th2(),
+        )
+    def th2(self):
+        self._rtn(
+            bg_gen=Rgb().th2(),
+            fg_gen=Rgb().th3(),
+        )
+    def th3(self):
+        self._rtn(
+            bg_gen=Rgb().th3(),
+            fg_gen=Rgb().th1(),
+        )
+    def bn1(self):
+        self._rtn(
+            bg_gen=Rgb().bn1(),
+            fg_gen=Rgb().th3(),
+        )
+    def bn2(self):
+        self._rtn(
+            bg_gen=Rgb().bn2(),
+            fg_gen=Rgb().th3(),
+        )
