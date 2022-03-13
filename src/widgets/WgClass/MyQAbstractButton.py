@@ -1,25 +1,50 @@
 from .MyQWidget import MyQWidget
 from src.build.mods import Functions
-from src.lib.globals import v_wg
 
 
 class MyQAbstractButton(MyQWidget):
     def __init__(
             self,
             widget,
-            txt=v_wg.TXT,
-            ico=None,
-            ico_rgb="",
-            ico_width=None,
-            ico_height=None,
-            checkable = False,
-            checked = False,
-            auto_repeat = False,
-            auto_exclusive = False,
-            auto_repeat_delay = v_wg.REPEAT_DELAY,
-            auto_repeat_interval = v_wg.REPEAT_INTERVAL,
+            size_policy_h,
+            size_policy_v,
+            fixed_width,
+            fixed_height,
+            minimum_width,
+            minimum_height,
+            maximum_width,
+            maximum_height,
+            font,
+            cursor,
+            focus_policy,
+            layout_direction,
+            txt,
+            ico,
+            ico_rgb,
+            ico_width,
+            ico_height,
+            checkable,
+            checked,
+            auto_repeat,
+            auto_exclusive,
+            auto_repeat_delay,
+            auto_repeat_interval
     ):
-        super().__init__(widget)
+        super().__init__(
+            widget,
+            size_policy_h,
+            size_policy_v,
+            fixed_width,
+            fixed_height,
+            minimum_width,
+            minimum_height,
+            maximum_width,
+            maximum_height,
+            font,
+            cursor,
+            focus_policy,
+            layout_direction
+        )
 
         # Txt
         widget.setText(txt)

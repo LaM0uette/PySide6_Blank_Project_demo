@@ -1,23 +1,22 @@
 from src.build.mods import Functions
-from src.lib.globals import v_wg
 
 
 class MyQWidget:
     def __init__(
             self,
             widget,
-            size_policy_h=v_wg.SIZE_POLICY_H,
-            size_policy_v=v_wg.SIZE_POLICY_V,
-            fixed_width=None,
-            fixed_height=None,
-            minimum_width=None,
-            minimum_height=None,
-            maximum_width=None,
-            maximum_height=None,
-            font=v_wg.FONT,
-            cursor=v_wg.CUR,
-            focus_policy=v_wg.FOCUS_POLICY,
-            layout_direction=v_wg.LAYOUT_DIRECTION,
+            size_policy_h,
+            size_policy_v,
+            fixed_width,
+            fixed_height,
+            minimum_width,
+            minimum_height,
+            maximum_width,
+            maximum_height,
+            font,
+            cursor,
+            focus_policy,
+            layout_direction,
     ):
         # SizePolicy
         widget.setSizePolicy(size_policy_h, size_policy_v)
