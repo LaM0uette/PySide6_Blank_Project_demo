@@ -32,6 +32,7 @@ class Style(MyQPushButton):
             auto_default=False,
             default=False,
             flat=True,
+            pb_type=None,
             bg=v_wg.BG,
             bg_hover=v_wg.BG_HOVER,
             bg_checked=v_wg.BG_CHECKED,
@@ -141,3 +142,40 @@ class Style(MyQPushButton):
                 border-bottom-left-radius: {radius[3]}px;
                 }}"""
         widget.setStyleSheet(style)
+
+        # Classes PB
+        cls = ClassePb(
+            wg=wg,
+            dim_ico=img_height,
+            DIM_ICO=IMG_HEIGHT,
+            img=img,
+            img_hover=img_hover,
+            img_uncheck=img_uncheck,
+            img_uncheck_hover=img_uncheck_hover,
+            img_check=img_check,
+            img_check_hover=img_check_hover,
+            img_rgb=img_rgb,
+            img_hover_rgb=img_hover_rgb,
+            img_uncheck_rgb=img_uncheck_rgb,
+            img_uncheck_hover_rgb=img_uncheck_hover_rgb,
+            img_check_rgb=img_check_rgb,
+            img_check_hover_rgb=img_check_hover_rgb,
+        )
+
+        if pb_type is not None:
+            if pb_type == "check":
+                Functions().SET_ICON_A_SUPPR(wg=wg, img=f"{img_uncheck}{img_uncheck_rgb}", dim=img_height)
+            else:
+                Functions().SET_ICON_A_SUPPR(wg=wg, img=f"{img}{img_rgb}", dim=img_height)
+
+        if pb_type == "check":
+            wg.enterEvent = cls.ENT_CHECK
+            wg.leaveEvent = cls.LVE_CHECK
+            wg.mousePressEvent = cls.MP_CHECK
+        elif pb_type == "ico":
+            wg.enterEvent = cls.ENT_ICO
+            wg.leaveEvent = cls.LVE_ICO
+            wg.mousePressEvent = cls.MP_ICO
+        elif pb_type == "zoom":
+            wg.enterEvent = cls.ENT_ZOOM
+            wg.leaveEvent = cls.LVE_ZOOM
