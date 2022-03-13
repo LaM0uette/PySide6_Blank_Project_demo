@@ -30,21 +30,7 @@ class MyQAbstractButton(MyQWidget):
             auto_repeat_delay,
             auto_repeat_interval
     ):
-        super().__init__(
-            widget,
-            size_policy_h,
-            size_policy_v,
-            fixed_width,
-            fixed_height,
-            minimum_width,
-            minimum_height,
-            maximum_width,
-            maximum_height,
-            font,
-            cursor,
-            focus_policy,
-            layout_direction
-        )
+        super().__init__(widget,size_policy_h,size_policy_v,fixed_width,fixed_height,minimum_width,minimum_height,maximum_width,maximum_height,font,cursor,focus_policy,layout_direction)
 
         # Txt
         widget.setText(txt)
