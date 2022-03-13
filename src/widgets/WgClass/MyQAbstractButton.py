@@ -12,6 +12,11 @@ class MyQAbstractButton(MyQWidget):
             ico_rgb="",
             ico_width=None,
             ico_height=None,
+            checkable = False,
+            auto_repeat = False,
+            auto_exclusive = False,
+            auto_repeat_delay = v_wg.REPEAT_DELAY,
+            auto_repeat_interval = v_wg.REPEAT_INTERVAL,
     ):
         super().__init__(widget)
 
@@ -25,3 +30,14 @@ class MyQAbstractButton(MyQWidget):
             if not ico_width: ico_width = widget.height()
             if not ico_height: ico_height = widget.height()
             widget.setIconSize(Functions().SET_ICON_DIM(width=ico_width, height=ico_height))
+
+        # Actions
+        widget.setCheckable(checkable)
+        widget.setAutoRepeat(auto_repeat)
+        widget.setAutoExclusive(auto_exclusive)
+        widget.setAutoRepeatDelay(auto_repeat_delay)
+        widget.setAutoRepeatDelay(auto_repeat_interval)
+
+
+        widget.setFlat(flat)
+        flat = True,
