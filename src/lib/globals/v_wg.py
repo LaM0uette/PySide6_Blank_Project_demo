@@ -20,6 +20,7 @@ FONT = Font().base()
 
 # Cursor
 CUR = Cur().souris()
+CUR_ACTION = Cur().main()
 
 # FocusPolicy
 FOCUS_POLICY = FocusPolicy().no_focus()

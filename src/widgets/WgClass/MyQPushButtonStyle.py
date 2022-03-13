@@ -18,7 +18,7 @@ class Style(MyQPushButton):
             maximum_width=None,
             maximum_height=None,
             font=v_wg.FONT,
-            cursor=v_wg.CUR,
+            cursor=v_wg.CUR_ACTION,
             focus_policy=v_wg.FOCUS_POLICY,
             layout_direction=v_wg.LAYOUT_DIRECTION,
             txt=v_wg.TXT,
