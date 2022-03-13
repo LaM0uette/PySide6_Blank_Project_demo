@@ -5,17 +5,19 @@ from src.lib.palettes import *
 ##################
 ##     BASE     ##
 ##################
-class Base(Style):
+class Base:
     def __init__(self, widget):
-        super().__init__(
-            widget,
+        self.widget = widget
+
+    def Base(self):
+        Style(
+            widget=self.widget,
         )
-class Transparent(Style):
-    def __init__(self, widget):
+    def Transparent(self):
         bg = Rgb().tr()
 
-        super().__init__(
-            widget,
+        Style(
+            widget=self.widget,
             bg=bg,
             bg_hover=bg,
             bg_checked=bg,

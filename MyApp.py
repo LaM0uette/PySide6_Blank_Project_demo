@@ -6,7 +6,7 @@ from PySide6 import QtCore, QtWidgets, QtGui
 from src import *
 from src.gui import *
 
-from src.widgets.WgClass import *
+
 # Renommez des de bases
 class main(Ui_main, QtWidgets.QWidget):
     dragPos: QtCore.QPoint
@@ -72,8 +72,8 @@ class main(Ui_main, QtWidgets.QWidget):
         self.vlay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
     def IN_CLASSE(self):
         ###  QPushButton  ###
-        for wg in [self.pb_demo_th]: MyPushButton.Base(widget=wg)
-        for wg in [self.pb_demo_tr]: MyPushButton.Transparent(widget=wg)
+        for wg in [self.pb_demo_th]: MyPushButton.Base(widget=wg).Base()
+        for wg in [self.pb_demo_tr]: MyPushButton.Base(widget=wg).Transparent()
         ### /QPushButton  ###
 
 
