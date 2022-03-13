@@ -2,7 +2,7 @@ from PySide6 import QtWidgets
 
 from src.build.mods import Functions
 from src.widgets import vb_wg
-from src.widgets.PushButton.ClassePb import ClassePb
+from src.widgets.WgClass.ClassePb import ClassePb
 
 
 class Build:
@@ -146,7 +146,7 @@ class Build:
         :param border_checked_hover_rgb: *RgbBox
         :param radius: *Tuple
         """
-        
+
         style = f"""
                 /* BUTTON */
                 QPushButton {{

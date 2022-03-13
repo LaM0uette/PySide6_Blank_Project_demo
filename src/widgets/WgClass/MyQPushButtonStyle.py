@@ -1,4 +1,6 @@
 from .MyQPushButton import MyQPushButton
+from .ClassePb import ClassePb
+from src.build.mods import Functions
 from src.lib.globals import v_wg
 
 
@@ -145,7 +147,7 @@ class Style(MyQPushButton):
 
         # Classes PB
         cls = ClassePb(
-            wg=wg,
+            widget=widget,
             dim_ico=img_height,
             DIM_ICO=IMG_HEIGHT,
             img=img,
@@ -164,18 +166,20 @@ class Style(MyQPushButton):
 
         if pb_type is not None:
             if pb_type == "check":
-                Functions().SET_ICON_A_SUPPR(wg=wg, img=f"{img_uncheck}{img_uncheck_rgb}", dim=img_height)
+                widget.setIcon(Functions().SET_ICON(ico=img_uncheck, rgb=img_uncheck_rgb))
             else:
-                Functions().SET_ICON_A_SUPPR(wg=wg, img=f"{img}{img_rgb}", dim=img_height)
+                widget.setIcon(Functions().SET_ICON(ico=img, rgb=img_rgb))
+
+            widget.setIconSize(Functions().SET_ICON_DIM(width=img_height, height=img_height))
 
         if pb_type == "check":
-            wg.enterEvent = cls.ENT_CHECK
-            wg.leaveEvent = cls.LVE_CHECK
-            wg.mousePressEvent = cls.MP_CHECK
+            widget.enterEvent = cls.ENT_CHECK
+            widget.leaveEvent = cls.LVE_CHECK
+            widget.mousePressEvent = cls.MP_CHECK
         elif pb_type == "ico":
-            wg.enterEvent = cls.ENT_ICO
-            wg.leaveEvent = cls.LVE_ICO
-            wg.mousePressEvent = cls.MP_ICO
+            widget.enterEvent = cls.ENT_ICO
+            widget.leaveEvent = cls.LVE_ICO
+            widget.mousePressEvent = cls.MP_ICO
         elif pb_type == "zoom":
-            wg.enterEvent = cls.ENT_ZOOM
-            wg.leaveEvent = cls.LVE_ZOOM
+            widget.enterEvent = cls.ENT_ZOOM
+            widget.leaveEvent = cls.LVE_ZOOM
