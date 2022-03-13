@@ -19,4 +19,4 @@ from src.widgets.TrayIcon import TrayIcon
 from src.widgets.TreeWidget import TreeWidget
 
 
-from src.widgets import *
+from src.widgets import MyPushButton
