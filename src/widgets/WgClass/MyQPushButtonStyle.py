@@ -147,6 +147,9 @@ class Style(MyQPushButton):
         widget.setStyleSheet(style)
 
         # Classes PB
+        if not img_height: img_height = widget.height() * StyleBase().x_ico()
+        if not IMG_HEIGHT: IMG_HEIGHT = widget.height() * StyleBase().X_ICO()
+
         cls = ClassePb(
             widget=widget,
             dim_ico=img_height,
@@ -171,7 +174,6 @@ class Style(MyQPushButton):
             else:
                 widget.setIcon(Functions().SET_ICON(ico=img, rgb=img_rgb))
 
-            if not img_height: img_height = widget.height() * StyleBase().x_ico()
             widget.setIconSize(Functions().SET_ICON_DIM(width=img_height, height=img_height))
 
         if pb_type == "check":
