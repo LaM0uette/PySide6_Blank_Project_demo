@@ -71,8 +71,8 @@ class MsgDlg(msg_ui.Ui_Msg, QtWidgets.QDialog):
 
 
         ### QPushButton ###
-        PushButton.Dlg(self.pb_msg_ok).ok()
-        PushButton.menu_top(self.pb_mt_quitter).quitter()
+        MyPushButton.Dlg(self.pb_msg_ok).ok()
+        MyPushButton.MenuTop(self.pb_mt_quitter).quitter()
         ### /QPushButton ###
     def IN_WG(self):
         # Base

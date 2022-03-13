@@ -43,7 +43,7 @@ class ToolBoxUi(toolbox_ui.Ui_ToolBoxUi, QtWidgets.QDialog):
 
 
         ### QPushButton ###
-        PushButton.menu_top(self.pb_mt_quitter).quitter()
+        MyPushButton.MenuTop(self.pb_mt_quitter).quitter()
         ### /QPushButton ###
     def IN_WG(self):
         # Base

@@ -105,9 +105,9 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
 
 
         ### QPushButton ###
-        PushButton.Dlg(self.pb_opt_appliquer).ok()
-        PushButton.Dlg(self.pb_opt_ok).nok_inv()
-        PushButton.menu_top(self.pb_mt_quitter).quitter()
+        MyPushButton.Dlg(self.pb_opt_appliquer).ok()
+        MyPushButton.Dlg(self.pb_opt_ok).nok_inv()
+        MyPushButton.MenuTop(self.pb_mt_quitter).quitter()
 
         PushButton.plein(self.pb_opt_tm_th1).th1()
         PushButton.plein(self.pb_opt_tm_th2).th2()

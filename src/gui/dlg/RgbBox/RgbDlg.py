@@ -76,9 +76,9 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
 
 
         ### QPushButton ###
-        PushButton.Dlg(self.pb_rgb_ok).ok()
-        PushButton.Dlg(self.pb_rgb_annuler).nok_inv()
-        PushButton.menu_top(self.pb_mt_quitter).quitter()
+        MyPushButton.Dlg(self.pb_rgb_ok).ok()
+        MyPushButton.Dlg(self.pb_rgb_annuler).nok_inv()
+        MyPushButton.MenuTop(self.pb_mt_quitter).quitter()
         ### /QPushButton ###
 
 
