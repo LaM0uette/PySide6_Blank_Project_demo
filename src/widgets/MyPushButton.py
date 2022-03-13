@@ -145,6 +145,8 @@ class Dlg:
 
     def _rtn(
             self,
+            bg=Rgb().th1(),
+            fg=Rgb().bn1(),
             rgb_1=Rgb().th1(),
             rgb_2=Rgb().bn1(),
     ):
@@ -152,8 +154,8 @@ class Dlg:
             self.widget,
             fixed_width=Dim().h6(),
             fixed_height=None,
-            bg=rgb_1,
-            fg=rgb_2,
+            bg=bg,
+            fg=fg,
             bg_hover=rgb_2,
             fg_hover=rgb_1,
             bg_pressed=rgb_2,
@@ -171,21 +173,29 @@ class Dlg:
 
     def ok(self):
         self._rtn(
+            bg=Rgb().th1(),
+            fg=Rgb().bn1(),
             rgb_1=Rgb().th1(),
             rgb_2=Rgb().bn1(),
         )
     def ok_inv(self):
         self._rtn(
+            bg=Rgb().bn1(),
+            fg=Rgb().th1(),
             rgb_1=Rgb().bn1(),
             rgb_2=Rgb().th1(),
         )
     def nok(self):
         self._rtn(
+            bg=Rgb().th1(),
+            fg=Rgb().bn2(),
             rgb_1=Rgb().th1(),
             rgb_2=Rgb().bn2(),
         )
     def nok_inv(self):
         self._rtn(
+            bg=Rgb().bn2(),
+            fg=Rgb().th1(),
             rgb_1=Rgb().bn2(),
             rgb_2=Rgb().th1(),
         )

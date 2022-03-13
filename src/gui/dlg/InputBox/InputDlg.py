@@ -74,9 +74,9 @@ class InputDlg(input_ui.Ui_Input, QtWidgets.QDialog):
 
 
         ### QPushButton ###
-        PushButton.Dlg(self.pb_input_ok).ok()
-        PushButton.Dlg(self.pb_input_annuler).nok_inv()
-        PushButton.menu_top(self.pb_mt_quitter).quitter()
+        MyPushButton.Dlg(self.pb_input_ok).ok()
+        MyPushButton.Dlg(self.pb_input_annuler).nok_inv()
+        MyPushButton.MenuTop(self.pb_mt_quitter).quitter()
         ### /QPushButton ###
 
 
