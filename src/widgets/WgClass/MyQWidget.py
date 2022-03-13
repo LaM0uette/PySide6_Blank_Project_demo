@@ -1,4 +1,5 @@
 from src.lib.globals import v_wg
+from src.lib.palettes import *
 
 
 class MyQWidget:
@@ -13,13 +14,18 @@ class MyQWidget:
             minimum_height=None,
             maximum_width=None,
             maximum_height=None,
+            font=v_wg.FONT,
     ):
-
+        # SizePolicy
         widget.setSizePolicy(size_policy_h, size_policy_v)
 
+        # Dimmensions
         if fixed_width: widget.setFixedWidth(fixed_width)
         if fixed_height: widget.setFixedHeight(fixed_height)
         if minimum_width: widget.setMinimumWidth(minimum_width)
         if minimum_height: widget.setMinimumHeight(minimum_height)
         if maximum_width: widget.setMaximumWidth(maximum_width)
         if maximum_height: widget.setMaximumHeight(maximum_height)
+
+        # Font
+        widget.setFont(font)
