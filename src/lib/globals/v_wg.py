@@ -9,6 +9,12 @@ from src.lib.palettes import *
 SIZE_POLICY_H = SizePolicy().prefered()
 SIZE_POLICY_V = SizePolicy().prefered()
 
+# Dimensions
+WIDTH = None
+HEIGHT = None
+WG_WIDTH = None
+WG_HEIGHT = Dim().h9()
+
 # Font
 FONT = Font().base()
 
