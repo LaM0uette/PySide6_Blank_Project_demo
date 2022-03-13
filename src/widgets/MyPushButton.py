@@ -3,10 +3,7 @@ from src.lib.palettes import *
 from src.lib.globals import v_wg
 
 
-##################
-##     BASE     ##
-##################
-class Base(MyQPushButton):
+class Style(MyQPushButton):
     def __init__(
             self,
             widget,
@@ -131,7 +128,16 @@ class Base(MyQPushButton):
         widget.setStyleSheet(style)
 
 
-class Transparent(Base):
+##################
+##     BASE     ##
+##################
+class Base(Style):
+    def __init__(self, widget):
+        super().__init__(
+            widget,
+        )
+
+class Transparent(Style):
     def __init__(self, widget):
         super().__init__(
             widget,

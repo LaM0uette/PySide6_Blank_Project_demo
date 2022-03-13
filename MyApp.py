@@ -72,7 +72,7 @@ class main(Ui_main, QtWidgets.QWidget):
         self.vlay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
     def IN_CLASSE(self):
         ###  QPushButton  ###
-        for wg in [self.pb_demo_th]: MyPushButton.Base(widget=wg)
+        for wg in [self.pb_demo_th]: MyPushButton.Style(widget=wg)
         for wg in [self.pb_demo_tr]: MyPushButton.Transparent(widget=wg)
         ### /QPushButton  ###
 
