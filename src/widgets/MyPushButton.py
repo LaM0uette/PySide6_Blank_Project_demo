@@ -10,17 +10,18 @@ class Base(Style):
         super().__init__(
             widget,
         )
-
 class Transparent(Style):
     def __init__(self, widget):
+        bg = Rgb().tr()
+
         super().__init__(
             widget,
-            bg=Rgb().tr(),
-            bg_hover=Rgb().tr(),
-            bg_checked=Rgb().tr(),
-            bg_checked_hover=Rgb().tr(),
-            bg_pressed=Rgb().tr(),
-            bg_checked_pressed=Rgb().tr(),
+            bg=bg,
+            bg_hover=bg,
+            bg_checked=bg,
+            bg_checked_hover=bg,
+            bg_pressed=bg,
+            bg_checked_pressed=bg,
             fg=Rgb().th3(),
             fg_checked=Rgb().bn1(),
         )
