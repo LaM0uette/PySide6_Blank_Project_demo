@@ -1,6 +1,5 @@
 from src.build.mods import Functions
 from src.lib.globals import v_wg
-from src.lib.palettes import *
 
 
 class MyQWidget:
