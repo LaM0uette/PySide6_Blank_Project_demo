@@ -150,7 +150,11 @@ class main(Ui_main, QtWidgets.QWidget):
     def IN_ACT(self):
         pass
     def IN_WG_BASE(self):
-        pass
+        self.pb_mt_option.setToolTip("""
+        je suis
+        un
+        test
+        """)
     def IN_TRAY(self):
         ### Actions ###
         Functions.ADD_QACTION(
