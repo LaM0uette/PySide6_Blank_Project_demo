@@ -76,35 +76,35 @@ class Style(MyQCommandLinkButton):
         super().__init__(widget, size_policy_h, size_policy_v, fixed_width, fixed_height, minimum_width, minimum_height, maximum_width, maximum_height, font, cursor, focus_policy, layout_direction, txt, ico, ico_rgb, ico_width, ico_height, checkable, checked, auto_repeat, auto_exclusive, auto_repeat_delay, auto_repeat_interval, auto_default, default, flat, description)
 
         style = f"""
-                /* CHECKBOX */
-                QRadioButton {{
+                /* MyCommandLinkButton */
+                QCommandLinkButton {{
                 background-color: rgba{bg};
                 color: rgba{fg};
                 spacing: {spacing}px;
                 }}
-                QRadioButton:hover {{
+                QCommandLinkButton:hover {{
                 background-color: rgba{bg_hover};
                 color: rgba{fg_hover};
                 }}
-                QRadioButton:pressed {{
+                QCommandLinkButton:pressed {{
                 background-color: rgba{bg_pressed};
                 color: rgba{fg_pressed};
                 }}
-                QRadioButton:checked {{
+                QCommandLinkButton:checked {{
                 background-color: rgba{bg_checked};
                 color: rgba{fg_checked};
                 }}
-                QRadioButton:checked:hover {{
+                QCommandLinkButton:checked:hover {{
                 background-color: rgba{bg_checked_hover};
                 color: rgba{fg_checked_hover};
                 }}
-                QRadioButton:checked:pressed {{
+                QCommandLinkButton:checked:pressed {{
                 background-color: rgba{bg_checked_pressed};
                 color: rgba{fg_checked_pressed};
                 }}
 
                 /* IMG */
-                QRadioButton::indicator {{
+                QCommandLinkButton::indicator {{
                 margin-top: {img_margin[0]}px;
                 margin-bottom: {img_margin[1]}px;
                 margin-right: {img_margin[2]}px;
@@ -112,39 +112,39 @@ class Style(MyQCommandLinkButton):
                 width: {img_width}px;
                 height: {img_height}px;
                 }}
-                QRadioButton::indicator:unchecked {{
+                QCommandLinkButton::indicator:unchecked {{
                 image: url({f"{img_uncheck}{img_uncheck_rgb}.svg"});
                 }}
-                QRadioButton::indicator:hover {{
+                QCommandLinkButton::indicator:hover {{
                 image: url({f"{img_uncheck_hover}{img_uncheck_hover_rgb}.svg"});
                 }}
-                QRadioButton::indicator:checked {{
+                QCommandLinkButton::indicator:checked {{
                 image: url({f"{img_check}{img_check_rgb}.svg"});
                 }}
-                QRadioButton::indicator:checked:hover {{
+                QCommandLinkButton::indicator:checked:hover {{
                 image: url({f"{img_check_hover}{img_check_hover_rgb}.svg"});
                 }}
 
                 /* BORDURES */
-                .QRadioButton {{
+                .QCommandLinkButton {{
                 border-top: {border[0]}px {border_style} rgba{border_rgb};
                 border-bottom: {border[1]}px {border_style} rgba{border_rgb};
                 border-right: {border[2]}px {border_style} rgba{border_rgb};
                 border-left: {border[3]}px {border_style} rgba{border_rgb};
                 }}
-                .QRadioButton:hover {{
+                .QCommandLinkButton:hover {{
                 border-top: {border_hover[0]}px {border_hover_style} rgba{border_hover_rgb};
                 border-bottom: {border_hover[1]}px {border_hover_style} rgba{border_hover_rgb};
                 border-right: {border_hover[2]}px {border_hover_style} rgba{border_hover_rgb};
                 border-left: {border_hover[3]}px {border_hover_style} rgba{border_hover_rgb};
                 }}
-                .QRadioButton:checked {{
+                .QCommandLinkButton:checked {{
                 border-top: {border_checked[0]}px {border_checked_style} rgba{border_checked_rgb};
                 border-bottom: {border_checked[1]}px {border_checked_style} rgba{border_checked_rgb};
                 border-right: {border_checked[2]}px {border_checked_style} rgba{border_checked_rgb};
                 border-left: {border_checked[3]}px {border_checked_style} rgba{border_checked_rgb};
                 }}
-                .QRadioButton:checked:hover {{
+                .QCommandLinkButton:checked:hover {{
                 border-top: {border_checked_hover[0]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
                 border-bottom: {border_checked_hover[1]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
                 border-right: {border_checked_hover[2]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
@@ -152,7 +152,7 @@ class Style(MyQCommandLinkButton):
                 }}
 
                 /* RAYONS */
-                .QRadioButton {{
+                .QCommandLinkButton {{
                 border-top-right-radius: {radius[0]}px;
                 border-top-left-radius: {radius[1]}px;
                 border-bottom-right-radius: {radius[2]}px;
