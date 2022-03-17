@@ -51,9 +51,9 @@ class Style(MyQAbstractButton):
             img_uncheck_hover_rgb=v_wg.IMG_UNCHECK_HOVER_RGB,
             img_check_rgb=v_wg.IMG_CHECK_RGB,
             img_check_hover_rgb=v_wg.IMG_CHECK_HOVER_RGB,
-            img_width=20,
-            img_height=20,
-            img_margin=(0,) * 4,
+            img_width=15,
+            img_height=15,
+            img_margin=(0, 0, 0, 5),
             border=v_wg.BORDER_WIDTH,
             border_style=v_wg.BORDER_STYLE,
             border_rgb=v_wg.BORDER_RGB,
@@ -82,6 +82,10 @@ class Style(MyQAbstractButton):
                 background-color: rgba{bg_hover};
                 color: rgba{fg_hover};
                 }}
+                QRadioButton:pressed {{
+                background-color: rgba{bg_pressed};
+                color: rgba{fg_pressed};
+                }}
                 QRadioButton:checked {{
                 background-color: rgba{bg_checked};
                 color: rgba{fg_checked};
@@ -89,6 +93,10 @@ class Style(MyQAbstractButton):
                 QRadioButton:checked:hover {{
                 background-color: rgba{bg_checked_hover};
                 color: rgba{fg_checked_hover};
+                }}
+                QRadioButton:checked:pressed {{
+                background-color: rgba{bg_checked_pressed};
+                color: rgba{fg_checked_pressed};
                 }}
 
                 /* IMG */
