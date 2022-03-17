@@ -19,3 +19,4 @@ from src.widgets.TreeWidget import TreeWidget
 
 
 from src.widgets import MyPushButton
+from src.widgets import MyToolButton

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>841</width>
-    <height>792</height>
+    <height>1717</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="vlay_main">
@@ -151,9 +151,9 @@
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>-2252</y>
+              <y>-889</y>
               <width>818</width>
-              <height>6287</height>
+              <height>8797</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout">
@@ -172,6 +172,270 @@
              <property name="bottomMargin">
               <number>50</number>
              </property>
+             <item>
+              <widget class="QFrame" name="fr_pb">
+               <layout class="QVBoxLayout" name="vlay_pb">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_pb_demo">
+                  <property name="text">
+                   <string>QPushButton :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_14">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pb_demo_txt">
+                  <property name="text">
+                   <string>PushButton text</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_3">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>5</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pb_demo_txt_inv">
+                  <property name="text">
+                   <string>PushButton text inversé</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_4">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>5</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pb_demo_th">
+                  <property name="text">
+                   <string>PushButton th</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_5">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>5</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pb_demo_tr">
+                  <property name="text">
+                   <string>PushButton transparent</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_tb">
+               <layout class="QVBoxLayout" name="vlay_pb_2">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_tb_demo">
+                  <property name="text">
+                   <string>QToolButton :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_30">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QToolButton" name="tb_demo_th">
+                  <property name="text">
+                   <string>...</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QToolButton" name="tb_demo_tr">
+                  <property name="text">
+                   <string>...</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_rb">
+               <layout class="QVBoxLayout" name="vlay_rb">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_rb_demo">
+                  <property name="text">
+                   <string>QRadioButton :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_16">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="rb_demo_th_1">
+                  <property name="text">
+                   <string>RadioButton</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="rb_demo_th_2">
+                  <property name="text">
+                   <string>RadioButton</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="rb_demo_th_3">
+                  <property name="text">
+                   <string>RadioButton</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="rb_demo_tr_1">
+                  <property name="text">
+                   <string>RadioButton</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="rb_demo_tr_2">
+                  <property name="text">
+                   <string>RadioButton</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QRadioButton" name="rb_demo_tr_3">
+                  <property name="text">
+                   <string>RadioButton</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
              <item>
               <widget class="QFrame" name="fr_ck">
                <layout class="QVBoxLayout" name="vlay_ck">
@@ -252,6 +516,64 @@
                  <widget class="QCheckBox" name="ck_demo_tr_3">
                   <property name="text">
                    <string>CheckBox</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_clb">
+               <layout class="QVBoxLayout" name="vlay_pb_3">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_clb_demo">
+                  <property name="text">
+                   <string>QCommandLinkButton :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_31">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QCommandLinkButton" name="clb_demo_th">
+                  <property name="text">
+                   <string>CommandLinkButton</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCommandLinkButton" name="clb_demo_tr">
+                  <property name="text">
+                   <string>CommandLinkButton</string>
                   </property>
                  </widget>
                 </item>
@@ -778,212 +1100,6 @@
                  <widget class="QProgressBar" name="pg_demo_tr">
                   <property name="value">
                    <number>66</number>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item>
-              <widget class="QFrame" name="fr_pb">
-               <layout class="QVBoxLayout" name="vlay_pb">
-                <property name="spacing">
-                 <number>0</number>
-                </property>
-                <property name="leftMargin">
-                 <number>10</number>
-                </property>
-                <property name="topMargin">
-                 <number>10</number>
-                </property>
-                <property name="rightMargin">
-                 <number>10</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>10</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="lb_pb_demo">
-                  <property name="text">
-                   <string>QPushButton :</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="verticalSpacer_14">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="pb_demo_txt">
-                  <property name="text">
-                   <string>PushButton text</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="verticalSpacer_3">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>5</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="pb_demo_txt_inv">
-                  <property name="text">
-                   <string>PushButton text inversé</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="verticalSpacer_4">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>5</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="pb_demo_th">
-                  <property name="text">
-                   <string>PushButton th</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="verticalSpacer_5">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>5</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="pb_demo_tr">
-                  <property name="text">
-                   <string>PushButton transparent</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item>
-              <widget class="QFrame" name="fr_rb">
-               <layout class="QVBoxLayout" name="vlay_rb">
-                <property name="spacing">
-                 <number>10</number>
-                </property>
-                <property name="leftMargin">
-                 <number>10</number>
-                </property>
-                <property name="topMargin">
-                 <number>10</number>
-                </property>
-                <property name="rightMargin">
-                 <number>10</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>10</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="lb_rb_demo">
-                  <property name="text">
-                   <string>QRadioButton :</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="verticalSpacer_16">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QRadioButton" name="rb_demo_th_1">
-                  <property name="text">
-                   <string>RadioButton</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QRadioButton" name="rb_demo_th_2">
-                  <property name="text">
-                   <string>RadioButton</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QRadioButton" name="rb_demo_th_3">
-                  <property name="text">
-                   <string>RadioButton</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QRadioButton" name="rb_demo_tr_1">
-                  <property name="text">
-                   <string>RadioButton</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QRadioButton" name="rb_demo_tr_2">
-                  <property name="text">
-                   <string>RadioButton</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QRadioButton" name="rb_demo_tr_3">
-                  <property name="text">
-                   <string>RadioButton</string>
                   </property>
                  </widget>
                 </item>
@@ -2156,7 +2272,7 @@ hr { height: 1px; border-width: 0; }
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="fr_tb">
+              <widget class="QFrame" name="fr_tbx">
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
@@ -2180,7 +2296,7 @@ hr { height: 1px; border-width: 0; }
                  <number>10</number>
                 </property>
                 <item>
-                 <widget class="QLabel" name="lb_tb_demo">
+                 <widget class="QLabel" name="lb_tbx_demo">
                   <property name="text">
                    <string>QToolBox :</string>
                   </property>
@@ -2203,17 +2319,17 @@ hr { height: 1px; border-width: 0; }
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QToolBox" name="tb_demo_th">
+                 <widget class="QToolBox" name="tbx_demo_th">
                   <property name="currentIndex">
-                   <number>1</number>
+                   <number>0</number>
                   </property>
                   <widget class="QWidget" name="page">
                    <property name="geometry">
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>98</width>
-                     <height>28</height>
+                     <width>596</width>
+                     <height>69</height>
                     </rect>
                    </property>
                    <attribute name="label">
@@ -2236,7 +2352,7 @@ hr { height: 1px; border-width: 0; }
                      <number>0</number>
                     </property>
                     <item>
-                     <widget class="QFrame" name="fr_tb_demo_th_1">
+                     <widget class="QFrame" name="fr_tbx_demo_th_1">
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
                       </property>
@@ -2276,7 +2392,7 @@ hr { height: 1px; border-width: 0; }
                      <number>0</number>
                     </property>
                     <item>
-                     <widget class="QFrame" name="fr_tb_demo_th_2">
+                     <widget class="QFrame" name="fr_tbx_demo_th_2">
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
                       </property>
@@ -2290,7 +2406,7 @@ hr { height: 1px; border-width: 0; }
                  </widget>
                 </item>
                 <item>
-                 <widget class="QToolBox" name="tb_demo_tr">
+                 <widget class="QToolBox" name="tbx_demo_tr">
                   <property name="currentIndex">
                    <number>0</number>
                   </property>
@@ -2323,7 +2439,7 @@ hr { height: 1px; border-width: 0; }
                      <number>0</number>
                     </property>
                     <item>
-                     <widget class="QFrame" name="fr_tb_demo_tr_1">
+                     <widget class="QFrame" name="fr_tbx_demo_tr_1">
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
                       </property>
@@ -2339,8 +2455,8 @@ hr { height: 1px; border-width: 0; }
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>98</width>
-                     <height>28</height>
+                     <width>596</width>
+                     <height>69</height>
                     </rect>
                    </property>
                    <attribute name="label">
@@ -2363,7 +2479,7 @@ hr { height: 1px; border-width: 0; }
                      <number>0</number>
                     </property>
                     <item>
-                     <widget class="QFrame" name="fr_tb_demo_tr_2">
+                     <widget class="QFrame" name="fr_tbx_demo_tr_2">
                       <property name="frameShape">
                        <enum>QFrame::StyledPanel</enum>
                       </property>
