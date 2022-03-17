@@ -92,8 +92,8 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ###  QRadioButton  ###
-        for wg in [self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3]: MyQRadioButton.Base(wg).Base()
-        for wg in [self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3]: MyQRadioButton.Base(wg).Transparent()
+        for wg in [self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3]: MyQRadioButton.Demo(wg).Base()
+        for wg in [self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3]: MyQRadioButton.Demo(wg).Transparent()
         ### /QRadioButton  ###
     def IN_WG(self):
         ### Base ###
