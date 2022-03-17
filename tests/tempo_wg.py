@@ -82,28 +82,7 @@
 # ProgressBar.Demo(self.pg_demo_tr).tr()
 # ### /QProgressBar ###
 #
-#
-# ### QPushButton ###
-# PushButton.Base(self.pb_demo_th, self.pb_demo_ck).th()
-# PushButton.Base(self.pb_demo_tr).tr()
-#
-# PushButton.menu_top(self.pb_mt_option).option()
-# PushButton.menu_top(self.pb_mt_reduire).reduire()
-# PushButton.menu_top(self.pb_mt_agrandir).agrandir()
-# PushButton.menu_top(self.pb_mt_quitter).quitter()
-#
-# PushButton.Txt(self.pb_demo_txt).txt()
-# PushButton.Txt(self.pb_demo_txt_inv).inv()
-#
-# PushButton.ck_ico(self.pb_demo_ck_ico, self.pb_demo_ico_ck)
-# PushButton.zoom(self.pb_demo_zoom)
-# ### /QPushButton ###
-#
-#
-# ## QRadioButton ###
-# RadioButton.Base(self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3).th()
-# RadioButton.Base(self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3).tr()
-# ## /QRadioButton ###
+
 #
 #
 # ## QRadioButton ###
