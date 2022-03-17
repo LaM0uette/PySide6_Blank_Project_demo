@@ -1,4 +1,5 @@
 from src.lib.palettes.Align import Align
+from src.lib.palettes.ArrowType import ArrowType
 from src.lib.palettes.AutoFormating import AutoFormating
 from src.lib.palettes.ButtonSymbols import ButtonSymbols
 from src.lib.palettes.Cur import Cur
@@ -16,6 +17,8 @@ from src.lib.palettes.InputMask import InputMask
 from src.lib.palettes.InsertPolicy import InsertPolicy
 from src.lib.palettes.Keys import Keys
 from src.lib.palettes.LayoutDirection import LayoutDirection
+from src.lib.palettes.ToolButtonStyle import ToolButtonStyle
+from src.lib.palettes.PopupMode import PopupMode
 from src.lib.palettes.ProgressFormat import ProgressFormat
 from src.lib.palettes.Rgb import Rgb
 from src.lib.palettes.Scroll import Scroll

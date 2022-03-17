@@ -46,6 +46,17 @@ AUTO_REPEAT_INTERVAL = 100
 #############################
 
 
+#############################
+##     QToolButton     ##
+#############################
+POPUP_MODE = PopupMode().delayed_popup()
+TOOL_BUTTON_STYLE = ToolButtonStyle().icon_only()
+ARROW_TYPE = ArrowType().no()
+#############################
+##    /QAbstractButton     ##
+#############################
+
+
 ###################
 ##     STYLE     ##
 ###################
