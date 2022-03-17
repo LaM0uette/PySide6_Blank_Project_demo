@@ -92,9 +92,15 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ###  QRadioButton  ###
-        for wg in [self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3]: MyQRadioButton.Demo(wg).Base()
-        for wg in [self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3]: MyQRadioButton.Demo(wg).Transparent()
+        for wg in [self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3]: MyRadioButton.Demo(wg).Base()
+        for wg in [self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3]: MyRadioButton.Demo(wg).Transparent()
         ### /QRadioButton  ###
+
+
+        ###  QCheckBox  ###
+        for wg in [self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3]: MyCheckBox.Demo(wg).Base()
+        for wg in [self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3]: MyCheckBox.Demo(wg).Transparent()
+        ### /QCheckBox  ###
     def IN_WG(self):
         ### Base ###
         self.setCursor(Functions().SET_CURSOR(Cur().souris()))

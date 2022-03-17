@@ -1,5 +1,4 @@
 from .MyQCheckBox import MyQCheckBox
-from src.lib.palettes import *
 from src.lib.globals import v_wg
 
 
