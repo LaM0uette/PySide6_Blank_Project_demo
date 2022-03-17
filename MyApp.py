@@ -95,6 +95,7 @@ class main(Ui_main, QtWidgets.QWidget):
         for wg in [self.rb_demo_th_1, self.rb_demo_th_2, self.rb_demo_th_3]: MyQRadioButton.Base(wg).Base()
         for wg in [self.rb_demo_tr_1, self.rb_demo_tr_2, self.rb_demo_tr_3]: MyQRadioButton.Base(wg).Transparent()
         ### /QRadioButton  ###
+
     def IN_WG(self):
         ### Base ###
         self.setCursor(Functions().SET_CURSOR(Cur().souris()))
