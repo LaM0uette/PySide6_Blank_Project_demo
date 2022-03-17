@@ -101,6 +101,12 @@ class main(Ui_main, QtWidgets.QWidget):
         for wg in [self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3]: MyCheckBox.Demo(wg).Base()
         for wg in [self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3]: MyCheckBox.Demo(wg).Transparent()
         ### /QCheckBox  ###
+
+
+        ###  QCommandLinkButton  ###
+        MyCommandLinkButton.Base(self.clb_demo_th).Base()
+        MyCommandLinkButton.Base(self.clb_demo_tr).Transparent()
+        ### /QCommandLinkButton  ###
     def IN_WG(self):
         ### Base ###
         self.setCursor(Functions().SET_CURSOR(Cur().souris()))

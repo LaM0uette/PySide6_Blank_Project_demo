@@ -22,3 +22,4 @@ from src.widgets import MyPushButton
 from src.widgets import MyToolButton
 from src.widgets import MyRadioButton
 from src.widgets import MyCheckBox
+from src.widgets import MyCommandLinkButton
