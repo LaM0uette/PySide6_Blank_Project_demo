@@ -106,6 +106,13 @@ class Style(MyQToolButton):
                 background-color: rgba{bg_checked_pressed};
                 color: rgba{fg_checked_pressed};
                 }}
+                
+                QToolButton::menu-indicator {{
+                image: url({f"{img}{img_rgb}.svg"});
+                subcontrol-position: right center;
+                subcontrol-origin: padding;
+                left: -2px;
+                }}
 
                 /* BORDURES */
                 .QToolButton {{

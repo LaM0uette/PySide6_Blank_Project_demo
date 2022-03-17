@@ -89,8 +89,6 @@ class main(Ui_main, QtWidgets.QWidget):
         MyToolButton.Base(self.tb_demo_th).Base()
         MyToolButton.Base(self.tb_demo_tr).Transparent()
         ### /QToolButton  ###
-
-
     def IN_WG(self):
         ### Base ###
         self.setCursor(Functions().SET_CURSOR(Cur().souris()))
