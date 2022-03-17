@@ -30,7 +30,8 @@ class MyQCommandLinkButton(MyQPushButton):
             auto_repeat_interval,
             auto_default,
             default,
-            flat
+            flat,
+            description
     ):
 
         # Default
@@ -39,3 +40,4 @@ class MyQCommandLinkButton(MyQPushButton):
         widget.setAutoDefault(auto_default)
         widget.setDefault(default)
         widget.setFlat(flat)
+        if description: widget.setDescription(description)
