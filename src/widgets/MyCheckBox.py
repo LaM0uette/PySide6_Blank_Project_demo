@@ -1,4 +1,4 @@
-from .WgClass.MyQRadioButtonStyle import Style
+from .WgClass.MyQCheckBoxStyle import Style
 from src.lib.palettes import *
 
 
@@ -39,6 +39,8 @@ class Demo:
     def Base(self):
         Style(
             widget=self.widget,
+            auto_exclusive=False,
+            tristate=True
         )
     def Transparent(self):
         bg = Rgb().tr()
@@ -53,5 +55,4 @@ class Demo:
             bg_checked_pressed=bg,
             fg=Rgb().th3(),
             fg_checked=Rgb().bn1(),
-            auto_exclusive=False,
         )
