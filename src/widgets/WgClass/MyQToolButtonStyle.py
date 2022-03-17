@@ -1,8 +1,5 @@
 from .MyQToolButton import MyQToolButton
-from .ClassePb import ClassePb
-from src.build.mods import Functions
 from src.lib.globals import v_wg
-from src.lib.palettes import *
 
 
 class Style(MyQToolButton):
@@ -76,8 +73,6 @@ class Style(MyQToolButton):
             border_checked_hover_rgb=v_wg.BORDER_RGB,
             radius=v_wg.RADIUS
     ):
-
-
         # Style
         super().__init__(widget, size_policy_h, size_policy_v, fixed_width, fixed_height, minimum_width, minimum_height, maximum_width, maximum_height, font, cursor, focus_policy, layout_direction, txt, ico, ico_rgb, ico_width, ico_height, checkable, checked, auto_repeat, auto_exclusive, auto_repeat_delay, auto_repeat_interval, popup_mode, tool_button_style, auto_raise, arrow_type)
         style = f"""
