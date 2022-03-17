@@ -36,21 +36,31 @@ class Style(MyQCheckBox):
             bg_checked_hover=v_wg.BG_CHECKED_HOVER,
             bg_pressed=v_wg.BG_PRESSED,
             bg_checked_pressed=v_wg.BG_CHECKED_PRESSED,
+            bg_indeterminate_pressed=v_wg.BG_INDETERMINATE_PRESSED,
+            bg_indeterminate=v_wg.BG_INDETERMINATE,
+            bg_indeterminate_hover=v_wg.BG_INDETERMINATE_HOVER,
             fg=v_wg.FG,
             fg_hover=v_wg.FG_HOVER,
             fg_checked=v_wg.FG_CHECKED,
             fg_checked_hover=v_wg.FG_CHECKED_HOVER,
             fg_pressed=v_wg.FG_PRESSED,
             fg_checked_pressed=v_wg.FG_CHECKED_PRESSED,
+            fg_indeterminate_pressed=v_wg.FG_INDETERMINATE_PRESSED,
+            fg_indeterminate=v_wg.FG_INDETERMINATE,
+            fg_indeterminate_hover=v_wg.FG_INDETERMINATE_HOVER,
             spacing=10,
             img_uncheck=v_wg.IMG_UNCHECK,
             img_uncheck_hover=v_wg.IMG_UNCHECK_HOVER,
             img_check=v_wg.IMG_CHECK,
             img_check_hover=v_wg.IMG_CHECK_HOVER,
+            img_indeterminate=v_wg.IMG_INDETERMINATE,
+            img_indeterminate_hover=v_wg.IMG_INDETERMINATE_HOVER,
             img_uncheck_rgb=v_wg.IMG_UNCHECK_RGB,
             img_uncheck_hover_rgb=v_wg.IMG_UNCHECK_HOVER_RGB,
             img_check_rgb=v_wg.IMG_CHECK_RGB,
             img_check_hover_rgb=v_wg.IMG_CHECK_HOVER_RGB,
+            img_indeterminate_rgb=v_wg.IMG_INDETERMINATE_RGB,
+            img_indeterminate_hover_rgb=v_wg.IMG_INDETERMINATE_HOVER_RGB,
             img_width=15,
             img_height=15,
             img_margin=(0, 0, 0, 5),
@@ -66,6 +76,12 @@ class Style(MyQCheckBox):
             border_checked_hover=v_wg.BORDER_WIDTH,
             border_checked_hover_style=v_wg.BORDER_STYLE,
             border_checked_hover_rgb=v_wg.BORDER_RGB,
+            border_indeterminate=v_wg.BORDER_WIDTH,
+            border_indeterminate_style=v_wg.BORDER_STYLE,
+            border_indeterminate_rgb=v_wg.BORDER_RGB,
+            border_indeterminate_hover=v_wg.BORDER_WIDTH,
+            border_indeterminate_hover_style=v_wg.BORDER_STYLE,
+            border_indeterminate_hover_rgb=v_wg.BORDER_RGB,
             radius=v_wg.RADIUS
     ):
         # Style
@@ -98,6 +114,18 @@ class Style(MyQCheckBox):
                 background-color: rgba{bg_checked_pressed};
                 color: rgba{fg_checked_pressed};
                 }}
+                QCheckBox:indeterminate {{
+                background-color: rgba{bg_indeterminate};
+                color: rgba{fg_indeterminate};
+                }}
+                QCheckBox:indeterminate:hover {{
+                background-color: rgba{bg_indeterminate_hover};
+                color: rgba{fg_indeterminate_hover};
+                }}
+                QCheckBox:indeterminate:pressed {{
+                background-color: rgba{bg_indeterminate_pressed};
+                color: rgba{fg_indeterminate_pressed};
+                }}
 
                 /* IMG */
                 QCheckBox::indicator {{
@@ -119,6 +147,12 @@ class Style(MyQCheckBox):
                 }}
                 QCheckBox::indicator:checked:hover {{
                 image: url({f"{img_check_hover}{img_check_hover_rgb}.svg"});
+                }}
+                QCheckBox::indicator::indeterminate {{
+                image: url({f"{img_indeterminate}{img_indeterminate_rgb}.svg"});
+                }}
+                QCheckBox::indicator::indeterminate:hover {{
+                image: url({f"{img_indeterminate_hover}{img_indeterminate_hover_rgb}.svg"});
                 }}
 
                 /* BORDURES */
@@ -145,6 +179,18 @@ class Style(MyQCheckBox):
                 border-bottom: {border_checked_hover[1]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
                 border-right: {border_checked_hover[2]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
                 border-left: {border_checked_hover[3]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
+                }}
+                .QCheckBox:indeterminate {{
+                border-top: {border_indeterminate[0]}px {border_indeterminate_style} rgba{border_indeterminate_rgb};
+                border-bottom: {border_indeterminate[1]}px {border_indeterminate_style} rgba{border_indeterminate_rgb};
+                border-right: {border_indeterminate[2]}px {border_indeterminate_style} rgba{border_indeterminate_rgb};
+                border-left: {border_indeterminate[3]}px {border_indeterminate_style} rgba{border_indeterminate_rgb};
+                }}
+                .QCheckBox:indeterminate:hover {{
+                border-top: {border_indeterminate_hover[0]}px {border_indeterminate_hover_style} rgba{border_indeterminate_hover_rgb};
+                border-bottom: {border_indeterminate_hover[1]}px {border_indeterminate_hover_style} rgba{border_indeterminate_hover_rgb};
+                border-right: {border_indeterminate_hover[2]}px {border_indeterminate_hover_style} rgba{border_indeterminate_hover_rgb};
+                border-left: {border_indeterminate_hover[3]}px {border_indeterminate_hover_style} rgba{border_indeterminate_hover_rgb};
                 }}
 
                 /* RAYONS */
