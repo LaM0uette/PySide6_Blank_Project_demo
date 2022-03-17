@@ -258,7 +258,8 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
 if __name__ == "__main__":
-    Functions().GEN_SVG()
+    if config.debug:
+        Functions().GEN_SVG()
 
     app = QtWidgets.QApplication(sys.argv)
     splash_screen = SplashScreen()

@@ -12,7 +12,7 @@
         "cur": "MyApp"
     },
     "var": {
-        "debug": true,
+        "debug": false,
         "resize": true,
         "auto_close": true,
         "toolbox_pin": true
