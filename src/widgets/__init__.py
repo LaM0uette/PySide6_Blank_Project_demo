@@ -20,4 +20,4 @@ from src.widgets.TreeWidget import TreeWidget
 
 from src.widgets import MyPushButton
 from src.widgets import MyToolButton
-from src.widgets import MyQRadioButton
+from src.widgets import MyRadioButton
