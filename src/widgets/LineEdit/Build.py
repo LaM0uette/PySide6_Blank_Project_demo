@@ -19,7 +19,7 @@ class Build:
             font_size=vb_wg.FONT_SIZE,
 
             # Paramètres
-            align_horizontal=Align().left(),
+            align_horizontal=Align.left(),
             align_vertical=Align().center_vertical(),
             clear_button=False,
             echo_mode=EchoMode().normal(),

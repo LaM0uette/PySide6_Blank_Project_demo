@@ -1,18 +1,14 @@
-import http.client
+import requests
 
-conn = http.client.HTTPSConnection("flaticon.p.rapidapi.com")
 
-payload = "apikey=febcd634512d10152df637a57086f72c3ddc808c"
-
+url = "https://api.flaticon.com/v3/app/authentication"
+payload = "apikey=4857a47f7d6ee8b4fff95628639f0b8bc4b9ffc1"
 headers = {
     'content-type': "application/x-www-form-urlencoded",
-    'x-rapidapi-host': "flaticon.p.rapidapi.com",
-    'x-rapidapi-key': "4ec0205882msh1de920897726356p163353jsn0288ca06b940"
+    'x-rapidapi-host': "api.flaticon.com",
+    'x-rapidapi-key': "493dc97948msh3d99bd78295a935p129a58jsn6644d99348d1"
     }
 
-conn.request("POST", "/app/authentication", payload, headers)
+response = requests.request("POST", url, data=payload, headers=headers, verify=False)
 
-res = conn.getresponse()
-data = res.read()
-
-print(data.decode("utf-8"))
+print(response.text)

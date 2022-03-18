@@ -3,10 +3,23 @@ from PySide6.QtCore import Qt
 
 class Align:
 
-    def center(self): return Qt.AlignCenter
-    def center_horizontal(self): return Qt.AlignHCenter
-    def center_vertical(self): return Qt.AlignVCenter
-    def top(self): return Qt.AlignTop
-    def bottom(self): return Qt.AlignBottom
-    def right(self): return Qt.AlignRight
-    def left(self): return Qt.AlignLeft
+    @staticmethod
+    def center(): return Qt.AlignCenter
+
+    @staticmethod
+    def center_horizontal(): return Qt.AlignHCenter
+
+    @staticmethod
+    def center_vertical(): return Qt.AlignVCenter
+
+    @staticmethod
+    def top(): return Qt.AlignTop
+
+    @staticmethod
+    def bottom(): return Qt.AlignBottom
+
+    @staticmethod
+    def right(): return Qt.AlignRight
+
+    @staticmethod
+    def left(): return Qt.AlignLeft
