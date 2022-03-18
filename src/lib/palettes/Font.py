@@ -9,8 +9,6 @@ class FontSize:
     H3 = 16
     H4 = 12
     H5 = 8
-
-
 class Font:
 
     @staticmethod
