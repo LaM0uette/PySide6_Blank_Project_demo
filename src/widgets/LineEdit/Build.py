@@ -25,7 +25,7 @@ class Build:
             echo_mode=EchoMode.NORMAL,
             focus_policy=vb_wg.FOCUS_POLICY,
             frame=False,
-            input_mask=InputMask().no(),
+            input_mask=InputMask.NO,
             max_length=vb_wg.MAX_LENGTH,
 
             # Couleurs BG

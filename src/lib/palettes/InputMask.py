@@ -1,15 +1,13 @@
-
-
 class InputMask:
 
-    def no(self): return ""
-    def letter_required(self): return "A"
-    def letter_not_required(self): return "a"
-    def letter_and_number_required(self): return "N"
-    def letter_and_number_not_required(self): return "n"
-    def non_blank_required(self): return "X"
-    def non_blank_not_required(self): return "x"
-    def number_required(self): return "9"
-    def number_not_required(self): return "0"
-    def hexa_required(self): return "H"
-    def hexa_not_required(self): return "h"
+    NO = ""
+    LETTER_REQUIRED = "A"
+    LETTER_NOT_REQUIRED = "a"
+    LETTER_AND_NUMBER_REQUIRED = "N"
+    LETTER_AND_NUMBER_NOT_REQUIRED = "n"
+    NO_BLANK_REQUIRED = "X"
+    NO_BLANK_NOT_REQUIRED = "x"
+    NUMBER_REQUIRED = "9"
+    NUMBER_NOT_REQUIRED = "0"
+    HEXA_REQUIRED = "H"
+    HEXA_NOT_REQUIRED = "h"
