@@ -22,7 +22,7 @@ CUR = Cur().souris()
 CUR_ACTION = Cur().main()
 
 # FocusPolicy
-FOCUS_POLICY = FocusPolicy().no_focus()
+FOCUS_POLICY = FocusPolicy.NO
 
 # LayoutDirection
 LAYOUT_DIRECTION = LayoutDirection().left_to_right()

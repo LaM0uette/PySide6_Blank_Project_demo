@@ -18,7 +18,7 @@ class Base:
             width=Dim.H9,
             height=Dim.H9,
 
-            focus_policy=FocusPolicy().no_focus(),
+            focus_policy=FocusPolicy.NO,
 
             bg=Rgb().tr(),
             bg_hover=Rgb().tr(),
@@ -35,7 +35,7 @@ class Base:
             width=Dim.H5,
             height=Dim.H5,
 
-            focus_policy=FocusPolicy().no_focus(),
+            focus_policy=FocusPolicy.NO,
 
             bg=Rgb().tr(),
             bg_hover=Rgb().tr(),
@@ -52,7 +52,7 @@ class Base:
             width=Dim.H9,
             height=Dim.H9,
 
-            focus_policy=FocusPolicy().no_focus(),
+            focus_policy=FocusPolicy.NO,
 
             bg=Rgb().tr(),
             bg_hover=Rgb().tr(),
@@ -66,7 +66,7 @@ class Base:
         Build(
             *self.wgs,
 
-            focus_policy=FocusPolicy().no_focus(),
+            focus_policy=FocusPolicy.NO,
 
             font_size=self.font_size,
         )
@@ -74,7 +74,7 @@ class Base:
         Build(
             *self.wgs,
 
-            focus_policy=FocusPolicy().no_focus(),
+            focus_policy=FocusPolicy.NO,
 
             font_size=self.font_size,
 
@@ -87,7 +87,7 @@ class Base:
         Build(
             *self.wgs,
 
-            focus_policy=FocusPolicy().no_focus(),
+            focus_policy=FocusPolicy.NO,
 
             font_size=self.font_size,
 

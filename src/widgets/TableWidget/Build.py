@@ -24,7 +24,7 @@ class Build:
             drag_enabled=False,
             drag_drop_mode=vb_wg.DRAG_DROP_MODE,
             drop_action=vb_wg.DROP_ACTION,
-            focus_policy=FocusPolicy().no_focus(),
+            focus_policy=FocusPolicy.NO,
             frame_shape=vb_wg.FRAME_SHAPE,
             frame_shadow=vb_wg.FRAME_SHADOW,
             line_width=0,

@@ -22,7 +22,7 @@ class Build:
             animate=False,
             scroll_h=vb_wg.SCROLL_H,
             scroll_v=vb_wg.SCROLL_V,
-            focus_policy=FocusPolicy().no_focus(),
+            focus_policy=FocusPolicy.NO,
             frame_shape=vb_wg.FRAME_SHAPE,
             frame_shadow=vb_wg.FRAME_SHADOW,
             line_width=0,
