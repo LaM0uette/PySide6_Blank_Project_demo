@@ -1,7 +1,5 @@
-
-
 class ProgressFormat:
 
-    def percentage(self): return "%p%"
-    def value(self): return "%v"
-    def number_step(self): return "%m"
+    PERCENTAGE = "%p%"
+    VALUE = "%v"
+    NUMBER_STEP = "%m"
