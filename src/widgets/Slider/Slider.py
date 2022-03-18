@@ -62,7 +62,7 @@ class Base:
         Build(
             *self.wgs,
 
-            height=Dim().h8(),
+            height=Dim.H8,
 
             value_max=255,
 

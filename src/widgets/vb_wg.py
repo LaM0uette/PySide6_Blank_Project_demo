@@ -6,7 +6,7 @@ from src.lib.palettes import *
 ##     DIMENSIONS     ##
 ########################
 WIDTH = None
-HEIGHT = Dim().h9()
+HEIGHT = Dim.H9
 
 ####################
 ##     POLICE     ##

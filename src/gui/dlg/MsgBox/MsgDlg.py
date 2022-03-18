@@ -79,7 +79,7 @@ class MsgDlg(msg_ui.Ui_Msg, QtWidgets.QDialog):
         self.setCursor(Functions().SET_CURSOR(cur=Cur().souris()))
 
         # Frame menu_top
-        self.fr_menu_top.setFixedHeight(Dim().h9())
+        self.fr_menu_top.setFixedHeight(Dim.H9)
 
         # Menu_top
         self.lb_mt_nom.setText(self.title)

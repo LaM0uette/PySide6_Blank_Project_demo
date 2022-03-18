@@ -117,7 +117,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### Widget blanc pour centrer le nom de l'app ###
-        dim = Dim().h9() * 1.4
+        dim = Dim.H9 * 1.4
         Functions().SET_DIM(self.wg_mt_blank, width=dim*3, height=dim)
 
 
@@ -132,8 +132,8 @@ class main(Ui_main, QtWidgets.QWidget):
                 f"""
                 QSizeGrip {{
                 image: url({Img().resize()}th3.svg);
-                width: {Dim().h10()}px;
-                height: {Dim().h10()}px;
+                width: {Dim.H10}px;
+                height: {Dim.H10}px;
                 }}
                 """
             )

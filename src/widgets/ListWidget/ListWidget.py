@@ -47,7 +47,7 @@ class Demo:
         Build(
             *self.wgs,
 
-            height=Dim().h5(),
+            height=Dim.H5,
 
             fg_item_checked=Rgb().bn1(),
             border=(StyleBase().border(),) * 4,
@@ -59,7 +59,7 @@ class Demo:
         Build(
             *self.wgs,
 
-            height=Dim().h5(),
+            height=Dim.H5,
 
             bg=Rgb().tr(),
             bg_item=Rgb().tr(),

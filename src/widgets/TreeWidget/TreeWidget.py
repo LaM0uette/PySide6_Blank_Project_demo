@@ -52,7 +52,7 @@ class Base:
         Build(
             *self.wgs,
 
-            width=Dim().h5(),
+            width=Dim.H5,
 
             scroll_h=Scroll().off(),
             scroll_v=Scroll().off(),

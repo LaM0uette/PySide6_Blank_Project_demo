@@ -83,7 +83,7 @@ class ResponseDlg(rep_ui.Ui_Rep, QtWidgets.QDialog):
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
 
         # Frame menu_top
-        self.fr_menu_top.setFixedHeight(Dim().h9())
+        self.fr_menu_top.setFixedHeight(Dim.H9)
 
         # Menu_top
         self.lb_mt_nom.setText(self.title)

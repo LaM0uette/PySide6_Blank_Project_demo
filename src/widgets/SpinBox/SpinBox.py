@@ -60,7 +60,7 @@ class Dlg:
         Build(
             *self.wgs,
 
-            width=Dim().h7(),
+            width=Dim.H7,
 
             value_max=value_max,
         )

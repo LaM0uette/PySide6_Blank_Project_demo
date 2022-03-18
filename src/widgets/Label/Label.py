@@ -15,8 +15,8 @@ class Base:
         Build(
             *self.wgs,
 
-            width=Dim().h9(),
-            height=Dim().h9(),
+            width=Dim.H9,
+            height=Dim.H9,
 
             focus_policy=FocusPolicy().no_focus(),
 
@@ -32,8 +32,8 @@ class Base:
         Build(
             *self.wgs,
 
-            width=Dim().h5(),
-            height=Dim().h5(),
+            width=Dim.H5,
+            height=Dim.H5,
 
             focus_policy=FocusPolicy().no_focus(),
 
@@ -49,8 +49,8 @@ class Base:
         Build(
             *self.wgs,
 
-            width=Dim().h9(),
-            height=Dim().h9(),
+            width=Dim.H9,
+            height=Dim.H9,
 
             focus_policy=FocusPolicy().no_focus(),
 
@@ -112,7 +112,7 @@ class Demo:
         Build(
             *self.wgs,
 
-            height=Dim().h9(),
+            height=Dim.H9,
             indent=5,
 
             font_size=self.font_size,
@@ -121,7 +121,7 @@ class Demo:
         Build(
             *self.wgs,
 
-            height=Dim().h9(),
+            height=Dim.H9,
             indent=5,
 
             font_size=self.font_size,

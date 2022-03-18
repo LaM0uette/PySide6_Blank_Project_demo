@@ -51,7 +51,7 @@ class Demo:
         Build(
             *self.wgs,
 
-            height=Dim().h4(),
+            height=Dim.H4,
 
             bg_corner=Rgb().th1(),
 
@@ -78,7 +78,7 @@ class Demo:
         Build(
             *self.wgs,
 
-            height=Dim().h4(),
+            height=Dim.H4,
             header_h=False,
             header_v=False,
 

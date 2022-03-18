@@ -38,12 +38,12 @@ class Build:
             gradient=((0,) * 4),
             
             # Dimensions WG
-            width_groove=Dim().h9(),
-            height_groove=Dim().h9(),
-            width_handle_h=Dim().h9(),
-            height_handle_h=Dim().h9(),
-            width_handle_v=Dim().h9(),
-            height_handle_v=Dim().h9(),
+            width_groove=Dim.H9,
+            height_groove=Dim.H9,
+            width_handle_h=Dim.H9,
+            height_handle_h=Dim.H9,
+            width_handle_v=Dim.H9,
+            height_handle_v=Dim.H9,
             
             # Positions WG
             margin_handle_h=(0,) * 4,

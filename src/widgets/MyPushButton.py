@@ -46,7 +46,7 @@ class MenuTop:
         Style(
             self.widget,
             pb_type="zoom",
-            fixed_width=Dim().h9() * 1.2,
+            fixed_width=Dim.H9 * 1.2,
             cursor=Cur().souris_main(),
 
             bg=bg,
@@ -156,7 +156,7 @@ class Dlg:
         Style(
             self.widget,
             size_policy_v=SizePolicy().expanding(),
-            fixed_width=Dim().h6(),
+            fixed_width=Dim.H6,
             fixed_height=None,
             bg=bg,
             fg=fg,
@@ -226,7 +226,7 @@ class Plein:
     def _rtn(self,
              bg_gen=Rgb().tr(),
              fg_gen=Rgb().tr(),
-             height=Dim().h5(),
+             height=Dim.H5,
 
              border_gen=(0, )*4,
              border_gen_rgb=Rgb().tr(),

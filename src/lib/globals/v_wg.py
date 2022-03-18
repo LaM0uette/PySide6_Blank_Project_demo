@@ -12,7 +12,7 @@ SIZE_POLICY_V = SizePolicy().prefered()
 WIDTH = None
 HEIGHT = None
 WG_WIDTH = None
-WG_HEIGHT = Dim().h9()
+WG_HEIGHT = Dim.H9
 
 # Font
 FONT = Font().base()
