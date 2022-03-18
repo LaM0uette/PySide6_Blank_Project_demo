@@ -139,7 +139,7 @@ class Build:
             wg.setPalette(palette_txt)
 
             # Curseur
-            wg.setCursor(Functions().SET_CURSOR(Cur().ibeam()))
+            wg.setCursor(Functions().SET_CURSOR(Cur.IBEAM))
 
             # Style
             wg.setStyleSheet(style)
