@@ -70,8 +70,8 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
 
         ### QLabel ###
         Label.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.ico_rgb)
-        Label.Base(self.lb_mt_nom, font_size=Font().h3()).tr()
-        Label.Base(self.lb_rgb_red, self.lb_rgb_green, self.lb_rgb_blue, font_size=Font().h4()).tr()
+        Label.Base(self.lb_mt_nom, font_size=Font.H3).tr()
+        Label.Base(self.lb_rgb_red, self.lb_rgb_green, self.lb_rgb_blue, font_size=Font.H4).tr()
         ### /QLabel ###
 
 

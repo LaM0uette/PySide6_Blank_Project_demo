@@ -133,7 +133,7 @@ class Demo:
     def wg_categorie(self):
         Build(
             *self.wgs,
-            font_size=Font().h2(),
+            font_size=Font.H2,
 
             align_horizontal=Align.CENTER_HORIZONTAL,
 

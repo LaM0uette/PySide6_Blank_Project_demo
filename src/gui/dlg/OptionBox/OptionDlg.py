@@ -94,7 +94,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
 
         ### QLabel ###
         Label.Base(self.lb_mt_ico).ico_main()
-        Label.Base(self.lb_mt_nom, font_size=Font().h3()).tr()
+        Label.Base(self.lb_mt_nom, font_size=Font.H3).tr()
         Label.Base(self.lb_opt_info_nom).titre()
         Label.Base(
             self.lb_opt_info_desc, self.lb_opt_info_auteur, self.lb_opt_info_version, self.lb_opt_cfg_opacity,

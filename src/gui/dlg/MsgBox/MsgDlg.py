@@ -65,7 +65,7 @@ class MsgDlg(msg_ui.Ui_Msg, QtWidgets.QDialog):
 
         ### QLabel ###
         Label.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.ico_rgb)
-        Label.Base(self.lb_mt_nom, font_size=Font().h3()).tr()
+        Label.Base(self.lb_mt_nom, font_size=Font.H3).tr()
         Label.Base(self.lb_msg_text).tr()
         ### /QLabel ###
 

@@ -68,7 +68,7 @@ class ResponseDlg(rep_ui.Ui_Rep, QtWidgets.QDialog):
 
         ### QLabel ###
         Label.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.ico_rgb)
-        Label.Base(self.lb_mt_nom, font_size=Font().h3()).tr()
+        Label.Base(self.lb_mt_nom, font_size=Font.H3).tr()
         Label.Base(self.lb_rep_text).tr()
         ### /QLabel ###
 

@@ -68,7 +68,7 @@ class InputDlg(input_ui.Ui_Input, QtWidgets.QDialog):
 
         ### QLabel ###
         Label.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.ico_rgb)
-        Label.Base(self.lb_mt_nom, font_size=Font().h3()).tr()
+        Label.Base(self.lb_mt_nom, font_size=Font.H3).tr()
         Label.Base(self.lb_input_text).tr()
         ### /QLabel ###
 
