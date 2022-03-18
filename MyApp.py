@@ -127,7 +127,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### size_grip ###
         if config.resize:
-            self.size_grip.setCursor(Functions().SET_CURSOR(Cur().fleche_nwse()))
+            self.size_grip.setCursor(Functions().SET_CURSOR(Cur.FLECHE_NWSE))
             self.size_grip.setStyleSheet(
                 f"""
                 QSizeGrip {{

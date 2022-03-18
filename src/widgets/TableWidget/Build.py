@@ -36,7 +36,7 @@ class Build:
             selection_mode=vb_wg.SELECTION_MODE,
 
             # Curseur
-            cursor=Cur().croix(),
+            cursor=Cur.CROIX,
 
             # Couleurs BG
             bg=vb_wg.BG,
