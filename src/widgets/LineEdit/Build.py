@@ -22,7 +22,7 @@ class Build:
             align_horizontal=Align.LEFT,
             align_vertical=Align.CENTER_VERTICAL,
             clear_button=False,
-            echo_mode=EchoMode().normal(),
+            echo_mode=EchoMode.NORMAL,
             focus_policy=vb_wg.FOCUS_POLICY,
             frame=False,
             input_mask=InputMask().no(),
