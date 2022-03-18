@@ -1,19 +1,12 @@
+from dataclasses import dataclass
+
 from PySide6.QtCore import Qt
 
 
+@dataclass
 class ArrowType:
-
-    @staticmethod
-    def no(): return Qt.NoArrow
-
-    @staticmethod
-    def up(): return Qt.UpArrow
-
-    @staticmethod
-    def down(): return Qt.DownArrow
-
-    @staticmethod
-    def left(): return Qt.LeftArrow
-
-    @staticmethod
-    def right(): return Qt.RightArrow
+    NO: Qt = Qt.NoArrow
+    UP: Qt = Qt.UpArrow
+    DOWN: Qt = Qt.DownArrow
+    LEFT: Qt = Qt.LeftArrow
+    RIGHT: Qt = Qt.RightArrow

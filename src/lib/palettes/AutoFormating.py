@@ -1,5 +1,6 @@
-from PySide6.QtWidgets import QTextEdit
 from dataclasses import dataclass
+
+from PySide6.QtWidgets import QTextEdit
 
 
 @dataclass
