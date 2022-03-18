@@ -1,25 +1,15 @@
+from dataclasses import dataclass
+
 from PySide6.QtCore import Qt
 
 
+@dataclass
 class Align:
 
-    @staticmethod
-    def center(): return Qt.AlignCenter
-
-    @staticmethod
-    def center_horizontal(): return Qt.AlignHCenter
-
-    @staticmethod
-    def center_vertical(): return Qt.AlignVCenter
-
-    @staticmethod
-    def top(): return Qt.AlignTop
-
-    @staticmethod
-    def bottom(): return Qt.AlignBottom
-
-    @staticmethod
-    def right(): return Qt.AlignRight
-
-    @staticmethod
-    def left(): return Qt.AlignLeft
+    CENTER = Qt.AlignCenter
+    CENTER_HORIZONTAL = Qt.AlignHCenter
+    CENTER_VERTICAL = Qt.AlignVCenter
+    TOP = Qt.AlignTop
+    BOTTOM = Qt.AlignBottom
+    RIGHT = Qt.AlignRight
+    LEFT = Qt.AlignLeft

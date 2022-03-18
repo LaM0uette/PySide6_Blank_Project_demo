@@ -17,8 +17,8 @@ class Build:
             font_size=vb_wg.FONT_SIZE,
 
             # Paramètres
-            align_horizontal=Align.center_horizontal(),
-            align_vertical=Align.center_vertical(),
+            align_horizontal=Align.CENTER_HORIZONTAL,
+            align_vertical=Align.CENTER_VERTICAL,
             progress_format=vb_wg.PROGRESS_FORMAT,
             text_visible=vb_wg.TEXT_VISIBLE,
             value_min=vb_wg.VALUE_MIN,

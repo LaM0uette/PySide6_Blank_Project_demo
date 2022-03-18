@@ -18,8 +18,8 @@ class Build:
 
             # Paramètres
             accelerated=True,
-            align_horizontal=Align.center_horizontal(),
-            align_vertical=Align.center_vertical(),
+            align_horizontal=Align.CENTER_HORIZONTAL,
+            align_vertical=Align.CENTER_VERTICAL,
             button_symbols=vb_wg.BUTTON_SYMBOLS,
             focus_policy=vb_wg.FOCUS_POLICY,
             frame=False,
