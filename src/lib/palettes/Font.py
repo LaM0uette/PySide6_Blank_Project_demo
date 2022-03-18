@@ -10,26 +10,18 @@ class Font:
     H4 = 12             # A SUPPRIMER
     H5 = 8              # A SUPPRIMER
 
-    font_size = {
-        "h1": 33,
-        "h2": 25,
-        "h3": 17,
-        "h4": 13,
-        "h5": 9
-    }
-
     def base(self):
         ft = QtGui.QFont()
         ft.setFamily(config.font)
-        ft.setPointSize(self.font_size.get("h4"))
+        ft.setPointSize(self.H4)
         return ft
     def titre(self):
         ft = QtGui.QFont()
         ft.setFamily(config.font)
-        ft.setPointSize(self.font_size.get("h1"))
+        ft.setPointSize(self.H1)
         return ft
     def texte(self):
         ft = QtGui.QFont()
         ft.setFamily(config.font)
-        ft.setPointSize(self.font_size.get("h5"))
+        ft.setPointSize(self.H5)
         return ft
