@@ -20,7 +20,7 @@ class Build:
 
             # Paramètres
             align_horizontal=Align.left(),
-            align_vertical=Align().center_vertical(),
+            align_vertical=Align.center_vertical(),
             focus_policy=vb_wg.FOCUS_POLICY,
             frame_shape=vb_wg.FRAME_SHAPE,
             frame_shadow=vb_wg.FRAME_SHADOW,
