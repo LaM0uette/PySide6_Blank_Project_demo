@@ -68,9 +68,9 @@ class Event:
         cur = QtGui.QCursor()
         verif_height = cur.pos().y() - self.ui.pos().y()
         if event.buttons() == QtCore.Qt.LeftButton and self.margin < verif_height < Dim.H9+self.margin and self.ui.windowState() != QtCore.Qt.WindowMaximized and cur.pos().y() <= self.margin:
-            self.ui.setCursor(Functions().SET_CURSOR(Cur().agrandir()))
+            self.ui.setCursor(Functions().SET_CURSOR(Cur.AGRANDIR))
         else:
-            self.ui.setCursor(Functions().SET_CURSOR(Cur().souris()))
+            self.ui.setCursor(Functions().SET_CURSOR(Cur.SOURIS))
 
         try:
             if event.buttons() == QtCore.Qt.LeftButton and self.margin < verif_height < Dim.H9+self.margin and self.ui.windowState() != QtCore.Qt.WindowMaximized:
@@ -86,6 +86,6 @@ class Event:
         cur = QtGui.QCursor()
         verif_height = cur.pos().y() - self.ui.pos().y()
         if Dim.H9 + self.margin > verif_height > self.margin >= cur.pos().y() and self.ui.windowState() != QtCore.Qt.WindowMaximized:
-            self.ui.setCursor(Functions().SET_CURSOR(Cur().souris()))
+            self.ui.setCursor(Functions().SET_CURSOR(Cur.SOURIS))
             self.e_agrandir()
             event.accept()

@@ -19,7 +19,7 @@ class Base:
             *self.wgs,
 
             edit=True,
-            cursor=Cur().souris_main(),
+            cursor=Cur.SOURIS_MAIN,
 
             bg=Rgb().tr(),
             bg_hover=Rgb().tr(),

@@ -85,7 +85,7 @@ class InputDlg(input_ui.Ui_Input, QtWidgets.QDialog):
         ### /QText ###
     def IN_WG(self):
         # Base
-        self.setCursor(Functions().SET_CURSOR(cur=Cur().souris()))
+        self.setCursor(Functions().SET_CURSOR(cur=Cur.SOURIS))
 
         # Frame menu_top
         self.fr_menu_top.setFixedHeight(Dim.H9)

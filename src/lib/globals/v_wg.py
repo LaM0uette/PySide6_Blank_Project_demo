@@ -18,8 +18,8 @@ WG_HEIGHT = Dim.H9
 FONT = Font().base()
 
 # Cursor
-CUR = Cur().souris()
-CUR_ACTION = Cur().main()
+CUR = Cur.SOURIS
+CUR_ACTION = Cur.MAIN
 
 # FocusPolicy
 FOCUS_POLICY = FocusPolicy.NO

@@ -25,7 +25,7 @@ class Build:
             value_max=vb_wg.VALUE_MAX,
 
             # Curseur
-            cursor=Cur().souris(),
+            cursor=Cur.SOURIS,
 
             # Couleurs BG
             bg=vb_wg.BG,

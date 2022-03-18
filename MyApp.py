@@ -109,7 +109,7 @@ class main(Ui_main, QtWidgets.QWidget):
         ### /QCommandLinkButton  ###
     def IN_WG(self):
         ### Base ###
-        self.setCursor(Functions().SET_CURSOR(Cur().souris()))
+        self.setCursor(Functions().SET_CURSOR(Cur.SOURIS))
 
 
         ### Nom de l'app ###

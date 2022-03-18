@@ -48,7 +48,7 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
         ### /QProgressBar ###
     def IN_WG(self):
         ### Base ###
-        self.setCursor(Functions().SET_CURSOR(cur=Cur().souris()))
+        self.setCursor(Functions().SET_CURSOR(cur=Cur.SOURIS))
 
         ### Infos ###
         self.lb_titre.setText(config.nom)

@@ -45,11 +45,11 @@ WORD_WRAP = True
 #####################
 ##     CURSEUR     ##
 #####################
-CUR = Cur().souris()
-CUR_MAIN = Cur().main()
-CUR_VIEW = Cur().souris_main()
-CUR_VIEWPORT = Cur().croix()
-CUR_LE = Cur().ibeam()
+CUR = Cur.SOURIS
+CUR_MAIN = Cur.MAIN
+CUR_VIEW = Cur.SOURIS_MAIN
+CUR_VIEWPORT = Cur.CROIX
+CUR_LE = Cur.IBEAM
 
 ######################
 ##     COULEURS     ##

@@ -28,7 +28,7 @@ class Build:
             focus_policy=vb_wg.FOCUS_POLICY,
 
             # Curseur
-            cursor=Cur().souris_main(),
+            cursor=Cur.SOURIS_MAIN,
 
             # Couleurs BG
             bg=vb_wg.BG,

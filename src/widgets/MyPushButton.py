@@ -47,7 +47,7 @@ class MenuTop:
             self.widget,
             pb_type="zoom",
             fixed_width=Dim.H9 * 1.2,
-            cursor=Cur().souris_main(),
+            cursor=Cur.SOURIS_MAIN,
 
             bg=bg,
             bg_hover=bg,
@@ -230,7 +230,7 @@ class Plein:
 
              border_gen=(0, )*4,
              border_gen_rgb=Rgb().tr(),
-             cursor=Cur().main()
+             cursor=Cur.MAIN
              ):
         Style(
             self.widget,
