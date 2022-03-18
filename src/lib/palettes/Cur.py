@@ -10,7 +10,6 @@ class Cur:
     def _cursor(img, xy):
         return [f"src/assets/cursor/{config.cur}/{img}.cur", xy[0], xy[1]]
 
-
     with open(f"{os.path.dirname(f'src/assets/cursor/{config.cur}/_data.json')}/_data.json", "r", encoding="utf-8") as fichier:
         cur = json.load(fichier)
 
