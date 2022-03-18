@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 
 
-@dataclass
+
 class Dim:
     H0 = 800
     H1 = 600
