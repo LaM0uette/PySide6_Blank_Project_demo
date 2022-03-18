@@ -19,7 +19,7 @@ class Build:
             font_size=vb_wg.FONT_SIZE,
 
             # Paramètres
-            auto_formatting=AutoFormating().none(),
+            auto_formatting=AutoFormating.NONE,
             focus_policy=vb_wg.FOCUS_POLICY,
             frame_shape=vb_wg.FRAME_SHAPE,
             frame_shadow=vb_wg.FRAME_SHADOW,

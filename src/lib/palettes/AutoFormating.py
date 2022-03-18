@@ -1,8 +1,9 @@
 from PySide6.QtWidgets import QTextEdit
+from dataclasses import dataclass
 
 
+@dataclass
 class AutoFormating:
-
-    def none(self): return QTextEdit.AutoNone
-    def bullet_list(self): return QTextEdit.AutoBulletList
-    def all(self): return QTextEdit.AutoAll
+    NONE: QTextEdit = QTextEdit.AutoNone
+    BULLET_LIST: QTextEdit = QTextEdit.AutoBulletList
+    ALL: QTextEdit = QTextEdit.AutoAll
