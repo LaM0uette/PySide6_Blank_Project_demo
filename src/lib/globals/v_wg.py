@@ -15,7 +15,7 @@ WG_WIDTH = None
 WG_HEIGHT = Dim.H9
 
 # Font
-FONT = Font().base()
+FONT = Font.BASE
 
 # Cursor
 CUR = Cur.SOURIS

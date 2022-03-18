@@ -12,32 +12,20 @@ class FontSize:
 
 
 class Font:
+
+    @staticmethod
+    def _gen_font(family, size):
+        ft = QtGui.QFont()
+        ft.setFamily(family)
+        ft.setPointSize(size)
+        return ft
+
     H1 = 32  # A SUPPRIMER
     H2 = 24  # A SUPPRIMER
     H3 = 16  # A SUPPRIMER
     H4 = 12  # A SUPPRIMER
     H5 = 8  # A SUPPRIMER
 
-    font_config = QtGui.QFont()
-    font_config.setFamily(config.font)
-
-    @staticmethod
-    def base():
-        ft = QtGui.QFont()
-        ft.setFamily(config.font)
-        ft.setPointSize(FontSize.H4)
-        return ft
-
-    @staticmethod
-    def titre():
-        ft = QtGui.QFont()
-        ft.setFamily(config.font)
-        ft.setPointSize(FontSize.H1)
-        return ft
-
-    @staticmethod
-    def texte():
-        ft = QtGui.QFont()
-        ft.setFamily(config.font)
-        ft.setPointSize(FontSize.H5)
-        return ft
+    BASE = _gen_font(family=config.font, size=FontSize.H4)
+    TITRE = _gen_font(family=config.font, size=FontSize.H1)
+    TEXTE = _gen_font(family=config.font, size=FontSize.H5)
