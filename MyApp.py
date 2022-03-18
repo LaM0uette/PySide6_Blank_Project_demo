@@ -184,8 +184,8 @@ class main(Ui_main, QtWidgets.QWidget):
             shortcut_txt="Shift+Esc",
             status_tip="Quitter",
             fct=self.e_quitter_tray,
-            sht_1=Keys().shift(),
-            sht_2=Keys().escape()
+            sht_1=Keys.SHIFT,
+            sht_2=Keys.ESCAPE
         )
 
         # self.tray_menu.addSeparator()
