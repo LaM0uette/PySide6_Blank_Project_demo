@@ -20,7 +20,7 @@ FONT_SIZE_HD = Font().h3()
 ########################
 BUTTON_SYMBOLS = ButtonSymbols.PLUS_MINUS
 DRAG_DROP_MODE = DragDropMode.NO_DRAG
-DROP_ACTION = DropAction().move()
+DROP_ACTION = DropAction.MOVE
 EDIT = False
 FOCUS_POLICY = FocusPolicy().strong_focus()
 FLOW = Flow().top_to_bottom()
