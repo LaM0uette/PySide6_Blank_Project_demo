@@ -142,8 +142,8 @@ class Demo:
             fg=Rgb().th3(),
             fg_hover=Rgb().th3(),
 
-            border=(0, StyleBase().border(), 0, 0),
-            border_hover=(0, StyleBase().border(), 0, 0),
+            border=(0, StyleBase.BORDER, 0, 0),
+            border_hover=(0, StyleBase.BORDER, 0, 0),
             border_rgb=Rgb().bn2(),
             border_hover_rgb=Rgb().bn2(),
 

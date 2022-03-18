@@ -74,11 +74,11 @@ class Build:
             border_hover_style=vb_wg.BORDER_STYLE,
             border_hover_rgb=vb_wg.BORDER_RGB,
             # Bordures jours
-            border_day_size=(StyleBase().border(), )*4,
+            border_day_size=(StyleBase.BORDER, )*4,
             border_day_style=vb_wg.BORDER_STYLE,
             border_day_rgb=vb_wg.FG_HOVER,
             # Bordures mois
-            border_month_size=(0, StyleBase().border(), 0, 0),
+            border_month_size=(0, StyleBase.BORDER, 0, 0),
             border_month_style=vb_wg.BORDER_STYLE,
             border_month_rgb=vb_wg.FG_HOVER,
 

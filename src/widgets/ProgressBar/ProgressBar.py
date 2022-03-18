@@ -14,8 +14,8 @@ class Base:
         Build(
             *self.wgs,
 
-            border=(StyleBase().border(),) * 4,
-            border_hover=(StyleBase().border(),) * 4,
+            border=(StyleBase.BORDER,) * 4,
+            border_hover=(StyleBase.BORDER,) * 4,
             border_rgb=Rgb().th3(),
             border_hover_rgb=Rgb().th3(),
         )
@@ -27,8 +27,8 @@ class Base:
 
             bg=Rgb().tr(),
 
-            border=(StyleBase().border(),) * 4,
-            border_hover=(StyleBase().border(),) * 4,
+            border=(StyleBase.BORDER,) * 4,
+            border_hover=(StyleBase.BORDER,) * 4,
             border_rgb=Rgb().th3(),
             border_hover_rgb=Rgb().th3(),
         )
@@ -36,8 +36,8 @@ class Base:
         Build(
             *self.wgs,
 
-            border=(StyleBase().border(),) * 4,
-            border_hover=(StyleBase().border(),) * 4,
+            border=(StyleBase.BORDER,) * 4,
+            border_hover=(StyleBase.BORDER,) * 4,
             border_rgb=Rgb().th3(),
             border_hover_rgb=Rgb().th3(),
 
@@ -55,8 +55,8 @@ class Demo:
         Build(
             *self.wgs,
 
-            border=(StyleBase().border(),) * 4,
-            border_hover=(StyleBase().border(),) * 4,
+            border=(StyleBase.BORDER,) * 4,
+            border_hover=(StyleBase.BORDER,) * 4,
             border_rgb=Rgb().th3(),
             border_hover_rgb=Rgb().th3(),
 
@@ -70,8 +70,8 @@ class Demo:
 
             bg=Rgb().tr(),
 
-            border=(StyleBase().border(),) * 4,
-            border_hover=(StyleBase().border(),) * 4,
+            border=(StyleBase.BORDER,) * 4,
+            border_hover=(StyleBase.BORDER,) * 4,
             border_rgb=Rgb().th3(),
             border_hover_rgb=Rgb().th3(),
 

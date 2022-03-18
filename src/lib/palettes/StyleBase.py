@@ -1,7 +1,5 @@
-
-
 class StyleBase:
 
-    def border(self): return 2
-    def x_ico(self): return 0.65
-    def X_ICO(self): return 0.80
+    BORDER = 2
+    x_ico = 0.65
+    X_ICO = 0.80

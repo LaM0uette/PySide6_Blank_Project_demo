@@ -16,7 +16,7 @@ class Base:
 
             fg_item_checked=Rgb().bn1(),
 
-            border=(StyleBase().border(),)*4,
+            border=(StyleBase.BORDER,)*4,
             border_rgb=Rgb().th3()
         )
     def tr(self):
@@ -50,7 +50,7 @@ class Demo:
             height=Dim.H5,
 
             fg_item_checked=Rgb().bn1(),
-            border=(StyleBase().border(),) * 4,
+            border=(StyleBase.BORDER,) * 4,
             border_rgb=Rgb().th3()
         )
     def tr(self):

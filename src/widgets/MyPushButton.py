@@ -86,7 +86,7 @@ class MenuTop:
 class Txt:
     def __init__(self, widget):
         self.widget = widget
-        self.bd = (StyleBase().border(),)*4
+        self.bd = (StyleBase.BORDER,)*4
         self.bd_rgb = Rgb().th3()
 
     def txt(self):
@@ -141,7 +141,7 @@ class Txt:
 class Dlg:
     def __init__(self, widget):
         self.widget = widget
-        self.bd = (StyleBase().border(),)*4
+        self.bd = (StyleBase.BORDER,)*4
 
     def _rtn(
             self,
@@ -265,7 +265,7 @@ class Plein:
         self._rtn(
             bg_gen=Rgb().th1(),
             fg_gen=Rgb().th3(),
-            border_gen=(StyleBase().border(),) * 4,
+            border_gen=(StyleBase.BORDER,) * 4,
             border_gen_rgb=Rgb().th2(),
         )
     def th2(self):

@@ -7,7 +7,7 @@ from src.widgets.RadioButton.Build import Build
 ##     BASE     ##
 ##################
 class Base:
-    def __init__(self, *wgs, margin=(0, 0, 0, (vb_wg.HEIGHT-(vb_wg.HEIGHT*StyleBase().x_ico()))/2)):
+    def __init__(self, *wgs, margin=(0, 0, 0, (vb_wg.HEIGHT-(vb_wg.HEIGHT*StyleBase.x_ico))/2)):
         self.wgs = wgs
         self.margin = margin
 

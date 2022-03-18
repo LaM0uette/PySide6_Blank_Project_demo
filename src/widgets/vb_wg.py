@@ -139,10 +139,10 @@ IMG_LEFT_RGB = "th3"
 IMG_LEFT_HOVER_RGB = "bn1"
 
 # img dim
-img_width = HEIGHT * StyleBase().x_ico()
-IMG_WIDTH = HEIGHT * StyleBase().X_ICO()
-img_height = HEIGHT * StyleBase().x_ico()
-IMG_HEIGHT = HEIGHT * StyleBase().X_ICO()
+img_width = HEIGHT * StyleBase.x_ico
+IMG_WIDTH = HEIGHT * StyleBase.X_ICO
+img_height = HEIGHT * StyleBase.x_ico
+IMG_HEIGHT = HEIGHT * StyleBase.X_ICO
 
 #####################
 ##     BORDURE     ##

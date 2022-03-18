@@ -15,7 +15,7 @@ class Base:
             *self.wgs,
         )
     def tr(self):
-        bd_hd = (0, StyleBase().border(), 0, 0)
+        bd_hd = (0, StyleBase.BORDER, 0, 0)
         rgb_hb = Rgb().bn1()
 
         Build(
@@ -33,8 +33,8 @@ class Base:
             border_hd_hover_rgb=rgb_hb,
             border_hd_checked_rgb=rgb_hb,
             border_hd_checked_hover_rgb=rgb_hb,
-            border=(StyleBase().border(),) * 4,
-            border_hover=(StyleBase().border(),) * 4,
+            border=(StyleBase.BORDER,) * 4,
+            border_hover=(StyleBase.BORDER,) * 4,
             border_rgb=Rgb().th3(),
             border_hover_rgb=Rgb().th3(),
 
@@ -54,7 +54,7 @@ class Demo:
             *self.wgs,
         )
     def tr(self):
-        bd_hd = (0, StyleBase().border(), 0, 0)
+        bd_hd = (0, StyleBase.BORDER, 0, 0)
         rgb_hb = Rgb().bn1()
 
         Build(
@@ -72,8 +72,8 @@ class Demo:
             border_hd_hover_rgb=rgb_hb,
             border_hd_checked_rgb=rgb_hb,
             border_hd_checked_hover_rgb=rgb_hb,
-            border=(StyleBase().border(),) * 4,
-            border_hover=(StyleBase().border(),) * 4,
+            border=(StyleBase.BORDER,) * 4,
+            border_hover=(StyleBase.BORDER,) * 4,
             border_rgb=Rgb().th3(),
             border_hover_rgb=Rgb().th3(),
 

@@ -16,7 +16,7 @@ class Base:
 
             bg_corner=Rgb().th1(),
 
-            border=(StyleBase().border(),) * 4,
+            border=(StyleBase.BORDER,) * 4,
             border_rgb=Rgb().th3(),
         )
     def tr(self):
@@ -55,7 +55,7 @@ class Demo:
 
             bg_corner=Rgb().th1(),
 
-            border=(StyleBase().border(),) * 4,
+            border=(StyleBase.BORDER,) * 4,
             border_rgb=Rgb().th3(),
             border_hd=bd_gen,
             border_hd_hover=bd_gen,
