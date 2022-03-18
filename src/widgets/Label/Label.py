@@ -91,7 +91,7 @@ class Base:
 
             font_size=self.font_size,
 
-            align_horizontal=Align().center_horizontal(),
+            align_horizontal=Align.center_horizontal(),
 
             bg=Rgb().tr(),
             bg_hover=Rgb().tr(),
@@ -135,7 +135,7 @@ class Demo:
             *self.wgs,
             font_size=Font().h2(),
 
-            align_horizontal=Align().center_horizontal(),
+            align_horizontal=Align.center_horizontal(),
 
             bg=Rgb().tr(),
             bg_hover=Rgb().tr(),

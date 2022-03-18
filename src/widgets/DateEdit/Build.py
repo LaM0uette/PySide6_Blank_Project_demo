@@ -21,8 +21,8 @@ class Build:
             font_size=vb_wg.FONT_SIZE,
 
             # Paramètres
-            align_horizontal=Align().center_horizontal(),
-            align_vertical=Align().center_vertical(),
+            align_horizontal=Align.center_horizontal(),
+            align_vertical=Align.center_vertical(),
             button_symbols=vb_wg.BUTTON_SYMBOLS,
             calendar_popup=True,
             focus_policy=vb_wg.FOCUS_POLICY,

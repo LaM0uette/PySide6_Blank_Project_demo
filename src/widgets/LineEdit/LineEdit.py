@@ -25,7 +25,7 @@ class Base:
         Build(
             *self.wgs,
 
-            align_horizontal=Align().center_horizontal(),
+            align_horizontal=Align.center_horizontal(),
 
             bg=Rgb().tr(),
             bg_selection=Rgb().th3(),
