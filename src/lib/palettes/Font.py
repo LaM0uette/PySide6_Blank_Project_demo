@@ -18,6 +18,9 @@ class Font:
     H4 = 12  # A SUPPRIMER
     H5 = 8  # A SUPPRIMER
 
+    font_config = QtGui.QFont()
+    font_config.setFamily(config.font)
+
     @staticmethod
     def base():
         ft = QtGui.QFont()
