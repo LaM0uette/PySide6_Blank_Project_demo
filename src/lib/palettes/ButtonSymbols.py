@@ -1,8 +1,11 @@
+from dataclasses import dataclass
+
 from PySide6.QtWidgets import QAbstractSpinBox
 
 
+@dataclass
 class ButtonSymbols:
 
-    def no_button(self): return QAbstractSpinBox.NoButtons
-    def plus_minus(self): return QAbstractSpinBox.PlusMinus
-    def up_down(self): return QAbstractSpinBox.UpDownArrows
+    NO_BUTTON = QAbstractSpinBox.NoButtons
+    PLUS_MINUS = QAbstractSpinBox.PlusMinus
+    UP_DOWN = QAbstractSpinBox.UpDownArrows
