@@ -3,8 +3,8 @@ from PySide6.QtWidgets import QAbstractItemView
 
 class DragDropMode:
 
-    def no_drag(self): return QAbstractItemView.NoDragDrop
-    def drag_only(self): return QAbstractItemView.DragOnly
-    def drop_only(self): return QAbstractItemView.DropOnly
-    def drag_and_drop(self): return QAbstractItemView.DragDrop
-    def internal_move(self): return QAbstractItemView.InternalMove
+    NO_DRAG = QAbstractItemView.NoDragDrop
+    DRAG_ONLY = QAbstractItemView.DragOnly
+    DROP_ONLY = QAbstractItemView.DropOnly
+    DRAG_AND_DROP = QAbstractItemView.DragDrop
+    INTERNAL_MOVE = QAbstractItemView.InternalMove

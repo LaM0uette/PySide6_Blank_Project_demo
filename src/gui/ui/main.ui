@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>841</width>
-    <height>1717</height>
+    <width>921</width>
+    <height>769</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="vlay_main">
@@ -151,8 +151,8 @@
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>-889</y>
-              <width>818</width>
+              <y>0</y>
+              <width>898</width>
               <height>8797</height>
              </rect>
             </property>
@@ -2328,7 +2328,7 @@ hr { height: 1px; border-width: 0; }
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>596</width>
+                     <width>676</width>
                      <height>69</height>
                     </rect>
                    </property>
@@ -2368,7 +2368,7 @@ hr { height: 1px; border-width: 0; }
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>596</width>
+                     <width>676</width>
                      <height>69</height>
                     </rect>
                    </property>
@@ -2415,7 +2415,7 @@ hr { height: 1px; border-width: 0; }
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>596</width>
+                     <width>676</width>
                      <height>69</height>
                     </rect>
                    </property>
@@ -2455,7 +2455,7 @@ hr { height: 1px; border-width: 0; }
                     <rect>
                      <x>0</x>
                      <y>0</y>
-                     <width>596</width>
+                     <width>676</width>
                      <height>69</height>
                     </rect>
                    </property>

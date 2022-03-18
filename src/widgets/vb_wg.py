@@ -19,7 +19,7 @@ FONT_SIZE_HD = Font().h3()
 ##     PARAMETRES     ##
 ########################
 BUTTON_SYMBOLS = ButtonSymbols.PLUS_MINUS
-DRAG_DROP_MODE = DragDropMode().no_drag()
+DRAG_DROP_MODE = DragDropMode.NO_DRAG
 DROP_ACTION = DropAction().move()
 EDIT = False
 FOCUS_POLICY = FocusPolicy().strong_focus()
