@@ -155,7 +155,7 @@ class Dlg:
     ):
         Style(
             self.widget,
-            size_policy_v=SizePolicy().expanding(),
+            size_policy_v=SizePolicy.EXPANDING,
             fixed_width=Dim.H6,
             fixed_height=None,
             bg=bg,

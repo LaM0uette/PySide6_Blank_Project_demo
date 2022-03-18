@@ -5,8 +5,8 @@ from src.lib.palettes import *
 ##     QWidget     ##
 #####################
 # SizePolicy
-SIZE_POLICY_H = SizePolicy().prefered()
-SIZE_POLICY_V = SizePolicy().prefered()
+SIZE_POLICY_H = SizePolicy.PREFERED
+SIZE_POLICY_V = SizePolicy.PREFERED
 
 # Dimensions
 WIDTH = None
