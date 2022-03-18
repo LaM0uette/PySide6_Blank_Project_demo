@@ -25,7 +25,7 @@ CUR_ACTION = Cur().main()
 FOCUS_POLICY = FocusPolicy.NO
 
 # LayoutDirection
-LAYOUT_DIRECTION = LayoutDirection().left_to_right()
+LAYOUT_DIRECTION = LayoutDirection.LEFT_TO_RIGHT
 #####################
 ##    /QWidget     ##
 #####################
