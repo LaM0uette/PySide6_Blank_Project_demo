@@ -23,8 +23,8 @@ class Base:
         Build(
             *self.wgs,
 
-            scroll_h=Scroll().off(),
-            scroll_v=Scroll().off(),
+            scroll_h=Scroll.OFF,
+            scroll_v=Scroll.OFF,
 
             bg=Rgb().tr(),
             bg_item=Rgb().tr(),
@@ -54,8 +54,8 @@ class Base:
 
             width=Dim.H5,
 
-            scroll_h=Scroll().off(),
-            scroll_v=Scroll().off(),
+            scroll_h=Scroll.OFF,
+            scroll_v=Scroll.OFF,
 
             bg=Rgb().tr(),
             bg_item=Rgb().tr(),
