@@ -3,8 +3,17 @@ from PySide6.QtCore import Qt
 
 class ArrowType:
 
-    def no(self): return Qt.NoArrow
-    def up(self): return Qt.UpArrow
-    def down(self): return Qt.DownArrow
-    def left(self): return Qt.LeftArrow
-    def right(self): return Qt.RightArrow
+    @staticmethod
+    def no(): return Qt.NoArrow
+
+    @staticmethod
+    def up(): return Qt.UpArrow
+
+    @staticmethod
+    def down(): return Qt.DownArrow
+
+    @staticmethod
+    def left(): return Qt.LeftArrow
+
+    @staticmethod
+    def right(): return Qt.RightArrow
