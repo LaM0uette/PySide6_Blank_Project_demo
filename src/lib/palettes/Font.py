@@ -12,6 +12,11 @@ class FontSize:
 
 
 class Font:
+    H1 = 32  # A SUPPRIMER
+    H2 = 24  # A SUPPRIMER
+    H3 = 16  # A SUPPRIMER
+    H4 = 12  # A SUPPRIMER
+    H5 = 8  # A SUPPRIMER
 
     @staticmethod
     def base():
