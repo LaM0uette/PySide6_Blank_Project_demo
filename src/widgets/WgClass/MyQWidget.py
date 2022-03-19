@@ -16,8 +16,6 @@ class MyQWidget:
         widget.setSizePolicy(size_policy.horizontal, size_policy.vertical)
 
         # Dimmensions
-        if dim.fixed_width: widget.setFixedWidth(dim.fixed_width)
-        if dim.fixed_height: widget.setFixedHeight(dim.fixed_height)
         if dim.minimum_width: widget.setMinimumWidth(dim.minimum_width)
         if dim.minimum_height: widget.setMinimumHeight(dim.minimum_height)
         if dim.maximum_width: widget.setMaximumWidth(dim.maximum_width)
