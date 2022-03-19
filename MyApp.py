@@ -60,7 +60,7 @@ class main(Ui_main, QtWidgets.QWidget):
         self.setWindowIcon(QtGui.QPixmap(f"{Img.MAIN}th3.svg"))
         self.setWindowOpacity(config.opacity)
 
-        self.setGraphicsEffect(Shadow().ombre_portee(self))
+        self.setGraphicsEffect(Shadow.OMBRE_PORTEE(self))
 
         self.e_resize_screen()
     def IN_SETUP_UI(self):
