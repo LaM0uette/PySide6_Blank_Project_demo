@@ -160,9 +160,9 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > Ensuite, il suffit d'écrire : nomDlg().typeDlg()   
 >    
 > Voici un exemple pour chaque dialogue :
-> - ***Saisie de texte :*** InputBox().TXT(*arguments)
-> - ***Message :*** MsgBox().INFO(*arguments)
-> - ***Menu d'option :*** OptionBox().MAIN(*arguments)
-> - ***Demande de validation :*** ResponseBox().INFO(*arguments)
-> - ***Choix d'une couleur :*** RgbBox().GET(*arguments)
+> - ***Saisie de texte :*** InputBox.TXT(*arguments)
+> - ***Message :*** MsgBox.INFO(*arguments)
+> - ***Menu d'option :*** OptionBox.MAIN(*arguments)
+> - ***Demande de validation :*** ResponseBox.INFO(*arguments)
+> - ***Choix d'une couleur :*** RgbBox.GET(*arguments)
 > 
