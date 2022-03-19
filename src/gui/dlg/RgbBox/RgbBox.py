@@ -20,7 +20,7 @@ class RgbBox:
             opacity=opacity
         )
         rgb_dlg.exec()
-        return rgb_dlg.return_rgb or False
+        return rgb_dlg.return_rgb if rgb_dlg.response else False
 
 
     __WIDTH, __HEIGHT, __OPACITY = 650, 250, 1
