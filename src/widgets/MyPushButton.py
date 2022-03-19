@@ -92,16 +92,16 @@ class Txt:
     def txt(self):
         Style(
             self.widget,
-            bg=Rgb().th1(),
+            bg=Rgb.TH1,
             fg=Rgb().th3(),
             bg_hover=Rgb().th3(),
-            fg_hover=Rgb().th1(),
+            fg_hover=Rgb.TH1,
             bg_pressed=Rgb().th3(),
             bg_checked=Rgb().th3(),
-            fg_checked=Rgb().th1(),
-            bg_checked_hover=Rgb().th1(),
+            fg_checked=Rgb.TH1,
+            bg_checked_hover=Rgb.TH1,
             fg_checked_hover=Rgb().th3(),
-            bg_checked_pressed=Rgb().th1(),
+            bg_checked_pressed=Rgb.TH1,
             border=self.bd,
             border_hover=self.bd,
             border_checked=self.bd,
@@ -115,14 +115,14 @@ class Txt:
         Style(
             self.widget,
             bg=Rgb().th3(),
-            fg=Rgb().th1(),
-            bg_hover=Rgb().th1(),
+            fg=Rgb.TH1,
+            bg_hover=Rgb.TH1,
             fg_hover=Rgb().th3(),
-            bg_pressed=Rgb().th1(),
-            bg_checked=Rgb().th1(),
+            bg_pressed=Rgb.TH1,
+            bg_checked=Rgb.TH1,
             fg_checked=Rgb().th3(),
             bg_checked_hover=Rgb().th3(),
-            fg_checked_hover=Rgb().th1(),
+            fg_checked_hover=Rgb.TH1,
             bg_checked_pressed=Rgb().th3(),
             border=self.bd,
             border_hover=self.bd,
@@ -145,12 +145,12 @@ class Dlg:
 
     def _rtn(
             self,
-            bg=Rgb().th1(),
+            bg=Rgb.TH1,
             fg=Rgb().bn1(),
             bg_hover=Rgb().bn1(),
-            fg_hover=Rgb().th1(),
+            fg_hover=Rgb.TH1,
             bg_pressed=Rgb().bn1(),
-            fg_pressed=Rgb().th1(),
+            fg_pressed=Rgb.TH1,
             bd_rgb=Rgb().bn1(),
     ):
         Style(
@@ -176,41 +176,41 @@ class Dlg:
 
     def ok(self):
         self._rtn(
-            bg=Rgb().th1(),
+            bg=Rgb.TH1,
             fg=Rgb().bn1(),
             bg_hover=Rgb().bn1(),
-            fg_hover=Rgb().th1(),
+            fg_hover=Rgb.TH1,
             bg_pressed=Rgb().bn1(),
-            fg_pressed=Rgb().th1(),
+            fg_pressed=Rgb.TH1,
             bd_rgb=Rgb().bn1(),
         )
     def ok_inv(self):
         self._rtn(
             bg=Rgb().bn1(),
-            fg=Rgb().th1(),
-            bg_hover=Rgb().th1(),
+            fg=Rgb.TH1,
+            bg_hover=Rgb.TH1,
             fg_hover=Rgb().bn1(),
-            bg_pressed=Rgb().th1(),
+            bg_pressed=Rgb.TH1,
             fg_pressed=Rgb().bn1(),
             bd_rgb=Rgb().bn1(),
         )
     def nok(self):
         self._rtn(
-            bg=Rgb().th1(),
+            bg=Rgb.TH1,
             fg=Rgb().bn2(),
             bg_hover=Rgb().bn2(),
-            fg_hover=Rgb().th1(),
+            fg_hover=Rgb.TH1,
             bg_pressed=Rgb().bn2(),
-            fg_pressed=Rgb().th1(),
+            fg_pressed=Rgb.TH1,
             bd_rgb=Rgb().bn2(),
         )
     def nok_inv(self):
         self._rtn(
             bg=Rgb().bn2(),
-            fg=Rgb().th1(),
-            bg_hover=Rgb().th1(),
+            fg=Rgb.TH1,
+            bg_hover=Rgb.TH1,
             fg_hover=Rgb().bn2(),
-            bg_pressed=Rgb().th1(),
+            bg_pressed=Rgb.TH1,
             fg_pressed=Rgb().bn2(),
             bd_rgb=Rgb().bn2(),
         )
@@ -263,7 +263,7 @@ class Plein:
 
     def th1(self):
         self._rtn(
-            bg_gen=Rgb().th1(),
+            bg_gen=Rgb.TH1,
             fg_gen=Rgb().th3(),
             border_gen=(StyleBase.BORDER,) * 4,
             border_gen_rgb=Rgb().th2(),
@@ -276,7 +276,7 @@ class Plein:
     def th3(self):
         self._rtn(
             bg_gen=Rgb().th3(),
-            fg_gen=Rgb().th1(),
+            fg_gen=Rgb.TH1,
         )
     def bn1(self):
         self._rtn(

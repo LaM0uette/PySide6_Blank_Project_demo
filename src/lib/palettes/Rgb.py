@@ -15,7 +15,6 @@ class Rgb:
     def _rgb_to_hex(rgb):
         return "#" + "%02x%02x%02x" % rgb
 
-
     TH1 = _get_rgb(val="th1") + (255, )
     TH2 = _get_rgb(val="th2") + (255, )
     TH3 = _get_rgb(val="th3") + (255, )

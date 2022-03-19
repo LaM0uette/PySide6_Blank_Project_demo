@@ -87,7 +87,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
         Frame.Menu(self.fr_menu_top).top()
         Frame.Cadre(self.fr_main).th2()
         Frame.Cadre(self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize).th3()
-        Frame.Dlg(self.fr_body).th(rgb=Rgb().th1())
+        Frame.Dlg(self.fr_body).th(rgb=Rgb.TH1)
         Frame.Menu(self.fr_opt_bottom).bottom_dlg()
         ### /QFrame ###
 
@@ -267,7 +267,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
         self.stk_option.setCurrentWidget(self.dct_pg.get(item.text(0))[0])
     def f_maj_rgb_theme(self, rgb):
         dct_colors = {
-            "th1": Rgb().th1(),
+            "th1": Rgb.TH1,
             "th2": Rgb().th2(),
             "th3": Rgb().th3(),
             "bn1": Rgb().bn1(),
