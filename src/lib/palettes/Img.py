@@ -28,11 +28,3 @@ class Img:
     FLECHE_LEFT = _svg("ui", "fleche_gauche")
     PLUS = _svg("ui", "plus")
     MOINS = _svg("ui", "moins")
-
-
-
-
-
-
-    def fleche_bottom(self): return self._svg("ui", "fleche_bottom")
-    def fleche_top(self): return self._svg("ui", "fleche_top")

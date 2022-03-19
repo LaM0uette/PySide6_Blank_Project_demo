@@ -30,10 +30,10 @@ class UpDown:
         Build(
             *self.wgs,
 
-            img_up=Img().fleche_top(),
-            img_down=Img().fleche_bottom(),
-            img_up_hover=Img().fleche_top(),
-            img_down_hover=Img().fleche_bottom(),
+            img_up=Img.FLECHE_TOP,
+            img_down=Img.FLECHE_BOTTOM,
+            img_up_hover=Img.FLECHE_TOP,
+            img_down_hover=Img.FLECHE_BOTTOM,
         )
     def tr(self):
         Build(
@@ -42,10 +42,10 @@ class UpDown:
             bg=Rgb().tr(),
             fg=Rgb().th3(),
 
-            img_up=Img().fleche_top(),
-            img_down=Img().fleche_bottom(),
-            img_up_hover=Img().fleche_top(),
-            img_down_hover=Img().fleche_bottom(),
+            img_up=Img.FLECHE_TOP,
+            img_down=Img.FLECHE_BOTTOM,
+            img_up_hover=Img.FLECHE_TOP,
+            img_down_hover=Img.FLECHE_BOTTOM,
         )
 
 
