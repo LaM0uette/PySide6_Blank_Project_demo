@@ -28,7 +28,7 @@ class ToolBoxUi(toolbox_ui.Ui_ToolBoxUi, QtWidgets.QDialog):
         else:
             self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.Tool)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        self.setGraphicsEffect(Shadow().ombre_portee(self))
+        self.setGraphicsEffect(Shadow.OMBRE_PORTEE(self))
         self.setWindowModality(QtCore.Qt.ApplicationModal)
     def IN_SETUP_UI(self):
         ### Ui ###
