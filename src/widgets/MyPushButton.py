@@ -12,6 +12,9 @@ class Base:
     def Base(self):
         Style(
             widget=self.widget,
+            size_policy=dc_size_policy.Base(
+                vertical=SizePolicy.EXPANDING
+            ),
         )
     def Transparent(self):
         bg = Rgb.TR
