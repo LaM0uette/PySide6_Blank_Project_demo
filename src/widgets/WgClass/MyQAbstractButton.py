@@ -12,6 +12,7 @@ class MyQAbstractButton(MyQWidget):
             cursor,
             focus_policy,
             layout_direction,
+
             txt,
             ico,
             ico_rgb,
