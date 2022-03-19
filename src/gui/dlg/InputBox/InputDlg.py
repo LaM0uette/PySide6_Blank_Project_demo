@@ -11,15 +11,15 @@ class InputDlg(input_ui.Ui_Input, QtWidgets.QDialog):
 
     def __init__(
             self,
-            width,
-            height,
-            opacity,
             title,
             msg,
             ico,
             ico_rgb,
             txt_ok,
             txt_cancel,
+            width,
+            height,
+            opacity,
     ):
         super(InputDlg, self).__init__()
 
