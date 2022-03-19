@@ -22,8 +22,5 @@ class InputBox:
         input_dlg.exec()
         return input_dlg.input_txt or False
 
-    WIDTH = 650
-    HEIGHT = 250
-    OPACITY = 1
-
-    TEXT = partial(__rtn, width=WIDTH, height=HEIGHT, opacity=OPACITY)
+    __WIDTH, __HEIGHT, __OPACITY = 650, 250, 1
+    TEXT = partial(__rtn, width=__WIDTH, height=__HEIGHT, opacity=__OPACITY)
