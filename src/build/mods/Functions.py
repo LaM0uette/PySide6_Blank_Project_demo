@@ -42,7 +42,7 @@ class Functions:
         QtGui.QShortcut(QtGui.QKeySequence(shortcut), self).activated.connect(fct)
 
     def GEN_SVG(self):
-        hx1, hx2, hx3, hxbn1, hxbn2 = Rgb().hx_th1(), Rgb().hx_th2(), Rgb().hx_th3(), Rgb().hx_bn1(), Rgb().hx_bn2()
+        hx1, hx2, hx3, hxbn1, hxbn2 = Rgb.HX_TH1, Rgb.HX_TH2, Rgb.HX_TH3, Rgb.HX_BN1, Rgb.HX_BN2
         ls_couleurs = [
             {"rgb_base": "#1D1D1B", "rgb_rep_th1": hx1, "rgb_rep_th2": hx2, "rgb_rep_th3": hx3, "rgb_rep_bn1": hxbn1, "rgb_rep_bn2": hxbn2},
             {"rgb_base": "#3C3C3B", "rgb_rep_th1": hx2, "rgb_rep_th2": hx1, "rgb_rep_th3": hx1, "rgb_rep_bn1": hx2, "rgb_rep_bn2": hx2},

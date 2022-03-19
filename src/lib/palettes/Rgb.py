@@ -22,20 +22,8 @@ class Rgb:
     BN2 = _get_rgb(val="bn2") + (255, )
     TR = 0, 0, 0, 0
 
-
-
-
-    def get_rgb(self, val):
-        with open(fr"src/theme/{config.theme}.json", "r") as fichier:
-            js = json.load(fichier)
-            return tuple(js[val])
-    def get_rgba(self, val):
-        return self.get_rgb(val=val) + (255,)
-    def rgb_to_hex(self, rgb):
-        return "#" + "%02x%02x%02x" % rgb
-
-    def hx_th1(self): return self.rgb_to_hex(self.get_rgb("th1"))
-    def hx_th2(self): return self.rgb_to_hex(self.get_rgb("th2"))
-    def hx_th3(self): return self.rgb_to_hex(self.get_rgb("th3"))
-    def hx_bn1(self): return self.rgb_to_hex(self.get_rgb("bn1"))
-    def hx_bn2(self): return self.rgb_to_hex(self.get_rgb("bn2"))
+    HX_TH1 = _rgb_to_hex(_get_rgb(val="th1"))
+    HX_TH2 = _rgb_to_hex(_get_rgb(val="th2"))
+    HX_TH3 = _rgb_to_hex(_get_rgb(val="th3"))
+    HX_BN1 = _rgb_to_hex(_get_rgb(val="bn1"))
+    HX_BN2 = _rgb_to_hex(_get_rgb(val="bn2"))
