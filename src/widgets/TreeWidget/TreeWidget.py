@@ -32,7 +32,7 @@ class Base:
             bg_item_checked=Rgb().tr(),
             bg_item_checked_hover=Rgb().tr(),
             fg_item=Rgb.TH3,
-            fg_item_checked=Rgb().bn1(),
+            fg_item_checked=Rgb.BN1,
 
             border_item=bd_item,
             border_item_hover=bd_item,
@@ -40,8 +40,8 @@ class Base:
             border_item_checked_hover=bd_item,
             border_item_rgb=Rgb.TH2,
             border_item_hover_rgb=Rgb.TH3,
-            border_item_checked_rgb=Rgb().bn1(),
-            border_item_checked_hover_rgb=Rgb().bn1(),
+            border_item_checked_rgb=Rgb.BN1,
+            border_item_checked_hover_rgb=Rgb.BN1,
 
             radius_item=(0,) * 4
         )
@@ -64,7 +64,7 @@ class Base:
             bg_item_checked_hover=Rgb().tr(),
             bg_header=Rgb.TH1,
             fg_item=Rgb.TH3,
-            fg_item_checked=Rgb().bn1(),
+            fg_item_checked=Rgb.BN1,
             fg_header=Rgb.TH1,
 
             border=bd_gen,
@@ -77,8 +77,8 @@ class Base:
             border_item_checked_hover=bd_item,
             border_item_rgb=Rgb.TH2,
             border_item_hover_rgb=Rgb.TH3,
-            border_item_checked_rgb=Rgb().bn1(),
-            border_item_checked_hover_rgb=Rgb().bn1(),
+            border_item_checked_rgb=Rgb.BN1,
+            border_item_checked_hover_rgb=Rgb.BN1,
 
             radius_item=(0,) * 4
         )

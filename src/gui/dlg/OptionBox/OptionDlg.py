@@ -270,8 +270,8 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
             "th1": Rgb.TH1,
             "th2": Rgb.TH2,
             "th3": Rgb.TH3,
-            "bn1": Rgb().bn1(),
-            "bn2": Rgb().bn2(),
+            "bn1": Rgb.BN1,
+            "bn2": Rgb.BN2,
         }
         colors = RgbBox().GET(rgb=dct_colors.get(rgb))
         if colors:

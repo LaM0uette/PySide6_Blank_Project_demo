@@ -25,7 +25,7 @@ class Base:
             bg_pressed=bg,
             bg_checked_pressed=bg,
             fg=Rgb.TH3,
-            fg_checked=Rgb().bn1(),
+            fg_checked=Rgb.BN1,
         )
 
 
@@ -54,5 +54,5 @@ class Demo:
             bg_pressed=bg,
             bg_checked_pressed=bg,
             fg=Rgb.TH3,
-            fg_checked=Rgb().bn1(),
+            fg_checked=Rgb.BN1,
         )

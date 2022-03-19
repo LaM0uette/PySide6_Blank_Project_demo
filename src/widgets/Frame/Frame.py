@@ -88,7 +88,7 @@ class Cadre:
     def th1(self): self.rtn(rgb=Rgb.TH1)
     def th2(self): self.rtn(rgb=Rgb.TH2)
     def th3(self): self.rtn(rgb=Rgb.TH3)
-    def bn1(self): self.rtn(rgb=Rgb().bn1())
+    def bn1(self): self.rtn(rgb=Rgb.BN1)
     def bn2(self): self.rtn(rgb=Rgb().bn2())
 
 
@@ -156,9 +156,9 @@ class Demo_hover(Build):
             *wgs,
             bg=Rgb().tr(),
             border=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb().bn1(),
+            border_rgb=Rgb.BN1,
             border_hover=(StyleBase.BORDER,) * 4,
             border_hover_style="dashed",
-            border_hover_rgb=Rgb().bn1(),
+            border_hover_rgb=Rgb.BN1,
             radius=(vb_wg.RADIUS_SIZE, )*4
     )

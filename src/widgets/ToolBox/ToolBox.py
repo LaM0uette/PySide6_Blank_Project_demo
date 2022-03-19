@@ -16,7 +16,7 @@ class Base:
         )
     def tr(self):
         bd_hd = (0, StyleBase.BORDER, 0, 0)
-        rgb_hb = Rgb().bn1()
+        rgb_hb = Rgb.BN1
 
         Build(
             *self.wgs,
@@ -55,7 +55,7 @@ class Demo:
         )
     def tr(self):
         bd_hd = (0, StyleBase.BORDER, 0, 0)
-        rgb_hb = Rgb().bn1()
+        rgb_hb = Rgb.BN1
 
         Build(
             *self.wgs,
