@@ -1,6 +1,5 @@
 import glob
 import os
-import time
 
 from PySide6 import QtCore, QtWidgets
 
