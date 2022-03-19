@@ -13,7 +13,8 @@ class InputBox:
             opacity,
             title="INPUT",
             msg="Tapez votre texte",
-            ico=Img.INFO, ico_rgb="th3",
+            ico=Img.INFO,
+            ico_rgb="th3",
             txt_ok="Ok",
             txt_cancel="Annuler",
     ):
@@ -35,4 +36,4 @@ class InputBox:
     HEIGHT = 250
     OPACITY = 1
 
-    test = partial(__rtn, width=650, height=250, opacity=1)
+    TEXT = partial(__rtn, width=WIDTH, height=HEIGHT, opacity=OPACITY)
