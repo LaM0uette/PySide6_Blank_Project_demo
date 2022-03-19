@@ -13,6 +13,8 @@ class Shadow:
         shadow.setOffset(offset[0], offset[1])
         return shadow
 
-    GLOW = partial(_get_shadow, blur_radius=8, rgba=(0, 0, 0, 255), offset=[0, 0])
-    PRESPECTIVE = partial(_get_shadow, blur_radius=6, rgba=(0, 0, 0, 150), offset=[3, 3])
-    OMBRE_PORTEE = partial(_get_shadow, blur_radius=12, rgba=(0, 0, 0, 150), offset=[0, 0])
+    R, G, B = 0, 0, 0
+
+    GLOW = partial(_get_shadow, blur_radius=8, rgba=(R, G, B, 255), offset=[0, 0])
+    PRESPECTIVE = partial(_get_shadow, blur_radius=6, rgba=(R, G, B, 150), offset=[3, 3])
+    OMBRE_PORTEE = partial(_get_shadow, blur_radius=12, rgba=(R, G, B, 150), offset=[0, 0])
