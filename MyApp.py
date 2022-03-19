@@ -56,9 +56,9 @@ class main(Ui_main, QtWidgets.QWidget):
     ############################
     def IN_BASE(self):
         ### Fenetre principal ###
-        self.setWindowTitle(Config().nom)
+        self.setWindowTitle(Config.nom)
         self.setWindowIcon(QtGui.QPixmap(f"{Img.MAIN}th3.svg"))
-        self.setWindowOpacity(Config().opacity)
+        self.setWindowOpacity(Config.opacity)
 
         self.setGraphicsEffect(Shadow.OMBRE_PORTEE(self))
 
@@ -113,7 +113,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### Nom de l'app ###
-        self.lb_mt_nom.setText(Config().nom)
+        self.lb_mt_nom.setText(Config.nom)
 
 
         ### Widget blanc pour centrer le nom de l'app ###
@@ -122,11 +122,11 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### Version de l'app ###
-        self.lb_mb_version.setText(f" Version : {Config().version}")
+        self.lb_mb_version.setText(f" Version : {Config.version}")
 
 
         ### size_grip ###
-        if Config().resize:
+        if Config.resize:
             self.size_grip.setCursor(Functions().SET_CURSOR(Cur.FLECHE_NWSE))
             self.size_grip.setStyleSheet(
                 f"""
@@ -226,12 +226,12 @@ class main(Ui_main, QtWidgets.QWidget):
     ##     EVENT     ##
     ###################
     def e_resize_screen(self):
-        if Config().resize:
-            self.setMinimumWidth(Config().widht)
-            self.setMinimumHeight(Config().height)
+        if Config.resize:
+            self.setMinimumWidth(Config.widht)
+            self.setMinimumHeight(Config.height)
         else:
-            self.setFixedWidth(Config().widht)
-            self.setFixedHeight(Config().height)
+            self.setFixedWidth(Config.widht)
+            self.setFixedHeight(Config.height)
     #####
     def traySingleClick(self):
         screen = QtWidgets.QApplication.primaryScreen().availableGeometry()
@@ -257,7 +257,7 @@ class main(Ui_main, QtWidgets.QWidget):
             self.trayDoubleClick()
     def e_quitter(self):
         """Permet de quitter l'application"""
-        if not Config().auto_close:
+        if not Config.auto_close:
             self.hide()
         elif ResponseBox.QUITTER():
             app.quit()
@@ -280,7 +280,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
 if __name__ == "__main__":
-    if Config().debug:
+    if Config.debug:
         Functions().GEN_SVG()
 
     app = QtWidgets.QApplication(sys.argv)

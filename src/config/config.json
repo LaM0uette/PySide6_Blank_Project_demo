@@ -16,5 +16,13 @@
         "resize": true,
         "auto_close": true,
         "toolbox_pin": true
+    },
+    "Config()": {
+        "theme": "columbia_blue",
+        "font": "Berlin Sans FB Demi",
+        "widht": 1200,
+        "height": 800,
+        "opacity": 0.96,
+        "cur": "MyApp"
     }
 }

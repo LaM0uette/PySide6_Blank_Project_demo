@@ -12,7 +12,7 @@ class FontSize:
 class Font:
 
     @staticmethod
-    def __gen_font(family=Config().font, size=FontSize.H4):
+    def __gen_font(family=Config.font, size=FontSize.H4):
         ft = QtGui.QFont()
         ft.setFamily(family)
         ft.setPointSize(size)

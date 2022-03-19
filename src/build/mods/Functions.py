@@ -106,7 +106,7 @@ class Functions:
         for wg in args:
             if width is not None: wg.setFixedWidth(width)
             if height is not None: wg.setFixedHeight(height)
-    def SET_FONT(self, *args, font=Config().font, font_size=None, rtn=False):
+    def SET_FONT(self, *args, font=Config.font, font_size=None, rtn=False):
         if not font_size: return
 
         ft = QtGui.QFont()
