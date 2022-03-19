@@ -12,6 +12,16 @@ class MyQWidget:
             focus_policy,
             layout_direction,
     ):
+        """
+        :param widget: Widget \n
+        :param size_policy: dc_size_policy.%class(*arguments) \n
+        :param dim: dc_dim.%class(*arguments) \n
+        :param font: Font.% \n
+        :param cursor: Cur.% \n
+        :param focus_policy: FocusPolicy.% \n
+        :param layout_direction: LayoutDirection.% \n
+        """
+
         # SizePolicy
         widget.setSizePolicy(size_policy.horizontal, size_policy.vertical)
 
