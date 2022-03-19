@@ -98,7 +98,7 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > from src import *
 > ```
 > Cependant, il faut faire attention à ne pas importer un module en boucle.   
-> Si vous importer le module ```Rgb()``` dans le fichier Rgb le programme ne pourras pas se lancer.
+> Si vous importer le module ```Rgb``` dans le fichier Rgb le programme ne pourras pas se lancer.
 > 
 > <br>
 > 
@@ -109,35 +109,40 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > from src.lib.palettes import *
 > ```
 > 
-> Ensuite, il suffit d'écrire : nomPalette().Valeur()   
+> Ensuite, il suffit d'écrire : nomPalette.VALEUR 
 >    
 > Voici un exemple pour chaque palette :
-> - ***Align :*** Align().top()
-> - ***AutoFormating :*** AutoFormating().none()
-> - ***ButtonSymbols :*** ButtonSymbols().no_button()
-> - ***Cur :*** Cur().crayon()
-> - ***Dim :*** Dim().h4()
-> - ***DragDropMode :*** DragDropMode().drag_and_drop()
-> - ***DropAction :*** DropAction().move()
-> - ***EchoMode :*** EchoMode().normal()
-> - ***Flow :*** Flow().left_to_right()
-> - ***FocusPolicy :*** FocusPolicy().no_focus()
-> - ***Font :*** Font().h2()
-> - ***FrameShadow :*** FrameShadow().plain()
-> - ***FrameShape :*** FrameShape().no_frame()
-> - ***Img :*** Img().alerte()
-> - ***InputMask :*** InputMask().no()
-> - ***InsertPolicy :*** InsertPolicy().no_insert()
-> - ***Keys :*** Keys().f1()
-> - ***ProgressFormat :*** ProgressFormat().percentage()
-> - ***Rgb :*** Rgb().th2()
-> - ***Scroll :*** Scroll().on()
-> - ***SelectionBehavior :*** SelectionBehavior().row()
-> - ***SelectionMode :*** SelectionMode().no()
-> - ***Shadow :*** Shadow().ombre_portee()
-> - ***StyleBase :*** StyleBase().border()
-> - ***TextFormat :*** TextFormat().plain()
-> - ***TickPosition :*** TickPosition().no()
+> - ***Align :*** Align.TOP
+> - ***ArrowType :*** ArrowType.NO
+> - ***AutoFormating :*** AutoFormating.NONE
+> - ***ButtonSymbols :*** ButtonSymbols.NO
+> - ***Cur :*** Cur.CRAYON
+> - ***Dim :*** Dim.H4
+> - ***DragDropMode :*** DragDropMode.DRAG_AND_DROP
+> - ***DropAction :*** DropAction.MOVE
+> - ***EchoMode :*** EchoMode.NORMAL
+> - ***Flow :*** Flow.LEFT_TO_RIGHT
+> - ***FocusPolicy :*** FocusPolicy.NO
+> - ***Font :*** Font.TEXTE
+> - ***FrameShadow :*** FrameShadow.PLAIN
+> - ***FrameShape :*** FrameShape.NO
+> - ***Img :*** Img.ALERTE
+> - ***InputMask :*** InputMask.NO
+> - ***InsertPolicy :*** InsertPolicy.NO
+> - ***Keys :*** Keys.F1
+> - ***LayoutDirection :*** LayoutDirection.LEFT_TO_RIGHT
+> - ***PopupMode :*** PopupMode.DELAYED
+> - ***ProgressFormat :*** ProgressFormat.PERCENTAGE
+> - ***Rgb :*** Rgb.TH2
+> - ***Scroll :*** Scroll.ON
+> - ***SelectionBehavior :*** SelectionBehavior.ROW
+> - ***SelectionMode :*** SelectionMode.NO
+> - ***Shadow :*** Shadow.OMBRE_PORTEE(wg)
+> - ***SizePolicy :*** SizePolicy.FIXED
+> - ***StyleBase :*** StyleBase.BORDER
+> - ***TextFormat :*** TextFormat.PLAIN
+> - ***TickPosition :*** TickPosition.NO
+> - ***ToolButtonStyle :*** ToolButtonStyle.ICON_ONLY
 > 
 > ### Widgets :
 > Chaque widget possède sa propre classe (src/widgets/"nomDuWidget"/"nomDuWidget")   
