@@ -25,15 +25,4 @@ class InputBox:
 
     __WIDTH, __HEIGHT, __OPACITY = 650, 250, 1
 
-    TEXT = partial(
-        __rtn,
-        title="INPUT",
-        msg="Tapez votre texte",
-        ico=Img.INFO,
-        ico_rgb="th3",
-        txt_ok="Ok",
-        txt_cancel="Annuler",
-        width=__WIDTH,
-        height=__HEIGHT,
-        opacity=__OPACITY,
-    )
+    TEXT = partial(__rtn,title="INPUT",msg="Tapez votre texte",ico=Img.INFO,ico_rgb="th3",txt_ok="Ok",txt_cancel="Annuler",width=__WIDTH,height=__HEIGHT,opacity=__OPACITY)
