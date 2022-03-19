@@ -17,7 +17,7 @@ class Base:
             fg_item_checked=Rgb().bn1(),
 
             border=(StyleBase.BORDER,)*4,
-            border_rgb=Rgb().th3()
+            border_rgb=Rgb.TH3
         )
     def tr(self):
         Build(
@@ -28,7 +28,7 @@ class Base:
             bg_item_hover=Rgb().tr(),
             bg_item_checked=Rgb().tr(),
             bg_item_checked_hover=Rgb().tr(),
-            fg_item=Rgb().th3(),
+            fg_item=Rgb.TH3,
             fg_item_checked=Rgb().bn1(),
 
             radius_item=(0,)*4
@@ -51,7 +51,7 @@ class Demo:
 
             fg_item_checked=Rgb().bn1(),
             border=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb().th3()
+            border_rgb=Rgb.TH3
         )
     def tr(self):
         bd_item = (0, 0, 0, 2)
@@ -66,7 +66,7 @@ class Demo:
             bg_item_hover=Rgb().tr(),
             bg_item_checked=Rgb().tr(),
             bg_item_checked_hover=Rgb().tr(),
-            fg_item=Rgb().th3(),
+            fg_item=Rgb.TH3,
             fg_item_checked=Rgb().bn1(),
 
             border_item=bd_item,
@@ -74,7 +74,7 @@ class Demo:
             border_item_checked=bd_item,
             border_item_checked_hover=bd_item,
             border_item_rgb=Rgb.TH2,
-            border_item_hover_rgb=Rgb().th3(),
+            border_item_hover_rgb=Rgb.TH3,
             border_item_checked_rgb=Rgb().bn1(),
             border_item_checked_hover_rgb=Rgb().bn1(),
 

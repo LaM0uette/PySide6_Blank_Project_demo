@@ -34,9 +34,9 @@ class Base:
             height=200,
 
             bg=Rgb.TH1,
-            bg_handle=Rgb().th3(),
-            bg_handle_hover=Rgb().th3(),
-            bg_handle_pressed=Rgb().th3(),
+            bg_handle=Rgb.TH3,
+            bg_handle_hover=Rgb.TH3,
+            bg_handle_pressed=Rgb.TH3,
 
             height_groove=12,
             width_groove=12,
@@ -89,11 +89,11 @@ class Base:
             margin_handle_v=(0, 0, -5, -5),
 
             border_groove=(1,) * 4,
-            border_groove_rgb=Rgb().th3(),
+            border_groove_rgb=Rgb.TH3,
             border_handle_h=(2,) * 4,
-            border_handle_h_rgb=Rgb().th3(),
+            border_handle_h_rgb=Rgb.TH3,
             border_handle_v=(2,) * 4,
-            border_handle_v_rgb=Rgb().th3(),
+            border_handle_v_rgb=Rgb.TH3,
 
             radius_groove_h=(2,) * 4,
             radius_groove_v=(2,) * 4,

@@ -24,7 +24,7 @@ class Base:
             bg_checked_hover=bg,
             bg_pressed=bg,
             bg_checked_pressed=bg,
-            fg=Rgb().th3(),
+            fg=Rgb.TH3,
             fg_checked=Rgb().bn1(),
         )
 
@@ -54,7 +54,7 @@ class MenuTop:
             bg_checked=bg,
             bg_checked_hover=bg,
             bg_pressed=bg,
-            fg_checked=Rgb().th3(),
+            fg_checked=Rgb.TH3,
             img=img,
             img_rgb=img_rgb,
         )
@@ -87,20 +87,20 @@ class Txt:
     def __init__(self, widget):
         self.widget = widget
         self.bd = (StyleBase.BORDER,)*4
-        self.bd_rgb = Rgb().th3()
+        self.bd_rgb = Rgb.TH3
 
     def txt(self):
         Style(
             self.widget,
             bg=Rgb.TH1,
-            fg=Rgb().th3(),
-            bg_hover=Rgb().th3(),
+            fg=Rgb.TH3,
+            bg_hover=Rgb.TH3,
             fg_hover=Rgb.TH1,
-            bg_pressed=Rgb().th3(),
-            bg_checked=Rgb().th3(),
+            bg_pressed=Rgb.TH3,
+            bg_checked=Rgb.TH3,
             fg_checked=Rgb.TH1,
             bg_checked_hover=Rgb.TH1,
-            fg_checked_hover=Rgb().th3(),
+            fg_checked_hover=Rgb.TH3,
             bg_checked_pressed=Rgb.TH1,
             border=self.bd,
             border_hover=self.bd,
@@ -114,16 +114,16 @@ class Txt:
     def inverse(self):
         Style(
             self.widget,
-            bg=Rgb().th3(),
+            bg=Rgb.TH3,
             fg=Rgb.TH1,
             bg_hover=Rgb.TH1,
-            fg_hover=Rgb().th3(),
+            fg_hover=Rgb.TH3,
             bg_pressed=Rgb.TH1,
             bg_checked=Rgb.TH1,
-            fg_checked=Rgb().th3(),
-            bg_checked_hover=Rgb().th3(),
+            fg_checked=Rgb.TH3,
+            bg_checked_hover=Rgb.TH3,
             fg_checked_hover=Rgb.TH1,
-            bg_checked_pressed=Rgb().th3(),
+            bg_checked_pressed=Rgb.TH3,
             border=self.bd,
             border_hover=self.bd,
             border_checked=self.bd,
@@ -264,27 +264,27 @@ class Plein:
     def th1(self):
         self._rtn(
             bg_gen=Rgb.TH1,
-            fg_gen=Rgb().th3(),
+            fg_gen=Rgb.TH3,
             border_gen=(StyleBase.BORDER,) * 4,
             border_gen_rgb=Rgb.TH2,
         )
     def th2(self):
         self._rtn(
             bg_gen=Rgb.TH2,
-            fg_gen=Rgb().th3(),
+            fg_gen=Rgb.TH3,
         )
     def th3(self):
         self._rtn(
-            bg_gen=Rgb().th3(),
+            bg_gen=Rgb.TH3,
             fg_gen=Rgb.TH1,
         )
     def bn1(self):
         self._rtn(
             bg_gen=Rgb().bn1(),
-            fg_gen=Rgb().th3(),
+            fg_gen=Rgb.TH3,
         )
     def bn2(self):
         self._rtn(
             bg_gen=Rgb().bn2(),
-            fg_gen=Rgb().th3(),
+            fg_gen=Rgb.TH3,
         )

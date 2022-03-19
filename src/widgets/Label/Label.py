@@ -80,8 +80,8 @@ class Base:
 
             bg=Rgb().tr(),
             bg_hover=Rgb().tr(),
-            fg=Rgb().th3(),
-            fg_hover=Rgb().th3(),
+            fg=Rgb.TH3,
+            fg_hover=Rgb.TH3,
         )
     def titre(self):
         Build(
@@ -95,8 +95,8 @@ class Base:
 
             bg=Rgb().tr(),
             bg_hover=Rgb().tr(),
-            fg=Rgb().th3(),
-            fg_hover=Rgb().th3(),
+            fg=Rgb.TH3,
+            fg_hover=Rgb.TH3,
         )
 
 
@@ -127,8 +127,8 @@ class Demo:
             font_size=self.font_size,
             bg=Rgb().tr(),
             bg_hover=Rgb().tr(),
-            fg=Rgb().th3(),
-            fg_hover=Rgb().th3(),
+            fg=Rgb.TH3,
+            fg_hover=Rgb.TH3,
         )
     def wg_categorie(self):
         Build(
@@ -139,8 +139,8 @@ class Demo:
 
             bg=Rgb().tr(),
             bg_hover=Rgb().tr(),
-            fg=Rgb().th3(),
-            fg_hover=Rgb().th3(),
+            fg=Rgb.TH3,
+            fg_hover=Rgb.TH3,
 
             border=(0, StyleBase.BORDER, 0, 0),
             border_hover=(0, StyleBase.BORDER, 0, 0),

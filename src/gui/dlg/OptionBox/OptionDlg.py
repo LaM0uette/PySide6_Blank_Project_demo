@@ -269,7 +269,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
         dct_colors = {
             "th1": Rgb.TH1,
             "th2": Rgb.TH2,
-            "th3": Rgb().th3(),
+            "th3": Rgb.TH3,
             "bn1": Rgb().bn1(),
             "bn2": Rgb().bn2(),
         }

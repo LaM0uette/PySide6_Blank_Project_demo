@@ -24,7 +24,7 @@ class Base:
             bg_checked_hover=bg,
             bg_pressed=bg,
             bg_checked_pressed=bg,
-            fg=Rgb().th3(),
+            fg=Rgb.TH3,
             fg_checked=Rgb().bn1(),
         )
 
@@ -51,7 +51,7 @@ class Demo:
             bg_checked_hover=bg,
             bg_pressed=bg,
             bg_checked_pressed=bg,
-            fg=Rgb().th3(),
+            fg=Rgb.TH3,
             fg_checked=Rgb().bn1(),
             auto_exclusive=False,
         )

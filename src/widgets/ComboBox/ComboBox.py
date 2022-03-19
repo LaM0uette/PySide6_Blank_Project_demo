@@ -23,8 +23,8 @@ class Base:
 
             bg=Rgb().tr(),
             bg_hover=Rgb().tr(),
-            bg_selection=Rgb().th3(),
-            fg=Rgb().th3(),
+            bg_selection=Rgb.TH3,
+            fg=Rgb.TH3,
             fg_selection=Rgb.TH1,
         )
     def font(self, font=vb_wg.FONT):

@@ -14,8 +14,8 @@ class Main(Build):
             bg=Rgb.TH1,
             bg_item=Rgb.TH1,
             bg_item_checked=Rgb.TH1,
-            fg=Rgb().th3(),
-            fg_item=Rgb().th3(),
+            fg=Rgb.TH3,
+            fg_item=Rgb.TH3,
             fg_item_checked=Rgb().bn1(),
 
             border=(StyleBase.BORDER, )*4,

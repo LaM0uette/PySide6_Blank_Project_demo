@@ -17,7 +17,7 @@ class Base:
 
             img_margin=self.margin,
         )
-    def tr(self, bg=Rgb().tr(), fg=Rgb().th3()):
+    def tr(self, bg=Rgb().tr(), fg=Rgb.TH3):
         Build(
             *self.wgs,
 
@@ -53,7 +53,7 @@ class Demo:
             triple_state=True,
             img_margin=self.margin,
         )
-    def tr(self, bg=Rgb().tr(), fg=Rgb().th3()):
+    def tr(self, bg=Rgb().tr(), fg=Rgb.TH3):
         Build(
             *self.wgs,
             auto_exclusive=True,

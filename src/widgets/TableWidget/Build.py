@@ -47,8 +47,8 @@ class Build:
             bg_corner=vb_wg.BG,
             bg_header=Rgb.TH2,
             bg_header_hover=Rgb.TH2,
-            bg_header_checked=Rgb().th3(),
-            bg_header_checked_hover=Rgb().th3(),
+            bg_header_checked=Rgb.TH3,
+            bg_header_checked_hover=Rgb.TH3,
             # Couleurs FG
             fg=vb_wg.FG,
             fg_item=vb_wg.FG_ITEM,

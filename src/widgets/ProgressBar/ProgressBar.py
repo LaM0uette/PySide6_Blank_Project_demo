@@ -16,8 +16,8 @@ class Base:
 
             border=(StyleBase.BORDER,) * 4,
             border_hover=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb().th3(),
-            border_hover_rgb=Rgb().th3(),
+            border_rgb=Rgb.TH3,
+            border_hover_rgb=Rgb.TH3,
         )
     def tr(self):
         Build(
@@ -29,8 +29,8 @@ class Base:
 
             border=(StyleBase.BORDER,) * 4,
             border_hover=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb().th3(),
-            border_hover_rgb=Rgb().th3(),
+            border_rgb=Rgb.TH3,
+            border_hover_rgb=Rgb.TH3,
         )
     def Chargement(self):
         Build(
@@ -38,8 +38,8 @@ class Base:
 
             border=(StyleBase.BORDER,) * 4,
             border_hover=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb().th3(),
-            border_hover_rgb=Rgb().th3(),
+            border_rgb=Rgb.TH3,
+            border_hover_rgb=Rgb.TH3,
 
             radius_chunk=(3, 0, 3, 0)
         )
@@ -57,8 +57,8 @@ class Demo:
 
             border=(StyleBase.BORDER,) * 4,
             border_hover=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb().th3(),
-            border_hover_rgb=Rgb().th3(),
+            border_rgb=Rgb.TH3,
+            border_hover_rgb=Rgb.TH3,
 
             radius_chunk=(3, 0, 3, 0)
         )
@@ -72,8 +72,8 @@ class Demo:
 
             border=(StyleBase.BORDER,) * 4,
             border_hover=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb().th3(),
-            border_hover_rgb=Rgb().th3(),
+            border_rgb=Rgb.TH3,
+            border_hover_rgb=Rgb.TH3,
 
             radius_chunk=(3, 0, 3, 0)
         )

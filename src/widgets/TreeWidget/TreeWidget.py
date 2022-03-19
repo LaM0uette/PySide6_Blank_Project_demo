@@ -14,7 +14,7 @@ class Base:
         Build(
             *self.wgs,
 
-            bg_header=Rgb().th3(),
+            bg_header=Rgb.TH3,
             fg_header=Rgb.TH1,
         )
     def tr(self):
@@ -31,7 +31,7 @@ class Base:
             bg_item_hover=Rgb().tr(),
             bg_item_checked=Rgb().tr(),
             bg_item_checked_hover=Rgb().tr(),
-            fg_item=Rgb().th3(),
+            fg_item=Rgb.TH3,
             fg_item_checked=Rgb().bn1(),
 
             border_item=bd_item,
@@ -39,7 +39,7 @@ class Base:
             border_item_checked=bd_item,
             border_item_checked_hover=bd_item,
             border_item_rgb=Rgb.TH2,
-            border_item_hover_rgb=Rgb().th3(),
+            border_item_hover_rgb=Rgb.TH3,
             border_item_checked_rgb=Rgb().bn1(),
             border_item_checked_hover_rgb=Rgb().bn1(),
 
@@ -63,7 +63,7 @@ class Base:
             bg_item_checked=Rgb().tr(),
             bg_item_checked_hover=Rgb().tr(),
             bg_header=Rgb.TH1,
-            fg_item=Rgb().th3(),
+            fg_item=Rgb.TH3,
             fg_item_checked=Rgb().bn1(),
             fg_header=Rgb.TH1,
 
@@ -76,7 +76,7 @@ class Base:
             border_item_checked=bd_item,
             border_item_checked_hover=bd_item,
             border_item_rgb=Rgb.TH2,
-            border_item_hover_rgb=Rgb().th3(),
+            border_item_hover_rgb=Rgb.TH3,
             border_item_checked_rgb=Rgb().bn1(),
             border_item_checked_hover_rgb=Rgb().bn1(),
 

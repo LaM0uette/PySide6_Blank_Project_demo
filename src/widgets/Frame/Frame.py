@@ -10,12 +10,12 @@ class Base:
     def __init__(self, *wgs):
         self.wgs = wgs
 
-    def th(self, rgb=Rgb().th3()):
+    def th(self, rgb=Rgb.TH3):
         Build(
             *self.wgs,
             bg=rgb,
         )
-    def tr(self, rgb=Rgb().th3()):
+    def tr(self, rgb=Rgb.TH3):
         Build(
             *self.wgs,
             bg=rgb,
@@ -87,7 +87,7 @@ class Cadre:
 
     def th1(self): self.rtn(rgb=Rgb.TH1)
     def th2(self): self.rtn(rgb=Rgb.TH2)
-    def th3(self): self.rtn(rgb=Rgb().th3())
+    def th3(self): self.rtn(rgb=Rgb.TH3)
     def bn1(self): self.rtn(rgb=Rgb().bn1())
     def bn2(self): self.rtn(rgb=Rgb().bn2())
 
@@ -99,13 +99,13 @@ class Dlg:
     def __init__(self, *wgs):
         self.wgs = wgs
 
-    def th(self, rgb=Rgb().th3()):
+    def th(self, rgb=Rgb.TH3):
         Build(
             *self.wgs,
             bg=rgb,
             radius=(0, )*4
         )
-    def tr(self, rgb=Rgb().th3()):
+    def tr(self, rgb=Rgb.TH3):
         Build(
             *self.wgs,
             bg=rgb,
@@ -129,9 +129,9 @@ class SplashScreen(Build):
             *wgs,
             bg=Rgb.TH1,
             border=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb().th3(),
+            border_rgb=Rgb.TH3,
             border_hover=(StyleBase.BORDER,) * 4,
-            border_hover_rgb=Rgb().th3(),
+            border_hover_rgb=Rgb.TH3,
             radius=(vb_wg.RADIUS_SIZE, )*4
     )
 class ToolBox(Build):
@@ -140,9 +140,9 @@ class ToolBox(Build):
             *wgs,
             bg=Rgb.TH1,
             border=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb().th3(),
+            border_rgb=Rgb.TH3,
             border_hover=(StyleBase.BORDER,) * 4,
-            border_hover_rgb=Rgb().th3(),
+            border_hover_rgb=Rgb.TH3,
             radius=(vb_wg.RADIUS, )*4
     )
 

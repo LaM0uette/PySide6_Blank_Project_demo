@@ -21,7 +21,7 @@ class PlusMinus:
             focus_policy=FocusPolicy.NO,
 
             bg=Rgb().tr(),
-            fg=Rgb().th3(),
+            fg=Rgb.TH3,
         )
 class UpDown:
     def __init__(self, *wgs):
@@ -40,7 +40,7 @@ class UpDown:
             *self.wgs,
             focus_policy=FocusPolicy.NO,
             bg=Rgb().tr(),
-            fg=Rgb().th3(),
+            fg=Rgb.TH3,
 
             img_up=Img.FLECHE_TOP,
             img_down=Img.FLECHE_BOTTOM,

@@ -23,7 +23,7 @@ class Base:
 
             bg=Rgb().tr(),
             bg_hover=Rgb().tr(),
-            fg=Rgb().th3(),
+            fg=Rgb.TH3,
 
             border_hd=bd_hd,
             border_hd_hover=bd_hd,
@@ -35,8 +35,8 @@ class Base:
             border_hd_checked_hover_rgb=rgb_hb,
             border=(StyleBase.BORDER,) * 4,
             border_hover=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb().th3(),
-            border_hover_rgb=Rgb().th3(),
+            border_rgb=Rgb.TH3,
+            border_hover_rgb=Rgb.TH3,
 
             radius_tab=(0,) * 4
         )
@@ -62,7 +62,7 @@ class Demo:
 
             bg=Rgb().tr(),
             bg_hover=Rgb().tr(),
-            fg=Rgb().th3(),
+            fg=Rgb.TH3,
 
             border_hd=bd_hd,
             border_hd_hover=bd_hd,
@@ -74,8 +74,8 @@ class Demo:
             border_hd_checked_hover_rgb=rgb_hb,
             border=(StyleBase.BORDER,) * 4,
             border_hover=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb().th3(),
-            border_hover_rgb=Rgb().th3(),
+            border_rgb=Rgb.TH3,
+            border_hover_rgb=Rgb.TH3,
 
             radius_tab=(0,) * 4
         )

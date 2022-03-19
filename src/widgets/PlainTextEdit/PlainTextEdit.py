@@ -19,7 +19,7 @@ class Base:
             *self.wgs,
 
             bg=Rgb().tr(),
-            fg=Rgb().th3()
+            fg=Rgb.TH3
         )
 
 
@@ -43,5 +43,5 @@ class Demo:
             height=Dim.H5,
 
             bg=Rgb().tr(),
-            fg=Rgb().th3()
+            fg=Rgb.TH3
         )
