@@ -42,7 +42,7 @@ class main(Ui_main, QtWidgets.QWidget):
             [self.IN_TRAY, "Finalisation de la configuration"]
         )
 
-        v = InputBox.TXT()
+        v = InputBox.test()
         print(v)
 
         splash_screen.close()
