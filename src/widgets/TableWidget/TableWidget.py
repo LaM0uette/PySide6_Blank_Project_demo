@@ -46,7 +46,7 @@ class Demo:
     def th(self):
         bd_gen = ((1,) * 4)
         rgb_hd = Rgb.TH1
-        rgb_item = Rgb().th2()
+        rgb_item = Rgb.TH2
 
         Build(
             *self.wgs,

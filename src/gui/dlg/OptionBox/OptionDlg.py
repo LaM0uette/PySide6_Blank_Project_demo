@@ -268,7 +268,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
     def f_maj_rgb_theme(self, rgb):
         dct_colors = {
             "th1": Rgb.TH1,
-            "th2": Rgb().th2(),
+            "th2": Rgb.TH2,
             "th3": Rgb().th3(),
             "bn1": Rgb().bn1(),
             "bn2": Rgb().bn2(),

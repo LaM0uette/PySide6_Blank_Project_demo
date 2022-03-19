@@ -73,7 +73,7 @@ class Demo:
             border_item_hover=bd_item,
             border_item_checked=bd_item,
             border_item_checked_hover=bd_item,
-            border_item_rgb=Rgb().th2(),
+            border_item_rgb=Rgb.TH2,
             border_item_hover_rgb=Rgb().th3(),
             border_item_checked_rgb=Rgb().bn1(),
             border_item_checked_hover_rgb=Rgb().bn1(),

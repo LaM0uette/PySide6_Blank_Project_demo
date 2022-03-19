@@ -26,7 +26,7 @@ class Base:
 ##     MENU     ##
 ##################
 class Menu:
-    def __init__(self, *wgs, bg=Rgb().th2(), height=Dim.H9):
+    def __init__(self, *wgs, bg=Rgb.TH2, height=Dim.H9):
         self.wgs = wgs
         self.bg = bg
         self.height = height
@@ -86,7 +86,7 @@ class Cadre:
         )
 
     def th1(self): self.rtn(rgb=Rgb.TH1)
-    def th2(self): self.rtn(rgb=Rgb().th2())
+    def th2(self): self.rtn(rgb=Rgb.TH2)
     def th3(self): self.rtn(rgb=Rgb().th3())
     def bn1(self): self.rtn(rgb=Rgb().bn1())
     def bn2(self): self.rtn(rgb=Rgb().bn2())

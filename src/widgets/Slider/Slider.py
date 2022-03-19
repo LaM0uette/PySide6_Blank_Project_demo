@@ -49,9 +49,9 @@ class Base:
             margin_handle_v=(0, 0, -3, -3),
 
             border_handle_h=(3,) * 4,
-            border_handle_h_rgb=Rgb().th2(),
+            border_handle_h_rgb=Rgb.TH2,
             border_handle_v=(3,) * 4,
-            border_handle_v_rgb=Rgb().th2(),
+            border_handle_v_rgb=Rgb.TH2,
 
             radius_groove_h=(3,) * 4,
             radius_groove_v=(3,) * 4,

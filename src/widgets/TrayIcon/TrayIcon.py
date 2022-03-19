@@ -19,12 +19,12 @@ class Main(Build):
             fg_item_checked=Rgb().bn1(),
 
             border=(StyleBase.BORDER, )*4,
-            border_rgb=Rgb().th2(),
+            border_rgb=Rgb.TH2,
 
             border_item=(0, StyleBase.BORDER, 0, 0),
             border_item_checked=(0, StyleBase.BORDER, 0, 0),
             border_item_rgb=Rgb.TH1,
-            border_item_checked_rgb=Rgb().th2(),
+            border_item_checked_rgb=Rgb.TH2,
             radius_item=(0, )*4,
 
             height_separator=3,

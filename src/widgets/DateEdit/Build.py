@@ -36,9 +36,9 @@ class Build:
             bg_selection=vb_wg.BG_SELECTION,
             bg_item=vb_wg.BG_ITEM,
             bg_item_hover=vb_wg.BG_ITEM_HOVER,
-            bg_header=Rgb().th2(),
-            bg_header_hover=Rgb().th2(),
-            bg_mois=Rgb().th2(),
+            bg_header=Rgb.TH2,
+            bg_header_hover=Rgb.TH2,
+            bg_mois=Rgb.TH2,
             # Couleurs FG
             fg=vb_wg.FG,
             fg_hover=vb_wg.FG_HOVER,

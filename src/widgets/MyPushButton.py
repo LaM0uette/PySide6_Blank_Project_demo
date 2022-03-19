@@ -266,11 +266,11 @@ class Plein:
             bg_gen=Rgb.TH1,
             fg_gen=Rgb().th3(),
             border_gen=(StyleBase.BORDER,) * 4,
-            border_gen_rgb=Rgb().th2(),
+            border_gen_rgb=Rgb.TH2,
         )
     def th2(self):
         self._rtn(
-            bg_gen=Rgb().th2(),
+            bg_gen=Rgb.TH2,
             fg_gen=Rgb().th3(),
         )
     def th3(self):

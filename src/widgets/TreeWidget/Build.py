@@ -38,7 +38,7 @@ class Build:
             bg_item_hover=vb_wg.BG_ITEM_HOVER,
             bg_item_checked=vb_wg.BG_ITEM_CHECKED,
             bg_item_checked_hover=vb_wg.BG_ITEM_CHECKED_HOVER,
-            bg_header=Rgb().th2(),
+            bg_header=Rgb.TH2,
             # Couleurs FG
             fg=vb_wg.FG,
             fg_item=vb_wg.FG_ITEM,
