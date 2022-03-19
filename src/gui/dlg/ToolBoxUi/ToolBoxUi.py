@@ -23,7 +23,7 @@ class ToolBoxUi(toolbox_ui.Ui_ToolBoxUi, QtWidgets.QDialog):
         self.setFixedHeight(self.height)
         self.setWindowOpacity(self.opacity)
 
-        if Config.toolbox_pin:
+        if Config().toolbox_pin:
             self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.WindowStaysOnTopHint | QtCore.Qt.Tool)
         else:
             self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.Tool)

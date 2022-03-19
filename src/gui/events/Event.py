@@ -41,7 +41,7 @@ class Event:
         self.margin = v_gb.MARGIN_APP
     def e_cacher(self):
         """Permet de cacher la fenêtre"""
-        if Config.auto_close: return self.ui.e_quitter()
+        if Config().auto_close: return self.ui.e_quitter()
         self.ui.hide()
         self._e_center_screen()
 
