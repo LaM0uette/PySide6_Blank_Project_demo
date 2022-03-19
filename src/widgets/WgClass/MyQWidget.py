@@ -13,13 +13,13 @@ class MyQWidget:
             layout_direction,
     ):
         """
-        :param widget: Widget \n
-        :param size_policy: dc_size_policy.%class(*arguments) \n
-        :param dim: dc_dim.%class(*arguments) \n
-        :param font: Font.% \n
-        :param cursor: Cur.% \n
-        :param focus_policy: FocusPolicy.% \n
-        :param layout_direction: LayoutDirection.% \n
+        :param widget: Widget
+        :param size_policy: dc_size_policy.%class(*arguments)
+        :param dim: dc_dim.%class(*arguments)
+        :param font: Font.%
+        :param cursor: Cur.%
+        :param focus_policy: FocusPolicy.%
+        :param layout_direction: LayoutDirection.%
         """
 
         # SizePolicy
