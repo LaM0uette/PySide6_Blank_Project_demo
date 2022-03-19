@@ -42,7 +42,7 @@ class main(Ui_main, QtWidgets.QWidget):
             [self.IN_TRAY, "Finalisation de la configuration"]
         )
 
-        MsgBox().INFO()
+        MsgBox.INFO()
 
         splash_screen.close()
 
