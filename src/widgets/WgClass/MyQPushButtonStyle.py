@@ -10,12 +10,7 @@ class Style(MyQPushButton):
             self,
             widget,
             size_policy=v_wg.SIZE_POLICY,
-            fixed_width=v_wg.WG_WIDTH,
-            fixed_height=v_wg.WG_HEIGHT,
-            minimum_width=None,
-            minimum_height=None,
-            maximum_width=None,
-            maximum_height=None,
+            dim=v_wg.DIM_WG,
             font=v_wg.FONT,
             cursor=v_wg.CUR_ACTION,
             focus_policy=v_wg.FOCUS_POLICY,
@@ -75,7 +70,7 @@ class Style(MyQPushButton):
             border_checked_hover_rgb=v_wg.BORDER_RGB,
             radius=v_wg.RADIUS
     ):
-        super().__init__(widget,size_policy,fixed_width,fixed_height,minimum_width,minimum_height,maximum_width,maximum_height,font,cursor,focus_policy,layout_direction,txt,ico,ico_rgb,ico_width,ico_height,checkable,checked,auto_repeat,auto_exclusive,auto_repeat_delay,auto_repeat_interval,auto_default,default,flat)
+        super().__init__(widget,size_policy,dim,font,cursor,focus_policy,layout_direction,txt,ico,ico_rgb,ico_width,ico_height,checkable,checked,auto_repeat,auto_exclusive,auto_repeat_delay,auto_repeat_interval,auto_default,default,flat)
 
         # Style
         style = f"""

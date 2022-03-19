@@ -16,12 +16,12 @@ class MyQWidget:
         widget.setSizePolicy(size_policy.horizontal, size_policy.vertical)
 
         # Dimmensions
-        if fixed_width: widget.setFixedWidth(fixed_width)
-        if fixed_height: widget.setFixedHeight(fixed_height)
-        if minimum_width: widget.setMinimumWidth(minimum_width)
-        if minimum_height: widget.setMinimumHeight(minimum_height)
-        if maximum_width: widget.setMaximumWidth(maximum_width)
-        if maximum_height: widget.setMaximumHeight(maximum_height)
+        if dim.fixed_width: widget.setFixedWidth(dim.fixed_width)
+        if dim.fixed_height: widget.setFixedHeight(dim.fixed_height)
+        if dim.minimum_width: widget.setMinimumWidth(dim.minimum_width)
+        if dim.minimum_height: widget.setMinimumHeight(dim.minimum_height)
+        if dim.maximum_width: widget.setMaximumWidth(dim.maximum_width)
+        if dim.maximum_height: widget.setMaximumHeight(dim.maximum_height)
 
         # Font
         widget.setFont(font)

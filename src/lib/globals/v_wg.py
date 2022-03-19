@@ -5,14 +5,14 @@ from src.lib.palettes import *
 #####################
 # SizePolicy
 SIZE_POLICY = dc_size_policy.Base
-SIZE_POLICY_H = SizePolicy.PREFERED
-SIZE_POLICY_V = SizePolicy.PREFERED
 
 # Dimensions
 WIDTH = None
 HEIGHT = None
 WG_WIDTH = None
 WG_HEIGHT = Dim.H9
+DIM = dc_dim.Base()
+DIM_WG = dc_dim.Base(fixed_height=Dim.H9)
 
 # Font
 FONT = Font.BASE
