@@ -11,7 +11,7 @@ HEIGHT = Dim.H9
 ####################
 ##     POLICE     ##
 ####################
-FONT = Config().font
+FONT = Config.font
 FONT_SIZE = Font.H4
 FONT_SIZE_HD = Font.H3
 
