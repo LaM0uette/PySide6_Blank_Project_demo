@@ -38,7 +38,7 @@ class MenuTop:
 
     def _rtn(
             self,
-            img=Img().main(),
+            img=Img.MAIN,
             img_rgb="th2",
     ):
         bg = Rgb().tr()
@@ -61,21 +61,21 @@ class MenuTop:
 
     def option(self):
         self._rtn(
-            img=Img().option()
+            img=Img.OPTION
         )
     def reduire(self):
         self._rtn(
-            img=Img().reduire(),
+            img=Img.REDUIRE,
             img_rgb="bn1"
         )
     def agrandir(self):
         self._rtn(
-            img=Img().agrandir(),
+            img=Img.AGRANDIR,
             img_rgb="th3"
         )
     def quitter(self):
         self._rtn(
-            img=Img().quitter(),
+            img=Img.QUITTER,
             img_rgb="bn2"
         )
 

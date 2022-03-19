@@ -29,7 +29,7 @@ class ResponseBox:
         return reponse_dlg.response
 
 
-    def INFO(self, title="INFO", msg="", ico=Img().info(), ico_rgb="th3", txt_ok="Ok", txt_cancel="Annuler"):
+    def INFO(self, title="INFO", msg="", ico=Img.INFO, ico_rgb="th3", txt_ok="Ok", txt_cancel="Annuler"):
         return self._rtn(
             title=title,
             msg=msg,
@@ -38,7 +38,7 @@ class ResponseBox:
             txt_ok=txt_ok,
             txt_cancel=txt_cancel
         )
-    def ALERTE(self, title="ALERTE", msg="", ico=Img().alerte(), ico_rgb="th3", txt_ok="Valider", txt_cancel="Annuler"):
+    def ALERTE(self, title="ALERTE", msg="", ico=Img.ALERTE, ico_rgb="th3", txt_ok="Valider", txt_cancel="Annuler"):
         return self._rtn(
             title=title,
             msg=msg,
@@ -47,7 +47,7 @@ class ResponseBox:
             txt_ok=txt_ok,
             txt_cancel=txt_cancel
         )
-    def QUITTER(self, title="Quitter", msg="Voulez vous quitter cette application ?", ico=Img().quitter(), ico_rgb="bn2", txt_ok="Quitter", txt_cancel="Annuler"):
+    def QUITTER(self, title="Quitter", msg="Voulez vous quitter cette application ?", ico=Img.QUITTER, ico_rgb="bn2", txt_ok="Quitter", txt_cancel="Annuler"):
         return self._rtn(
             title=title,
             msg=msg,

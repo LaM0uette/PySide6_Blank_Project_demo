@@ -30,7 +30,7 @@ class OptionBox:
         opt.exec()
 
 
-    def MAIN(self, title="OPTION", msg="", ico=Img().info(), ico_rgb="th3", txt_apply="Appliquer", txt_ok="Ok"):
+    def MAIN(self, title="OPTION", msg="", ico=Img.INFO, ico_rgb="th3", txt_apply="Appliquer", txt_ok="Ok"):
         return self._rtn(
             title=title,
             msg=msg,

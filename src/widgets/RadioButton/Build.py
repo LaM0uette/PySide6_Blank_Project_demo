@@ -38,10 +38,10 @@ class Build:
             spacing=10,
 
             # Images
-            img_uncheck=Img().check0_rond(),
-            img_uncheck_hover=Img().check0_rond(),
-            img_check=Img().check2_rond(),
-            img_check_hover=Img().check2_rond(),
+            img_uncheck=Img.CHECK0_ROND,
+            img_uncheck_hover=Img.CHECK0_ROND,
+            img_check=Img.CHECK2_ROND,
+            img_check_hover=Img.CHECK2_ROND,
             # Images RGB
             img_uncheck_rgb=vb_wg.IMG_UNCHECK_RGB,
             img_uncheck_hover_rgb=vb_wg.IMG_UNCHECK_HOVER_RGB,

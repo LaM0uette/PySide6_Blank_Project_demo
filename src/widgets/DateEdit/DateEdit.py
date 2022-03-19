@@ -15,8 +15,8 @@ class Base:
         Build(
             *self.wgs,
 
-            img=Img().calendrier(),
-            img_hover=Img().calendrier(),
+            img=Img.CALENDRIER,
+            img_hover=Img.CALENDRIER,
             img_rgb="",
             img_hover_rgb="",
             img_margin=self.margin,
@@ -31,8 +31,8 @@ class Base:
             fg=Rgb().th3(),
             fg_selection=Rgb().th1(),
 
-            img=Img().calendrier(),
-            img_hover=Img().calendrier(),
+            img=Img.CALENDRIER,
+            img_hover=Img.CALENDRIER,
             img_rgb="",
             img_hover_rgb="",
             img_margin=self.margin,

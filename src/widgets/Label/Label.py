@@ -23,7 +23,7 @@ class Base:
             bg=Rgb().tr(),
             bg_hover=Rgb().tr(),
 
-            img=Img().main(),
+            img=Img.MAIN,
             img_rgb="th3",
 
             scaled_contents=True,
@@ -40,12 +40,12 @@ class Base:
             bg=Rgb().tr(),
             bg_hover=Rgb().tr(),
 
-            img=Img().main(),
+            img=Img.MAIN,
             img_rgb="th3",
 
             scaled_contents=True,
         )
-    def ico_custom(self, img=Img().main(), img_rgb="th3"):
+    def ico_custom(self, img=Img.MAIN, img_rgb="th3"):
         Build(
             *self.wgs,
 

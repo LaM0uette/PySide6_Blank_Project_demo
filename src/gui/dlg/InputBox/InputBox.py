@@ -33,7 +33,7 @@ class InputBox:
             self,
             title="INPUT",
             msg="Tapez votre texte",
-            ico=Img().info(),
+            ico=Img.INFO,
             ico_rgb="th3",
             txt_ok="Ok",
             txt_cancel="Annuler"

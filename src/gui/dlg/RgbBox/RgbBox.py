@@ -33,7 +33,7 @@ class RgbBox:
             self,
             title="RGB",
             rgb=None,
-            ico=Img().info(),
+            ico=Img.INFO,
             ico_rgb="th3",
             txt_ok="Ok",
             txt_cancel="Annuler"

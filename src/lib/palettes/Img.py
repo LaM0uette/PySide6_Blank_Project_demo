@@ -1,30 +1,38 @@
-
-
 class Img:
 
-    def SVG(self, val, img): return f"src/assets/img/{val}/rgb/{img}"
+    @staticmethod
+    def _svg(val, img):
+        return f"src/assets/img/{val}/rgb/{img}"
 
-    def calendrier(self): return self.SVG("divers", "calendrier")
-    def main(self): return self.SVG("main", "main")
-    def option(self): return self.SVG("ui", "option")
-    def reduire(self): return self.SVG("ui", "reduire")
-    def agrandir(self): return self.SVG("ui", "agrandir")
-    def quitter(self): return self.SVG("ui", "quitter")
-    def resize(self): return self.SVG("ui", "resize")
-    def copier(self): return self.SVG("ui", "copier")
-    def check0(self): return self.SVG("ui", "check0")
-    def check1(self): return self.SVG("ui", "check1")
-    def check2(self): return self.SVG("ui", "check2")
-    def check0_rond(self): return self.SVG("ui", "check0_rond")
-    def check1_rond(self): return self.SVG("ui", "check1_rond")
-    def check2_rond(self): return self.SVG("ui", "check2_rond")
-    def lock(self): return self.SVG("ui", "lock")
-    def unlock(self): return self.SVG("ui", "unlock")
-    def alerte(self): return self.SVG("ui", "alerte")
-    def info(self): return self.SVG("ui", "info")
-    def fleche_bottom(self): return self.SVG("ui", "fleche_bottom")
-    def fleche_droite(self): return self.SVG("ui", "fleche_droite")
-    def fleche_gauche(self): return self.SVG("ui", "fleche_gauche")
-    def fleche_top(self): return self.SVG("ui", "fleche_top")
-    def plus(self): return self.SVG("ui", "plus")
-    def moins(self): return self.SVG("ui", "moins")
+    CALENDRIER = _svg("divers", "calendrier")
+    MAIN = _svg("main", "main")
+    OPTION = _svg("ui", "option")
+    REDUIRE = _svg("ui", "reduire")
+    AGRANDIR = _svg("ui", "agrandir")
+    QUITTER = _svg("ui", "quitter")
+    RESIZE = _svg("ui", "resize")
+    COPIER = _svg("ui", "copier")
+    CHECK0 = _svg("ui", "check0")
+    CHECK1 = _svg("ui", "check1")
+    CHECK2 = _svg("ui", "check2")
+    CHECK0_ROND = _svg("ui", "check0_rond")
+    CHECK1_ROND = _svg("ui", "check1_rond")
+    CHECK2_ROND = _svg("ui", "check2_rond")
+    LOCK = _svg("ui", "lock")
+    UNLOCK = _svg("ui", "unlock")
+    ALERTE = _svg("ui", "alerte")
+    INFO = _svg("ui", "info")
+    FLECHE_TOP = _svg("ui", "fleche_top")
+    FLECHE_BOTTOM = _svg("ui", "fleche_bottom")
+    FLECHE_RIGHT = _svg("ui", "fleche_droite")
+    FLECHE_LEFT = _svg("ui", "fleche_gauche")
+    PLUS = _svg("ui", "plus")
+    MOINS = _svg("ui", "moins")
+
+
+
+
+
+
+    def fleche_bottom(self): return self._svg("ui", "fleche_bottom")
+    def fleche_top(self): return self._svg("ui", "fleche_top")

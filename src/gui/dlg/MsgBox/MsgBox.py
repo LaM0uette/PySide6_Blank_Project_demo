@@ -31,7 +31,7 @@ class MsgBox:
             self,
             title="INFO",
             msg="",
-            ico=Img().info(),
+            ico=Img.INFO,
             ico_rgb="th3",
             txt_ok="Ok"
     ):
@@ -46,7 +46,7 @@ class MsgBox:
             self,
             title="ALERTE",
             msg="",
-            ico=Img().alerte(),
+            ico=Img.ALERTE,
             ico_rgb="th3",
             txt_ok="Ok"
     ):

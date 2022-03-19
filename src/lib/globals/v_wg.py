@@ -116,19 +116,19 @@ GRIDLINE = Rgb().th2()
 
 
 ###  IMAGES  ###
-IMG_UNCHECK = Img().check0()
-IMG_UNCHECK_HOVER = Img().check0()
-IMG_CHECK = Img().check2()
-IMG_CHECK_HOVER = Img().check2()
-IMG_INDETERMINATE = Img().check1()
-IMG_INDETERMINATE_HOVER = Img().check1()
+IMG_UNCHECK = Img.CHECK0
+IMG_UNCHECK_HOVER = Img.CHECK0
+IMG_CHECK = Img.CHECK2
+IMG_CHECK_HOVER = Img.CHECK2
+IMG_INDETERMINATE = Img.CHECK1
+IMG_INDETERMINATE_HOVER = Img.CHECK1
 IMG_UNROLL = Img().fleche_bottom()
 IMG_UNROLL_HOVER = Img().fleche_bottom()
     # Arrows
-IMG_UP = Img().plus()
-IMG_DOWN = Img().moins()
-IMG_RIGHT = Img().fleche_droite()
-IMG_LEFT = Img().fleche_gauche()
+IMG_UP = Img.PLUS
+IMG_DOWN = Img.MOINS
+IMG_RIGHT = Img.FLECHE_RIGHT
+IMG_LEFT = Img.FLECHE_LEFT
 ### /IMAGES  ###
 
 

@@ -18,7 +18,7 @@ class main(Ui_main, QtWidgets.QWidget):
             # size_grip
         self.size_grip = QtWidgets.QSizeGrip(self)
             # tray
-        self.tray = QtWidgets.QSystemTrayIcon(QtGui.QPixmap(f"{Img().main()}th3.svg"), self)
+        self.tray = QtWidgets.QSystemTrayIcon(QtGui.QPixmap(f"{Img.MAIN}th3.svg"), self)
         self.tray.activated.connect(self.trayActivate)
         self.timer_double_click = QtCore.QTimer(self)
         self.timer_double_click.setSingleShot(True)
@@ -57,7 +57,7 @@ class main(Ui_main, QtWidgets.QWidget):
     def IN_BASE(self):
         ### Fenetre principal ###
         self.setWindowTitle(config.nom)
-        self.setWindowIcon(QtGui.QPixmap(f"{Img().main()}th3.svg"))
+        self.setWindowIcon(QtGui.QPixmap(f"{Img.MAIN}th3.svg"))
         self.setWindowOpacity(config.opacity)
 
         self.setGraphicsEffect(Shadow().ombre_portee(self))
@@ -131,7 +131,7 @@ class main(Ui_main, QtWidgets.QWidget):
             self.size_grip.setStyleSheet(
                 f"""
                 QSizeGrip {{
-                image: url({Img().resize()}th3.svg);
+                image: url({Img.RESIZE}th3.svg);
                 width: {Dim.H10}px;
                 height: {Dim.H10}px;
                 }}
@@ -178,7 +178,7 @@ class main(Ui_main, QtWidgets.QWidget):
         Functions.ADD_QACTION(
             self,
             tray=self.tray_menu,
-            ico=Img().quitter(),
+            ico=Img.QUITTER,
             ico_rgb="bn2",
             txt="Quitter",
             shortcut_txt="Shift+Esc",
@@ -259,7 +259,7 @@ class main(Ui_main, QtWidgets.QWidget):
         """Permet de quitter l'application"""
         if not config.auto_close:
             self.hide()
-        elif ResponseBox().QUITTER():
+        elif ResponseBox.QUITTER:
             app.quit()
     def e_quitter_tray(self):
         self.show()
@@ -268,7 +268,7 @@ class main(Ui_main, QtWidgets.QWidget):
         if fen.windowState() == QtCore.Qt.WindowMinimized:
             fen.setWindowState(QtCore.Qt.WindowActive)
 
-        if ResponseBox().QUITTER():
+        if ResponseBox.QUITTER:
             app.quit()
     #####
     def closeEvent(self, event):
