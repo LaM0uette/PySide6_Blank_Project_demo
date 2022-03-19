@@ -1,12 +1,14 @@
 """
 dc_dim.%class(
-    horizontal: SizePolicy.%VALUE \n
-    vertical: SizePolicy.%VALUE)
+    fixed_width: int = Dim.%val \n
+    fixed_height: int = Dim.%val \n
+    minimum_width: int = Dim.%val \n
+    minimum_height: int = Dim.%val \n
+    maximum_width: int = Dim.%val \n
+    maximum_height: int = Dim.%val
 """
 
 from dataclasses import dataclass
-
-from src.lib.palettes import Dim
 
 
 @dataclass
