@@ -5,8 +5,7 @@ class MyQWidget:
     def __init__(
             self,
             widget,
-            size_policy_h,
-            size_policy_v,
+            size_policy,
             fixed_width,
             fixed_height,
             minimum_width,
@@ -19,7 +18,7 @@ class MyQWidget:
             layout_direction,
     ):
         # SizePolicy
-        widget.setSizePolicy(size_policy_h, size_policy_v)
+        widget.setSizePolicy(size_policy.horizontal, size_policy.vertical)
 
         # Dimmensions
         if fixed_width: widget.setFixedWidth(fixed_width)

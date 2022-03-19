@@ -1,4 +1,5 @@
 from .WgClass.MyQPushButtonStyle import Style
+from src.lib.data_class import *
 from src.lib.palettes import *
 
 
