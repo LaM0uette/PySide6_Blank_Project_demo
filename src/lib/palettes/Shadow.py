@@ -6,7 +6,7 @@ from PySide6 import QtWidgets, QtGui
 class Shadow:
 
     @staticmethod
-    def _get_shadow(wg, blur_radius: int, rgba: tuple, offset: list):
+    def __get_shadow(wg, blur_radius: int, rgba: tuple, offset: list):
         shadow = QtWidgets.QGraphicsDropShadowEffect(wg)
         shadow.setBlurRadius(blur_radius)
         shadow.setColor(QtGui.QColor(*rgba))
@@ -15,6 +15,6 @@ class Shadow:
 
     __R, __G, __B = 0, 0, 0
 
-    GLOW = partial(_get_shadow, blur_radius=8, rgba=(__R, __G, __B, 255), offset=[0, 0])
-    PRESPECTIVE = partial(_get_shadow, blur_radius=6, rgba=(__R, __G, __B, 150), offset=[3, 3])
-    OMBRE_PORTEE = partial(_get_shadow, blur_radius=12, rgba=(__R, __G, __B, 150), offset=[0, 0])
+    GLOW = partial(__get_shadow, blur_radius=8, rgba=(__R, __G, __B, 255), offset=[0, 0])
+    PRESPECTIVE = partial(__get_shadow, blur_radius=6, rgba=(__R, __G, __B, 150), offset=[3, 3])
+    OMBRE_PORTEE = partial(__get_shadow, blur_radius=12, rgba=(__R, __G, __B, 150), offset=[0, 0])
