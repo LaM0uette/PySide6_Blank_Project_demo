@@ -51,8 +51,8 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
         self.setCursor(Functions().SET_CURSOR(cur=Cur.SOURIS))
 
         ### Infos ###
-        self.lb_titre.setText(config.nom)
-        self.lb_description.setText(config.description)
+        self.lb_titre.setText(Config().nom)
+        self.lb_description.setText(Config().description)
     def IN_CONNECTIONS(self):
         pass
     def IN_ACT(self):

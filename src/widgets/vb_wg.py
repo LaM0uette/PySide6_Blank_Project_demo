@@ -1,4 +1,4 @@
-from src.config import config
+from src.config.config import Config
 from src.lib.palettes import *
 
 
@@ -11,7 +11,7 @@ HEIGHT = Dim.H9
 ####################
 ##     POLICE     ##
 ####################
-FONT = config.font
+FONT = Config().font
 FONT_SIZE = Font.H4
 FONT_SIZE_HD = Font.H3
 

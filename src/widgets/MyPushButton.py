@@ -1,4 +1,4 @@
-from .WgClass.MyQPushButtonStyle import Style
+from .WgClass.MyQPushButtonStyle import Style, t
 from src.lib.palettes import *
 
 
@@ -10,7 +10,7 @@ class Base:
         self.widget = widget
 
     def Base(self):
-        Style(
+        t(
             widget=self.widget,
         )
     def Transparent(self):

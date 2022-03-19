@@ -1,6 +1,6 @@
 from PySide6 import QtGui
 
-from src.config import config
+from src.config.config import Config
 
 
 class FontSize:
@@ -12,7 +12,7 @@ class FontSize:
 class Font:
 
     @staticmethod
-    def __gen_font(family=config.font, size=FontSize.H4):
+    def __gen_font(family=Config().font, size=FontSize.H4):
         ft = QtGui.QFont()
         ft.setFamily(family)
         ft.setPointSize(size)

@@ -32,14 +32,14 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### FONCTIONS AU LANCEMENT ###
         self.INIT(
-            [self.IN_BASE, "Configuration des éléments principaux"],
+            [self.IN_BASE, "Config()uration des éléments principaux"],
             [self.IN_SETUP_UI, "Setup de l'interface graphique"],
             [self.IN_CLASSE, "Initialisation des Widgets"],
-            [self.IN_WG, "Configuration de base des Widgets"],
+            [self.IN_WG, "Config()uration de base des Widgets"],
             [self.IN_CONNECTIONS, "Ajout des connexions"],
             [self.IN_ACT, "Fonctions de base"],
             [self.IN_WG_BASE, "Etat de base des Widgets"],
-            [self.IN_TRAY, "Finalisation de la configuration"]
+            [self.IN_TRAY, "Finalisation de la Config()uration"]
         )
 
         splash_screen.close()
@@ -56,9 +56,9 @@ class main(Ui_main, QtWidgets.QWidget):
     ############################
     def IN_BASE(self):
         ### Fenetre principal ###
-        self.setWindowTitle(config.nom)
+        self.setWindowTitle(Config().nom)
         self.setWindowIcon(QtGui.QPixmap(f"{Img.MAIN}th3.svg"))
-        self.setWindowOpacity(config.opacity)
+        self.setWindowOpacity(Config().opacity)
 
         self.setGraphicsEffect(Shadow.OMBRE_PORTEE(self))
 
@@ -113,7 +113,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### Nom de l'app ###
-        self.lb_mt_nom.setText(config.nom)
+        self.lb_mt_nom.setText(Config().nom)
 
 
         ### Widget blanc pour centrer le nom de l'app ###
@@ -122,11 +122,11 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### Version de l'app ###
-        self.lb_mb_version.setText(f" Version : {config.version}")
+        self.lb_mb_version.setText(f" Version : {Config().version}")
 
 
         ### size_grip ###
-        if config.resize:
+        if Config().resize:
             self.size_grip.setCursor(Functions().SET_CURSOR(Cur.FLECHE_NWSE))
             self.size_grip.setStyleSheet(
                 f"""
@@ -226,12 +226,12 @@ class main(Ui_main, QtWidgets.QWidget):
     ##     EVENT     ##
     ###################
     def e_resize_screen(self):
-        if config.resize:
-            self.setMinimumWidth(config.widht)
-            self.setMinimumHeight(config.height)
+        if Config().resize:
+            self.setMinimumWidth(Config().widht)
+            self.setMinimumHeight(Config().height)
         else:
-            self.setFixedWidth(config.widht)
-            self.setFixedHeight(config.height)
+            self.setFixedWidth(Config().widht)
+            self.setFixedHeight(Config().height)
     #####
     def traySingleClick(self):
         screen = QtWidgets.QApplication.primaryScreen().availableGeometry()
@@ -257,7 +257,7 @@ class main(Ui_main, QtWidgets.QWidget):
             self.trayDoubleClick()
     def e_quitter(self):
         """Permet de quitter l'application"""
-        if not config.auto_close:
+        if not Config().auto_close:
             self.hide()
         elif ResponseBox.QUITTER():
             app.quit()
@@ -280,7 +280,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
 if __name__ == "__main__":
-    if config.debug:
+    if Config().debug:
         Functions().GEN_SVG()
 
     app = QtWidgets.QApplication(sys.argv)

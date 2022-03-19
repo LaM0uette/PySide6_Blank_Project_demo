@@ -1,16 +1,16 @@
 import json
 import os
 
-from src.config import config
+from src.config.config import Config
 
 
 class Cur:
 
     @staticmethod
     def __cursor(img, xy):
-        return [f"src/assets/cursor/{config.cur}/{img}.cur", xy[0], xy[1]]
+        return [f"src/assets/cursor/{Config().cur}/{img}.cur", xy[0], xy[1]]
 
-    with open(f"{os.path.dirname(f'src/assets/cursor/{config.cur}/_data.json')}/_data.json", "r", encoding="utf-8") as fichier:
+    with open(f"{os.path.dirname(f'src/assets/cursor/{Config().cur}/_data.json')}/_data.json", "r", encoding="utf-8") as fichier:
         cur = json.load(fichier)
 
     _souris = cur["_souris"]
