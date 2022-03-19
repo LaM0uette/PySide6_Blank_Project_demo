@@ -167,7 +167,7 @@ class main(Ui_main, QtWidgets.QWidget):
         self.trv_demo_tr.setModel(model)
     def IN_CONNECTIONS(self):
         ### Menu_top ###
-        self.pb_mt_option.clicked.connect(lambda: OptionBox(fen_main=fen).MAIN())
+        self.pb_mt_option.clicked.connect(lambda: OptionBox.MAIN(fen_main=fen))
         self.pb_mt_reduire.clicked.connect(lambda: self.evt.e_reduire())
         self.pb_mt_agrandir.clicked.connect(lambda: self.evt.e_agrandir())
         self.pb_mt_quitter.clicked.connect(lambda: self.evt.e_cacher())
