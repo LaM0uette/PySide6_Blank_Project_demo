@@ -164,6 +164,7 @@ class Dlg:
                 fixed_width=Dim.H6,
                 fixed_height=None,
             ),
+
             bg=bg,
             fg=fg,
             bg_hover=bg_hover,
