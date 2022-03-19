@@ -42,6 +42,9 @@ class main(Ui_main, QtWidgets.QWidget):
             [self.IN_TRAY, "Finalisation de la configuration"]
         )
 
+        v = InputBox.TXT()
+        print(v)
+
         splash_screen.close()
 
         ### CREATION DES EVENT ###
