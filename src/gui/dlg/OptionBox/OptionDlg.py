@@ -217,29 +217,28 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
     ##     ACTIONS     ##
     #####################
     def _a_reload_ui(self):
-        print(Config().theme)
         MyPushButton.Plein(self.pb_opt_tm_th1).th1()
         MyPushButton.Plein(self.pb_opt_tm_th2).th2()
         MyPushButton.Plein(self.pb_opt_tm_th3).th3()
         MyPushButton.Plein(self.pb_opt_tm_bn1).bn1()
         MyPushButton.Plein(self.pb_opt_tm_bn2).bn2()
 
-        QtWidgets.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
-
-        Functions().GEN_SVG()
-        time.sleep(0.5)
-
-        self.IN_WG()
-        self.IN_CLASSE()
-
-        self.fen_main.IN_BASE()
-        self.fen_main.IN_WG()
-        self.fen_main.IN_CLASSE()
-
-        QtWidgets.QApplication.restoreOverrideCursor()
-
-        if self.reload:
-            MsgBox().INFO(msg="Modifications appliquées !\nVeuillez redémarrer l'application pour appliquer les modifications.")
+        # QtWidgets.QApplication.setOverrideCursor(QtCore.Qt.WaitCursor)
+        #
+        # Functions().GEN_SVG()
+        # time.sleep(0.5)
+        #
+        # self.IN_WG()
+        # self.IN_CLASSE()
+        #
+        # self.fen_main.IN_BASE()
+        # self.fen_main.IN_WG()
+        # self.fen_main.IN_CLASSE()
+        #
+        # QtWidgets.QApplication.restoreOverrideCursor()
+        #
+        # if self.reload:
+        MsgBox().INFO(msg="Modifications appliquées !\nVeuillez redémarrer l'application pour appliquer les modifications.")
         self.reload = False
     #####
     def a_maj_liste_themes(self):
