@@ -245,9 +245,11 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
         self.cb_opt_tm_theme.clear()
 
         for i, js in enumerate(glob.glob(f"src/theme/*.json")):
-            tm = os.path.basename(js).split(".")[0]
-            self.cb_opt_tm_theme.addItem(tm)
-            if tm == Config.theme:
+            theme = os.path.basename(js).split(".")[0]
+            self.cb_opt_tm_theme.addItem(theme)
+
+            cfg = Json(lien_json=f"src/config/config.json").OPEN()
+            if theme == cfg["config"]["theme"]:
                 self.cb_opt_tm_theme.setCurrentIndex(i)
     def a_maj_cb_font(self):
         ComboBox.Base(self.fcb_opt_ft_font, self.cb_opt_tm_theme).font(font=self.fcb_opt_ft_font.currentText())
