@@ -273,7 +273,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
             "bn1": Rgb.BN1,
             "bn2": Rgb.BN2,
         }
-        colors = RgbBox().GET(rgb=dct_colors.get(rgb))
+        colors = RgbBox.GET(rgb=dct_colors.get(rgb))
         if colors:
             self.a_maj_button_appliquer()
 
