@@ -20,5 +20,5 @@ class Base:
         Build(
             *self.wgs,
 
-            bg=Rgb().tr()
+            bg=Rgb.TR
         )

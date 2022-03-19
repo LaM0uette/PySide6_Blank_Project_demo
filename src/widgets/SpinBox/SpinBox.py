@@ -20,7 +20,7 @@ class PlusMinus:
 
             focus_policy=FocusPolicy.NO,
 
-            bg=Rgb().tr(),
+            bg=Rgb.TR,
             fg=Rgb.TH3,
         )
 class UpDown:
@@ -39,7 +39,7 @@ class UpDown:
         Build(
             *self.wgs,
             focus_policy=FocusPolicy.NO,
-            bg=Rgb().tr(),
+            bg=Rgb.TR,
             fg=Rgb.TH3,
 
             img_up=Img.FLECHE_TOP,

@@ -21,8 +21,8 @@ class Base:
         Build(
             *self.wgs,
 
-            bg=Rgb().tr(),
-            bg_hover=Rgb().tr(),
+            bg=Rgb.TR,
+            bg_hover=Rgb.TR,
             fg=Rgb.TH3,
 
             border_hd=bd_hd,
@@ -60,8 +60,8 @@ class Demo:
         Build(
             *self.wgs,
 
-            bg=Rgb().tr(),
-            bg_hover=Rgb().tr(),
+            bg=Rgb.TR,
+            bg_hover=Rgb.TR,
             fg=Rgb.TH3,
 
             border_hd=bd_hd,

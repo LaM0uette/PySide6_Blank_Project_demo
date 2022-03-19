@@ -14,7 +14,7 @@ class Base:
             widget=self.widget,
         )
     def Transparent(self):
-        bg = Rgb().tr()
+        bg = Rgb.TR
 
         Style(
             widget=self.widget,
@@ -41,7 +41,7 @@ class Demo:
             widget=self.widget,
         )
     def Transparent(self):
-        bg = Rgb().tr()
+        bg = Rgb.TR
 
         Style(
             widget=self.widget,

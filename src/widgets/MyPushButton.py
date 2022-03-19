@@ -14,7 +14,7 @@ class Base:
             widget=self.widget,
         )
     def Transparent(self):
-        bg = Rgb().tr()
+        bg = Rgb.TR
 
         Style(
             widget=self.widget,
@@ -41,7 +41,7 @@ class MenuTop:
             img=Img.MAIN,
             img_rgb="th2",
     ):
-        bg = Rgb().tr()
+        bg = Rgb.TR
 
         Style(
             self.widget,
@@ -197,22 +197,22 @@ class Dlg:
     def nok(self):
         self._rtn(
             bg=Rgb.TH1,
-            fg=Rgb().bn2(),
-            bg_hover=Rgb().bn2(),
+            fg=Rgb.BN2,
+            bg_hover=Rgb.BN2,
             fg_hover=Rgb.TH1,
-            bg_pressed=Rgb().bn2(),
+            bg_pressed=Rgb.BN2,
             fg_pressed=Rgb.TH1,
-            bd_rgb=Rgb().bn2(),
+            bd_rgb=Rgb.BN2,
         )
     def nok_inv(self):
         self._rtn(
-            bg=Rgb().bn2(),
+            bg=Rgb.BN2,
             fg=Rgb.TH1,
             bg_hover=Rgb.TH1,
-            fg_hover=Rgb().bn2(),
+            fg_hover=Rgb.BN2,
             bg_pressed=Rgb.TH1,
-            fg_pressed=Rgb().bn2(),
-            bd_rgb=Rgb().bn2(),
+            fg_pressed=Rgb.BN2,
+            bd_rgb=Rgb.BN2,
         )
 
 
@@ -224,12 +224,12 @@ class Plein:
         self.widget = widget
 
     def _rtn(self,
-             bg_gen=Rgb().tr(),
-             fg_gen=Rgb().tr(),
+             bg_gen=Rgb.TR,
+             fg_gen=Rgb.TR,
              height=Dim.H5,
 
              border_gen=(0, )*4,
-             border_gen_rgb=Rgb().tr(),
+             border_gen_rgb=Rgb.TR,
              cursor=Cur.MAIN
              ):
         Style(
@@ -285,6 +285,6 @@ class Plein:
         )
     def bn2(self):
         self._rtn(
-            bg_gen=Rgb().bn2(),
+            bg_gen=Rgb.BN2,
             fg_gen=Rgb.TH3,
         )

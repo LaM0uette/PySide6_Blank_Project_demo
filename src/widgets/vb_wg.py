@@ -89,7 +89,7 @@ FG_CHECKED_HOVER = Rgb.BN1
 FG_INDETERMINATE = Rgb.TH3
 FG_INDETERMINATE_HOVER = Rgb.TH1
 FG_PRESSED = Rgb.BN1
-FG_CHECKED_PRESSED = Rgb().bn2()
+FG_CHECKED_PRESSED = Rgb.BN2
 FG_SELECTION = Rgb.TH3
 FG_PLACEHOLDER = Rgb.TH2
 # FG item
@@ -149,7 +149,7 @@ IMG_HEIGHT = HEIGHT * StyleBase.X_ICO
 #####################
 BORDER_WIDTH = (0,) * 4
 BORDER_STYLE = "solid"
-BORDER_RGB = Rgb().tr()
+BORDER_RGB = Rgb.TR
 
 ###################
 ##     RAYON     ##

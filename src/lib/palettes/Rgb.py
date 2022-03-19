@@ -34,9 +34,6 @@ class Rgb:
     def rgb_to_hex(self, rgb):
         return "#" + "%02x%02x%02x" % rgb
 
-    def bn2(self): return self.get_rgba("bn2")
-    def tr(self): return 0, 0, 0, 0
-
     def hx_th1(self): return self.rgb_to_hex(self.get_rgb("th1"))
     def hx_th2(self): return self.rgb_to_hex(self.get_rgb("th2"))
     def hx_th3(self): return self.rgb_to_hex(self.get_rgb("th3"))

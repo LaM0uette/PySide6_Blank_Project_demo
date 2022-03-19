@@ -25,7 +25,7 @@ class Base:
 
             text_visible=False,
 
-            bg=Rgb().tr(),
+            bg=Rgb.TR,
 
             border=(StyleBase.BORDER,) * 4,
             border_hover=(StyleBase.BORDER,) * 4,
@@ -68,7 +68,7 @@ class Demo:
 
             text_visible=False,
 
-            bg=Rgb().tr(),
+            bg=Rgb.TR,
 
             border=(StyleBase.BORDER,) * 4,
             border_hover=(StyleBase.BORDER,) * 4,

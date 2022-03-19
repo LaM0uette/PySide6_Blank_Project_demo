@@ -20,8 +20,8 @@ class Base:
 
             focus_policy=FocusPolicy.NO,
 
-            bg=Rgb().tr(),
-            bg_hover=Rgb().tr(),
+            bg=Rgb.TR,
+            bg_hover=Rgb.TR,
 
             img=Img.MAIN,
             img_rgb="th3",
@@ -37,8 +37,8 @@ class Base:
 
             focus_policy=FocusPolicy.NO,
 
-            bg=Rgb().tr(),
-            bg_hover=Rgb().tr(),
+            bg=Rgb.TR,
+            bg_hover=Rgb.TR,
 
             img=Img.MAIN,
             img_rgb="th3",
@@ -54,8 +54,8 @@ class Base:
 
             focus_policy=FocusPolicy.NO,
 
-            bg=Rgb().tr(),
-            bg_hover=Rgb().tr(),
+            bg=Rgb.TR,
+            bg_hover=Rgb.TR,
 
             img=img,
             img_rgb=img_rgb,
@@ -78,8 +78,8 @@ class Base:
 
             font_size=self.font_size,
 
-            bg=Rgb().tr(),
-            bg_hover=Rgb().tr(),
+            bg=Rgb.TR,
+            bg_hover=Rgb.TR,
             fg=Rgb.TH3,
             fg_hover=Rgb.TH3,
         )
@@ -93,8 +93,8 @@ class Base:
 
             align_horizontal=Align.CENTER_HORIZONTAL,
 
-            bg=Rgb().tr(),
-            bg_hover=Rgb().tr(),
+            bg=Rgb.TR,
+            bg_hover=Rgb.TR,
             fg=Rgb.TH3,
             fg_hover=Rgb.TH3,
         )
@@ -125,8 +125,8 @@ class Demo:
             indent=5,
 
             font_size=self.font_size,
-            bg=Rgb().tr(),
-            bg_hover=Rgb().tr(),
+            bg=Rgb.TR,
+            bg_hover=Rgb.TR,
             fg=Rgb.TH3,
             fg_hover=Rgb.TH3,
         )
@@ -137,15 +137,15 @@ class Demo:
 
             align_horizontal=Align.CENTER_HORIZONTAL,
 
-            bg=Rgb().tr(),
-            bg_hover=Rgb().tr(),
+            bg=Rgb.TR,
+            bg_hover=Rgb.TR,
             fg=Rgb.TH3,
             fg_hover=Rgb.TH3,
 
             border=(0, StyleBase.BORDER, 0, 0),
             border_hover=(0, StyleBase.BORDER, 0, 0),
-            border_rgb=Rgb().bn2(),
-            border_hover_rgb=Rgb().bn2(),
+            border_rgb=Rgb.BN2,
+            border_hover_rgb=Rgb.BN2,
 
             radius=(0,) * 4
         )

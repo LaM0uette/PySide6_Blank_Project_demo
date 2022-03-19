@@ -58,7 +58,7 @@ class Build:
             fg_header=Rgb.TH1,
             fg_header_hover=Rgb.BN1,
             fg_header_checked=Rgb.BN1,
-            fg_header_checked_hover=Rgb().bn2(),
+            fg_header_checked_hover=Rgb.BN2,
             # couleurs autres
             gridline=vb_wg.GRIDLINE,
 

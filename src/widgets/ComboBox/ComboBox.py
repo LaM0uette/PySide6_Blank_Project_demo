@@ -21,8 +21,8 @@ class Base:
             edit=True,
             cursor=Cur.SOURIS_MAIN,
 
-            bg=Rgb().tr(),
-            bg_hover=Rgb().tr(),
+            bg=Rgb.TR,
+            bg_hover=Rgb.TR,
             bg_selection=Rgb.TH3,
             fg=Rgb.TH3,
             fg_selection=Rgb.TH1,

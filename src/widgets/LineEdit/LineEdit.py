@@ -18,7 +18,7 @@ class Base:
         Build(
             *self.wgs,
 
-            bg=Rgb().tr(),
+            bg=Rgb.TR,
             fg=Rgb.TH3
         )
     def rgb_hex(self):
@@ -27,7 +27,7 @@ class Base:
 
             align_horizontal=Align.CENTER_HORIZONTAL,
 
-            bg=Rgb().tr(),
+            bg=Rgb.TR,
             bg_selection=Rgb.TH3,
             fg=Rgb.TH3,
             fg_selection=Rgb.TH1,

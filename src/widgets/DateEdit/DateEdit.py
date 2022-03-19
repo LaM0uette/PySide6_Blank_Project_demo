@@ -25,8 +25,8 @@ class Base:
         Build(
             *self.wgs,
 
-            bg=Rgb().tr(),
-            bg_hover=Rgb().tr(),
+            bg=Rgb.TR,
+            bg_hover=Rgb.TR,
             bg_selection=Rgb.TH3,
             fg=Rgb.TH3,
             fg_selection=Rgb.TH1,

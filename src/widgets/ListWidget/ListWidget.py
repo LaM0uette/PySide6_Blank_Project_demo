@@ -23,11 +23,11 @@ class Base:
         Build(
             *self.wgs,
 
-            bg=Rgb().tr(),
-            bg_item=Rgb().tr(),
-            bg_item_hover=Rgb().tr(),
-            bg_item_checked=Rgb().tr(),
-            bg_item_checked_hover=Rgb().tr(),
+            bg=Rgb.TR,
+            bg_item=Rgb.TR,
+            bg_item_hover=Rgb.TR,
+            bg_item_checked=Rgb.TR,
+            bg_item_checked_hover=Rgb.TR,
             fg_item=Rgb.TH3,
             fg_item_checked=Rgb.BN1,
 
@@ -61,11 +61,11 @@ class Demo:
 
             height=Dim.H5,
 
-            bg=Rgb().tr(),
-            bg_item=Rgb().tr(),
-            bg_item_hover=Rgb().tr(),
-            bg_item_checked=Rgb().tr(),
-            bg_item_checked_hover=Rgb().tr(),
+            bg=Rgb.TR,
+            bg_item=Rgb.TR,
+            bg_item_hover=Rgb.TR,
+            bg_item_checked=Rgb.TR,
+            bg_item_checked_hover=Rgb.TR,
             fg_item=Rgb.TH3,
             fg_item_checked=Rgb.BN1,
 
