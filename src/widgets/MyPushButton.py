@@ -1,5 +1,4 @@
 from .WgClass.MyQPushButtonStyle import Style
-from src.lib.data_class import *
 from src.lib.palettes import *
 
 
@@ -156,7 +155,11 @@ class Dlg:
     ):
         Style(
             self.widget,
-            size_policy_v=SizePolicy.EXPANDING,
+
+            size_policy=dc_size_policy.Base(
+                vertical=SizePolicy.EXPANDING
+            ),
+
             fixed_width=Dim.H6,
             fixed_height=None,
             bg=bg,

@@ -1,10 +1,10 @@
 from src.lib.palettes import *
 
-
 #####################
 ##     QWidget     ##
 #####################
 # SizePolicy
+SIZE_POLICY = dc_size_policy.Base
 SIZE_POLICY_H = SizePolicy.PREFERED
 SIZE_POLICY_V = SizePolicy.PREFERED
 

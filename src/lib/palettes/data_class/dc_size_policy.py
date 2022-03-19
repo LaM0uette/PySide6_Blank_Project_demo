@@ -5,5 +5,5 @@ from src.lib.palettes import SizePolicy
 
 @dataclass
 class Base:
-    horizontal = SizePolicy.PREFERED
-    vertical = SizePolicy.PREFERED
+    horizontal: any = SizePolicy.PREFERED
+    vertical: any = SizePolicy.PREFERED

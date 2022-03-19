@@ -1,3 +1,4 @@
+# palettes
 from src.lib.palettes.Align import Align
 from src.lib.palettes.ArrowType import ArrowType
 from src.lib.palettes.AutoFormating import AutoFormating
@@ -29,3 +30,6 @@ from src.lib.palettes.SizePolicy import SizePolicy
 from src.lib.palettes.StyleBase import StyleBase
 from src.lib.palettes.TextFormat import TextFormat
 from src.lib.palettes.TickPosition import TickPosition
+
+# data_class
+from src.lib.palettes.data_class import *
