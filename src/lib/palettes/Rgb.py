@@ -16,11 +16,11 @@ class Rgb:
         return "#" + "%02x%02x%02x" % rgb
 
 
-    TH1 = _get_rgb(val="th1")
-    TH2 = _get_rgb(val="th2")
-    TH3 = _get_rgb(val="th3")
-    BN1 = _get_rgb(val="bn1")
-    BN2 = _get_rgb(val="bn2")
+    TH1 = _get_rgb(val="th1") + (255, )
+    TH2 = _get_rgb(val="th2") + (255, )
+    TH3 = _get_rgb(val="th3") + (255, )
+    BN1 = _get_rgb(val="bn1") + (255, )
+    BN2 = _get_rgb(val="bn2") + (255, )
     TR = 0, 0, 0, 0
 
 
