@@ -217,6 +217,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
     ##     ACTIONS     ##
     #####################
     def _a_reload_ui(self):
+        print(Config().theme)
         MyPushButton.Plein(self.pb_opt_tm_th1).th1()
         MyPushButton.Plein(self.pb_opt_tm_th2).th2()
         MyPushButton.Plein(self.pb_opt_tm_th3).th3()
