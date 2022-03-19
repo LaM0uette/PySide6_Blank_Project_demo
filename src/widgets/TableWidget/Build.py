@@ -55,7 +55,7 @@ class Build:
             fg_item_hover=vb_wg.FG_ITEM_HOVER,
             fg_item_checked=vb_wg.FG_ITEM_CHECKED,
             fg_item_checked_hover=vb_wg.FG_ITEM_CHECKED_HOVER,
-            fg_header=Rgb().th1(),
+            fg_header=Rgb.TH1,
             fg_header_hover=Rgb().bn1(),
             fg_header_checked=Rgb().bn1(),
             fg_header_checked_hover=Rgb().bn2(),

@@ -64,19 +64,19 @@ ARROW_TYPE = ArrowType.NO
 BG = Rgb().th3()
 BG_ALTERNATE = Rgb().th2()
 BG_HOVER = Rgb().th3()
-BG_CHECKED = Rgb().th1()
-BG_CHECKED_HOVER = Rgb().th1()
+BG_CHECKED = Rgb.TH1
+BG_CHECKED_HOVER = Rgb.TH1
 BG_INDETERMINATE = Rgb().th2()
 BG_INDETERMINATE_HOVER = Rgb().th2()
 BG_PRESSED = Rgb().th3()
-BG_CHECKED_PRESSED = Rgb().th1()
-BG_INDETERMINATE_PRESSED = Rgb().th1()
-BG_SELECTION = Rgb().th1()
+BG_CHECKED_PRESSED = Rgb.TH1
+BG_INDETERMINATE_PRESSED = Rgb.TH1
+BG_SELECTION = Rgb.TH1
     # Background item
 BG_ITEM = Rgb().th3()
 BG_ITEM_HOVER = Rgb().th3()
-BG_ITEM_CHECKED = Rgb().th1()
-BG_ITEM_CHECKED_HOVER = Rgb().th1()
+BG_ITEM_CHECKED = Rgb.TH1
+BG_ITEM_CHECKED_HOVER = Rgb.TH1
     # Background other
 BG_CHUNK = Rgb().th2()
 BG_CHUNK_HOVER = Rgb().bn1()
@@ -91,19 +91,19 @@ BG_SEPARATOR = Rgb().bn1()
 
 
 ###  FOREGROUND  ###
-FG = Rgb().th1()
+FG = Rgb.TH1
 FG_HOVER = Rgb().bn1()
 FG_CHECKED = Rgb().th3()
 FG_CHECKED_HOVER = Rgb().bn1()
 FG_INDETERMINATE = Rgb().th3()
-FG_INDETERMINATE_HOVER = Rgb().th1()
+FG_INDETERMINATE_HOVER = Rgb.TH1
 FG_PRESSED = Rgb().bn2()
 FG_CHECKED_PRESSED = Rgb().bn2()
 FG_INDETERMINATE_PRESSED = Rgb().bn2()
 FG_SELECTION = Rgb().th3()
 FG_PLACEHOLDER = Rgb().th2()
     # foreground item
-FG_ITEM = Rgb().th1()
+FG_ITEM = Rgb.TH1
 FG_ITEM_HOVER = Rgb().bn1()
 FG_ITEM_CHECKED = Rgb().th3()
 FG_ITEM_CHECKED_HOVER = Rgb().bn1()
@@ -167,7 +167,7 @@ RADIUS = (RADIUS_SIZE,) * 4
 
 
 ###  SCROLL  ###
-SCROLL_BG = Rgb().th1()
+SCROLL_BG = Rgb.TH1
 SCROLL_WIDTH = 10
 SCROLL_HEIGHT = 10
 SCROLL_HANDLE_BG = Rgb().th3()

@@ -11,9 +11,9 @@ class Main(Build):
         super().__init__(
             *wgs,
 
-            bg=Rgb().th1(),
-            bg_item=Rgb().th1(),
-            bg_item_checked=Rgb().th1(),
+            bg=Rgb.TH1,
+            bg_item=Rgb.TH1,
+            bg_item_checked=Rgb.TH1,
             fg=Rgb().th3(),
             fg_item=Rgb().th3(),
             fg_item_checked=Rgb().bn1(),
@@ -23,7 +23,7 @@ class Main(Build):
 
             border_item=(0, StyleBase.BORDER, 0, 0),
             border_item_checked=(0, StyleBase.BORDER, 0, 0),
-            border_item_rgb=Rgb().th1(),
+            border_item_rgb=Rgb.TH1,
             border_item_checked_rgb=Rgb().th2(),
             radius_item=(0, )*4,
 

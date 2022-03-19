@@ -14,7 +14,7 @@ class Base:
         Build(
             *self.wgs,
 
-            bg=Rgb().th1(),
+            bg=Rgb.TH1,
 
             height_groove=12,
             width_groove=12,
@@ -33,7 +33,7 @@ class Base:
             width=200,
             height=200,
 
-            bg=Rgb().th1(),
+            bg=Rgb.TH1,
             bg_handle=Rgb().th3(),
             bg_handle_hover=Rgb().th3(),
             bg_handle_pressed=Rgb().th3(),
@@ -66,7 +66,7 @@ class Base:
 
             value_max=255,
 
-            bg=Rgb().th1(),
+            bg=Rgb.TH1,
             bg_handle=rgb,
             bg_handle_hover=rgb,
             bg_handle_pressed=rgb,

@@ -14,7 +14,7 @@ class Base:
         Build(
             *self.wgs,
 
-            bg_corner=Rgb().th1(),
+            bg_corner=Rgb.TH1,
 
             border=(StyleBase.BORDER,) * 4,
             border_rgb=Rgb().th3(),
@@ -26,14 +26,14 @@ class Base:
             header_h=False,
             header_v=False,
 
-            bg_corner=Rgb().th1(),
+            bg_corner=Rgb.TH1,
             bg=Rgb().tr(),
             bg_item=Rgb().tr(),
             bg_item_hover=Rgb().tr(),
             bg_item_checked=Rgb().th3(),
             bg_item_checked_hover=Rgb().th3(),
             fg_item=Rgb().th3(),
-            fg_item_checked=Rgb().th1(),
+            fg_item_checked=Rgb.TH1,
         )
 
 
@@ -45,7 +45,7 @@ class Demo:
         self.wgs = wgs
     def th(self):
         bd_gen = ((1,) * 4)
-        rgb_hd = Rgb().th1()
+        rgb_hd = Rgb.TH1
         rgb_item = Rgb().th2()
 
         Build(
@@ -53,7 +53,7 @@ class Demo:
 
             height=Dim.H4,
 
-            bg_corner=Rgb().th1(),
+            bg_corner=Rgb.TH1,
 
             border=(StyleBase.BORDER,) * 4,
             border_rgb=Rgb().th3(),
@@ -82,12 +82,12 @@ class Demo:
             header_h=False,
             header_v=False,
 
-            bg_corner=Rgb().th1(),
+            bg_corner=Rgb.TH1,
             bg=Rgb().tr(),
             bg_item=Rgb().tr(),
             bg_item_hover=Rgb().tr(),
             bg_item_checked=Rgb().th3(),
             bg_item_checked_hover=Rgb().th3(),
             fg_item=Rgb().th3(),
-            fg_item_checked=Rgb().th1(),
+            fg_item_checked=Rgb.TH1,
         )

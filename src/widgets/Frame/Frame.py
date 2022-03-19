@@ -37,7 +37,7 @@ class Menu:
 
             height=self.height,
 
-            bg=Rgb().th1(),
+            bg=Rgb.TH1,
             radius=(vb_app.RADIUS_SIZE, vb_wg.RADIUS_SIZE, 0, 0)
         )
     def bottom(self):
@@ -85,7 +85,7 @@ class Cadre:
             radius=self.radius
         )
 
-    def th1(self): self.rtn(rgb=Rgb().th1())
+    def th1(self): self.rtn(rgb=Rgb.TH1)
     def th2(self): self.rtn(rgb=Rgb().th2())
     def th3(self): self.rtn(rgb=Rgb().th3())
     def bn1(self): self.rtn(rgb=Rgb().bn1())
@@ -127,7 +127,7 @@ class SplashScreen(Build):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            bg=Rgb().th1(),
+            bg=Rgb.TH1,
             border=(StyleBase.BORDER,) * 4,
             border_rgb=Rgb().th3(),
             border_hover=(StyleBase.BORDER,) * 4,
@@ -138,7 +138,7 @@ class ToolBox(Build):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            bg=Rgb().th1(),
+            bg=Rgb.TH1,
             border=(StyleBase.BORDER,) * 4,
             border_rgb=Rgb().th3(),
             border_hover=(StyleBase.BORDER,) * 4,

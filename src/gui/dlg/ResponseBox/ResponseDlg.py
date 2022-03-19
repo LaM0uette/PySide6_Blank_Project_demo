@@ -61,7 +61,7 @@ class ResponseDlg(rep_ui.Ui_Rep, QtWidgets.QDialog):
         ### QFrame ###
         Frame.Menu(self.fr_menu_top).top()
         Frame.Cadre(self.fr_main).th2()
-        Frame.Dlg(self.fr_body).th(rgb=Rgb().th1())
+        Frame.Dlg(self.fr_body).th(rgb=Rgb.TH1)
         Frame.Menu(self.fr_rep_bottom).bottom_dlg()
         ### /QFrame ###
 

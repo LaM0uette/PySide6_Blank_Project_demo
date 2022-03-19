@@ -15,7 +15,7 @@ class Base:
             *self.wgs,
 
             bg_header=Rgb().th3(),
-            fg_header=Rgb().th1(),
+            fg_header=Rgb.TH1,
         )
     def tr(self):
         bd_item = (0, 0, 0, 2)
@@ -62,10 +62,10 @@ class Base:
             bg_item_hover=Rgb().tr(),
             bg_item_checked=Rgb().tr(),
             bg_item_checked_hover=Rgb().tr(),
-            bg_header=Rgb().th1(),
+            bg_header=Rgb.TH1,
             fg_item=Rgb().th3(),
             fg_item_checked=Rgb().bn1(),
-            fg_header=Rgb().th1(),
+            fg_header=Rgb.TH1,
 
             border=bd_gen,
             border_hover=bd_gen,

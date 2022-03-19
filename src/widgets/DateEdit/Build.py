@@ -45,9 +45,9 @@ class Build:
             fg_selection=vb_wg.FG_SELECTION,
             fg_item=vb_wg.FG_ITEM,
             fg_item_hover=vb_wg.FG_ITEM_HOVER,
-            fg_header=Rgb().th1(),
+            fg_header=Rgb.TH1,
             fg_header_hover=Rgb().bn1(),
-            fg_mois=Rgb().th1(),
+            fg_mois=Rgb.TH1,
 
             # Images
             img=vb_wg.IMG_UNROLL,

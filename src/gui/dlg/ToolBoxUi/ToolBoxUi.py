@@ -38,7 +38,7 @@ class ToolBoxUi(toolbox_ui.Ui_ToolBoxUi, QtWidgets.QDialog):
         ### QFrame ###
         Frame.ToolBox(self.fr_main)
         Frame.Menu(self.fr_menu_top).top()
-        Frame.Dlg(self.fr_body).th(rgb=Rgb().th1())
+        Frame.Dlg(self.fr_body).th(rgb=Rgb.TH1)
         ### /QFrame ###
 
 

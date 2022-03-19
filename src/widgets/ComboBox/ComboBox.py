@@ -25,7 +25,7 @@ class Base:
             bg_hover=Rgb().tr(),
             bg_selection=Rgb().th3(),
             fg=Rgb().th3(),
-            fg_selection=Rgb().th1(),
+            fg_selection=Rgb.TH1,
         )
     def font(self, font=vb_wg.FONT):
         Build(
