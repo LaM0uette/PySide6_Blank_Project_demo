@@ -17,7 +17,6 @@ class MyQWidget:
             focus_policy,
             layout_direction,
     ):
-        print(size_policy.horizontal, size_policy.vertical)
         # SizePolicy
         widget.setSizePolicy(size_policy.horizontal, size_policy.vertical)
 

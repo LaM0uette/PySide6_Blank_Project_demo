@@ -6,8 +6,7 @@ class Style(MyQCheckBox):
     def __init__(
             self,
             widget,
-            size_policy_h=v_wg.SIZE_POLICY_V,
-            size_policy_v=v_wg.SIZE_POLICY_H,
+            size_policy=v_wg.SIZE_POLICY,
             fixed_width=v_wg.WG_WIDTH,
             fixed_height=v_wg.WG_HEIGHT,
             minimum_width=None,
@@ -85,7 +84,7 @@ class Style(MyQCheckBox):
             radius=v_wg.RADIUS
     ):
         # Style
-        super().__init__(widget, size_policy_h, size_policy_v, fixed_width, fixed_height, minimum_width, minimum_height, maximum_width, maximum_height, font, cursor, focus_policy, layout_direction, txt, ico, ico_rgb, ico_width, ico_height, checkable, checked, auto_repeat, auto_exclusive, auto_repeat_delay, auto_repeat_interval, tristate)
+        super().__init__(widget, size_policy, fixed_width, fixed_height, minimum_width, minimum_height, maximum_width, maximum_height, font, cursor, focus_policy, layout_direction, txt, ico, ico_rgb, ico_width, ico_height, checkable, checked, auto_repeat, auto_exclusive, auto_repeat_delay, auto_repeat_interval, tristate)
 
         style = f"""
                 /* CHECKBOX */
