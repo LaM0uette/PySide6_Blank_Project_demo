@@ -7,7 +7,7 @@ class PaRgb:
 
     @staticmethod
     def __get_rgb(val):
-        with open(fr"src/theme/{Config.theme}.json", "r") as fichier:
+        with open(fr"theme/{Config.theme}.json", "r") as fichier:
             js = json.load(fichier)
             return tuple(js[val])
 
