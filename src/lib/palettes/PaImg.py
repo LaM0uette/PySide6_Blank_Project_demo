@@ -2,7 +2,7 @@ class PaImg:
 
     @staticmethod
     def __svg(val, img):
-        return f"src/assets/img/{val}/rgb/{img}"
+        return f"assets/img/{val}/rgb/{img}"
 
     CALENDRIER = __svg("divers", "calendrier")
     MAIN = __svg("main", "main")

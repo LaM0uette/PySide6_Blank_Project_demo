@@ -8,7 +8,7 @@ class PaCur:
 
     @staticmethod
     def __cursor(img, xy):
-        return [f"src/assets/cursor/{Config.cur}/{img}.cur", xy[0], xy[1]]
+        return [f"assets/cursor/{Config.cur}/{img}.cur", xy[0], xy[1]]
 
     with open(f"{os.path.dirname(f'assets/cursor/{Config.cur}/_data.json')}/_data.json", "r", encoding="utf-8") as fichier:
         cur = json.load(fichier)
