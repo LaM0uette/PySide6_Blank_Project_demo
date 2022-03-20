@@ -46,7 +46,7 @@ class MenuTop:
         Style(
             self.widget,
             pb_type="zoom",
-            dim=dc_dim.Base(fixed_width=Dim.H9 * 1.2),
+            dim=DcDim.Base(fixed_width=Dim.H9 * 1.2),
             cursor=Cur.SOURIS_MAIN,
 
             bg=bg,
@@ -156,11 +156,11 @@ class Dlg:
         Style(
             self.widget,
 
-            size_policy=dc_size_policy.Base(
+            size_policy=DcSizePolicy.Base(
                 vertical=SizePolicy.EXPANDING
             ),
 
-            dim=dc_dim.Base(
+            dim=DcDim.Base(
                 fixed_width=Dim.H6,
                 fixed_height=None,
             ),
@@ -241,7 +241,7 @@ class Plein:
              ):
         Style(
             self.widget,
-            dim=dc_dim.Base(fixed_height=height),
+            dim=DcDim.Base(fixed_height=height),
             cursor=cursor,
 
             bg=bg_gen,

@@ -14,7 +14,7 @@ class Style(MyQToolButton):
             focus_policy=v_wg.FOCUS_POLICY,
             layout_direction=v_wg.LAYOUT_DIRECTION,
             txt=v_wg.TXT,
-            ico=dc_ico.Base,
+            ico=v_wg.ICO,
             checkable=False,
             checked=False,
             auto_repeat=False,

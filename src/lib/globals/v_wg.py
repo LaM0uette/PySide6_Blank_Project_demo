@@ -4,15 +4,15 @@ from src.lib.palettes import *
 ##     QWidget     ##
 #####################
 # SizePolicy
-SIZE_POLICY = dc_size_policy.Base
+SIZE_POLICY = DcSizePolicy.Base
 
 # Dimensions
 WIDTH = None
 HEIGHT = None
 WG_WIDTH = None
 WG_HEIGHT = Dim.H9
-DIM = dc_dim.Base
-DIM_WG = dc_dim.Base(fixed_height=Dim.H9)
+DIM = DcDim.Base
+DIM_WG = DcDim.Base(fixed_height=Dim.H9)
 
 # Font
 FONT = Font.BASE
@@ -36,6 +36,9 @@ LAYOUT_DIRECTION = LayoutDirection.LEFT_TO_RIGHT
 #############################
 # Txt
 TXT = None
+
+# ico
+ICO = DcIco.Base
 
 # Actions
 AUTO_REPEAT_DELAY = 300
