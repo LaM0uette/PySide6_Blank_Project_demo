@@ -17,10 +17,7 @@ class MyQAbstractButton(MyQWidget):
             ico,
             checkable,
             checked,
-            auto_repeat,
-            auto_exclusive,
-            auto_repeat_delay,
-            auto_repeat_interval
+            auto_actions,
     ):
         super().__init__(widget,size_policy,dim,font,cursor,focus_policy,layout_direction)
 
@@ -38,7 +35,7 @@ class MyQAbstractButton(MyQWidget):
         # Actions
         widget.setCheckable(checkable)
         widget.setChecked(checked)
-        widget.setAutoRepeat(auto_repeat)
-        widget.setAutoExclusive(auto_exclusive)
-        widget.setAutoRepeatDelay(auto_repeat_delay)
-        widget.setAutoRepeatDelay(auto_repeat_interval)
+        widget.setAutoRepeat(auto_actions.auto_repeat)
+        widget.setAutoExclusive(auto_actions.auto_exclusive)
+        widget.setAutoRepeatDelay(auto_actions.auto_repeat_delay)
+        widget.setAutoRepeatDelay(auto_actions.auto_repeat_interval)

@@ -41,8 +41,7 @@ TXT = None
 ICO = DcIco.Base
 
 # Actions
-AUTO_REPEAT_DELAY = 300
-AUTO_REPEAT_INTERVAL = 100
+AUTO_ACTIONS = DcAutoActions.Base
 #############################
 ##    /QAbstractButton     ##
 #############################
