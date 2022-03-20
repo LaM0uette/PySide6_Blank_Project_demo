@@ -14,10 +14,10 @@ class Base:
         Build(
             *self.wgs,
 
-            bg_corner=Rgb.TH1,
+            bg_corner=PaRgb.TH1,
 
-            border=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb.TH3,
+            border=(PaStyleBase.BORDER,) * 4,
+            border_rgb=PaRgb.TH3,
         )
     def tr(self):
         Build(
@@ -26,14 +26,14 @@ class Base:
             header_h=False,
             header_v=False,
 
-            bg_corner=Rgb.TH1,
-            bg=Rgb.TR,
-            bg_item=Rgb.TR,
-            bg_item_hover=Rgb.TR,
-            bg_item_checked=Rgb.TH3,
-            bg_item_checked_hover=Rgb.TH3,
-            fg_item=Rgb.TH3,
-            fg_item_checked=Rgb.TH1,
+            bg_corner=PaRgb.TH1,
+            bg=PaRgb.TR,
+            bg_item=PaRgb.TR,
+            bg_item_hover=PaRgb.TR,
+            bg_item_checked=PaRgb.TH3,
+            bg_item_checked_hover=PaRgb.TH3,
+            fg_item=PaRgb.TH3,
+            fg_item_checked=PaRgb.TH1,
         )
 
 
@@ -45,18 +45,18 @@ class Demo:
         self.wgs = wgs
     def th(self):
         bd_gen = ((1,) * 4)
-        rgb_hd = Rgb.TH1
-        rgb_item = Rgb.TH2
+        rgb_hd = PaRgb.TH1
+        rgb_item = PaRgb.TH2
 
         Build(
             *self.wgs,
 
             height=PaDim.H4,
 
-            bg_corner=Rgb.TH1,
+            bg_corner=PaRgb.TH1,
 
-            border=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb.TH3,
+            border=(PaStyleBase.BORDER,) * 4,
+            border_rgb=PaRgb.TH3,
             border_hd=bd_gen,
             border_hd_hover=bd_gen,
             border_hd_checked=bd_gen,
@@ -82,12 +82,12 @@ class Demo:
             header_h=False,
             header_v=False,
 
-            bg_corner=Rgb.TH1,
-            bg=Rgb.TR,
-            bg_item=Rgb.TR,
-            bg_item_hover=Rgb.TR,
-            bg_item_checked=Rgb.TH3,
-            bg_item_checked_hover=Rgb.TH3,
-            fg_item=Rgb.TH3,
-            fg_item_checked=Rgb.TH1,
+            bg_corner=PaRgb.TH1,
+            bg=PaRgb.TR,
+            bg_item=PaRgb.TR,
+            bg_item_hover=PaRgb.TR,
+            bg_item_checked=PaRgb.TH3,
+            bg_item_checked_hover=PaRgb.TH3,
+            fg_item=PaRgb.TH3,
+            fg_item_checked=PaRgb.TH1,
         )

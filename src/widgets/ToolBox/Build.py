@@ -65,7 +65,7 @@ class Build:
             radius=vb_wg.RADIUS,
             radius_tab=vb_wg.RADIUS,
 
-            # Scroll
+            # PaScroll
             scroll_bg=vb_wg.SCROLL_BG,
             scroll_width=vb_wg.SCROLL_WIDTH,
             scroll_height=vb_wg.SCROLL_HEIGHT,

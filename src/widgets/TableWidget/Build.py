@@ -45,20 +45,20 @@ class Build:
             bg_item_checked=vb_wg.BG_ITEM_CHECKED,
             bg_item_checked_hover=vb_wg.BG_ITEM_CHECKED_HOVER,
             bg_corner=vb_wg.BG,
-            bg_header=Rgb.TH2,
-            bg_header_hover=Rgb.TH2,
-            bg_header_checked=Rgb.TH3,
-            bg_header_checked_hover=Rgb.TH3,
+            bg_header=PaRgb.TH2,
+            bg_header_hover=PaRgb.TH2,
+            bg_header_checked=PaRgb.TH3,
+            bg_header_checked_hover=PaRgb.TH3,
             # Couleurs FG
             fg=vb_wg.FG,
             fg_item=vb_wg.FG_ITEM,
             fg_item_hover=vb_wg.FG_ITEM_HOVER,
             fg_item_checked=vb_wg.FG_ITEM_CHECKED,
             fg_item_checked_hover=vb_wg.FG_ITEM_CHECKED_HOVER,
-            fg_header=Rgb.TH1,
-            fg_header_hover=Rgb.BN1,
-            fg_header_checked=Rgb.BN1,
-            fg_header_checked_hover=Rgb.BN2,
+            fg_header=PaRgb.TH1,
+            fg_header_hover=PaRgb.BN1,
+            fg_header_checked=PaRgb.BN1,
+            fg_header_checked_hover=PaRgb.BN2,
             # couleurs autres
             gridline=vb_wg.GRIDLINE,
 
@@ -108,7 +108,7 @@ class Build:
             radius_item=vb_wg.RADIUS,
             radius_hd=vb_wg.RADIUS,
 
-            # Scroll
+            # PaScroll
             scroll_bg=vb_wg.SCROLL_BG,
             scroll_width=vb_wg.SCROLL_WIDTH,
             scroll_height=vb_wg.SCROLL_HEIGHT,
@@ -130,8 +130,8 @@ class Build:
         *PaFrameShape: QtWidgets.QFrame : PaFrameShape().%nomFrameForme \n
         *PaFrameShadow: QtWidgets.QFrame : PaFrameShadow().%nomFrameOmbre \n
         *RgbBox: tuple() : RgbBox().%nomCouleur() \n
-        *SelectionBehavior: QtWidgets.QAbstractItemView : SelectionBehavior().%nomSelection \n
-        *SelectionMode: QtWidgets.QAbstractItemView : SelectionMode().%nomSelection \n
+        *PaSelectionBehavior: QtWidgets.QAbstractItemView : PaSelectionBehavior().%nomSelection \n
+        *PaSelectionMode: QtWidgets.QAbstractItemView : PaSelectionMode().%nomSelection \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
@@ -152,8 +152,8 @@ class Build:
         :param scroll_v: bool()
         :param header_h: bool()
         :param header_v: bool()
-        :param selection_behavior: *SelectionBehavior
-        :param selection_mode: *SelectionMode
+        :param selection_behavior: *PaSelectionBehavior
+        :param selection_mode: *PaSelectionMode
         :param cursor: *PaCur
         :param bg: *RgbBox
         :param bg_item: *RgbBox

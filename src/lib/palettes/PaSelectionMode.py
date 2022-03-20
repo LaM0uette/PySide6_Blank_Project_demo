@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QAbstractItemView
 
 
-class SelectionMode:
+class PaSelectionMode:
 
     NO = QAbstractItemView.NoSelection
     SINGLE = QAbstractItemView.SingleSelection

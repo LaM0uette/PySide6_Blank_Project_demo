@@ -74,7 +74,7 @@ class Build:
         *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *PaFrameShape: QtWidgets.QFrame : PaFrameShape().%nomFrameForme \n
         *PaFrameShadow: QtWidgets.QFrame : PaFrameShadow().%nomFrameOmbre \n
-        *TextFormat: QtCore.Qt : TextFormat().%nomFormat() \n
+        *PaTextFormat: QtCore.Qt : PaTextFormat().%nomFormat() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
@@ -91,7 +91,7 @@ class Build:
         :param line_width: int()
         :param open_external_link: bool()
         :param scaled_contents: bool()
-        :param text_format: *TextFormat
+        :param text_format: *PaTextFormat
         :param word_wrap: bool()
         :param cursor: *PaCur
         :param bg: *RgbBox

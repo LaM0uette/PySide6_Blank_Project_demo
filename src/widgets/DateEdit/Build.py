@@ -36,18 +36,18 @@ class Build:
             bg_selection=vb_wg.BG_SELECTION,
             bg_item=vb_wg.BG_ITEM,
             bg_item_hover=vb_wg.BG_ITEM_HOVER,
-            bg_header=Rgb.TH2,
-            bg_header_hover=Rgb.TH2,
-            bg_mois=Rgb.TH2,
+            bg_header=PaRgb.TH2,
+            bg_header_hover=PaRgb.TH2,
+            bg_mois=PaRgb.TH2,
             # Couleurs FG
             fg=vb_wg.FG,
             fg_hover=vb_wg.FG_HOVER,
             fg_selection=vb_wg.FG_SELECTION,
             fg_item=vb_wg.FG_ITEM,
             fg_item_hover=vb_wg.FG_ITEM_HOVER,
-            fg_header=Rgb.TH1,
-            fg_header_hover=Rgb.BN1,
-            fg_mois=Rgb.TH1,
+            fg_header=PaRgb.TH1,
+            fg_header_hover=PaRgb.BN1,
+            fg_mois=PaRgb.TH1,
 
             # Images
             img=vb_wg.IMG_UNROLL,
@@ -74,11 +74,11 @@ class Build:
             border_hover_style=vb_wg.BORDER_STYLE,
             border_hover_rgb=vb_wg.BORDER_RGB,
             # Bordures jours
-            border_day_size=(StyleBase.BORDER, )*4,
+            border_day_size=(PaStyleBase.BORDER,) * 4,
             border_day_style=vb_wg.BORDER_STYLE,
             border_day_rgb=vb_wg.FG_HOVER,
             # Bordures mois
-            border_month_size=(0, StyleBase.BORDER, 0, 0),
+            border_month_size=(0, PaStyleBase.BORDER, 0, 0),
             border_month_style=vb_wg.BORDER_STYLE,
             border_month_rgb=vb_wg.FG_HOVER,
 

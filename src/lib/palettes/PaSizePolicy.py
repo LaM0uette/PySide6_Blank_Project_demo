@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QSizePolicy
 
 
-class SizePolicy:
+class PaSizePolicy:
 
     FIXED = QSizePolicy.Fixed
     MINIMUM = QSizePolicy.Minimum

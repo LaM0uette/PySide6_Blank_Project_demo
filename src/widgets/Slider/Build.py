@@ -83,7 +83,7 @@ class Build:
         *PaDim: int() : PaDim().%nomDim() \n
         *PaFocusPolicy: QtCore.Qt : PaFocusPolicy().%nomFocus \n
         *RgbBox: tuple() : RgbBox().%nomCouleur() \n
-        *TickPosition: QtWidgets.QSlider : TickPosition().%nomTickPosition() \n
+        *PaTickPosition: QtWidgets.QSlider : PaTickPosition().%nomTickPosition() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
@@ -94,7 +94,7 @@ class Build:
         :param value_max: int()
         :param value_step: int()
         :param page_step: int()
-        :param tick_position: *TickPosition
+        :param tick_position: *PaTickPosition
         :param tick_interval: int()
         :param cursor: *PaCur
         :param bg: *RgbBox

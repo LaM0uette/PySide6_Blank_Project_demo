@@ -66,7 +66,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
         self.setWindowOpacity(self.opacity)
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.Tool)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        self.setGraphicsEffect(Shadow.OMBRE_PORTEE(self))
+        self.setGraphicsEffect(PaShadow.OMBRE_PORTEE(self))
         self.setWindowModality(QtCore.Qt.ApplicationModal)
     def IN_SETUP_UI(self):
         ### Ui ###
@@ -87,7 +87,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
         Frame.Menu(self.fr_menu_top).top()
         Frame.Cadre(self.fr_main).th2()
         Frame.Cadre(self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize).th3()
-        Frame.Dlg(self.fr_body).th(rgb=Rgb.TH1)
+        Frame.Dlg(self.fr_body).th(rgb=PaRgb.TH1)
         Frame.Menu(self.fr_opt_bottom).bottom_dlg()
         ### /QFrame ###
 
@@ -270,11 +270,11 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
         self.stk_option.setCurrentWidget(self.dct_pg.get(item.text(0))[0])
     def f_maj_rgb_theme(self, rgb):
         dct_colors = {
-            "th1": Rgb.TH1,
-            "th2": Rgb.TH2,
-            "th3": Rgb.TH3,
-            "bn1": Rgb.BN1,
-            "bn2": Rgb.BN2,
+            "th1": PaRgb.TH1,
+            "th2": PaRgb.TH2,
+            "th3": PaRgb.TH3,
+            "bn1": PaRgb.BN1,
+            "bn2": PaRgb.BN2,
         }
         colors = RgbBox.GET(rgb=dct_colors.get(rgb))
         if colors:

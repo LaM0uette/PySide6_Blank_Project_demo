@@ -1,16 +1,16 @@
 """
 dc_size_policy.%class(
-    horizontal: SizePolicy.% \n
-    vertical: SizePolicy.%)
+    horizontal: PaSizePolicy.% \n
+    vertical: PaSizePolicy.%)
 """
 
 from dataclasses import dataclass
 
-from src.lib.palettes import SizePolicy
+from src.lib.palettes import PaSizePolicy
 
 
 @dataclass
 class Base:
 
-    horizontal: any = SizePolicy.PREFERED
-    vertical: any = SizePolicy.PREFERED
+    horizontal: any = PaSizePolicy.PREFERED
+    vertical: any = PaSizePolicy.PREFERED

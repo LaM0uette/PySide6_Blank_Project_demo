@@ -15,15 +15,15 @@ class Base:
             *self.wgs,
         )
     def tr(self):
-        bd_hd = (0, StyleBase.BORDER, 0, 0)
-        rgb_hb = Rgb.BN1
+        bd_hd = (0, PaStyleBase.BORDER, 0, 0)
+        rgb_hb = PaRgb.BN1
 
         Build(
             *self.wgs,
 
-            bg=Rgb.TR,
-            bg_hover=Rgb.TR,
-            fg=Rgb.TH3,
+            bg=PaRgb.TR,
+            bg_hover=PaRgb.TR,
+            fg=PaRgb.TH3,
 
             border_hd=bd_hd,
             border_hd_hover=bd_hd,
@@ -33,10 +33,10 @@ class Base:
             border_hd_hover_rgb=rgb_hb,
             border_hd_checked_rgb=rgb_hb,
             border_hd_checked_hover_rgb=rgb_hb,
-            border=(StyleBase.BORDER,) * 4,
-            border_hover=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb.TH3,
-            border_hover_rgb=Rgb.TH3,
+            border=(PaStyleBase.BORDER,) * 4,
+            border_hover=(PaStyleBase.BORDER,) * 4,
+            border_rgb=PaRgb.TH3,
+            border_hover_rgb=PaRgb.TH3,
 
             radius_tab=(0,) * 4
         )
@@ -54,15 +54,15 @@ class Demo:
             *self.wgs,
         )
     def tr(self):
-        bd_hd = (0, StyleBase.BORDER, 0, 0)
-        rgb_hb = Rgb.BN1
+        bd_hd = (0, PaStyleBase.BORDER, 0, 0)
+        rgb_hb = PaRgb.BN1
 
         Build(
             *self.wgs,
 
-            bg=Rgb.TR,
-            bg_hover=Rgb.TR,
-            fg=Rgb.TH3,
+            bg=PaRgb.TR,
+            bg_hover=PaRgb.TR,
+            fg=PaRgb.TH3,
 
             border_hd=bd_hd,
             border_hd_hover=bd_hd,
@@ -72,10 +72,10 @@ class Demo:
             border_hd_hover_rgb=rgb_hb,
             border_hd_checked_rgb=rgb_hb,
             border_hd_checked_hover_rgb=rgb_hb,
-            border=(StyleBase.BORDER,) * 4,
-            border_hover=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb.TH3,
-            border_hover_rgb=Rgb.TH3,
+            border=(PaStyleBase.BORDER,) * 4,
+            border_hover=(PaStyleBase.BORDER,) * 4,
+            border_rgb=PaRgb.TH3,
+            border_hover_rgb=PaRgb.TH3,
 
             radius_tab=(0,) * 4
         )

@@ -20,8 +20,8 @@ class Base:
 
             focus_policy=PaFocusPolicy.NO,
 
-            bg=Rgb.TR,
-            bg_hover=Rgb.TR,
+            bg=PaRgb.TR,
+            bg_hover=PaRgb.TR,
 
             img=PaImg.MAIN,
             img_rgb="th3",
@@ -37,8 +37,8 @@ class Base:
 
             focus_policy=PaFocusPolicy.NO,
 
-            bg=Rgb.TR,
-            bg_hover=Rgb.TR,
+            bg=PaRgb.TR,
+            bg_hover=PaRgb.TR,
 
             img=PaImg.MAIN,
             img_rgb="th3",
@@ -54,8 +54,8 @@ class Base:
 
             focus_policy=PaFocusPolicy.NO,
 
-            bg=Rgb.TR,
-            bg_hover=Rgb.TR,
+            bg=PaRgb.TR,
+            bg_hover=PaRgb.TR,
 
             img=img,
             img_rgb=img_rgb,
@@ -78,10 +78,10 @@ class Base:
 
             font_size=self.font_size,
 
-            bg=Rgb.TR,
-            bg_hover=Rgb.TR,
-            fg=Rgb.TH3,
-            fg_hover=Rgb.TH3,
+            bg=PaRgb.TR,
+            bg_hover=PaRgb.TR,
+            fg=PaRgb.TH3,
+            fg_hover=PaRgb.TH3,
         )
     def titre(self):
         Build(
@@ -93,10 +93,10 @@ class Base:
 
             align_horizontal=PaAlign.CENTER_HORIZONTAL,
 
-            bg=Rgb.TR,
-            bg_hover=Rgb.TR,
-            fg=Rgb.TH3,
-            fg_hover=Rgb.TH3,
+            bg=PaRgb.TR,
+            bg_hover=PaRgb.TR,
+            fg=PaRgb.TH3,
+            fg_hover=PaRgb.TH3,
         )
 
 
@@ -125,10 +125,10 @@ class Demo:
             indent=5,
 
             font_size=self.font_size,
-            bg=Rgb.TR,
-            bg_hover=Rgb.TR,
-            fg=Rgb.TH3,
-            fg_hover=Rgb.TH3,
+            bg=PaRgb.TR,
+            bg_hover=PaRgb.TR,
+            fg=PaRgb.TH3,
+            fg_hover=PaRgb.TH3,
         )
     def wg_categorie(self):
         Build(
@@ -137,15 +137,15 @@ class Demo:
 
             align_horizontal=PaAlign.CENTER_HORIZONTAL,
 
-            bg=Rgb.TR,
-            bg_hover=Rgb.TR,
-            fg=Rgb.TH3,
-            fg_hover=Rgb.TH3,
+            bg=PaRgb.TR,
+            bg_hover=PaRgb.TR,
+            fg=PaRgb.TH3,
+            fg_hover=PaRgb.TH3,
 
-            border=(0, StyleBase.BORDER, 0, 0),
-            border_hover=(0, StyleBase.BORDER, 0, 0),
-            border_rgb=Rgb.BN2,
-            border_hover_rgb=Rgb.BN2,
+            border=(0, PaStyleBase.BORDER, 0, 0),
+            border_hover=(0, PaStyleBase.BORDER, 0, 0),
+            border_rgb=PaRgb.BN2,
+            border_hover_rgb=PaRgb.BN2,
 
             radius=(0,) * 4
         )

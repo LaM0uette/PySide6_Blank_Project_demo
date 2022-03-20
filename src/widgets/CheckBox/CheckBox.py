@@ -7,7 +7,7 @@ from src.widgets.CheckBox.Build import Build
 ##     BASE     ##
 ##################
 class Base:
-    def __init__(self, *wgs, margin=(0, 0, 0, (vb_wg.HEIGHT-(vb_wg.HEIGHT*StyleBase.x_ico))/2)):
+    def __init__(self, *wgs, margin=(0, 0, 0, (vb_wg.HEIGHT - (vb_wg.HEIGHT * PaStyleBase.x_ico)) / 2)):
         self.wgs = wgs
         self.margin = margin
 
@@ -17,7 +17,7 @@ class Base:
 
             img_margin=self.margin,
         )
-    def tr(self, bg=Rgb.TR, fg=Rgb.TH3):
+    def tr(self, bg=PaRgb.TR, fg=PaRgb.TH3):
         Build(
             *self.wgs,
 
@@ -30,7 +30,7 @@ class Base:
             fg=fg,
             fg_checked=fg,
             fg_indeterminate=fg,
-            fg_indeterminate_hover=Rgb.TH2,
+            fg_indeterminate_hover=PaRgb.TH2,
 
             img_indeterminate_rgb="th3",
             img_indeterminate_hover_rgb="th2",
@@ -42,7 +42,7 @@ class Base:
 ##     DEMO     ##
 ##################
 class Demo:
-    def __init__(self, *wgs, margin=(0, 0, 0, (vb_wg.HEIGHT-(vb_wg.HEIGHT*StyleBase.x_ico))/2)):
+    def __init__(self, *wgs, margin=(0, 0, 0, (vb_wg.HEIGHT - (vb_wg.HEIGHT * PaStyleBase.x_ico)) / 2)):
         self.wgs = wgs
         self.margin = margin
 
@@ -53,7 +53,7 @@ class Demo:
             triple_state=True,
             img_margin=self.margin,
         )
-    def tr(self, bg=Rgb.TR, fg=Rgb.TH3):
+    def tr(self, bg=PaRgb.TR, fg=PaRgb.TH3):
         Build(
             *self.wgs,
             auto_exclusive=True,
@@ -66,7 +66,7 @@ class Demo:
             fg=fg,
             fg_checked=fg,
             fg_indeterminate=fg,
-            fg_indeterminate_hover=Rgb.TH2,
+            fg_indeterminate_hover=PaRgb.TH2,
             img_indeterminate_rgb="th3",
             img_indeterminate_hover_rgb="th2",
         )

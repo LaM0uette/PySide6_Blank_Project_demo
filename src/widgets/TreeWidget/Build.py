@@ -38,14 +38,14 @@ class Build:
             bg_item_hover=vb_wg.BG_ITEM_HOVER,
             bg_item_checked=vb_wg.BG_ITEM_CHECKED,
             bg_item_checked_hover=vb_wg.BG_ITEM_CHECKED_HOVER,
-            bg_header=Rgb.TH2,
+            bg_header=PaRgb.TH2,
             # Couleurs FG
             fg=vb_wg.FG,
             fg_item=vb_wg.FG_ITEM,
             fg_item_hover=vb_wg.FG_ITEM_HOVER,
             fg_item_checked=vb_wg.FG_ITEM_CHECKED,
             fg_item_checked_hover=vb_wg.FG_ITEM_CHECKED_HOVER,
-            fg_header=Rgb.TH1,
+            fg_header=PaRgb.TH1,
 
             # Bordures
             border=vb_wg.BORDER_WIDTH,
@@ -80,7 +80,7 @@ class Build:
             radius=vb_wg.RADIUS,
             radius_item=vb_wg.RADIUS,
 
-            # Scroll
+            # PaScroll
             scroll_bg=vb_wg.SCROLL_BG,
             scroll_width=vb_wg.SCROLL_WIDTH,
             scroll_height=vb_wg.SCROLL_HEIGHT,
@@ -100,7 +100,7 @@ class Build:
         *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *PaFrameShape: QtWidgets.QFrame : PaFrameShape().%nomFrameForme \n
         *PaFrameShadow: QtWidgets.QFrame : PaFrameShadow().%nomFrameOmbre \n
-        *Scroll: QtCore.Qt : Scroll().%nomScroll() \n
+        *PaScroll: QtCore.Qt : PaScroll().%nomScroll() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
@@ -109,8 +109,8 @@ class Build:
         :param font: str()
         :param font_size: *PaFont
         :param animate: bool()
-        :param scroll_h: *Scroll
-        :param scroll_v: *Scroll
+        :param scroll_h: *PaScroll
+        :param scroll_v: *PaScroll
         :param focus_policy: *PaFocusPolicy
         :param frame_shape: *PaFrameShape
         :param frame_shadow: *PaFrameShadow

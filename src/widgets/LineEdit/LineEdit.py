@@ -18,8 +18,8 @@ class Base:
         Build(
             *self.wgs,
 
-            bg=Rgb.TR,
-            fg=Rgb.TH3
+            bg=PaRgb.TR,
+            fg=PaRgb.TH3
         )
     def rgb_hex(self):
         Build(
@@ -27,8 +27,8 @@ class Base:
 
             align_horizontal=PaAlign.CENTER_HORIZONTAL,
 
-            bg=Rgb.TR,
-            bg_selection=Rgb.TH3,
-            fg=Rgb.TH3,
-            fg_selection=Rgb.TH1,
+            bg=PaRgb.TR,
+            bg_selection=PaRgb.TH3,
+            fg=PaRgb.TH3,
+            fg_selection=PaRgb.TH1,
         )

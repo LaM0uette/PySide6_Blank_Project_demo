@@ -1,7 +1,7 @@
 from PySide6.QtCore import Qt
 
 
-class Scroll:
+class PaScroll:
 
     NEED = Qt.ScrollBarAsNeeded
     ON = Qt.ScrollBarAlwaysOn

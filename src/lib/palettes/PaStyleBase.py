@@ -1,4 +1,4 @@
-class StyleBase:
+class PaStyleBase:
 
     BORDER = 2
     x_ico = 0.65

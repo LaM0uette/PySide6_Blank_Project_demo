@@ -10,12 +10,12 @@ class Base:
     def __init__(self, *wgs):
         self.wgs = wgs
 
-    def th(self, rgb=Rgb.TH3):
+    def th(self, rgb=PaRgb.TH3):
         Build(
             *self.wgs,
             bg=rgb,
         )
-    def tr(self, rgb=Rgb.TH3):
+    def tr(self, rgb=PaRgb.TH3):
         Build(
             *self.wgs,
             bg=rgb,
@@ -26,7 +26,7 @@ class Base:
 ##     MENU     ##
 ##################
 class Menu:
-    def __init__(self, *wgs, bg=Rgb.TH2, height=PaDim.H9):
+    def __init__(self, *wgs, bg=PaRgb.TH2, height=PaDim.H9):
         self.wgs = wgs
         self.bg = bg
         self.height = height
@@ -37,7 +37,7 @@ class Menu:
 
             height=self.height,
 
-            bg=Rgb.TH1,
+            bg=PaRgb.TH1,
             radius=(vb_app.RADIUS_SIZE, vb_wg.RADIUS_SIZE, 0, 0)
         )
     def bottom(self):
@@ -76,7 +76,7 @@ class Cadre:
 
             shadow=self.shadow,
 
-            bg=Rgb.TR,
+            bg=PaRgb.TR,
             border=self.border,
             border_rgb=rgb,
             border_hover=self.border,
@@ -85,11 +85,11 @@ class Cadre:
             radius=self.radius
         )
 
-    def th1(self): self.rtn(rgb=Rgb.TH1)
-    def th2(self): self.rtn(rgb=Rgb.TH2)
-    def th3(self): self.rtn(rgb=Rgb.TH3)
-    def bn1(self): self.rtn(rgb=Rgb.BN1)
-    def bn2(self): self.rtn(rgb=Rgb.BN2)
+    def th1(self): self.rtn(rgb=PaRgb.TH1)
+    def th2(self): self.rtn(rgb=PaRgb.TH2)
+    def th3(self): self.rtn(rgb=PaRgb.TH3)
+    def bn1(self): self.rtn(rgb=PaRgb.BN1)
+    def bn2(self): self.rtn(rgb=PaRgb.BN2)
 
 
 #################
@@ -99,13 +99,13 @@ class Dlg:
     def __init__(self, *wgs):
         self.wgs = wgs
 
-    def th(self, rgb=Rgb.TH3):
+    def th(self, rgb=PaRgb.TH3):
         Build(
             *self.wgs,
             bg=rgb,
             radius=(0, )*4
         )
-    def tr(self, rgb=Rgb.TH3):
+    def tr(self, rgb=PaRgb.TH3):
         Build(
             *self.wgs,
             bg=rgb,
@@ -127,22 +127,22 @@ class SplashScreen(Build):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            bg=Rgb.TH1,
-            border=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb.TH3,
-            border_hover=(StyleBase.BORDER,) * 4,
-            border_hover_rgb=Rgb.TH3,
+            bg=PaRgb.TH1,
+            border=(PaStyleBase.BORDER,) * 4,
+            border_rgb=PaRgb.TH3,
+            border_hover=(PaStyleBase.BORDER,) * 4,
+            border_hover_rgb=PaRgb.TH3,
             radius=(vb_wg.RADIUS_SIZE, )*4
     )
 class ToolBox(Build):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            bg=Rgb.TH1,
-            border=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb.TH3,
-            border_hover=(StyleBase.BORDER,) * 4,
-            border_hover_rgb=Rgb.TH3,
+            bg=PaRgb.TH1,
+            border=(PaStyleBase.BORDER,) * 4,
+            border_rgb=PaRgb.TH3,
+            border_hover=(PaStyleBase.BORDER,) * 4,
+            border_hover_rgb=PaRgb.TH3,
             radius=(vb_wg.RADIUS, )*4
     )
 
@@ -154,11 +154,11 @@ class Demo_hover(Build):
     def __init__(self, *wgs):
         super().__init__(
             *wgs,
-            bg=Rgb.TR,
-            border=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb.BN1,
-            border_hover=(StyleBase.BORDER,) * 4,
+            bg=PaRgb.TR,
+            border=(PaStyleBase.BORDER,) * 4,
+            border_rgb=PaRgb.BN1,
+            border_hover=(PaStyleBase.BORDER,) * 4,
             border_hover_style="dashed",
-            border_hover_rgb=Rgb.BN1,
+            border_hover_rgb=PaRgb.BN1,
             radius=(vb_wg.RADIUS_SIZE, )*4
     )

@@ -14,10 +14,10 @@ class Base:
         Build(
             *self.wgs,
 
-            border=(StyleBase.BORDER,) * 4,
-            border_hover=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb.TH3,
-            border_hover_rgb=Rgb.TH3,
+            border=(PaStyleBase.BORDER,) * 4,
+            border_hover=(PaStyleBase.BORDER,) * 4,
+            border_rgb=PaRgb.TH3,
+            border_hover_rgb=PaRgb.TH3,
         )
     def tr(self):
         Build(
@@ -25,21 +25,21 @@ class Base:
 
             text_visible=False,
 
-            bg=Rgb.TR,
+            bg=PaRgb.TR,
 
-            border=(StyleBase.BORDER,) * 4,
-            border_hover=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb.TH3,
-            border_hover_rgb=Rgb.TH3,
+            border=(PaStyleBase.BORDER,) * 4,
+            border_hover=(PaStyleBase.BORDER,) * 4,
+            border_rgb=PaRgb.TH3,
+            border_hover_rgb=PaRgb.TH3,
         )
     def Chargement(self):
         Build(
             *self.wgs,
 
-            border=(StyleBase.BORDER,) * 4,
-            border_hover=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb.TH3,
-            border_hover_rgb=Rgb.TH3,
+            border=(PaStyleBase.BORDER,) * 4,
+            border_hover=(PaStyleBase.BORDER,) * 4,
+            border_rgb=PaRgb.TH3,
+            border_hover_rgb=PaRgb.TH3,
 
             radius_chunk=(3, 0, 3, 0)
         )
@@ -55,10 +55,10 @@ class Demo:
         Build(
             *self.wgs,
 
-            border=(StyleBase.BORDER,) * 4,
-            border_hover=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb.TH3,
-            border_hover_rgb=Rgb.TH3,
+            border=(PaStyleBase.BORDER,) * 4,
+            border_hover=(PaStyleBase.BORDER,) * 4,
+            border_rgb=PaRgb.TH3,
+            border_hover_rgb=PaRgb.TH3,
 
             radius_chunk=(3, 0, 3, 0)
         )
@@ -68,12 +68,12 @@ class Demo:
 
             text_visible=False,
 
-            bg=Rgb.TR,
+            bg=PaRgb.TR,
 
-            border=(StyleBase.BORDER,) * 4,
-            border_hover=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb.TH3,
-            border_hover_rgb=Rgb.TH3,
+            border=(PaStyleBase.BORDER,) * 4,
+            border_hover=(PaStyleBase.BORDER,) * 4,
+            border_rgb=PaRgb.TH3,
+            border_hover_rgb=PaRgb.TH3,
 
             radius_chunk=(3, 0, 3, 0)
         )

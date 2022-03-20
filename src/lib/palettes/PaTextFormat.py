@@ -1,7 +1,7 @@
 from PySide6.QtCore import Qt
 
 
-class TextFormat:
+class PaTextFormat:
 
     PLAIN = Qt.PlainText
     RICH = Qt.RichText

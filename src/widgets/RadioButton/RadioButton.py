@@ -7,7 +7,7 @@ from src.widgets.RadioButton.Build import Build
 ##     BASE     ##
 ##################
 class Base:
-    def __init__(self, *wgs, margin=(0, 0, 0, (vb_wg.HEIGHT-(vb_wg.HEIGHT*StyleBase.x_ico))/2)):
+    def __init__(self, *wgs, margin=(0, 0, 0, (vb_wg.HEIGHT - (vb_wg.HEIGHT * PaStyleBase.x_ico)) / 2)):
         self.wgs = wgs
         self.margin = margin
 
@@ -16,7 +16,7 @@ class Base:
             *self.wgs,
             img_margin=self.margin,
         )
-    def tr(self, bg=Rgb.TR, fg=Rgb.TH3):
+    def tr(self, bg=PaRgb.TR, fg=PaRgb.TH3):
         Build(
             *self.wgs,
             auto_exclusive=False,

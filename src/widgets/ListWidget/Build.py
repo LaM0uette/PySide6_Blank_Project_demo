@@ -77,7 +77,7 @@ class Build:
             radius=vb_wg.RADIUS,
             radius_item=vb_wg.RADIUS,
 
-            # Scroll
+            # PaScroll
             scroll_bg=vb_wg.SCROLL_BG,
             scroll_width=vb_wg.SCROLL_WIDTH,
             scroll_height=vb_wg.SCROLL_HEIGHT,
@@ -100,8 +100,8 @@ class Build:
         *PaFrameShape: QtWidgets.QFrame : PaFrameShape().%nomFrameForme \n
         *PaFrameShadow: QtWidgets.QFrame : PaFrameShadow().%nomFrameOmbre \n
         *RgbBox: tuple() : RgbBox().%nomCouleur() \n
-        *SelectionBehavior: QtWidgets.QAbstractItemView : SelectionBehavior().%nomSelection \n
-        *SelectionMode: QtWidgets.QAbstractItemView : SelectionMode().%nomSelection \n
+        *PaSelectionBehavior: QtWidgets.QAbstractItemView : PaSelectionBehavior().%nomSelection \n
+        *PaSelectionMode: QtWidgets.QAbstractItemView : PaSelectionMode().%nomSelection \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
@@ -120,8 +120,8 @@ class Build:
         :param line_width: int()
         :param scroll_h: bool()
         :param scroll_v: bool()
-        :param selection_behavior: *SelectionBehavior
-        :param selection_mode: *SelectionMode
+        :param selection_behavior: *PaSelectionBehavior
+        :param selection_mode: *PaSelectionMode
         :param cursor: *PaCur
         :param bg: *RgbBox
         :param bg_alternate: *RgbBox

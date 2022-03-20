@@ -48,7 +48,7 @@ class MsgDlg(msg_ui.Ui_Msg, QtWidgets.QDialog):
         self.setWindowOpacity(self.opacity)
         self.setWindowFlags(QtCore.Qt.FramelessWindowHint | QtCore.Qt.Tool)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
-        self.setGraphicsEffect(Shadow.OMBRE_PORTEE(self))
+        self.setGraphicsEffect(PaShadow.OMBRE_PORTEE(self))
         self.setWindowModality(QtCore.Qt.ApplicationModal)
     def IN_SETUP_UI(self):
         ### Ui ###
@@ -58,7 +58,7 @@ class MsgDlg(msg_ui.Ui_Msg, QtWidgets.QDialog):
         ### QFrame ###
         Frame.Menu(self.fr_menu_top).top()
         Frame.Cadre(self.fr_main).th2()
-        Frame.Dlg(self.fr_body).th(rgb=Rgb.TH1)
+        Frame.Dlg(self.fr_body).th(rgb=PaRgb.TH1)
         Frame.Menu(self.fr_msg_bottom).bottom_dlg()
         ### /QFrame ###
 

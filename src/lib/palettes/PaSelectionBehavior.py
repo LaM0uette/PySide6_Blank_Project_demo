@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QAbstractItemView
 
 
-class SelectionBehavior:
+class PaSelectionBehavior:
 
     ITEM = QAbstractItemView.SelectItems
     ROW = QAbstractItemView.SelectRows

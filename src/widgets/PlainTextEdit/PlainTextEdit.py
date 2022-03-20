@@ -18,8 +18,8 @@ class Base:
         Build(
             *self.wgs,
 
-            bg=Rgb.TR,
-            fg=Rgb.TH3
+            bg=PaRgb.TR,
+            fg=PaRgb.TH3
         )
 
 
@@ -42,6 +42,6 @@ class Demo:
 
             height=PaDim.H5,
 
-            bg=Rgb.TR,
-            fg=Rgb.TH3
+            bg=PaRgb.TR,
+            fg=PaRgb.TH3
         )

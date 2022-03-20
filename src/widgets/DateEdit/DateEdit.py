@@ -25,11 +25,11 @@ class Base:
         Build(
             *self.wgs,
 
-            bg=Rgb.TR,
-            bg_hover=Rgb.TR,
-            bg_selection=Rgb.TH3,
-            fg=Rgb.TH3,
-            fg_selection=Rgb.TH1,
+            bg=PaRgb.TR,
+            bg_hover=PaRgb.TR,
+            bg_selection=PaRgb.TH3,
+            fg=PaRgb.TH3,
+            fg_selection=PaRgb.TH1,
 
             img=PaImg.CALENDRIER,
             img_hover=PaImg.CALENDRIER,

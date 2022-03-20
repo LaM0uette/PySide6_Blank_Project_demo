@@ -1,7 +1,7 @@
 from PySide6.QtCore import Qt
 
 
-class ToolButtonStyle:
+class PaToolButtonStyle:
 
     ICON_ONLY = Qt.ToolButtonIconOnly
     TEXT_ONLY = Qt.ToolButtonTextOnly

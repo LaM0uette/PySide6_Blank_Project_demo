@@ -14,7 +14,7 @@ class Base:
             widget=self.widget,
         )
     def Transparent(self):
-        bg = Rgb.TR
+        bg = PaRgb.TR
 
         Style(
             widget=self.widget,
@@ -24,8 +24,8 @@ class Base:
             bg_checked_hover=bg,
             bg_pressed=bg,
             bg_checked_pressed=bg,
-            fg=Rgb.TH3,
-            fg_checked=Rgb.BN1,
+            fg=PaRgb.TH3,
+            fg_checked=PaRgb.BN1,
         )
 
 
@@ -41,7 +41,7 @@ class Demo:
             widget=self.widget,
         )
     def Transparent(self):
-        bg = Rgb.TR
+        bg = PaRgb.TR
 
         Style(
             widget=self.widget,
@@ -51,7 +51,7 @@ class Demo:
             bg_checked_hover=bg,
             bg_pressed=bg,
             bg_checked_pressed=bg,
-            fg=Rgb.TH3,
-            fg_checked=Rgb.BN1,
+            fg=PaRgb.TH3,
+            fg_checked=PaRgb.BN1,
             auto_exclusive=False,
         )

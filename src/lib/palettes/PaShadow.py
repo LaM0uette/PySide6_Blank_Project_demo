@@ -3,7 +3,7 @@ from functools import partial
 from PySide6 import QtWidgets, QtGui
 
 
-class Shadow:
+class PaShadow:
 
     @staticmethod
     def __get_shadow(wg, blur_radius: int, rgba: tuple, offset: list):

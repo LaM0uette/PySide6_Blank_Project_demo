@@ -10,7 +10,7 @@ class Base:
     def __init__(self, *wgs):
         self.wgs = wgs
 
-    def th(self, bg=Rgb.TH1):
+    def th(self, bg=PaRgb.TH1):
         Build(
             *self.wgs,
 
@@ -20,5 +20,5 @@ class Base:
         Build(
             *self.wgs,
 
-            bg=Rgb.TR
+            bg=PaRgb.TR
         )

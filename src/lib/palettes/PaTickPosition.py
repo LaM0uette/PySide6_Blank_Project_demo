@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QSlider
 
 
-class TickPosition:
+class PaTickPosition:
 
     NO = QSlider.NoTicks
     ABOVE = QSlider.TicksAbove

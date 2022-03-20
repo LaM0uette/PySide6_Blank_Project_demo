@@ -43,7 +43,7 @@ class Build:
         *PaDim: int() : PaDim().%nomDim() \n
         *PaFocusPolicy: QtCore.Qt : PaFocusPolicy().%nomFocus \n
         *RgbBox: tuple() : RgbBox().%nomCouleur() \n
-        *Shadow: QtWidgets.QGraphicsDropShadowEffect(self) : Shadow().%nomOmbre() \n
+        *PaShadow: QtWidgets.QGraphicsDropShadowEffect(self) : PaShadow().%nomOmbre() \n
         *PaFrameShape: QtWidgets.QFrame : PaFrameShape().%nomFrameForme \n
         *PaFrameShadow: QtWidgets.QFrame : PaFrameShadow().%nomFrameOmbre \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
@@ -55,7 +55,7 @@ class Build:
         :param frame_shape: *PaFrameShape
         :param frame_shadow: *PaFrameShadow
         :param line_width: int()
-        :param shadow: *Shadow
+        :param shadow: *PaShadow
         :param cursor: *PaCur
         :param bg: *RgbBox
         :param border: *Tuple

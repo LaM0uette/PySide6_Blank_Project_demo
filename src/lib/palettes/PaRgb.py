@@ -3,7 +3,7 @@ import json
 from src.config.config import Config
 
 
-class Rgb:
+class PaRgb:
 
     @staticmethod
     def __get_rgb(val):

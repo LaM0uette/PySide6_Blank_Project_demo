@@ -14,7 +14,7 @@ class Base:
             widget=self.widget,
         )
     def Transparent(self):
-        bg = Rgb.TR
+        bg = PaRgb.TR
 
         Style(
             widget=self.widget,
@@ -24,8 +24,8 @@ class Base:
             bg_checked_hover=bg,
             bg_pressed=bg,
             bg_checked_pressed=bg,
-            fg=Rgb.TH3,
-            fg_checked=Rgb.BN1,
+            fg=PaRgb.TH3,
+            fg_checked=PaRgb.BN1,
         )
 
 
@@ -41,7 +41,7 @@ class MenuTop:
             img=PaImg.MAIN,
             img_rgb="th2",
     ):
-        bg = Rgb.TR
+        bg = PaRgb.TR
 
         Style(
             self.widget,
@@ -54,7 +54,7 @@ class MenuTop:
             bg_checked=bg,
             bg_checked_hover=bg,
             bg_pressed=bg,
-            fg_checked=Rgb.TH3,
+            fg_checked=PaRgb.TH3,
             img=img,
             img_rgb=img_rgb,
         )
@@ -86,22 +86,22 @@ class MenuTop:
 class Txt:
     def __init__(self, widget):
         self.widget = widget
-        self.bd = (StyleBase.BORDER,)*4
-        self.bd_rgb = Rgb.TH3
+        self.bd = (PaStyleBase.BORDER,) * 4
+        self.bd_rgb = PaRgb.TH3
 
     def txt(self):
         Style(
             self.widget,
-            bg=Rgb.TH1,
-            fg=Rgb.TH3,
-            bg_hover=Rgb.TH3,
-            fg_hover=Rgb.TH1,
-            bg_pressed=Rgb.TH3,
-            bg_checked=Rgb.TH3,
-            fg_checked=Rgb.TH1,
-            bg_checked_hover=Rgb.TH1,
-            fg_checked_hover=Rgb.TH3,
-            bg_checked_pressed=Rgb.TH1,
+            bg=PaRgb.TH1,
+            fg=PaRgb.TH3,
+            bg_hover=PaRgb.TH3,
+            fg_hover=PaRgb.TH1,
+            bg_pressed=PaRgb.TH3,
+            bg_checked=PaRgb.TH3,
+            fg_checked=PaRgb.TH1,
+            bg_checked_hover=PaRgb.TH1,
+            fg_checked_hover=PaRgb.TH3,
+            bg_checked_pressed=PaRgb.TH1,
             border=self.bd,
             border_hover=self.bd,
             border_checked=self.bd,
@@ -114,16 +114,16 @@ class Txt:
     def inverse(self):
         Style(
             self.widget,
-            bg=Rgb.TH3,
-            fg=Rgb.TH1,
-            bg_hover=Rgb.TH1,
-            fg_hover=Rgb.TH3,
-            bg_pressed=Rgb.TH1,
-            bg_checked=Rgb.TH1,
-            fg_checked=Rgb.TH3,
-            bg_checked_hover=Rgb.TH3,
-            fg_checked_hover=Rgb.TH1,
-            bg_checked_pressed=Rgb.TH3,
+            bg=PaRgb.TH3,
+            fg=PaRgb.TH1,
+            bg_hover=PaRgb.TH1,
+            fg_hover=PaRgb.TH3,
+            bg_pressed=PaRgb.TH1,
+            bg_checked=PaRgb.TH1,
+            fg_checked=PaRgb.TH3,
+            bg_checked_hover=PaRgb.TH3,
+            fg_checked_hover=PaRgb.TH1,
+            bg_checked_pressed=PaRgb.TH3,
             border=self.bd,
             border_hover=self.bd,
             border_checked=self.bd,
@@ -141,23 +141,23 @@ class Txt:
 class Dlg:
     def __init__(self, widget):
         self.widget = widget
-        self.bd = (StyleBase.BORDER,)*4
+        self.bd = (PaStyleBase.BORDER,) * 4
 
     def _rtn(
             self,
-            bg=Rgb.TH1,
-            fg=Rgb.BN1,
-            bg_hover=Rgb.BN1,
-            fg_hover=Rgb.TH1,
-            bg_pressed=Rgb.BN1,
-            fg_pressed=Rgb.TH1,
-            bd_rgb=Rgb.BN1,
+            bg=PaRgb.TH1,
+            fg=PaRgb.BN1,
+            bg_hover=PaRgb.BN1,
+            fg_hover=PaRgb.TH1,
+            bg_pressed=PaRgb.BN1,
+            fg_pressed=PaRgb.TH1,
+            bd_rgb=PaRgb.BN1,
     ):
         Style(
             self.widget,
 
             size_policy=DcSizePolicy.Base(
-                vertical=SizePolicy.EXPANDING
+                vertical=PaSizePolicy.EXPANDING
             ),
 
             dim=DcDim.Base(
@@ -183,43 +183,43 @@ class Dlg:
 
     def ok(self):
         self._rtn(
-            bg=Rgb.TH1,
-            fg=Rgb.BN1,
-            bg_hover=Rgb.BN1,
-            fg_hover=Rgb.TH1,
-            bg_pressed=Rgb.BN1,
-            fg_pressed=Rgb.TH1,
-            bd_rgb=Rgb.BN1,
+            bg=PaRgb.TH1,
+            fg=PaRgb.BN1,
+            bg_hover=PaRgb.BN1,
+            fg_hover=PaRgb.TH1,
+            bg_pressed=PaRgb.BN1,
+            fg_pressed=PaRgb.TH1,
+            bd_rgb=PaRgb.BN1,
         )
     def ok_inv(self):
         self._rtn(
-            bg=Rgb.BN1,
-            fg=Rgb.TH1,
-            bg_hover=Rgb.TH1,
-            fg_hover=Rgb.BN1,
-            bg_pressed=Rgb.TH1,
-            fg_pressed=Rgb.BN1,
-            bd_rgb=Rgb.BN1,
+            bg=PaRgb.BN1,
+            fg=PaRgb.TH1,
+            bg_hover=PaRgb.TH1,
+            fg_hover=PaRgb.BN1,
+            bg_pressed=PaRgb.TH1,
+            fg_pressed=PaRgb.BN1,
+            bd_rgb=PaRgb.BN1,
         )
     def nok(self):
         self._rtn(
-            bg=Rgb.TH1,
-            fg=Rgb.BN2,
-            bg_hover=Rgb.BN2,
-            fg_hover=Rgb.TH1,
-            bg_pressed=Rgb.BN2,
-            fg_pressed=Rgb.TH1,
-            bd_rgb=Rgb.BN2,
+            bg=PaRgb.TH1,
+            fg=PaRgb.BN2,
+            bg_hover=PaRgb.BN2,
+            fg_hover=PaRgb.TH1,
+            bg_pressed=PaRgb.BN2,
+            fg_pressed=PaRgb.TH1,
+            bd_rgb=PaRgb.BN2,
         )
     def nok_inv(self):
         self._rtn(
-            bg=Rgb.BN2,
-            fg=Rgb.TH1,
-            bg_hover=Rgb.TH1,
-            fg_hover=Rgb.BN2,
-            bg_pressed=Rgb.TH1,
-            fg_pressed=Rgb.BN2,
-            bd_rgb=Rgb.BN2,
+            bg=PaRgb.BN2,
+            fg=PaRgb.TH1,
+            bg_hover=PaRgb.TH1,
+            fg_hover=PaRgb.BN2,
+            bg_pressed=PaRgb.TH1,
+            fg_pressed=PaRgb.BN2,
+            bd_rgb=PaRgb.BN2,
         )
 
 
@@ -231,12 +231,12 @@ class Plein:
         self.widget = widget
 
     def _rtn(self,
-             bg_gen=Rgb.TR,
-             fg_gen=Rgb.TR,
+             bg_gen=PaRgb.TR,
+             fg_gen=PaRgb.TR,
              height=PaDim.H5,
 
              border_gen=(0, )*4,
-             border_gen_rgb=Rgb.TR,
+             border_gen_rgb=PaRgb.TR,
              cursor=PaCur.MAIN
              ):
         Style(
@@ -270,28 +270,28 @@ class Plein:
 
     def th1(self):
         self._rtn(
-            bg_gen=Rgb.TH1,
-            fg_gen=Rgb.TH3,
-            border_gen=(StyleBase.BORDER,) * 4,
-            border_gen_rgb=Rgb.TH2,
+            bg_gen=PaRgb.TH1,
+            fg_gen=PaRgb.TH3,
+            border_gen=(PaStyleBase.BORDER,) * 4,
+            border_gen_rgb=PaRgb.TH2,
         )
     def th2(self):
         self._rtn(
-            bg_gen=Rgb.TH2,
-            fg_gen=Rgb.TH3,
+            bg_gen=PaRgb.TH2,
+            fg_gen=PaRgb.TH3,
         )
     def th3(self):
         self._rtn(
-            bg_gen=Rgb.TH3,
-            fg_gen=Rgb.TH1,
+            bg_gen=PaRgb.TH3,
+            fg_gen=PaRgb.TH1,
         )
     def bn1(self):
         self._rtn(
-            bg_gen=Rgb.BN1,
-            fg_gen=Rgb.TH3,
+            bg_gen=PaRgb.BN1,
+            fg_gen=PaRgb.TH3,
         )
     def bn2(self):
         self._rtn(
-            bg_gen=Rgb.BN2,
-            fg_gen=Rgb.TH3,
+            bg_gen=PaRgb.BN2,
+            fg_gen=PaRgb.TH3,
         )

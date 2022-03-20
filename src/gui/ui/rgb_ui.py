@@ -23,7 +23,7 @@ from PySide6.QtWidgets import (QApplication, QFrame, QGridLayout, QHBoxLayout,
 class Ui_Rgb(object):
     def setupUi(self, Rgb):
         if not Rgb.objectName():
-            Rgb.setObjectName(u"Rgb")
+            Rgb.setObjectName(u"PaRgb")
         Rgb.resize(783, 348)
         self.glay_main = QGridLayout(Rgb)
         self.glay_main.setSpacing(0)

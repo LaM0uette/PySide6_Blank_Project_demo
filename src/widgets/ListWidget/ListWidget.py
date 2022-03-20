@@ -14,22 +14,22 @@ class Base:
         Build(
             *self.wgs,
 
-            fg_item_checked=Rgb.BN1,
+            fg_item_checked=PaRgb.BN1,
 
-            border=(StyleBase.BORDER,)*4,
-            border_rgb=Rgb.TH3
+            border=(PaStyleBase.BORDER,) * 4,
+            border_rgb=PaRgb.TH3
         )
     def tr(self):
         Build(
             *self.wgs,
 
-            bg=Rgb.TR,
-            bg_item=Rgb.TR,
-            bg_item_hover=Rgb.TR,
-            bg_item_checked=Rgb.TR,
-            bg_item_checked_hover=Rgb.TR,
-            fg_item=Rgb.TH3,
-            fg_item_checked=Rgb.BN1,
+            bg=PaRgb.TR,
+            bg_item=PaRgb.TR,
+            bg_item_hover=PaRgb.TR,
+            bg_item_checked=PaRgb.TR,
+            bg_item_checked_hover=PaRgb.TR,
+            fg_item=PaRgb.TH3,
+            fg_item_checked=PaRgb.BN1,
 
             radius_item=(0,)*4
         )
@@ -49,9 +49,9 @@ class Demo:
 
             height=PaDim.H5,
 
-            fg_item_checked=Rgb.BN1,
-            border=(StyleBase.BORDER,) * 4,
-            border_rgb=Rgb.TH3
+            fg_item_checked=PaRgb.BN1,
+            border=(PaStyleBase.BORDER,) * 4,
+            border_rgb=PaRgb.TH3
         )
     def tr(self):
         bd_item = (0, 0, 0, 2)
@@ -61,22 +61,22 @@ class Demo:
 
             height=PaDim.H5,
 
-            bg=Rgb.TR,
-            bg_item=Rgb.TR,
-            bg_item_hover=Rgb.TR,
-            bg_item_checked=Rgb.TR,
-            bg_item_checked_hover=Rgb.TR,
-            fg_item=Rgb.TH3,
-            fg_item_checked=Rgb.BN1,
+            bg=PaRgb.TR,
+            bg_item=PaRgb.TR,
+            bg_item_hover=PaRgb.TR,
+            bg_item_checked=PaRgb.TR,
+            bg_item_checked_hover=PaRgb.TR,
+            fg_item=PaRgb.TH3,
+            fg_item_checked=PaRgb.BN1,
 
             border_item=bd_item,
             border_item_hover=bd_item,
             border_item_checked=bd_item,
             border_item_checked_hover=bd_item,
-            border_item_rgb=Rgb.TH2,
-            border_item_hover_rgb=Rgb.TH3,
-            border_item_checked_rgb=Rgb.BN1,
-            border_item_checked_hover_rgb=Rgb.BN1,
+            border_item_rgb=PaRgb.TH2,
+            border_item_hover_rgb=PaRgb.TH3,
+            border_item_checked_rgb=PaRgb.BN1,
+            border_item_checked_hover_rgb=PaRgb.BN1,
 
             radius_item=(0,) * 4
         )

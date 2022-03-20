@@ -20,8 +20,8 @@ class PlusMinus:
 
             focus_policy=PaFocusPolicy.NO,
 
-            bg=Rgb.TR,
-            fg=Rgb.TH3,
+            bg=PaRgb.TR,
+            fg=PaRgb.TH3,
         )
 class UpDown:
     def __init__(self, *wgs):
@@ -39,8 +39,8 @@ class UpDown:
         Build(
             *self.wgs,
             focus_policy=PaFocusPolicy.NO,
-            bg=Rgb.TR,
-            fg=Rgb.TH3,
+            bg=PaRgb.TR,
+            fg=PaRgb.TH3,
 
             img_up=PaImg.FLECHE_TOP,
             img_down=PaImg.FLECHE_BOTTOM,

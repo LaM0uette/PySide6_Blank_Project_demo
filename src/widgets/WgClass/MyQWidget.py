@@ -22,7 +22,7 @@ class MyQWidget:
         :param layout_direction: PaLayoutDirection.%
         """
 
-        # SizePolicy
+        # PaSizePolicy
         widget.setSizePolicy(size_policy.horizontal, size_policy.vertical)
 
         # Dimmensions
