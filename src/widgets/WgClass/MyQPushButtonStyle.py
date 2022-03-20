@@ -15,14 +15,17 @@ class Style(MyQPushButton):
             cursor=v_wg.CUR_ACTION,
             focus_policy=v_wg.FOCUS_POLICY,
             layout_direction=v_wg.LAYOUT_DIRECTION,
+
             txt=v_wg.TXT,
             ico=v_wg.ICO,
             checkable=False,
             checked=False,
             auto_actions=v_wg.AUTO_ACTIONS,
+
             auto_default=False,
             default=False,
             flat=True,
+
             pb_type=None,
             bg=v_wg.BG,
             bg_hover=v_wg.BG_HOVER,
