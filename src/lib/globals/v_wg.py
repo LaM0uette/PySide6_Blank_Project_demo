@@ -42,6 +42,7 @@ ICO = DcIco.Base
 
 # Actions
 AUTO_ACTIONS = DcAutoActions.Base
+AUTO_ACTIONS_EXCLUSIVE = DcAutoActions.Base(auto_exclusive=True)
 #############################
 ##    /QAbstractButton     ##
 #############################

@@ -17,10 +17,7 @@ class Style(MyQAbstractButton):
             ico=v_wg.ICO,
             checkable=True,
             checked=False,
-            auto_repeat=False,
-            auto_exclusive=True,
-            auto_repeat_delay=v_wg.AUTO_REPEAT_DELAY,
-            auto_repeat_interval=v_wg.AUTO_REPEAT_INTERVAL,
+            auto_actions=v_wg.AUTO_ACTIONS_EXCLUSIVE,
             bg=v_wg.BG,
             bg_hover=v_wg.BG_HOVER,
             bg_checked=v_wg.BG_CHECKED,
@@ -60,7 +57,7 @@ class Style(MyQAbstractButton):
             radius=v_wg.RADIUS
     ):
         # Style
-        super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, txt, ico, checkable, checked, auto_repeat, auto_exclusive, auto_repeat_delay, auto_repeat_interval)
+        super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, txt, ico, checkable, checked, auto_actions)
 
         style = f"""
                 /* CHECKBOX */

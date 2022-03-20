@@ -17,10 +17,7 @@ class Style(MyQCheckBox):
             ico=v_wg.ICO,
             checkable=True,
             checked=False,
-            auto_repeat=False,
-            auto_exclusive=True,
-            auto_repeat_delay=v_wg.AUTO_REPEAT_DELAY,
-            auto_repeat_interval=v_wg.AUTO_REPEAT_INTERVAL,
+            auto_actions=v_wg.AUTO_ACTIONS_EXCLUSIVE,
             tristate=False,
             bg=v_wg.BG,
             bg_hover=v_wg.BG_HOVER,
@@ -77,7 +74,7 @@ class Style(MyQCheckBox):
             radius=v_wg.RADIUS
     ):
         # Style
-        super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, txt, ico, checkable, checked, auto_repeat, auto_exclusive, auto_repeat_delay, auto_repeat_interval, tristate)
+        super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, txt, ico, checkable, checked, auto_actions, tristate)
 
         style = f"""
                 /* CHECKBOX */
