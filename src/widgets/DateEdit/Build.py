@@ -21,14 +21,14 @@ class Build:
             font_size=vb_wg.FONT_SIZE,
 
             # Paramètres
-            align_horizontal=Align.CENTER_HORIZONTAL,
-            align_vertical=Align.CENTER_VERTICAL,
+            align_horizontal=PaAlign.CENTER_HORIZONTAL,
+            align_vertical=PaAlign.CENTER_VERTICAL,
             button_symbols=vb_wg.BUTTON_SYMBOLS,
             calendar_popup=True,
             focus_policy=vb_wg.FOCUS_POLICY,
 
             # Curseur
-            cursor=Cur.SOURIS_MAIN,
+            cursor=PaCur.SOURIS_MAIN,
 
             # Couleurs BG
             bg=vb_wg.BG,
@@ -88,27 +88,27 @@ class Build:
         """
         *Align: QtCore.Qt : Align().%nomAlign() \n
         *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
-        *ButtonSymbols: QtWidgets.QAbstractSpinBox : ButtonSymbols().%nomBoutons() \n
-        *Cur: list() : Cur().%nomCurseur() \n
-        *Dim: int() : Dim().%nomDim() \n
-        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
-        *Font: int() : Font().%nomFont() \n
-        *Img: str() : Img().%nomImage() \n
+        *PaButtonSymbols: QtWidgets.QAbstractSpinBox : PaButtonSymbols().%nomBoutons() \n
+        *PaCur: list() : PaCur().%nomCurseur() \n
+        *PaDim: int() : PaDim().%nomDim() \n
+        *PaFocusPolicy: QtCore.Qt : PaFocusPolicy().%nomFocus \n
+        *PaFont: int() : PaFont().%nomFont() \n
+        *PaImg: str() : PaImg().%nomImage() \n
         *Img_rgb: str() : th1 | th2 | th3 | bn1 | bn2 \n
         *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
-        :param width: *Dim
-        :param height: *Dim
+        :param width: *PaDim
+        :param height: *PaDim
         :param font: str()
-        :param font_size: *Font
+        :param font_size: *PaFont
         :param align_horizontal: *Align
         :param align_vertical: *Align
-        :param button_symbols: *ButtonSymbols
+        :param button_symbols: *PaButtonSymbols
         :param calendar_popup: bool()
-        :param focus_policy: *FocusPolicy
-        :param cursor: *Cur
+        :param focus_policy: *PaFocusPolicy
+        :param cursor: *PaCur
         :param bg: *RgbBox
         :param bg_hover: *RgbBox
         :param bg_selection: *RgbBox
@@ -125,16 +125,16 @@ class Build:
         :param fg_header: *RgbBox
         :param fg_header_hover: *RgbBox
         :param fg_mois: *RgbBox
-        :param img: *Img
-        :param img_hover: *Img
-        :param img_right: *Img
-        :param img_left: *Img
+        :param img: *PaImg
+        :param img_hover: *PaImg
+        :param img_right: *PaImg
+        :param img_left: *PaImg
         :param img_rgb: *Img_rgb
         :param img_hover_rgb: *Img_rgb
         :param img_right_rgb: *Img_rgb
         :param img_left_rgb: *Img_rgb
-        :param img_width: *Dim
-        :param img_height: *Dim
+        :param img_width: *PaDim
+        :param img_height: *PaDim
         :param img_margin: *Tuple
         :param border: *Tuple
         :param border_style: *Border_Style

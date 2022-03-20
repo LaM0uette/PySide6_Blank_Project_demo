@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QFrame
 
 
-class FrameShape:
+class PaFrameShape:
 
     NO = QFrame.NoFrame
     BOX = QFrame.Box

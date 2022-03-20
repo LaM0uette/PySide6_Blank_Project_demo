@@ -74,28 +74,28 @@ class Build:
     ):
         """
         *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
-        *Cur: list() : Cur().%nomCurseur() \n
-        *Dim: int() : Dim().%nomDim() \n
-        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
-        *Font: int() : Font().%nomFont() \n
-        *Img: str() : Img().%nomImage() \n
+        *PaCur: list() : PaCur().%nomCurseur() \n
+        *PaDim: int() : PaDim().%nomDim() \n
+        *PaFocusPolicy: QtCore.Qt : PaFocusPolicy().%nomFocus \n
+        *PaFont: int() : PaFont().%nomFont() \n
+        *PaImg: str() : PaImg().%nomImage() \n
         *Img_rgb: str() : th1 | th2 | th3 | bn1 | bn2 \n
-        *InsertPolicy: QtWidgets.QComboBox.%policy : InsertPolicy().%nomPolicy() \n
+        *PaInsertPolicy: QtWidgets.QComboBox.%policy : PaInsertPolicy().%nomPolicy() \n
         *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
-        :param width: *Dim
-        :param height: *Dim
+        :param width: *PaDim
+        :param height: *PaDim
         :param font: str()
-        :param font_size: *Font
+        :param font_size: *PaFont
         :param edit: bool()
-        :param focus_policy: *FocusPolicy
+        :param focus_policy: *PaFocusPolicy
         :param set_frame: bool()
         :param setMaxVisibleItems: int()
-        :param setInsertPolicy: *InsertPolicy
-        :param cursor: *Cur
-        :param cursor_view: *Cur
+        :param setInsertPolicy: *PaInsertPolicy
+        :param cursor: *PaCur
+        :param cursor_view: *PaCur
         :param bg: *RgbBox
         :param bg_hover: *RgbBox
         :param bg_selection: *RgbBox
@@ -106,12 +106,12 @@ class Build:
         :param fg_selection: *RgbBox
         :param fg_item: *RgbBox
         :param fg_item_hover: *RgbBox
-        :param img: *Img
-        :param img_hover: *Img
+        :param img: *PaImg
+        :param img_hover: *PaImg
         :param img_rgb: *Img_rgb
         :param img_hover_rgb: *Img_rgb
-        :param img_width: *Dim
-        :param img_height: *Dim
+        :param img_width: *PaDim
+        :param img_height: *PaDim
         :param border: *Tuplev
         :param border_style: *Border_Style
         :param border_rgb: *RgbBox
@@ -120,14 +120,14 @@ class Build:
         :param border_hover_rgb:
         :param radius: *Tuple
         :param scroll_bg: *RgbBox
-        :param scroll_width: *Dim
-        :param scroll_height: *Dim
+        :param scroll_width: *PaDim
+        :param scroll_height: *PaDim
         :param scroll_handle_bg: *RgbBox
         :param scroll_handle_bg_hover: *RgbBox
         :param scroll_handle_fg: *RgbBox
         :param scroll_handle_fg_hover: *RgbBox
-        :param scroll_handle_min_width: *Dim
-        :param scroll_handle_min_height: *Dim
+        :param scroll_handle_min_width: *PaDim
+        :param scroll_handle_min_height: *PaDim
         """
 
         style = f"""

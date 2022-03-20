@@ -68,7 +68,7 @@ class ResponseDlg(rep_ui.Ui_Rep, QtWidgets.QDialog):
 
         ### QLabel ###
         Label.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.ico_rgb)
-        Label.Base(self.lb_mt_nom, font_size=Font.H3).tr()
+        Label.Base(self.lb_mt_nom, font_size=PaFont.H3).tr()
         Label.Base(self.lb_rep_text).tr()
         ### /QLabel ###
 
@@ -83,7 +83,7 @@ class ResponseDlg(rep_ui.Ui_Rep, QtWidgets.QDialog):
         self.pb_mt_quitter.clicked.connect(lambda: self.close())
 
         # Frame menu_top
-        self.fr_menu_top.setFixedHeight(Dim.H9)
+        self.fr_menu_top.setFixedHeight(PaDim.H9)
 
         # Menu_top
         self.lb_mt_nom.setText(self.title)

@@ -1,7 +1,7 @@
 from PySide6 import QtWidgets
 
 
-class InsertPolicy:
+class PaInsertPolicy:
 
     NO = QtWidgets.QComboBox.NoInsert
     TOP = QtWidgets.QComboBox.InsertAtTop

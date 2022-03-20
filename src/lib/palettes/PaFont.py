@@ -9,7 +9,7 @@ class FontSize:
     H3 = 16
     H4 = 12
     H5 = 8
-class Font:
+class PaFont:
 
     @staticmethod
     def __gen_font(family=Config.font, size=FontSize.H4):

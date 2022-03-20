@@ -19,8 +19,8 @@ class Build:
             font_size=vb_wg.FONT_SIZE,
 
             # Paramètres
-            align_horizontal=Align.LEFT,
-            align_vertical=Align.CENTER_VERTICAL,
+            align_horizontal=PaAlign.LEFT,
+            align_vertical=PaAlign.CENTER_VERTICAL,
             focus_policy=vb_wg.FOCUS_POLICY,
             frame_shape=vb_wg.FRAME_SHAPE,
             frame_shadow=vb_wg.FRAME_SHADOW,
@@ -65,40 +65,40 @@ class Build:
         """
         *Align: QtCore.Qt : Align().%nomAlign() \n
         *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
-        *Cur: list() : Cur().%nomCurseur() \n
-        *Dim: int() : Dim().%nomDim() \n
-        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
-        *Font: int() : Font().%nomFont() \n
-        *Img: str() : Img().%nomImage() \n
+        *PaCur: list() : PaCur().%nomCurseur() \n
+        *PaDim: int() : PaDim().%nomDim() \n
+        *PaFocusPolicy: QtCore.Qt : PaFocusPolicy().%nomFocus \n
+        *PaFont: int() : PaFont().%nomFont() \n
+        *PaImg: str() : PaImg().%nomImage() \n
         *Img_rgb: str() : th1 | th2 | th3 | bn1 | bn2 \n
         *RgbBox: tuple() : RgbBox().%nomCouleur() \n
-        *FrameShape: QtWidgets.QFrame : FrameShape().%nomFrameForme \n
-        *FrameShadow: QtWidgets.QFrame : FrameShadow().%nomFrameOmbre \n
+        *PaFrameShape: QtWidgets.QFrame : PaFrameShape().%nomFrameForme \n
+        *PaFrameShadow: QtWidgets.QFrame : PaFrameShadow().%nomFrameOmbre \n
         *TextFormat: QtCore.Qt : TextFormat().%nomFormat() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
-        :param width: *Dim
-        :param height: *Dim
+        :param width: *PaDim
+        :param height: *PaDim
         :param font: str()
-        :param font_size: *Font
+        :param font_size: *PaFont
         :param align_horizontal: *Align
         :param align_vertical: *Align
-        :param focus_policy: *FocusPolicy
-        :param frame_shape: *FrameShape
-        :param frame_shadow: *FrameShadow
+        :param focus_policy: *PaFocusPolicy
+        :param frame_shape: *PaFrameShape
+        :param frame_shadow: *PaFrameShadow
         :param indent: int()
         :param line_width: int()
         :param open_external_link: bool()
         :param scaled_contents: bool()
         :param text_format: *TextFormat
         :param word_wrap: bool()
-        :param cursor: *Cur
+        :param cursor: *PaCur
         :param bg: *RgbBox
         :param bg_hover: *RgbBox
         :param fg: *RgbBox
         :param fg_hover: *RgbBox
-        :param img: *Img
+        :param img: *PaImg
         :param img_rgb: *Img_rgb
         :param margin: *Tuple
         :param padding: *Tuple

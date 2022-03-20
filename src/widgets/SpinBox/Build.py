@@ -18,8 +18,8 @@ class Build:
 
             # Paramètres
             accelerated=True,
-            align_horizontal=Align.CENTER_HORIZONTAL,
-            align_vertical=Align.CENTER_VERTICAL,
+            align_horizontal=PaAlign.CENTER_HORIZONTAL,
+            align_vertical=PaAlign.CENTER_VERTICAL,
             button_symbols=vb_wg.BUTTON_SYMBOLS,
             focus_policy=vb_wg.FOCUS_POLICY,
             frame=False,
@@ -74,50 +74,50 @@ class Build:
         """
         *Align: QtCore.Qt : Align().%nomAlign() \n
         *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
-        *ButtonSymbols: QtWidgets.QAbstractSpinBox : ButtonSymbols().%nomBouton() \n
-        *Cur: list() : Cur().%nomCurseur() \n
-        *Dim: int() : Dim().%nomDim() \n
-        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
-        *Font: int() : Font().%nomFont() \n
-        *Img: str() : Img().%nomImage() \n
+        *PaButtonSymbols: QtWidgets.QAbstractSpinBox : PaButtonSymbols().%nomBouton() \n
+        *PaCur: list() : PaCur().%nomCurseur() \n
+        *PaDim: int() : PaDim().%nomDim() \n
+        *PaFocusPolicy: QtCore.Qt : PaFocusPolicy().%nomFocus \n
+        *PaFont: int() : PaFont().%nomFont() \n
+        *PaImg: str() : PaImg().%nomImage() \n
         *Img_rgb: str() : th1 | th2 | th3 | bn1 | bn2 \n
         *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
-        :param width: *Dim
-        :param height: *Dim
+        :param width: *PaDim
+        :param height: *PaDim
         :param font: str()
-        :param font_size: *Font
+        :param font_size: *PaFont
         :param accelerated: bool()
         :param align_horizontal: *Align
         :param align_vertical: *Align
-        :param button_symbols: *ButtonSymbols
-        :param focus_policy: *FocusPolicy
+        :param button_symbols: *PaButtonSymbols
+        :param focus_policy: *PaFocusPolicy
         :param frame: bool()
         :param value_min: int()
         :param value_max: int()
         :param value_step: int()
         :param prefix: str()
         :param suffix: str()
-        :param cursor: *Cur
-        :param cursor_le: *Cur
+        :param cursor: *PaCur
+        :param cursor_le: *PaCur
         :param bg: *RgbBox
         :param bg_selection: *RgbBox
         :param fg: *RgbBox
         :param fg_selection: *RgbBox
-        :param img_up: *Img
-        :param img_up_hover: *Img
-        :param img_down: *Img
-        :param img_down_hover: *Img
-        :param img_up_rgb: *Img
-        :param img_up_hover_rgb: *Img
-        :param img_down_rgb: *Img
-        :param img_down_hover_rgb: *Img
-        :param img_up_width: *Dim
-        :param img_up_height: *Dim
-        :param img_down_width: *Dim
-        :param img_down_height: *Dim
+        :param img_up: *PaImg
+        :param img_up_hover: *PaImg
+        :param img_down: *PaImg
+        :param img_down_hover: *PaImg
+        :param img_up_rgb: *PaImg
+        :param img_up_hover_rgb: *PaImg
+        :param img_down_rgb: *PaImg
+        :param img_down_hover_rgb: *PaImg
+        :param img_up_width: *PaDim
+        :param img_up_height: *PaDim
+        :param img_down_width: *PaDim
+        :param img_down_height: *PaDim
         :param img_up_pos: *Tuple
         :param img_down_pos: *Tuple
         :param border: *Tuple

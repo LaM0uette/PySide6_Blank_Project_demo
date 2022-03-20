@@ -4,7 +4,7 @@ import os
 from src.config.config import Config
 
 
-class Cur:
+class PaCur:
 
     @staticmethod
     def __cursor(img, xy):

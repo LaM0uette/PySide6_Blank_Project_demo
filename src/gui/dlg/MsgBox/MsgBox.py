@@ -23,5 +23,5 @@ class MsgBox:
 
     __WIDTH, __HEIGHT, __OPACITY = 650, 250, 1
 
-    INFO = partial(__rtn,title="INFO",msg="",ico=Img.INFO,ico_rgb="th3",txt_ok="Ok",width=__WIDTH,height=__HEIGHT,opacity=__OPACITY)
-    ALERTE = partial(__rtn,title="ALERTE",msg="",ico=Img.INFO,ico_rgb="th3",txt_ok="Ok",width=__WIDTH,height=__HEIGHT,opacity=__OPACITY,)
+    INFO = partial(__rtn, title="INFO", msg="", ico=PaImg.INFO, ico_rgb="th3", txt_ok="Ok", width=__WIDTH, height=__HEIGHT, opacity=__OPACITY)
+    ALERTE = partial(__rtn, title="ALERTE", msg="", ico=PaImg.INFO, ico_rgb="th3", txt_ok="Ok", width=__WIDTH, height=__HEIGHT, opacity=__OPACITY, )

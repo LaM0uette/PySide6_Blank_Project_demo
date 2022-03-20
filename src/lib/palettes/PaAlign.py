@@ -1,7 +1,7 @@
 from PySide6.QtCore import Qt
 
 
-class Align:
+class PaAlign:
 
     CENTER = Qt.AlignCenter
     CENTER_HORIZONTAL = Qt.AlignHCenter

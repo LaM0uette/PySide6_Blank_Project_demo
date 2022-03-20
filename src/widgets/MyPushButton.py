@@ -38,7 +38,7 @@ class MenuTop:
 
     def _rtn(
             self,
-            img=Img.MAIN,
+            img=PaImg.MAIN,
             img_rgb="th2",
     ):
         bg = Rgb.TR
@@ -46,8 +46,8 @@ class MenuTop:
         Style(
             self.widget,
             pb_type="zoom",
-            dim=DcDim.Base(fixed_width=Dim.H9 * 1.2),
-            cursor=Cur.SOURIS_MAIN,
+            dim=DcDim.Base(fixed_width=PaDim.H9 * 1.2),
+            cursor=PaCur.SOURIS_MAIN,
 
             bg=bg,
             bg_hover=bg,
@@ -61,21 +61,21 @@ class MenuTop:
 
     def option(self):
         self._rtn(
-            img=Img.OPTION
+            img=PaImg.OPTION
         )
     def reduire(self):
         self._rtn(
-            img=Img.REDUIRE,
+            img=PaImg.REDUIRE,
             img_rgb="bn1"
         )
     def agrandir(self):
         self._rtn(
-            img=Img.AGRANDIR,
+            img=PaImg.AGRANDIR,
             img_rgb="th3"
         )
     def quitter(self):
         self._rtn(
-            img=Img.QUITTER,
+            img=PaImg.QUITTER,
             img_rgb="bn2"
         )
 
@@ -161,7 +161,7 @@ class Dlg:
             ),
 
             dim=DcDim.Base(
-                fixed_width=Dim.H6,
+                fixed_width=PaDim.H6,
                 fixed_height=None,
             ),
 
@@ -233,11 +233,11 @@ class Plein:
     def _rtn(self,
              bg_gen=Rgb.TR,
              fg_gen=Rgb.TR,
-             height=Dim.H5,
+             height=PaDim.H5,
 
              border_gen=(0, )*4,
              border_gen_rgb=Rgb.TR,
-             cursor=Cur.MAIN
+             cursor=PaCur.MAIN
              ):
         Style(
             self.widget,

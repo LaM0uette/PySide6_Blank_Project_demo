@@ -112,37 +112,37 @@ applications facilement et rapidement en customisant les différents Widgets de 
 > Ensuite, il suffit d'écrire : nomPalette.VALEUR 
 >    
 > Voici un exemple pour chaque palette :
-> - ***Align :*** Align.TOP
-> - ***ArrowType :*** ArrowType.NO
-> - ***AutoFormating :*** AutoFormating.NONE
-> - ***ButtonSymbols :*** ButtonSymbols.NO
-> - ***Cur :*** Cur.CRAYON
-> - ***Dim :*** Dim.H4
-> - ***DragDropMode :*** DragDropMode.DRAG_AND_DROP
-> - ***DropAction :*** DropAction.MOVE
-> - ***EchoMode :*** EchoMode.NORMAL
-> - ***Flow :*** Flow.LEFT_TO_RIGHT
-> - ***FocusPolicy :*** FocusPolicy.NO
-> - ***Font :*** Font.TEXTE
-> - ***FrameShadow :*** FrameShadow.PLAIN
-> - ***FrameShape :*** FrameShape.NO
-> - ***Img :*** Img.ALERTE
-> - ***InputMask :*** InputMask.NO
-> - ***InsertPolicy :*** InsertPolicy.NO
-> - ***Keys :*** Keys.F1
-> - ***LayoutDirection :*** LayoutDirection.LEFT_TO_RIGHT
-> - ***PopupMode :*** PopupMode.DELAYED
-> - ***ProgressFormat :*** ProgressFormat.PERCENTAGE
-> - ***Rgb :*** Rgb.TH2
-> - ***Scroll :*** Scroll.ON
-> - ***SelectionBehavior :*** SelectionBehavior.ROW
-> - ***SelectionMode :*** SelectionMode.NO
-> - ***Shadow :*** Shadow.OMBRE_PORTEE(wg)
-> - ***SizePolicy :*** SizePolicy.FIXED
-> - ***StyleBase :*** StyleBase.BORDER
-> - ***TextFormat :*** TextFormat.PLAIN
-> - ***TickPosition :*** TickPosition.NO
-> - ***ToolButtonStyle :*** ToolButtonStyle.ICON_ONLY
+> - ***PaAlign :*** PaAlign.TOP
+> - ***PaArrowType :*** PaArrowType.NO
+> - ***PaAutoFormating :*** PaAutoFormating.NONE
+> - ***PaButtonSymbols :*** PaButtonSymbols.NO
+> - ***PaCur :*** PaCur.CRAYON
+> - ***PaDim :*** PaDim.H4
+> - ***PaDragDropMode :*** PaDragDropMode.DRAG_AND_DROP
+> - ***PaDropAction :*** PaDropAction.MOVE
+> - ***PaEchoMode :*** PaEchoMode.NORMAL
+> - ***PaFlow :*** PaFlow.LEFT_TO_RIGHT
+> - ***PaFocusPolicy :*** PaFocusPolicy.NO
+> - ***PaFont :*** PaFont.TEXTE
+> - ***PaFrameShadow :*** PaFrameShadow.PLAIN
+> - ***PaFrameShape :*** PaFrameShape.NO
+> - ***PaImg :*** PaImg.ALERTE
+> - ***PaInputMask :*** PaInputMask.NO
+> - ***PaInsertPolicy :*** PaInsertPolicy.NO
+> - ***PaKeys :*** PaKeys.F1
+> - ***PaLayoutDirection :*** PaLayoutDirection.LEFT_TO_RIGHT
+> - ***PaPopupMode :*** PaPopupMode.DELAYED
+> - ***PaProgressFormat :*** PaProgressFormat.PERCENTAGE
+> - ***PaRgb :*** PaRgb.TH2
+> - ***PaScroll :*** PaScroll.ON
+> - ***PaSelectionBehavior :*** PaSelectionBehavior.ROW
+> - ***PaSelectionMode :*** PaSelectionMode.NO
+> - ***PaShadow :*** PaShadow.OMBRE_PORTEE(wg)
+> - ***PaSizePolicy :*** PaSizePolicy.FIXED
+> - ***PaStyleBase :*** PaStyleBase.BORDER
+> - ***PaTextFormat :*** PaTextFormat.PLAIN
+> - ***PaTickPosition :*** PaTickPosition.NO
+> - ***PaToolButtonStyle :*** PaToolButtonStyle.ICON_ONLY
 > 
 > ### Widgets :
 > Chaque widget possède sa propre classe (src/widgets/"nomDuWidget"/"nomDuWidget")   

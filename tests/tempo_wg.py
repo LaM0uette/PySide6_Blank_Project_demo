@@ -59,7 +59,7 @@
 # ### QLabel ###
 # Label.Base(self.lb_mt_ico).ico_main()
 # Label.Demo(self.lb_lb_demo_th).th()
-# Label.Base(self.lb_mt_nom, font_size=Font().h3()).tr()
+# Label.Base(self.lb_mt_nom, font_size=PaFont().h3()).tr()
 # Label.Base(self.lb_mb_version).tr()
 # Label.Demo(self.lb_lb_demo_tr).tr()
 # Label.Demo(

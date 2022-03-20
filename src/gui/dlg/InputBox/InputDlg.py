@@ -68,7 +68,7 @@ class InputDlg(input_ui.Ui_Input, QtWidgets.QDialog):
 
         ### QLabel ###
         Label.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.ico_rgb)
-        Label.Base(self.lb_mt_nom, font_size=Font.H3).tr()
+        Label.Base(self.lb_mt_nom, font_size=PaFont.H3).tr()
         Label.Base(self.lb_input_text).tr()
         ### /QLabel ###
 
@@ -85,10 +85,10 @@ class InputDlg(input_ui.Ui_Input, QtWidgets.QDialog):
         ### /QText ###
     def IN_WG(self):
         # Base
-        self.setCursor(Functions().SET_CURSOR(cur=Cur.SOURIS))
+        self.setCursor(Functions().SET_CURSOR(cur=PaCur.SOURIS))
 
         # Frame menu_top
-        self.fr_menu_top.setFixedHeight(Dim.H9)
+        self.fr_menu_top.setFixedHeight(PaDim.H9)
 
         # Menu_top
         self.lb_mt_nom.setText(self.title)

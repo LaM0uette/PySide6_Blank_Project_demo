@@ -1,4 +1,4 @@
-class Dim:
+class PaDim:
 
     H0 = 800
     H1 = 600

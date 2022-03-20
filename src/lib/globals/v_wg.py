@@ -10,22 +10,22 @@ SIZE_POLICY = DcSizePolicy.Base
 WIDTH = None
 HEIGHT = None
 WG_WIDTH = None
-WG_HEIGHT = Dim.H9
+WG_HEIGHT = PaDim.H9
 DIM = DcDim.Base
-DIM_WG = DcDim.Base(fixed_height=Dim.H9)
+DIM_WG = DcDim.Base(fixed_height=PaDim.H9)
 
-# Font
-FONT = Font.BASE
+# PaFont
+FONT = PaFont.BASE
 
 # Cursor
-CUR = Cur.SOURIS
-CUR_ACTION = Cur.MAIN
+CUR = PaCur.SOURIS
+CUR_ACTION = PaCur.MAIN
 
-# FocusPolicy
-FOCUS_POLICY = FocusPolicy.NO
+# PaFocusPolicy
+FOCUS_POLICY = PaFocusPolicy.NO
 
-# LayoutDirection
-LAYOUT_DIRECTION = LayoutDirection.LEFT_TO_RIGHT
+# PaLayoutDirection
+LAYOUT_DIRECTION = PaLayoutDirection.LEFT_TO_RIGHT
 #####################
 ##    /QWidget     ##
 #####################
@@ -53,7 +53,7 @@ AUTO_REPEAT_INTERVAL = 100
 #############################
 POPUP_MODE = PopupMode.DELAYED
 TOOL_BUTTON_STYLE = ToolButtonStyle.ICON_ONLY
-ARROW_TYPE = ArrowType.NO
+ARROW_TYPE = PaArrowType.NO
 #############################
 ##    /QAbstractButton     ##
 #############################
@@ -119,19 +119,19 @@ GRIDLINE = Rgb.TH2
 
 
 ###  IMAGES  ###
-IMG_UNCHECK = Img.CHECK0
-IMG_UNCHECK_HOVER = Img.CHECK0
-IMG_CHECK = Img.CHECK2
-IMG_CHECK_HOVER = Img.CHECK2
-IMG_INDETERMINATE = Img.CHECK1
-IMG_INDETERMINATE_HOVER = Img.CHECK1
-IMG_UNROLL = Img.FLECHE_BOTTOM
-IMG_UNROLL_HOVER = Img.FLECHE_BOTTOM
+IMG_UNCHECK = PaImg.CHECK0
+IMG_UNCHECK_HOVER = PaImg.CHECK0
+IMG_CHECK = PaImg.CHECK2
+IMG_CHECK_HOVER = PaImg.CHECK2
+IMG_INDETERMINATE = PaImg.CHECK1
+IMG_INDETERMINATE_HOVER = PaImg.CHECK1
+IMG_UNROLL = PaImg.FLECHE_BOTTOM
+IMG_UNROLL_HOVER = PaImg.FLECHE_BOTTOM
     # Arrows
-IMG_UP = Img.PLUS
-IMG_DOWN = Img.MOINS
-IMG_RIGHT = Img.FLECHE_RIGHT
-IMG_LEFT = Img.FLECHE_LEFT
+IMG_UP = PaImg.PLUS
+IMG_DOWN = PaImg.MOINS
+IMG_RIGHT = PaImg.FLECHE_RIGHT
+IMG_LEFT = PaImg.FLECHE_LEFT
 ### /IMAGES  ###
 
 

@@ -19,7 +19,7 @@ class Base:
             *self.wgs,
 
             edit=True,
-            cursor=Cur.SOURIS_MAIN,
+            cursor=PaCur.SOURIS_MAIN,
 
             bg=Rgb.TR,
             bg_hover=Rgb.TR,

@@ -38,8 +38,8 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
 
         ### QLabel ###
         Label.Base(self.lb_ico).ico_splash()
-        Label.Base(self.lb_titre, font_size=Font.H3).tr()
-        Label.Base(self.lb_description, self.lb_chargement, font_size=Font.H5).tr()
+        Label.Base(self.lb_titre, font_size=PaFont.H3).tr()
+        Label.Base(self.lb_description, self.lb_chargement, font_size=PaFont.H5).tr()
         ### /QLabel ###
 
 
@@ -48,7 +48,7 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
         ### /QProgressBar ###
     def IN_WG(self):
         ### Base ###
-        self.setCursor(Functions().SET_CURSOR(cur=Cur.SOURIS))
+        self.setCursor(Functions().SET_CURSOR(cur=PaCur.SOURIS))
 
         ### Infos ###
         self.lb_titre.setText(Config.nom)

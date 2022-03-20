@@ -94,7 +94,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
 
         ### QLabel ###
         Label.Base(self.lb_mt_ico).ico_main()
-        Label.Base(self.lb_mt_nom, font_size=Font.H3).tr()
+        Label.Base(self.lb_mt_nom, font_size=PaFont.H3).tr()
         Label.Base(self.lb_opt_info_nom).titre()
         Label.Base(
             self.lb_opt_info_desc, self.lb_opt_info_auteur, self.lb_opt_info_version, self.lb_opt_cfg_opacity,
@@ -128,10 +128,10 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
         ### /QTreeWidget ###
     def IN_WG(self):
         # Base
-        self.setCursor(Functions().SET_CURSOR(cur=Cur.SOURIS))
+        self.setCursor(Functions().SET_CURSOR(cur=PaCur.SOURIS))
 
         # Frame menu_top
-        self.fr_menu_top.setFixedHeight(Dim.H9)
+        self.fr_menu_top.setFixedHeight(PaDim.H9)
 
         # Menu_top
         self.lb_mt_nom.setText(self.title)

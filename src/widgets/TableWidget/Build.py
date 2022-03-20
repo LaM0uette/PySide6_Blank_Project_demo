@@ -24,7 +24,7 @@ class Build:
             drag_enabled=False,
             drag_drop_mode=vb_wg.DRAG_DROP_MODE,
             drop_action=vb_wg.DROP_ACTION,
-            focus_policy=FocusPolicy.NO,
+            focus_policy=PaFocusPolicy.NO,
             frame_shape=vb_wg.FRAME_SHAPE,
             frame_shadow=vb_wg.FRAME_SHADOW,
             line_width=0,
@@ -36,7 +36,7 @@ class Build:
             selection_mode=vb_wg.SELECTION_MODE,
 
             # Curseur
-            cursor=Cur.CROIX,
+            cursor=PaCur.CROIX,
 
             # Couleurs BG
             bg=vb_wg.BG,
@@ -121,32 +121,32 @@ class Build:
     ):
         """
         *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
-        *Cur: list() : Cur().%nomCurseur() \n
-        *Dim: int() : Dim().%nomDim() \n
-        *DragDropMode: QtWidgets.QAbstractItemView : DragDropMode().%nomDragMode \n
-        *DropAction: QtCore.Qt : DropAction().%nomDropAction \n
-        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
-        *Font: int() : Font().%nomFont() \n
-        *FrameShape: QtWidgets.QFrame : FrameShape().%nomFrameForme \n
-        *FrameShadow: QtWidgets.QFrame : FrameShadow().%nomFrameOmbre \n
+        *PaCur: list() : PaCur().%nomCurseur() \n
+        *PaDim: int() : PaDim().%nomDim() \n
+        *PaDragDropMode: QtWidgets.QAbstractItemView : PaDragDropMode().%nomDragMode \n
+        *PaDropAction: QtCore.Qt : PaDropAction().%nomDropAction \n
+        *PaFocusPolicy: QtCore.Qt : PaFocusPolicy().%nomFocus \n
+        *PaFont: int() : PaFont().%nomFont() \n
+        *PaFrameShape: QtWidgets.QFrame : PaFrameShape().%nomFrameForme \n
+        *PaFrameShadow: QtWidgets.QFrame : PaFrameShadow().%nomFrameOmbre \n
         *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *SelectionBehavior: QtWidgets.QAbstractItemView : SelectionBehavior().%nomSelection \n
         *SelectionMode: QtWidgets.QAbstractItemView : SelectionMode().%nomSelection \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
-        :param width: *Dim
-        :param height: *Dim
+        :param width: *PaDim
+        :param height: *PaDim
         :param font: srt()
-        :param font_size: *Font
-        :param font_size_hd: *Font
+        :param font_size: *PaFont
+        :param font_size_hd: *PaFont
         :param alternative_row_colors: bool()
         :param drag_enabled: bool()
-        :param drag_drop_mode: *DragDropMode
-        :param drop_action: *DropAction
-        :param focus_policy: *FocusPolicy
-        :param frame_shape: *FrameShape
-        :param frame_shadow: *FrameShadow
+        :param drag_drop_mode: *PaDragDropMode
+        :param drop_action: *PaDropAction
+        :param focus_policy: *PaFocusPolicy
+        :param frame_shape: *PaFrameShape
+        :param frame_shadow: *PaFrameShadow
         :param line_width: int()
         :param scroll_h: bool()
         :param scroll_v: bool()
@@ -154,7 +154,7 @@ class Build:
         :param header_v: bool()
         :param selection_behavior: *SelectionBehavior
         :param selection_mode: *SelectionMode
-        :param cursor: *Cur
+        :param cursor: *PaCur
         :param bg: *RgbBox
         :param bg_item: *RgbBox
         :param bg_item_hover: *RgbBox
@@ -209,14 +209,14 @@ class Build:
         :param radius_item: *Tuple
         :param radius_hd: *Tuple
         :param scroll_bg: *RgbBox
-        :param scroll_width: *Dim
-        :param scroll_height: *Dim
+        :param scroll_width: *PaDim
+        :param scroll_height: *PaDim
         :param scroll_handle_bg: *RgbBox
         :param scroll_handle_bg_hover: *RgbBox
         :param scroll_handle_fg: *RgbBox
         :param scroll_handle_fg_hover: *RgbBox
-        :param scroll_handle_min_width: *Dim
-        :param scroll_handle_min_height: *Dim
+        :param scroll_handle_min_width: *PaDim
+        :param scroll_handle_min_height: *PaDim
         """
 
         style = f"""

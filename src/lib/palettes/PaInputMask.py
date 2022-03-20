@@ -1,4 +1,4 @@
-class InputMask:
+class PaInputMask:
 
     NO = ""
     LETTER_REQUIRED = "A"

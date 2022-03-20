@@ -1,7 +1,7 @@
 from PySide6.QtCore import Qt
 
 
-class FocusPolicy:
+class PaFocusPolicy:
 
     NO = Qt.NoFocus
     TAB = Qt.TabFocus

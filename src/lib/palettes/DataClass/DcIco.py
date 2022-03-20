@@ -1,9 +1,9 @@
 """
 dc_ico.%class(
-    ico: str = Img.% \n
+    ico: str = PaImg.% \n
     ico_rgb: str = "%" \n
-    ico_width: int = Dim.% \n
-    ico_height: int = Dim.%
+    ico_width: int = PaDim.% \n
+    ico_height: int = PaDim.%
 """
 
 from dataclasses import dataclass

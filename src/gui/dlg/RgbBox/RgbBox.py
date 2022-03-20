@@ -25,4 +25,4 @@ class RgbBox:
 
     __WIDTH, __HEIGHT, __OPACITY = 650, 250, 1
 
-    GET = partial(__rtn, title="RGB", rgb=None, ico=Img.INFO, ico_rgb="th3", txt_ok="Ok", txt_cancel="Annuler", width=__WIDTH, height=__HEIGHT, opacity=__OPACITY)
+    GET = partial(__rtn, title="RGB", rgb=None, ico=PaImg.INFO, ico_rgb="th3", txt_ok="Ok", txt_cancel="Annuler", width=__WIDTH, height=__HEIGHT, opacity=__OPACITY)

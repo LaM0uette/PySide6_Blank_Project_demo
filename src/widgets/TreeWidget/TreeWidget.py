@@ -52,7 +52,7 @@ class Base:
         Build(
             *self.wgs,
 
-            width=Dim.H5,
+            width=PaDim.H5,
 
             scroll_h=Scroll.OFF,
             scroll_v=Scroll.OFF,

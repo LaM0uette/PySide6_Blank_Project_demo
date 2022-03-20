@@ -1,7 +1,7 @@
 from PySide6.QtCore import Qt
 
 
-class ArrowType:
+class PaArrowType:
 
     NO = Qt.NoArrow
     UP = Qt.UpArrow

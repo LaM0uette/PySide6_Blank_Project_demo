@@ -47,20 +47,20 @@ class Build:
     ):
         """
         *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
-        *Dim: int() : Dim().%nomDim() \n
-        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
-        *Img: str() : Img().%nomImage() \n
+        *PaDim: int() : PaDim().%nomDim() \n
+        *PaFocusPolicy: QtCore.Qt : PaFocusPolicy().%nomFocus \n
+        *PaImg: str() : PaImg().%nomImage() \n
         *RgbBox: tuple() : RgbBox().%nomCouleur() \n
-        *FrameShape: QtWidgets.QFrame : FrameShape().%nomFrameForme \n
-        *FrameShadow: QtWidgets.QFrame : FrameShadow().%nomFrameOmbre \n
+        *PaFrameShape: QtWidgets.QFrame : PaFrameShape().%nomFrameForme \n
+        *PaFrameShadow: QtWidgets.QFrame : PaFrameShadow().%nomFrameOmbre \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
-        :param width: *Dim
-        :param height: *Dim
-        :param focus_policy: *FocusPolicy
-        :param frame_shape: *FrameShape
-        :param frame_shadow: *FrameShape
+        :param width: *PaDim
+        :param height: *PaDim
+        :param focus_policy: *PaFocusPolicy
+        :param frame_shape: *PaFrameShape
+        :param frame_shadow: *PaFrameShape
         :param line_width: int()
         :param scroll_h: bool()
         :param scroll_v: bool()
@@ -73,14 +73,14 @@ class Build:
         :param border_hover_rgb: *RgbBox
         :param radius: *Tuple
         :param scroll_bg: *RgbBox
-        :param scroll_width: *Dim
-        :param scroll_height: *Dim
+        :param scroll_width: *PaDim
+        :param scroll_height: *PaDim
         :param scroll_handle_bg: *RgbBox
         :param scroll_handle_bg_hover: *RgbBox
         :param scroll_handle_fg: *RgbBox
         :param scroll_handle_fg_hover: *RgbBox
-        :param scroll_handle_min_width: *Dim
-        :param scroll_handle_min_height: *Dim
+        :param scroll_handle_min_width: *PaDim
+        :param scroll_handle_min_height: *PaDim
         """
 
         style = f"""

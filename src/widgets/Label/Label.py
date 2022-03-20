@@ -15,15 +15,15 @@ class Base:
         Build(
             *self.wgs,
 
-            width=Dim.H9,
-            height=Dim.H9,
+            width=PaDim.H9,
+            height=PaDim.H9,
 
-            focus_policy=FocusPolicy.NO,
+            focus_policy=PaFocusPolicy.NO,
 
             bg=Rgb.TR,
             bg_hover=Rgb.TR,
 
-            img=Img.MAIN,
+            img=PaImg.MAIN,
             img_rgb="th3",
 
             scaled_contents=True,
@@ -32,27 +32,27 @@ class Base:
         Build(
             *self.wgs,
 
-            width=Dim.H5,
-            height=Dim.H5,
+            width=PaDim.H5,
+            height=PaDim.H5,
 
-            focus_policy=FocusPolicy.NO,
+            focus_policy=PaFocusPolicy.NO,
 
             bg=Rgb.TR,
             bg_hover=Rgb.TR,
 
-            img=Img.MAIN,
+            img=PaImg.MAIN,
             img_rgb="th3",
 
             scaled_contents=True,
         )
-    def ico_custom(self, img=Img.MAIN, img_rgb="th3"):
+    def ico_custom(self, img=PaImg.MAIN, img_rgb="th3"):
         Build(
             *self.wgs,
 
-            width=Dim.H9,
-            height=Dim.H9,
+            width=PaDim.H9,
+            height=PaDim.H9,
 
-            focus_policy=FocusPolicy.NO,
+            focus_policy=PaFocusPolicy.NO,
 
             bg=Rgb.TR,
             bg_hover=Rgb.TR,
@@ -66,7 +66,7 @@ class Base:
         Build(
             *self.wgs,
 
-            focus_policy=FocusPolicy.NO,
+            focus_policy=PaFocusPolicy.NO,
 
             font_size=self.font_size,
         )
@@ -74,7 +74,7 @@ class Base:
         Build(
             *self.wgs,
 
-            focus_policy=FocusPolicy.NO,
+            focus_policy=PaFocusPolicy.NO,
 
             font_size=self.font_size,
 
@@ -87,11 +87,11 @@ class Base:
         Build(
             *self.wgs,
 
-            focus_policy=FocusPolicy.NO,
+            focus_policy=PaFocusPolicy.NO,
 
             font_size=self.font_size,
 
-            align_horizontal=Align.CENTER_HORIZONTAL,
+            align_horizontal=PaAlign.CENTER_HORIZONTAL,
 
             bg=Rgb.TR,
             bg_hover=Rgb.TR,
@@ -112,7 +112,7 @@ class Demo:
         Build(
             *self.wgs,
 
-            height=Dim.H9,
+            height=PaDim.H9,
             indent=5,
 
             font_size=self.font_size,
@@ -121,7 +121,7 @@ class Demo:
         Build(
             *self.wgs,
 
-            height=Dim.H9,
+            height=PaDim.H9,
             indent=5,
 
             font_size=self.font_size,
@@ -133,9 +133,9 @@ class Demo:
     def wg_categorie(self):
         Build(
             *self.wgs,
-            font_size=Font.H2,
+            font_size=PaFont.H2,
 
-            align_horizontal=Align.CENTER_HORIZONTAL,
+            align_horizontal=PaAlign.CENTER_HORIZONTAL,
 
             bg=Rgb.TR,
             bg_hover=Rgb.TR,

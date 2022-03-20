@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QLineEdit
 
 
-class EchoMode:
+class PaEchoMode:
 
     NORMAL = QLineEdit.Normal
     NO = QLineEdit.NoEcho

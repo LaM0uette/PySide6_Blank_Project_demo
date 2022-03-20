@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QAbstractItemView
 
 
-class DragDropMode:
+class PaDragDropMode:
 
     NO = QAbstractItemView.NoDragDrop
     DRAG_ONLY = QAbstractItemView.DragOnly

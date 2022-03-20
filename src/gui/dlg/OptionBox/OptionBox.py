@@ -24,4 +24,4 @@ class OptionBox:
 
     __WIDTH, __HEIGHT, __OPACITY = 850, 600, 1
 
-    MAIN = partial(__rtn, title="OPTION", msg="", ico=Img.INFO, ico_rgb="th3", txt_apply="Appliquer", txt_ok="Ok", width=__WIDTH, height=__HEIGHT, opacity=__OPACITY)
+    MAIN = partial(__rtn, title="OPTION", msg="", ico=PaImg.INFO, ico_rgb="th3", txt_apply="Appliquer", txt_ok="Ok", width=__WIDTH, height=__HEIGHT, opacity=__OPACITY)

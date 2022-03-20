@@ -17,15 +17,15 @@ class Build:
             font_size=vb_wg.FONT_SIZE,
 
             # Paramètres
-            align_horizontal=Align.CENTER_HORIZONTAL,
-            align_vertical=Align.CENTER_VERTICAL,
+            align_horizontal=PaAlign.CENTER_HORIZONTAL,
+            align_vertical=PaAlign.CENTER_VERTICAL,
             progress_format=vb_wg.PROGRESS_FORMAT,
             text_visible=vb_wg.TEXT_VISIBLE,
             value_min=vb_wg.VALUE_MIN,
             value_max=vb_wg.VALUE_MAX,
 
             # Curseur
-            cursor=Cur.SOURIS,
+            cursor=PaCur.SOURIS,
 
             # Couleurs BG
             bg=vb_wg.BG,
@@ -53,26 +53,26 @@ class Build:
         """
         *Align: QtCore.Qt : Align().%nomAlign() \n
         *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
-        *Cur: list() : Cur().%nomCurseur() \n
-        *Dim: int() : Dim().%nomDim() \n
-        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
-        *Font: int() : Font().%nomFont() \n
+        *PaCur: list() : PaCur().%nomCurseur() \n
+        *PaDim: int() : PaDim().%nomDim() \n
+        *PaFocusPolicy: QtCore.Qt : PaFocusPolicy().%nomFocus \n
+        *PaFont: int() : PaFont().%nomFont() \n
         *ProgressFormat: str() : ProgressFormat().%nomProgress() \n
         *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
-        :param width: *Dim
-        :param height: *Dim
+        :param width: *PaDim
+        :param height: *PaDim
         :param font: str()
-        :param font_size: *Font
+        :param font_size: *PaFont
         :param align_horizontal: *Align
         :param align_vertical: *Align
         :param progress_format: *ProgressFormat
         :param text_visible: bool()
         :param value_min: int()
         :param value_max: int()
-        :param cursor: *Cur
+        :param cursor: *PaCur
         :param bg: *RgbBox
         :param bg_chunk: *RgbBox
         :param bg_chunk_hover: *RgbBox

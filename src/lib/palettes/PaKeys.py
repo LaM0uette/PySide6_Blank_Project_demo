@@ -1,7 +1,7 @@
 from PySide6.QtCore import Qt
 
 
-class Keys:
+class PaKeys:
 
     ALT = Qt.ALT
     ALT_GR = Qt.Key_AltGr

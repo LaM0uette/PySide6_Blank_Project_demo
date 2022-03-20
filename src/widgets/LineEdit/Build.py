@@ -19,13 +19,13 @@ class Build:
             font_size=vb_wg.FONT_SIZE,
 
             # Paramètres
-            align_horizontal=Align.LEFT,
-            align_vertical=Align.CENTER_VERTICAL,
+            align_horizontal=PaAlign.LEFT,
+            align_vertical=PaAlign.CENTER_VERTICAL,
             clear_button=False,
-            echo_mode=EchoMode.NORMAL,
+            echo_mode=PaEchoMode.NORMAL,
             focus_policy=vb_wg.FOCUS_POLICY,
             frame=False,
-            input_mask=InputMask.NO,
+            input_mask=PaInputMask.NO,
             max_length=vb_wg.MAX_LENGTH,
 
             # Couleurs BG
@@ -51,27 +51,27 @@ class Build:
         """
         *Align: QtCore.Qt : Align().%nomAlign() \n
         *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
-        *Cur: list() : Cur().%nomCurseur() \n
-        *Dim: int() : Dim().%nomDim() \n
-        *EchoMode: QtWidgets.QLineEdit : EchoMode().%nomEcho() \n
-        *FocusPolicy: QtCore.Qt : FocusPolicy().%nomFocus \n
-        *Font: int() : Font().%nomFont() \n
-        *InputMask: str() : InputMask().%nomInput() \n
+        *PaCur: list() : PaCur().%nomCurseur() \n
+        *PaDim: int() : PaDim().%nomDim() \n
+        *PaEchoMode: QtWidgets.QLineEdit : PaEchoMode().%nomEcho() \n
+        *PaFocusPolicy: QtCore.Qt : PaFocusPolicy().%nomFocus \n
+        *PaFont: int() : PaFont().%nomFont() \n
+        *PaInputMask: str() : PaInputMask().%nomInput() \n
         *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
-        :param width: *Dim
-        :param height: *Dim
+        :param width: *PaDim
+        :param height: *PaDim
         :param font: str()
-        :param font_size: *Font
+        :param font_size: *PaFont
         :param align_horizontal: *Align
         :param align_vertical: *Align
         :param clear_button: bool()
-        :param echo_mode: *EchoMode
-        :param focus_policy: *FocusPolicy
+        :param echo_mode: *PaEchoMode
+        :param focus_policy: *PaFocusPolicy
         :param frame: bool()
-        :param input_mask: *InputMask
+        :param input_mask: *PaInputMask
         :param max_length: int()
         :param bg: *RgbBox
         :param bg_selection: *RgbBox
@@ -139,7 +139,7 @@ class Build:
             wg.setPalette(palette_txt)
 
             # Curseur
-            wg.setCursor(Functions().SET_CURSOR(Cur.IBEAM))
+            wg.setCursor(Functions().SET_CURSOR(PaCur.IBEAM))
 
             # Style
             wg.setStyleSheet(style)

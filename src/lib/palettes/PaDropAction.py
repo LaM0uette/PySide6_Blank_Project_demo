@@ -1,7 +1,7 @@
 from PySide6.QtCore import Qt
 
 
-class DropAction:
+class PaDropAction:
 
     COPY = Qt.CopyAction
     MOVE = Qt.MoveAction

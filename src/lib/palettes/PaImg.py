@@ -1,4 +1,4 @@
-class Img:
+class PaImg:
 
     @staticmethod
     def __svg(val, img):

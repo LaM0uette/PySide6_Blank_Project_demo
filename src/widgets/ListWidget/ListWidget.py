@@ -47,7 +47,7 @@ class Demo:
         Build(
             *self.wgs,
 
-            height=Dim.H5,
+            height=PaDim.H5,
 
             fg_item_checked=Rgb.BN1,
             border=(StyleBase.BORDER,) * 4,
@@ -59,7 +59,7 @@ class Demo:
         Build(
             *self.wgs,
 
-            height=Dim.H5,
+            height=PaDim.H5,
 
             bg=Rgb.TR,
             bg_item=Rgb.TR,

@@ -25,7 +25,7 @@ class Base:
         Build(
             *self.wgs,
 
-            align_horizontal=Align.CENTER_HORIZONTAL,
+            align_horizontal=PaAlign.CENTER_HORIZONTAL,
 
             bg=Rgb.TR,
             bg_selection=Rgb.TH3,

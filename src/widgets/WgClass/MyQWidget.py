@@ -16,10 +16,10 @@ class MyQWidget:
         :param widget: Widget
         :param size_policy: dc_size_policy.%class(*arguments)
         :param dim: dc_dim.%class(*arguments)
-        :param font: Font.%
-        :param cursor: Cur.%
-        :param focus_policy: FocusPolicy.%
-        :param layout_direction: LayoutDirection.%
+        :param font: PaFont.%
+        :param cursor: PaCur.%
+        :param focus_policy: PaFocusPolicy.%
+        :param layout_direction: PaLayoutDirection.%
         """
 
         # SizePolicy
@@ -31,14 +31,14 @@ class MyQWidget:
         if dim.maximum_width: widget.setMaximumWidth(dim.maximum_width)
         if dim.maximum_height: widget.setMaximumHeight(dim.maximum_height)
 
-        # Font
+        # PaFont
         widget.setFont(font)
 
         # Curseur
         widget.setCursor(Functions().SET_CURSOR(cursor))
 
-        # FocusPolicy
+        # PaFocusPolicy
         widget.setFocusPolicy(focus_policy)
 
-        # LayoutDirection
+        # PaLayoutDirection
         widget.setLayoutDirection(layout_direction)

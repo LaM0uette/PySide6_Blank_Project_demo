@@ -26,7 +26,7 @@ class Base:
 ##     MENU     ##
 ##################
 class Menu:
-    def __init__(self, *wgs, bg=Rgb.TH2, height=Dim.H9):
+    def __init__(self, *wgs, bg=Rgb.TH2, height=PaDim.H9):
         self.wgs = wgs
         self.bg = bg
         self.height = height
@@ -44,7 +44,7 @@ class Menu:
         Build(
             *self.wgs,
 
-            height=Dim.H10,
+            height=PaDim.H10,
 
             bg=self.bg,
             radius=(0, 0, vb_app.RADIUS_SIZE, vb_wg.RADIUS_SIZE)

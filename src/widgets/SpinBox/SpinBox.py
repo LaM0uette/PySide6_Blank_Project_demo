@@ -18,7 +18,7 @@ class PlusMinus:
         Build(
             *self.wgs,
 
-            focus_policy=FocusPolicy.NO,
+            focus_policy=PaFocusPolicy.NO,
 
             bg=Rgb.TR,
             fg=Rgb.TH3,
@@ -30,22 +30,22 @@ class UpDown:
         Build(
             *self.wgs,
 
-            img_up=Img.FLECHE_TOP,
-            img_down=Img.FLECHE_BOTTOM,
-            img_up_hover=Img.FLECHE_TOP,
-            img_down_hover=Img.FLECHE_BOTTOM,
+            img_up=PaImg.FLECHE_TOP,
+            img_down=PaImg.FLECHE_BOTTOM,
+            img_up_hover=PaImg.FLECHE_TOP,
+            img_down_hover=PaImg.FLECHE_BOTTOM,
         )
     def tr(self):
         Build(
             *self.wgs,
-            focus_policy=FocusPolicy.NO,
+            focus_policy=PaFocusPolicy.NO,
             bg=Rgb.TR,
             fg=Rgb.TH3,
 
-            img_up=Img.FLECHE_TOP,
-            img_down=Img.FLECHE_BOTTOM,
-            img_up_hover=Img.FLECHE_TOP,
-            img_down_hover=Img.FLECHE_BOTTOM,
+            img_up=PaImg.FLECHE_TOP,
+            img_down=PaImg.FLECHE_BOTTOM,
+            img_up_hover=PaImg.FLECHE_TOP,
+            img_down_hover=PaImg.FLECHE_BOTTOM,
         )
 
 
@@ -60,7 +60,7 @@ class Dlg:
         Build(
             *self.wgs,
 
-            width=Dim.H7,
+            width=PaDim.H7,
 
             value_max=value_max,
         )

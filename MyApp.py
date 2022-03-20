@@ -18,7 +18,7 @@ class main(Ui_main, QtWidgets.QWidget):
             # size_grip
         self.size_grip = QtWidgets.QSizeGrip(self)
             # tray
-        self.tray = QtWidgets.QSystemTrayIcon(QtGui.QPixmap(f"{Img.MAIN}th3.svg"), self)
+        self.tray = QtWidgets.QSystemTrayIcon(QtGui.QPixmap(f"{PaImg.MAIN}th3.svg"), self)
         self.tray.activated.connect(self.trayActivate)
         self.timer_double_click = QtCore.QTimer(self)
         self.timer_double_click.setSingleShot(True)
@@ -57,7 +57,7 @@ class main(Ui_main, QtWidgets.QWidget):
     def IN_BASE(self):
         ### Fenetre principal ###
         self.setWindowTitle(Config.nom)
-        self.setWindowIcon(QtGui.QPixmap(f"{Img.MAIN}th3.svg"))
+        self.setWindowIcon(QtGui.QPixmap(f"{PaImg.MAIN}th3.svg"))
         self.setWindowOpacity(Config.opacity)
 
         self.setGraphicsEffect(Shadow.OMBRE_PORTEE(self))
@@ -109,7 +109,7 @@ class main(Ui_main, QtWidgets.QWidget):
         ### /QCommandLinkButton  ###
     def IN_WG(self):
         ### Base ###
-        self.setCursor(Functions().SET_CURSOR(Cur.SOURIS))
+        self.setCursor(Functions().SET_CURSOR(PaCur.SOURIS))
 
 
         ### Nom de l'app ###
@@ -117,7 +117,7 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### Widget blanc pour centrer le nom de l'app ###
-        dim = Dim.H9 * 1.4
+        dim = PaDim.H9 * 1.4
         Functions().SET_DIM(self.wg_mt_blank, width=dim*3, height=dim)
 
 
@@ -127,13 +127,13 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### size_grip ###
         if Config.resize:
-            self.size_grip.setCursor(Functions().SET_CURSOR(Cur.FLECHE_NWSE))
+            self.size_grip.setCursor(Functions().SET_CURSOR(PaCur.FLECHE_NWSE))
             self.size_grip.setStyleSheet(
                 f"""
                 QSizeGrip {{
-                image: url({Img.RESIZE}th3.svg);
-                width: {Dim.H10}px;
-                height: {Dim.H10}px;
+                image: url({PaImg.RESIZE}th3.svg);
+                width: {PaDim.H10}px;
+                height: {PaDim.H10}px;
                 }}
                 """
             )
@@ -178,14 +178,14 @@ class main(Ui_main, QtWidgets.QWidget):
         Functions.ADD_QACTION(
             self,
             tray=self.tray_menu,
-            ico=Img.QUITTER,
+            ico=PaImg.QUITTER,
             ico_rgb="bn2",
             txt="Quitter",
             shortcut_txt="Shift+Esc",
             status_tip="Quitter",
             fct=self.e_quitter_tray,
-            sht_1=Keys.SHIFT,
-            sht_2=Keys.ESCAPE
+            sht_1=PaKeys.SHIFT,
+            sht_2=PaKeys.ESCAPE
         )
 
         # self.tray_menu.addSeparator()

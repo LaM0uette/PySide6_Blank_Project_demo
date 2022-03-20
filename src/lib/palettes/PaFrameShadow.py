@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QFrame
 
 
-class FrameShadow:
+class PaFrameShadow:
 
     PLAIN = QFrame.Plain
     RAISED = QFrame.Raised

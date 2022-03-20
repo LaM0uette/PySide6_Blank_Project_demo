@@ -47,7 +47,7 @@ class ToolBoxUi(toolbox_ui.Ui_ToolBoxUi, QtWidgets.QDialog):
         ### /QPushButton ###
     def IN_WG(self):
         # Base
-        self.setCursor(Functions().SET_CURSOR(cur=Cur.SOURIS))
+        self.setCursor(Functions().SET_CURSOR(cur=PaCur.SOURIS))
     def IN_CONNECTIONS(self):
         # Menu_top
         self.pb_mt_quitter.clicked.connect(lambda: self.hide())

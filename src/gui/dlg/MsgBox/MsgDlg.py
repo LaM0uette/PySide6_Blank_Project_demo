@@ -65,7 +65,7 @@ class MsgDlg(msg_ui.Ui_Msg, QtWidgets.QDialog):
 
         ### QLabel ###
         Label.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.ico_rgb)
-        Label.Base(self.lb_mt_nom, font_size=Font.H3).tr()
+        Label.Base(self.lb_mt_nom, font_size=PaFont.H3).tr()
         Label.Base(self.lb_msg_text).tr()
         ### /QLabel ###
 
@@ -76,10 +76,10 @@ class MsgDlg(msg_ui.Ui_Msg, QtWidgets.QDialog):
         ### /QPushButton ###
     def IN_WG(self):
         # Base
-        self.setCursor(Functions().SET_CURSOR(cur=Cur.SOURIS))
+        self.setCursor(Functions().SET_CURSOR(cur=PaCur.SOURIS))
 
         # Frame menu_top
-        self.fr_menu_top.setFixedHeight(Dim.H9)
+        self.fr_menu_top.setFixedHeight(PaDim.H9)
 
         # Menu_top
         self.lb_mt_nom.setText(self.title)

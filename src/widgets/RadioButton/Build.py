@@ -38,10 +38,10 @@ class Build:
             spacing=10,
 
             # Images
-            img_uncheck=Img.CHECK0_ROND,
-            img_uncheck_hover=Img.CHECK0_ROND,
-            img_check=Img.CHECK2_ROND,
-            img_check_hover=Img.CHECK2_ROND,
+            img_uncheck=PaImg.CHECK0_ROND,
+            img_uncheck_hover=PaImg.CHECK0_ROND,
+            img_check=PaImg.CHECK2_ROND,
+            img_check_hover=PaImg.CHECK2_ROND,
             # Images RGB
             img_uncheck_rgb=vb_wg.IMG_UNCHECK_RGB,
             img_uncheck_hover_rgb=vb_wg.IMG_UNCHECK_HOVER_RGB,
@@ -75,21 +75,21 @@ class Build:
     ):
         """
         *Border_Style: str() : dashed | dot-dash | dot-dot-dash | dotted | double | groove | inset | outset | ridge | solid | none \n
-        *Cur: list() : Cur().%nomCurseur() \n
-        *Dim: int() : Dim().%nomDim() \n
-        *Font: int() : Font().%nomFont() \n
-        *Img: str() : Img().%nomImage() \n
+        *PaCur: list() : PaCur().%nomCurseur() \n
+        *PaDim: int() : PaDim().%nomDim() \n
+        *PaFont: int() : PaFont().%nomFont() \n
+        *PaImg: str() : PaImg().%nomImage() \n
         *Img_rgb: str() : th1 | th2 | th3 | bn1 | bn2 \n
         *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
         :param wgs: Widgets séparés par ","
-        :param width: *Dim
-        :param height: *Dim
+        :param width: *PaDim
+        :param height: *PaDim
         :param font: str()
-        :param font_size: *Font
+        :param font_size: *PaFont
         :param auto_exclusive: bool()
-        :param cursor: *Cur
+        :param cursor: *PaCur
         :param bg: *RgbBox
         :param bg_hover: *RgbBox
         :param bg_checked: *RgbBox
@@ -99,16 +99,16 @@ class Build:
         :param fg_checked: *RgbBox
         :param fg_checked_hover: *RgbBox
         :param spacing: int()
-        :param img_uncheck: *Img
-        :param img_uncheck_hover: *Img
-        :param img_check: *Img
-        :param img_check_hover: *Img
+        :param img_uncheck: *PaImg
+        :param img_uncheck_hover: *PaImg
+        :param img_check: *PaImg
+        :param img_check_hover: *PaImg
         :param img_uncheck_rgb: *Img_rgb
         :param img_uncheck_hover_rgb: *Img_rgb
         :param img_check_rgb: *Img_rgb
         :param img_check_hover_rgb: *Img_rgb
-        :param img_width: *Dim
-        :param img_height: *Dim
+        :param img_width: *PaDim
+        :param img_height: *PaDim
         :param img_margin: *Tuple
         :param border: *Tuple
         :param border_style: *Border_Style

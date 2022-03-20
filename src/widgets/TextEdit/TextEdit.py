@@ -34,13 +34,13 @@ class Demo:
         Build(
             *self.wgs,
 
-            height=Dim.H5
+            height=PaDim.H5
         )
     def tr(self):
         Build(
             *self.wgs,
 
-            height=Dim.H5,
+            height=PaDim.H5,
 
             bg=Rgb.TR,
             fg=Rgb.TH3
