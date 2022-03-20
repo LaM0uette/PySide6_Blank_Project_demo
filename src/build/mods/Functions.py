@@ -60,7 +60,7 @@ class Functions:
 
         liens_img = os.listdir("assets/img/")
         for lien_img in liens_img:
-            lien = f"src/assets/img/{lien_img}/"
+            lien = f"assets/img/{lien_img}/"
             lien_rgb = f"{lien}rgb"
 
             if not os.path.exists(lien_rgb):
