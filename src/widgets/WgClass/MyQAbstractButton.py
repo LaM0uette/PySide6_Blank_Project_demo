@@ -28,8 +28,8 @@ class MyQAbstractButton(MyQWidget):
         if txt: widget.setText(txt)
 
         # Ico
-        if ico:
-            widget.setIcon(Functions().SET_ICON(ico=ico, rgb=ico.ico_rgb))
+        if ico.ico:
+            widget.setIcon(Functions().SET_ICON(ico=ico.ico, rgb=ico.ico_rgb))
 
             if not ico.ico_width: ico.ico_width = widget.height()
             if not ico.ico_height: ico.ico_height = widget.height()
