@@ -11,11 +11,13 @@ class MyQPushButton(MyQAbstractButton):
             cursor,
             focus_policy,
             layout_direction,
+
             txt,
             ico,
             checkable,
             checked,
             auto_actions,
+
             auto_default,
             default,
             flat

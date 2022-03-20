@@ -11,17 +11,16 @@ class MyQCheckBox(MyQAbstractButton):
             cursor,
             focus_policy,
             layout_direction,
+
             txt,
             ico,
             checkable,
             checked,
-            auto_repeat,
-            auto_exclusive,
-            auto_repeat_delay,
-            auto_repeat_interval,
+            auto_actions,
+
             tristate,
     ):
-        super().__init__(widget,size_policy,dim,font,cursor,focus_policy,layout_direction,txt,ico,checkable,checked,auto_repeat,auto_exclusive,auto_repeat_delay,auto_repeat_interval)
+        super().__init__(widget,size_policy,dim,font,cursor,focus_policy,layout_direction,txt,ico,checkable,checked,auto_actions)
 
         # Default
         widget.setTristate(tristate)

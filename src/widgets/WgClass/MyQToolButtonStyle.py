@@ -17,10 +17,7 @@ class Style(MyQToolButton):
             ico=v_wg.ICO,
             checkable=False,
             checked=False,
-            auto_repeat=False,
-            auto_exclusive=False,
-            auto_repeat_delay=v_wg.AUTO_REPEAT_DELAY,
-            auto_repeat_interval=v_wg.AUTO_REPEAT_INTERVAL,
+            auto_actions=v_wg.AUTO_ACTIONS,
             popup_mode=v_wg.POPUP_MODE,
             tool_button_style=v_wg.TOOL_BUTTON_STYLE,
             auto_raise=False,
@@ -66,7 +63,7 @@ class Style(MyQToolButton):
             radius=v_wg.RADIUS
     ):
         # Style
-        super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, txt, ico, checkable, checked, auto_repeat, auto_exclusive, auto_repeat_delay, auto_repeat_interval, popup_mode, tool_button_style, auto_raise, arrow_type)
+        super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, txt, ico, checkable, checked, auto_actions, popup_mode, tool_button_style, auto_raise, arrow_type)
         style = f"""
                 /* BUTTON */
                 QToolButton {{

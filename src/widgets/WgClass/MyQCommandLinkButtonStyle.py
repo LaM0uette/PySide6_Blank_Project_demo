@@ -17,10 +17,7 @@ class Style(MyQCommandLinkButton):
             ico=v_wg.ICO,
             checkable=False,
             checked=False,
-            auto_repeat=False,
-            auto_exclusive=False,
-            auto_repeat_delay=v_wg.AUTO_REPEAT_DELAY,
-            auto_repeat_interval=v_wg.AUTO_REPEAT_INTERVAL,
+            auto_actions=v_wg.AUTO_ACTIONS,
             auto_default=False,
             default=False,
             flat=True,
@@ -64,7 +61,7 @@ class Style(MyQCommandLinkButton):
             radius=v_wg.RADIUS
     ):
         # Style
-        super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, txt, ico, checkable, checked, auto_repeat, auto_exclusive, auto_repeat_delay, auto_repeat_interval, auto_default, default, flat, description)
+        super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, txt, ico, checkable, checked, auto_actions, auto_default, default, flat, description)
 
         style = f"""
                 /* MyCommandLinkButton */
