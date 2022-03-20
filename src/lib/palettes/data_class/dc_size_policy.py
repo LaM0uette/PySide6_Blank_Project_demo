@@ -1,7 +1,7 @@
 """
 dc_size_policy.%class(
-    horizontal: SizePolicy.%VALUE \n
-    vertical: SizePolicy.%VALUE)
+    horizontal: SizePolicy.% \n
+    vertical: SizePolicy.%)
 """
 
 from dataclasses import dataclass

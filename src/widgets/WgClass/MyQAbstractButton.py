@@ -15,9 +15,6 @@ class MyQAbstractButton(MyQWidget):
 
             txt,
             ico,
-            ico_rgb,
-            ico_width,
-            ico_height,
             checkable,
             checked,
             auto_repeat,
@@ -32,11 +29,11 @@ class MyQAbstractButton(MyQWidget):
 
         # Ico
         if ico:
-            widget.setIcon(Functions().SET_ICON(ico=ico, rgb=ico_rgb))
+            widget.setIcon(Functions().SET_ICON(ico=ico, rgb=ico.ico_rgb))
 
-            if not ico_width: ico_width = widget.height()
-            if not ico_height: ico_height = widget.height()
-            widget.setIconSize(Functions().SET_ICON_DIM(width=ico_width, height=ico_height))
+            if not ico.ico_width: ico.ico_width = widget.height()
+            if not ico.ico_height: ico.ico_height = widget.height()
+            widget.setIconSize(Functions().SET_ICON_DIM(width=ico.ico_width, height=ico.ico_height))
 
         # Actions
         widget.setCheckable(checkable)

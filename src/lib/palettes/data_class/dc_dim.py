@@ -1,11 +1,11 @@
 """
 dc_dim.%class(
-    fixed_width: int = Dim.%val \n
-    fixed_height: int = Dim.%val \n
-    minimum_width: int = Dim.%val \n
-    minimum_height: int = Dim.%val \n
-    maximum_width: int = Dim.%val \n
-    maximum_height: int = Dim.%val
+    fixed_width: int = Dim.% \n
+    fixed_height: int = Dim.% \n
+    minimum_width: int = Dim.% \n
+    minimum_height: int = Dim.% \n
+    maximum_width: int = Dim.% \n
+    maximum_height: int = Dim.%
 """
 
 from dataclasses import dataclass
