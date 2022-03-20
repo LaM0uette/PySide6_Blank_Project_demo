@@ -39,7 +39,7 @@ class Demo:
     def Base(self):
         Style(
             widget=self.widget,
-            auto_exclusive=False,
+            auto_actions=DcAutoActions.Base,
             tristate=True
         )
     def Transparent(self):
