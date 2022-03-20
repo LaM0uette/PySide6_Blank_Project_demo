@@ -19,8 +19,8 @@ from src.lib.palettes.PaInsertPolicy import PaInsertPolicy
 from src.lib.palettes.PaKeys import PaKeys
 from src.lib.palettes.PaLayoutDirection import PaLayoutDirection
 from src.lib.palettes.PaToolButtonStyle import PaToolButtonStyle
-from src.lib.palettes.PopupMode import PopupMode
-from src.lib.palettes.ProgressFormat import ProgressFormat
+from src.lib.palettes.PaPopupMode import PaPopupMode
+from src.lib.palettes.PaProgressFormat import PaProgressFormat
 from src.lib.palettes.PaRgb import PaRgb
 from src.lib.palettes.PaScroll import PaScroll
 from src.lib.palettes.PaSelectionBehavior import PaSelectionBehavior

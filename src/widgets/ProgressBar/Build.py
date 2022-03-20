@@ -57,7 +57,7 @@ class Build:
         *PaDim: int() : PaDim().%nomDim() \n
         *PaFocusPolicy: QtCore.Qt : PaFocusPolicy().%nomFocus \n
         *PaFont: int() : PaFont().%nomFont() \n
-        *ProgressFormat: str() : ProgressFormat().%nomProgress() \n
+        *PaProgressFormat: str() : PaProgressFormat().%nomProgress() \n
         *RgbBox: tuple() : RgbBox().%nomCouleur() \n
         *Tuple: tuple() : (int(), int(), int(), int()) == (Top, Bottom, Right, Left) | (TopRight, TopLeft, BottomRight, BottomLeft) \n
 
@@ -68,7 +68,7 @@ class Build:
         :param font_size: *PaFont
         :param align_horizontal: *Align
         :param align_vertical: *Align
-        :param progress_format: *ProgressFormat
+        :param progress_format: *PaProgressFormat
         :param text_visible: bool()
         :param value_min: int()
         :param value_max: int()

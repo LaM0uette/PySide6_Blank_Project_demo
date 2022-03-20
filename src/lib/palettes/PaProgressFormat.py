@@ -1,4 +1,4 @@
-class ProgressFormat:
+class PaProgressFormat:
 
     PERCENTAGE = "%p%"
     VALUE = "%v"

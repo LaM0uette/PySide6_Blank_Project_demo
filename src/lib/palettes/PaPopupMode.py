@@ -1,7 +1,7 @@
 from PySide6.QtWidgets import QToolButton
 
 
-class PopupMode:
+class PaPopupMode:
 
     DELAYED = QToolButton.DelayedPopup
     MENU_BUTTON = QToolButton.MenuButtonPopup
