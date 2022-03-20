@@ -1,5 +1,5 @@
 """
-dc_ico.%class(
+DcIco.%class(
     ico: str = PaImg.% \n
     ico_rgb: str = "%" \n
     ico_width: int = PaDim.% \n

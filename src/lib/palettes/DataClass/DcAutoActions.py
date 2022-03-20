@@ -1,11 +1,9 @@
 """
-dc_dim.%class(
-    fixed_width: int = PaDim.% \n
-    fixed_height: int = PaDim.% \n
-    minimum_width: int = PaDim.% \n
-    minimum_height: int = PaDim.% \n
-    maximum_width: int = PaDim.% \n
-    maximum_height: int = PaDim.%
+DcAutoActions.%class(
+    auto_repeat: bool = % \n
+    auto_exclusive: bool = % \n
+    auto_repeat_delay: int = % \n
+    auto_repeat_interval: int = %
 """
 
 from dataclasses import dataclass

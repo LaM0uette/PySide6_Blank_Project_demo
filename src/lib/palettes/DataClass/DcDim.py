@@ -1,5 +1,5 @@
 """
-dc_dim.%class(
+DcDim.%class(
     fixed_width: int = PaDim.% \n
     fixed_height: int = PaDim.% \n
     minimum_width: int = PaDim.% \n

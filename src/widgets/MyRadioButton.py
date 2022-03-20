@@ -53,5 +53,5 @@ class Demo:
             bg_checked_pressed=bg,
             fg=PaRgb.TH3,
             fg_checked=PaRgb.BN1,
-            auto_exclusive=False,
+            auto_actions=DcAutoActions.Base,
         )

@@ -1,5 +1,5 @@
 """
-dc_size_policy.%class(
+DcSizePolicy.%class(
     horizontal: PaSizePolicy.% \n
     vertical: PaSizePolicy.%)
 """
