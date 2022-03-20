@@ -1,5 +1,6 @@
 from .MyQCheckBox import MyQCheckBox
 from src.lib.globals import v_wg
+from src.lib.palettes import *
 
 
 class Style(MyQCheckBox):
@@ -13,10 +14,7 @@ class Style(MyQCheckBox):
             focus_policy=v_wg.FOCUS_POLICY,
             layout_direction=v_wg.LAYOUT_DIRECTION,
             txt=v_wg.TXT,
-            ico=None,
-            ico_rgb="",
-            ico_width=None,
-            ico_height=None,
+            ico=dc_ico.Base,
             checkable=True,
             checked=False,
             auto_repeat=False,
@@ -79,7 +77,7 @@ class Style(MyQCheckBox):
             radius=v_wg.RADIUS
     ):
         # Style
-        super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, txt, ico, ico_rgb, ico_width, ico_height, checkable, checked, auto_repeat, auto_exclusive, auto_repeat_delay, auto_repeat_interval, tristate)
+        super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, txt, ico, checkable, checked, auto_repeat, auto_exclusive, auto_repeat_delay, auto_repeat_interval, tristate)
 
         style = f"""
                 /* CHECKBOX */

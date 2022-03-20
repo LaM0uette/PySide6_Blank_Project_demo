@@ -1,6 +1,6 @@
 from .MyQAbstractButton import MyQAbstractButton
-from src.lib.palettes import *
 from src.lib.globals import v_wg
+from src.lib.palettes import *
 
 
 class Style(MyQAbstractButton):
@@ -14,10 +14,7 @@ class Style(MyQAbstractButton):
             focus_policy=v_wg.FOCUS_POLICY,
             layout_direction=v_wg.LAYOUT_DIRECTION,
             txt=v_wg.TXT,
-            ico=None,
-            ico_rgb="",
-            ico_width=None,
-            ico_height=None,
+            ico=dc_ico.Base,
             checkable=True,
             checked=False,
             auto_repeat=False,
@@ -63,7 +60,7 @@ class Style(MyQAbstractButton):
             radius=v_wg.RADIUS
     ):
         # Style
-        super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, txt, ico, ico_rgb, ico_width, ico_height, checkable, checked, auto_repeat, auto_exclusive, auto_repeat_delay, auto_repeat_interval)
+        super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, txt, ico, checkable, checked, auto_repeat, auto_exclusive, auto_repeat_delay, auto_repeat_interval)
 
         style = f"""
                 /* CHECKBOX */

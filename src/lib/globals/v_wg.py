@@ -11,7 +11,7 @@ WIDTH = None
 HEIGHT = None
 WG_WIDTH = None
 WG_HEIGHT = Dim.H9
-DIM = dc_dim.Base()
+DIM = dc_dim.Base
 DIM_WG = dc_dim.Base(fixed_height=Dim.H9)
 
 # Font

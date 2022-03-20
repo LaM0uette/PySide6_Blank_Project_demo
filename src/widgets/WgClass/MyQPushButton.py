@@ -13,9 +13,6 @@ class MyQPushButton(MyQAbstractButton):
             layout_direction,
             txt,
             ico,
-            ico_rgb,
-            ico_width,
-            ico_height,
             checkable,
             checked,
             auto_repeat,
@@ -26,7 +23,7 @@ class MyQPushButton(MyQAbstractButton):
             default,
             flat
     ):
-        super().__init__(widget,size_policy,dim,font,cursor,focus_policy,layout_direction,txt,ico,ico_rgb,ico_width,ico_height,checkable,checked,auto_repeat,auto_exclusive,auto_repeat_delay,auto_repeat_interval)
+        super().__init__(widget,size_policy,dim,font,cursor,focus_policy,layout_direction,txt,ico,checkable,checked,auto_repeat,auto_exclusive,auto_repeat_delay,auto_repeat_interval)
 
         # Default
         widget.setAutoDefault(auto_default)
