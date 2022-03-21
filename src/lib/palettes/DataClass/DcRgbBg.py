@@ -23,7 +23,7 @@ from src.lib.palettes import *
 
 @dataclass
 class Base:
-    gen = None
+    gen: tuple = None
 
     base: tuple = PaRgb.TH3
     alternative: tuple = PaRgb.TH2
