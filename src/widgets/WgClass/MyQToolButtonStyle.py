@@ -25,12 +25,7 @@ class Style(MyQToolButton):
             auto_raise=False,
             arrow_type=v_wg.ARROW_TYPE,
 
-            bg=v_wg.BG,
-            bg_hover=v_wg.BG_HOVER,
-            bg_checked=v_wg.BG_CHECKED,
-            bg_checked_hover=v_wg.BG_CHECKED_HOVER,
-            bg_pressed=v_wg.BG_PRESSED,
-            bg_checked_pressed=v_wg.BG_CHECKED_PRESSED,
+            background=v_wg.BACKGROUND,
             fg=v_wg.FG,
             fg_hover=v_wg.FG_HOVER,
             fg_checked=v_wg.FG_CHECKED,
@@ -70,32 +65,27 @@ class Style(MyQToolButton):
         style = f"""
                 /* BUTTON */
                 QToolButton {{
-                background-color: rgba{bg};
+                background-color: rgba{background.base};
                 color: rgba{fg};
                 }}
-
                 QToolButton:hover {{
-                background-color: rgba{bg_hover};
+                background-color: rgba{background.hover};
                 color: rgba{fg_hover};
                 }}
-
                 QToolButton:checked {{
-                background-color: rgba{bg_checked};
+                background-color: rgba{background.checked};
                 color: rgba{fg_checked};
                 }}
-
                 QToolButton:checked:hover {{
-                background-color: rgba{bg_checked_hover};
+                background-color: rgba{background.checked_hover};
                 color: rgba{fg_checked_hover};
                 }}
-
                 QToolButton:pressed {{
-                background-color: rgba{bg_pressed};
+                background-color: rgba{background.pressed};
                 color: rgba{fg_pressed};
                 }}
-
                 QToolButton:checked:pressed {{
-                background-color: rgba{bg_checked_pressed};
+                background-color: rgba{background.checked_pressed};
                 color: rgba{fg_checked_pressed};
                 }}
                 

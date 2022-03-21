@@ -20,12 +20,7 @@ class Style(MyQAbstractButton):
             checked=False,
             auto_actions=v_wg.AUTO_ACTIONS_EXCLUSIVE,
 
-            bg=v_wg.BG,
-            bg_hover=v_wg.BG_HOVER,
-            bg_checked=v_wg.BG_CHECKED,
-            bg_checked_hover=v_wg.BG_CHECKED_HOVER,
-            bg_pressed=v_wg.BG_PRESSED,
-            bg_checked_pressed=v_wg.BG_CHECKED_PRESSED,
+            background=v_wg.BACKGROUND,
             fg=v_wg.FG,
             fg_hover=v_wg.FG_HOVER,
             fg_checked=v_wg.FG_CHECKED,
@@ -64,28 +59,28 @@ class Style(MyQAbstractButton):
         style = f"""
                 /* CHECKBOX */
                 QRadioButton {{
-                background-color: rgba{bg};
+                background-color: rgba{background.base};
                 color: rgba{fg};
                 spacing: {spacing}px;
                 }}
                 QRadioButton:hover {{
-                background-color: rgba{bg_hover};
+                background-color: rgba{background.hover};
                 color: rgba{fg_hover};
                 }}
                 QRadioButton:pressed {{
-                background-color: rgba{bg_pressed};
+                background-color: rgba{background.pressed};
                 color: rgba{fg_pressed};
                 }}
-                QRadioButton:checked {{
-                background-color: rgba{bg_checked};
-                color: rgba{fg_checked};
-                }}
                 QRadioButton:checked:hover {{
-                background-color: rgba{bg_checked_hover};
+                background-color: rgba{background.checked_hover};
                 color: rgba{fg_checked_hover};
                 }}
+                QRadioButton:checked {{
+                background-color: rgba{background.checked};
+                color: rgba{fg_checked};
+                }}
                 QRadioButton:checked:pressed {{
-                background-color: rgba{bg_checked_pressed};
+                background-color: rgba{background.checked_pressed};
                 color: rgba{fg_checked_pressed};
                 }}
 

@@ -21,15 +21,7 @@ class Style(MyQCheckBox):
 
             tristate=False,
 
-            bg=v_wg.BG,
-            bg_hover=v_wg.BG_HOVER,
-            bg_checked=v_wg.BG_CHECKED,
-            bg_checked_hover=v_wg.BG_CHECKED_HOVER,
-            bg_pressed=v_wg.BG_PRESSED,
-            bg_checked_pressed=v_wg.BG_CHECKED_PRESSED,
-            bg_indeterminate_pressed=v_wg.BG_INDETERMINATE_PRESSED,
-            bg_indeterminate=v_wg.BG_INDETERMINATE,
-            bg_indeterminate_hover=v_wg.BG_INDETERMINATE_HOVER,
+            background=v_wg.BACKGROUND,
             fg=v_wg.FG,
             fg_hover=v_wg.FG_HOVER,
             fg_checked=v_wg.FG_CHECKED,
@@ -81,40 +73,40 @@ class Style(MyQCheckBox):
         style = f"""
                 /* CHECKBOX */
                 QCheckBox {{
-                background-color: rgba{bg};
+                background-color: rgba{background.base};
                 color: rgba{fg};
                 spacing: {spacing}px;
                 }}
                 QCheckBox:hover {{
-                background-color: rgba{bg_hover};
+                background-color: rgba{background.hover};
                 color: rgba{fg_hover};
                 }}
-                QCheckBox:pressed {{
-                background-color: rgba{bg_pressed};
-                color: rgba{fg_pressed};
-                }}
-                QCheckBox:checked {{
-                background-color: rgba{bg_checked};
-                color: rgba{fg_checked};
-                }}
-                QCheckBox:checked:hover {{
-                background-color: rgba{bg_checked_hover};
-                color: rgba{fg_checked_hover};
-                }}
-                QCheckBox:checked:pressed {{
-                background-color: rgba{bg_checked_pressed};
-                color: rgba{fg_checked_pressed};
-                }}
                 QCheckBox:indeterminate {{
-                background-color: rgba{bg_indeterminate};
+                background-color: rgba{background.indeterminate};
                 color: rgba{fg_indeterminate};
                 }}
                 QCheckBox:indeterminate:hover {{
-                background-color: rgba{bg_indeterminate_hover};
+                background-color: rgba{background.indeterminate_hover};
                 color: rgba{fg_indeterminate_hover};
                 }}
+                QCheckBox:checked {{
+                background-color: rgba{background.checked};
+                color: rgba{fg_checked};
+                }}
+                QCheckBox:checked:hover {{
+                background-color: rgba{background.checked_hover};
+                color: rgba{fg_checked_hover};
+                }}
+                QCheckBox:pressed {{
+                background-color: rgba{background.pressed};
+                color: rgba{fg_pressed};
+                }}
+                QCheckBox:checked:pressed {{
+                background-color: rgba{background.checked_pressed};
+                color: rgba{fg_checked_pressed};
+                }}
                 QCheckBox:indeterminate:pressed {{
-                background-color: rgba{bg_indeterminate_pressed};
+                background-color: rgba{background.indeterminate_pressed};
                 color: rgba{fg_indeterminate_pressed};
                 }}
 
