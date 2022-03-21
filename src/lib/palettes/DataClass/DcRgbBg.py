@@ -39,6 +39,7 @@ class Base:
 
     selection: tuple = PaRgb.TH1
 
+
     def __post_init__(self):
         if self.gen:
             self.base = self.gen
