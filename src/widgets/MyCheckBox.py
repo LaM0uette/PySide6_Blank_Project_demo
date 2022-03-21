@@ -18,9 +18,10 @@ class Base:
             widget=self.widget,
 
             background=DcRgbBg.Base(gen=PaRgb.TR),
-
-            fg=PaRgb.TH3,
-            fg_checked=PaRgb.BN1,
+            foreground=DcRgbFg.Base(
+                base=PaRgb.TH3,
+                checked=PaRgb.BN1,
+            ),
         )
 
 
@@ -42,7 +43,8 @@ class Demo:
             widget=self.widget,
 
             background=DcRgbBg.Base(gen=PaRgb.TR),
-
-            fg=PaRgb.TH3,
-            fg_checked=PaRgb.BN1,
+            foreground=DcRgbFg.Base(
+                base=PaRgb.TH3,
+                checked=PaRgb.BN1,
+            ),
         )
