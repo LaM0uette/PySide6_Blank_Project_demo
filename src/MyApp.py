@@ -84,7 +84,7 @@ class main(Ui_main, QtWidgets.QWidget):
         MyPushButton.Txt(self.pb_demo_txt_inv).inverse()
         ### /QPushButton  ###
 
-        return
+
         ###  QToolButton  ###
         MyToolButton.Base(self.tb_demo_th).Base()
         MyToolButton.Base(self.tb_demo_tr).Transparent()

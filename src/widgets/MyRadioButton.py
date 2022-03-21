@@ -14,16 +14,10 @@ class Base:
             widget=self.widget,
         )
     def Transparent(self):
-        bg = PaRgb.TR
-
         Style(
             widget=self.widget,
-            bg=bg,
-            bg_hover=bg,
-            bg_checked=bg,
-            bg_checked_hover=bg,
-            bg_pressed=bg,
-            bg_checked_pressed=bg,
+
+            background=DcRgbBg.Base(gen=PaRgb.TR),
             fg=PaRgb.TH3,
             fg_checked=PaRgb.BN1,
         )
@@ -41,16 +35,11 @@ class Demo:
             widget=self.widget,
         )
     def Transparent(self):
-        bg = PaRgb.TR
-
         Style(
             widget=self.widget,
-            bg=bg,
-            bg_hover=bg,
-            bg_checked=bg,
-            bg_checked_hover=bg,
-            bg_pressed=bg,
-            bg_checked_pressed=bg,
+
+            background=DcRgbBg.Base(gen=PaRgb.TR),
+
             fg=PaRgb.TH3,
             fg_checked=PaRgb.BN1,
             auto_actions=DcAutoActions.Base,
