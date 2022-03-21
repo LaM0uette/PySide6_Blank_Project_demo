@@ -63,6 +63,7 @@ ARROW_TYPE = PaArrowType.NO
 ##     STYLE     ##
 ###################
 BACKGROUND = DcRgbBg.Base
+FOREGROUND = DcRgbFg.Base
 
     # Background item
 BG_ITEM = PaRgb.TH3
@@ -83,16 +84,6 @@ BG_SEPARATOR = PaRgb.BN1
 
 
 ###  FOREGROUND  ###
-FG = PaRgb.TH1
-FG_HOVER = PaRgb.BN1
-FG_CHECKED = PaRgb.TH3
-FG_CHECKED_HOVER = PaRgb.BN1
-FG_INDETERMINATE = PaRgb.TH3
-FG_INDETERMINATE_HOVER = PaRgb.TH1
-FG_PRESSED = PaRgb.BN2
-FG_CHECKED_PRESSED = PaRgb.BN2
-FG_INDETERMINATE_PRESSED = PaRgb.BN2
-FG_SELECTION = PaRgb.TH3
 FG_PLACEHOLDER = PaRgb.TH2
     # foreground item
 FG_ITEM = PaRgb.TH1

@@ -26,12 +26,7 @@ class Style(MyQCommandLinkButton):
             description=None,
 
             background=v_wg.BACKGROUND,
-            fg=v_wg.FG,
-            fg_hover=v_wg.FG_HOVER,
-            fg_checked=v_wg.FG_CHECKED,
-            fg_checked_hover=v_wg.FG_CHECKED_HOVER,
-            fg_pressed=v_wg.FG_PRESSED,
-            fg_checked_pressed=v_wg.FG_CHECKED_PRESSED,
+            foreground=v_wg.FOREGROUND,
             spacing=10,
             img_uncheck=PaImg.CHECK0_ROND,
             img_uncheck_hover=PaImg.CHECK0_ROND,
@@ -65,28 +60,28 @@ class Style(MyQCommandLinkButton):
                 /* MyCommandLinkButton */
                 QCommandLinkButton {{
                 background-color: rgba{background.base};
-                color: rgba{fg};
+                color: rgba{foreground.base};
                 spacing: {spacing}px;
                 }}
                 QCommandLinkButton:hover {{
                 background-color: rgba{background.hover};
-                color: rgba{fg_hover};
+                color: rgba{foreground.hover};
                 }}
                 QCommandLinkButton:checked {{
                 background-color: rgba{background.checked};
-                color: rgba{fg_checked};
+                color: rgba{foreground.checked};
                 }}
                 QCommandLinkButton:checked:hover {{
                 background-color: rgba{background.checked_hover};
-                color: rgba{fg_checked_hover};
+                color: rgba{foreground.checked_hover};
                 }}
                 QCommandLinkButton:pressed {{
                 background-color: rgba{background.pressed};
-                color: rgba{fg_pressed};
+                color: rgba{foreground.pressed};
                 }}
                 QCommandLinkButton:checked:pressed {{
                 background-color: rgba{background.checked_pressed};
-                color: rgba{fg_checked_pressed};
+                color: rgba{foreground.checked_pressed};
                 }}
 
                 /* IMG */
