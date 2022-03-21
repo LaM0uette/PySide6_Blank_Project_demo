@@ -3,7 +3,7 @@ DcAutoActions.%class(
     auto_repeat: bool = % \n
     auto_exclusive: bool = % \n
     auto_repeat_delay: int = % \n
-    auto_repeat_interval: int = %
+    auto_repeat_interval: int = %)
 """
 from dataclasses import dataclass
 

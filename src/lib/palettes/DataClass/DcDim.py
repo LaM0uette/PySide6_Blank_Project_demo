@@ -5,7 +5,7 @@ DcDim.%class(
     minimum_width: int = PaDim.% \n
     minimum_height: int = PaDim.% \n
     maximum_width: int = PaDim.% \n
-    maximum_height: int = PaDim.%
+    maximum_height: int = PaDim.%)
 """
 
 from dataclasses import dataclass
