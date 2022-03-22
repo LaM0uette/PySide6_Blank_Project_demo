@@ -1,31 +1,40 @@
 from src.lib.palettes import *
 
+
 #####################
 ##     QWidget     ##
 #####################
-# PaSizePolicy
-SIZE_POLICY = DcSizePolicy.Base
 
-# Dimensions
+###  SIZE POLICY  ###
+SIZE_POLICY = DcSizePolicy.Base
+### /SIZE POLICY  ###
+
+###  DIMENSIONS  ###
 WIDTH = None
 HEIGHT = None
 WG_WIDTH = None
 WG_HEIGHT = PaDim.H9
 DIM = DcDim.Base
 DIM_WG = DcDim.Base(fixed_height=PaDim.H9)
+### /DIMENSIONS  ###
 
-# PaFont
+###  FONT  ###
 FONT = PaFont.BASE
+### /FONT  ###
 
-# Cursor
+###  CURSOR  ###
 CUR = PaCur.SOURIS
 CUR_ACTION = PaCur.MAIN
+### /CURSOR  ###
 
-# PaFocusPolicy
+###  FOCUS POLICY  ###
 FOCUS_POLICY = PaFocusPolicy.NO
+### /FOCUS POLICY  ###
 
-# PaLayoutDirection
+###  LAYOUT DIRECTION  ###
 LAYOUT_DIRECTION = PaLayoutDirection.LEFT_TO_RIGHT
+### /LAYOUT DIRECTION  ###
+
 #####################
 ##    /QWidget     ##
 #####################
@@ -34,15 +43,19 @@ LAYOUT_DIRECTION = PaLayoutDirection.LEFT_TO_RIGHT
 #############################
 ##     QAbstractButton     ##
 #############################
-# Txt
+###  TEXTE  ###
 TXT = None
+### /TEXTE  ###
 
-# ico
+###  ICO  ###
 ICO = DcIco.Base
+###  /ICO  ###
 
-# Actions
+###  ACTIONS  ###
 AUTO_ACTIONS = DcAutoActions.Base
 AUTO_ACTIONS_EXCLUSIVE = DcAutoActions.Base(auto_exclusive=True)
+### /ACTIONS  ###
+
 #############################
 ##    /QAbstractButton     ##
 #############################
@@ -51,9 +64,11 @@ AUTO_ACTIONS_EXCLUSIVE = DcAutoActions.Base(auto_exclusive=True)
 #############################
 ##     QToolButton     ##
 #############################
+
 POPUP_MODE = PaPopupMode.DELAYED
 TOOL_BUTTON_STYLE = PaToolButtonStyle.ICON_ONLY
 ARROW_TYPE = PaArrowType.NO
+
 #############################
 ##    /QAbstractButton     ##
 #############################
@@ -62,12 +77,13 @@ ARROW_TYPE = PaArrowType.NO
 ###################
 ##     STYLE     ##
 ###################
-### RGB
+
+###  RGB  ###
 BACKGROUND = DcRgbBg.Base
 FOREGROUND = DcRgbFg.Base
 BACKGROUND_ITEM = DcRgbBg.Base
 FOREGROUND_ITEM = DcRgbFg.Base
-
+### /RGB  ###
 
 ###  IMAGES  ###
 IMG_UNCHECK = PaImg.CHECK0
@@ -84,7 +100,6 @@ IMG_DOWN = PaImg.MOINS
 IMG_RIGHT = PaImg.FLECHE_RIGHT
 IMG_LEFT = PaImg.FLECHE_LEFT
 ### /IMAGES  ###
-
 
 ###  IMAGES RGB  ###
 IMG_UNCHECK_RGB = "th2"
@@ -106,19 +121,16 @@ IMG_LEFT_RGB = "th3"
 IMG_LEFT_HOVER_RGB = "bn1"
 ### /IMAGES RGB  ###
 
-
 ###  BORDER  ###
 BORDER_WIDTH = (0,)*4
 BORDER_STYLE = "solid"
 BORDER_RGB = PaRgb.TR
 ### /BORDER  ###
 
-
 ###  RADIUS  ###
 RADIUS_SIZE = 3
 RADIUS = (RADIUS_SIZE,) * 4
 ### /RADIUS  ###
-
 
 ###  SCROLL  ###
 SCROLL_BG = PaRgb.TH1
