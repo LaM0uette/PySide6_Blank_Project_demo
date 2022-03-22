@@ -1,5 +1,5 @@
 """
-DcRgbFg.%class(
+DcRgbSlider.%class(
     groove_gen: tuple = %
     handle_gen: tuple = %
 

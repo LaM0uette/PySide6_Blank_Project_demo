@@ -1,5 +1,5 @@
 """
-DcRgbFg.%class(
+DcRgbProgress.%class(
     gen = PaRgb.%
 
     base: tuple = PaRgb.%

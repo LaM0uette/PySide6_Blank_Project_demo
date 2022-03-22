@@ -62,19 +62,11 @@ ARROW_TYPE = PaArrowType.NO
 ###################
 ##     STYLE     ##
 ###################
+### RGB
 BACKGROUND = DcRgbBg.Base
 FOREGROUND = DcRgbFg.Base
 BACKGROUND_ITEM = DcRgbBg.Base
 FOREGROUND_ITEM = DcRgbFg.Base
-
-
-
-### /BACKGROUND  ###
-
-###  OTHER  ###
-BG_SEPARATOR = PaRgb.BN1
-GRIDLINE = PaRgb.TH2
-### /OTHER  ###
 
 
 ###  IMAGES  ###
