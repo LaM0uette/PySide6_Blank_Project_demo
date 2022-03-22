@@ -1,9 +1,10 @@
 """
 DcRgbFg.%class(
-    gen = PaRgb.% \n
-    base: tuple = PaRgb.% \n
-    hover: tuple = PaRgb.% \n
-    texte: tuple = PaRgb.% \n
+    gen = PaRgb.%
+
+    base: tuple = PaRgb.%
+    hover: tuple = PaRgb.%
+    texte: tuple = PaRgb.%
     texte_hover: tuple = PaRgb.%
 """
 from dataclasses import dataclass
