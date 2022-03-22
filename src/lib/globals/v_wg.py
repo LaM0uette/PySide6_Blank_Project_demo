@@ -64,13 +64,10 @@ ARROW_TYPE = PaArrowType.NO
 ###################
 BACKGROUND = DcRgbBg.Base
 FOREGROUND = DcRgbFg.Base
+BACKGROUND_ITEM = DcRgbBg.Base
+FOREGROUND_ITEM = DcRgbFg.Base
 
-    # Background item
-BG_ITEM = PaRgb.TH3
-BG_ITEM_HOVER = PaRgb.TH3
-BG_ITEM_CHECKED = PaRgb.TH1
-BG_ITEM_CHECKED_HOVER = PaRgb.TH1
-    # Background other
+# Background other
 BG_CHUNK = PaRgb.TH2
 BG_CHUNK_HOVER = PaRgb.BN1
 BG_GROOVE = PaRgb.TH3
@@ -81,15 +78,6 @@ BG_HANDLE_HOVER = PaRgb.TH2
 BG_HANDLE_PRESSED = PaRgb.BN1
 BG_SEPARATOR = PaRgb.BN1
 ### /BACKGROUND  ###
-
-
-###  FOREGROUND  ###
-FG_ITEM = PaRgb.TH1
-FG_ITEM_HOVER = PaRgb.BN1
-FG_ITEM_CHECKED = PaRgb.TH3
-FG_ITEM_CHECKED_HOVER = PaRgb.BN1
-### /FOREGROUND  ###
-
 
 ###  OTHER  ###
 GRIDLINE = PaRgb.TH2
