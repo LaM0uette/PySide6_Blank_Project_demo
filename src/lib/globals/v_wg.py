@@ -84,8 +84,6 @@ BG_SEPARATOR = PaRgb.BN1
 
 
 ###  FOREGROUND  ###
-FG_PLACEHOLDER = PaRgb.TH2
-    # foreground item
 FG_ITEM = PaRgb.TH1
 FG_ITEM_HOVER = PaRgb.BN1
 FG_ITEM_CHECKED = PaRgb.TH3

@@ -36,6 +36,7 @@ class Base:
     checked_pressed: tuple = PaRgb.BN2
 
     selection: tuple = PaRgb.TH3
+    placeholder: tuple = PaRgb.TH2
 
 
     def __post_init__(self):
