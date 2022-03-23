@@ -16,3 +16,4 @@ class Base:
     frame_shape: any = PaFrameShape.NO
     frame_shadow: any = PaFrameShadow.PLAIN
     line_width: int = 0
+    mid_line_width: int = 0
