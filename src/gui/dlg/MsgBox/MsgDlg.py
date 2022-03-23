@@ -57,7 +57,7 @@ class MsgDlg(msg_ui.Ui_Msg, QtWidgets.QDialog):
     def IN_CLASSE(self):
         ### QFrame ###
         MyFrame.Menu(self.fr_menu_top).top()
-        MyFrame.Cadre(self.fr_main).th2()
+        MyFrame.Cadre(self.fr_main).th2_fin()
         MyFrame.Dlg(self.fr_body).th(rgb=PaRgb.TH1)
         MyFrame.Menu(self.fr_msg_bottom).bottom_dlg()
         ### /QFrame ###

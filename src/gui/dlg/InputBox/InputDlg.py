@@ -60,7 +60,7 @@ class InputDlg(input_ui.Ui_Input, QtWidgets.QDialog):
     def IN_CLASSE(self):
         ### QFrame ###
         MyFrame.Menu(self.fr_menu_top).top()
-        MyFrame.Cadre(self.fr_main).th2()
+        MyFrame.Cadre(self.fr_main).th2_fin()
         MyFrame.Dlg(self.fr_body).th(rgb=PaRgb.TH1)
         MyFrame.Menu(self.fr_input_bottom).bottom_dlg()
         ### /QFrame ###
