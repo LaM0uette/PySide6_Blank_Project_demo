@@ -111,8 +111,8 @@ class Style(MyQPushButton):
 
         # Classes PB
         hgt = img.height or widget.height()
-        img_height = hgt * PaStyleBase.x_ico
-        IMG_HEIGHT = hgt * PaStyleBase.X_ICO
+        img_height = widget.height() * PaStyleBase.x_ico
+        IMG_HEIGHT = widget.height() * PaStyleBase.X_ICO
 
         cls = ClassePb(
             widget=widget,
@@ -136,7 +136,7 @@ class Style(MyQPushButton):
             if pb_type == "check":
                 widget.setIcon(Functions().SET_ICON(ico=img.uncheck, rgb=img.uncheck_rgb))
             else:
-                widget.setIcon(Functions().SET_ICON(ico=img, rgb=img.base_rgb))
+                widget.setIcon(Functions().SET_ICON(ico=img.base, rgb=img.base_rgb))
 
             widget.setIconSize(Functions().SET_ICON_DIM(width=img.height, height=img.height))
 
