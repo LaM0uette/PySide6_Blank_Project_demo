@@ -34,21 +34,21 @@ class Base:
     base: tuple = (0,)*4
     base_style: str = "solid"
     base_rgb: str = PaRgb.TR
-    hover: tuple = None
-    hover_style: str = None
-    hover_rgb: str = None
-    indeterminate: tuple = None
-    indeterminate_style: str = None
-    indeterminate_rgb: str = None
-    indeterminate_hover: tuple = None
-    indeterminate_hover_style: str = None
-    indeterminate_hover_rgb: str = None
-    checked: tuple = None
-    checked_style: str = None
-    checked_rgb: str = None
-    checked_hover: tuple = None
-    checked_hover_style: str = None
-    checked_hover_rgb: str = None
+    hover: tuple = base
+    hover_style: str = base_style
+    hover_rgb: str = base_rgb
+    indeterminate: tuple = base
+    indeterminate_style: str = base_style
+    indeterminate_rgb: str = base_rgb
+    indeterminate_hover: tuple = base
+    indeterminate_hover_style: str = base_style
+    indeterminate_hover_rgb: str = base_rgb
+    checked: tuple = base
+    checked_style: str = base_style
+    checked_rgb: str = base_rgb
+    checked_hover: tuple = base
+    checked_hover_style: str = base_style
+    checked_hover_rgb: str = base_rgb
 
     radius: tuple = (3,)*4
 
