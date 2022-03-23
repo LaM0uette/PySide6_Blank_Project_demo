@@ -1,9 +1,40 @@
 """
 DcImg.%class(
-    ico: str = PaImg.% \n
-    ico_rgb: str = "%" \n
-    ico_width: int = PaDim.% \n
-    ico_height: int = PaDim.%)
+    base: str = PaImg.%
+    uncheck: str = PaImg.%
+    uncheck_hover: str = PaImg.%
+    check: str = PaImg.%
+    check_hover: str = PaImg.%
+    indeterminate: str = PaImg.%
+    indeterminate_hover: str = PaImg.%
+    unroll: str = PaImg.%
+    unroll_hover: str = PaImg.%
+    up: str = PaImg.%
+    up_hover: str = PaImg.%
+    down: str = PaImg.%
+    down_hover: str = PaImg.%
+    right: str = PaImg.%
+    right_hover: str = PaImg.%
+    left: str = PaImg.%
+    left_hover: str = PaImg.%
+
+    base_rgb: str = "%"
+    uncheck_rgb: str = "%"
+    uncheck_hover_rgb: str = "%"
+    check_rgb: str = "%"
+    check_hover_rgb: str = "%"
+    indeterminate_rgb: str = "%"
+    indeterminate_hover_rgb: str = "%"
+    unroll_rgb: str = "%"
+    unroll_hover_rgb: str = "%"
+    up_rgb: str = "%"
+    up_hover_rgb: str = "%"
+    down_rgb: str = "%"
+    down_hover_rgb: str = "%"
+    right_rgb: str = "%"
+    right_hover_rgb: str = "%"
+    left_rgb: str = "%"
+    left_hover_rgb: str = "%")
 """
 
 from dataclasses import dataclass
