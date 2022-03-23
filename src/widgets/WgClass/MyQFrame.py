@@ -15,12 +15,11 @@ class MyQAbstractButton(MyQWidget):
             frame_shape,
             frame_shadow,
             line_width,
-
-            shadow,
     ):
         super().__init__(widget,size_policy,dim,font,cursor,focus_policy,layout_direction)
 
         widget.setFrameShape(frame_shape)
         widget.setFrameShadow(frame_shadow)
         widget.setLineWidth(line_width)
-        if shadow: widget.setGraphicsEffect(shadow)
+
+        # if shadow: widget.setGraphicsEffect(shadow)

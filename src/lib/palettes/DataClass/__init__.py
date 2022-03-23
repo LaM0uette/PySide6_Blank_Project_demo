@@ -1,6 +1,7 @@
 from . import DcAutoActions
 from . import DcBorder
 from . import DcDim
+from . import DcFrame
 from . import DcIco
 from . import DcImg
 from . import DcRgbBg
