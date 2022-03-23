@@ -25,12 +25,12 @@ class Base:
 ##     MENU     ##
 ##################
 class Menu:
-    def __init__(self, *wgs):
-        self.wgs = wgs
+    def __init__(self, widget):
+        self.widget = widget
 
     def top(self):
         Style(
-            *self.wgs,
+            self.widget,
 
             dim=DcDim.Base(fixed_height=PaDim.H9),
 
@@ -39,7 +39,7 @@ class Menu:
         )
     def bottom(self):
         Style(
-            *self.wgs,
+            self.widget,
 
             dim=DcDim.Base(fixed_height=PaDim.H10),
 
@@ -48,10 +48,36 @@ class Menu:
         )
     def bottom_dlg(self):
         Style(
-            *self.wgs,
+            self.widget,
 
             dim=DcDim.Base(fixed_height=PaDim.H9),
 
             background=DcRgbBg.Base(gen=PaRgb.TH2),
             border=DcBorder.Base(radius=(0, 0, 3, 3))
         )
+
+
+####################
+##     CADRES     ##
+####################
+class Cadre:
+    def __init__(self, widget):
+        self.widget = widget
+
+    def rtn(self, rgb):
+        Style(
+            self.widget,
+
+            background=DcRgbBg.Base(gen=PaRgb.TR),
+            border=DcBorder.Base(
+                gen=PaStyleBase.BORDER,
+                gen_rgb=rgb,
+                radius=(3, )*4
+            )
+        )
+
+    def th1(self): self.rtn(rgb=PaRgb.TH1)
+    def th2(self): self.rtn(rgb=PaRgb.TH2)
+    def th3(self): self.rtn(rgb=PaRgb.TH3)
+    def bn1(self): self.rtn(rgb=PaRgb.BN1)
+    def bn2(self): self.rtn(rgb=PaRgb.BN2)
