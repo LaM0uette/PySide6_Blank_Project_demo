@@ -44,6 +44,8 @@ from src.lib.palettes import PaImg
 
 @dataclass
 class Base:
+    width: int = None
+    height: int = None
 
     base: str = PaImg.MAIN
     uncheck: str = PaImg.CHECK0
