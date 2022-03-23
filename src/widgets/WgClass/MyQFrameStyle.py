@@ -10,7 +10,7 @@ class Style(MyQFrame):
             size_policy=v_wg.SIZE_POLICY,
             dim=v_wg.DIM,
             font=v_wg.FONT,
-            cursor=v_wg.CUR_ACTION,
+            cursor=v_wg.CUR,
             focus_policy=v_wg.FOCUS_POLICY,
             layout_direction=v_wg.LAYOUT_DIRECTION,
 
