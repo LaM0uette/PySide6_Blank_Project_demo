@@ -34,11 +34,8 @@ class Menu:
 
             dim=DcDim.Base(fixed_height=PaDim.H9),
 
-            border=DcBorder.Base(
-                gen=PaRgb.TH1,
-                gen_rgb=PaRgb.TH3,
-                radius=(3, 3, 0, 0)
-            )
+            background=DcRgbBg.Base(gen=PaRgb.TH1),
+            border=DcBorder.Base(radius=(3, 3, 0, 0))
         )
     def bottom(self):
         Style(
@@ -46,11 +43,8 @@ class Menu:
 
             dim=DcDim.Base(fixed_height=PaDim.H10),
 
-            border=DcBorder.Base(
-                gen=PaRgb.TH1,
-                gen_rgb=PaRgb.TH3,
-                radius=(0, 0, 3, 3)
-            )
+            background=DcRgbBg.Base(gen=PaRgb.TH2),
+            border=DcBorder.Base(radius=(0, 0, 3, 3))
         )
     def bottom_dlg(self):
         Style(
@@ -58,9 +52,6 @@ class Menu:
 
             dim=DcDim.Base(fixed_height=PaDim.H9),
 
-            border=DcBorder.Base(
-                gen=PaRgb.TH1,
-                gen_rgb=PaRgb.TH3,
-                radius=(0, 0, 3, 3)
-            )
+            background=DcRgbBg.Base(gen=PaRgb.TH2),
+            border=DcBorder.Base(radius=(0, 0, 3, 3))
         )
