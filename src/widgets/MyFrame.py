@@ -107,35 +107,41 @@ class Dlg:
 ####################
 ##     AUTRES     ##
 ####################
-class palette_rgb(Build):
-    def __init__(self, *wgs, rgb):
-        super().__init__(
-            *wgs,
-            bg=rgb,
-            radius=(40, )*4,
-    )
-class SplashScreen(Build):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            bg=PaRgb.TH1,
-            border=(PaStyleBase.BORDER,) * 4,
-            border_rgb=PaRgb.TH3,
-            border_hover=(PaStyleBase.BORDER,) * 4,
-            border_hover_rgb=PaRgb.TH3,
-            radius=(vb_wg.RADIUS_SIZE, )*4
-    )
-class ToolBox(Build):
-    def __init__(self, *wgs):
-        super().__init__(
-            *wgs,
-            bg=PaRgb.TH1,
-            border=(PaStyleBase.BORDER,) * 4,
-            border_rgb=PaRgb.TH3,
-            border_hover=(PaStyleBase.BORDER,) * 4,
-            border_hover_rgb=PaRgb.TH3,
-            radius=(vb_wg.RADIUS, )*4
-    )
+class palette_rgb:
+    def __init__(self, widget, rgb):
+        self.widget = widget
+
+        Style(
+            widget=self.widget,
+            background=DcRgbBg.Base(gen=rgb),
+            border=DcBorder.Base(radius=(40, )*4)
+        )
+class SplashScreen:
+    def __init__(self, widget, rgb):
+        self.widget = widget
+
+        Style(
+            widget=self.widget,
+            background=DcRgbBg.Base(gen=PaRgb.TH1),
+            border=DcBorder.Base(
+                gen=(PaStyleBase.BORDER,) * 4,
+                gen_rgb=PaRgb.TH3,
+                radius=(3, )*4
+            )
+        )
+class ToolBox:
+    def __init__(self, widget):
+        self.widget = widget
+
+        Style(
+            widget=self.widget,
+            background=DcRgbBg.Base(gen=PaRgb.TH1),
+            border=DcBorder.Base(
+                gen=(PaStyleBase.BORDER,) * 4,
+                gen_rgb=PaRgb.TH3,
+                radius=(3, )*4
+            )
+        )
 
 
 ##################
@@ -153,6 +159,6 @@ class Demo_hover:
                 gen=(PaStyleBase.BORDER,) * 4,
                 gen_rgb=PaRgb.BN1,
                 hover_style="dashed",
-                radius=(0, )*4
+                radius=(3, )*4
             ),
     )
