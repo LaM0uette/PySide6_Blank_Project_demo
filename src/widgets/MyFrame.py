@@ -76,8 +76,8 @@ class Cadre:
             )
         )
 
-    def th1(self): self.rtn(rgb=PaRgb.TH1)
-    def th2(self): self.rtn(rgb=PaRgb.TH2)
-    def th3(self): self.rtn(rgb=PaRgb.TH3)
-    def bn1(self): self.rtn(rgb=PaRgb.BN1)
-    def bn2(self): self.rtn(rgb=PaRgb.BN2)
+    def th1(self, bg): self.rtn(rgb=PaRgb.TH1, bg=bg)
+    def th2(self, bg): self.rtn(rgb=PaRgb.TH2, bg=bg)
+    def th3(self, bg): self.rtn(rgb=PaRgb.TH3, bg=bg)
+    def bn1(self, bg): self.rtn(rgb=PaRgb.BN1, bg=bg)
+    def bn2(self, bg): self.rtn(rgb=PaRgb.BN2, bg=bg)
