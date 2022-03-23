@@ -111,6 +111,8 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ###  QFrame  ###
         MyFrame.Base(self.fr_body).Transparent()
+        MyFrame.Menu(self.fr_menu_top).top()
+        MyFrame.Menu(self.fr_menu_bottom).bottom()
         for wg in [self.fr_demo_th, self.fr_tbx_demo_th_1, self.fr_tbx_demo_th_2]: MyFrame.Base(wg).Base()
         for wg in [self.fr_tbx_demo_tr_1, self.fr_tbx_demo_tr_2]: MyFrame.Base(wg).Transparent()
         ### /QFrame  ###
