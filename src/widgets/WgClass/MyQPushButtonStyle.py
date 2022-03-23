@@ -119,13 +119,13 @@ class Style(MyQPushButton):
             dim_ico=img_height,
             DIM_ICO=IMG_HEIGHT,
             img=img.base,
-            img_hover=img.hover,
+            img_hover=img.base_hover,
             img_uncheck=img.uncheck,
             img_uncheck_hover=img.uncheck_hover,
             img_check=img.check,
             img_check_hover=img.check_hover,
-            img_rgb=img.rgb,
-            img_hover_rgb=img.hover_rgb,
+            img_rgb=img.base_rgb,
+            img_hover_rgb=img.base_hover_rgb,
             img_uncheck_rgb=img.uncheck_rgb,
             img_uncheck_hover_rgb=img.uncheck_hover_rgb,
             img_check_rgb=img.check_rgb,
@@ -136,7 +136,7 @@ class Style(MyQPushButton):
             if pb_type == "check":
                 widget.setIcon(Functions().SET_ICON(ico=img.uncheck, rgb=img.uncheck_rgb))
             else:
-                widget.setIcon(Functions().SET_ICON(ico=img, rgb=img.rgb))
+                widget.setIcon(Functions().SET_ICON(ico=img, rgb=img.base_rgb))
 
             widget.setIconSize(Functions().SET_ICON_DIM(width=img.height, height=img.height))
 
