@@ -19,3 +19,48 @@ class Base:
             widget=self.widget,
             background=DcRgbBg.Base(gen=rgb)
         )
+
+
+##################
+##     MENU     ##
+##################
+class Menu:
+    def __init__(self, *wgs):
+        self.wgs = wgs
+
+    def top(self):
+        Style(
+            *self.wgs,
+
+            dim=DcDim.Base(fixed_height=PaDim.H9),
+
+            border=DcBorder.Base(
+                gen=PaRgb.TH1,
+                gen_rgb=PaRgb.TH3,
+                radius=(3, 3, 0, 0)
+            )
+        )
+    def bottom(self):
+        Style(
+            *self.wgs,
+
+            dim=DcDim.Base(fixed_height=PaDim.H10),
+
+            border=DcBorder.Base(
+                gen=PaRgb.TH1,
+                gen_rgb=PaRgb.TH3,
+                radius=(0, 0, 3, 3)
+            )
+        )
+    def bottom_dlg(self):
+        Style(
+            *self.wgs,
+
+            dim=DcDim.Base(fixed_height=PaDim.H9),
+
+            border=DcBorder.Base(
+                gen=PaRgb.TH1,
+                gen_rgb=PaRgb.TH3,
+                radius=(0, 0, 3, 3)
+            )
+        )
