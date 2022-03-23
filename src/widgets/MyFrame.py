@@ -81,3 +81,24 @@ class Cadre:
     def th3(self, bg=None): self.rtn(rgb=PaRgb.TH3, bg=bg)
     def bn1(self, bg=None): self.rtn(rgb=PaRgb.BN1, bg=bg)
     def bn2(self, bg=None): self.rtn(rgb=PaRgb.BN2, bg=bg)
+
+
+#################
+##     DLG     ##
+#################
+class Dlg:
+    def __init__(self, widget):
+        self.widget = widget
+
+    def th(self, rgb=PaRgb.TH3):
+        Style(
+            widget=self.widget,
+            background=DcRgbBg.Base(gen=rgb),
+            border=DcBorder.Base(radius=(0, )*4)
+        )
+    def tr(self, rgb=PaRgb.TH3):
+        Style(
+            widget=self.widget,
+            background=DcRgbBg.Base(gen=rgb),
+            border=DcBorder.Base(radius=(0, )*4)
+        )
