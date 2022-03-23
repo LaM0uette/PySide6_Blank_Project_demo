@@ -10,10 +10,6 @@ SIZE_POLICY = DcSizePolicy.Base
 ### /SIZE POLICY  ###
 
 ###  DIMENSIONS  ###
-WIDTH = None
-HEIGHT = None
-WG_WIDTH = None
-WG_HEIGHT = PaDim.H9
 DIM = DcDim.Base
 DIM_WG = DcDim.Base(fixed_height=PaDim.H9)
 ### /DIMENSIONS  ###
