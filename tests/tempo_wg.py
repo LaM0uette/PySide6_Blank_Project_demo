@@ -40,13 +40,6 @@
 #
 #
 # ### QFrame ###
-# Frame.Cadre(self.fr_main).th2()
-# Frame.Cadre(
-#     self.fr_cb, self.fr_de, self.fr_lw, self.fr_pb, self.fr_ck,
-#     self.fr_rb, self.fr_pg, self.fr_sb, self.fr_tw, self.fr_le,
-#     self.fr_te, self.fr_pte, self.fr_tb, self.fr_trw, self.fr_sd,
-#     self.fr_demo_cadre, self.fr_fr, self.fr_lb, border=(PaStyleBase().border(), )*4
-# ).bn1()
 # Frame.Demo_hover(self.fr_demo_cadre_hover)
 # ### /QFrame ###
 #

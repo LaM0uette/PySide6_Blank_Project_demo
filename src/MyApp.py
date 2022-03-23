@@ -113,6 +113,15 @@ class main(Ui_main, QtWidgets.QWidget):
         MyFrame.Base(self.fr_body).Transparent()
         MyFrame.Menu(self.fr_menu_top).top()
         MyFrame.Menu(self.fr_menu_bottom).bottom()
+        MyFrame.Cadre(self.fr_main).th2()
+
+        for wg in [
+            self.fr_cb, self.fr_de, self.fr_lw, self.fr_pb, self.fr_ck,
+            self.fr_rb, self.fr_pg, self.fr_sb, self.fr_tw, self.fr_le,
+            self.fr_te, self.fr_pte, self.fr_tb, self.fr_trw, self.fr_sd,
+            self.fr_demo_cadre, self.fr_fr, self.fr_lb
+        ]: MyFrame.Cadre(wg).bn1()
+
         for wg in [self.fr_demo_th, self.fr_tbx_demo_th_1, self.fr_tbx_demo_th_2]: MyFrame.Base(wg).Base()
         for wg in [self.fr_tbx_demo_tr_1, self.fr_tbx_demo_tr_2]: MyFrame.Base(wg).Transparent()
         ### /QFrame  ###
