@@ -39,7 +39,7 @@ class MenuTop:
         Style(
             self.widget,
             pb_type="zoom",
-            dim=DcDim.Base(fixed_width=PaDim.H9 * 1.2),
+            dim=DcDim.Base(fixed_width=PaDim.H9 * 1.2, fixed_height=PaDim.H9),
             cursor=PaCur.SOURIS_MAIN,
 
             background=DcRgbBg.Base(gen=PaRgb.TR),

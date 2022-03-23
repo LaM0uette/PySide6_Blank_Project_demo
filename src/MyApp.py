@@ -72,13 +72,13 @@ class main(Ui_main, QtWidgets.QWidget):
         self.vlay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
     def IN_CLASSE(self):
         ###  QPushButton  ###
-        MyPushButton.Base(self.pb_demo_th).Base()
-        MyPushButton.Base(self.pb_demo_tr).Transparent()
-
         MyPushButton.MenuTop(self.pb_mt_option).option()
         MyPushButton.MenuTop(self.pb_mt_reduire).reduire()
         MyPushButton.MenuTop(self.pb_mt_agrandir).agrandir()
         MyPushButton.MenuTop(self.pb_mt_quitter).quitter()
+
+        MyPushButton.Base(self.pb_demo_th).Base()
+        MyPushButton.Base(self.pb_demo_tr).Transparent()
 
         MyPushButton.Txt(self.pb_demo_txt).txt()
         MyPushButton.Txt(self.pb_demo_txt_inv).inverse()
