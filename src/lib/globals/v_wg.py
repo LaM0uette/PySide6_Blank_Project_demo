@@ -39,6 +39,7 @@ LAYOUT_DIRECTION = PaLayoutDirection.LEFT_TO_RIGHT
 #############################
 ##     QAbstractButton     ##
 #############################
+
 ###  TEXTE  ###
 TXT = None
 ### /TEXTE  ###
