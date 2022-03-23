@@ -1,0 +1,508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8074ac46-300e-499a-a766-712e4e2856d9" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame - ajout dataclass">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PySide6_Blank_Project.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/PySide6_Blank_Project_demo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace (Conflicted copy from EPL60011033 on 2022-03-10).xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="26WCtqIfSeks717ubc7ENh9Pb8h" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/widgets/WgClass" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\XD5965\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\widgets\WgClass" />
+      <recent name="C:\Users\XD5965\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\widgets" />
+      <recent name="C:\Users\XD5965\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\lib\palettes\DataClass" />
+      <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\lib\palettes\DataClass" />
+      <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_PYTHON\PySide6_Blank_Project_demo\src\lib\palettes\data_class" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src" />
+      <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_PYTHON\PySide6_Blank_Project_demo\src\lib\palettes" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="MyApp" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="PySide6_Blank_Project_demo" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/MyApp.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.MyApp" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8074ac46-300e-499a-a766-712e4e2856d9" name="Changes" comment="" />
+      <created>1647530173157</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647530173157</updated>
+      <workItem from="1647542302980" duration="2566000" />
+      <workItem from="1647601755998" duration="2519000" />
+      <workItem from="1647639391745" duration="6688000" />
+      <workItem from="1647682494796" duration="20983000" />
+      <workItem from="1647764402612" duration="4459000" />
+      <workItem from="1647804559964" duration="117000" />
+      <workItem from="1647804682372" duration="395000" />
+      <workItem from="1647805092178" duration="160000" />
+      <workItem from="1647805258270" duration="1062000" />
+      <workItem from="1647857526497" duration="71000" />
+      <workItem from="1647857615049" duration="192000" />
+      <workItem from="1647857834074" duration="10879000" />
+      <workItem from="1647895243247" duration="74000" />
+      <workItem from="1647936084614" duration="5977000" />
+      <workItem from="1647974025981" duration="625000" />
+      <workItem from="1648022109669" duration="15735000" />
+    </task>
+    <task id="LOCAL-00174" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1647939019041</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1647939019041</updated>
+    </task>
+    <task id="LOCAL-00175" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1647940524407</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1647940524408</updated>
+    </task>
+    <task id="LOCAL-00176" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1647964132709</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1647964132709</updated>
+    </task>
+    <task id="LOCAL-00177" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1647964328634</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1647964328634</updated>
+    </task>
+    <task id="LOCAL-00178" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1647964657921</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1647964657922</updated>
+    </task>
+    <task id="LOCAL-00179" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1647974053394</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1647974053394</updated>
+    </task>
+    <task id="LOCAL-00180" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648023238305</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1648023238306</updated>
+    </task>
+    <task id="LOCAL-00181" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648023400628</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1648023400628</updated>
+    </task>
+    <task id="LOCAL-00182" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648024094035</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1648024094035</updated>
+    </task>
+    <task id="LOCAL-00183" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648024149455</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1648024149455</updated>
+    </task>
+    <task id="LOCAL-00184" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648024196099</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1648024196099</updated>
+    </task>
+    <task id="LOCAL-00185" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648024471195</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1648024471195</updated>
+    </task>
+    <task id="LOCAL-00186" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648024536498</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1648024536498</updated>
+    </task>
+    <task id="LOCAL-00187" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648024832431</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1648024832431</updated>
+    </task>
+    <task id="LOCAL-00188" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648024930143</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1648024930143</updated>
+    </task>
+    <task id="LOCAL-00189" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648025327878</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1648025327878</updated>
+    </task>
+    <task id="LOCAL-00190" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648025527415</created>
+      <option name="number" value="00190" />
+      <option name="presentableId" value="LOCAL-00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1648025527416</updated>
+    </task>
+    <task id="LOCAL-00191" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648025546839</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1648025546839</updated>
+    </task>
+    <task id="LOCAL-00192" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648030012109</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1648030012109</updated>
+    </task>
+    <task id="LOCAL-00193" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648030739376</created>
+      <option name="number" value="00193" />
+      <option name="presentableId" value="LOCAL-00193" />
+      <option name="project" value="LOCAL" />
+      <updated>1648030739376</updated>
+    </task>
+    <task id="LOCAL-00194" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648031133805</created>
+      <option name="number" value="00194" />
+      <option name="presentableId" value="LOCAL-00194" />
+      <option name="project" value="LOCAL" />
+      <updated>1648031133805</updated>
+    </task>
+    <task id="LOCAL-00195" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648031519862</created>
+      <option name="number" value="00195" />
+      <option name="presentableId" value="LOCAL-00195" />
+      <option name="project" value="LOCAL" />
+      <updated>1648031519862</updated>
+    </task>
+    <task id="LOCAL-00196" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648031543625</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1648031543625</updated>
+    </task>
+    <task id="LOCAL-00197" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648032093132</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1648032093132</updated>
+    </task>
+    <task id="LOCAL-00198" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648032343410</created>
+      <option name="number" value="00198" />
+      <option name="presentableId" value="LOCAL-00198" />
+      <option name="project" value="LOCAL" />
+      <updated>1648032343410</updated>
+    </task>
+    <task id="LOCAL-00199" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648032446684</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1648032446684</updated>
+    </task>
+    <task id="LOCAL-00200" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648032892630</created>
+      <option name="number" value="00200" />
+      <option name="presentableId" value="LOCAL-00200" />
+      <option name="project" value="LOCAL" />
+      <updated>1648032892630</updated>
+    </task>
+    <task id="LOCAL-00201" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648033043464</created>
+      <option name="number" value="00201" />
+      <option name="presentableId" value="LOCAL-00201" />
+      <option name="project" value="LOCAL" />
+      <updated>1648033043464</updated>
+    </task>
+    <task id="LOCAL-00202" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648033145001</created>
+      <option name="number" value="00202" />
+      <option name="presentableId" value="LOCAL-00202" />
+      <option name="project" value="LOCAL" />
+      <updated>1648033145001</updated>
+    </task>
+    <task id="LOCAL-00203" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648033404067</created>
+      <option name="number" value="00203" />
+      <option name="presentableId" value="LOCAL-00203" />
+      <option name="project" value="LOCAL" />
+      <updated>1648033404067</updated>
+    </task>
+    <task id="LOCAL-00204" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648033522341</created>
+      <option name="number" value="00204" />
+      <option name="presentableId" value="LOCAL-00204" />
+      <option name="project" value="LOCAL" />
+      <updated>1648033522342</updated>
+    </task>
+    <task id="LOCAL-00205" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648038772882</created>
+      <option name="number" value="00205" />
+      <option name="presentableId" value="LOCAL-00205" />
+      <option name="project" value="LOCAL" />
+      <updated>1648038772882</updated>
+    </task>
+    <task id="LOCAL-00206" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648039495114</created>
+      <option name="number" value="00206" />
+      <option name="presentableId" value="LOCAL-00206" />
+      <option name="project" value="LOCAL" />
+      <updated>1648039495114</updated>
+    </task>
+    <task id="LOCAL-00207" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648040517740</created>
+      <option name="number" value="00207" />
+      <option name="presentableId" value="LOCAL-00207" />
+      <option name="project" value="LOCAL" />
+      <updated>1648040517740</updated>
+    </task>
+    <task id="LOCAL-00208" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648040603130</created>
+      <option name="number" value="00208" />
+      <option name="presentableId" value="LOCAL-00208" />
+      <option name="project" value="LOCAL" />
+      <updated>1648040603130</updated>
+    </task>
+    <task id="LOCAL-00209" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass">
+      <created>1648041051881</created>
+      <option name="number" value="00209" />
+      <option name="presentableId" value="LOCAL-00209" />
+      <option name="project" value="LOCAL" />
+      <updated>1648041051881</updated>
+    </task>
+    <task id="LOCAL-00210" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame - ajout dataclass">
+      <created>1648041136576</created>
+      <option name="number" value="00210" />
+      <option name="presentableId" value="LOCAL-00210" />
+      <option name="project" value="LOCAL" />
+      <updated>1648041136576</updated>
+    </task>
+    <task id="LOCAL-00211" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame - ajout dataclass">
+      <created>1648041248172</created>
+      <option name="number" value="00211" />
+      <option name="presentableId" value="LOCAL-00211" />
+      <option name="project" value="LOCAL" />
+      <updated>1648041248172</updated>
+    </task>
+    <task id="LOCAL-00212" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame - ajout dataclass">
+      <created>1648041676449</created>
+      <option name="number" value="00212" />
+      <option name="presentableId" value="LOCAL-00212" />
+      <option name="project" value="LOCAL" />
+      <updated>1648041676449</updated>
+    </task>
+    <task id="LOCAL-00213" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame - ajout dataclass">
+      <created>1648042260211</created>
+      <option name="number" value="00213" />
+      <option name="presentableId" value="LOCAL-00213" />
+      <option name="project" value="LOCAL" />
+      <updated>1648042260211</updated>
+    </task>
+    <task id="LOCAL-00214" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame - ajout dataclass">
+      <created>1648043026846</created>
+      <option name="number" value="00214" />
+      <option name="presentableId" value="LOCAL-00214" />
+      <option name="project" value="LOCAL" />
+      <updated>1648043026846</updated>
+    </task>
+    <task id="LOCAL-00215" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame - ajout dataclass">
+      <created>1648043115892</created>
+      <option name="number" value="00215" />
+      <option name="presentableId" value="LOCAL-00215" />
+      <option name="project" value="LOCAL" />
+      <updated>1648043115892</updated>
+    </task>
+    <task id="LOCAL-00216" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame - ajout dataclass">
+      <created>1648043162977</created>
+      <option name="number" value="00216" />
+      <option name="presentableId" value="LOCAL-00216" />
+      <option name="project" value="LOCAL" />
+      <updated>1648043162977</updated>
+    </task>
+    <task id="LOCAL-00217" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame - ajout dataclass">
+      <created>1648043343495</created>
+      <option name="number" value="00217" />
+      <option name="presentableId" value="LOCAL-00217" />
+      <option name="project" value="LOCAL" />
+      <updated>1648043343495</updated>
+    </task>
+    <task id="LOCAL-00218" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame - ajout dataclass">
+      <created>1648043470170</created>
+      <option name="number" value="00218" />
+      <option name="presentableId" value="LOCAL-00218" />
+      <option name="project" value="LOCAL" />
+      <updated>1648043470170</updated>
+    </task>
+    <task id="LOCAL-00219" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame - ajout dataclass">
+      <created>1648043800885</created>
+      <option name="number" value="00219" />
+      <option name="presentableId" value="LOCAL-00219" />
+      <option name="project" value="LOCAL" />
+      <updated>1648043800885</updated>
+    </task>
+    <task id="LOCAL-00220" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame - ajout dataclass">
+      <created>1648043912103</created>
+      <option name="number" value="00220" />
+      <option name="presentableId" value="LOCAL-00220" />
+      <option name="project" value="LOCAL" />
+      <updated>1648043912103</updated>
+    </task>
+    <task id="LOCAL-00221" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame - ajout dataclass">
+      <created>1648044042152</created>
+      <option name="number" value="00221" />
+      <option name="presentableId" value="LOCAL-00221" />
+      <option name="project" value="LOCAL" />
+      <updated>1648044042152</updated>
+    </task>
+    <task id="LOCAL-00222" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame - ajout dataclass">
+      <created>1648044201833</created>
+      <option name="number" value="00222" />
+      <option name="presentableId" value="LOCAL-00222" />
+      <option name="project" value="LOCAL" />
+      <updated>1648044201833</updated>
+    </task>
+    <option name="localTasksCounter" value="223" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Refont libs StyleBase" />
+    <MESSAGE value="Refont libs TextFormat" />
+    <MESSAGE value="Refont libs TickPosition" />
+    <MESSAGE value="Refont libs ToolButtonStyle" />
+    <MESSAGE value="Refont libs cur" />
+    <MESSAGE value="Refont libs Font" />
+    <MESSAGE value="Refont libs Img" />
+    <MESSAGE value="Refont libs Rgb" />
+    <MESSAGE value="Refont libs Shadow" />
+    <MESSAGE value="readme" />
+    <MESSAGE value="dlg msgbox" />
+    <MESSAGE value="dlg msgbox le vrai" />
+    <MESSAGE value="dlg optionBox" />
+    <MESSAGE value="dlg ResponseBox" />
+    <MESSAGE value="dlg rgb" />
+    <MESSAGE value="sup test" />
+    <MESSAGE value="option config" />
+    <MESSAGE value="option reload" />
+    <MESSAGE value="REMAKE - Refonte des WG avec héritage avancé - Button - MyQWidget" />
+    <MESSAGE value="REMAKE - Refonte des WG avec héritage avancé - Button - MyQWidget - ajout dataclass" />
+    <MESSAGE value="rename palette et data_class" />
+    <MESSAGE value="refonte emplacent MyApp" />
+    <MESSAGE value="REMAKE - Refonte des WG avec héritage avancé - Button - MyAbstractButton - ajout dataclass" />
+    <MESSAGE value="REMAKE - Refonte des WG avec héritage avancé - Button - MyQPushButtonStyle - ajout dataclass" />
+    <MESSAGE value="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame - ajout dataclass" />
+    <option name="LAST_COMMIT_MESSAGE" value="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame - ajout dataclass" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/app_py$MyApp__1_.coverage" NAME="MyApp (1) Coverage Results" MODIFIED="1647804970158" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/app_py$MyApp.coverage" NAME="MyApp Coverage Results" MODIFIED="1648044008975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+  </component>
+</project>
