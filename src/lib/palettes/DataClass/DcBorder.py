@@ -54,6 +54,7 @@ class Base:
 
     def __post_init__(self):
         if self.gen:
+            self.base = self.gen
             self.hover = self.gen
             self.indeterminate = self.gen
             self.indeterminate_hover = self.gen
@@ -61,6 +62,7 @@ class Base:
             self.checked_hover = self.gen
 
         if self.gen_style:
+            self.base_style = self.gen_style
             self.hover_style = self.gen_style
             self.indeterminate_style = self.gen_style
             self.indeterminate_hover_style = self.gen_style
@@ -68,6 +70,7 @@ class Base:
             self.checked_hover_style = self.gen_style
 
         if self.gen_rgb:
+            self.base_rgb = self.gen_rgb
             self.hover_rgb = self.gen_rgb
             self.indeterminate_rgb = self.gen_rgb
             self.indeterminate_hover_rgb = self.gen_rgb
