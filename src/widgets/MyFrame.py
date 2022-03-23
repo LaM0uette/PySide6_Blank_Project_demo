@@ -70,7 +70,7 @@ class Cadre:
 
             background=DcRgbBg.Base(gen=PaRgb.TR),
             border=DcBorder.Base(
-                gen=PaStyleBase.BORDER,
+                gen=(PaStyleBase.BORDER, )*4,
                 gen_rgb=rgb,
                 radius=(3, )*4
             )
