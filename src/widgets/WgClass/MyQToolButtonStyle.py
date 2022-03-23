@@ -27,19 +27,7 @@ class Style(MyQToolButton):
             background=v_wg.BACKGROUND,
             foreground=v_wg.FOREGROUND,
             img=v_wg.IMG,
-            border=v_wg.BORDER_WIDTH,
-            border_style=v_wg.BORDER_STYLE,
-            border_rgb=v_wg.BORDER_RGB,
-            border_hover=v_wg.BORDER_WIDTH,
-            border_hover_style=v_wg.BORDER_STYLE,
-            border_hover_rgb=v_wg.BORDER_RGB,
-            border_checked=v_wg.BORDER_WIDTH,
-            border_checked_style=v_wg.BORDER_STYLE,
-            border_checked_rgb=v_wg.BORDER_RGB,
-            border_checked_hover=v_wg.BORDER_WIDTH,
-            border_checked_hover_style=v_wg.BORDER_STYLE,
-            border_checked_hover_rgb=v_wg.BORDER_RGB,
-            radius=v_wg.RADIUS
+            border=v_wg.BORDER,
     ):
         # Style
         super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, txt, ico, checkable, checked, auto_actions, popup_mode, tool_button_style, auto_raise, arrow_type)
@@ -79,35 +67,35 @@ class Style(MyQToolButton):
 
                 /* BORDURES */
                 .QToolButton {{
-                border-top: {border[0]}px {border_style} rgba{border_rgb};
-                border-bottom: {border[1]}px {border_style} rgba{border_rgb};
-                border-right: {border[2]}px {border_style} rgba{border_rgb};
-                border-left: {border[3]}px {border_style} rgba{border_rgb};
+                border-top: {border.base[0]}px {border.base_style} rgba{border.base_rgb};
+                border-bottom: {border.base[1]}px {border.base_style} rgba{border.base_rgb};
+                border-right: {border.base[2]}px {border.base_style} rgba{border.base_rgb};
+                border-left: {border.base[3]}px {border.base_style} rgba{border.base_rgb};
                 }}
                 .QToolButton:hover {{
-                border-top: {border_hover[0]}px {border_hover_style} rgba{border_hover_rgb};
-                border-bottom: {border_hover[1]}px {border_hover_style} rgba{border_hover_rgb};
-                border-right: {border_hover[2]}px {border_hover_style} rgba{border_hover_rgb};
-                border-left: {border_hover[3]}px {border_hover_style} rgba{border_hover_rgb};
+                border-top: {border.hover[0]}px {border.hover_style} rgba{border.hover_rgb};
+                border-bottom: {border.hover[1]}px {border.hover_style} rgba{border.hover_rgb};
+                border-right: {border.hover[2]}px {border.hover_style} rgba{border.hover_rgb};
+                border-left: {border.hover[3]}px {border.hover_style} rgba{border.hover_rgb};
                 }}
                 .QToolButton:checked {{
-                border-top: {border_checked[0]}px {border_checked_style} rgba{border_checked_rgb};
-                border-bottom: {border_checked[1]}px {border_checked_style} rgba{border_checked_rgb};
-                border-right: {border_checked[2]}px {border_checked_style} rgba{border_checked_rgb};
-                border-left: {border_checked[3]}px {border_checked_style} rgba{border_checked_rgb};
+                border-top: {border.checked[0]}px {border.checked_style} rgba{border.checked_rgb};
+                border-bottom: {border.checked[1]}px {border.checked_style} rgba{border.checked_rgb};
+                border-right: {border.checked[2]}px {border.checked_style} rgba{border.checked_rgb};
+                border-left: {border.checked[3]}px {border.checked_style} rgba{border.checked_rgb};
                 }}
                 .QToolButton:checked:hover {{
-                border-top: {border_checked_hover[0]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
-                border-bottom: {border_checked_hover[1]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
-                border-right: {border_checked_hover[2]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
-                border-left: {border_checked_hover[3]}px {border_checked_hover_style} rgba{border_checked_hover_rgb};
+                border-top: {border.checked_hover[0]}px {border.checked_hover_style} rgba{border.checked_hover_rgb};
+                border-bottom: {border.checked_hover[1]}px {border.checked_hover_style} rgba{border.checked_hover_rgb};
+                border-right: {border.checked_hover[2]}px {border.checked_hover_style} rgba{border.checked_hover_rgb};
+                border-left: {border.checked_hover[3]}px {border.checked_hover_style} rgba{border.checked_hover_rgb};
                 }}
 
                 /* RAYONS */
                 .QToolButton {{
-                border-top-right-radius: {radius[0]}px;
-                border-top-left-radius: {radius[1]}px;
-                border-bottom-right-radius: {radius[2]}px;
-                border-bottom-left-radius: {radius[3]}px;
+                border-top-right-radius: {border.radius[0]}px;
+                border-top-left-radius: {border.radius[1]}px;
+                border-bottom-right-radius: {border.radius[2]}px;
+                border-bottom-left-radius: {border.radius[3]}px;
                 }}"""
         widget.setStyleSheet(style)
