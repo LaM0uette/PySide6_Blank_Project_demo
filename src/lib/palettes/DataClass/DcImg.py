@@ -49,23 +49,23 @@ class Base:
     margin: tuple = (0, )*4
 
     base: str = PaImg.MAIN
-    base_hover: str = base
+    base_hover: str = None
     uncheck: str = PaImg.CHECK0
-    uncheck_hover: str = uncheck
+    uncheck_hover: str = None
     check: str = PaImg.CHECK2
-    check_hover: str = check
+    check_hover: str = None
     indeterminate: str = PaImg.CHECK1
-    indeterminate_hover: str = indeterminate
+    indeterminate_hover: str = None
     unroll: str = PaImg.FLECHE_BOTTOM
-    unroll_hover: str = unroll
+    unroll_hover: str = None
     up: str = PaImg.PLUS
-    up_hover: str = up
+    up_hover: str = None
     down: str = PaImg.MOINS
-    down_hover: str = down
+    down_hover: str = None
     right: str = PaImg.FLECHE_RIGHT
-    right_hover: str = right
+    right_hover: str = None
     left: str = PaImg.FLECHE_LEFT
-    left_hover: str = left
+    left_hover: str = None
 
     base_rgb: str = "th2"
     base_hover_rgb: str = "th3"
@@ -85,3 +85,15 @@ class Base:
     right_hover_rgb: str = "bn1"
     left_rgb: str = "th3"
     left_hover_rgb: str = "bn1"
+
+
+    def __post_init__(self):
+        self.base_hover = self.base_hover or self.base
+        self.uncheck_hover = self.uncheck_hover or self.uncheck
+        self.check_hover = self.check_hover or self.check
+        self.indeterminate_hover = self.indeterminate_hover or self.indeterminate
+        self.unroll_hover = self.unroll_hover or self.unroll
+        self.up_hover = self.up_hover or self.up
+        self.down_hover = self.down_hover or self.down
+        self.right_hover = self.right_hover or self.right
+        self.left_hover = self.left_hover or self.left
