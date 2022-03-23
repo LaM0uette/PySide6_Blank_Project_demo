@@ -88,6 +88,9 @@ class Base:
 
 
     def __post_init__(self):
+        self.width = self.width or 15
+        self.height = self.height or 15
+
         self.base_hover = self.base_hover or self.base
         self.uncheck_hover = self.uncheck_hover or self.uncheck
         self.check_hover = self.check_hover or self.check
