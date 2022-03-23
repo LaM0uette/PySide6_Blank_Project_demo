@@ -32,13 +32,13 @@ class Style(MyQFrame):
                 }}
 
                 /* BORDURES */
-                .QCheckBox {{
+                .QFrame {{
                 border-top: {border.base[0]}px {border.base_style} rgba{border.base_rgb};
                 border-bottom: {border.base[1]}px {border.base_style} rgba{border.base_rgb};
                 border-right: {border.base[2]}px {border.base_style} rgba{border.base_rgb};
                 border-left: {border.base[3]}px {border.base_style} rgba{border.base_rgb};
                 }}
-                .QCheckBox:hover {{
+                .QFrame:hover {{
                 border-top: {border.hover[0]}px {border.hover_style} rgba{border.hover_rgb};
                 border-bottom: {border.hover[1]}px {border.hover_style} rgba{border.hover_rgb};
                 border-right: {border.hover[2]}px {border.hover_style} rgba{border.hover_rgb};
@@ -46,7 +46,7 @@ class Style(MyQFrame):
                 }}
 
                 /* RAYONS */
-                .QCheckBox {{
+                .QFrame {{
                 border-top-right-radius: {border.radius[0]}px;
                 border-top-left-radius: {border.radius[1]}px;
                 border-bottom-right-radius: {border.radius[2]}px;
