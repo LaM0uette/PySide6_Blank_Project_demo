@@ -1,7 +1,7 @@
 from .MyQWidget import MyQWidget
 
 
-class MyQAbstractButton(MyQWidget):
+class MyQFrame(MyQWidget):
     def __init__(
             self,
             widget,
