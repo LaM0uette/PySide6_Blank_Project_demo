@@ -1,5 +1,6 @@
 from .MyQAbstractButton import MyQAbstractButton
 from src.lib.globals import v_wg
+from ...lib.palettes import *
 
 
 class Style(MyQAbstractButton):
@@ -22,7 +23,7 @@ class Style(MyQAbstractButton):
             background=v_wg.BACKGROUND,
             foreground=v_wg.FOREGROUND,
             spacing=10,
-            img=v_wg.IMG,
+            img=DcImg.Base(uncheck=PaImg.CHECK0_ROND, indeterminate=PaImg.CHECK1_ROND, check=PaImg.CHECK2_ROND, margin=(0, 0, 0, 5)),
             border=v_wg.BORDER,
     ):
         # Style

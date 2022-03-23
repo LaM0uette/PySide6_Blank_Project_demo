@@ -1,5 +1,6 @@
 from .MyQCheckBox import MyQCheckBox
 from src.lib.globals import v_wg
+from ...lib.palettes.DataClass import DcImg
 
 
 class Style(MyQCheckBox):
@@ -24,7 +25,7 @@ class Style(MyQCheckBox):
             background=v_wg.BACKGROUND,
             foreground=v_wg.FOREGROUND,
             spacing=10,
-            img=v_wg.IMG,
+            img=DcImg.Base(margin=(0, 0, 0, 5)),
             border=v_wg.BORDER,
     ):
         # Style
