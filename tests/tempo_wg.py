@@ -39,11 +39,6 @@
 # ### /QDateEdit ###
 #
 #
-# ### QFrame ###
-# Frame.Demo_hover(self.fr_demo_cadre_hover)
-# ### /QFrame ###
-#
-#
 # ### QLabel ###
 # Label.Base(self.lb_mt_ico).ico_main()
 # Label.Demo(self.lb_lb_demo_th).th()

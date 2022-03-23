@@ -122,6 +122,7 @@ class main(Ui_main, QtWidgets.QWidget):
             self.fr_demo_cadre, self.fr_fr, self.fr_lb
         ]: MyFrame.Cadre(wg).bn1()
 
+        MyFrame.Demo_hover(self.fr_demo_cadre_hover)
         for wg in [self.fr_demo_th, self.fr_tbx_demo_th_1, self.fr_tbx_demo_th_2]: MyFrame.Base(wg).Base()
         for wg in [self.fr_tbx_demo_tr_1, self.fr_tbx_demo_tr_2]: MyFrame.Base(wg).Transparent()
         ### /QFrame  ###
