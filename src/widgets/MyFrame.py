@@ -64,13 +64,13 @@ class Cadre:
     def __init__(self, widget):
         self.widget = widget
 
-    def rtn(self, rgb):
+    def rtn(self, rgb, bg=(PaStyleBase.BORDER, )*4):
         Style(
             self.widget,
 
             background=DcRgbBg.Base(gen=PaRgb.TR),
             border=DcBorder.Base(
-                gen=(PaStyleBase.BORDER, )*4,
+                gen=bg,
                 gen_rgb=rgb,
                 radius=(3, )*4
             )
