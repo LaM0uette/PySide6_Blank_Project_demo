@@ -42,9 +42,7 @@
 # ### QFrame ###
 # Frame.Menu(self.fr_menu_top).top()
 # Frame.Cadre(self.fr_main).th2()
-# Frame.Base(self.fr_body).tr()
-# Frame.Base(self.fr_demo_th, self.fr_tb_demo_th_1, self.fr_tb_demo_th_2).th()
-# Frame.Base(self.fr_tb_demo_tr_1, self.fr_tb_demo_tr_2).th()
+#
 # Frame.Cadre(
 #     self.fr_cb, self.fr_de, self.fr_lw, self.fr_pb, self.fr_ck,
 #     self.fr_rb, self.fr_pg, self.fr_sb, self.fr_tw, self.fr_le,

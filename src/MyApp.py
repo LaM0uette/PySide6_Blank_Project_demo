@@ -107,6 +107,13 @@ class main(Ui_main, QtWidgets.QWidget):
         MyCommandLinkButton.Base(self.clb_demo_th).Base()
         MyCommandLinkButton.Base(self.clb_demo_tr).Transparent()
         ### /QCommandLinkButton  ###
+
+
+        ###  QFrame  ###
+        MyFrame.Base(self.fr_body).Transparent()
+        for wg in [self.fr_demo_th, self.fr_tbx_demo_th_1, self.fr_tbx_demo_th_2]: MyFrame.Base(wg).Base()
+        for wg in [self.fr_tbx_demo_tr_1, self.fr_tbx_demo_tr_2]: MyFrame.Base(wg).Transparent()
+        ### /QFrame  ###
     def IN_WG(self):
         ### Base ###
         self.setCursor(Functions().SET_CURSOR(PaCur.SOURIS))
