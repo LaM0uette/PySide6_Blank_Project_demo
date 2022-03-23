@@ -79,8 +79,6 @@ class MenuTop:
 class Txt:
     def __init__(self, widget):
         self.widget = widget
-        self.bd = (PaStyleBase.BORDER,) * 4
-        self.bd_rgb = PaRgb.TH3
 
     def txt(self):
         Style(
@@ -99,15 +97,10 @@ class Txt:
                 checked=PaRgb.TH1,
                 checked_hover=PaRgb.TH3
             ),
-
-            border=self.bd,
-            border_hover=self.bd,
-            border_checked=self.bd,
-            border_checked_hover=self.bd,
-            border_rgb=self.bd_rgb,
-            border_hover_rgb=self.bd_rgb,
-            border_checked_rgb=self.bd_rgb,
-            border_checked_hover_rgb=self.bd_rgb,
+            border=DcBorder.Base(
+                gen=(PaStyleBase.BORDER,) * 4,
+                gen_rgb=PaRgb.TH3
+            )
         )
     def inverse(self):
         Style(
@@ -126,15 +119,10 @@ class Txt:
                 checked=PaRgb.TH3,
                 checked_hover=PaRgb.TH1
             ),
-
-            border=self.bd,
-            border_hover=self.bd,
-            border_checked=self.bd,
-            border_checked_hover=self.bd,
-            border_rgb=self.bd_rgb,
-            border_hover_rgb=self.bd_rgb,
-            border_checked_rgb=self.bd_rgb,
-            border_checked_hover_rgb=self.bd_rgb,
+            border=DcBorder.Base(
+                gen=(PaStyleBase.BORDER,) * 4,
+                gen_rgb=PaRgb.TH3
+            )
         )
 
 
@@ -144,7 +132,6 @@ class Txt:
 class Dlg:
     def __init__(self, widget):
         self.widget = widget
-        self.bd = (PaStyleBase.BORDER,) * 4
 
     def _rtn(
             self,
@@ -166,15 +153,10 @@ class Dlg:
 
             background=background,
             foreground=foreground,
-
-            border=self.bd,
-            border_hover=self.bd,
-            border_checked=self.bd,
-            border_checked_hover=self.bd,
-            border_rgb=bd_rgb,
-            border_hover_rgb=bd_rgb,
-            border_checked_rgb=bd_rgb,
-            border_checked_hover_rgb=bd_rgb,
+            border=DcBorder.Base(
+                gen=(PaStyleBase.BORDER,) * 4,
+                gen_rgb=bd_rgb
+            )
         )
 
     def ok(self):
@@ -264,17 +246,11 @@ class Plein:
 
             background=DcRgbBg.Base(gen=bg_gen),
             foreground=DcRgbFg.Base(gen=fg_gen),
-
-            border=border_gen,
-            border_hover=border_gen,
-            border_checked=border_gen,
-            border_checked_hover=border_gen,
-            border_rgb=border_gen_rgb,
-            border_hover_rgb=border_gen_rgb,
-            border_checked_rgb=border_gen_rgb,
-            border_checked_hover_rgb=border_gen_rgb,
-
-            radius=(0, )*4
+            border=DcBorder.Base(
+                gen=border_gen,
+                gen_rgb=border_gen_rgb,
+                radius=(0, )*4
+            ),
         )
 
     def th1(self):
