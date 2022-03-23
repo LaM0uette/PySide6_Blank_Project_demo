@@ -98,8 +98,9 @@ class Style(MyQPushButton):
         widget.setStyleSheet(style)
 
         # Classes PB
-        img_height = dim.fixed_height * PaStyleBase.x_ico
-        IMG_HEIGHT = dim.fixed_height * PaStyleBase.X_ICO
+        ht = dim.fixed_height or widget.height()
+        img_height = ht * PaStyleBase.x_ico
+        IMG_HEIGHT = ht * PaStyleBase.X_ICO
 
         cls = ClassePb(
             widget=widget,
