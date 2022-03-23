@@ -48,6 +48,7 @@ class Base:
     height: int = None
 
     base: str = PaImg.MAIN
+    base_hover: str = None
     uncheck: str = PaImg.CHECK0
     uncheck_hover: str = None
     check: str = PaImg.CHECK2
@@ -66,6 +67,7 @@ class Base:
     left_hover: str = None
 
     base_rgb: str = "th2"
+    base_hover_rgb: str = "th3"
     uncheck_rgb: str = "th2"
     uncheck_hover_rgb: str = "bn1"
     check_rgb: str = "th2"
@@ -85,6 +87,7 @@ class Base:
 
 
     def __post_init__(self):
+        self.base_hover = self.base_hover or self.base
         self.uncheck_hover = self.uncheck_hover or self.uncheck
         self.check_hover = self.check_hover or self.check
         self.indeterminate_hover = self.indeterminate_hover or self.indeterminate

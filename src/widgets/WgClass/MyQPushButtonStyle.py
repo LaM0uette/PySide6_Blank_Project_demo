@@ -29,7 +29,7 @@ class Style(MyQPushButton):
             pb_type=None,
             background=v_wg.BACKGROUND,
             foreground=v_wg.FOREGROUND,
-
+            img=v_wg.IMG,
             border=v_wg.BORDER_WIDTH,
             border_style=v_wg.BORDER_STYLE,
             border_rgb=v_wg.BORDER_RGB,
@@ -110,34 +110,35 @@ class Style(MyQPushButton):
         widget.setStyleSheet(style)
 
         # Classes PB
-        if not img_height: img_height = widget.height() * PaStyleBase.x_ico
-        if not IMG_HEIGHT: IMG_HEIGHT = widget.height() * PaStyleBase.X_ICO
+        hgt = img.height or widget.height()
+        img_height = hgt * PaStyleBase.x_ico
+        IMG_HEIGHT = hgt * PaStyleBase.X_ICO
 
         cls = ClassePb(
             widget=widget,
             dim_ico=img_height,
             DIM_ICO=IMG_HEIGHT,
-            img=img,
-            img_hover=img_hover,
-            img_uncheck=img_uncheck,
-            img_uncheck_hover=img_uncheck_hover,
-            img_check=img_check,
-            img_check_hover=img_check_hover,
-            img_rgb=img_rgb,
-            img_hover_rgb=img_hover_rgb,
-            img_uncheck_rgb=img_uncheck_rgb,
-            img_uncheck_hover_rgb=img_uncheck_hover_rgb,
-            img_check_rgb=img_check_rgb,
-            img_check_hover_rgb=img_check_hover_rgb,
+            img=img.base,
+            img_hover=img.hover,
+            img_uncheck=img.uncheck,
+            img_uncheck_hover=img.uncheck_hover,
+            img_check=img.check,
+            img_check_hover=img.check_hover,
+            img_rgb=img.rgb,
+            img_hover_rgb=img.hover_rgb,
+            img_uncheck_rgb=img.uncheck_rgb,
+            img_uncheck_hover_rgb=img.uncheck_hover_rgb,
+            img_check_rgb=img.check_rgb,
+            img_check_hover_rgb=img.check_hover_rgb,
         )
 
         if pb_type is not None:
             if pb_type == "check":
-                widget.setIcon(Functions().SET_ICON(ico=img_uncheck, rgb=img_uncheck_rgb))
+                widget.setIcon(Functions().SET_ICON(ico=img.uncheck, rgb=img.uncheck_rgb))
             else:
-                widget.setIcon(Functions().SET_ICON(ico=img, rgb=img_rgb))
+                widget.setIcon(Functions().SET_ICON(ico=img, rgb=img.rgb))
 
-            widget.setIconSize(Functions().SET_ICON_DIM(width=img_height, height=img_height))
+            widget.setIconSize(Functions().SET_ICON_DIM(width=img.height, height=img.height))
 
         if pb_type == "check":
             widget.enterEvent = cls.ENT_CHECK
