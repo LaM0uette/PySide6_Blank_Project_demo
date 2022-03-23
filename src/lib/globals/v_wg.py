@@ -50,7 +50,7 @@ ICO = DcIco.Base
 
 ###  ACTIONS  ###
 AUTO_ACTIONS = DcAutoActions.Base
-AUTO_ACTIONS_EXCLUSIVE = DcAutoActions.Base(auto_exclusive=True)
+AUTO_ACTIONS_EXCLUSIVE = DcAutoActions.Base
 ### /ACTIONS  ###
 
 #############################

@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/dlg/OptionBox/OptionDlg.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dlg/OptionBox/OptionDlg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/dlg/ResponseBox/ResponseDlg.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dlg/ResponseBox/ResponseDlg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/dlg/RgbBox/RgbDlg.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dlg/RgbBox/RgbDlg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/dlg/SplashScreen/SplashScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dlg/SplashScreen/SplashScreen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/MyFrame.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/MyFrame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/globals/v_wg.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/globals/v_wg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/MyCheckBox.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/MyCheckBox.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1648044382161</updated>
       <workItem from="1648044384821" duration="4589000" />
-      <workItem from="1648050955020" duration="165000" />
+      <workItem from="1648050955020" duration="547000" />
     </task>
     <task id="LOCAL-00001" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
       <created>1648044918698</created>
@@ -135,7 +131,21 @@
       <option name="project" value="LOCAL" />
       <updated>1648050811189</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
+      <created>1648051149125</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1648051149125</updated>
+    </task>
+    <task id="LOCAL-00011" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
+      <created>1648051285588</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1648051285588</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +167,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PySide6_Blank_Project_demo$MyApp.coverage" NAME="MyApp Coverage Results" MODIFIED="1648050809889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/PySide6_Blank_Project_demo$MyApp.coverage" NAME="MyApp Coverage Results" MODIFIED="1648051501860" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>
