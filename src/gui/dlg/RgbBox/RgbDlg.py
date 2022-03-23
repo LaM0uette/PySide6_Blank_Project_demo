@@ -60,11 +60,11 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
         self.glay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
     def IN_CLASSE(self):
         ### QFrame ###
-        Frame.Menu(self.fr_menu_top).top()
-        Frame.Cadre(self.fr_main).th2()
-        Frame.Dlg(self.fr_body).th(rgb=PaRgb.TH1)
-        Frame.Menu(self.fr_rgb_bottom).bottom_dlg()
-        Frame.Base(self.fr_rgb_colors).th()
+        MyFrame.Menu(self.fr_menu_top).top()
+        MyFrame.Cadre(self.fr_main).th2_fin()
+        MyFrame.Dlg(self.fr_body).th(rgb=PaRgb.TH1)
+        MyFrame.Menu(self.fr_rgb_bottom).bottom_dlg()
+        MyFrame.Base(self.fr_rgb_colors).Base()
         ### /QFrame ###
 
 

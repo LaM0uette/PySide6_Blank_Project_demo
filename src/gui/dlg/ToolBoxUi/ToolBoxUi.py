@@ -36,9 +36,9 @@ class ToolBoxUi(toolbox_ui.Ui_ToolBoxUi, QtWidgets.QDialog):
         self.vlay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
     def IN_CLASSE(self):
         ### QFrame ###
-        Frame.ToolBox(self.fr_main)
-        Frame.Menu(self.fr_menu_top).top()
-        Frame.Dlg(self.fr_body).th(rgb=PaRgb.TH1)
+        MyFrame.ToolBox(self.fr_main)
+        MyFrame.Menu(self.fr_menu_top).top()
+        MyFrame.Dlg(self.fr_body).th(rgb=PaRgb.TH1)
         ### /QFrame ###
 
 

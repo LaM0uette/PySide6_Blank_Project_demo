@@ -74,7 +74,9 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
         self.glay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
     def IN_CLASSE(self):
         ### QCheckBox ###
-        CheckBox.Base(self.ck_opt_cfg_debug, self.ck_opt_cfg_autoclose, self.ck_opt_cfg_resize, self.ck_opt_cfg_ui_pin).tr()
+        for wg in [
+            self.ck_opt_cfg_debug, self.ck_opt_cfg_autoclose, self.ck_opt_cfg_resize, self.ck_opt_cfg_ui_pin
+        ]: MyCheckBox.Base(wg).Transparent()
         ### /QCheckBox ###
 
 
@@ -84,11 +86,11 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
 
 
         ### QFrame ###
-        Frame.Menu(self.fr_menu_top).top()
-        Frame.Cadre(self.fr_main).th2()
-        Frame.Cadre(self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize).th3()
-        Frame.Dlg(self.fr_body).th(rgb=PaRgb.TH1)
-        Frame.Menu(self.fr_opt_bottom).bottom_dlg()
+        MyFrame.Menu(self.fr_menu_top).top()
+        MyFrame.Cadre(self.fr_main).th2_fin()
+        for wg in [self.fr_opt_cfg_opacity, self.fr_opt_cfg_autoclose, self.fr_opt_cfg_resize]: MyFrame.Cadre(wg).th3()
+        MyFrame.Dlg(self.fr_body).th(rgb=PaRgb.TH1)
+        MyFrame.Menu(self.fr_opt_bottom).bottom_dlg()
         ### /QFrame ###
 
 

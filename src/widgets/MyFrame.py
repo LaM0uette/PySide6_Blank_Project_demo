@@ -123,7 +123,7 @@ class palette_rgb:
             border=DcBorder.Base(radius=(40, )*4)
         )
 class SplashScreen:
-    def __init__(self, widget, rgb):
+    def __init__(self, widget):
         self.widget = widget
 
         Style(

@@ -59,10 +59,10 @@ class ResponseDlg(rep_ui.Ui_Rep, QtWidgets.QDialog):
         self.glay_main.setContentsMargins(v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP, v_gb.MARGIN_APP)
     def IN_CLASSE(self):
         ### QFrame ###
-        Frame.Menu(self.fr_menu_top).top()
-        Frame.Cadre(self.fr_main).th2()
-        Frame.Dlg(self.fr_body).th(rgb=PaRgb.TH1)
-        Frame.Menu(self.fr_rep_bottom).bottom_dlg()
+        MyFrame.Menu(self.fr_menu_top).top()
+        MyFrame.Cadre(self.fr_main).th2_fin()
+        MyFrame.Dlg(self.fr_body).th(rgb=PaRgb.TH1)
+        MyFrame.Menu(self.fr_rep_bottom).bottom_dlg()
         ### /QFrame ###
 
 
