@@ -44,8 +44,8 @@ from src.lib.palettes import PaImg
 
 @dataclass
 class Base:
-    width: int = 20
-    height: int = 20
+    width: int = 16
+    height: int = 16
     margin: tuple = (0, )*4
 
     base: str = PaImg.MAIN
