@@ -46,8 +46,10 @@ class MenuTop:
             foreground=DcRgbFg.Base(
                 checked=PaRgb.TH3
             ),
-            img=img,
-            img_rgb=img_rgb,
+            img=DcImg.Base(
+                base=img,
+                base_rgb=img_rgb
+            ),
         )
 
     def option(self):
