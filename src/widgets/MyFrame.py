@@ -9,17 +9,13 @@ class Base:
     def __init__(self, widget):
         self.widget = widget
 
-    def Base(self):
+    def Base(self, rgb=PaRgb.TH3):
         Style(
             widget=self.widget,
+            background=DcRgbBg.Base(base=rgb)
         )
-    def Transparent(self):
+    def Transparent(self, rgb=PaRgb.TR):
         Style(
             widget=self.widget,
-
-            background=DcRgbBg.Base(gen=PaRgb.TR),
-            foreground=DcRgbFg.Base(
-                base=PaRgb.TH3,
-                checked=PaRgb.BN1,
-            ),
+            background=DcRgbBg.Base(base=rgb)
         )
