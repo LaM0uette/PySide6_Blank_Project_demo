@@ -86,9 +86,7 @@ IMG = DcImg.Base
 ### /IMAGES RGB  ###
 
 ###  BORDER  ###
-BORDER_WIDTH = (0,)*4
-BORDER_STYLE = "solid"
-BORDER_RGB = PaRgb.TR
+BORDER = DcBorder.Base
 ### /BORDER  ###
 
 ###  SCROLL  ###
