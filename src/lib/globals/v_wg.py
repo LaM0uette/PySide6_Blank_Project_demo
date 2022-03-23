@@ -91,11 +91,6 @@ BORDER_STYLE = "solid"
 BORDER_RGB = PaRgb.TR
 ### /BORDER  ###
 
-###  RADIUS  ###
-RADIUS_SIZE = 3
-RADIUS = (RADIUS_SIZE,) * 4
-### /RADIUS  ###
-
 ###  SCROLL  ###
 SCROLL_BG = PaRgb.TH1
 SCROLL_WIDTH = 10
