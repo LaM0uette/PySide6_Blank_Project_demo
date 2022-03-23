@@ -1,5 +1,6 @@
 from .MyQFrame import MyQFrame
 from src.lib.globals import v_wg
+from src.lib.palettes import *
 
 
 class Style(MyQFrame):
@@ -7,7 +8,7 @@ class Style(MyQFrame):
             self,
             widget,
             size_policy=v_wg.SIZE_POLICY,
-            dim=v_wg.DIM_WG,
+            dim=v_wg.DIM,
             font=v_wg.FONT,
             cursor=v_wg.CUR_ACTION,
             focus_policy=v_wg.FOCUS_POLICY,
@@ -15,7 +16,7 @@ class Style(MyQFrame):
 
             frame=v_wg.FRAME,
 
-            background=v_wg.BACKGROUND,
+            background=DcRgbBg.Base(gen=PaRgb.TH3),
             border=v_wg.BORDER
     ):
         # Style

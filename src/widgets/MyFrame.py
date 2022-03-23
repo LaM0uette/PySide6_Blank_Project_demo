@@ -12,10 +12,10 @@ class Base:
     def Base(self, rgb=PaRgb.TH3):
         Style(
             widget=self.widget,
-            background=DcRgbBg.Base(base=rgb)
+            background=DcRgbBg.Base(gen=rgb)
         )
     def Transparent(self, rgb=PaRgb.TR):
         Style(
             widget=self.widget,
-            background=DcRgbBg.Base(base=rgb)
+            background=DcRgbBg.Base(gen=rgb)
         )
