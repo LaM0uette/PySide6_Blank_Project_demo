@@ -37,6 +37,12 @@ class Base:
     hover: tuple = None
     hover_style: str = None
     hover_rgb: str = None
+    indeterminate: tuple = None
+    indeterminate_style: str = None
+    indeterminate_rgb: str = None
+    indeterminate_hover: tuple = None
+    indeterminate_hover_style: str = None
+    indeterminate_hover_rgb: str = None
     checked: tuple = None
     checked_style: str = None
     checked_rgb: str = None
@@ -49,15 +55,21 @@ class Base:
     def __post_init__(self):
         if self.gen:
             self.hover = self.gen
+            self.indeterminate = self.gen
+            self.indeterminate_hover = self.gen
             self.checked = self.gen
             self.checked_hover = self.gen
 
         if self.gen_style:
             self.hover_style = self.gen_style
+            self.indeterminate_style = self.gen_style
+            self.indeterminate_hover_style = self.gen_style
             self.checked_style = self.gen_style
             self.checked_hover_style = self.gen_style
 
         if self.gen_rgb:
             self.hover_rgb = self.gen_rgb
+            self.indeterminate_rgb = self.gen_rgb
+            self.indeterminate_hover_rgb = self.gen_rgb
             self.checked_rgb = self.gen_rgb
             self.checked_hover_rgb = self.gen_rgb
