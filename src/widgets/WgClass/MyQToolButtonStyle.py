@@ -1,6 +1,5 @@
 from .MyQToolButton import MyQToolButton
 from src.lib.globals import v_wg
-from src.lib.palettes import *
 
 
 class Style(MyQToolButton):
@@ -27,20 +26,7 @@ class Style(MyQToolButton):
 
             background=v_wg.BACKGROUND,
             foreground=v_wg.FOREGROUND,
-            img_uncheck=v_wg.IMG_UNCHECK,
-            img_uncheck_hover=v_wg.IMG_UNCHECK_HOVER,
-            img_check=v_wg.IMG_CHECK,
-            img_check_hover=v_wg.IMG_CHECK_HOVER,
-            img=v_wg.IMG_UNROLL,
-            img_hover=v_wg.IMG_UNROLL_HOVER,
-            img_uncheck_rgb=v_wg.IMG_UNCHECK_RGB,
-            img_uncheck_hover_rgb=v_wg.IMG_UNCHECK_HOVER_RGB,
-            img_check_rgb=v_wg.IMG_CHECK_RGB,
-            img_check_hover_rgb=v_wg.IMG_CHECK_HOVER_RGB,
-            img_rgb=v_wg.IMG_UNROLL_RGB,
-            img_hover_rgb=v_wg.IMG_UNROLL_HOVER_RGB,
-            img_height=None,
-            IMG_HEIGHT=None,
+            img=v_wg.IMG,
             border=v_wg.BORDER_WIDTH,
             border_style=v_wg.BORDER_STYLE,
             border_rgb=v_wg.BORDER_RGB,
@@ -85,7 +71,7 @@ class Style(MyQToolButton):
                 }}
                 
                 QToolButton::menu-indicator {{
-                image: url({f"{img}{img_rgb}.svg"});
+                image: url({f"{img.base}{img.base_rgb}.svg"});
                 subcontrol-position: right center;
                 subcontrol-origin: padding;
                 left: -2px;

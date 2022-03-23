@@ -46,6 +46,7 @@ from src.lib.palettes import PaImg
 class Base:
     width: int = None
     height: int = None
+    margin: tuple = (0, )*4
 
     base: str = PaImg.MAIN
     base_hover: str = None

@@ -1,6 +1,5 @@
 from .MyQAbstractButton import MyQAbstractButton
 from src.lib.globals import v_wg
-from src.lib.palettes import *
 
 
 class Style(MyQAbstractButton):
@@ -23,17 +22,7 @@ class Style(MyQAbstractButton):
             background=v_wg.BACKGROUND,
             foreground=v_wg.FOREGROUND,
             spacing=10,
-            img_uncheck=PaImg.CHECK0_ROND,
-            img_uncheck_hover=PaImg.CHECK0_ROND,
-            img_check=PaImg.CHECK2_ROND,
-            img_check_hover=PaImg.CHECK2_ROND,
-            img_uncheck_rgb=v_wg.IMG_UNCHECK_RGB,
-            img_uncheck_hover_rgb=v_wg.IMG_UNCHECK_HOVER_RGB,
-            img_check_rgb=v_wg.IMG_CHECK_RGB,
-            img_check_hover_rgb=v_wg.IMG_CHECK_HOVER_RGB,
-            img_width=15,
-            img_height=15,
-            img_margin=(0, 0, 0, 5),
+            img=v_wg.IMG,
             border=v_wg.BORDER_WIDTH,
             border_style=v_wg.BORDER_STYLE,
             border_rgb=v_wg.BORDER_RGB,
@@ -81,24 +70,24 @@ class Style(MyQAbstractButton):
 
                 /* IMG */
                 QRadioButton::indicator {{
-                margin-top: {img_margin[0]}px;
-                margin-bottom: {img_margin[1]}px;
-                margin-right: {img_margin[2]}px;
-                margin-left: {img_margin[3]}px;
-                width: {img_width}px;
-                height: {img_height}px;
+                margin-top: {img.margin[0]}px;
+                margin-bottom: {img.margin[1]}px;
+                margin-right: {img.margin[2]}px;
+                margin-left: {img.margin[3]}px;
+                width: {img.width}px;
+                height: {img.height}px;
                 }}
                 QRadioButton::indicator:unchecked {{
-                image: url({f"{img_uncheck}{img_uncheck_rgb}.svg"});
+                image: url({f"{img.uncheck}{img.uncheck_rgb}.svg"});
                 }}
                 QRadioButton::indicator:hover {{
-                image: url({f"{img_uncheck_hover}{img_uncheck_hover_rgb}.svg"});
+                image: url({f"{img.uncheck_hover}{img.uncheck_hover_rgb}.svg"});
                 }}
                 QRadioButton::indicator:checked {{
-                image: url({f"{img_check}{img_check_rgb}.svg"});
+                image: url({f"{img.check}{img.check_rgb}.svg"});
                 }}
                 QRadioButton::indicator:checked:hover {{
-                image: url({f"{img_check_hover}{img_check_hover_rgb}.svg"});
+                image: url({f"{img.check_hover}{img.check_hover_rgb}.svg"});
                 }}
 
                 /* BORDURES */
