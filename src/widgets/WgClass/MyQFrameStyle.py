@@ -1,6 +1,5 @@
 from .MyQFrame import MyQFrame
 from src.lib.globals import v_wg
-from ...lib.palettes.DataClass import DcImg
 
 
 class Style(MyQFrame):
@@ -17,14 +16,19 @@ class Style(MyQFrame):
             frame=v_wg.FRAME,
 
             background=v_wg.BACKGROUND,
-            foreground=v_wg.FOREGROUND,
             border=v_wg.BORDER
     ):
         # Style
         super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, frame)
 
         style = f"""
-                
+                /* FRAME */
+                .QFrame {{
+                background-color: rgba{background.base};
+                }}
+                .QFrame:hover {{
+                background-color: rgba{background.hover};
+                }}
 
                 /* BORDURES */
                 .QCheckBox {{
