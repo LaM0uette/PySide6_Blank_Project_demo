@@ -126,7 +126,7 @@ class Style(MyQPushButton):
             else:
                 widget.setIcon(Functions().SET_ICON(ico=img.base, rgb=img.base_rgb))
 
-            widget.setIconSize(Functions().SET_ICON_DIM(width=img.height, height=img.height))
+            widget.setIconSize(Functions().SET_ICON_DIM(width=img_height, height=img_height))
 
         if pb_type == "check":
             widget.enterEvent = cls.ENT_CHECK
