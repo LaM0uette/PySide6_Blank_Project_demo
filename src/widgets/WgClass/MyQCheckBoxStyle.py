@@ -138,9 +138,9 @@ class Style(MyQCheckBox):
 
                 /* RAYONS */
                 .QCheckBox {{
-                border-top-right-radius: {base.radius[0]}px;
-                border-top-left-radius: {base.radius[1]}px;
-                border-bottom-right-radius: {base.radius[2]}px;
-                border-bottom-left-radius: {base.radius[3]}px;
+                border-top-right-radius: {border.radius[0]}px;
+                border-top-left-radius: {border.radius[1]}px;
+                border-bottom-right-radius: {border.radius[2]}px;
+                border-bottom-left-radius: {border.radius[3]}px;
                 }}"""
         widget.setStyleSheet(style)
