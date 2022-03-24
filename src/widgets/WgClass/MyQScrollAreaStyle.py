@@ -23,7 +23,6 @@ class Style(MyQScrollArea):
             border=v_wg.BORDER,
 
             scroll=v_wg.SCROLL,
-
     ):
         super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, frame, scroll_policy, resizable)
 
@@ -57,31 +56,29 @@ class Style(MyQScrollArea):
 
                 /* SCROLL */
                 QScrollBar {{
-                background-color: rgba{scroll_bg};
-                width: {scroll_width}px;
-                height: {scroll_height}px;
+                background-color: rgba{scroll.bg};
+                width: {scroll.width}px;
+                height: {scroll.height}px;
                 }}
                 QScrollBar::handle:horizontal {{
-                min-width: {scroll_handle_min_width}px;
+                min-width: {scroll.min_width_handle}px;
                 }}
                 QScrollBar::handle:vertical {{
-                min-height: {scroll_handle_min_height}px;
+                min-height: {scroll.min_height_min_handle}px;
                 }}
                 QScrollBar::handle {{
-                background-color: rgba{scroll_handle_fg};
+                background-color: rgba{scroll.handle_fg};
                 }}
                 QScrollBar::handle:hover {{
-                background-color: rgba{scroll_handle_fg_hover};
+                background-color: rgba{scroll.handle_fg_hover};
                 }}
 
                 QScrollBar::add-page, QScrollBar::sub-page {{
-                background-color: rgba{scroll_handle_bg};
+                background-color: rgba{scroll.handle_bg};
                 border: none;
                 }}
                 QScrollBar::add-page:hover, QScrollBar::sub-page:hover {{
-                background-color: rgba{scroll_handle_bg_hover};
+                background-color: rgba{scroll.handle_bg_hover};
                 border: none;
                 }}"""
         widget.setStyleSheet(style)
-
-
