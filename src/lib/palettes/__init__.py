@@ -26,6 +26,7 @@ from src.lib.palettes.PaScroll import PaScroll
 from src.lib.palettes.PaSelectionBehavior import PaSelectionBehavior
 from src.lib.palettes.PaSelectionMode import PaSelectionMode
 from src.lib.palettes.PaShadow import PaShadow
+from src.lib.palettes.PaSizeAdjustPolicy import PaSizeAdjustPolicy
 from src.lib.palettes.PaSizePolicy import PaSizePolicy
 from src.lib.palettes.PaStyleBase import PaStyleBase
 from src.lib.palettes.PaTextFormat import PaTextFormat
