@@ -5,7 +5,6 @@ from src.widgets.LineEdit import LineEdit
 from src.widgets.ListWidget import ListWidget
 from src.widgets.PlainTextEdit import PlainTextEdit
 from src.widgets.ProgressBar import ProgressBar
-from src.widgets.ScrollArea import ScrollArea
 from src.widgets.Slider import Slider
 from src.widgets.SpinBox import SpinBox
 from src.widgets.TableWidget import TableWidget
@@ -14,8 +13,6 @@ from src.widgets.ToolBox import ToolBox
 from src.widgets.TrayIcon import TrayIcon
 from src.widgets.TreeWidget import TreeWidget
 
-
-from src.widgets import MyPushButton
 from src.widgets import MyToolButton
 from src.widgets import MyRadioButton
 from src.widgets import MyCheckBox
