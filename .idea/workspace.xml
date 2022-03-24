@@ -4,7 +4,9 @@
     <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - Button - MyQScrollArea">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MyApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyApp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/MyScrollArea.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/MyScrollArea.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/WgClass/MyQScrollAreaStyle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQScrollAreaStyle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/tempo_wg.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/tempo_wg.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +91,7 @@
       <updated>1648044382161</updated>
       <workItem from="1648044384821" duration="4589000" />
       <workItem from="1648050955020" duration="576000" />
-      <workItem from="1648107708165" duration="3577000" />
+      <workItem from="1648107708165" duration="4400000" />
     </task>
     <task id="LOCAL-00001" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
       <created>1648044918698</created>
@@ -280,7 +282,21 @@
       <option name="project" value="LOCAL" />
       <updated>1648111246786</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQScrollArea">
+      <created>1648111330434</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1648111330434</updated>
+    </task>
+    <task id="LOCAL-00029" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQScrollArea">
+      <created>1648111390382</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1648111390382</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,6 +319,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="REMAKE - Refonte des WG avec héritage avancé - Button - MyQScrollArea" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PySide6_Blank_Project_demo$MyApp.coverage" NAME="MyApp Coverage Results" MODIFIED="1648108529294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/PySide6_Blank_Project_demo$MyApp.coverage" NAME="MyApp Coverage Results" MODIFIED="1648111788447" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>

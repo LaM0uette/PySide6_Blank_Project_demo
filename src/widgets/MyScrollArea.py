@@ -19,3 +19,10 @@ class Base:
 
             background=DcRgbBg.Base(gen=PaRgb.TR),
         )
+
+    def Main(self):
+        Style(
+            widget=self.widget,
+
+            background=DcRgbBg.Base(gen=PaRgb.TH1),
+        )

@@ -16,11 +16,6 @@
 # ### /QPlainTextEdit ###
 #
 #
-# ### QScrollBoxArea ###
-# ScrollArea.Base(self.sca_main).th()
-# ### /QScrollBoxArea ###
-#
-#
 # ## QCheckBox ###
 # CheckBox.Demo(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3).th()
 # CheckBox.Demo(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3).tr()

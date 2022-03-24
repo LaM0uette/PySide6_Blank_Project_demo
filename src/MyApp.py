@@ -110,12 +110,12 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         # ### QScrollBoxArea ###
-        MyScrollArea.Base(self.sca_main).Transparent()
+        MyScrollArea.Base(self.sca_main).Main()
         # ### /QScrollBoxArea ###
 
 
         ###  QFrame  ###
-        MyFrame.Base(self.fr_body).Transparent()
+        MyFrame.Base(self.fr_body).Base(rgb=PaRgb.TH1)
         MyFrame.Menu(self.fr_menu_top).top()
         MyFrame.Menu(self.fr_menu_bottom).bottom()
         MyFrame.Cadre(self.fr_main).th2_fin()
