@@ -1,8 +1,15 @@
 """
-DcScrollPolicy.%class(
-    horizontal: any = PaScroll.%
-    vertical: any = PaScroll.%
-    size_adjust: any = PaSizeAdjustPolicy.%)
+DcScroll.%class(
+    width: int = %
+    height: int = %
+    min_width_handle: int = %
+    min_height_min_handle: int = %
+
+    bg: tuple = PaRgb.%
+    handle_bg: tuple = PaRgb.%
+    handle_bg_hover: tuple = PaRgb.%
+    handle_fg: tuple = PaRgb.%
+    handle_fg_hover: tuple = PaRgb.%)
 """
 
 from dataclasses import dataclass
@@ -13,23 +20,13 @@ from src.lib.palettes import *
 @dataclass
 class Base:
 
-    bg = PaRgb.TH1
-    width = 10
-    height = 10
-    handle_bg = PaRgb.TH3
-    handle_bg_hover = PaRgb.TH3
-    handle_fg = PaRgb.TH2
-    handle_fg_hover = PaRgb.BN1
-    handle_min_width = 20
-    handle_min_height = 20
+    width: int = 10
+    height: int = 10
+    min_width_handle: int = 20
+    min_height_min_handle: int = 20
 
-
-SCROLL_BG = PaRgb.TH1
-SCROLL_WIDTH = 10
-SCROLL_HEIGHT = 10
-SCROLL_HANDLE_BG = PaRgb.TH3
-SCROLL_HANDLE_BG_HOVER = PaRgb.TH3
-SCROLL_HANDLE_FG = PaRgb.TH2
-SCROLL_HANDLE_FG_HOVER = PaRgb.BN1
-SCROLL_HANDLE_MIN_WIDTH = 20
-SCROLL_HANDLE_MIN_HEIGHT = 20
+    bg: tuple = PaRgb.TH1
+    handle_bg: tuple = PaRgb.TH3
+    handle_bg_hover: tuple = PaRgb.TH3
+    handle_fg: tuple = PaRgb.TH2
+    handle_fg_hover: tuple = PaRgb.BN1
