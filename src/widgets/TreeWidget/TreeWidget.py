@@ -23,8 +23,8 @@ class Base:
         Build(
             *self.wgs,
 
-            scroll_h=PaScroll.OFF,
-            scroll_v=PaScroll.OFF,
+            scroll_h=PaScrollPolicy.OFF,
+            scroll_v=PaScrollPolicy.OFF,
 
             bg=PaRgb.TR,
             bg_item=PaRgb.TR,
@@ -54,8 +54,8 @@ class Base:
 
             width=PaDim.H5,
 
-            scroll_h=PaScroll.OFF,
-            scroll_v=PaScroll.OFF,
+            scroll_h=PaScrollPolicy.OFF,
+            scroll_v=PaScrollPolicy.OFF,
 
             bg=PaRgb.TR,
             bg_item=PaRgb.TR,

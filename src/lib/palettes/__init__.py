@@ -22,7 +22,7 @@ from src.lib.palettes.PaToolButtonStyle import PaToolButtonStyle
 from src.lib.palettes.PaPopupMode import PaPopupMode
 from src.lib.palettes.PaProgressFormat import PaProgressFormat
 from src.lib.palettes.PaRgb import PaRgb
-from src.lib.palettes.PaScroll import PaScroll
+from src.lib.palettes.PaScrollPolicy import PaScrollPolicy
 from src.lib.palettes.PaSelectionBehavior import PaSelectionBehavior
 from src.lib.palettes.PaSelectionMode import PaSelectionMode
 from src.lib.palettes.PaShadow import PaShadow

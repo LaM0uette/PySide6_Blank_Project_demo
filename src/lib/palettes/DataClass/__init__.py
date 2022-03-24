@@ -6,5 +6,8 @@ from . import DcIco
 from . import DcImg
 from . import DcRgbBg
 from . import DcRgbFg
+from . import DcRgbProgress
+from . import DcRgbSlider
+from . import DcScroll
 from . import DcScrollPolicy
 from . import DcSizePolicy

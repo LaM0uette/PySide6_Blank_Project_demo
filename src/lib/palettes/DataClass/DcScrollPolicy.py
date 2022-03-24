@@ -13,6 +13,6 @@ from src.lib.palettes import *
 @dataclass
 class Base:
 
-    horizontal: any = PaScroll.NEED
-    vertical: any = PaScroll.NEED
+    horizontal: any = PaScrollPolicy.NEED
+    vertical: any = PaScrollPolicy.NEED
     size_adjust: any = PaSizeAdjustPolicy.IGNORED
