@@ -15,7 +15,7 @@ class Style(MyQCommandLinkButton):
 
             txt=v_wg.TXT,
             ico=v_wg.ICO,
-            checkable=False,
+            checkable=True,
             checked=False,
             auto_actions=v_wg.AUTO_ACTIONS,
 
@@ -42,23 +42,18 @@ class Style(MyQCommandLinkButton):
                 }}
                 QCommandLinkButton:hover {{
                 background-color: rgba{background.hover};
-                color: rgba{foreground.hover};
                 }}
                 QCommandLinkButton:checked {{
                 background-color: rgba{background.checked};
-                color: rgba{foreground.checked};
                 }}
                 QCommandLinkButton:checked:hover {{
                 background-color: rgba{background.checked_hover};
-                color: rgba{foreground.checked_hover};
                 }}
                 QCommandLinkButton:pressed {{
                 background-color: rgba{background.pressed};
-                color: rgba{foreground.pressed};
                 }}
                 QCommandLinkButton:checked:pressed {{
                 background-color: rgba{background.checked_pressed};
-                color: rgba{foreground.checked_pressed};
                 }}
 
                 /* IMG */
