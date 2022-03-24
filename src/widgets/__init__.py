@@ -13,8 +13,10 @@ from src.widgets.ToolBox import ToolBox
 from src.widgets.TrayIcon import TrayIcon
 from src.widgets.TreeWidget import TreeWidget
 
+from src.widgets import MyPushButton
 from src.widgets import MyToolButton
 from src.widgets import MyRadioButton
 from src.widgets import MyCheckBox
 from src.widgets import MyCommandLinkButton
+from src.widgets import MyScrollArea
 from src.widgets import MyFrame

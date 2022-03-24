@@ -109,6 +109,11 @@ class main(Ui_main, QtWidgets.QWidget):
         ### /QCommandLinkButton  ###
 
 
+        # ### QScrollBoxArea ###
+        MyScrollArea.Base(self.sca_main).Transparent()
+        # ### /QScrollBoxArea ###
+
+
         ###  QFrame  ###
         MyFrame.Base(self.fr_body).Transparent()
         MyFrame.Menu(self.fr_menu_top).top()
