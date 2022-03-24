@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - Button - MyQScrollArea">
-      <change afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQScrollAreaStyle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/globals/v_wg.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/globals/v_wg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/WgClass/MyQScrollAreaStyle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQScrollAreaStyle.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,7 +84,7 @@
       <updated>1648044382161</updated>
       <workItem from="1648044384821" duration="4589000" />
       <workItem from="1648050955020" duration="576000" />
-      <workItem from="1648107708165" duration="2461000" />
+      <workItem from="1648107708165" duration="2641000" />
     </task>
     <task id="LOCAL-00001" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
       <created>1648044918698</created>
@@ -232,7 +233,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648110126209</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQScrollArea">
+      <created>1648110202039</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1648110202039</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
