@@ -1,5 +1,4 @@
 from .MyQFrame import MyQFrame
-from src.build.mods import Functions
 
 
 class MyQAbstractScrollArea(MyQFrame):
