@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - Button - MyQCommandLinkButtonStyle">
-      <change afterPath="$PROJECT_DIR$/src/lib/palettes/DataClass/DcDragDrop.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQAbstractItemView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/palettes/DataClass/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/palettes/DataClass/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/globals/v_wg.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/globals/v_wg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/WgClass/MyQAbstractItemView.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQAbstractItemView.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +90,7 @@
       <workItem from="1648050955020" duration="576000" />
       <workItem from="1648107708165" duration="13471000" />
       <workItem from="1648132197941" duration="53000" />
-      <workItem from="1648132912911" duration="803000" />
+      <workItem from="1648132912911" duration="955000" />
     </task>
     <task id="LOCAL-00001" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
       <created>1648044918698</created>
@@ -339,7 +337,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648131135346</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQCommandLinkButtonStyle">
+      <created>1648133758532</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1648133758532</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
