@@ -60,9 +60,6 @@ class Style(MyQToolButton):
                 
                 QToolButton::menu-indicator {{
                 image: url({f"{img.base}{img.base_rgb}.svg"});
-                subcontrol-position: right center;
-                subcontrol-origin: padding;
-                left: -2px;
                 }}
 
                 /* BORDURES */
