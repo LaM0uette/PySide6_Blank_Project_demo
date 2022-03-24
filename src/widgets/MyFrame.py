@@ -72,7 +72,7 @@ class Cadre:
             border=DcBorder.Base(
                 gen=bd,
                 gen_rgb=rgb,
-                radius=(3, )*4
+                radius=(5, )*4
             )
         )
 
