@@ -46,5 +46,5 @@ class Demo:
                 checked=PaRgb.BN1,
             ),
 
-            auto_actions=DcAutoActions.Base,
+            auto_actions=DcAutoActions.Base(auto_exclusive=True),
         )

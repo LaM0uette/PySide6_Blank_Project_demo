@@ -40,11 +40,12 @@ class Demo:
     def Transparent(self):
         Style(
             widget=self.widget,
-            auto_actions=DcAutoActions.Base(auto_exclusive=True),
 
             background=DcRgbBg.Base(gen=PaRgb.TR),
             foreground=DcRgbFg.Base(
                 base=PaRgb.TH3,
                 checked=PaRgb.BN1,
             ),
+
+            auto_actions=DcAutoActions.Base(auto_exclusive=True),
         )
