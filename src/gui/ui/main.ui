@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>921</width>
-    <height>769</height>
+    <width>896</width>
+    <height>699</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="vlay_main">
@@ -151,9 +151,9 @@
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>0</y>
-              <width>898</width>
-              <height>8797</height>
+              <y>-13196</y>
+              <width>873</width>
+              <height>13845</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout">
@@ -581,418 +581,6 @@
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="fr_cb">
-               <layout class="QVBoxLayout" name="vlay_cb">
-                <property name="spacing">
-                 <number>10</number>
-                </property>
-                <property name="leftMargin">
-                 <number>10</number>
-                </property>
-                <property name="topMargin">
-                 <number>10</number>
-                </property>
-                <property name="rightMargin">
-                 <number>10</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>10</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="lb_cb_demo">
-                  <property name="text">
-                   <string>QComboBox :</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="verticalSpacer_2">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QComboBox" name="cb_demo_th">
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_th</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_th</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_th</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_th</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_th</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_th</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_th</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_th</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_th</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_th</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_th</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_th</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_th</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_th</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_th</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_th</string>
-                   </property>
-                  </item>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QComboBox" name="cb_demo_tr">
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_tr</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_tr</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_tr</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_tr</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_tr</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_tr</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_tr</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_tr</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_tr</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_tr</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_tr</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_tr</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_tr</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_tr</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_tr</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>cb_demo_tr</string>
-                   </property>
-                  </item>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item>
-              <widget class="QFrame" name="fr_de">
-               <layout class="QVBoxLayout" name="vlay_de">
-                <property name="spacing">
-                 <number>10</number>
-                </property>
-                <property name="leftMargin">
-                 <number>10</number>
-                </property>
-                <property name="topMargin">
-                 <number>10</number>
-                </property>
-                <property name="rightMargin">
-                 <number>10</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>10</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="lb_de_demo">
-                  <property name="text">
-                   <string>QDateEdit :</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="verticalSpacer_12">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QDateEdit" name="de_demo_th"/>
-                </item>
-                <item>
-                 <widget class="QDateEdit" name="de_demo_tr"/>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item>
-              <widget class="QFrame" name="fr_fr">
-               <layout class="QVBoxLayout" name="vlay_fr">
-                <property name="spacing">
-                 <number>10</number>
-                </property>
-                <property name="leftMargin">
-                 <number>10</number>
-                </property>
-                <property name="topMargin">
-                 <number>10</number>
-                </property>
-                <property name="rightMargin">
-                 <number>10</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>10</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="lb_fr_demo">
-                  <property name="text">
-                   <string>QFrame :</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="verticalSpacer_29">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QFrame" name="fr_demo_th">
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>120</height>
-                   </size>
-                  </property>
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QFrame" name="fr_demo_cadre">
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>120</height>
-                   </size>
-                  </property>
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QFrame" name="fr_demo_cadre_hover">
-                  <property name="minimumSize">
-                   <size>
-                    <width>0</width>
-                    <height>120</height>
-                   </size>
-                  </property>
-                  <property name="frameShape">
-                   <enum>QFrame::StyledPanel</enum>
-                  </property>
-                  <property name="frameShadow">
-                   <enum>QFrame::Raised</enum>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item>
-              <widget class="QFrame" name="fr_lb">
-               <layout class="QVBoxLayout" name="vlay_lb">
-                <property name="spacing">
-                 <number>10</number>
-                </property>
-                <property name="leftMargin">
-                 <number>10</number>
-                </property>
-                <property name="topMargin">
-                 <number>10</number>
-                </property>
-                <property name="rightMargin">
-                 <number>10</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>10</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="lb_lb_demo">
-                  <property name="text">
-                   <string>QLabel :</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="verticalSpacer_28">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QLabel" name="lb_lb_demo_th">
-                  <property name="text">
-                   <string>QLabel th</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLabel" name="lb_lb_demo_tr">
-                  <property name="text">
-                   <string>QLabel tr</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item>
               <widget class="QFrame" name="fr_lw">
                <layout class="QVBoxLayout" name="vlay_lw">
                 <property name="spacing">
@@ -1049,72 +637,14 @@
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="fr_pg">
-               <layout class="QVBoxLayout" name="vlay_pg">
-                <property name="spacing">
-                 <number>10</number>
-                </property>
-                <property name="leftMargin">
-                 <number>10</number>
-                </property>
-                <property name="topMargin">
-                 <number>10</number>
-                </property>
-                <property name="rightMargin">
-                 <number>10</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>10</number>
-                </property>
-                <item>
-                 <widget class="QLabel" name="lb_pg_demo">
-                  <property name="text">
-                   <string>QProgressBar :</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="verticalSpacer_17">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QProgressBar" name="pg_demo_th">
-                  <property name="value">
-                   <number>33</number>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QProgressBar" name="pg_demo_tr">
-                  <property name="value">
-                   <number>66</number>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item>
-              <widget class="QFrame" name="fr_sd">
+              <widget class="QFrame" name="fr_trw">
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
                </property>
                <property name="frameShadow">
                 <enum>QFrame::Raised</enum>
                </property>
-               <layout class="QGridLayout" name="gridLayout">
+               <layout class="QGridLayout" name="glay_fr_trw">
                 <property name="leftMargin">
                  <number>10</number>
                 </property>
@@ -1127,118 +657,17 @@
                 <property name="bottomMargin">
                  <number>10</number>
                 </property>
+                <property name="horizontalSpacing">
+                 <number>0</number>
+                </property>
+                <property name="verticalSpacing">
+                 <number>10</number>
+                </property>
                 <item row="2" column="1">
-                 <widget class="QSlider" name="hsd_demo">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                 </widget>
+                 <widget class="QTreeView" name="trv_demo_th"/>
                 </item>
-                <item row="4" column="1" alignment="Qt::AlignHCenter">
-                 <widget class="QSlider" name="vsd_demo">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                 </widget>
-                </item>
-                <item row="4" column="0">
-                 <spacer name="horizontalSpacer_5">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item row="0" column="0" colspan="3">
-                 <widget class="QLabel" name="lb_sd_demo">
-                  <property name="text">
-                   <string>QSlider :</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="1" column="0" colspan="3">
-                 <spacer name="verticalSpacer_26">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item row="4" column="2">
-                 <spacer name="horizontalSpacer_6">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item row="3" column="0" colspan="3">
-                 <spacer name="verticalSpacer_27">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-               </layout>
-              </widget>
-             </item>
-             <item>
-              <widget class="QFrame" name="fr_sb">
-               <layout class="QGridLayout" name="glay_sb">
-                <property name="leftMargin">
-                 <number>10</number>
-                </property>
-                <property name="topMargin">
-                 <number>10</number>
-                </property>
-                <property name="rightMargin">
-                 <number>10</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>10</number>
-                </property>
-                <property name="spacing">
-                 <number>10</number>
-                </property>
-                <item row="0" column="0" colspan="3">
-                 <widget class="QLabel" name="lb_sb_demo">
-                  <property name="text">
-                   <string>QSpinBox / QDoubleSpinBox :</string>
-                  </property>
-                 </widget>
-                </item>
-                <item row="2" column="1">
-                 <widget class="QSpinBox" name="sb_demo"/>
-                </item>
-                <item row="1" column="0" colspan="3">
-                 <spacer name="verticalSpacer_18">
+                <item row="4" column="1">
+                 <spacer name="verticalSpacer_24">
                   <property name="orientation">
                    <enum>Qt::Vertical</enum>
                   </property>
@@ -1254,39 +683,508 @@
                  </spacer>
                 </item>
                 <item row="3" column="1">
-                 <widget class="QSpinBox" name="sb_demo_2"/>
+                 <widget class="QTreeWidget" name="trw_demo_th">
+                  <column>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </column>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>New Subitem</string>
+                      </property>
+                     </item>
+                    </item>
+                   </item>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                    </item>
+                   </item>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>New Subitem</string>
+                      </property>
+                     </item>
+                    </item>
+                   </item>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                    </item>
+                   </item>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>New Subitem</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>New Subitem</string>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>New Subitem</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item</string>
+                        </property>
+                       </item>
+                      </item>
+                     </item>
+                    </item>
+                   </item>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                    </item>
+                   </item>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>New Item</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>New Item</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>New Subitem</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>New Item</string>
+                      </property>
+                     </item>
+                    </item>
+                   </item>
+                  </item>
+                 </widget>
                 </item>
-                <item row="4" column="1">
-                 <widget class="QSpinBox" name="sb_demo_3"/>
+                <item row="1" column="0" colspan="3">
+                 <spacer name="verticalSpacer_23">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="0" column="0" colspan="3">
+                 <widget class="QLabel" name="lb_trw_demo">
+                  <property name="text">
+                   <string>QTreeWidget :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="6" column="1">
+                 <widget class="QTreeWidget" name="trw_demo_tr">
+                  <column>
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </column>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>New Subitem</string>
+                      </property>
+                     </item>
+                    </item>
+                   </item>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                    </item>
+                   </item>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>New Subitem</string>
+                      </property>
+                     </item>
+                    </item>
+                   </item>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                    </item>
+                   </item>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>New Subitem</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>New Subitem</string>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>New Subitem</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>New Item</string>
+                        </property>
+                       </item>
+                      </item>
+                     </item>
+                    </item>
+                   </item>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                    </item>
+                   </item>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>New Item</string>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>New Subitem</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>New Subitem</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>New Item</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>New Item</string>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string>New Subitem</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>New Item</string>
+                      </property>
+                     </item>
+                    </item>
+                   </item>
+                  </item>
+                 </widget>
                 </item>
                 <item row="5" column="1">
-                 <widget class="QDoubleSpinBox" name="dsb_demo"/>
-                </item>
-                <item row="2" column="2" rowspan="4">
-                 <spacer name="horizontalSpacer_3">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item row="2" column="0" rowspan="4">
-                 <spacer name="horizontalSpacer">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
+                 <widget class="QTreeView" name="trv_demo_tr"/>
                 </item>
                </layout>
               </widget>
@@ -2090,6 +1988,880 @@
               </widget>
              </item>
              <item>
+              <widget class="QFrame" name="fr_cv">
+               <layout class="QVBoxLayout" name="vlay_cb_3">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_cv_demo">
+                  <property name="text">
+                   <string>QColumnView :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_7">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QColumnView" name="cv_demo_th"/>
+                </item>
+                <item>
+                 <widget class="QColumnView" name="cv_demo_tr"/>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_uv">
+               <layout class="QVBoxLayout" name="vlay_cb_2">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_uv_demo">
+                  <property name="text">
+                   <string>QUndoView :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_6">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QUndoView" name="uv_demo_th"/>
+                </item>
+                <item>
+                 <widget class="QUndoView" name="uv_demo_tr"/>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_gb">
+               <layout class="QVBoxLayout" name="vlay_cb_4">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_gb_demo">
+                  <property name="text">
+                   <string>QGroupBox :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_8">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="gb_demo_th">
+                  <property name="title">
+                   <string>GroupBox</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="gb_demo_tr">
+                  <property name="title">
+                   <string>GroupBox</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_tbx">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QVBoxLayout" name="vlay_fr_tb">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_tbx_demo">
+                  <property name="text">
+                   <string>QToolBox :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_25">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QToolBox" name="tbx_demo_th">
+                  <property name="currentIndex">
+                   <number>0</number>
+                  </property>
+                  <widget class="QWidget" name="page">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>651</width>
+                     <height>69</height>
+                    </rect>
+                   </property>
+                   <attribute name="label">
+                    <string>Page 1</string>
+                   </attribute>
+                   <layout class="QVBoxLayout" name="verticalLayout_3">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QFrame" name="fr_tbx_demo_th_1">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QWidget" name="page_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>651</width>
+                     <height>69</height>
+                    </rect>
+                   </property>
+                   <attribute name="label">
+                    <string>Page 2</string>
+                   </attribute>
+                   <layout class="QVBoxLayout" name="verticalLayout_4">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QFrame" name="fr_tbx_demo_th_2">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QToolBox" name="tbx_demo_tr">
+                  <property name="currentIndex">
+                   <number>0</number>
+                  </property>
+                  <widget class="QWidget" name="page_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>651</width>
+                     <height>69</height>
+                    </rect>
+                   </property>
+                   <attribute name="label">
+                    <string>Page 1</string>
+                   </attribute>
+                   <layout class="QVBoxLayout" name="verticalLayout_5">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QFrame" name="fr_tbx_demo_tr_1">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                  <widget class="QWidget" name="page_4">
+                   <property name="geometry">
+                    <rect>
+                     <x>0</x>
+                     <y>0</y>
+                     <width>651</width>
+                     <height>69</height>
+                    </rect>
+                   </property>
+                   <attribute name="label">
+                    <string>Page 2</string>
+                   </attribute>
+                   <layout class="QVBoxLayout" name="verticalLayout_6">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QFrame" name="fr_tbx_demo_tr_2">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_tbw">
+               <layout class="QVBoxLayout" name="vlay_cb_5">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_tbw_demo">
+                  <property name="text">
+                   <string>QTabWidget :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_9">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QTabWidget" name="tbw_demo_th">
+                  <property name="currentIndex">
+                   <number>1</number>
+                  </property>
+                  <widget class="QWidget" name="tab">
+                   <attribute name="title">
+                    <string>Tab 1</string>
+                   </attribute>
+                  </widget>
+                  <widget class="QWidget" name="tab_2">
+                   <attribute name="title">
+                    <string>Tab 2</string>
+                   </attribute>
+                  </widget>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QTabWidget" name="tbw_demo_tr">
+                  <property name="currentIndex">
+                   <number>1</number>
+                  </property>
+                  <widget class="QWidget" name="tab_3">
+                   <attribute name="title">
+                    <string>Tab 1</string>
+                   </attribute>
+                  </widget>
+                  <widget class="QWidget" name="tab_4">
+                   <attribute name="title">
+                    <string>Tab 2</string>
+                   </attribute>
+                  </widget>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_stk">
+               <layout class="QVBoxLayout" name="vlay_cb_6">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_stk_demo">
+                  <property name="text">
+                   <string>QStackedWidget :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_10">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QStackedWidget" name="stk_demo_th">
+                  <widget class="QWidget" name="page_5"/>
+                  <widget class="QWidget" name="page_6"/>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_fr">
+               <layout class="QVBoxLayout" name="vlay_fr">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_fr_demo">
+                  <property name="text">
+                   <string>QFrame :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_29">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QFrame" name="fr_demo_th">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>120</height>
+                   </size>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QFrame" name="fr_demo_cadre">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>120</height>
+                   </size>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QFrame" name="fr_demo_cadre_hover">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>120</height>
+                   </size>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_dck">
+               <layout class="QVBoxLayout" name="vlay_cb_7">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_dck_demo">
+                  <property name="text">
+                   <string>QDockWidget :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_11">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QDockWidget" name="dck_demo_th">
+                  <widget class="QWidget" name="dockWidgetContents"/>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QDockWidget" name="dck_demo_tr">
+                  <widget class="QWidget" name="dockWidgetContents_2"/>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_cb">
+               <layout class="QVBoxLayout" name="vlay_cb">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_cb_demo">
+                  <property name="text">
+                   <string>QComboBox :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="cb_demo_th">
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_th</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_th</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_th</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_th</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_th</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_th</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_th</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_th</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_th</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_th</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_th</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_th</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_th</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_th</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_th</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_th</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="cb_demo_tr">
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_tr</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_tr</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_tr</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_tr</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_tr</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_tr</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_tr</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_tr</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_tr</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_tr</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_tr</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_tr</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_tr</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_tr</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_tr</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>cb_demo_tr</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QFontComboBox" name="fcb_demo_th"/>
+                </item>
+                <item>
+                 <widget class="QFontComboBox" name="fcb_demo_tr"/>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
               <widget class="QFrame" name="fr_le">
                <layout class="QVBoxLayout" name="vlay_le">
                 <property name="spacing">
@@ -2272,14 +3044,90 @@ hr { height: 1px; border-width: 0; }
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="fr_tbx">
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <layout class="QVBoxLayout" name="vlay_fr_tb">
+              <widget class="QFrame" name="fr_sb">
+               <layout class="QGridLayout" name="glay_sb">
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <item row="0" column="0" colspan="3">
+                 <widget class="QLabel" name="lb_sb_demo">
+                  <property name="text">
+                   <string>QSpinBox / QDoubleSpinBox :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QSpinBox" name="sb_demo"/>
+                </item>
+                <item row="1" column="0" colspan="3">
+                 <spacer name="verticalSpacer_18">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QSpinBox" name="sb_demo_2"/>
+                </item>
+                <item row="4" column="1">
+                 <widget class="QSpinBox" name="sb_demo_3"/>
+                </item>
+                <item row="5" column="1">
+                 <widget class="QDoubleSpinBox" name="dsb_demo"/>
+                </item>
+                <item row="2" column="2" rowspan="4">
+                 <spacer name="horizontalSpacer_3">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="2" column="0" rowspan="4">
+                 <spacer name="horizontalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_tie">
+               <layout class="QVBoxLayout" name="vlay_de_2">
                 <property name="spacing">
                  <number>10</number>
                 </property>
@@ -2296,14 +3144,14 @@ hr { height: 1px; border-width: 0; }
                  <number>10</number>
                 </property>
                 <item>
-                 <widget class="QLabel" name="lb_tbx_demo">
+                 <widget class="QLabel" name="lb_tie_demo">
                   <property name="text">
-                   <string>QToolBox :</string>
+                   <string>QTimeEdit :</string>
                   </property>
                  </widget>
                 </item>
                 <item>
-                 <spacer name="verticalSpacer_25">
+                 <spacer name="verticalSpacer_32">
                   <property name="orientation">
                    <enum>Qt::Vertical</enum>
                   </property>
@@ -2319,191 +3167,20 @@ hr { height: 1px; border-width: 0; }
                  </spacer>
                 </item>
                 <item>
-                 <widget class="QToolBox" name="tbx_demo_th">
-                  <property name="currentIndex">
-                   <number>0</number>
-                  </property>
-                  <widget class="QWidget" name="page">
-                   <property name="geometry">
-                    <rect>
-                     <x>0</x>
-                     <y>0</y>
-                     <width>676</width>
-                     <height>69</height>
-                    </rect>
-                   </property>
-                   <attribute name="label">
-                    <string>Page 1</string>
-                   </attribute>
-                   <layout class="QVBoxLayout" name="verticalLayout_2">
-                    <property name="spacing">
-                     <number>0</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QFrame" name="fr_tbx_demo_th_1">
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                  <widget class="QWidget" name="page_2">
-                   <property name="geometry">
-                    <rect>
-                     <x>0</x>
-                     <y>0</y>
-                     <width>676</width>
-                     <height>69</height>
-                    </rect>
-                   </property>
-                   <attribute name="label">
-                    <string>Page 2</string>
-                   </attribute>
-                   <layout class="QVBoxLayout" name="verticalLayout_3">
-                    <property name="spacing">
-                     <number>0</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QFrame" name="fr_tbx_demo_th_2">
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </widget>
+                 <widget class="QTimeEdit" name="tie_demo_th"/>
                 </item>
                 <item>
-                 <widget class="QToolBox" name="tbx_demo_tr">
-                  <property name="currentIndex">
-                   <number>0</number>
-                  </property>
-                  <widget class="QWidget" name="page_3">
-                   <property name="geometry">
-                    <rect>
-                     <x>0</x>
-                     <y>0</y>
-                     <width>676</width>
-                     <height>69</height>
-                    </rect>
-                   </property>
-                   <attribute name="label">
-                    <string>Page 1</string>
-                   </attribute>
-                   <layout class="QVBoxLayout" name="verticalLayout_4">
-                    <property name="spacing">
-                     <number>0</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QFrame" name="fr_tbx_demo_tr_1">
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                  <widget class="QWidget" name="page_4">
-                   <property name="geometry">
-                    <rect>
-                     <x>0</x>
-                     <y>0</y>
-                     <width>676</width>
-                     <height>69</height>
-                    </rect>
-                   </property>
-                   <attribute name="label">
-                    <string>Page 2</string>
-                   </attribute>
-                   <layout class="QVBoxLayout" name="verticalLayout_5">
-                    <property name="spacing">
-                     <number>0</number>
-                    </property>
-                    <property name="leftMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="topMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="rightMargin">
-                     <number>0</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>0</number>
-                    </property>
-                    <item>
-                     <widget class="QFrame" name="fr_tbx_demo_tr_2">
-                      <property name="frameShape">
-                       <enum>QFrame::StyledPanel</enum>
-                      </property>
-                      <property name="frameShadow">
-                       <enum>QFrame::Raised</enum>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </widget>
+                 <widget class="QTimeEdit" name="tie_demo_tr"/>
                 </item>
                </layout>
               </widget>
              </item>
              <item>
-              <widget class="QFrame" name="fr_trw">
-               <property name="frameShape">
-                <enum>QFrame::StyledPanel</enum>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Raised</enum>
-               </property>
-               <layout class="QGridLayout" name="glay_fr_trw">
+              <widget class="QFrame" name="fr_de">
+               <layout class="QVBoxLayout" name="vlay_de">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
                 <property name="leftMargin">
                  <number>10</number>
                 </property>
@@ -2516,550 +3193,712 @@ hr { height: 1px; border-width: 0; }
                 <property name="bottomMargin">
                  <number>10</number>
                 </property>
-                <property name="horizontalSpacing">
-                 <number>0</number>
-                </property>
-                <property name="verticalSpacing">
-                 <number>10</number>
-                </property>
-                <item row="2" column="1">
-                 <widget class="QTreeView" name="trv_demo_th"/>
-                </item>
-                <item row="4" column="1">
-                 <spacer name="verticalSpacer_24">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item row="3" column="1">
-                 <widget class="QTreeWidget" name="trw_demo_th">
-                  <column>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </column>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>New Subitem</string>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>New Subitem</string>
-                     </property>
-                     <item>
-                      <property name="text">
-                       <string>New Subitem</string>
-                      </property>
-                     </item>
-                    </item>
-                   </item>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>New Subitem</string>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>New Subitem</string>
-                     </property>
-                    </item>
-                   </item>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>New Subitem</string>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>New Subitem</string>
-                     </property>
-                     <item>
-                      <property name="text">
-                       <string>New Subitem</string>
-                      </property>
-                     </item>
-                    </item>
-                   </item>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>New Subitem</string>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>New Subitem</string>
-                     </property>
-                    </item>
-                   </item>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>New Subitem</string>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>New Subitem</string>
-                     </property>
-                     <item>
-                      <property name="text">
-                       <string>New Subitem</string>
-                      </property>
-                      <item>
-                       <property name="text">
-                        <string>New Subitem</string>
-                       </property>
-                       <item>
-                        <property name="text">
-                         <string>New Subitem</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>New Item</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>New Item</string>
-                        </property>
-                       </item>
-                      </item>
-                     </item>
-                    </item>
-                   </item>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>New Subitem</string>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>New Subitem</string>
-                     </property>
-                    </item>
-                   </item>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>New Subitem</string>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>New Subitem</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>New Item</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>New Item</string>
-                     </property>
-                     <item>
-                      <property name="text">
-                       <string>New Subitem</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>New Item</string>
-                      </property>
-                     </item>
-                    </item>
-                   </item>
-                  </item>
-                 </widget>
-                </item>
-                <item row="1" column="0" colspan="3">
-                 <spacer name="verticalSpacer_23">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeType">
-                   <enum>QSizePolicy::Fixed</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item row="0" column="0" colspan="3">
-                 <widget class="QLabel" name="lb_trw_demo">
+                <item>
+                 <widget class="QLabel" name="lb_de_demo">
                   <property name="text">
-                   <string>QTreeWidget :</string>
+                   <string>QDateEdit :</string>
                   </property>
                  </widget>
                 </item>
-                <item row="6" column="1">
-                 <widget class="QTreeWidget" name="trw_demo_tr">
-                  <column>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </column>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>New Subitem</string>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>New Subitem</string>
-                     </property>
-                     <item>
-                      <property name="text">
-                       <string>New Subitem</string>
-                      </property>
-                     </item>
-                    </item>
-                   </item>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>New Subitem</string>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>New Subitem</string>
-                     </property>
-                    </item>
-                   </item>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>New Subitem</string>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>New Subitem</string>
-                     </property>
-                     <item>
-                      <property name="text">
-                       <string>New Subitem</string>
-                      </property>
-                     </item>
-                    </item>
-                   </item>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>New Subitem</string>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>New Subitem</string>
-                     </property>
-                    </item>
-                   </item>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>New Subitem</string>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>New Subitem</string>
-                     </property>
-                     <item>
-                      <property name="text">
-                       <string>New Subitem</string>
-                      </property>
-                      <item>
-                       <property name="text">
-                        <string>New Subitem</string>
-                       </property>
-                       <item>
-                        <property name="text">
-                         <string>New Subitem</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>New Item</string>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>New Item</string>
-                        </property>
-                       </item>
-                      </item>
-                     </item>
-                    </item>
-                   </item>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>New Subitem</string>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>New Subitem</string>
-                     </property>
-                    </item>
-                   </item>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                  </item>
-                  <item>
-                   <property name="text">
-                    <string>New Item</string>
-                   </property>
-                   <item>
-                    <property name="text">
-                     <string>New Subitem</string>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string>New Subitem</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>New Item</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>New Item</string>
-                     </property>
-                     <item>
-                      <property name="text">
-                       <string>New Subitem</string>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string>New Item</string>
-                      </property>
-                     </item>
-                    </item>
-                   </item>
-                  </item>
-                 </widget>
+                <item>
+                 <spacer name="verticalSpacer_12">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
                 </item>
-                <item row="5" column="1">
-                 <widget class="QTreeView" name="trv_demo_tr"/>
+                <item>
+                 <widget class="QDateEdit" name="de_demo_th"/>
+                </item>
+                <item>
+                 <widget class="QDateEdit" name="de_demo_tr"/>
                 </item>
                </layout>
               </widget>
              </item>
              <item>
-              <spacer name="verticalSpacer">
-               <property name="orientation">
-                <enum>Qt::Vertical</enum>
+              <widget class="QFrame" name="fr_dte">
+               <layout class="QVBoxLayout" name="vlay_de_3">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_dte_demo">
+                  <property name="text">
+                   <string>QDateTimeEdit :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_33">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QDateTimeEdit" name="dte_demo_th"/>
+                </item>
+                <item>
+                 <widget class="QDateTimeEdit" name="dte_demo_tr"/>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_da">
+               <layout class="QVBoxLayout" name="vlay_de_4">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_da_demo">
+                  <property name="text">
+                   <string>QDial :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_34">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QDial" name="da_demo_th"/>
+                </item>
+                <item>
+                 <widget class="QDial" name="da_demo_tr"/>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_scb">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
                </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>40</height>
-                </size>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
                </property>
-              </spacer>
+               <layout class="QGridLayout" name="gridLayout_2">
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item row="1" column="0" colspan="3">
+                 <spacer name="verticalSpacer_35">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="4" column="2">
+                 <spacer name="horizontalSpacer_8">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="4" column="0">
+                 <spacer name="horizontalSpacer_7">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="0" column="0" colspan="3">
+                 <widget class="QLabel" name="lb_scb_demo">
+                  <property name="text">
+                   <string>QScrollBar :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0" colspan="3">
+                 <spacer name="verticalSpacer_36">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QScrollBar" name="h_scb_demo">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="1" alignment="Qt::AlignHCenter">
+                 <widget class="QScrollBar" name="v_scb_demo">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_sd">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QGridLayout" name="gridLayout">
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item row="2" column="1">
+                 <widget class="QSlider" name="hsd_demo">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="1" alignment="Qt::AlignHCenter">
+                 <widget class="QSlider" name="vsd_demo">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0">
+                 <spacer name="horizontalSpacer_5">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="0" column="0" colspan="3">
+                 <widget class="QLabel" name="lb_sd_demo">
+                  <property name="text">
+                   <string>QSlider :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0" colspan="3">
+                 <spacer name="verticalSpacer_26">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="4" column="2">
+                 <spacer name="horizontalSpacer_6">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="3" column="0" colspan="3">
+                 <spacer name="verticalSpacer_27">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_lb">
+               <layout class="QVBoxLayout" name="vlay_lb">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_lb_demo">
+                  <property name="text">
+                   <string>QLabel :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_28">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lb_lb_demo_th">
+                  <property name="text">
+                   <string>QLabel th</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="lb_lb_demo_tr">
+                  <property name="text">
+                   <string>QLabel tr</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_tbr">
+               <layout class="QVBoxLayout" name="vlay_pg_2">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_tbr_demo">
+                  <property name="text">
+                   <string>QTextBrowser :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_37">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QTextBrowser" name="tbr_demo_th"/>
+                </item>
+                <item>
+                 <widget class="QTextBrowser" name="tbr_demo_tr"/>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_cw">
+               <layout class="QVBoxLayout" name="vlay_pg_3">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_cw_demo">
+                  <property name="text">
+                   <string>QCalendarWidget :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_38">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QCalendarWidget" name="cw_demo_th"/>
+                </item>
+                <item>
+                 <widget class="QCalendarWidget" name="cw_demo_tr"/>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_lcdn">
+               <layout class="QVBoxLayout" name="vlay_pg_4">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_lcdn_demo">
+                  <property name="text">
+                   <string>QLCDNumber :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_39">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QLCDNumber" name="lcdn_demo_th"/>
+                </item>
+                <item>
+                 <widget class="QLCDNumber" name="lcdn_demo_tr"/>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_pg">
+               <layout class="QVBoxLayout" name="vlay_pg">
+                <property name="spacing">
+                 <number>10</number>
+                </property>
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item>
+                 <widget class="QLabel" name="lb_pg_demo">
+                  <property name="text">
+                   <string>QProgressBar :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_17">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QProgressBar" name="pg_demo_th">
+                  <property name="value">
+                   <number>33</number>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QProgressBar" name="pg_demo_tr">
+                  <property name="value">
+                   <number>66</number>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+             <item>
+              <widget class="QFrame" name="fr_ln">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QGridLayout" name="gridLayout_3">
+                <property name="leftMargin">
+                 <number>10</number>
+                </property>
+                <property name="topMargin">
+                 <number>10</number>
+                </property>
+                <property name="rightMargin">
+                 <number>10</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>10</number>
+                </property>
+                <item row="4" column="0">
+                 <spacer name="horizontalSpacer_9">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="1" column="0" colspan="3">
+                 <spacer name="verticalSpacer_40">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="4" column="2">
+                 <spacer name="horizontalSpacer_10">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="0" column="0" colspan="3">
+                 <widget class="QLabel" name="lb_ln_demo">
+                  <property name="text">
+                   <string>QLine :</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="0" colspan="3">
+                 <spacer name="verticalSpacer_41">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item row="2" column="1">
+                 <widget class="Line" name="hln_demo">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="1">
+                 <widget class="Line" name="vln_demo">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
              </item>
             </layout>
            </widget>
