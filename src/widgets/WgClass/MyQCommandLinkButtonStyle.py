@@ -27,7 +27,6 @@ class Style(MyQCommandLinkButton):
             background=v_wg.BACKGROUND,
             foreground=v_wg.FOREGROUND,
             spacing=10,
-            img=v_wg.IMG,
             border=v_wg.BORDER,
     ):
         # Style
@@ -54,28 +53,6 @@ class Style(MyQCommandLinkButton):
                 }}
                 QCommandLinkButton:checked:pressed {{
                 background-color: rgba{background.checked_pressed};
-                }}
-
-                /* IMG */
-                QCommandLinkButton::indicator {{
-                margin-top: {img.margin[0]}px;
-                margin-bottom: {img.margin[1]}px;
-                margin-right: {img.margin[2]}px;
-                margin-left: {img.margin[3]}px;
-                width: {img.width}px;
-                height: {img.height}px;
-                }}
-                QCommandLinkButton::indicator:unchecked {{
-                image: url({f"{img.uncheck}{img.uncheck_rgb}.svg"});
-                }}
-                QCommandLinkButton::indicator:hover {{
-                image: url({f"{img.uncheck_hover}{img.uncheck_hover_rgb}.svg"});
-                }}
-                QCommandLinkButton::indicator:checked {{
-                image: url({f"{img.check}{img.check_rgb}.svg"});
-                }}
-                QCommandLinkButton::indicator:checked:hover {{
-                image: url({f"{img.check_hover}{img.check_hover_rgb}.svg"});
                 }}
 
                 /* BORDURES */
