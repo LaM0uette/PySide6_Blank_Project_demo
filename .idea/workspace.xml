@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - Button - MyQAbstractItemViewStyle">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/heritageWg.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/heritageWg.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyApp.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +35,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
@@ -102,7 +101,7 @@
       <workItem from="1648132197941" duration="53000" />
       <workItem from="1648132912911" duration="1577000" />
       <workItem from="1648141368566" duration="17000" />
-      <workItem from="1648197704112" duration="4343000" />
+      <workItem from="1648197704112" duration="6036000" />
     </task>
     <task id="LOCAL-00001" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
       <created>1648044918698</created>
@@ -370,7 +369,21 @@
       <option name="project" value="LOCAL" />
       <updated>1648197906675</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQAbstractItemViewStyle">
+      <created>1648213327063</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1648213327063</updated>
+    </task>
+    <task id="LOCAL-00040" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQAbstractItemViewStyle">
+      <created>1648215377922</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1648215377922</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
