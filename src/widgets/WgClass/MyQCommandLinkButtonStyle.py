@@ -15,7 +15,7 @@ class Style(MyQCommandLinkButton):
 
             txt=v_wg.TXT,
             ico=v_wg.ICO,
-            checkable=True,
+            checkable=False,
             checked=False,
             auto_actions=v_wg.AUTO_ACTIONS,
 
