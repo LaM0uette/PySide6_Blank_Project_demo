@@ -12,6 +12,7 @@ from src.lib.palettes.PaFocusPolicy import PaFocusPolicy
 from src.lib.palettes.PaFont import PaFont
 from src.lib.palettes.PaFrameShadow import PaFrameShadow
 from src.lib.palettes.PaFrameShape import PaFrameShape
+from src.lib.palettes.PaGridStyle import PaGridStyle
 from src.lib.palettes.PaImg import PaImg
 from src.lib.palettes.PaInputMask import PaInputMask
 from src.lib.palettes.PaInsertPolicy import PaInsertPolicy

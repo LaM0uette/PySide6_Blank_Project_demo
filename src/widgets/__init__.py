@@ -21,5 +21,7 @@ from src.widgets import MyScrollArea
 from src.widgets import MyFrame
 from src.widgets import MyListView
 from src.widgets import MyTreeView
+from src.widgets import MyTableView
 from src.widgets import MyListWidget
 from src.widgets import MyTreeWidget
+from src.widgets import MyTableWidget

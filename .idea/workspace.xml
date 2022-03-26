@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes">
-      <change beforePath="$PROJECT_DIR$/src/widgets/WgClass/MyQTreeViewStyle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQTreeViewStyle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/palettes/PaGridStyle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/palettes/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/palettes/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/WgClass/MyQTableViewStyle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQTableViewStyle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/WgClass/MyQTableWidgetStyle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQTableWidgetStyle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,15 +42,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/widgets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/lib/palettes" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\lib\palettes" />
       <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\widgets" />
       <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\widgets\WgClass" />
       <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\lib\palettes\DataClass" />
-      <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\lib\palettes" />
       <recent name="C:\Users\XD5965\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\lib\palettes\DataClass" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -98,13 +103,6 @@
       <workItem from="1648197704112" duration="6800000" />
       <workItem from="1648296124993" duration="3002000" />
       <workItem from="1648304271958" duration="4517000" />
-    </task>
-    <task id="LOCAL-00016" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
-      <created>1648108873724</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1648108873724</updated>
     </task>
     <task id="LOCAL-00017" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
       <created>1648109362231</created>
@@ -442,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648310058523</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes">
+      <created>1648310154228</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1648310154228</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
