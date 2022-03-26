@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes">
-      <change afterPath="$PROJECT_DIR$/src/widgets/MyTreeView.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/widgets/MyTreeWidget.py" afterDir="false" />
+    <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - Button - MyQlistView">
+      <change afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQTreeView.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQTreeViewStyle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/heritageWg.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/heritageWg.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/WgClass/MyQTreeViewStyle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQTreeViewStyle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/WgClass/MyQTreeWidgetStyle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQTreeWidgetStyle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,13 +40,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/widgets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/widgets/WgClass" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\widgets" />
       <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\widgets\WgClass" />
+      <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\widgets" />
       <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\lib\palettes\DataClass" />
       <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\lib\palettes" />
       <recent name="C:\Users\XD5965\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\lib\palettes\DataClass" />
@@ -103,7 +100,35 @@
       <workItem from="1648141368566" duration="17000" />
       <workItem from="1648197704112" duration="6800000" />
       <workItem from="1648296124993" duration="3002000" />
-      <workItem from="1648304271958" duration="5330000" />
+      <workItem from="1648304271958" duration="4517000" />
+    </task>
+    <task id="LOCAL-00014" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
+      <created>1648108376929</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1648108376929</updated>
+    </task>
+    <task id="LOCAL-00015" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
+      <created>1648108687053</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1648108687053</updated>
+    </task>
+    <task id="LOCAL-00016" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
+      <created>1648108873724</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1648108873724</updated>
+    </task>
+    <task id="LOCAL-00017" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
+      <created>1648109362231</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1648109362231</updated>
     </task>
     <task id="LOCAL-00018" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
       <created>1648109679400</created>
@@ -420,35 +445,7 @@
       <option name="project" value="LOCAL" />
       <updated>1648308362528</updated>
     </task>
-    <task id="LOCAL-00063" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQlistView">
-      <created>1648308832433</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1648308832433</updated>
-    </task>
-    <task id="LOCAL-00064" summary="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes">
-      <created>1648308853716</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1648308853716</updated>
-    </task>
-    <task id="LOCAL-00065" summary="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes">
-      <created>1648309003508</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1648309003508</updated>
-    </task>
-    <task id="LOCAL-00066" summary="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes">
-      <created>1648309187763</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1648309187763</updated>
-    </task>
-    <option name="localTasksCounter" value="67" />
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,8 +468,7 @@
     <MESSAGE value="REMAKE - Refonte des WG avec héritage avancé - Button - MyQCommandLinkButtonStyle" />
     <MESSAGE value="REMAKE - Refonte des WG avec héritage avancé - Button - MyQAbstractItemViewStyle" />
     <MESSAGE value="REMAKE - Refonte des WG avec héritage avancé - Button - MyQlistView" />
-    <MESSAGE value="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="REMAKE - Refonte des WG avec héritage avancé - Button - MyQlistView" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PySide6_Blank_Project_demo$MyApp.coverage" NAME="MyApp Coverage Results" MODIFIED="1648308338112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
