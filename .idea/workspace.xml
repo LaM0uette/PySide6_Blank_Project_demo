@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - Button - MyQlistView">
-      <change afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQTreeView.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQTreeViewStyle.py" afterDir="false" />
+    <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes">
+      <change afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQTableWidget.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/heritageWg.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/heritageWg.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/WgClass/MyQTableView.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQTableView.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -1,7 +1,7 @@
-from .MyQAbstractItemView import MyQAbstractItemView
+from .MyQTableView import MyQTableView
 
 
-class MyQTableView(MyQAbstractItemView):
+class MyQTableWidget(MyQTableView):
     def __init__(
             self,
             widget,
@@ -25,10 +25,11 @@ class MyQTableView(MyQAbstractItemView):
             grid_style,
             sorting,
             corner_button_enabled,
-    ):
-        super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, frame, scroll_policy, abstract_item_view, drag_drop, selection_mode, selection_behavior)
 
-        widget.setShowGrid(show_grid)
-        widget.setGridStyle(grid_style)
-        widget.setSortingEnabled(sorting)
-        widget.setCornerButtonEnabled(corner_button_enabled)
+            row_count,
+            column_count,
+    ):
+        super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, frame, scroll_policy, abstract_item_view, drag_drop, selection_mode, selection_behavior, show_grid,grid_style,sorting,corner_button_enabled)
+
+        widget.setRowCount(row_count)
+        widget.setColumnCount(column_count)
