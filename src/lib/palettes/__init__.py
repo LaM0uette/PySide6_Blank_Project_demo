@@ -1,4 +1,3 @@
-# palettes
 from src.lib.palettes.PaAlign import PaAlign
 from src.lib.palettes.PaArrowType import PaArrowType
 from src.lib.palettes.PaAutoFormating import PaAutoFormating
@@ -18,7 +17,7 @@ from src.lib.palettes.PaInputMask import PaInputMask
 from src.lib.palettes.PaInsertPolicy import PaInsertPolicy
 from src.lib.palettes.PaKeys import PaKeys
 from src.lib.palettes.PaLayoutDirection import PaLayoutDirection
-from src.lib.palettes.PaToolButtonStyle import PaToolButtonStyle
+from src.lib.palettes.PaMovement import PaMovement
 from src.lib.palettes.PaPopupMode import PaPopupMode
 from src.lib.palettes.PaProgressFormat import PaProgressFormat
 from src.lib.palettes.PaRgb import PaRgb
@@ -31,6 +30,7 @@ from src.lib.palettes.PaSizePolicy import PaSizePolicy
 from src.lib.palettes.PaStyleBase import PaStyleBase
 from src.lib.palettes.PaTextFormat import PaTextFormat
 from src.lib.palettes.PaTickPosition import PaTickPosition
+from src.lib.palettes.PaToolButtonStyle import PaToolButtonStyle
 
 # DataClass
 from src.lib.palettes.DataClass import *
