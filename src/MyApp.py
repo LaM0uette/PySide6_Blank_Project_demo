@@ -109,6 +109,12 @@ class main(Ui_main, QtWidgets.QWidget):
         ### /QCommandLinkButton  ###
 
 
+        # ### QListView ###
+        MyListView.Demo(self.lv_demo_th).Base()
+        MyListView.Demo(self.lv_demo_tr).Transparent()
+        # ### /QListView ###
+
+
         # ### QScrollBoxArea ###
         MyScrollArea.Base(self.sca_main).Main()
         # ### /QScrollBoxArea ###
