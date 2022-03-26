@@ -19,7 +19,7 @@ class Style(MyQListWidget):
             scroll_policy=v_wg.SCROLL_POLICY,
 
             abstract_item_view=DcAbstractItemView.Base,
-            drag_drop=DcScrollPolicy.Base,
+            drag_drop=DcDragDrop.Base,
             selection_mode=PaSelectionMode.SINGLE,
             selection_behavior=PaSelectionBehavior.ROW,
 

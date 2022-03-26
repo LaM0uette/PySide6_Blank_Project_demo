@@ -28,7 +28,7 @@ class MyQAbstractItemView(MyQAbstractScrollArea):
         widget.setTabKeyNavigation(abstract_item_view.tab_navigation)
         widget.setDragEnabled(drag_drop.drag_enabled)
         widget.setDragDropMode(drag_drop.drag_drop_mode)
-        widget.setDefaultDropAction(abstract_item_view.drag_drop.drop_action)
+        widget.setDefaultDropAction(drag_drop.drop_action)
         widget.setAlternatingRowColors(abstract_item_view.alternative_row_colors)
         widget.setSelectionMode(selection_mode)
         widget.setSelectionBehavior(selection_behavior)

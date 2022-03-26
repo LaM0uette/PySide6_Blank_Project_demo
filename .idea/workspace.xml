@@ -6,12 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - Button - MyQlistView">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/palettes/DataClass/DcAbstractItemView.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/palettes/DataClass/DcAbstractItemView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/ListWidget/ListWidget.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/ListWidget/ListWidget.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/widgets/WgClass/MyQAbstractItemView.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQAbstractItemView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/WgClass/MyQListView.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQListView.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/widgets/WgClass/MyQListViewStyle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQListViewStyle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/WgClass/MyQListWidget.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQListWidget.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/widgets/WgClass/MyQListWidgetStyle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQListWidgetStyle.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,14 +100,7 @@
       <workItem from="1648141368566" duration="17000" />
       <workItem from="1648197704112" duration="6800000" />
       <workItem from="1648296124993" duration="3002000" />
-      <workItem from="1648304271958" duration="2453000" />
-    </task>
-    <task id="LOCAL-00005" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
-      <created>1648046827050</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1648046827050</updated>
+      <workItem from="1648304271958" duration="2549000" />
     </task>
     <task id="LOCAL-00006" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
       <created>1648047180849</created>
@@ -449,7 +438,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648306442883</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQlistView">
+      <created>1648306749802</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1648306749802</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,6 +471,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="REMAKE - Refonte des WG avec héritage avancé - Button - MyQlistView" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PySide6_Blank_Project_demo$MyApp.coverage" NAME="MyApp Coverage Results" MODIFIED="1648306526200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/PySide6_Blank_Project_demo$MyApp.coverage" NAME="MyApp Coverage Results" MODIFIED="1648306814351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>
