@@ -1,12 +1,8 @@
-from PySide6.QtCore import Qt
+from PySide6.QtWidgets import QListView
 
 
 class PaMovement:
 
-    CENTER = Qt.AlignCenter
-    CENTER_HORIZONTAL = Qt.AlignHCenter
-    CENTER_VERTICAL = Qt.AlignVCenter
-    TOP = Qt.AlignTop
-    BOTTOM = Qt.AlignBottom
-    RIGHT = Qt.AlignRight
-    LEFT = Qt.AlignLeft
+    STATIC = QListView.Static
+    FREE = QListView.Free
+    SNAP = QListView.Snap
