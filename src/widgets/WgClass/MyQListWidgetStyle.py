@@ -3,7 +3,7 @@ from src.lib.globals import v_wg
 from src.lib.palettes import *
 
 
-class MyQListWidgetStyle(MyQListWidget):
+class Style(MyQListWidget):
     def __init__(
             self,
             widget,
