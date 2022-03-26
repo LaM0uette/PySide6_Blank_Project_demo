@@ -23,102 +23,110 @@ class MyQListViewStyle(MyQListView):
             movement=PaMovement.STATIC,
             flow=PaFlow.TOP_TO_BOTTOM,
             items_spacing=0,
+
+            background=v_wg.BACKGROUND,
+            background_item=v_wg.BACKGROUND,
+            foreground=v_wg.FOREGROUND,
+            foreground_item=v_wg.FOREGROUND,
+            border=v_wg.BORDER,
+            border_item=v_wg.BORDER,
+            scroll=v_wg.SCROLL,
     ):
         super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, frame, scroll_policy, abstract_item_view, movement, flow, items_spacing)
 
         style = f"""
                 /* LISTWIDGET */
-                .QListWidget, .QListView {{
-                background-color: rgba{bg};
-                alternate-background-color: rgba{bg_alternate};
-                color: rgba{fg};
+                .QListView {{
+                background-color: rgba{background.base};
+                alternate-background-color: rgba{background.alternative};
+                color: rgba{foreground.base};
                 }}
 
                 /* ITEM */
-                .QListWidget::item, .QListView::item {{
-                background-color: rgba{bg_item};
-                color: rgba{fg_item};
-                border-top: {border_item[0]}px {border_item_style} rgba{border_item_rgb};
-                border-bottom: {border_item[1]}px {border_item_style} rgba{border_item_rgb};
-                border-right: {border_item[2]}px {border_item_style} rgba{border_item_rgb};
-                border-left: {border_item[3]}px {border_item_style} rgba{border_item_rgb};
-                border-top-right-radius: {radius_item[0]}px;
-                border-top-left-radius: {radius_item[1]}px;
-                border-bottom-right-radius: {radius_item[2]}px;
-                border-bottom-left-radius: {radius_item[3]}px;
+                .QListView::item {{
+                background-color: rgba{background_item.base};
+                color: rgba{foreground_item.base};
+                border-top: {border_item.base[0]}px {border_item.base_style} rgba{border_item.base_rgb};
+                border-bottom: {border_item.base[1]}px {border_item.base_style} rgba{border_item.base_rgb};
+                border-right: {border_item.base[2]}px {border_item.base_style} rgba{border_item.base_rgb};
+                border-left: {border_item.base[3]}px {border_item.base_style} rgba{border_item.base_rgb};
+                border-top-right-radius: {border_item.radius[0]}px;
+                border-top-left-radius: {border_item.radius[1]}px;
+                border-bottom-right-radius: {border_item.radius[2]}px;
+                border-bottom-left-radius: {border_item.radius[3]}px;
                 }}
-                .QListWidget::item:hover, .QListView::item:hover {{
-                background-color: rgba{bg_item_hover};
-                color: rgba{fg_item_hover};
-                border-top: {border_item_hover[0]}px {border_item_hover_style} rgba{border_item_hover_rgb};
-                border-bottom: {border_item_hover[1]}px {border_item_hover_style} rgba{border_item_hover_rgb};
-                border-right: {border_item_hover[2]}px {border_item_hover_style} rgba{border_item_hover_rgb};
-                border-left: {border_item_hover[3]}px {border_item_hover_style} rgba{border_item_hover_rgb};
+                .QListView::item:hover {{
+                background-color: rgba{background_item.hover};
+                color: rgba{foreground.hover};
+                border-top: {border_item.hover[0]}px {border_item.hover_style} rgba{border_item.hover_rgb};
+                border-bottom: {border_item.hover[1]}px {border_item.hover_style} rgba{border_item.hover_rgb};
+                border-right: {border_item.hover[2]}px {border_item.hover_style} rgba{border_item.hover_rgb};
+                border-left: {border_item.hover[3]}px {border_item.hover_style} rgba{border_item.hover_rgb};
                 }}
-                .QListWidget::item:selected, .QListView::item:selected {{
-                background-color: rgba{bg_item_checked};
-                color: rgba{fg_item_checked};
-                border-top: {border_item_checked[0]}px {border_item_checked_style} rgba{border_item_checked_rgb};
-                border-bottom: {border_item_checked[1]}px {border_item_checked_style} rgba{border_item_checked_rgb};
-                border-right: {border_item_checked[2]}px {border_item_checked_style} rgba{border_item_checked_rgb};
-                border-left: {border_item_checked[3]}px {border_item_checked_style} rgba{border_item_checked_rgb};
+                .QListView::item:selected {{
+                background-color: rgba{background_item.checked};
+                color: rgba{foreground.checked};
+                border-top: {border_item.checked[0]}px {border_item.checked_style} rgba{border_item.checked_rgb};
+                border-bottom: {border_item.checked[1]}px {border_item.checked_style} rgba{border_item.checked_rgb};
+                border-right: {border_item.checked[2]}px {border_item.checked_style} rgba{border_item.checked_rgb};
+                border-left: {border_item.checked[3]}px {border_item.checked_style} rgba{border_item.checked_rgb};
                 }}
-                .QListWidget::item:selected:hover, .QListView::item:selected:hover {{
-                background-color: rgba{bg_item_checked_hover};
-                color: rgba{fg_item_checked_hover};
-                border-top: {border_item_checked_hover[0]}px {border_item_checked_hover_style} rgba{border_item_checked_hover_rgb};
-                border-bottom: {border_item_checked_hover[1]}px {border_item_checked_hover_style} rgba{border_item_checked_hover_rgb};
-                border-right: {border_item_checked_hover[2]}px {border_item_checked_hover_style} rgba{border_item_checked_hover_rgb};
-                border-left: {border_item_checked_hover[3]}px {border_item_checked_hover_style} rgba{border_item_checked_hover_rgb};
+                .QListView::item:selected:hover {{
+                background-color: rgba{background_item.checked_hover};
+                color: rgba{foreground.checked_hover};
+                border-top: {border_item.checked_hover[0]}px {border_item.checked_hover_style} rgba{border_item.checked_hover_rgb};
+                border-bottom: {border_item.checked_hover[1]}px {border_item.checked_hover_style} rgba{border_item.checked_hover_rgb};
+                border-right: {border_item.checked_hover[2]}px {border_item.checked_hover_style} rgba{border_item.checked_hover_rgb};
+                border-left: {border_item.checked_hover[3]}px {border_item.checked_hover_style} rgba{border_item.checked_hover_rgb};
                 }}
 
                 /* BORDURES */
-                .QListWidget, .QListView {{
-                border-top: {border[0]}px {border_style} rgba{border_rgb};
-                border-bottom: {border[1]}px {border_style} rgba{border_rgb};
-                border-right: {border[2]}px {border_style} rgba{border_rgb};
-                border-left: {border[3]}px {border_style} rgba{border_rgb};
+                .QListView {{
+                border-top: {border.base[0]}px {border.base_style} rgba{border.base_rgb};
+                border-bottom: {border.base[1]}px {border.base_style} rgba{border.base_rgb};
+                border-right: {border.base[2]}px {border.base_style} rgba{border.base_rgb};
+                border-left: {border.base[3]}px {border.base_style} rgba{border.base_rgb};
                 }}
-                .QListWidget:hover, .QListView:hover {{
-                border-top: {border_hover[0]}px {border_hover_style} rgba{border_hover_rgb};
-                border-bottom: {border_hover[1]}px {border_hover_style} rgba{border_hover_rgb};
-                border-right: {border_hover[2]}px {border_hover_style} rgba{border_hover_rgb};
-                border-left: {border_hover[3]}px {border_hover_style} rgba{border_hover_rgb};
+                .QListView:hover {{
+                border-top: {border.hover[0]}px {border.hover_style} rgba{border.hover_rgb};
+                border-bottom: {border.hover[1]}px {border.hover_style} rgba{border.hover_rgb};
+                border-right: {border.hover[2]}px {border.hover_style} rgba{border.hover_rgb};
+                border-left: {border.hover[3]}px {border.hover_style} rgba{border.hover_rgb};
                 }}
 
                 /* RAYONS */
-                .QListWidget, .QListView {{
-                border-top-right-radius: {radius[0]}px;
-                border-top-left-radius: {radius[1]}px;
-                border-bottom-right-radius: {radius[2]}px;
-                border-bottom-left-radius: {radius[3]}px;
+                .QListView {{
+                border-top-right-radius: {border.radius[0]}px;
+                border-top-left-radius: {border.radius[1]}px;
+                border-bottom-right-radius: {border.radius[2]}px;
+                border-bottom-left-radius: {border.radius[3]}px;
                 }}
 
                 /* SCROLL */
                 QScrollBar {{
-                background-color: rgba{scroll_bg};
-                width: {scroll_width}px;
-                height: {scroll_height}px;
+                background-color: rgba{scroll.bg};
+                width: {scroll.width}px;
+                height: {scroll.height}px;
                 }}
                 QScrollBar::handle:horizontal {{
-                min-width: {scroll_handle_min_width}px;
+                min-width: {scroll.min_width_handle}px;
                 }}
                 QScrollBar::handle:vertical {{
-                min-height: {scroll_handle_min_height}px;
+                min-height: {scroll.min_height_min_handle}px;
                 }}
                 QScrollBar::handle {{
-                background-color: rgba{scroll_handle_fg};
+                background-color: rgba{scroll.handle_fg};
                 }}
                 QScrollBar::handle:hover {{
-                background-color: rgba{scroll_handle_fg_hover};
+                background-color: rgba{scroll.handle_fg_hover};
                 }}
 
                 QScrollBar::add-page, QScrollBar::sub-page {{
-                background-color: rgba{scroll_handle_bg};
+                background-color: rgba{scroll.handle_bg};
                 border: none;
                 }}
                 QScrollBar::add-page:hover, QScrollBar::sub-page:hover {{
-                background-color: rgba{scroll_handle_bg_hover};
+                background-color: rgba{scroll.handle_bg_hover};
                 border: none;
                 }}"""
         widget.setStyleSheet(style)
