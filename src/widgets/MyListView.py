@@ -39,6 +39,7 @@ class Demo:
     def Transparent(self):
         Style(
             widget=self.widget,
+
             background=DcRgbBg.Base(gen=PaRgb.TR),
             foreground_item=DcRgbBg.Base(
                 base=PaRgb.TH3,
