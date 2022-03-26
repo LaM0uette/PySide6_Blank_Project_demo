@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - Button - MyQlistView">
+      <change afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQColumnView.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/WgClass/MyQListView.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQListView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/heritageWg.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/heritageWg.xlsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,13 +39,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/lib/palettes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/widgets/WgClass" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\lib\palettes" />
       <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\widgets\WgClass" />
+      <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\lib\palettes" />
       <recent name="C:\Users\XD5965\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\lib\palettes\DataClass" />
       <recent name="C:\Users\XD5965\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\widgets\WgClass" />
       <recent name="C:\Users\XD5965\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySid6_Blank_Project_demo\src\lib\palettes\DataClass" />
@@ -97,7 +98,7 @@
       <workItem from="1648132912911" duration="1577000" />
       <workItem from="1648141368566" duration="17000" />
       <workItem from="1648197704112" duration="6800000" />
-      <workItem from="1648296124993" duration="1715000" />
+      <workItem from="1648296124993" duration="1936000" />
     </task>
     <task id="LOCAL-00001" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
       <created>1648044918698</created>
@@ -407,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648297051202</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQlistView">
+      <created>1648298342837</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1648298342837</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
