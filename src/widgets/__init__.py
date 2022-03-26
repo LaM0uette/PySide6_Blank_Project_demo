@@ -2,7 +2,6 @@ from src.widgets.ComboBox import ComboBox
 from src.widgets.DateEdit import DateEdit
 from src.widgets.Label import Label
 from src.widgets.LineEdit import LineEdit
-from src.widgets.ListWidget import ListWidget
 from src.widgets.PlainTextEdit import PlainTextEdit
 from src.widgets.ProgressBar import ProgressBar
 from src.widgets.Slider import Slider
