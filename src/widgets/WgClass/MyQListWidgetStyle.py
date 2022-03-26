@@ -19,6 +19,9 @@ class Style(MyQListWidget):
             scroll_policy=v_wg.SCROLL_POLICY,
 
             abstract_item_view=DcAbstractItemView.Base,
+            drag_drop=DcScrollPolicy.Base,
+            selection_mode=PaSelectionMode.SINGLE,
+            selection_behavior=PaSelectionBehavior.ROW,
 
             movement=PaMovement.STATIC,
             flow=PaFlow.TOP_TO_BOTTOM,
@@ -34,7 +37,7 @@ class Style(MyQListWidget):
             border_item=v_wg.BORDER,
             scroll=v_wg.SCROLL,
     ):
-        super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, frame, scroll_policy, abstract_item_view, movement, flow, items_spacing, sorting)
+        super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, frame, scroll_policy, abstract_item_view, drag_drop, selection_mode, selection_behavior, movement, flow, items_spacing, sorting)
 
         style = f"""
                 /* LISTWIDGET */
