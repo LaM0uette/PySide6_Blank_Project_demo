@@ -245,11 +245,11 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
     def a_maj_liste_themes(self):
         self.cb_opt_tm_theme.clear()
 
-        for i, js in enumerate(glob.glob(f"src/theme/*.json")):
+        for i, js in enumerate(glob.glob(f"theme/*.json")):
             theme = os.path.basename(js).split(".")[0]
             self.cb_opt_tm_theme.addItem(theme)
 
-            cfg = Json(lien_json=f"src/config/config.json").OPEN()
+            cfg = Json(lien_json=f"config/config.json").OPEN()
             if theme == cfg["config"]["theme"]:
                 self.cb_opt_tm_theme.setCurrentIndex(i)
     def a_maj_cb_font(self):
@@ -283,7 +283,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
             self.a_maj_button_appliquer()
 
             dct = {f"{rgb}": list(colors)}
-            Json(lien_json=f"src/theme/{Config.theme}.json").UPDATE(dct)
+            Json(lien_json=f"theme/{Config.theme}.json").UPDATE(dct)
 
             self._a_reload_ui()
     #####
@@ -306,7 +306,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
                 "toolbox_pin": True if self.ck_opt_cfg_ui_pin.isChecked() else False
             }
         }
-        Json(lien_json=f"src/config/config.json").UPDATE(dct)
+        Json(lien_json=f"config/config.json").UPDATE(dct)
 
         self._a_reload_ui()
     def f_ok(self):
