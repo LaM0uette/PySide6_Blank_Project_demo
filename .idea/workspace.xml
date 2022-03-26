@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes">
-      <change afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQTableView.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/heritageWg.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/heritageWg.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQTreeWidget.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,14 +97,7 @@
       <workItem from="1648141368566" duration="17000" />
       <workItem from="1648197704112" duration="6800000" />
       <workItem from="1648296124993" duration="3002000" />
-      <workItem from="1648304271958" duration="4690000" />
-    </task>
-    <task id="LOCAL-00016" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
-      <created>1648108873724</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1648108873724</updated>
+      <workItem from="1648304271958" duration="4821000" />
     </task>
     <task id="LOCAL-00017" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
       <created>1648109362231</created>
@@ -444,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648308853716</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes">
+      <created>1648309003508</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1648309003508</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
