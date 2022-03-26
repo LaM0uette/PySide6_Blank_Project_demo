@@ -55,29 +55,29 @@ class Style(MyQScrollArea):
                 }}
 
                 /* SCROLL */
-                QScrollBar {{
+                .QScrollArea .QScrollBar {{
                 background-color: rgba{scroll.bg};
                 width: {scroll.width}px;
                 height: {scroll.height}px;
                 }}
-                QScrollBar::handle:horizontal {{
+                .QScrollArea .QScrollBar::handle:horizontal {{
                 min-width: {scroll.min_width_handle}px;
                 }}
-                QScrollBar::handle:vertical {{
+                .QScrollArea .QScrollBar::handle:vertical {{
                 min-height: {scroll.min_height_min_handle}px;
                 }}
-                QScrollBar::handle {{
+                .QScrollArea .QScrollBar::handle {{
                 background-color: rgba{scroll.handle_fg};
                 }}
-                QScrollBar::handle:hover {{
+                .QScrollArea .QScrollBar::handle:hover {{
                 background-color: rgba{scroll.handle_fg_hover};
                 }}
 
-                QScrollBar::add-page, QScrollBar::sub-page {{
+                .QScrollArea .QScrollBar::add-page, .QScrollArea .QScrollBar::sub-page {{
                 background-color: rgba{scroll.handle_bg};
                 border: none;
                 }}
-                QScrollBar::add-page:hover, QScrollBar::sub-page:hover {{
+                .QScrollArea .QScrollBar::add-page:hover, .QScrollArea .QScrollBar::sub-page:hover {{
                 background-color: rgba{scroll.handle_bg_hover};
                 border: none;
                 }}"""
