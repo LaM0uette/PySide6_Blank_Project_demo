@@ -60,7 +60,7 @@ class Style(MyQListView):
                 }}
                 .QListView::item:hover {{
                 background-color: rgba{background_item.hover};
-                color: rgba{foreground.hover};
+                color: rgba{foreground_item.hover};
                 border-top: {border_item.hover[0]}px {border_item.hover_style} rgba{border_item.hover_rgb};
                 border-bottom: {border_item.hover[1]}px {border_item.hover_style} rgba{border_item.hover_rgb};
                 border-right: {border_item.hover[2]}px {border_item.hover_style} rgba{border_item.hover_rgb};
@@ -68,7 +68,7 @@ class Style(MyQListView):
                 }}
                 .QListView::item:selected {{
                 background-color: rgba{background_item.checked};
-                color: rgba{foreground.checked};
+                color: rgba{foreground_item.checked};
                 border-top: {border_item.checked[0]}px {border_item.checked_style} rgba{border_item.checked_rgb};
                 border-bottom: {border_item.checked[1]}px {border_item.checked_style} rgba{border_item.checked_rgb};
                 border-right: {border_item.checked[2]}px {border_item.checked_style} rgba{border_item.checked_rgb};
@@ -76,7 +76,7 @@ class Style(MyQListView):
                 }}
                 .QListView::item:selected:hover {{
                 background-color: rgba{background_item.checked_hover};
-                color: rgba{foreground.checked_hover};
+                color: rgba{foreground_item.checked_hover};
                 border-top: {border_item.checked_hover[0]}px {border_item.checked_hover_style} rgba{border_item.checked_hover_rgb};
                 border-bottom: {border_item.checked_hover[1]}px {border_item.checked_hover_style} rgba{border_item.checked_hover_rgb};
                 border-right: {border_item.checked_hover[2]}px {border_item.checked_hover_style} rgba{border_item.checked_hover_rgb};
