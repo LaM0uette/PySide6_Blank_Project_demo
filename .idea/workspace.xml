@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - Button - MyQlistView">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/palettes/PaMovement.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/palettes/PaMovement.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/WgClass/MyQListView.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQListView.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +97,7 @@
       <workItem from="1648132912911" duration="1577000" />
       <workItem from="1648141368566" duration="17000" />
       <workItem from="1648197704112" duration="6800000" />
-      <workItem from="1648296124993" duration="915000" />
+      <workItem from="1648296124993" duration="1715000" />
     </task>
     <task id="LOCAL-00001" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQFrame">
       <created>1648044918698</created>
@@ -400,7 +400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648296631991</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQlistView">
+      <created>1648297051202</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1648297051202</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
