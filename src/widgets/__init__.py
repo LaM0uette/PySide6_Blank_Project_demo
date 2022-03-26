@@ -21,3 +21,4 @@ from src.widgets import MyCommandLinkButton
 from src.widgets import MyScrollArea
 from src.widgets import MyFrame
 from src.widgets import MyListView
+from src.widgets import MyListWidget

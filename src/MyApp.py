@@ -115,6 +115,12 @@ class main(Ui_main, QtWidgets.QWidget):
         # ### /QListView ###
 
 
+        # ### QListWidget ###
+        MyListWidget.Demo(self.lw_demo_th).Base()
+        MyListWidget.Demo(self.lw_demo_tr).Transparent()
+        # ### /QListWidget ###
+
+
         # ### QScrollBoxArea ###
         MyScrollArea.Base(self.sca_main).Main()
         # ### /QScrollBoxArea ###
