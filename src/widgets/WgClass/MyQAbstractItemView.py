@@ -16,22 +16,16 @@ class MyQAbstractItemView(MyQAbstractScrollArea):
 
             scroll_policy,
 
-            auto_scroll,
-            auto_scroll_margin,
-            tab_navigation,
-            drag_drop,
-            alternative_row_colors,
-            selection_mode,
-            selection_behavior,
+            abstract_item_view,
     ):
         super().__init__(widget, size_policy, dim, font, cursor, focus_policy, layout_direction, frame, scroll_policy)
 
-        widget.setAutoScroll(auto_scroll)
-        widget.setAutoScrollMargin(auto_scroll_margin)
-        widget.setTabKeyNavigation(tab_navigation)
-        widget.setDragEnabled(drag_drop.drag_enabled)
-        widget.setDragDropMode(drag_drop.drag_drop_mode)
-        widget.setDefaultDropAction(drag_drop.drop_action)
-        widget.setAlternatingRowColors(alternative_row_colors)
-        widget.setSelectionMode(selection_mode)
-        widget.setSelectionBehavior(selection_behavior)
+        widget.setAutoScroll(abstract_item_view.auto_scroll)
+        widget.setAutoScrollMargin(abstract_item_view.auto_scroll_margin)
+        widget.setTabKeyNavigation(abstract_item_view.tab_navigation)
+        widget.setDragEnabled(abstract_item_view.drag_drop.drag_enabled)
+        widget.setDragDropMode(abstract_item_view.drag_drop.drag_drop_mode)
+        widget.setDefaultDropAction(abstract_item_view.drag_drop.drop_action)
+        widget.setAlternatingRowColors(abstract_item_view.alternative_row_colors)
+        widget.setSelectionMode(abstract_item_view.selection_mode)
+        widget.setSelectionBehavior(abstract_item_view.selection_behavior)
