@@ -25,5 +25,6 @@ from src.widgets import MyUndoView
 from src.widgets import MyListWidget
 from src.widgets import MyTreeWidget
 from src.widgets import MyTableWidget
+from src.widgets import MyGroupBox
 from src.widgets import MyScrollArea
 from src.widgets import MyFrame
