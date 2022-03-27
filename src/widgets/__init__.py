@@ -20,6 +20,7 @@ from src.widgets import MyCommandLinkButton
 from src.widgets import MyListView
 from src.widgets import MyTreeView
 from src.widgets import MyTableView
+from src.widgets import MyColumnView
 from src.widgets import MyListWidget
 from src.widgets import MyTreeWidget
 from src.widgets import MyTableWidget
