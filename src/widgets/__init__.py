@@ -32,3 +32,4 @@ from src.widgets import MyTabWidget
 from src.widgets import MyStackedWidget
 from src.widgets import MyFrame
 from src.widgets import MyWidget
+from src.widgets import MyDockWidget
