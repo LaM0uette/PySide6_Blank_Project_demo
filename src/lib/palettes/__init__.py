@@ -29,6 +29,7 @@ from src.lib.palettes.PaShadow import PaShadow
 from src.lib.palettes.PaSizeAdjustPolicy import PaSizeAdjustPolicy
 from src.lib.palettes.PaSizePolicy import PaSizePolicy
 from src.lib.palettes.PaStyleBase import PaStyleBase
+from src.lib.palettes.PaTabPosition import PaTabPosition
 from src.lib.palettes.PaTextFormat import PaTextFormat
 from src.lib.palettes.PaTickPosition import PaTickPosition
 from src.lib.palettes.PaToolButtonStyle import PaToolButtonStyle
