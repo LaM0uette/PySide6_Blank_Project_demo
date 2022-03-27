@@ -27,4 +27,6 @@ from src.widgets import MyTreeWidget
 from src.widgets import MyTableWidget
 from src.widgets import MyGroupBox
 from src.widgets import MyScrollArea
+from src.widgets import MyToolBox
+from src.widgets import MyTabWidget
 from src.widgets import MyFrame
