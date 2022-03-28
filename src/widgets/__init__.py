@@ -39,3 +39,4 @@ from src.widgets import MyLineEdit
 from src.widgets import MyTextEdit
 from src.widgets import MyPlainTextEdit
 from src.widgets import MySpinBox
+from src.widgets import MyDoubleSpinBox
