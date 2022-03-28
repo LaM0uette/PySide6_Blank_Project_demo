@@ -43,3 +43,5 @@ from src.widgets import MyDoubleSpinBox
 from src.widgets import MyTimeEdit
 from src.widgets import MyDateEdit
 from src.widgets import MyDateTimeEdit
+
+from src.widgets import MySlider
