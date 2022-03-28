@@ -203,6 +203,51 @@ class main(Ui_main, QtWidgets.QWidget):
         MyPlainTextEdit.Demo(self.pte_demo_th).Base()
         MyPlainTextEdit.Demo(self.pte_demo_tr).Transparent()
         ### /QPlainTextEdit ###
+
+
+        ### QSpinBox ###
+        # MySpinBox.PlusMinus(self.sb_demo).th()
+        # MySpinBox.PlusMinus(self.sb_demo_3).tr()
+        # MySpinBox.UpDown(self.sb_demo_2).th()
+        ### /QSpinBox ###
+
+
+        ### QDoubleSpinBox ###
+        # MySpinBox.UpDown(self.dsb_demo).tr()
+        ### /QDoubleSpinBox ###
+
+
+        ### QDateEdit ###
+        MyDateEdit.Base(self.de_demo_th).Base()
+        MyDateEdit.Base(self.de_demo_tr).Transparent()
+        ### /QDateEdit ###
+
+
+        # ### QSlider ###
+        # MySlider.Base(self.hsd_demo).th()
+        # MySlider.Base(self.vsd_demo).rond()
+        # ### /QSlider ###
+
+
+        # ### QLabel ###
+        # MyLabel.Base(self.lb_mt_ico).ico_main()
+        # MyLabel.Demo(self.lb_lb_demo_th).th()
+        # MyLabel.Base(self.lb_mt_nom, font_size=PaFont().h3()).tr()
+        # MyLabel.Base(self.lb_mb_version).tr()
+        # MyLabel.Demo(self.lb_lb_demo_tr).tr()
+        # MyLabel.Demo(
+        #     self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
+        #     self.lb_rb_demo, self.lb_pg_demo, self.lb_sb_demo, self.lb_tw_demo, self.lb_le_demo,
+        #     self.lb_te_demo, self.lb_pte_demo, self.lb_tb_demo, self.lb_trw_demo, self.lb_sd_demo,
+        #     self.lb_fr_demo, self.lb_lb_demo
+        # ).wg_categorie()
+        # ### /QLabel ###
+
+
+        ### QProgressBar ###
+        MyProgressBar.Demo(self.pg_demo_th).Base()
+        MyProgressBar.Demo(self.pg_demo_tr).Transparent()
+        ### /QProgressBar ###
     def IN_WG(self):
         ### Base ###
         self.setCursor(Functions().SET_CURSOR(PaCur.SOURIS))
