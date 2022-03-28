@@ -3,6 +3,7 @@ from src.lib.palettes.PaArrowType import PaArrowType
 from src.lib.palettes.PaAutoFormating import PaAutoFormating
 from src.lib.palettes.PaButtonSymbols import PaButtonSymbols
 from src.lib.palettes.PaCur import PaCur
+from src.lib.palettes.PaDigitMode import PaDigitMode
 from src.lib.palettes.PaDim import PaDim
 from src.lib.palettes.PaDragDropMode import PaDragDropMode
 from src.lib.palettes.PaDropAction import PaDropAction
@@ -23,6 +24,7 @@ from src.lib.palettes.PaPopupMode import PaPopupMode
 from src.lib.palettes.PaProgressFormat import PaProgressFormat
 from src.lib.palettes.PaRgb import PaRgb
 from src.lib.palettes.PaScrollPolicy import PaScrollPolicy
+from src.lib.palettes.PaSegmentStyle import PaSegmentStyle
 from src.lib.palettes.PaSelectionBehavior import PaSelectionBehavior
 from src.lib.palettes.PaSelectionMode import PaSelectionMode
 from src.lib.palettes.PaShadow import PaShadow
