@@ -116,8 +116,8 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### QTreeView ###
-        MyTreeView.Base(self.trv_demo_th).Base()
-        MyTreeView.Base(self.trv_demo_tr).Transparent()
+        MyTreeView.Demo(self.trv_demo_th).Base()
+        MyTreeView.Demo(self.trv_demo_tr).Transparent()
         ### /QTreeView ###
 
 
@@ -128,8 +128,8 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### QTreeWidget ###
-        MyTreeWidget.Base(self.trw_demo_th).Base()
-        MyTreeWidget.Base(self.trw_demo_tr).Transparent()
+        MyTreeWidget.Demo(self.trw_demo_th).Base()
+        MyTreeWidget.Demo(self.trw_demo_tr).Transparent()
         ### /QTreeWidget ###
 
 
