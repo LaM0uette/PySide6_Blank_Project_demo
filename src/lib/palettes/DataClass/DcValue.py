@@ -14,3 +14,4 @@ class Base:
     min: int = 0
     max: int = 99
     step: int = 1
+    page_step: int = 10
