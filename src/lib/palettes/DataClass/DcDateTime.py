@@ -6,15 +6,12 @@ DcDateTime.%class(
 import datetime
 from dataclasses import dataclass
 
-
+from PySide6 import QtCore
 @dataclass
 class Base:
 
     d = datetime.datetime.now().strftime("%Y_%m_%d").split("_")
+    y, m, d = int(d[0]), int(d[1]), int(d[2])
 
-    date: tuple = (d[0], d[1], d[2])
-    time: tuple = None
-
-    def __post_init__(self):
-        if not self.time:
-            self.time = (0, 0, 0)
+    date: tuple = QtCore.QDate(y, m, d)
+    time: tuple = QtCore.QTime(0, 0, 0)

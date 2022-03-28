@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
-      <change beforePath="$PROJECT_DIR$/src/widgets/DateEdit/Build.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/DateEdit/DateEdit.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/PlainTextEdit/Build.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/PlainTextEdit/PlainTextEdit.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/ProgressBar/Build.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/ProgressBar/ProgressBar.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/TableWidget/Build.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/TableWidget/TableWidget.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/ToolBox/Build.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/ToolBox/ToolBox.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/tempo_wg.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test api.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/palettes/DataClass/DcDateTime.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/palettes/DataClass/DcDateTime.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,21 +105,7 @@
       <workItem from="1648304271958" duration="4517000" />
       <workItem from="1648383800006" duration="4306000" />
       <workItem from="1648452479325" duration="2618000" />
-      <workItem from="1648455404661" duration="12161000" />
-    </task>
-    <task id="LOCAL-00071" summary="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes">
-      <created>1648384189584</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1648384189584</updated>
-    </task>
-    <task id="LOCAL-00072" summary="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes">
-      <created>1648384294008</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1648384294008</updated>
+      <workItem from="1648455404661" duration="12606000" />
     </task>
     <task id="LOCAL-00073" summary="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes">
       <created>1648384405367</created>
@@ -462,7 +436,21 @@
       <option name="project" value="LOCAL" />
       <updated>1648478649010</updated>
     </task>
-    <option name="localTasksCounter" value="120" />
+    <task id="LOCAL-00120" summary="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
+      <created>1648478724687</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1648478724687</updated>
+    </task>
+    <task id="LOCAL-00121" summary="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
+      <created>1648478810357</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1648478810358</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,6 +479,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/PySide6_Blank_Project_demo$MyApp__1_.coverage" NAME="MyApp (1) Coverage Results" MODIFIED="1648468784944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../PySide6_Blank_Project" />
-    <SUITE FILE_PATH="coverage/PySide6_Blank_Project_demo$MyApp.coverage" NAME="MyApp Coverage Results" MODIFIED="1648478229494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/PySide6_Blank_Project_demo$MyApp.coverage" NAME="MyApp Coverage Results" MODIFIED="1648479099130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
 </project>
