@@ -49,14 +49,10 @@
 # ### /QLabel ###
 #
 #
-#
-#
 # ### QProgressBar ###
 # ProgressBar.Demo(self.pg_demo_th).th()
 # ProgressBar.Demo(self.pg_demo_tr).tr()
 # ### /QProgressBar ###
-#
-
 #
 #
 # ## QRadioButton ###
@@ -76,13 +72,3 @@
 # SpinBox.UpDown(self.sb_demo_2).th()
 # SpinBox.UpDown(self.dsb_demo).tr()
 # ### /QSpinBox ###
-#
-#
-#
-#
-# ### QToolBox ###
-# ToolBox.Demo(self.tb_demo_th).th()
-# ToolBox.Demo(self.tb_demo_tr).tr()
-# ### /QToolBox ###
-#
-#

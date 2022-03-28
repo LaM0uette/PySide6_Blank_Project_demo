@@ -150,6 +150,12 @@ class main(Ui_main, QtWidgets.QWidget):
         # ### /QScrollBoxArea ###
 
 
+        ### QToolBox ###
+        MyToolBox.Demo(self.tb_demo_th).Base()
+        MyToolBox.Demo(self.tb_demo_tr).Transparent()
+        ### /QToolBox ###
+
+
         ###  QFrame  ###
         MyFrame.Base(self.fr_body).Base(rgb=PaRgb.TH1)
         MyFrame.Menu(self.fr_menu_top).top()
