@@ -26,6 +26,5 @@ class MyQDateTimeEdit(MyQAbstractSpinBox):
     ):
         super().__init__(widget,size_policy,dim,font,cursor,focus_policy,layout_direction,wrapping,frame,align,read_only,button_symbols,accelerated)
 
-        widget.setDateTime(QtCore.QDateTime(QtCore.QDate(*date_time.date), QtCore.QTime(*date_time.time)))
-        widget.setDate(date_time.date)
+        widget.setDateTime(date_time.date_time)
         widget.setCalendarPopup(calendar_popup)
