@@ -90,7 +90,3 @@
 # ### /QToolBox ###
 #
 #
-# ### QTreeWidget ###
-# TreeWidget.Base(self.trv_demo_th, self.trw_demo_th).th()
-# TreeWidget.Base(self.trv_demo_tr, self.trw_demo_tr).tr()
-# ### /QTreeWidget ###
