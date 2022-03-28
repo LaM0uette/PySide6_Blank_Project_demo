@@ -48,3 +48,4 @@ from src.widgets import MyScrollBar
 from src.widgets import MySlider
 from src.widgets import MyLabel
 from src.widgets import MyTextBrowser
+from src.widgets import MyCalendarWidget
