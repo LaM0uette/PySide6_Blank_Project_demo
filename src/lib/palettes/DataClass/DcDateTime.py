@@ -14,5 +14,5 @@ class Base:
     y, m, d = int(d[0]), int(d[1]), int(d[2])
 
     date: tuple = QtCore.QDate(y, m, d)
-    time: tuple = QtCore.QTime(2, 0, 0)
+    time: tuple = QtCore.QTime(0, 0, 0)
     date_time: tuple = QtCore.QDateTime(y, m, d, 2, 0, 0)
