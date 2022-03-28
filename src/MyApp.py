@@ -151,8 +151,8 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### QToolBox ###
-        MyToolBox.Demo(self.tb_demo_th).Base()
-        MyToolBox.Demo(self.tb_demo_tr).Transparent()
+        MyToolBox.Demo(self.tbx_demo_th).Base()
+        MyToolBox.Demo(self.tbx_demo_tr).Transparent()
         ### /QToolBox ###
 
 
