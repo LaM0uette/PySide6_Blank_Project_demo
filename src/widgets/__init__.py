@@ -44,5 +44,5 @@ from src.widgets import MyTimeEdit
 from src.widgets import MyDateEdit
 from src.widgets import MyDateTimeEdit
 from src.widgets import MyDial
-
+from src.widgets import MyScrollBar
 from src.widgets import MySlider
