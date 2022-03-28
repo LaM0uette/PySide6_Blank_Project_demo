@@ -78,10 +78,6 @@
 # ### /QSpinBox ###
 #
 #
-# ### QTableWidget ###
-# TableWidget.Demo(self.tv_demo_th, self.tw_demo_th).th()
-# TableWidget.Demo(self.tv_demo_tr, self.tw_demo_tr).tr()
-# ### /QTableWidget ###
 #
 #
 # ### QToolBox ###

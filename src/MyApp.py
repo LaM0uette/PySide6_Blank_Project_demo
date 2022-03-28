@@ -121,6 +121,12 @@ class main(Ui_main, QtWidgets.QWidget):
         ### /QTreeView ###
 
 
+        ### QTableView ###
+        MyTableView.Demo(self.tv_demo_th).Base()
+        MyTableView.Demo(self.tv_demo_tr).Transparent()
+        ### /QTableView ###
+
+
         # ### QListWidget ###
         MyListWidget.Demo(self.lw_demo_th).Base()
         MyListWidget.Demo(self.lw_demo_tr).Transparent()
@@ -131,6 +137,12 @@ class main(Ui_main, QtWidgets.QWidget):
         MyTreeWidget.Demo(self.trw_demo_th).Base()
         MyTreeWidget.Demo(self.trw_demo_tr).Transparent()
         ### /QTreeWidget ###
+
+
+        ### QTableWidget ###
+        MyTableWidget.Demo(self.tw_demo_th).Base()
+        MyTableWidget.Demo(self.tw_demo_tr).Transparent()
+        ### /QTableWidget ###
 
 
         # ### QScrollBoxArea ###
