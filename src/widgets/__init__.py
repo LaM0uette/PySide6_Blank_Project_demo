@@ -36,3 +36,4 @@ from src.widgets import MyDockWidget
 from src.widgets import MyComboBox
 from src.widgets import MyFontComboBox
 from src.widgets import MyLineEdit
+from src.widgets import MyTextEdit
