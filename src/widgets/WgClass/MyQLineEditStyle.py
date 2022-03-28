@@ -11,7 +11,7 @@ class Style(MyQLineEdit):
             dim=v_wg.DIM_WG,
             font=v_wg.FONT,
             cursor=v_wg.CUR_ACTION,
-            focus_policy=v_wg.FOCUS_POLICY,
+            focus_policy=PaFocusPolicy.STRONG,
             layout_direction=v_wg.LAYOUT_DIRECTION,
 
             input_mask=PaInputMask.NO,

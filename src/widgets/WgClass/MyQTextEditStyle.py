@@ -11,7 +11,7 @@ class Style(MyQTextEdit):
             dim=v_wg.DIM,
             font=v_wg.FONT,
             cursor=v_wg.CUR_ACTION,
-            focus_policy=v_wg.FOCUS_POLICY,
+            focus_policy=PaFocusPolicy.STRONG,
             layout_direction=v_wg.LAYOUT_DIRECTION,
 
             frame=v_wg.FRAME,
