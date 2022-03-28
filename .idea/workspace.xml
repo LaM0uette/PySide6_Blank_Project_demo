@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes">
-      <change afterPath="$PROJECT_DIR$/src/lib/palettes/DataClass/DcValue.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQSpinBox.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/widgets/MySpinBox.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQSpinBoxStyle.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/heritageWg.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/heritageWg.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/palettes/DataClass/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/palettes/DataClass/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/globals/v_wg.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/globals/v_wg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +41,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/XD5965/Creative Cloud Files/01_PROJETS/01_PROG/01_APP/PySide6_Blank_Project_demo/src/lib/palettes/DataClass",
+    "last_opened_file_path": "C:/Users/XD5965/Creative Cloud Files/01_PROJETS/01_PROG/01_APP/PySide6_Blank_Project_demo/src/widgets",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -50,9 +51,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\XD5965\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\lib\palettes\DataClass" />
-      <recent name="C:\Users\XD5965\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\widgets\WgClass" />
       <recent name="C:\Users\XD5965\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\widgets" />
+      <recent name="C:\Users\XD5965\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\widgets\WgClass" />
+      <recent name="C:\Users\XD5965\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\lib\palettes\DataClass" />
       <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\widgets" />
       <recent name="F:\Creative Cloud Files\01_PROJETS\01_PROG\01_APP\PySide6_Blank_Project_demo\src\widgets\WgClass" />
     </key>
@@ -108,14 +109,7 @@
       <workItem from="1648304271958" duration="4517000" />
       <workItem from="1648383800006" duration="4306000" />
       <workItem from="1648452479325" duration="2618000" />
-      <workItem from="1648455404661" duration="2802000" />
-    </task>
-    <task id="LOCAL-00046" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQlistView">
-      <created>1648298497526</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1648298497526</updated>
+      <workItem from="1648455404661" duration="3062000" />
     </task>
     <task id="LOCAL-00047" summary="REMAKE - Refonte des WG avec héritage avancé - Button - MyQlistView">
       <created>1648304444772</created>
@@ -453,7 +447,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648467803213</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes">
+      <created>1648468052503</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1648468052504</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

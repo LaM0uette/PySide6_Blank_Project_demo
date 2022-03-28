@@ -38,3 +38,4 @@ from src.widgets import MyFontComboBox
 from src.widgets import MyLineEdit
 from src.widgets import MyTextEdit
 from src.widgets import MyPlainTextEdit
+from src.widgets import MySpinBox
