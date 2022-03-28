@@ -2,6 +2,7 @@ from . import DcAbstractItemView
 from . import DcAlign
 from . import DcAutoActions
 from . import DcBorder
+from . import DcDateTime
 from . import DcDim
 from . import DcDragDrop
 from . import DcFrame

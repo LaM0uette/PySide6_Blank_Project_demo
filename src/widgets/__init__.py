@@ -40,3 +40,6 @@ from src.widgets import MyTextEdit
 from src.widgets import MyPlainTextEdit
 from src.widgets import MySpinBox
 from src.widgets import MyDoubleSpinBox
+from src.widgets import MyTimeEdit
+from src.widgets import MyDateEdit
+from src.widgets import MyDateTimeEdit
