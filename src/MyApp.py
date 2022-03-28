@@ -173,6 +173,36 @@ class main(Ui_main, QtWidgets.QWidget):
         for wg in [self.fr_demo_th, self.fr_tbx_demo_th_1, self.fr_tbx_demo_th_2]: MyFrame.Base(wg).Base()
         for wg in [self.fr_tbx_demo_tr_1, self.fr_tbx_demo_tr_2]: MyFrame.Base(wg).Transparent()
         ### /QFrame  ###
+
+
+        ### QComboBox ###
+        MyComboBox.Base(self.cb_demo_th).Base()
+        MyComboBox.Base(self.cb_demo_tr).Transparent()
+        ### /QComboBox ###
+
+
+        ### QComboBox ###
+        MyFontComboBox.Base(self.fcb_demo_th).Base()
+        MyFontComboBox.Base(self.fcb_demo_tr).Transparent()
+        ### /QComboBox ###
+
+
+        ### QLineEdit ###
+        MyLineEdit.Base(self.le_demo_th).Base()
+        MyLineEdit.Base(self.le_demo_tr).Transparent()
+        ### /QLineEdit ###
+
+
+        ### QTextEdit ###
+        MyTextEdit.Demo(self.te_demo_th).Base()
+        MyTextEdit.Demo(self.te_demo_tr).Transparent()
+        ### /QTextEdit ###
+
+
+        ### QPlainTextEdit ###
+        MyPlainTextEdit.Demo(self.pte_demo_th).Base()
+        MyPlainTextEdit.Demo(self.pte_demo_tr).Transparent()
+        ### /QPlainTextEdit ###
     def IN_WG(self):
         ### Base ###
         self.setCursor(Functions().SET_CURSOR(PaCur.SOURIS))

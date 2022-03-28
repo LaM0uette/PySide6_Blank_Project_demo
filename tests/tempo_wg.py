@@ -1,31 +1,7 @@
-# ### QLineEdit ###
-# LineEdit.Base(self.le_demo_th).th()
-# LineEdit.Base(self.le_demo_tr).tr()
-# ### /QLineEdit ###
-#
-#
-# ### QTextEdit ###
-# TextEdit.Demo(self.te_demo_th).th()
-# TextEdit.Demo(self.te_demo_tr).tr()
-# ### /QTextEdit ###
-#
-#
-# ### QPlainTextEdit ###
-# PlainTextEdit.Demo(self.pte_demo_th).th()
-# PlainTextEdit.Demo(self.pte_demo_tr).tr()
-# ### /QPlainTextEdit ###
-#
-#
 # ## QCheckBox ###
 # CheckBox.Demo(self.ck_demo_th_1, self.ck_demo_th_2, self.ck_demo_th_3).th()
 # CheckBox.Demo(self.ck_demo_tr_1, self.ck_demo_tr_2, self.ck_demo_tr_3).tr()
 # ## /QCheckBox ###
-#
-#
-# ### QComboBox ###
-# ComboBox.Base(self.cb_demo_th).th()
-# ComboBox.Base(self.cb_demo_tr).tr()
-# ### /QComboBox ###
 #
 #
 # ### QDateEdit ###
