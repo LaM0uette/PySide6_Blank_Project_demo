@@ -50,3 +50,4 @@ from src.widgets import MyLabel
 from src.widgets import MyTextBrowser
 from src.widgets import MyCalendarWidget
 from src.widgets import MyLCDNumber
+from src.widgets import MyProgressBar
