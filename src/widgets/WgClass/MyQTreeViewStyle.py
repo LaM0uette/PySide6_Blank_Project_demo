@@ -7,7 +7,7 @@ class Style(MyQTreeView):
     def __init__(
             self,
             widget,
-            size_policy=v_wg.SIZE_POLICY,
+            size_policy=DcSizePolicy.Expanding,
             dim=v_wg.DIM,
             font=v_wg.FONT,
             cursor=v_wg.CUR_ACTION,
