@@ -14,3 +14,4 @@ from . import DcRgbSlider
 from . import DcScroll
 from . import DcScrollPolicy
 from . import DcSizePolicy
+from . import DcValue
