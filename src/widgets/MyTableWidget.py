@@ -31,12 +31,17 @@ class Demo:
             widget=self.widget,
             dim=DcDim.Base(
                 fixed_height=PaDim.H5
-            )
+            ),
+            row_count=23,
+            column_count=12
+
         )
     def Transparent(self):
         Style(
             widget=self.widget,
             dim=DcDim.Base(
                 fixed_height=PaDim.H5
-            )
+            ),
+            row_count=23,
+            column_count=12
         )
