@@ -5,11 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/heritageWg.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/docs/heritageWg.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MyApp.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/MyApp.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/MyProgressBar.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/MyProgressBar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/tempo_wg.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/tempo_wg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/DateEdit/Build.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/DateEdit/DateEdit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/PlainTextEdit/Build.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/PlainTextEdit/PlainTextEdit.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/ProgressBar/Build.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/ProgressBar/ProgressBar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/TableWidget/Build.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/TableWidget/TableWidget.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/ToolBox/Build.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/ToolBox/ToolBox.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/tempo_wg.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test api.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,14 +117,7 @@
       <workItem from="1648304271958" duration="4517000" />
       <workItem from="1648383800006" duration="4306000" />
       <workItem from="1648452479325" duration="2618000" />
-      <workItem from="1648455404661" duration="12001000" />
-    </task>
-    <task id="LOCAL-00070" summary="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes">
-      <created>1648384133398</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1648384133398</updated>
+      <workItem from="1648455404661" duration="12161000" />
     </task>
     <task id="LOCAL-00071" summary="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes">
       <created>1648384189584</created>
@@ -454,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648478288939</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
+      <created>1648478649010</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1648478649010</updated>
+    </task>
+    <option name="localTasksCounter" value="120" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
