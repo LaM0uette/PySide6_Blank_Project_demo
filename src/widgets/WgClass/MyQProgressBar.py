@@ -21,7 +21,6 @@ class MyQProgressBar(MyQWidget):
 
         widget.setMinimum(value.min)
         widget.setMaximum(value.max)
-        widget.setSingleStep(value.step)
         widget.setAlignment(align.horizontal | align.vertical)
         widget.setTextVisible(text_visible)
         widget.setFormat(progress_format)

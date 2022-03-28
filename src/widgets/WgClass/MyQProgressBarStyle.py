@@ -14,7 +14,7 @@ class Style(MyQProgressBar):
             focus_policy=v_wg.FOCUS_POLICY,
             layout_direction=v_wg.LAYOUT_DIRECTION,
 
-            value=0,
+            value=DcValue.Base,
             align=DcAlign.Base,
             text_visible=True,
             progress_format=PaProgressFormat.VALUE,
