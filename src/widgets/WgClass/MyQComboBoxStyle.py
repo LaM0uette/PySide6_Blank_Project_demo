@@ -33,19 +33,19 @@ class Style(MyQComboBox):
 
         style = f"""
         /* COMBOBOX */
-        QComboBox, QFontComboBox {{
+        QComboBox {{
         background-color: rgba{background.base};
         color: rgba{foreground.base};
         selection-background-color: rgba{background.selection};
         selection-color: rgba{foreground.selection};
         }}
-        QComboBox:hover, QFontComboBox:hover {{
+        QComboBox:hover {{
         background-color: rgba{background.hover};
         color: rgba{foreground.hover};
         }}
 
         /* BOUTON DE DEROULEMENT */
-        QComboBox::drop-down, QFontComboBox::drop-down {{
+        QComboBox::drop-down {{
         width: {img.height}px;
         margin-top: {margin[0]}px;
         margin-bottom: {margin[1]}px;
@@ -55,39 +55,39 @@ class Style(MyQComboBox):
         }}
 
         /* IMAGE DU BOUTON DE DEROULEMENT */
-        QComboBox::down-arrow, QFontComboBox::down-arrow {{
+        QComboBox::down-arrow {{
         image: url({f"{img.unroll}{img.unroll_rgb}.svg"});
         width: {img.width}px;
         height: {img.height}px;
         }}
-        QComboBox::down-arrow:hover, QFontComboBox::down-arrow:hover {{
+        QComboBox::down-arrow:hover {{
         image: url({f"{img.unroll_hover}{img.unroll_hover_rgb}.svg"});
         width: {img.width}px;
         height: {img.height}px;
         }}
 
         /* ELEMENTS DEROULEMENT */
-        QComboBox QAbstractItemView, QFontComboBox QAbstractItemView {{
+        QComboBox QAbstractItemView {{
         background-color: rgba{background.base};
         color: rgba{foreground.base};
         }}
-        QComboBox QAbstractItemView::item, QFontComboBox QAbstractItemView::item {{
+        QComboBox QAbstractItemView::item {{
         background-color: rgba{background_item.base};
         color: rgba{foreground_item.base};
         }}
-        QComboBox QAbstractItemView::item:hover, QFontComboBox QAbstractItemView::item:hover {{
+        QComboBox QAbstractItemView::item:hover {{
         background-color: rgba{background_item.hover};
         color: rgba{foreground_item.hover};
         }}
 
         /* BORDURES */
-        .QComboBox, .QFontComboBox {{
+        .QComboBox {{
         border-top: {border.base[0]}px {border.base_style} rgba{border.base_rgb};
         border-bottom: {border.base[1]}px {border.base_style} rgba{border.base_rgb};
         border-right: {border.base[2]}px {border.base_style} rgba{border.base_rgb};
         border-left: {border.base[3]}px {border.base_style} rgba{border.base_rgb};
         }}
-        .QComboBox:hover, .QFontComboBox:hover {{
+        .QComboBox:hover {{
         border-top: {border.hover[0]}px {border.hover_style} rgba{border.hover_rgb};
         border-bottom: {border.hover[1]}px {border.hover_style} rgba{border.hover_rgb};
         border-right: {border.hover[2]}px {border.hover_style} rgba{border.hover_rgb};
@@ -95,7 +95,7 @@ class Style(MyQComboBox):
         }}
 
         /* RAYONS */
-        .QComboBox, .QFontComboBox {{
+        .QComboBox {{
         border-top-right-radius: {border.radius[0]}px;
         border-top-left-radius: {border.radius[1]}px;
         border-bottom-right-radius: {border.radius[2]}px;

@@ -16,4 +16,18 @@ class Base:
     def Transparent(self):
         Style(
             widget=self.widget,
+
+            editable=False,
+            cursor=PaCur.SOURIS_MAIN,
+
+            background=DcRgbBg.Base(
+                base=PaRgb.TR,
+                hover=PaRgb.TR,
+                selection=PaRgb.TH3,
+            ),
+
+            foreground=DcRgbFg.Base(
+                base=PaRgb.TH3,
+                selection=PaRgb.TH1,
+            )
         )
