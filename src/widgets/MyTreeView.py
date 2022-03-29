@@ -51,6 +51,50 @@ class Base:
                 radius=(0,) * 4
             )
         )
+    def Option(self):
+        Style(
+            widget=self.widget,
+            dim=DcDim.Base(
+                fixed_width=PaDim.H5
+            ),
+
+            scroll_policy=DcScrollPolicy.Base(
+                horizontal=PaScrollPolicy.OFF,
+                vertical=PaScrollPolicy.OFF
+            ),
+
+            background=DcRgbBg.Base(
+                gen=PaRgb.TR
+            ),
+            background_header=DcRgbBg.Base(
+                base=PaRgb.TH1
+            ),
+            background_item=DcRgbBg.Base(
+                gen=PaRgb.TR
+            ),
+
+            foreground_header=DcRgbBg.Base(
+                base=PaRgb.TH1,
+            ),
+            foreground_item=DcRgbBg.Base(
+                base=PaRgb.TH3,
+                checked=PaRgb.BN1
+            ),
+
+            border=DcBorder.Base(
+                gen=(0, 0, 2, 0),
+                gen_rgb=PaRgb.TH2,
+                radius=(0,) * 4
+            ),
+            border_item=DcBorder.Base(
+                gen=(0, 0, 0, 2),
+                base=PaRgb.TH2,
+                hover=PaRgb.TH3,
+                checked=PaRgb.BN1,
+                checked_hover=PaRgb.BN1,
+                radius=(0,) * 4
+            )
+        )
 
 
 ##################
@@ -78,7 +122,30 @@ class Demo:
     def Transparent(self):
         Style(
             widget=self.widget,
-            dim=DcDim.Base(
-                fixed_height=PaDim.H5
+
+            scroll_policy=DcScrollPolicy.Base(
+                horizontal=PaScrollPolicy.OFF,
+                vertical=PaScrollPolicy.OFF
+            ),
+
+            background=DcRgbBg.Base(
+                gen=PaRgb.TR
+            ),
+            background_item=DcRgbBg.Base(
+                gen=PaRgb.TR
+            ),
+
+            foreground_item=DcRgbBg.Base(
+                base=PaRgb.TH3,
+                checked=PaRgb.BN1
+            ),
+
+            border_item=DcBorder.Base(
+                gen=(0, 0, 0, 2),
+                base=PaRgb.TH2,
+                hover=PaRgb.TH3,
+                checked=PaRgb.BN1,
+                checked_hover=PaRgb.BN1,
+                radius=(0,) * 4
             )
         )
