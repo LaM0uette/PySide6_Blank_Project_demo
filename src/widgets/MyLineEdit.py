@@ -16,4 +16,29 @@ class Base:
     def Transparent(self):
         Style(
             widget=self.widget,
+
+            background=DcRgbBg.Base(
+                base=PaRgb.TR,
+            ),
+
+            foreground=DcRgbBg.Base(
+                base=PaRgb.TH3,
+            ),
+        )
+
+    def rgb_hex(self):
+        Style(
+            widget=self.widget,
+
+            align=DcAlign.Base(horizontal=PaAlign.CENTER_HORIZONTAL),
+
+            background=DcRgbBg.Base(
+                base=PaRgb.TR,
+                selection=PaRgb.TH3,
+            ),
+
+            foreground=DcRgbBg.Base(
+                base=PaRgb.TH3,
+                selection=PaRgb.TH1,
+            ),
         )
