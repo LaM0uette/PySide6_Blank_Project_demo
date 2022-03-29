@@ -241,11 +241,11 @@ class main(Ui_main, QtWidgets.QWidget):
         # ### /QSlider ###
 
 
-        # ### QLabel ###
-        # MyLabel.Base(self.lb_mt_ico).ico_main()
+        ### QLabel ###
+        MyLabel.Base(self.lb_mt_ico).ico_main()
         # MyLabel.Demo(self.lb_lb_demo_th).th()
-        # MyLabel.Base(self.lb_mt_nom, font_size=PaFont().h3()).tr()
-        # MyLabel.Base(self.lb_mb_version).tr()
+        MyLabel.Base(self.lb_mt_nom).Transparent(font=PaFont.H3)
+        MyLabel.Base(self.lb_mb_version).Transparent()
         # MyLabel.Demo(self.lb_lb_demo_tr).tr()
         # MyLabel.Demo(
         #     self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
@@ -253,7 +253,7 @@ class main(Ui_main, QtWidgets.QWidget):
         #     self.lb_te_demo, self.lb_pte_demo, self.lb_tb_demo, self.lb_trw_demo, self.lb_sd_demo,
         #     self.lb_fr_demo, self.lb_lb_demo
         # ).wg_categorie()
-        # ### /QLabel ###
+        ### /QLabel ###
 
 
         ### QProgressBar ###

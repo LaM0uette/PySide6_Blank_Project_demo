@@ -72,15 +72,15 @@ class Base:
 
             scaled_contents=True,
         )
-    def th(self):
+
+    def Base(self, font=PaFont.H4):
         Style(
             widget=self.widget,
 
             focus_policy=PaFocusPolicy.NO,
-
-            font_size=self.font_size,
+            font=font
         )
-    def tr(self):
+    def Transparent(self, font=PaFont.H4):
         Style(
             widget=self.widget,
 
@@ -95,10 +95,9 @@ class Base:
             ),
 
             focus_policy=PaFocusPolicy.NO,
-
-            font_size=self.font_size,
+            font=font
         )
-    def titre(self):
+    def Title(self, font=PaFont.H4):
         Style(
             widget=self.widget,
 
@@ -115,6 +114,5 @@ class Base:
             focus_policy=PaFocusPolicy.NO,
 
             align=DcAlign.Base(horizontal=PaAlign.CENTER_HORIZONTAL),
-
-            font_size=self.font_size,
+            font=font
         )
