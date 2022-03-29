@@ -130,6 +130,7 @@ class Style(MyQComboBox):
         border: none;
         }}"""
         widget.setStyleSheet(style)
+        widget.setFont(font)
 
         if editable:
             widget.lineEdit().setFont(font)
