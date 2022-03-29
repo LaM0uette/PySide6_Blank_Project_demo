@@ -69,9 +69,9 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
 
 
         ### QLabel ###
-        Label.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.ico_rgb)
-        Label.Base(self.lb_mt_nom, font_size=PaFont.H3).tr()
-        Label.Base(self.lb_rgb_red, self.lb_rgb_green, self.lb_rgb_blue, font_size=PaFont.H4).tr()
+        MyLabel.Base(self.lb_mt_ico).ico_custom(img=self.ico, img_rgb=self.ico_rgb)
+        MyLabel.Base(self.lb_mt_nom).Transparent(font=PaFont.HH3)
+        for wg in [self.lb_rgb_red, self.lb_rgb_green, self.lb_rgb_blue]: MyLabel.Base(wg).Transparent(font=PaFont.BASE)
         ### /QLabel ###
 
 

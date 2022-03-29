@@ -95,14 +95,14 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
 
 
         ### QLabel ###
-        Label.Base(self.lb_mt_ico).ico_main()
-        Label.Base(self.lb_mt_nom, font_size=PaFont.H3).tr()
-        Label.Base(self.lb_opt_info_nom).titre()
-        Label.Base(
+        MyLabel.Base(self.lb_mt_ico).ico_main()
+        MyLabel.Base(self.lb_mt_nom).Transparent(font=PaFont.HH3)
+        MyLabel.Base(self.lb_opt_info_nom).Title()
+        for wg in [
             self.lb_opt_info_desc, self.lb_opt_info_auteur, self.lb_opt_info_version, self.lb_opt_cfg_opacity,
             self.lb_opt_cfg_debug, self.lb_opt_cfg_autoclose, self.lb_opt_cfg_resize, self.lb_opt_cfg_ui_pin, self.lb_opt_cfg_resize_width,
             self.lb_opt_cfg_resize_height
-        ).tr()
+        ]: MyLabel.Base(wg).Transparent()
         ### /QLabel ###
 
 

@@ -37,9 +37,9 @@ class SplashScreen(splash_screen_ui.Ui_SplashScreen, QtWidgets.QDialog):
 
 
         ### QLabel ###
-        Label.Base(self.lb_ico).ico_splash()
-        Label.Base(self.lb_titre, font_size=PaFont.H3).tr()
-        Label.Base(self.lb_description, self.lb_chargement, font_size=PaFont.H5).tr()
+        MyLabel.Base(self.lb_ico).ico_splash()
+        MyLabel.Base(self.lb_titre).Transparent(font=PaFont.HH3)
+        for wg in [self.lb_description, self.lb_chargement]: MyLabel.Base(wg).Transparent(font=PaFont.TEXTE)
         ### /QLabel ###
 
 
