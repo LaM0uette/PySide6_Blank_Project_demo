@@ -25,6 +25,7 @@ class Style(MyQComboBox):
             foreground=v_wg.FOREGROUND,
             foreground_item=v_wg.FOREGROUND,
             img=v_wg.IMG,
+            margin=(0, 0, 5, 0),
             border=v_wg.BORDER,
             scroll=v_wg.SCROLL,
     ):
@@ -46,6 +47,10 @@ class Style(MyQComboBox):
         /* BOUTON DE DEROULEMENT */
         QComboBox::drop-down, QFontComboBox::drop-down {{
         width: {img.height}px;
+        margin-top: {margin[0]}px;
+        margin-bottom: {margin[1]}px;
+        margin-right: {margin[2]}px;
+        margin-left: {margin[3]}px;
         border: none;
         }}
 
