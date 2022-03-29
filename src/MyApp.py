@@ -206,14 +206,14 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### QSpinBox ###
-        # MySpinBox.PlusMinus(self.sb_demo).th()
-        # MySpinBox.PlusMinus(self.sb_demo_3).tr()
-        # MySpinBox.UpDown(self.sb_demo_2).th()
+        MySpinBox.PlusMinus(self.sb_demo).Base()
+        MySpinBox.PlusMinus(self.sb_demo_3).Transparent()
+        MySpinBox.UpDown(self.sb_demo_2).Base()
         ### /QSpinBox ###
 
 
         ### QDoubleSpinBox ###
-        # MySpinBox.UpDown(self.dsb_demo).tr()
+        MyDoubleSpinBox.UpDown(self.dsb_demo).Transparent()
         ### /QDoubleSpinBox ###
 
 
