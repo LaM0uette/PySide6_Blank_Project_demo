@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main" />
+    <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
+      <change beforePath="$PROJECT_DIR$/src/widgets/MyTreeWidget.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/MyTreeWidget.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -107,13 +109,7 @@
       <workItem from="1648576490538" duration="146000" />
       <workItem from="1648576666302" duration="1403000" />
       <workItem from="1648578095305" duration="23000" />
-    </task>
-    <task id="LOCAL-00115" summary="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
-      <created>1648477645038</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1648477645039</updated>
+      <workItem from="1648578398021" duration="59000" />
     </task>
     <task id="LOCAL-00116" summary="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
       <created>1648477752294</created>
@@ -451,7 +447,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648578115187</updated>
     </task>
-    <option name="localTasksCounter" value="164" />
+    <task id="LOCAL-00164" summary="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
+      <created>1648578399807</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1648578399807</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -479,7 +482,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PySide6_Blank_Project_demo$MyApp.coverage" NAME="MyApp Coverage Results" MODIFIED="1648578049799" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/PySide6_Blank_Project_demo$MyApp.coverage" NAME="MyApp Coverage Results" MODIFIED="1648578403609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/PySide6_Blank_Project_demo$MyApp__1_.coverage" NAME="MyApp (1) Coverage Results" MODIFIED="1648468784944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../PySide6_Blank_Project" />
   </component>
 </project>
