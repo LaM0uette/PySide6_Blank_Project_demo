@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/WgClass/MyQTreeViewStyle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQTreeViewStyle.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/WgClass/MyQTreeWidgetStyle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQTreeWidgetStyle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/MyTreeView.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/MyTreeView.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,14 +108,7 @@
       <workItem from="1648569777833" duration="398000" />
       <workItem from="1648570195624" duration="4784000" />
       <workItem from="1648576490538" duration="146000" />
-      <workItem from="1648576666302" duration="327000" />
-    </task>
-    <task id="LOCAL-00107" summary="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes">
-      <created>1648475931307</created>
-      <option name="number" value="00107" />
-      <option name="presentableId" value="LOCAL-00107" />
-      <option name="project" value="LOCAL" />
-      <updated>1648475931307</updated>
+      <workItem from="1648576666302" duration="673000" />
     </task>
     <task id="LOCAL-00108" summary="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes">
       <created>1648476239671</created>
@@ -454,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648576633820</updated>
     </task>
-    <option name="localTasksCounter" value="156" />
+    <task id="LOCAL-00156" summary="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
+      <created>1648577065535</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1648577065535</updated>
+    </task>
+    <option name="localTasksCounter" value="157" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
