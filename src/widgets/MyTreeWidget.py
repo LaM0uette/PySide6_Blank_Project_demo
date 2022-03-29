@@ -19,6 +19,13 @@ class Base:
 
             foreground_header=DcRgbBg.Base(
                 base=PaRgb.TH1
+            ),
+
+            border=DcBorder.Base(
+                radius=(0,) * 4
+            ),
+            border_item=DcBorder.Base(
+                radius=(0,) * 4
             )
         )
     def Transparent(self):
