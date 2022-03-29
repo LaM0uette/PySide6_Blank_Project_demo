@@ -1,4 +1,3 @@
-from src.widgets.ComboBox import ComboBox
 from src.widgets.Label import Label
 from src.widgets.LineEdit import LineEdit
 from src.widgets.ProgressBar import ProgressBar

@@ -81,7 +81,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
 
 
         ### QComboBox ###
-        ComboBox.Base(self.fcb_opt_ft_font, self.cb_opt_tm_theme).th()
+        for wg in [self.fcb_opt_ft_font, self.cb_opt_tm_theme]: MyComboBox.Base(wg).Font()
         ### /QComboBox ###
 
 
@@ -253,7 +253,7 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
             if theme == cfg["config"]["theme"]:
                 self.cb_opt_tm_theme.setCurrentIndex(i)
     def a_maj_cb_font(self):
-        ComboBox.Base(self.fcb_opt_ft_font, self.cb_opt_tm_theme).font(font=self.fcb_opt_ft_font.currentText())
+        for wg in [self.fcb_opt_ft_font, self.cb_opt_tm_theme]: MyComboBox.Base(wg).Font(font=self.fcb_opt_ft_font.currentText())
     def a_maj_button_appliquer(self, _reload="False"):
         if not self.pb_opt_appliquer.isVisible():
             self.pb_opt_appliquer.setVisible(True)

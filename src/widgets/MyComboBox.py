@@ -1,4 +1,5 @@
 from .WgClass.MyQComboBoxStyle import Style
+from src.lib.globals import v_wg
 from src.lib.palettes import *
 
 
@@ -30,4 +31,9 @@ class Base:
                 base=PaRgb.TH3,
                 selection=PaRgb.TH1,
             )
+        )
+    def Font(self, font=v_wg.FONT):
+        Style(
+            widget=self.widget,
+            font=font
         )
