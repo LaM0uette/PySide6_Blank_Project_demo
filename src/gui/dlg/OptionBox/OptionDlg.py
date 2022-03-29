@@ -120,8 +120,8 @@ class OptionDlg(option_ui.Ui_Option, QtWidgets.QDialog):
 
 
         ### QSpinBox ###
-        SpinBox.Dlg(self.sb_opt_cfg_opacity).th()
-        SpinBox.Dlg(self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height).inf()
+        MySpinBox.Dlg(self.sb_opt_cfg_opacity).th()
+        for wg in [self.sb_opt_cfg_resize_width, self.sb_opt_cfg_resize_height]: MySpinBox.Dlg(wg).inf()
         ### /QSpinBox ###
 
 

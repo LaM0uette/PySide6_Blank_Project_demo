@@ -2,7 +2,6 @@ from src.widgets.Label import Label
 from src.widgets.LineEdit import LineEdit
 from src.widgets.ProgressBar import ProgressBar
 from src.widgets.Slider import Slider
-from src.widgets.SpinBox import SpinBox
 from src.widgets.TextEdit import TextEdit
 from src.widgets.TrayIcon import TrayIcon
 from src.widgets.TreeWidget import TreeWidget
