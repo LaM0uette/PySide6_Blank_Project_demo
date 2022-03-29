@@ -1,3 +1,5 @@
+from PySide6 import QtGui
+
 from .MyQLineEdit import MyQLineEdit
 from src.lib.globals import v_wg
 from src.lib.palettes import *
@@ -10,7 +12,7 @@ class Style(MyQLineEdit):
             size_policy=v_wg.SIZE_POLICY,
             dim=v_wg.DIM_WG,
             font=v_wg.FONT,
-            cursor=v_wg.CUR_ACTION,
+            cursor=PaCur.IBEAM,
             focus_policy=PaFocusPolicy.STRONG,
             layout_direction=v_wg.LAYOUT_DIRECTION,
 
@@ -59,3 +61,10 @@ class Style(MyQLineEdit):
                 border-bottom-left-radius: {border.radius[3]}px;
                 }}"""
         widget.setStyleSheet(style)
+
+        palette_txt = QtGui.QPalette()
+        palette_txt.setColor(QtGui.QPalette.Text, QtGui.QColor(*foreground.base))
+        palette_txt.setColor(QtGui.QPalette.PlaceholderText, QtGui.QColor(*foreground.hover))
+        widget.setPalette(palette_txt)
+
+        widget.setFont(font)
