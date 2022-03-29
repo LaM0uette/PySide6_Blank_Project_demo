@@ -1,5 +1,4 @@
 from src.widgets.Label import Label
-from src.widgets.LineEdit import LineEdit
 from src.widgets.ProgressBar import ProgressBar
 from src.widgets.Slider import Slider
 from src.widgets.TextEdit import TextEdit

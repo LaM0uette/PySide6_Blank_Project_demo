@@ -81,7 +81,7 @@ class InputDlg(input_ui.Ui_Input, QtWidgets.QDialog):
 
 
         ### QText ###
-        LineEdit.Base(self.le_input_text).th()
+        MyLineEdit.Base(self.le_input_text).Base()
         ### /QText ###
     def IN_WG(self):
         # Base

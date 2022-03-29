@@ -83,7 +83,7 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
 
 
         ### QSpinBox ###
-        SpinBox.Dlg(self.sb_rgb_red, self.sb_rgb_green, self.sb_rgb_blue).rgb()
+        for wg in [self.sb_rgb_red, self.sb_rgb_green, self.sb_rgb_blue]: MySpinBox.Dlg(wg).rgb()
         ### /QSpinBox ###
 
 
@@ -93,7 +93,7 @@ class RgbDlg(rgb_ui.Ui_Rgb, QtWidgets.QDialog):
 
 
         ### QText ###
-        LineEdit.Base(self.le_rgb_hex).rgb_hex()
+        MyLineEdit.Base(self.le_rgb_hex).rgb_hex()
         ### /QText ###
     def IN_WG(self):
         # Base
