@@ -74,3 +74,5 @@ class Style(MyQLabel):
                 border-bottom-left-radius: {border.radius[3]}px;
                 }}"""
         widget.setStyleSheet(style)
+
+        widget.setFont(font)
