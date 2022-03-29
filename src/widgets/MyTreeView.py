@@ -19,6 +19,13 @@ class Base:
 
             foreground_header=DcRgbBg.Base(
                 base=PaRgb.TH1
+            ),
+
+            border=DcBorder.Base(
+                radius=(0,) * 4
+            ),
+            border_item=DcBorder.Base(
+                radius=(0,) * 4
             )
         )
     def Transparent(self):
@@ -57,6 +64,7 @@ class Base:
             dim=DcDim.Base(
                 fixed_width=PaDim.H5
             ),
+            header_hidden=True,
 
             scroll_policy=DcScrollPolicy.Base(
                 horizontal=PaScrollPolicy.OFF,
@@ -67,16 +75,16 @@ class Base:
                 gen=PaRgb.TR
             ),
             background_header=DcRgbBg.Base(
-                base=PaRgb.TH1
+                base=PaRgb.TR
             ),
             background_item=DcRgbBg.Base(
                 gen=PaRgb.TR
             ),
 
-            foreground_header=DcRgbBg.Base(
+            foreground_header=DcRgbFg.Base(
                 base=PaRgb.TH1,
             ),
-            foreground_item=DcRgbBg.Base(
+            foreground_item=DcRgbFg.Base(
                 base=PaRgb.TH3,
                 checked=PaRgb.BN1
             ),
