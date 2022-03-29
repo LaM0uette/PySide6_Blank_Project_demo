@@ -243,16 +243,16 @@ class main(Ui_main, QtWidgets.QWidget):
 
         ### QLabel ###
         MyLabel.Base(self.lb_mt_ico).ico_main()
-        # MyLabel.Demo(self.lb_lb_demo_th).th()
+        MyLabel.Demo(self.lb_lb_demo_th).Base()
         MyLabel.Base(self.lb_mt_nom).Transparent(font=PaFont.HH3)
         MyLabel.Base(self.lb_mb_version).Transparent()
-        # MyLabel.Demo(self.lb_lb_demo_tr).tr()
-        # MyLabel.Demo(
-        #     self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
-        #     self.lb_rb_demo, self.lb_pg_demo, self.lb_sb_demo, self.lb_tw_demo, self.lb_le_demo,
-        #     self.lb_te_demo, self.lb_pte_demo, self.lb_tb_demo, self.lb_trw_demo, self.lb_sd_demo,
-        #     self.lb_fr_demo, self.lb_lb_demo
-        # ).wg_categorie()
+        MyLabel.Demo(self.lb_lb_demo_tr).Transparent()
+        for wg in [
+            self.lb_cb_demo, self.lb_de_demo, self.lb_lw_demo, self.lb_pb_demo, self.lb_ck_demo,
+            self.lb_rb_demo, self.lb_pg_demo, self.lb_sb_demo, self.lb_tw_demo, self.lb_le_demo,
+            self.lb_te_demo, self.lb_pte_demo, self.lb_tb_demo, self.lb_trw_demo, self.lb_sd_demo,
+            self.lb_fr_demo, self.lb_lb_demo
+        ]: MyLabel.Demo(wg).wg_categorie()
         ### /QLabel ###
 
 
