@@ -73,14 +73,14 @@ class Base:
             scaled_contents=True,
         )
 
-    def Base(self, font=PaFont.H4):
+    def Base(self, font=PaFont.BASE):
         Style(
             widget=self.widget,
 
             focus_policy=PaFocusPolicy.NO,
             font=font
         )
-    def Transparent(self, font=PaFont.H4):
+    def Transparent(self, font=PaFont.BASE):
         Style(
             widget=self.widget,
 
@@ -97,7 +97,7 @@ class Base:
             focus_policy=PaFocusPolicy.NO,
             font=font
         )
-    def Title(self, font=PaFont.H4):
+    def Title(self, font=PaFont.BASE):
         Style(
             widget=self.widget,
 

@@ -244,7 +244,7 @@ class main(Ui_main, QtWidgets.QWidget):
         ### QLabel ###
         MyLabel.Base(self.lb_mt_ico).ico_main()
         # MyLabel.Demo(self.lb_lb_demo_th).th()
-        MyLabel.Base(self.lb_mt_nom).Transparent(font=PaFont.H3)
+        MyLabel.Base(self.lb_mt_nom).Transparent(font=PaFont.HH3)
         MyLabel.Base(self.lb_mb_version).Transparent()
         # MyLabel.Demo(self.lb_lb_demo_tr).tr()
         # MyLabel.Demo(
