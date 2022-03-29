@@ -5,16 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/dlg/InputBox/InputDlg.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dlg/InputBox/InputDlg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/dlg/MsgBox/MsgDlg.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dlg/MsgBox/MsgDlg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/dlg/OptionBox/OptionDlg.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dlg/OptionBox/OptionDlg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/dlg/ResponseBox/ResponseDlg.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dlg/ResponseBox/ResponseDlg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/dlg/RgbBox/RgbDlg.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dlg/RgbBox/RgbDlg.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/dlg/SplashScreen/SplashScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/dlg/SplashScreen/SplashScreen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/Label/Build.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/Label/Label.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/WgClass/MyQLabelStyle.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/WgClass/MyQLabelStyle.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,14 +102,7 @@
       <workItem from="1648536258267" duration="6042000" />
       <workItem from="1648544841335" duration="6052000" />
       <workItem from="1648569777833" duration="398000" />
-      <workItem from="1648570195624" duration="4566000" />
-    </task>
-    <task id="LOCAL-00104" summary="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes">
-      <created>1648474650469</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1648474650469</updated>
+      <workItem from="1648570195624" duration="4620000" />
     </task>
     <task id="LOCAL-00105" summary="REMAKE - Refonte des WG avec héritage avancé - Button - Création des classes">
       <created>1648475062468</created>
@@ -456,7 +440,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648574540849</updated>
     </task>
-    <option name="localTasksCounter" value="153" />
+    <task id="LOCAL-00153" summary="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
+      <created>1648574819929</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1648574819929</updated>
+    </task>
+    <option name="localTasksCounter" value="154" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +475,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/PySide6_Blank_Project_demo$MyApp.coverage" NAME="MyApp Coverage Results" MODIFIED="1648574623666" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/PySide6_Blank_Project_demo$MyApp.coverage" NAME="MyApp Coverage Results" MODIFIED="1648574823385" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
     <SUITE FILE_PATH="coverage/PySide6_Blank_Project_demo$MyApp__1_.coverage" NAME="MyApp (1) Coverage Results" MODIFIED="1648468784944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../PySide6_Blank_Project" />
   </component>
 </project>

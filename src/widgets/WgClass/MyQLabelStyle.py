@@ -20,8 +20,8 @@ class Style(MyQLabel):
             pixmap=None,
             pixmap_rgb="",
             scaled_contents=True,
-            align=DcAlign.Base,
-            word_wrap=False,
+            align=DcAlign.Base(horizontal=PaAlign.LEFT),
+            word_wrap=True,
             indent=0,
             open_external_link=False,
 
