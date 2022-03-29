@@ -218,8 +218,8 @@ class main(Ui_main, QtWidgets.QWidget):
 
 
         ### QTimeEdit ###
-        MyTimeEdit.Base(self.te_demo_th).Base()
-        MyTimeEdit.Base(self.te_demo_tr).Transparent()
+        MyTimeEdit.Base(self.tie_demo_th).Base()
+        MyTimeEdit.Base(self.tie_demo_tr).Transparent()
         ### /QTimeEdit ###
 
 

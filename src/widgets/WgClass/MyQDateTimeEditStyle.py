@@ -1,5 +1,3 @@
-from PySide6 import QtCore
-
 from .MyQDateTimeEdit import MyQDateTimeEdit
 from src.lib.globals import v_wg
 from src.lib.palettes import *
