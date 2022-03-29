@@ -1,5 +1,3 @@
-from PySide6 import QtCore
-
 from .MyQAbstractSpinBox import MyQAbstractSpinBox
 
 

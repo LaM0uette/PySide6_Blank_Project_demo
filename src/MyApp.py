@@ -217,10 +217,22 @@ class main(Ui_main, QtWidgets.QWidget):
         ### /QDoubleSpinBox ###
 
 
+        ### QTimeEdit ###
+        MyTimeEdit.Base(self.te_demo_th).Base()
+        MyTimeEdit.Base(self.te_demo_tr).Transparent()
+        ### /QTimeEdit ###
+
+
         ### QDateEdit ###
         MyDateEdit.Base(self.de_demo_th).Base()
         MyDateEdit.Base(self.de_demo_tr).Transparent()
         ### /QDateEdit ###
+
+
+        ### QDateTimeEdit ###
+        MyDateTimeEdit.Base(self.dte_demo_th).Base()
+        MyDateTimeEdit.Base(self.dte_demo_tr).Transparent()
+        ### /QDateTimeEdit ###
 
 
         # ### QSlider ###
