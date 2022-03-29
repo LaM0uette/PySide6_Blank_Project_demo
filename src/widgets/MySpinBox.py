@@ -38,6 +38,8 @@ class UpDown:
             img=DcImg.Base(
                 up=PaImg.FLECHE_TOP,
                 down=PaImg.FLECHE_BOTTOM,
+                up_hover=PaImg.FLECHE_TOP,
+                down_hover=PaImg.FLECHE_BOTTOM,
             )
         )
 
@@ -48,16 +50,18 @@ class UpDown:
             focus_policy=PaFocusPolicy.NO,
 
             background=DcRgbBg.Base(
-                base=PaRgb.TR
+                base=PaRgb.TR,
             ),
 
             foreground=DcRgbBg.Base(
-                base=PaRgb.TH3
+                base=PaRgb.TH3,
             ),
 
             img=DcImg.Base(
                 up=PaImg.FLECHE_TOP,
                 down=PaImg.FLECHE_BOTTOM,
+                up_hover=PaImg.FLECHE_TOP,
+                down_hover=PaImg.FLECHE_BOTTOM,
             )
         )
 

@@ -38,6 +38,8 @@ class UpDown:
             img=DcImg.Base(
                 up=PaImg.FLECHE_TOP,
                 down=PaImg.FLECHE_BOTTOM,
+                up_hover=PaImg.FLECHE_TOP,
+                down_hover=PaImg.FLECHE_BOTTOM,
             )
         )
 
@@ -58,6 +60,8 @@ class UpDown:
             img=DcImg.Base(
                 up=PaImg.FLECHE_TOP,
                 down=PaImg.FLECHE_BOTTOM,
+                up_hover=PaImg.FLECHE_TOP,
+                down_hover=PaImg.FLECHE_BOTTOM,
             )
         )
 
