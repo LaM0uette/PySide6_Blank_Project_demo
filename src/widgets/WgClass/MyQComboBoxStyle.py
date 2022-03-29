@@ -1,4 +1,5 @@
 from .MyQComboBox import MyQComboBox
+from src.build.mods import Functions
 from src.lib.globals import v_wg
 from src.lib.palettes import *
 
@@ -124,3 +125,7 @@ class Style(MyQComboBox):
         border: none;
         }}"""
         widget.setStyleSheet(style)
+
+        if editable:
+            widget.lineEdit().setFont(font)
+            widget.lineEdit().setCursor(Functions().SET_CURSOR(PaCur.IBEAM))
