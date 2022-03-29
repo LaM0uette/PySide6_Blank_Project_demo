@@ -21,7 +21,7 @@ class Base:
                 base=PaRgb.TR,
             ),
 
-            foreground=DcRgbBg.Base(
+            foreground=DcRgbFg.Base(
                 base=PaRgb.TH3,
             ),
         )
@@ -37,7 +37,7 @@ class Base:
                 selection=PaRgb.TH3,
             ),
 
-            foreground=DcRgbBg.Base(
+            foreground=DcRgbFg.Base(
                 base=PaRgb.TH3,
                 selection=PaRgb.TH1,
             ),

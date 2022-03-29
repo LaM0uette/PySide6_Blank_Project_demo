@@ -64,7 +64,7 @@ class Style(MyQLineEdit):
 
         palette_txt = QtGui.QPalette()
         palette_txt.setColor(QtGui.QPalette.Text, QtGui.QColor(*foreground.base))
-        palette_txt.setColor(QtGui.QPalette.PlaceholderText, QtGui.QColor(*foreground.hover))
+        palette_txt.setColor(QtGui.QPalette.PlaceholderText, QtGui.QColor(*foreground.placeholder))
         widget.setPalette(palette_txt)
 
         widget.setFont(font)

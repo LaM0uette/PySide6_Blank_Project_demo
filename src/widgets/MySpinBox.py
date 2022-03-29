@@ -53,7 +53,7 @@ class UpDown:
                 base=PaRgb.TR,
             ),
 
-            foreground=DcRgbBg.Base(
+            foreground=DcRgbFg.Base(
                 base=PaRgb.TH3,
             ),
 
