@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
-      <change beforePath="$PROJECT_DIR$/src/lib/palettes/DataClass/DcAbstractItemView.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/palettes/DataClass/DcAbstractItemView.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -109,14 +109,8 @@
       <workItem from="1648576490538" duration="146000" />
       <workItem from="1648576666302" duration="1403000" />
       <workItem from="1648578095305" duration="23000" />
-      <workItem from="1648578398021" duration="97000" />
-    </task>
-    <task id="LOCAL-00117" summary="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
-      <created>1648477988619</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1648477988620</updated>
+      <workItem from="1648578398021" duration="143000" />
+      <workItem from="1648626244992" duration="14000" />
     </task>
     <task id="LOCAL-00118" summary="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
       <created>1648478288939</created>
@@ -454,7 +448,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648578460893</updated>
     </task>
-    <option name="localTasksCounter" value="166" />
+    <task id="LOCAL-00166" summary="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
+      <created>1648578538337</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1648578538337</updated>
+    </task>
+    <option name="localTasksCounter" value="167" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
