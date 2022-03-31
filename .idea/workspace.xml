@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="ec139728-69fa-46b3-8913-a3816378fa5b" name="Changes" comment="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,20 +109,7 @@
       <workItem from="1648578095305" duration="23000" />
       <workItem from="1648578398021" duration="143000" />
       <workItem from="1648626244992" duration="14000" />
-    </task>
-    <task id="LOCAL-00118" summary="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
-      <created>1648478288939</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1648478288939</updated>
-    </task>
-    <task id="LOCAL-00119" summary="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
-      <created>1648478649010</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1648478649010</updated>
+      <workItem from="1648737295391" duration="35000" />
     </task>
     <task id="LOCAL-00120" summary="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
       <created>1648478724687</created>
@@ -455,7 +440,21 @@
       <option name="project" value="LOCAL" />
       <updated>1648578538337</updated>
     </task>
-    <option name="localTasksCounter" value="167" />
+    <task id="LOCAL-00167" summary="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
+      <created>1648737304708</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1648737304709</updated>
+    </task>
+    <task id="LOCAL-00168" summary="REMAKE - Refonte des WG avec héritage avancé - ajout des wg dans le main">
+      <created>1648737321708</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1648737321708</updated>
+    </task>
+    <option name="localTasksCounter" value="169" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
